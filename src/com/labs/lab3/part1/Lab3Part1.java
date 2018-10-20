@@ -1,10 +1,10 @@
-package com.labs.lab3;
+package com.labs.lab3.part1;
 
-import com.helpers.Prompt;
-import com.labs.lab3.library.Book;
-import com.labs.lab3.library.Library;
+import com.helpers.console.ConsolePrompt;
+import com.labs.lab3.part1.library.Book;
+import com.labs.lab3.part1.library.Library;
 
-public class Lab3 {
+public class Lab3Part1 {
     private Library library = new Library();
 
     public void run() {
@@ -12,7 +12,7 @@ public class Lab3 {
         var books = getTestBooks();
         library.addBooks(books);
 
-        var prompt = new Prompt();
+        var prompt = new ConsolePrompt();
 
         printHr();
 
@@ -27,7 +27,7 @@ public class Lab3 {
     }
 
     private Book[] getBooksFromConsole() {
-        var prompt = new Prompt();
+        var prompt = new ConsolePrompt();
 
         var number = prompt.getInt("Enter the number of books: ");
         Book[] books = new Book[number];

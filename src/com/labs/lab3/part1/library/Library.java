@@ -1,4 +1,4 @@
-package com.labs.lab3.library;
+package com.labs.lab3.part1.library;
 
 import java.util.Arrays;
 

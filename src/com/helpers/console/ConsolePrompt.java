@@ -1,11 +1,11 @@
-package com.helpers;
+package com.helpers.console;
 
 import java.util.Scanner;
 
-public class Prompt {
+public class ConsolePrompt {
     static private Scanner scanner = new Scanner(System.in);
 
-    public Prompt() {
+    public ConsolePrompt() {
 
     }
 
