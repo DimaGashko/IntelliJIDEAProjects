@@ -5,6 +5,10 @@ import com.labs.lab3.part1.library.Book;
 import com.labs.lab3.part1.library.Library;
 
 public class Lab3Part1 {
+    public static void main(String[] args) {
+
+    }
+
     private Library library = new Library();
 
     public void run() {

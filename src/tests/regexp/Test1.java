@@ -4,16 +4,29 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Test1 {
-    public Test1() {
+    public static void main(String[] args) {
+        var test = new Test1();
+        test.runTests();
+    }
 
-        String longStr = " Derek Banas CA 123123 PA (44546)45645-456465 asdfasdf";
-        String strangeStr = " 1Z aaa ** **** {{{{{ {{";
+    private void runTests() {
+        testRegExReplace();
+    }
 
-        regChecker("(?i)[a-z]+", longStr);
+    private  void testRegExReplace() {
+        var str = "asdf 123 asf ??? 124 asf asdfff";
+        var pattern = Pattern.compile("(?i)[1-3]+");
 
     }
 
-    private void regChecker(String regExp, String str) {
+    private void testRegExChecker() {
+        String longStr = " Derek Banas CA 123123 PA (44546)45645-456465 asdfasdf";
+        String strangeStr = " 1Z aaa ** **** {{{{{ {{";
+
+        regExChecker("(?i)[a-z]+", longStr);
+    }
+
+    private void regExChecker(String regExp, String str) {
         Pattern patter = Pattern.compile(regExp);
         Matcher matcher = patter.matcher(str);
 
