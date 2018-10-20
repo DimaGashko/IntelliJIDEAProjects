@@ -15,7 +15,22 @@ public class Test1 {
 
     private  void testRegExReplace() {
         var str = "asdf 123 asf ??? 124 asf asdfff";
-        var pattern = Pattern.compile("(?i)[1-3]+");
+        var pattern = Pattern.compile("(?i)[a2f]+");
+
+        var res = pattern.matcher(str).replaceAll((matchResult) -> {
+            String match = matchResult.group();
+
+            System.out.println(match);
+
+            if (match.equals("a")) return "*";
+            else if (match.equals("2")) return "%";
+            else if (match.equals("f")) return "#";
+
+            return "-";
+        });
+
+        System.out.println(str);
+        System.out.println(res);
 
     }
 
