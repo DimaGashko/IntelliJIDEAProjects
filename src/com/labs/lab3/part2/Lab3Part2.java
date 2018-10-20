@@ -11,10 +11,13 @@ public class Lab3Part2 {
 
     public void run() {
         String text = promptLine("Input the text: ");
-        String sub = promptLine("Delete all: ");
+        String sub = promptLine("Need delete: ");
         int minLen = promptInt("If the length more then: ");
 
-        System.out.println();
+        var Cleaner = new Cleaner();
+
+        String cleaned = Cleaner.deleteFromWords(text, sub, minLen);
+        System.out.println(cleaned);
     }
 
 
