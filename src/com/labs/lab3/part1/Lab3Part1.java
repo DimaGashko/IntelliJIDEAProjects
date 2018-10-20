@@ -1,8 +1,11 @@
 package com.labs.lab3.part1;
 
-import com.helpers.console.ConsolePrompt;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab3.part1.library.Library;
+
+import static com.helpers.console.ConsolePrompt.promptDouble;
+import static com.helpers.console.ConsolePrompt.promptInt;
+import static com.helpers.console.ConsolePrompt.promptLine;
 
 public class Lab3Part1 {
     public static void main(String[] args) {
@@ -16,35 +19,31 @@ public class Lab3Part1 {
         var books = getTestBooks();
         library.addBooks(books);
 
-        var prompt = new ConsolePrompt();
-
         printHr();
 
-        String author = prompt.getLine("Enter the author: ");
+        String author = promptLine("Enter the author: ");
         printBooks(library.getBooksByAuthor(author));
 
-        String publisher = prompt.getLine("Enter the publisher: ");
+        String publisher = promptLine("Enter the publisher: ");
         printBooks(library.getBooksByPublisher(publisher));
 
-        int year = prompt.getInt("Enter the year: ");
+        int year = promptInt("Enter the year: ");
         printBooks(library.getBooksAfterYear(year));
     }
 
     private Book[] getBooksFromConsole() {
-        var prompt = new ConsolePrompt();
-
-        var number = prompt.getInt("Enter the number of books: ");
+        var number = promptInt("Enter the number of books: ");
         Book[] books = new Book[number];
 
         printHr();
 
         for (int i = 0; i < books.length; i++) {
-            String name = prompt.getLine("Enter the name of the book: ");
-            String author = prompt.getLine("Enter the author: ");
-            String publisher = prompt.getLine("Enter the publisher: ");
-            int year = prompt.getInt("Enter the year: ");
-            int pages = prompt.getInt("Enter the number of pages: ");
-            double price = prompt.getDouble("Enter the price: ");
+            String name = promptLine("Enter the name of the book: ");
+            String author = promptLine("Enter the author: ");
+            String publisher = promptLine("Enter the publisher: ");
+            int year = promptInt("Enter the year: ");
+            int pages = promptInt("Enter the number of pages: ");
+            double price = promptDouble("Enter the price: ");
 
             books[i] = new Book(name, author, publisher, year, pages, price);
 
