@@ -8,11 +8,11 @@ import static com.helpers.console.ConsolePrompt.promptInt;
 import static com.helpers.console.ConsolePrompt.promptLine;
 
 public class Lab3Part1 {
+    private Library library = new Library();
+
     public static void main(String[] args) {
 
     }
-
-    private Library library = new Library();
 
     public void run() {
         //var books = getBooksFromConsole();
@@ -23,12 +23,15 @@ public class Lab3Part1 {
 
         String author = promptLine("Enter the author: ");
         printBooks(library.getBooksByAuthor(author));
+        printHr();
 
         String publisher = promptLine("Enter the publisher: ");
         printBooks(library.getBooksByPublisher(publisher));
+        printHr();
 
         int year = promptInt("Enter the year: ");
         printBooks(library.getBooksAfterYear(year));
+        printHr();
     }
 
     private Book[] getBooksFromConsole() {
