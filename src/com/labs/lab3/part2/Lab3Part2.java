@@ -10,6 +10,7 @@ public class Lab3Part2 {
     }
 
     public void run() {
+        //**Hello, world - how r u? What d u doin' / Сім'я / snake_case camelCase PascalCale / вый  белый черный серо-буро-малиновый  / Просто: текст, с разными! знак'ами? ***
         String text = promptLine("Input the text: ");
         String sub = promptLine("Need delete: ");
         int minLen = promptInt("If the length more then: ");
@@ -19,6 +20,4 @@ public class Lab3Part2 {
         String cleaned = Cleaner.deleteFromWords(text, sub, minLen);
         System.out.println(cleaned);
     }
-
-
 }
