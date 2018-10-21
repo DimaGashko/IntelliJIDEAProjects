@@ -14,10 +14,15 @@ public class Lab3Part1 {
     }
 
     public void run() {
-        //var books = getBooksFromConsole();
-        var books = getTestBooks();
-        library.addBooks(books);
+        Book[] books;
 
+        var type = promptInt("Enter \"1\" if you want to enter books yourself, " +
+                "something else to use a test books: ");
+
+        if (type == 1) books = getBooksFromConsole();
+        else books = getTestBooks();
+
+        library.addBooks(books);
         runCLI();
     }
 
@@ -25,7 +30,7 @@ public class Lab3Part1 {
         printHelp();
 
         while(true) {
-            String command = promptLine("> ");
+            String command = promptLine("Enter command: ");
 
             if (command.equalsIgnoreCase("exit")) break;
             else useCommand(command);
@@ -47,6 +52,11 @@ public class Lab3Part1 {
         } else if (command.equalsIgnoreCase("afterYear")) {
             int year = promptInt("Enter the year: ");
             printBooks(library.getBooksAfterYear(year));
+
+        }
+
+        else if (command.equalsIgnoreCase("all")) {
+            printBooks(library.getBooks());
 
         } else if (command.equalsIgnoreCase("help")) {
             printHelp();
@@ -93,6 +103,10 @@ public class Lab3Part1 {
     }
 
     private void printBooks(Book[] books) {
+        if (books.length == 0) {
+            System.out.println("There's no book");
+        }
+
         for (Book book : books) {
             System.out.println(book);
         }
@@ -100,6 +114,7 @@ public class Lab3Part1 {
 
     private void printHelp() {
         System.out.println("Commands:");
+        System.out.println("> all #Print all books");
         System.out.println("> author #Print books by Author");
         System.out.println("> publisher #Print books by Publisher");
         System.out.println("> afterYear #Print books published after year");
