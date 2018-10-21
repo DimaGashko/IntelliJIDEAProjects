@@ -22,11 +22,18 @@ class CleanerTest {
 
     @TestFactory
     public Collection<DynamicTest> dynamicTests() {
-        String[] texts = {"Hello", "Yes", "No"};
-        String[] deletes = {"Hello", "Yes", "No"};
-        int[] mins = {2,2,2};
+        String[] texts = {
+                "Hello", "heLLO, World", "alL alllLLll", "", "it's my life ii", "mykp kprokpom",
+                "сім'я", "abc-cba", "a-a-a-a", "a_a_a", "a'a'a'a"
+        };
 
-        String[] results = {"Hello", "Yes", "No"};
+        String[] deletes = {"l", "L", "L", "l", "i", "kp", "'я", "c", "-", "_", "'"};
+        int[] mins = {0,0,4,4,3,0,0,0,0,0,0};
+
+        String[] results = {
+                "Heo", "heO, Word", "alL a", "", "t's my lfe ii", "my room", "сім", "ab-ba",
+                "aaaa", "aaa", "aaaa"
+        };
 
         Collection<DynamicTest> dynamicTests = new ArrayList<>();
 
@@ -36,12 +43,12 @@ class CleanerTest {
             var text = texts[i];
             var delete = deletes[i];
             var min = mins[i];
+            var res = results[i];
 
-            var expected = results[i];
             var actual = cleaner.deleteFromWords(text, delete, min);
 
-            Executable exec = () -> assertEquals(expected, actual);
-            var name = text + "|" + delete + "|" + min;
+            Executable exec = () -> assertEquals(res, actual);
+            var name = text + "|" + delete + "|" + min + " -> " + res;
 
             var test = DynamicTest.dynamicTest(name, exec);
             dynamicTests.add(test);

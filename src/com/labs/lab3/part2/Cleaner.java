@@ -13,7 +13,7 @@ public class Cleaner {
             String cleanWord = word.replaceAll(NO_CHARS, "");
 
             if (cleanWord.length() >= minLen) {
-                return word.replaceAll(delete, "");
+                return word.replaceAll("(?i)" + delete, "");
             }
 
             return word;
