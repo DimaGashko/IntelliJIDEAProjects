@@ -5,10 +5,6 @@ import java.util.Arrays;
 public class Library {
     private Book[] books;
 
-    public  Library() {
-
-    }
-
     public Book[] getBooks() {
         return Arrays.copyOf(books, books.length);
     }

@@ -4,7 +4,9 @@ import java.util.regex.Pattern;
 
 public class Cleaner {
     private static Pattern WORD_PATTERN = Pattern.compile("(?i)[a-zа-яёіїє\\d\\-_']+");
-    private static final String NO_COUNT = "[\\-_']"; //Символы слова, которые не входят в количетсво букв
+
+    //Символы слова, которые не входят в количетсво букв
+    private static final String NO_COUNT = "[\\-_']+";
 
     /**
      * Удалает из слов текста text длинной от minLen все вхождения подстроки delete

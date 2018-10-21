@@ -12,6 +12,10 @@ public class Book {
     private int pages = 0;
     private double price = 0;
 
+    public Book() {
+
+    }
+
     public Book(String name, String author, String publisher, int year, int pages, double price) {
         setName(name);
         setAuthor(author);
