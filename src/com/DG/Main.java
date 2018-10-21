@@ -17,4 +17,5 @@ public class Main {
         var lab3Part2 = new Lab3Part2();
         lab3Part2.run();
     }
+
 }
