@@ -1,8 +1,6 @@
 package com.labs.lab3.part1;
 
-import com.labs.lab3.part1.library.Book;
-import com.labs.lab3.part1.library.Library;
-
+import com.labs.lab3.part1.library.*;
 import static com.helpers.console.ConsolePrompt.*;
 import static com.helpers.console.ConsoleElements.hr;
 
@@ -121,6 +119,7 @@ public class Lab3Part1 {
         System.out.println();
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");
+
         hr();
     }
 }
