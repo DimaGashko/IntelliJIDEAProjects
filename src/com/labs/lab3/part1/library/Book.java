@@ -1,13 +1,14 @@
 package com.labs.lab3.part1.library;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 public class Book {
-    private UUID id = UUID.randomUUID();
+    private final UUID id = UUID.randomUUID();
     private String name = "No name";
     private String author = "No author";
     private String publisher = "No publisher";
-    private int year = 0;
+    private LocalDate date = LocalDate.of(0,1,1);
     private int pages = 0;
     private double price = 0;
 
@@ -65,11 +66,11 @@ public class Book {
     }
 
     public int getYear() {
-        return year;
+        return date.getYear();
     }
 
     public void setYear(int year) {
-        this.year = year;
+        date = LocalDate.of(year, date.getMonth(), date.getDayOfYear());
     }
 
     @Override

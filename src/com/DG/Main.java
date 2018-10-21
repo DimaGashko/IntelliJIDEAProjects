@@ -5,7 +5,7 @@ import com.labs.lab3.part2.Lab3Part2;
 
 public class Main {
     public static void main(String[] args) {
-       runLab3Part2();
+       runLab3Part1();
     }
 
     private static void runLab3Part1() {

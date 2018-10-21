@@ -3,9 +3,8 @@ package com.labs.lab3.part1;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab3.part1.library.Library;
 
-import static com.helpers.console.ConsolePrompt.promptDouble;
-import static com.helpers.console.ConsolePrompt.promptInt;
-import static com.helpers.console.ConsolePrompt.promptLine;
+import static com.helpers.console.ConsolePrompt.*;
+import static com.helpers.console.ConsoleElements.hr;
 
 public class Lab3Part1 {
     private Library library = new Library();
@@ -19,26 +18,49 @@ public class Lab3Part1 {
         var books = getTestBooks();
         library.addBooks(books);
 
-        printHr();
+        runCLI();
+    }
 
-        String author = promptLine("Enter the author: ");
-        printBooks(library.getBooksByAuthor(author));
-        printHr();
+    private void runCLI() {
+        printHelp();
 
-        String publisher = promptLine("Enter the publisher: ");
-        printBooks(library.getBooksByPublisher(publisher));
-        printHr();
+        while(true) {
+            String command = promptLine("> ");
 
-        int year = promptInt("Enter the year: ");
-        printBooks(library.getBooksAfterYear(year));
-        printHr();
+            if (command.equalsIgnoreCase("exit")) break;
+            else useCommand(command);
+
+            hr();
+        }
+
+    }
+
+    private void useCommand(String command) {
+        if (command.equalsIgnoreCase("author")) {
+            String author = promptLine("Enter the author: ");
+            printBooks(library.getBooksByAuthor(author));
+
+        } else if (command.equalsIgnoreCase("publisher")) {
+            String publisher = promptLine("Enter the publisher: ");
+            printBooks(library.getBooksByPublisher(publisher));
+
+        } else if (command.equalsIgnoreCase("afterYear")) {
+            int year = promptInt("Enter the year: ");
+            printBooks(library.getBooksAfterYear(year));
+
+        } else if (command.equalsIgnoreCase("help")) {
+            printHelp();
+
+        } else {
+            System.out.println("Command not found. Try again: ");
+        }
     }
 
     private Book[] getBooksFromConsole() {
         var number = promptInt("Enter the number of books: ");
         Book[] books = new Book[number];
 
-        printHr();
+        hr();
 
         for (int i = 0; i < books.length; i++) {
             String name = promptLine("Enter the name of the book: ");
@@ -50,7 +72,7 @@ public class Lab3Part1 {
 
             books[i] = new Book(name, author, publisher, year, pages, price);
 
-            printHr();
+            hr();
         }
 
         return books;
@@ -76,8 +98,14 @@ public class Lab3Part1 {
         }
     }
 
-    private void printHr() {
-        System.out.println("- - - - - - - - - - - - -");
+    private void printHelp() {
+        System.out.println("Commands:");
+        System.out.println("> author #Print books by Author");
+        System.out.println("> publisher #Print books by Publisher");
+        System.out.println("> afterYear #Print books published after year");
+        System.out.println();
+        System.out.println("> help #Print Help");
+        System.out.println("> exit #Exit");
+        hr();
     }
-
 }
