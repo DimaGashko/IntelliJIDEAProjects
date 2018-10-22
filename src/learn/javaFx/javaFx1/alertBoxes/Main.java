@@ -18,7 +18,16 @@ public class Main extends Application {
         primaryStage.setTitle("Alert Boxes");
 
         button = new Button("Open alert box");
-        button.setOnAction(e -> AlertBox.display("Title of Window", "Wow this alert box is awesome!"));
+        button.setOnAction(e -> {
+            AlertBox.display("Alert Box", "Confirm you choice");
+            ConfirmBox.display("Confirm Box", "Are you sure you want to sent it?");
+
+            if (ConfirmBox.answer) {
+                AlertBox.display("Alert Box", "You answered Yes");
+            } else {
+                AlertBox.display("Alert Box", "You answered No");
+            }
+        });
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
