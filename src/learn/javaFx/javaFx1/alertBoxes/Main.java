@@ -1,4 +1,4 @@
-package learn.javaFx.javaFx1;
+package learn.javaFx.javaFx1.alertBoxes;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class AlertBoxes extends Application {
+public class Main extends Application {
     Button button;
 
     public static void main(String[] args) {
@@ -17,8 +17,8 @@ public class AlertBoxes extends Application {
     public void start(Stage primaryStage)  {
         primaryStage.setTitle("Alert Boxes");
 
-        button = new Button("Button");
-        button.setOnAction(e -> System.out.println("Hi"));
+        button = new Button("Open alert box");
+        button.setOnAction(e -> AlertBox.display("Title of Window", "Wow this alert box is awesome!"));
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
