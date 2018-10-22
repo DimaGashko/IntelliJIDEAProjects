@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class Main extends Application implements EventHandler<ActionEvent> {
+public class Main extends Application {
     Button button;
 
     public static void main(String[] args) {
@@ -20,7 +20,8 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         primaryStage.setTitle("My first a native JavaFx Application");
 
         button = new Button("Button");
-        button.setOnAction(this);
+
+        button.setOnAction(e -> System.out.println("Hello, how you doing?"));
 
         StackPane layout = new StackPane();
         layout.getChildren().add(button);
@@ -35,10 +36,4 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         primaryStage.show();
     }
 
-    @Override
-    public void handle(ActionEvent event) {
-        if (event.getSource() == button) {
-            System.out.println("Button!");
-        }
-    }
 }
