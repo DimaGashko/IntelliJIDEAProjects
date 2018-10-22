@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import learn.javaFx._2_alertBoxes.AlertBox;
 
 import javax.swing.text.html.CSS;
+import java.util.regex.Pattern;
 
 public class Main extends Application {
 
@@ -47,8 +48,17 @@ public class Main extends Application {
         logIn.setOnAction(e -> {
             var login = nameField.getText();
             var pass = passField.getText();
+            var mess = "";
 
-            AlertBox.display("Auth", "Username: " + login + "\nPassword: " + pass);
+            if (!login.matches("[\\w]{2,20}")) {
+                mess = "Incorrect a Username";
+            } else if (pass.length() < 5) {
+                mess = "The password is too short";
+            } else {
+                mess = "Username: " + login + "\nPassword: " + pass;
+            }
+
+            AlertBox.display("Auth", mess);
         });
 
         window.show();
