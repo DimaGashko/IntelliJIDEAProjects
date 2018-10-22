@@ -2,6 +2,7 @@ package learn.javaFx._6_gridPane;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -30,9 +31,9 @@ public class Main extends Application {
         var logIn = new Button("Log In");
 
         GridPane.setConstraints(nameLabel, 0, 0);
-        GridPane.setConstraints(nameField, 1, 0);
+        GridPane.setConstraints(nameField, 0, 1);
 
-        GridPane.setConstraints(passLabel, 0, 1);
+        GridPane.setConstraints(passLabel, 1, 0);
         GridPane.setConstraints(passField, 1, 1);
 
         GridPane.setConstraints(logIn, 1, 2);
