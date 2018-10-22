@@ -1,4 +1,4 @@
-package learn.javaFx.javaFx1._3_Events;
+package learn.javaFx._3_Events;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import learn.javaFx.javaFx1._1_init.Main;
+import learn.javaFx._1_init.Main;
 
 public class Main2 extends Application {
     Stage window;

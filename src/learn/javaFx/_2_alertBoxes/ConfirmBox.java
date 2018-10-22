@@ -1,4 +1,4 @@
-package learn.javaFx.javaFx1._2_alertBoxes;
+package learn.javaFx._2_alertBoxes;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -8,7 +8,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class ConfirmBox {
-    static boolean answer = false;
+    public static boolean answer = false;
 
     public static void display(String title, String mess) {
         Stage window = new Stage();

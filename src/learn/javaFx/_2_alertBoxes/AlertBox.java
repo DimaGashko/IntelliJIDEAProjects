@@ -1,4 +1,4 @@
-package learn.javaFx.javaFx1._2_alertBoxes;
+package learn.javaFx._2_alertBoxes;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
