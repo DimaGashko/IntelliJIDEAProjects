@@ -1,4 +1,4 @@
-package learn.javaFx.javaFx1.alertBoxes;
+package learn.javaFx.javaFx1._2_alertBoxes;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -7,30 +7,18 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class ConfirmBox {
-    static boolean answer = false;
-
+public class AlertBox {
     public static void display(String title, String mess) {
         Stage window = new Stage();
         window.setTitle(title);
         window.initModality(Modality.APPLICATION_MODAL);
 
         var label = new Label(mess);
-
-        var noButton = new Button("NO");
-        var yesButton = new Button("Yes");
-
-        noButton.setOnAction(e -> {
-            answer = false;
-            window.close();
-        });
-        yesButton.setOnAction(e -> {
-            answer = true;
-            window.close();
-        });
+        var closeButton = new Button("OK");
+        closeButton.setOnAction(e -> window.close());
 
         var layout = new VBox(10);
-        layout.getChildren().addAll(label, noButton, yesButton);
+        layout.getChildren().addAll(label, closeButton);
 
         var scene = new Scene(layout, 250, 150);
         window.setScene(scene);

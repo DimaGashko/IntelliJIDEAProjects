@@ -1,4 +1,4 @@
-package learn.javaFx.javaFx1;
+package learn.javaFx.javaFx1._1_init;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
