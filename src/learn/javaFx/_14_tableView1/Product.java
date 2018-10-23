@@ -28,6 +28,13 @@ public class Product {
         setHeight(height);
     }
 
+    public Product(String name, double width, double height, double price) {
+        setName(name);
+        setWidth(width);
+        setHeight(height);
+        setPrice(price);
+    }
+
     public String getName() {
         return name;
     }
