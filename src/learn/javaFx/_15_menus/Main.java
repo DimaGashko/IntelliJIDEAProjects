@@ -50,7 +50,7 @@ public class Main extends Application {
         bp.setTop(menuBar);
 
         Scene scene = new Scene(bp, 500, 350, Color.RED);
-        window.setScene(scene);git
+        window.setScene(scene);
 
         window.show();
     }
