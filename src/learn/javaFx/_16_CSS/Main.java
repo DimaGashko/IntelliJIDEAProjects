@@ -11,10 +11,7 @@ import learn.javaFx._2_alertBoxes.AlertBox;
 public class Main extends Application {
 
     @Override
-    public void start(Stage window)  {
-
-
-
+    public void start(Stage window) {
         window.setTitle("JavaFx");
 
         var grid = new GridPane();
@@ -43,7 +40,8 @@ public class Main extends Application {
         grid.getChildren().addAll(nameField, passField, nameLabel, passLabel, license, logIn);
 
         Scene scene = new Scene(grid, 500, 400);
-        scene.getStylesheets().add("main.css");
+        //scene.getStylesheets().add("./Main.sass");
+        scene.getStylesheets().add(getClass().getResource("Main.css").toExternalForm());
 
         window.setScene(scene);
 
