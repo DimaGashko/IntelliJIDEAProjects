@@ -1,19 +1,13 @@
-package learn.javaFx._17_FXML;
+package learn.javaFx._18_Controller;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-import java.sql.Time;
-import java.util.Timer;
-import java.util.TimerTask;
 
 public class Main extends Application {
     public void start(Stage window) throws Exception {

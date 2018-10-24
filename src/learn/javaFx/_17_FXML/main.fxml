@@ -11,6 +11,7 @@
             fx:controller="learn.javaFx._17_FXML.Controller"
             prefHeight="400.0" prefWidth="600.0">
 
-    <Button>Button</Button>
+    <Label>Label is good</Label>
+    <Button fx:id="touch" onAction="#onClick">Button</Button>
 </VBox>
 

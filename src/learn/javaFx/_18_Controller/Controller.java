@@ -1,4 +1,4 @@
-package learn.javaFx._17_FXML;
+package learn.javaFx._18_Controller;
 
 import javafx.scene.control.Button;
 
