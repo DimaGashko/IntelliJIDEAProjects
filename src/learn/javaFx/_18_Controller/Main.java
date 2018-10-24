@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
     public void start(Stage window) throws Exception {
-        window.setTitle("FXML");
+        window.setTitle("FXML 2");
 
         Canvas canv = new Canvas();
         GraphicsContext ctx = canv.getGraphicsContext2D();

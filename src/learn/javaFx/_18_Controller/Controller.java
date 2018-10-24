@@ -1,13 +1,15 @@
 package learn.javaFx._18_Controller;
 
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 
-public class Controller {
+import java.net.URL;
+import java.util.ResourceBundle;
 
-    public Button touch;
+public class Controller implements Initializable {
 
-    public void onClick() {
-        System.out.println("Run some code the user doesn't see");
-        touch.setText("Stop touching me!");
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
     }
 }
