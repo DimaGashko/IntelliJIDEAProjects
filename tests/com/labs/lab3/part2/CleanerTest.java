@@ -7,14 +7,11 @@ import org.junit.jupiter.api.TestFactory;
 import org.junit.jupiter.api.function.Executable;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CleanerTest {
-
     @BeforeEach
     void beforeEach() {
         var cleaner = new Cleaner();
