@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.labs.lab4.view.Index"
+        stylesheets="@../styles/main.css"
+        styleClass="wrapper">
+
+    <VBox styleClass="f2">
+        <HBox styleClass="f2__data">
+            <ImageView><Image url="@../img/equation.png"></Image></ImageView>
+            <HBox>
+                <Label>a = </Label>
+                <TextField styleClass="f2__input">0.23</TextField>
+            </HBox>
+            <HBox>
+                <Label>x ∈ [</Label>
+                <TextField styleClass="f2__input"></TextField>
+                <Label>;</Label>
+                <TextField styleClass="f2__input"></TextField>
+                <Label>]</Label>
+            </HBox>
+        </HBox>
+        <VBox styleClass="f2__results">
+            <HBox>
+                <Label>Coordinates: </Label>
+                <Button>Show</Button>
+            </HBox>
+            <HBox>
+                <Label>Min: </Label>
+                <Label>0.112</Label>
+            </HBox>
+            <HBox>
+                <Label>Max: </Label>
+                <Label>50</Label>
+            </HBox>
+            <HBox>
+                <Label>Sum: </Label>
+                <Label>5552.22</Label>
+            </HBox>
+            <HBox>
+                <Label>Average: </Label>
+            </HBox>
+        </VBox>
+    </VBox>
+</VBox>
