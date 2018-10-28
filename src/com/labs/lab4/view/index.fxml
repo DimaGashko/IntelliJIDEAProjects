@@ -34,16 +34,16 @@
             </ImageView>
    
             <Text text="Parameter &quot;a&quot;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <TextField fx:id="aInput" onKeyTyped="#onAInputChange" text="2.3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="aInput" styleClass="f2__input" onKeyTyped="#onAInputChange" text="2.3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
    
             <Text text="Min X" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-            <TextField fx:id="minXInput" onKeyTyped="#onMinXInputChange" text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="minXInput" styleClass="f2__input" onKeyTyped="#onMinXInputChange" text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
    
             <Text text="Max X" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-            <TextField fx:id="maxXInput" onKeyTyped="#onMaxXInputChange" text="5.3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="maxXInput" styleClass="f2__input" onKeyTyped="#onMaxXInputChange" text="5.3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
    
             <Text text="Step" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-            <TextField fx:id="stepInput" onKeyTyped="#onStepChange" text="0.001" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="stepInput" styleClass="f2__input" onKeyTyped="#onStepChange" text="0.001" GridPane.columnIndex="1" GridPane.rowIndex="4" />
    
             <Text text="Min Y" GridPane.columnIndex="0" GridPane.rowIndex="5" />
             <Text text="0.15" GridPane.columnIndex="1" GridPane.rowIndex="5" />
