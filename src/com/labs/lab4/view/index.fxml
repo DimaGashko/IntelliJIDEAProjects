@@ -7,57 +7,59 @@
 <?import javafx.scene.layout.*?>
 
 <VBox styleClass="wrapper" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab4.view.Index">
- <GridPane styleClass="f2">
-     <columnConstraints>
-         <ColumnConstraints />
-         <ColumnConstraints />
-     </columnConstraints>
-     <rowConstraints>
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-     </rowConstraints>
-     <children>
-         <Text text="Function" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-         <ImageView styleClass="f2__equation" GridPane.columnIndex="1" GridPane.rowIndex="0">
-            <image>
-                <Image url="@../img/equation.png" />
-            </image>
-         </ImageView>
-
-         <Text text="Parameter &quot;a&quot;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-         <TextField text="2.3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
-         <Text text="Min X" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-         <TextField text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-         <Text text="Max X" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-         <TextField text="5.3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-
-         <Text text="Step" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-         <TextField text="0.001" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-
-         <Text text="Min Y" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-         <Text text="0.15" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-
-         <Text text="Max Y" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-         <Text text="15" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-
-         <Text text="Sum of elements" GridPane.columnIndex="0" GridPane.rowIndex="7" />
-         <Text text="1556" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-
-         <Text text="Average" GridPane.columnIndex="0" GridPane.rowIndex="8" />
-         <Text text="1556" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-
-         <Text text="Coordinates" GridPane.columnIndex="0" GridPane.rowIndex="9" />
-         <Button GridPane.columnIndex="1" GridPane.rowIndex="9">Show</Button>
-     </children>
- </GridPane>
+   <children>
+    <GridPane styleClass="f2">
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+        <children>
+            <Text text="Function" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ImageView styleClass="f2__equation" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <image>
+                   <Image url="@../img/equation.png" />
+               </image>
+            </ImageView>
+   
+            <Text text="Parameter &quot;a&quot;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="aInput" onKeyTyped="#onAInputChange" text="2.3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   
+            <Text text="Min X" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="minXInput" onKeyTyped="#onMinXInputChange" text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   
+            <Text text="Max X" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="maxXInput" onKeyTyped="#onMaxXInputChange" text="5.3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   
+            <Text text="Step" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="stepInput" onKeyTyped="#onStepChange" text="0.001" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   
+            <Text text="Min Y" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Text text="0.15" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   
+            <Text text="Max Y" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Text text="15" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   
+            <Text text="Sum of elements" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Text text="1556" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   
+            <Text text="Average" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <Text text="1556" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+   
+            <Text text="Coordinates" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <Button GridPane.columnIndex="1" GridPane.rowIndex="9">Show</Button>
+        </children>
+    </GridPane>
+   </children>
 </VBox>
