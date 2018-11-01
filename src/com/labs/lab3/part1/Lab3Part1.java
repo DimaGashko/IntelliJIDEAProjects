@@ -8,7 +8,8 @@ public class Lab3Part1 {
    private Library library = new Library();
 
    public static void main(String[] args) {
-
+      var app = new Lab3Part1();
+      app.run();
    }
 
    public void run() {

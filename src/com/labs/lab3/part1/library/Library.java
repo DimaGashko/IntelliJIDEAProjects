@@ -30,9 +30,6 @@ public class Library {
                 .filter(book -> book.getAuthor().equalsIgnoreCase(author))
                 .toArray(Book[]::new);
     }
-    /*
-
-    * */
 
     /**
      * Взвращает массив книг переданного издательства

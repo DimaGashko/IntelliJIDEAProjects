@@ -53,9 +53,4 @@ class CleanerTest {
 
         return dynamicTests;
     }
-
-    @Test
-    void deleteFromWords() {
-
-    }
 }
