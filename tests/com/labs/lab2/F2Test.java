@@ -6,46 +6,39 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MainTest {
-    F2 main;
-
-    @BeforeEach
-    void setUp() {
-        main = new F2();
-    }
-
     // - - - CalcY - - -
     @Test
     void testCalcYX1() {
         double expected = 7.20397873;
-        double result = main.calcY(0.2, 5);
+        double result = F2.calcY(0.2, 5);
         assertEquals(expected, result, 0.001, "По первому уравнению: caclY(0.2, 5)");
     }
 
     @Test
     void testCalcYX2() {
         double expected = -27.44;
-        double result = main.calcY(0.4, -5);
+        double result = F2.calcY(0.4, -5);
         assertEquals(expected, result, 0.001, "По второму уравнению: caclY(0.4, -5)");
     }
 
     @Test
     void testCalcYX3() {
         double expected = -0.855279258;
-        double result = main.calcY(3, 2);
+        double result = F2.calcY(3, 2);
         assertEquals(expected, result, 0.001, "По третьему уравнению: caclY(0.4, -5)");
     }
 
     @Test
     void testCalcYBorder1() {
         double expected = 1.369;
-        double result = main.calcY(0.3000000000001, 1);
+        double result = F2.calcY(0.3000000000001, 1);
         assertEquals(expected, result, 0.001, "x == 0.3000..001 должен считаться по первому уравнению");
     }
 
     @Test
     void testCalcYBorder2() {
         double expected = 6.09;
-        double result = main.calcY(2.300000000001, 1);
+        double result = F2.calcY(2.300000000001, 1);
         assertEquals(expected, result, 0.001, "x == 2.300..01 должен считаться по второму уравнению");
     }
 

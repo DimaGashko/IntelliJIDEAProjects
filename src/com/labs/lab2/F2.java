@@ -1,14 +1,88 @@
 package com.labs.lab2;
 
-import java.util.Scanner;
 import static java.lang.Math.*;
 
 public class F2 {
-    public double getAverage(double[] arr) {
+    private double minX = 0;
+    private double maxX = 2;
+    private double step = 0.001;
+    private double a = 2.3;
+
+    private int stepsCount;
+    private double[] allX;
+    private double[] allY;
+
+    F2() {
+        update();
+    }
+
+    F2(double minX, double maxX, double step, double a) {
+        setMinX(minX);
+        setMaxX(maxX);
+        setStep(step);
+        setA(a);
+
+        update();
+    }
+
+    public void update() {
+        updateTabulationStepsCount();
+        updateAllX();
+        updateAllY();
+    }
+
+    public double getMinY() {
+        return allY[getIndexOfMin(allY)];
+    }
+
+    public double getMaxY() {
+        return allY[getIndexOfMin(allY)];
+    }
+
+    public double getSumOfAllY() {
+        return getSumOfElements(allY);
+    }
+
+    public double[] getAllX() {
+        return allX;
+    }
+
+    public double[] getAllY() {
+        return allY;
+    }
+
+    public double getAverageY() {
+        return getAverage(allY);
+    }
+
+    private void updateAllX() {
+        allX = new double[stepsCount];
+
+        for (int i = 0; i < stepsCount; i++) {
+            double res = minX + i * step;
+            allX[i] = round(res * 10000.0) / 10000.0;
+        }
+    }
+
+    private void updateAllY() {
+        allY = new double[allX.length];
+
+        for (int i = allX.length - 1; i >= 0; i--) {
+            allY[i] = calcY(allX[i], a);
+        }
+    }
+
+    private void updateTabulationStepsCount() {
+        stepsCount = (int)((maxX - minX) / step + 0.000001) + 1;
+    }
+
+    // - - -
+
+    private double getAverage(double[] arr) {
         return getSumOfElements(arr) / arr.length;
     }
 
-    public double getSumOfElements(double[] arr) {
+    private double getSumOfElements(double[] arr) {
         double res = 0;
 
         for (double item : arr) {
@@ -18,7 +92,7 @@ public class F2 {
         return res;
     }
 
-    public int getIndexOfMin(double[] arr) {
+    private int getIndexOfMin(double[] arr) {
         double min = arr[0];
         int index = 0;
 
@@ -32,7 +106,7 @@ public class F2 {
         return index;
     }
 
-    public int getIndexOfMax(double[] arr) {
+    private int getIndexOfMax(double[] arr) {
         double max = arr[0];
         int index = 0;
 
@@ -46,33 +120,7 @@ public class F2 {
         return index;
     }
 
-    public double[] getAllX(double start, double end, double step) {
-        int steps = getTabulationStepsCount(start, end, step);
-        double[] allX = new double[steps];
-
-        for (int i = 0; i < steps; i++) {
-            double res = start + i * step;
-            allX[i] = round(res * 10000.0) / 10000.0;
-        }
-
-        return allX;
-    }
-
-    public double[] getAllY(double[] allX, double a) {
-        double[] allY = new double[allX.length];
-
-        for (int i = allX.length - 1; i >= 0; i--) {
-            allY[i] = calcY(allX[i], a);
-        }
-
-        return allY;
-    }
-
-    public int getTabulationStepsCount(double start, double end, double step) {
-        return (int)((end - start) / step + 0.000001) + 1;
-    }
-
-    public double calcY(double x, double a, double epsilon) {
+    public static double calcY(double x, double a, double epsilon) {
         if (x - 0.3 <= epsilon) {
             return 1.5 * a * cos(x) * cos(x);
 
@@ -84,21 +132,47 @@ public class F2 {
         }
     }
 
-    public double calcY(double x, double a) {
+    public static double calcY(double x, double a) {
         return calcY(x, a, 0.001);
     }
 
-    private double askDouble(String title) {
-        Scanner scanner = new Scanner(System.in);
+    // getters/setters
 
-        System.out.println(title);
-        return scanner.nextDouble();
+    public double getMinX() {
+        return minX;
     }
 
-    public void printEl(double[] arr, int index) {
-        System.out.println("arr[" + index + "]" + " = " + arr[index]);
+    public void setMinX(double minX) {
+        this.minX = minX;
     }
 
+    public double getMaxX() {
+        return maxX;
+    }
+
+    public void setMaxX(double maxX) {
+        this.maxX = maxX;
+    }
+
+    public double getStep() {
+        return step;
+    }
+
+    public void setStep(double step) {
+        this.step = step;
+    }
+
+    public double getA() {
+        return a;
+    }
+
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public double getStepsCount() {
+        return stepsCount;
+    }
 }
 
 
