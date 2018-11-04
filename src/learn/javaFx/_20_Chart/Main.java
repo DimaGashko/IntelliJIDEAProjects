@@ -25,8 +25,8 @@ public class Main extends Application {
         series1.setName("Portfolio 1");
 
         var f2 = new F2();
-        var allX = f2.getAllX(0, 10, 0.1);
-        var allY = f2.getAllY(allX, 2.3);
+        var allX = f2.getAllX();
+        var allY = f2.getAllY();
 
         for (int i = 0; i < allX.length; i++) {
             series1.getData().add(new XYChart.Data(allX[i], allY[i]));

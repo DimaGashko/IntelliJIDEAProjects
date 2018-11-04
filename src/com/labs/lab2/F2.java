@@ -36,7 +36,7 @@ public class F2 {
     }
 
     public double getMaxY() {
-        return allY[getIndexOfMin(allY)];
+        return allY[getIndexOfMax(allY)];
     }
 
     public double getSumOfAllY() {
