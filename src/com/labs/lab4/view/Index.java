@@ -48,6 +48,7 @@ public class Index {
         else if (input == maxX) f2.setMaxX(val);
         else if (input == step) f2.setStep(val);
 
+        updateInputTexts();
         update();
     }
 
