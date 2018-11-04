@@ -49,6 +49,13 @@ class MainTest {
     }
 
     @Test
+    void testGetTabulationNegSteps() {
+        var f2 = new F2(10, 1, 1, 0);
+        double expected = 10;
+        assertEquals(expected, f2.getStepsCount(), 0.001, "start: 1, end: 10, step: 1 -> 10");
+    }
+
+    @Test
     void testGetTabulationStepsFloat() {
         var f2 = new F2(0.1, 1.1, 0.1, 0);
         double expected = 11;

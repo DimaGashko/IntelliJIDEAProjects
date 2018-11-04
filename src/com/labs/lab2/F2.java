@@ -3,16 +3,25 @@ package com.labs.lab2;
 import static java.lang.Math.*;
 
 public class F2 {
-    private double minX = 0;
-    private double maxX = 2;
-    private double step = 0.001;
-    private double a = 2.3;
+    private double minX;
+    private double maxX;
+    private double step;
+    private double a;
 
     private int stepsCount;
     private double[] allX;
     private double[] allY;
 
+    final static private double MAX_X = 10000;
+    final static private double MIN_X = -10000;
+    final static private double MIN_STEP = 0.00001;
+
     public F2() {
+        setMinX(0);
+        setMaxX(2.8);
+        setStep(0.001);
+        setA(2.3);
+
         update();
     }
 
@@ -73,7 +82,8 @@ public class F2 {
     }
 
     private void updateTabulationStepsCount() {
-        stepsCount = (int)((maxX - minX) / step + 0.000001) + 1;
+        double realStep = (maxX > minX) ? step : -step;
+        stepsCount = (int)abs(((maxX - minX) / realStep + 0.000001) + 1);
     }
 
     // - - -
@@ -143,6 +153,7 @@ public class F2 {
     }
 
     public void setMinX(double minX) {
+        if (minX < MIN_X) minX = MIN_X;
         this.minX = minX;
     }
 
@@ -151,6 +162,7 @@ public class F2 {
     }
 
     public void setMaxX(double maxX) {
+        if (maxX > MAX_X) maxX = MAX_X;
         this.maxX = maxX;
     }
 
@@ -159,6 +171,7 @@ public class F2 {
     }
 
     public void setStep(double step) {
+        if (step <= MIN_STEP) step = MIN_STEP;
         this.step = step;
     }
 
