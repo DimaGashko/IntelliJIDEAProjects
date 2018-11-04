@@ -1,14 +1,15 @@
-package com.labs.lab4.Coordinates;
+package com.labs.lab4.controllers;
 
 import com.labs.lab2.F2;
 import javafx.event.Event;
-import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import javafx.fxml.FXML;
 
-public class Coordinates {
+public class Index {
     private F2 f2 = new F2(0.1, 2.6, 0.01, 2.3);
 
     @FXML private TextField maxX;
@@ -20,7 +21,8 @@ public class Coordinates {
     @FXML private Text maxY;
     @FXML private Text sumOfElements;
     @FXML private Text average;
-    @FXML private Button showCoordinates;
+    @FXML public Button showCoordinates;
+    @FXML public TextArea coordinates;
 
     @FXML
     private void initialize() {

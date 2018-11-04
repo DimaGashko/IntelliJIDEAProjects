@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab4.controllers.Index">
+   <children>
+    <GridPane styleClass="f2">
+        <children>
+            <Text text="Function" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ImageView styleClass="f2__equation" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <image>
+                   <Image url="@../img/equation.png" />
+               </image>
+            </ImageView>
+   
+            <Text text="Parameter &quot;a&quot;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="a" onKeyTyped="#onInputChange" styleClass="f2__input" text="2.3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   
+            <Text text="Min X" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="minX" onKeyTyped="#onInputChange" styleClass="f2__input" text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   
+            <Text text="Max X" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="maxX" onKeyTyped="#onInputChange" styleClass="f2__input" text="5.3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   
+            <Text text="Step" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="step" onKeyTyped="#onInputChange" styleClass="f2__input" text="0.001" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   
+            <Text text="Min Y" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Text fx:id="minY" text="0.15" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   
+            <Text text="Max Y" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Text fx:id="maxY" text="15" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   
+            <Text text="Sum of elements" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Text fx:id="sumOfElements" text="1556" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   
+            <Text text="Average" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <Text fx:id="average" text="1556" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+   
+            <Text text="Coordinates" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <Button fx:id="showCoordinates" onAction="#onShowCoordinates" GridPane.columnIndex="1" GridPane.rowIndex="9">Show</Button>
+
+            <TextArea fx:id="coordinates" styleClass="f2__textArea" text="Coordinates" GridPane.columnSpan="2" GridPane.rowIndex="10" />
+        </children>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+   </children>
+</VBox>

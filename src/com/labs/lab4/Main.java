@@ -25,8 +25,8 @@ public class Main extends Application {
         setWindow(window);
         window.setTitle("F2");
 
-        Parent root = FXMLLoader.load(getClass().getResource("Index/index.fxml"));
-        scene = new Scene(root, 500, 350);
+        Parent root = FXMLLoader.load(getClass().getResource("views/index.fxml"));
+        scene = new Scene(root, 500, 650);
 
         window.setScene(scene);
         window.show();
