@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox styleClass="wrapper" stylesheets="@../styles/main.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab4.view.Index">
+<VBox styleClass="wrapper" stylesheets="@index.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab4.Index.Index">
    <children>
     <GridPane styleClass="f2">
         <children>
@@ -41,7 +41,7 @@
             <Text text="1556" fx:id="average" GridPane.columnIndex="1" GridPane.rowIndex="8" />
    
             <Text text="Coordinates" GridPane.columnIndex="0" GridPane.rowIndex="9" />
-            <Button fx:id="showCoordinates" GridPane.columnIndex="1" GridPane.rowIndex="9">Show</Button>
+            <Button fx:id="showCoordinates" onAction="#onShowCoordinates" GridPane.columnIndex="1" GridPane.rowIndex="9">Show</Button>
         </children>
     </GridPane>
    </children>

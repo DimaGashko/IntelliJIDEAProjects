@@ -1,14 +1,14 @@
-package com.labs.lab4.view;
+package com.labs.lab4.Coordinates;
 
 import com.labs.lab2.F2;
 import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import javafx.fxml.FXML;
 
-public class Index {
+public class Coordinates {
     private F2 f2 = new F2(0.1, 2.6, 0.01, 2.3);
 
     @FXML private TextField maxX;
@@ -49,6 +49,11 @@ public class Index {
         else if (input == step) f2.setStep(val);
 
         update();
+    }
+
+    @FXML
+    private void onShowCoordinates() {
+        System.out.println("show");
     }
 
     private void update() {
