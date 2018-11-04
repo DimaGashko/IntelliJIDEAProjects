@@ -46,16 +46,16 @@
             <TextField fx:id="stepInput" styleClass="f2__input" onKeyTyped="#onInputKeyPressed" text="0.001" GridPane.columnIndex="1" GridPane.rowIndex="4" />
    
             <Text text="Min Y" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-            <Text text="0.15" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Text text="0.15" fx:id="minY" GridPane.columnIndex="1" GridPane.rowIndex="5" />
    
             <Text text="Max Y" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-            <Text text="15" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Text text="15" fx:id="maxY" GridPane.columnIndex="1" GridPane.rowIndex="6" />
    
             <Text text="Sum of elements" GridPane.columnIndex="0" GridPane.rowIndex="7" />
-            <Text text="1556" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Text text="1556" fx:id="sumOfElements" GridPane.columnIndex="1" GridPane.rowIndex="7" />
    
             <Text text="Average" GridPane.columnIndex="0" GridPane.rowIndex="8" />
-            <Text text="1556" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Text text="1556" fx:id="showCoordinates" GridPane.columnIndex="1" GridPane.rowIndex="8" />
    
             <Text text="Coordinates" GridPane.columnIndex="0" GridPane.rowIndex="9" />
             <Button GridPane.columnIndex="1" GridPane.rowIndex="9">Show</Button>
