@@ -17,22 +17,19 @@ public class Index {
     private double _step = 0.001;
 
     @FXML private TextField maxX;
-    @FXML private TextField a;
     @FXML private TextField minX;
     @FXML private TextField step;
+    @FXML private TextField a;
 
     @FXML private Text minY;
     @FXML private Text maxY;
     @FXML private Text sumOfElements;
-    @FXML private Text everage;
+    @FXML private Text average;
     @FXML private Button showCoordinates;
 
     @FXML
     private void initialize() {
-        a.setText(Double.toString(_a));
-        minX.setText(Double.toString(_minX));
-        maxX.setText(Double.toString(_maxX));
-        step.setText(Double.toString(_step));
+        update();
     }
 
     @FXML
@@ -61,10 +58,10 @@ public class Index {
     private void update() {
         var allY = f2.getAllY(f2.getAllX(_minX, _maxX, _step), _a);
 
-        minY.setText(((Double)allY[f2.getIndexOfMin(allY)]).toString());
-        maxX.setText(((Double)allY[f2.getIndexOfMax(allY)]).toString());
-        sumOfElements.setText(((Double)f2.getSumOfElements(allY)).toString());
-        everage.setText(((Double)f2.getAverage(allY)).toString());
+        minY.setText(Double.toString(allY[f2.getIndexOfMin(allY)]));
+        maxY.setText(Double.toString(allY[f2.getIndexOfMax(allY)]));
+        sumOfElements.setText(Double.toString(f2.getSumOfElements(allY)));
+        average.setText(Double.toString(f2.getAverage(allY)));
     }
 
     //Добавляет класс переданному элементу
