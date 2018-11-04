@@ -78,11 +78,11 @@ public class F2 {
 
     // - - -
 
-    private double getAverage(double[] arr) {
+    double getAverage(double[] arr) {
         return getSumOfElements(arr) / arr.length;
     }
 
-    private double getSumOfElements(double[] arr) {
+    double getSumOfElements(double[] arr) {
         double res = 0;
 
         for (double item : arr) {
@@ -92,7 +92,7 @@ public class F2 {
         return res;
     }
 
-    private int getIndexOfMin(double[] arr) {
+    int getIndexOfMin(double[] arr) {
         double min = arr[0];
         int index = 0;
 
@@ -106,7 +106,7 @@ public class F2 {
         return index;
     }
 
-    private int getIndexOfMax(double[] arr) {
+    int getIndexOfMax(double[] arr) {
         double max = arr[0];
         int index = 0;
 
