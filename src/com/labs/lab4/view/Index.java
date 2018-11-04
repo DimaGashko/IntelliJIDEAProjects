@@ -33,7 +33,7 @@ public class Index {
     }
 
     @FXML
-    private void onInputKeyPressed(Event event) {
+    private void onInputChange(Event event) {
         TextField input = (TextField)event.getTarget();
         double val = 0;
 
