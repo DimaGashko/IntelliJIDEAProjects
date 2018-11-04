@@ -12,11 +12,11 @@ public class F2 {
     private double[] allX;
     private double[] allY;
 
-    F2() {
+    public F2() {
         update();
     }
 
-    F2(double minX, double maxX, double step, double a) {
+    public F2(double minX, double maxX, double step, double a) {
         setMinX(minX);
         setMaxX(maxX);
         setStep(step);

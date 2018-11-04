@@ -9,12 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
 public class Index {
-    private F2 f2 = new F2();
-
-    private double _a = 2.3;
-    private double _minX = 0.1;
-    private double _maxX = 8.8;
-    private double _step = 0.001;
+    private F2 f2 = new F2(0.1, 2.6, 0.01, 2.3);
 
     @FXML private TextField maxX;
     @FXML private TextField minX;
@@ -47,21 +42,19 @@ public class Index {
             return;
         }
 
-        if (input == a) _a = val;
-        else if (input == minX) _minX = val;
-        else if (input == maxX) _maxX = val;
-        else if (input == step) _step = val;
+        if (input == a) f2.setA(val);
+        else if (input == minX) f2.setMinX(val);
+        else if (input == maxX) f2.setMaxX(val);
+        else if (input == step) f2.setStep(val);
 
         update();
     }
 
     private void update() {
-        var allY = f2.getAllY(f2.getAllX(_minX, _maxX, _step), _a);
-
-        minY.setText(Double.toString(allY[f2.getIndexOfMin(allY)]));
-        maxY.setText(Double.toString(allY[f2.getIndexOfMax(allY)]));
-        sumOfElements.setText(Double.toString(f2.getSumOfElements(allY)));
-        average.setText(Double.toString(f2.getAverage(allY)));
+        minY.setText( Double.toString(f2.getMinY()) );
+        maxY.setText( Double.toString(f2.getMaxX()) );
+        average.setText( Double.toString( f2.getAverageY()) );
+        sumOfElements.setText( Double.toString(f2.getSumOfAllY()) );
     }
 
     //Добавляет класс переданному элементу

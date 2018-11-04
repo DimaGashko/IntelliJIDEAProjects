@@ -1,6 +1,5 @@
 package com.labs.lab4;
 
-import com.labs.lab2.F2;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -9,7 +8,6 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
-    private F2 f2 = new F2();
     private Stage window;
     private Scene scene;
 
