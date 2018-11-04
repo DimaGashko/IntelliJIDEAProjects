@@ -6,8 +6,13 @@ import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputControl;
 import javafx.scene.text.Text;
 import javafx.fxml.FXML;
+
+import java.lang.reflect.Field;
+import java.util.List;
+import java.util.Locale;
 
 public class Index {
     private F2 f2 = new F2(0.1, 2.6, 0.01, 2.3);
@@ -61,17 +66,22 @@ public class Index {
     private void update() {
         f2.update();
 
-        minY.setText( Double.toString(f2.getMinY()) );
-        maxY.setText( Double.toString(f2.getMaxY()) );
-        average.setText( Double.toString( f2.getAverageY()) );
-        sumOfElements.setText( Double.toString(f2.getSumOfAllY()) );
+        minY.setText( toText(f2.getMinY()) );
+        maxY.setText( toText(f2.getMaxY()) );
+        average.setText( toText( f2.getAverageY()) );
+        sumOfElements.setText( toText(f2.getSumOfAllY()) );
     }
 
     private void updateInputTexts() {
-        minX.setText( Double.toString(f2.getMinX()) );
-        maxX.setText( Double.toString(f2.getMaxX()) );
-        step.setText( Double.toString(f2.getStep()) );
-        a.setText( Double.toString(f2.getA()) );
+        minX.setText( toText(f2.getMinX()) );
+        minX.setText( toText(f2.getMinX()) );
+        maxX.setText( toText(f2.getMaxX()) );
+        step.setText( toText(f2.getStep()) );
+        a.setText( toText(f2.getA()) );
+    }
+
+    private String toText(double val) {
+        return String.format(Locale.ENGLISH, "%.3f", val);
     }
 
     //Добавляет класс переданному элементу
