@@ -1,12 +1,11 @@
 package com.labs.lab4.view;
 
+import com.labs.lab3.part2.Cleaner;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Control;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextFormatter;
 import javafx.scene.input.KeyEvent;
 
 public class Index {
@@ -28,38 +27,26 @@ public class Index {
     private TextField stepInput;
 
     @FXML
-    private void onUpdate(Event event) {
-        update();
-    }
-
-    @FXML
-    void onAInputChange(KeyEvent event) {
+    private void onInputKeyPressed(Event event) {
+        TextField input = (TextField)event.getTarget();
         double val = 0;
 
         try {
-            val = Double.parseDouble(aInput.getText());
-            System.out.println(val);
-            aInput.getStyleClass().remove("f2__input-invalid");
+            val = Double.parseDouble(input.getText());
+            input.getStyleClass().remove("f2__input-invalid");
 
         } catch (Exception err) {
-            addClass(aInput, "f2__input-invalid");
-
+            if ( !(err instanceof NumberFormatException) ) throw err;
+            addClass(input, "f2__input-invalid");
+            return;
         }
-    }
 
-    @FXML
-    void onMinXInputChange(KeyEvent event) {
+        if (input == aInput) a = val;
+        else if (input == minXInput) minX = val;
+        else if (input == maxXInput) maxX = val;
+        else if (input == stepInput) step = val;
 
-    }
-
-    @FXML
-    void onMaxXInputChange(KeyEvent event) {
-
-    }
-
-    @FXML
-    void onStepChange(KeyEvent event) {
-
+        update();
     }
 
     @FXML

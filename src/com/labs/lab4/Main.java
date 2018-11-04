@@ -5,10 +5,8 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.Chart;
 import javafx.stage.Stage;
 
-import java.beans.Expression;
 
 public class Main extends Application {
     private F2 f2 = new F2();
