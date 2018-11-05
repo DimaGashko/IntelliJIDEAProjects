@@ -15,6 +15,8 @@ import java.util.Locale;
 public class Index {
     private F2 f2 = new F2(0.1, 2.6, 0.01, 2.3);
 
+    private static int MAX_COORDINATES_LEN = 500;
+
     @FXML private TextField maxX;
     @FXML private TextField minX;
     @FXML private TextField step;
@@ -58,6 +60,11 @@ public class Index {
         update();
     }
 
+    @FXML
+    void onChangeCoordinatesVisible() {
+        updateCoordinates();
+    }
+
     private void update() {
         f2.update();
 
@@ -66,9 +73,7 @@ public class Index {
         average.setText( toText( f2.getAverageY()) );
         sumOfElements.setText( toText(f2.getSumOfAllY()) );
 
-        if (coordinatesVisible.isSelected()) {
-            updateCoordinates();
-        }
+        updateCoordinates();
     }
 
     private void updateInputTexts() {
@@ -80,13 +85,26 @@ public class Index {
     }
 
     private void updateCoordinates() {
+        if (!coordinatesVisible.isSelected()) return;
+
         var allX = f2.getAllX();
         var allY = f2.getAllY();
 
-        var coordinatesText = new StringBuilder();
+        var len = allX.length;
+        var more = (len > MAX_COORDINATES_LEN);
 
-        for (int i = 0; i < allX.length; i++) {
+        if (more) {
+            len = MAX_COORDINATES_LEN;
+        }
+
+        var coordinatesText = new StringBuffer();
+
+        for (int i = 0; i < len; i++) {
             coordinatesText.append(String.format("(%.3f, %.3f),\n", allX[i], allY[i]));
+        }
+
+        if (more) {
+            coordinatesText.append(String.format("\n(Showed %d/%d)\n", len, allX.length - len));
         }
 
         coordinates.setText(coordinatesText.toString());

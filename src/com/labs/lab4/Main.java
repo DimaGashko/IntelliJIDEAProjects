@@ -26,10 +26,11 @@ public class Main extends Application {
         window.setTitle("F2");
 
         Parent root = FXMLLoader.load(getClass().getResource("views/index.fxml"));
-        scene = new Scene(root, 400, 660);
+        scene = new Scene(root, 420, 660);
 
-        window.setMinWidth(400);
-        window.setMinHeight(660);
+        window.setMinWidth(420);
+        window.setMinHeight(400);
+
         window.setScene(scene);
         window.show();
     }

@@ -12,10 +12,10 @@ public class F2 {
     private double[] allX;
     private double[] allY;
 
-    final static private double MAX_A = 10000;
-    final static private double MAX_X = 10000;
-    final static private double MIN_X = -10000;
-    final static private double MIN_STEP = 0.00001;
+    static private double MAX_A = 1000;
+    static private double MAX_X = 1000;
+    static private double MIN_X = -1000;
+    static private double MIN_STEP = 0.0001;
 
     public F2() {
         setMinX(0);
