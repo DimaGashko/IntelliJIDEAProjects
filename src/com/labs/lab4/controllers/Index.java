@@ -79,8 +79,8 @@ public class Index {
     }
 
     private void initBinds() {
-        //coordinatesRoot.visibleProperty().bind(coordinatesVisible.selectedProperty());
-        coordinatesRoot.setVisible(false);
+        coordinatesRoot.visibleProperty().bind(coordinatesVisible.selectedProperty());
+        coordinatesRoot.managedProperty().bind(coordinatesRoot.visibleProperty());
     }
 
     //Добавляет класс переданному элементу
