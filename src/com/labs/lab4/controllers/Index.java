@@ -3,18 +3,16 @@ package com.labs.lab4.controllers;
 import com.labs.lab2.F2;
 import javafx.event.Event;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TextInputControl;
 import javafx.scene.text.Text;
 import javafx.fxml.FXML;
 
-import java.lang.reflect.Field;
-import java.util.List;
 import java.util.Locale;
 
 public class Index {
+    public ScrollPane coordinatesRoot;
     private F2 f2 = new F2(0.1, 2.6, 0.01, 2.3);
 
     @FXML private TextField maxX;
@@ -26,18 +24,19 @@ public class Index {
     @FXML private Text maxY;
     @FXML private Text sumOfElements;
     @FXML private Text average;
-    @FXML public Button showCoordinates;
-    @FXML public TextArea coordinates;
+    @FXML public CheckBox coordinatesVisible;
+    @FXML public Text coordinates;
 
     @FXML
     private void initialize() {
+        initBinds();
         updateInputTexts();
         update();
     }
 
     @FXML
     private void onInputChange(Event event) {
-        TextField input = (TextField)event.getTarget();
+        TextField input = (TextField) event.getTarget();
         double val = 0;
 
         try {
@@ -45,7 +44,7 @@ public class Index {
             input.getStyleClass().remove("f2__input-invalid");
 
         } catch (Exception err) {
-            if ( !(err instanceof NumberFormatException) ) throw err;
+            if (!(err instanceof NumberFormatException)) throw err;
             addClass(input, "f2__input-invalid");
             return;
         }
@@ -56,11 +55,6 @@ public class Index {
         else if (input == step) f2.setStep(val);
 
         update();
-    }
-
-    @FXML
-    private void onShowCoordinates() {
-        System.out.println("show");
     }
 
     private void update() {
@@ -82,6 +76,11 @@ public class Index {
 
     private String toText(double val) {
         return String.format(Locale.ENGLISH, "%.3f", val);
+    }
+
+    private void initBinds() {
+        //coordinatesRoot.visibleProperty().bind(coordinatesVisible.selectedProperty());
+        coordinatesRoot.setVisible(false);
     }
 
     //Добавляет класс переданному элементу

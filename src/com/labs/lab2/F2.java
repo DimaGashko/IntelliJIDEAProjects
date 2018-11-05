@@ -12,6 +12,7 @@ public class F2 {
     private double[] allX;
     private double[] allY;
 
+    final static private double MAX_A = 10000;
     final static private double MAX_X = 10000;
     final static private double MIN_X = -10000;
     final static private double MIN_STEP = 0.00001;
@@ -154,6 +155,7 @@ public class F2 {
 
     public void setMinX(double minX) {
         if (minX < MIN_X) minX = MIN_X;
+        if (minX > MAX_X) minX = MAX_X;
         this.minX = minX;
     }
 
@@ -162,6 +164,7 @@ public class F2 {
     }
 
     public void setMaxX(double maxX) {
+        if (maxX < MIN_X) maxX = MIN_X;
         if (maxX > MAX_X) maxX = MAX_X;
         this.maxX = maxX;
     }
@@ -180,6 +183,7 @@ public class F2 {
     }
 
     public void setA(double a) {
+        if (a > MAX_A) a = MAX_A;
         this.a = a;
     }
 
