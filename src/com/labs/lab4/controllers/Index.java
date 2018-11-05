@@ -7,7 +7,6 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.fxml.FXML;
 
@@ -66,6 +65,10 @@ public class Index {
         maxY.setText( toText(f2.getMaxY()) );
         average.setText( toText( f2.getAverageY()) );
         sumOfElements.setText( toText(f2.getSumOfAllY()) );
+
+        if (coordinatesVisible.isSelected()) {
+            updateCoordinates();
+        }
     }
 
     private void updateInputTexts() {
@@ -74,6 +77,19 @@ public class Index {
         maxX.setText( toText(f2.getMaxX()) );
         step.setText( toText(f2.getStep()) );
         a.setText( toText(f2.getA()) );
+    }
+
+    private void updateCoordinates() {
+        var allX = f2.getAllX();
+        var allY = f2.getAllY();
+
+        var coordinatesText = new StringBuilder();
+
+        for (int i = 0; i < allX.length; i++) {
+            coordinatesText.append(String.format("(%.3f, %.3f),\n", allX[i], allY[i]));
+        }
+
+        coordinates.setText(coordinatesText.toString());
     }
 
     private String toText(double val) {
