@@ -103,9 +103,7 @@ public class Index {
             coordinatesText.append(String.format("(%.3f, %.3f),\n", allX[i], allY[i]));
         }
 
-        if (more) {
-            coordinatesText.append(String.format("\n(Showed %d/%d)\n", len, allX.length - len));
-        }
+        coordinatesText.append(String.format("\n(Showed %d/%d)\n", len, allX.length));
 
         coordinates.setText(coordinatesText.toString());
     }

@@ -15,7 +15,7 @@ public class F2 {
     static private double MAX_A = 1000;
     static private double MAX_X = 1000;
     static private double MIN_X = -1000;
-    static private double MIN_STEP = 0.0001;
+    static private double MIN_STEP = 0.001;
 
     public F2() {
         setMinX(0);
