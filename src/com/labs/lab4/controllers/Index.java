@@ -4,6 +4,7 @@ import com.labs.lab2.F2;
 import javafx.event.Event;
 import javafx.scene.Node;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
@@ -12,7 +13,6 @@ import javafx.fxml.FXML;
 import java.util.Locale;
 
 public class Index {
-    public ScrollPane coordinatesRoot;
     private F2 f2 = new F2(0.1, 2.6, 0.01, 2.3);
 
     @FXML private TextField maxX;
@@ -25,7 +25,8 @@ public class Index {
     @FXML private Text sumOfElements;
     @FXML private Text average;
     @FXML public CheckBox coordinatesVisible;
-    @FXML public Text coordinates;
+    @FXML public ScrollPane coordinatesRoot;
+    @FXML public Label coordinates;
 
     @FXML
     private void initialize() {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -9,11 +9,9 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<VBox styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab4.controllers.Index">
-   <children>
+<ScrollPane styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab4.controllers.Index">
     <GridPane styleClass="f2">
         <children>
             <Text text="Function" GridPane.columnIndex="0" GridPane.rowIndex="0" />
@@ -50,8 +48,8 @@
             <Text text="Coordinates" GridPane.columnIndex="0" GridPane.rowIndex="9" />
             <CheckBox fx:id="coordinatesVisible" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
 
-            <ScrollPane fx:id="coordinatesRoot" GridPane.columnSpan="2" GridPane.rowIndex="10">
-                <Text fx:id="coordinates" disable="true" styleClass="f2__coordinates" text="Coordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdf&#10;asdf&#10;asd&#10;fa&#10;sdf&#10;asdf&#10;asdf&#10;asd&#10;fas&#10;df&#10;" />
+            <ScrollPane fx:id="coordinatesRoot" styleClass="f2__coordinatesRoot" GridPane.columnSpan="2" GridPane.rowIndex="10">
+                <Label fx:id="coordinates" styleClass="f2__coordinates" text="Coordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdf&#10;asdf&#10;asd&#10;fa&#10;sdf&#10;asdf&#10;asdf&#10;asd&#10;fas&#10;df&#10;" />
             </ScrollPane>
         </children>
         <columnConstraints>
@@ -72,5 +70,4 @@
             <RowConstraints />
         </rowConstraints>
     </GridPane>
-   </children>
-</VBox>
+</ScrollPane>

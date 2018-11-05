@@ -1,9 +1,10 @@
 .wrapper
   -fx-background: #fff
   -fx-padding: 10px 20px
-  -fx-font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif
-  -fx-font-size: 16px
   -fx-text-fill: #333
+  -fx-font:
+    family: 'DejaVu Sans', Arial, Helvetica, sans-serif
+    size: 16px
 
 .f2
   -fx-vgap: 10px
@@ -12,20 +13,20 @@
 
   &__input
     -fx-background-color: transparent
-    -fx-border-color: #ddd
-    -fx-border-radius: 5px
+    -fx-border:
+      color: #ddd
+      radius: 5px
 
     &-invalid
-      -fx-border-color: red
-
-  &__coordinates
-    -fx-min-height: 50px
-    -fx-border:
-      color: red
-      weight: 3px
+      -fx-border:
+        color: red
 
   &__resultText
     -fx-max-width: 300px
+
+  &__coordinatesRoot
+    -fx-max-height: 200px
+    -fx-padding: 10px 20px
 
 
 
