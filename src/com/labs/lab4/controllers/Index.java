@@ -109,6 +109,10 @@ public class Index {
     }
 
     private String toText(double val) {
+
+
+
+
         return String.format(Locale.ENGLISH, "%.3f", val);
     }
 
