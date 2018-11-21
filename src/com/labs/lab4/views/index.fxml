@@ -49,7 +49,7 @@
             <CheckBox fx:id="coordinatesVisible" onAction="#onChangeCoordinatesVisible" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
 
             <ScrollPane fx:id="coordinatesRoot" styleClass="f2__coordinatesRoot" GridPane.columnSpan="2" GridPane.rowIndex="10">
-                <Label fx:id="coordinates" styleClass="f2__coordinates" text="Coordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdordinates&#10;asdf&#10;as&#10;dfasd&#10;fa&#10;sdf&#10;asdf&#10;asd&#10;fa&#10;sdf&#10;asdf&#10;asdf&#10;asd&#10;fas&#10;df&#10;" />
+                <Label fx:id="coordinates" styleClass="f2__coordinates" />
             </ScrollPane>
         </children>
         <columnConstraints>

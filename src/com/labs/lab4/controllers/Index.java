@@ -52,6 +52,8 @@ public class Index {
             return;
         }
 
+
+
         if (input == a) f2.setA(val);
         else if (input == minX) f2.setMinX(val);
         else if (input == maxX) f2.setMaxX(val);
