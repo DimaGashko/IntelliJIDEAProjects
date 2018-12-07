@@ -1,7 +1,7 @@
 package com.labs.lab5.ELib.models.storage;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
-import java.util.function.Predicate;
 
 /**
  * Класс для хранения данных на основании текстового файла
@@ -11,8 +11,15 @@ import java.util.function.Predicate;
  * TODO: заменить Array на ArrayList
  */
 public class TextStorage<T> implements IStorage<T> {
+    static final private int DEF_BUFFER_SIZE = 100;
+
     //Путь к текстовому файлу для хранения данных
     private String src;
+
+    // Класс хранимих данных
+    // Используется для создания new T[]
+    // TODO: убрать после внедрения ArrayList
+    private Class dataClass;
 
     // Массив хранимых данных
     private T[] data;
@@ -20,15 +27,14 @@ public class TextStorage<T> implements IStorage<T> {
     // Количество данных
     private int len = 0;
 
-    /**
-     * @param dataArray массив для хранения данных
-     *
-     * TODO: после внедрения ArrayList убрать атрибут dataArray
-     */
-    public TextStorage(String src, T[] dataArray) {
+    public TextStorage(String src) {
+        this.data = getTArray(DEF_BUFFER_SIZE);
         this.src = src;
+    }
 
-        data = dataArray;
+    public TextStorage(String src, int bufferSize) {
+        this.data = getTArray(bufferSize);
+        this.src = src;
     }
 
     @Override
@@ -66,5 +72,23 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private boolean save(T item) {
         return true;
+    }
+
+    public void setDataClass(Class dataClass) {
+        this.dataClass = dataClass;
+    }
+
+    /**
+     * Создает массив данных (new T[])
+     * @param len длина массива
+     * @return массив данных
+     *
+     * TODO: удалить после внедрения ArrayList
+     */
+    private T[] getTArray(int len) {
+        @SuppressWarnings("unchecked")
+        var arr = (T[])Array.newInstance(dataClass, 100);
+
+        return arr;
     }
 }
