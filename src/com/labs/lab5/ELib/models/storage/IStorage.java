@@ -18,19 +18,19 @@ public interface IStorage<T> {
     /**
      * @return данных в виде массива
      */
-    //T[] getArrOfData();
+    T[] getArrOfData();
 
     /**
      * Возвращает данные (в виде массива), что удовлетворяют фильтр
      * @param filter лямбда выражение для фильтрации данных
      * @return данные (в виде массива), что удовлетворяют фильтр
      */
-    //T[] getArrOfData(Predicate<T> filter);
+    T[] getArrOfData(Predicate<T> filter);
 
     /**
      * Удаляет элемент из хранилища
      * @param item удаляемый элемент
      * @return удалось ли удаление
      */
-    //boolean remove(T item);
+    boolean remove(T item);
 }

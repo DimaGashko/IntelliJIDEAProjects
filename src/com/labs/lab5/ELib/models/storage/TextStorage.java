@@ -2,6 +2,7 @@ package com.labs.lab5.ELib.models.storage;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.function.Predicate;
 
 /**
  * Класс для хранения данных на основании текстового файла
@@ -27,14 +28,24 @@ public class TextStorage<T> implements IStorage<T> {
     // Количество данных
     private int len = 0;
 
-    public TextStorage(String src) {
+    /**
+     * TODO: после внедрения ArrayList убрать аргумент dataClass
+     */
+    public TextStorage(String src, Class dataClass) {
         this.data = getTArray(DEF_BUFFER_SIZE);
         this.src = src;
+
+        this.dataClass = dataClass;
     }
 
-    public TextStorage(String src, int bufferSize) {
+    /**
+     * TODO: после внедрения ArrayList убрать аргумент dataClass
+     */
+    public TextStorage(String src, int bufferSize, Class dataClass) {
         this.data = getTArray(bufferSize);
         this.src = src;
+
+        this.dataClass = dataClass;
     }
 
     @Override
@@ -51,6 +62,11 @@ public class TextStorage<T> implements IStorage<T> {
     @Override
     public T[] getArrOfData() {
         return Arrays.copyOf(data, len);
+    }
+
+    @Override
+    public T[] getArrOfData(Predicate<T> filter) {
+        return Arrays.stream(getArrOfData()).filter(filter).toArray(this::getTArray);
     }
 
     @Override
@@ -72,10 +88,6 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private boolean save(T item) {
         return true;
-    }
-
-    public void setDataClass(Class dataClass) {
-        this.dataClass = dataClass;
     }
 
     /**
