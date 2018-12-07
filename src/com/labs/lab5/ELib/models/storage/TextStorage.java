@@ -1,5 +1,6 @@
 package com.labs.lab5.ELib.models.storage;
-import com.labs.lab3.part1.library.Book;
+
+import org.jetbrains.annotations.Contract;
 
 /**
  * Класс для хранения данных на основании текстового файла
@@ -37,11 +38,6 @@ public class TextStorage<T> implements IStorage {
     }
 
     @Override
-    public boolean addAll(Object[] item) {
-        return false;
-    }
-
-    @Override
     public Object[] getArrOfData() {
         return new Object[0];
     }
@@ -49,5 +45,21 @@ public class TextStorage<T> implements IStorage {
     @Override
     public Object[] getArrOfData(IFilter filter) {
         return new Object[0];
+    }
+
+    /**
+     * Загружает данные из текстового файла в массив данных
+     * @return true если загрузка удалась
+     */
+    private boolean load() {
+        return true;
+    }
+
+    /**
+     * Сохраняет переданный элемент в текстовом файле
+     * @return true если сохранение было успешным
+     */
+    private boolean save() {
+        return true;
     }
 }

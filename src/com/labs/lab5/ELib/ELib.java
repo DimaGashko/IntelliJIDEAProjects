@@ -1,7 +1,5 @@
 package com.labs.lab5.ELib;
 
-import com.labs.lab3.part1.library.Book;
-import com.labs.lab5.ELib.models.storage.TextStorage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

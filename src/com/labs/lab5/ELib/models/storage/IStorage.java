@@ -1,5 +1,7 @@
 package com.labs.lab5.ELib.models.storage;
 
+import java.util.ArrayList;
+
 /**
  * Интерфейс лямбда выражения для фильтрации данных
  * @param <T> обрабатываемый класс данных
@@ -26,13 +28,6 @@ public interface IStorage<T> {
      * @return удалось ли добавить элемент
      */
     boolean add(T item);
-
-    /**
-     * Добавлет переданные элементы в хранилище
-     * @param items добавляемые элементы
-     * @return удалось ли добавить элементы
-     */
-    boolean addAll(T[] items);
 
     /**
      * @return данных в виде массива
