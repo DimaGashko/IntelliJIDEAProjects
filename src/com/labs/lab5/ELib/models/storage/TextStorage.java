@@ -99,7 +99,6 @@ public class TextStorage<T> implements IStorage<T> {
     private void save(T item) {
         try {
             var writer = new PrintWriter(new FileWriter(dataFile));
-
             writer.println(item.toString());
             writer.close();
         } catch (IOException err) {
@@ -122,9 +121,7 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     private void createFile(String url) {
-        dataFile = new File(getClass().getResource(url).toString());
-        System.out.println(dataFile.exists());
-        if (dataFile.exists()) return;
+        dataFile = new File("test.txt");
 
         try {
             boolean created = dataFile.createNewFile();
