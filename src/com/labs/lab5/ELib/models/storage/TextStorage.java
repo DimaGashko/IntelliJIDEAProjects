@@ -37,6 +37,8 @@ public class TextStorage<T> implements IStorage<T> {
 
         this.data = getTArray(DEF_BUFFER_SIZE);
         createFile(url);
+
+        load();
     }
 
     /**
@@ -47,6 +49,8 @@ public class TextStorage<T> implements IStorage<T> {
 
         this.data = getTArray(bufferSize);
         createFile(url);
+
+        load();
     }
 
     @Override
@@ -81,8 +85,14 @@ public class TextStorage<T> implements IStorage<T> {
      * @return true если загрузка удалась
      */
     private boolean load() {
+        String itemStr;
+
         try {
             var reader = new BufferedReader(new FileReader(dataFile));
+
+            while ((itemStr = reader.readLine()) != null) {
+                add(parse(itemStr));
+            }
 
             reader.close();
         } catch (IOException err) {
@@ -129,6 +139,10 @@ public class TextStorage<T> implements IStorage<T> {
         } catch (IOException err) {
 
         }
+
+    }
+
+    private T parseItem() {
 
     }
 }
