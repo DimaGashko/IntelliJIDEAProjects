@@ -48,11 +48,8 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     @Override
-    public T[] getArrOfData(Predicate<T> filter) {
-        return Arrays.stream(data)
-                .filter(filter)
-                .toArray(data[0].getClass());
-
+    public boolean remove(T item) {
+        return false;
     }
 
     /**
