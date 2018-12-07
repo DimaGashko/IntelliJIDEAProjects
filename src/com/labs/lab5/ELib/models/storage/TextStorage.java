@@ -2,6 +2,8 @@ package com.labs.lab5.ELib.models.storage;
 
 import java.io.*;
 import java.lang.reflect.Array;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
@@ -55,14 +57,8 @@ public class TextStorage<T> implements IStorage<T> {
 
     @Override
     public boolean add(T item) {
-        if (len == data.length) {
-            return false;
-        }
-
-        data[len++] = item;
-
+        addToArr(item);
         save(item);
-        return true;
     }
 
     @Override
@@ -80,6 +76,11 @@ public class TextStorage<T> implements IStorage<T> {
         return false;
     }
 
+    private void addToArr(T item) {
+        if (len == data.length) return;
+        data[len++] = item;
+    }
+
     /**
      * Загружает данные из текстового файла в массив данных
      * @return true если загрузка удалась
@@ -91,7 +92,7 @@ public class TextStorage<T> implements IStorage<T> {
             var reader = new BufferedReader(new FileReader(dataFile));
 
             while ((itemStr = reader.readLine()) != null) {
-                add(parse(itemStr));
+                addToArr(parse(itemStr));
             }
 
             reader.close();
@@ -142,7 +143,7 @@ public class TextStorage<T> implements IStorage<T> {
 
     }
 
-    private T parseItem() {
-
+    private T parseItem(String itemStr) {
+        
     }
 }
