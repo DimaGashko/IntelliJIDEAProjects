@@ -60,7 +60,8 @@ public class TextStorage<T> implements IStorage<T> {
 
         data[len++] = item;
 
-        return save(item);
+        save(item);
+        return true;
     }
 
     @Override
@@ -98,12 +99,11 @@ public class TextStorage<T> implements IStorage<T> {
      * Сохраняет переданный элемент в текстовом файле
      * @return true если сохранение было успешным
      */
-    private boolean save(T item) {
+    private void save(T item) {
         try {
             var writer = new PrintWriter(new FileWriter(url.toString()));
 
             writer.println(item.toString());
-
             writer.close();
         } catch (IOException err) {
 
