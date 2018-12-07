@@ -1,5 +1,11 @@
 package com.labs.lab5.ELib.models.storage;
 
+interface IItem {
+    static IItem parse(string itemInStr) {
+        
+    };
+}
+
 /**
  * Интерфейс лямбда выражения для фильтрации данных
  * @param <T> обрабатываемый класс данных
