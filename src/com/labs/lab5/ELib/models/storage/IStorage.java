@@ -26,7 +26,6 @@ public interface IStorage<T> {
      * @return данные (в виде массива), что удовлетворяют фильтр
      */
     T[] getArrOfData(Predicate<T> filter);
-
     /**
      * Удаляет элемент из хранилища
      * @param item удаляемый элемент

@@ -1,5 +1,10 @@
 package com.labs.lab3.part2;
 
+import com.labs.lab3.part1.library.Book;
+import com.labs.lab5.ELib.models.storage.TextStorage;
+
+import java.util.Arrays;
+
 import static com.helpers.console.ConsolePrompt.promptInt;
 import static com.helpers.console.ConsolePrompt.promptLine;
 

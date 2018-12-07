@@ -8,6 +8,11 @@ public class Cleaner {
     //Символы слова, которые не входят в количетсво букв
     private static final String NO_COUNT = "[\\-_']+";
 
+    public Cleaner() {
+
+
+    }
+
     /**
      * Удалает из слов текста text длинной от minLen все вхождения подстроки delete
      * @param text Исходный текст

@@ -1,5 +1,7 @@
 package com.labs.lab5.ELib.models.storage;
 
+import com.labs.lab3.part1.library.Book;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.function.Predicate;
@@ -32,20 +34,20 @@ public class TextStorage<T> implements IStorage<T> {
      * TODO: после внедрения ArrayList убрать аргумент dataClass
      */
     public TextStorage(String src, Class dataClass) {
+        this.dataClass = dataClass;
+
         this.data = getTArray(DEF_BUFFER_SIZE);
         this.src = src;
-
-        this.dataClass = dataClass;
     }
 
     /**
      * TODO: после внедрения ArrayList убрать аргумент dataClass
      */
     public TextStorage(String src, int bufferSize, Class dataClass) {
+        this.dataClass = dataClass;
+
         this.data = getTArray(bufferSize);
         this.src = src;
-
-        this.dataClass = dataClass;
     }
 
     @Override
@@ -99,7 +101,7 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private T[] getTArray(int len) {
         @SuppressWarnings("unchecked")
-        var arr = (T[])Array.newInstance(dataClass, 100);
+        var arr = (T[])Array.newInstance(dataClass, len);
 
         return arr;
     }
