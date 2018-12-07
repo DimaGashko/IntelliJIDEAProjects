@@ -1,10 +1,7 @@
 package com.labs.lab5.ELib.models.storage;
 
-import com.labs.lab3.part1.library.Book;
-
 import java.io.*;
 import java.lang.reflect.Array;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
@@ -18,8 +15,8 @@ import java.util.function.Predicate;
 public class TextStorage<T> implements IStorage<T> {
     static final private int DEF_BUFFER_SIZE = 100;
 
-    //Путь к текстовому файлу для хранения данных
-    private URL url;
+    //Текстовый файл для хранения данных
+    private File dataFile;
 
     // Класс хранимих данных
     // Используется для создания new T[]
@@ -39,7 +36,7 @@ public class TextStorage<T> implements IStorage<T> {
         this.dataClass = dataClass;
 
         this.data = getTArray(DEF_BUFFER_SIZE);
-        setUrl(url);
+        createFile(url);
     }
 
     /**
@@ -49,7 +46,7 @@ public class TextStorage<T> implements IStorage<T> {
         this.dataClass = dataClass;
 
         this.data = getTArray(bufferSize);
-        setUrl(url);
+        createFile(url);
     }
 
     @Override
@@ -85,7 +82,7 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private boolean load() {
         try {
-            var reader = new BufferedReader(new FileReader(url.toString()));
+            var reader = new BufferedReader(new FileReader(dataFile));
 
             reader.close();
         } catch (IOException err) {
@@ -101,7 +98,7 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private void save(T item) {
         try {
-            var writer = new PrintWriter(new FileWriter(url.toString()));
+            var writer = new PrintWriter(new FileWriter(dataFile));
 
             writer.println(item.toString());
             writer.close();
@@ -124,7 +121,17 @@ public class TextStorage<T> implements IStorage<T> {
         return arr;
     }
 
-    private void setUrl(String url) {
-        this.url = getClass().getResource(url);
+    private void createFile(String url) {
+        dataFile = new File(getClass().getResource(url).toString());
+        System.out.println(dataFile.exists());
+        if (dataFile.exists()) return;
+
+        try {
+            boolean created = dataFile.createNewFile();
+
+        } catch (IOException err) {
+
+        }
+
     }
 }
