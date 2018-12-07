@@ -1,20 +1,6 @@
 package com.labs.lab5.ELib.models.storage;
 
-import java.util.ArrayList;
-
-/**
- * Интерфейс лямбда выражения для фильтрации данных
- * @param <T> обрабатываемый класс данных
- */
-@FunctionalInterface
-interface IFilter<T> {
-    /**
-     * Возвращает true если переданный экземпляр класса удовлетворяет нужному условию
-     * @param item экземпляр обрататываемого класса
-     * @return true если переданный экземпляр класса удовлетворяет нужному условию
-     */
-    boolean filter(T item);
-}
+import java.util.function.Predicate;
 
 /**
  * Интерфейс хранения данных
@@ -39,5 +25,12 @@ public interface IStorage<T> {
      * @param filter лямбда выражение для фильтрации данных
      * @return данные (в виде массива), что удовлетворяют фильтр
      */
-    T[] getArrOfData(IFilter<T> filter);
+    T[] getArrOfData(Predicate<T> filter);
+
+    /**
+     * Удаляет элемент из хранилища
+     * @param item удаляемый элемент
+     * @return удалось ли удаление
+     */
+    boolean remove(T item);
 }

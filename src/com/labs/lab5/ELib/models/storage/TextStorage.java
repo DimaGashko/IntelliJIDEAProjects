@@ -1,6 +1,7 @@
 package com.labs.lab5.ELib.models.storage;
 
-import org.jetbrains.annotations.Contract;
+import java.util.Arrays;
+import java.util.function.Predicate;
 
 /**
  * Класс для хранения данных на основании текстового файла
@@ -9,7 +10,10 @@ import org.jetbrains.annotations.Contract;
  *
  * TODO: заменить Array на ArrayList
  */
-public class TextStorage<T> implements IStorage {
+public class TextStorage<T> implements IStorage<T> {
+    //Путь к текстовому файлу для хранения данных
+    private String src;
+
     // Массив хранимых данных
     private T[] data;
 
@@ -17,34 +21,38 @@ public class TextStorage<T> implements IStorage {
     private int len = 0;
 
     /**
-     * TODO: после внедрения ArrayList удалить либо сделать публичным
-     */
-    private TextStorage() {
-
-    }
-
-    /**
      * @param dataArray массив для хранения данных
      *
-     * TODO: после внедрения ArrayList удалить этот конструктор
+     * TODO: после внедрения ArrayList убрать атрибут dataArray
      */
-    public TextStorage(T[] dataArray) {
+    public TextStorage(String src, T[] dataArray) {
+        this.src = src;
+
         data = dataArray;
     }
 
     @Override
-    public boolean add(Object item) {
-        return false;
+    public boolean add(T item) {
+        if (len == data.length) {
+            return false;
+        }
+
+        data[len++] = item;
+
+        return save(item);
     }
 
     @Override
-    public Object[] getArrOfData() {
-        return new Object[0];
+    public T[] getArrOfData() {
+        return Arrays.copyOf(data, len);
     }
 
     @Override
-    public Object[] getArrOfData(IFilter filter) {
-        return new Object[0];
+    public T[] getArrOfData(Predicate<T> filter) {
+        return Arrays.stream(data)
+                .filter(filter)
+                .toArray(data[0].getClass());
+
     }
 
     /**
@@ -59,7 +67,7 @@ public class TextStorage<T> implements IStorage {
      * Сохраняет переданный элемент в текстовом файле
      * @return true если сохранение было успешным
      */
-    private boolean save() {
+    private boolean save(T item) {
         return true;
     }
 }
