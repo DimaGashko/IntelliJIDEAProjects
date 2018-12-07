@@ -84,11 +84,9 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private boolean load() {
         try {
-            var br = new BufferedReader(new FileReader(url.toString()));
+            var reader = new BufferedReader(new FileReader(url.toString()));
 
-
-
-            br.close();
+            reader.close();
         } catch (IOException err) {
 
         }
@@ -102,11 +100,11 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private boolean save(T item) {
         try {
-            var bw = new BufferedWriter(new FileWriter(url.toString()));
+            var writer = new PrintWriter(new FileWriter(url.toString()));
 
+            writer.println(item.toString());
 
-
-            bw.close();
+            writer.close();
         } catch (IOException err) {
 
         }
