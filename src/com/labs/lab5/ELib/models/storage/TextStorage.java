@@ -2,7 +2,9 @@ package com.labs.lab5.ELib.models.storage;
 
 import com.labs.lab3.part1.library.Book;
 
+import java.io.*;
 import java.lang.reflect.Array;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
@@ -17,7 +19,7 @@ public class TextStorage<T> implements IStorage<T> {
     static final private int DEF_BUFFER_SIZE = 100;
 
     //Путь к текстовому файлу для хранения данных
-    private String src;
+    private URL url;
 
     // Класс хранимих данных
     // Используется для создания new T[]
@@ -33,21 +35,21 @@ public class TextStorage<T> implements IStorage<T> {
     /**
      * TODO: после внедрения ArrayList убрать аргумент dataClass
      */
-    public TextStorage(String src, Class dataClass) {
+    public TextStorage(String url, Class dataClass) {
         this.dataClass = dataClass;
 
         this.data = getTArray(DEF_BUFFER_SIZE);
-        this.src = src;
+        setUrl(url);
     }
 
     /**
      * TODO: после внедрения ArrayList убрать аргумент dataClass
      */
-    public TextStorage(String src, int bufferSize, Class dataClass) {
+    public TextStorage(String url, int bufferSize, Class dataClass) {
         this.dataClass = dataClass;
 
         this.data = getTArray(bufferSize);
-        this.src = src;
+        setUrl(url);
     }
 
     @Override
@@ -81,6 +83,16 @@ public class TextStorage<T> implements IStorage<T> {
      * @return true если загрузка удалась
      */
     private boolean load() {
+        try {
+            var br = new BufferedReader(new FileReader(url.toString()));
+
+
+
+            br.close();
+        } catch (IOException err) {
+
+        }
+
         return true;
     }
 
@@ -89,7 +101,15 @@ public class TextStorage<T> implements IStorage<T> {
      * @return true если сохранение было успешным
      */
     private boolean save(T item) {
-        return true;
+        try {
+            var bw = new BufferedWriter(new FileWriter(url.toString()));
+
+
+
+            bw.close();
+        } catch (IOException err) {
+
+        }
     }
 
     /**
@@ -104,5 +124,9 @@ public class TextStorage<T> implements IStorage<T> {
         var arr = (T[])Array.newInstance(dataClass, len);
 
         return arr;
+    }
+
+    private void setUrl(String url) {
+        this.url = getClass().getResource(url);
     }
 }

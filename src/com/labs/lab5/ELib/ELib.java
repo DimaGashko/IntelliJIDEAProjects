@@ -9,6 +9,10 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.lang.reflect.Array;
+import java.net.URL;
+import java.util.Arrays;
+
 public class ELib extends Application {
     private final static String iconSrc = "img/icon.jpg";
     private final static String title = "ELib - ";
@@ -28,6 +32,14 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
-        launch(args);
+        var storage = new TextStorage<Integer>("data/test.txt", Integer.class);
+
+        for (int i = 0; i < 20; i++) {
+            storage.add(i);
+        }
+
+        System.out.println(Arrays.toString(storage.getArrOfData()));
+
+        //launch(args);
     }
 }
