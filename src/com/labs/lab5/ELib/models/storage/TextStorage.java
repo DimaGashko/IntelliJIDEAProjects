@@ -98,7 +98,7 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private void save(T item) {
         try {
-            var writer = new PrintWriter(new FileWriter(dataFile));
+            var writer = new PrintWriter(new FileWriter(dataFile, true));
             writer.println(item.toString());
             writer.close();
         } catch (IOException err) {
