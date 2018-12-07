@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class ELib extends Application {
     private final static String iconSrc = "img/icon.jpg";
-    private final static String title = "ELib";
+    private final static String title = "ELib - ";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
