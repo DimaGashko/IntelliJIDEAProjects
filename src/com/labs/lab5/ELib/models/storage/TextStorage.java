@@ -5,6 +5,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 /**
@@ -31,7 +32,7 @@ public class TextStorage<T> implements IStorage<T> {
     private T[] data;
 
     // Количество данных
-    private int len = 0;
+    private int len;
 
     private StringifyFunction<T> stringify;
     private ParseFunction<T> parse;
@@ -46,7 +47,7 @@ public class TextStorage<T> implements IStorage<T> {
         setStringify(stringify);
         setParse(parse);
 
-        this.data = _getTArray(bufferSize);
+        setCleanDataArr();
         initFile(url);
 
         load();
@@ -65,7 +66,9 @@ public class TextStorage<T> implements IStorage<T> {
 
     @Override
     public T[] getArrOfData() {
-        return Arrays.copyOf(data, len);
+        return Arrays.stream(Arrays.copyOf(data, len))
+                .filter(item -> !Objects.isNull(item))
+                .toArray(this::_getTArray);
     }
 
     @Override
@@ -141,7 +144,7 @@ public class TextStorage<T> implements IStorage<T> {
                 .map(T::toString)
                 .toArray(String[]::new);
 
-        return _writeArrStrToFile(strItems, false);
+        return _writeArrStrToFile(strItems, true);
     }
 
     public void setStringify(StringifyFunction<T> stringify) {
@@ -172,17 +175,23 @@ public class TextStorage<T> implements IStorage<T> {
     private boolean setData(T[] items) {
         T[] prevData = data;
 
-        //data = _getTArray(bufferSize);
-        //System.arraycopy( items, 0, data, 0, items.length);
+        setCleanDataArr();
+        len = items.length;
+        System.arraycopy(items, 0, data, 0, len);
 
         boolean saved = resaveAll();
-/*
+
         if (!saved) {
             data = prevData;
             return false;
-        }*/
+        }
 
         return true;
+    }
+
+    private void setCleanDataArr() {
+        data = _getTArray(bufferSize);
+        len = 0;
     }
 
 

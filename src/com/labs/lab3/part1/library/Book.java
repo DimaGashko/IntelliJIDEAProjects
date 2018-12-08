@@ -91,7 +91,7 @@ public class Book {
 
     static public Book parse(String strBook) {
         String[] components = strBook.split(";");
-        System.out.println(Arrays.toString(components));
+
         if (components.length < 6) {
             return null;
         }
