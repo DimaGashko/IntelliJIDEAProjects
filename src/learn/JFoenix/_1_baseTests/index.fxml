@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="learn.JFoenix._1_baseTests.Index"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="learn.JFoenix._1_baseTests.Index">
+   <children>
+      <JFXSlider layoutX="21.0" layoutY="44.0" />
+      <JFXSlider layoutX="199.0" layoutY="44.0" majorTickUnit="10.0" minorTickCount="10" prefHeight="14.0" prefWidth="368.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: none;" value="80.0" />
+      <JFXSlider layoutX="80.0" layoutY="82.0" orientation="VERTICAL" showTickLabels="true" showTickMarks="true">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+      </JFXSlider>
+      <JFXSlider layoutX="161.0" layoutY="82.0" nodeOrientation="RIGHT_TO_LEFT" orientation="VERTICAL" showTickLabels="true" showTickMarks="true">
+         <effect>
+            <Reflection bottomOpacity="0.03" fraction="0.47" topOpacity="0.35" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </JFXSlider>
+      <JFXButton layoutX="248.0" layoutY="109.0" />
+   </children>
 </AnchorPane>
