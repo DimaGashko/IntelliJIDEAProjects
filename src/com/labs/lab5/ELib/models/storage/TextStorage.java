@@ -213,14 +213,19 @@ public class TextStorage<T> implements IStorage<T> {
     /**
      * Записывает в файл строку
      *
-     * @param str    строка для записи
-     * @param append запись в конец файла
+     * @param str   строка для записи
+     * @param clean очистить перед записью (либо записывать в конец)
      */
-    private boolean _writeStrToFile(String str, boolean append) {
+    private boolean _writeStrToFile(String str, boolean clean) {
         createFile();
 
         try {
-            var writer = new PrintWriter(new FileWriter(dataFile, append));
+            var writer = new PrintWriter(new FileWriter(dataFile, !clean));
+
+            if (clean) {
+                writer.print("");
+            }
+
             writer.println(str);
             writer.close();
 
@@ -234,14 +239,18 @@ public class TextStorage<T> implements IStorage<T> {
     /**
      * Записывает в файл строки
      *
-     * @param strs   массив строк для записи
-     * @param append запись в конец файла
+     * @param strs  массив строк для записи
+     * @param clean запись в конец файла
      */
-    private boolean _writeArrStrToFile(@NotNull String[] strs, boolean append) {
+    private boolean _writeArrStrToFile(@NotNull String[] strs, boolean clean) {
         createFile();
 
         try {
-            var writer = new PrintWriter(new FileWriter(dataFile, append));
+            var writer = new PrintWriter(new FileWriter(dataFile, !clean));
+
+            if (clean) {
+                writer.print("");
+            }
 
             for (String str : strs) {
                 writer.println(str);
