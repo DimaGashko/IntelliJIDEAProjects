@@ -28,9 +28,16 @@ public interface IStorage<T> {
     T[] getArrOfData(Predicate<T> filter);
 
     /**
-     * Удаляет элемент из хранилища
+     * Удаляет из хранилища все элементы, что equals к item
      * @param item удаляемый элемент
      * @return удалось ли удаление
      */
     boolean remove(T item);
+
+    /**
+     * Удаляет все элементы что удовлетворяют предикату isRemoved
+     * @param isRemoved нужно ли удалять элемент
+     * @return удалось ли удаление
+     */
+    boolean remove(Predicate<T> isRemoved);
 }

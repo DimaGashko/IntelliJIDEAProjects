@@ -77,8 +77,15 @@ public class TextStorage<T> implements IStorage<T> {
 
     @Override
     public boolean remove(T item) {
+        return remove(el -> el.equals(item));
+    }
+
+    @Override
+    public boolean remove(Predicate<T> isRemoved) {
         T[] newData = Arrays.stream(getArrOfData())
-                .filter(el -> !el.equals(item))
+                // Не через методы типа indexOf
+                // Так как может быть несколько одинковых элементов
+                .filter(el -> !isRemoved.test(el))
                 .toArray(this::_getTArray);
 
         return setData(newData);
