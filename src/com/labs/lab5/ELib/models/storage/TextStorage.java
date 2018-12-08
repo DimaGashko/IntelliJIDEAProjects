@@ -2,8 +2,6 @@ package com.labs.lab5.ELib.models.storage;
 
 import java.io.*;
 import java.lang.reflect.Array;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
@@ -36,6 +34,8 @@ interface ParseFunction<T> {
 public class TextStorage<T> implements IStorage<T> {
     static final private int DEF_BUFFER_SIZE = 100;
 
+    private int bufferSize;
+
     //Текстовый файл для хранения данных
     private File dataFile;
 
@@ -57,11 +57,13 @@ public class TextStorage<T> implements IStorage<T> {
      * TODO: после внедрения ArrayList убрать аргумент dataClass
      */
     public TextStorage(String url, StringifyFunction<T> stringify, ParseFunction<T> parse, Class<T> dataClass) {
+        setBufferSize(DEF_BUFFER_SIZE);
+
         setDataClass(dataClass);
         setStringify(stringify);
         setParse(parse);
 
-        this.data = _getTArray(DEF_BUFFER_SIZE);
+        this.data = _getTArray(bufferSize);
         initFile(url);
 
         load();
@@ -69,8 +71,13 @@ public class TextStorage<T> implements IStorage<T> {
 
     @Override
     public boolean add(T item) {
-        addToArr(item);
-        return save(item);
+        boolean saved = save(item);
+
+        if (saved) {
+            addToArr(item);
+        }
+
+        return saved;
     }
 
     @Override
@@ -87,7 +94,11 @@ public class TextStorage<T> implements IStorage<T> {
 
     @Override
     public boolean remove(T item) {
-        return true;
+        T[] newData = Arrays.stream(getArrOfData())
+                .filter(el -> el != item)
+                .toArray(this::_getTArray);
+
+        return setData(newData);
     }
 
     /**
@@ -142,6 +153,14 @@ public class TextStorage<T> implements IStorage<T> {
         return _writeArrStrToFile(strItems, false);
     }
 
+    public void setStringify(StringifyFunction<T> stringify) {
+        this.stringify = stringify;
+    }
+
+    public void setParse(ParseFunction<T> parse) {
+        this.parse = parse;
+    }
+
     private void initFile(String url) {
         dataFile = new File("test.txt");
     }
@@ -150,13 +169,31 @@ public class TextStorage<T> implements IStorage<T> {
         this.dataClass = dataClass;
     }
 
-    public void setStringify(StringifyFunction<T> stringify) {
-        this.stringify = stringify;
+    private void setBufferSize(int bufferSize) {
+        this.bufferSize = bufferSize;
     }
 
-    public void setParse(ParseFunction<T> parse) {
-        this.parse = parse;
+    /**
+     * Устанавливает новые данные (старые удаляются)
+     * @param items новые данные
+     * @return удалось ли установить данные
+     */
+    private boolean setData(T[] items) {
+        T[] prevData = data;
+
+        data = _getTArray(bufferSize);
+        System.arraycopy( items, 0, data, 0, items.length);
+
+        boolean saved = resaveAll();
+
+        if (!saved) {
+            data = prevData;
+            return false;
+        }
+
+        return true;
     }
+
 
     /**
      * Создает массив данных (new T[])
