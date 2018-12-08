@@ -1,5 +1,7 @@
 package com.labs.lab5.ELib.models.storage;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -237,7 +239,7 @@ public class TextStorage<T> implements IStorage<T> {
      * @param strs   массив строк для записи
      * @param append запись в конец файла
      */
-    private boolean _writeArrStrToFile(String[] strs, boolean append) {
+    private boolean _writeArrStrToFile(@NotNull String[] strs, boolean append) {
         createFile();
 
         try {
