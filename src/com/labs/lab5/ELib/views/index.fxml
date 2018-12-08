@@ -14,7 +14,7 @@
          <children>
 
              <!-- Menu -->
-            <MenuBar styleClass="mainMenu">
+            <MenuBar styleClass="menu">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
@@ -38,11 +38,11 @@
             </MenuBar>
 
              <!-- Toolbar -->
-            <ToolBar nodeOrientation="RIGHT_TO_LEFT">
+            <ToolBar styleClass="toolbar" nodeOrientation="RIGHT_TO_LEFT">
                <items>
-                  <JFXButton buttonType="RAISED" text="Remove" />
-                  <JFXButton buttonType="RAISED" text="Edit" />
-                  <JFXButton buttonType="RAISED" text="Add" />
+                  <JFXButton styleClass="toolbar__tool" buttonType="RAISED" text="Remove" />
+                  <JFXButton styleClass="toolbar__tool" buttonType="RAISED" text="Edit" />
+                  <JFXButton styleClass="toolbar__tool" buttonType="RAISED" text="Add" />
                </items>
             </ToolBar>
          </children></VBox>
