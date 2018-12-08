@@ -1,6 +1,5 @@
 package com.labs.lab5.ELib;
 
-import com.jfoenix.controls.JFXDecorator;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,8 +18,7 @@ public class ELib extends Application {
         Image icon = new Image(getClass().getResource("img/icon.png").toString());
         primaryStage.getIcons().add(icon);
 
-        JFXDecorator decorator = new JFXDecorator(primaryStage, root);
-        Scene scene = new Scene(decorator, 800, 600);
+        Scene scene = new Scene(root);
         primaryStage.setScene(scene);
 
         primaryStage.show();
