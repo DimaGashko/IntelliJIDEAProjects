@@ -38,7 +38,7 @@ public class TextStorage<T> implements IStorage<T> {
         this.dataClass = dataClass;
 
         this.data = getTArray(DEF_BUFFER_SIZE);
-        createFile(url);
+        initFile(url);
 
         load();
     }
@@ -50,7 +50,7 @@ public class TextStorage<T> implements IStorage<T> {
         this.dataClass = dataClass;
 
         this.data = getTArray(bufferSize);
-        createFile(url);
+        initFile(url);
 
         load();
     }
@@ -105,12 +105,68 @@ public class TextStorage<T> implements IStorage<T> {
 
     /**
      * Сохраняет переданный элемент в текстовом файле
-     * @return true если сохранение было успешным
+     * @param item сохраняемый элемент
+     * @param append true - записывать в конец файла
+     * TODO: Exception
      */
-    private void save(T item) {
+    private void save(T item, boolean append) {
         try {
             var writer = new PrintWriter(new FileWriter(dataFile, true));
             writer.println(item.toString());
+            writer.close();
+        } catch (IOException err) {
+
+        }
+    }
+
+    /**
+     * Записывает в файл строку
+     * @param str строка для записи
+     * @param append запись в конец файла
+     * TODO: Exception
+     */
+    private void writeStrToFile(String str, boolean append) {
+        try {
+            var writer = new PrintWriter(new FileWriter(dataFile, true));
+            writer.println(str);
+            writer.close();
+        } catch (IOException err) {
+
+        }
+    }
+
+    /**
+     * Записывает в файл строки
+     * @param strs массив строк для записи
+     * @param append запись в конец файла
+     * TODO: Exception
+     */
+    private void writeArrStrToFile(String[] strs, boolean append) {
+        try {
+            var writer = new PrintWriter(new FileWriter(dataFile, true));
+
+            for (String str : strs) {
+                writer.println(str);
+            }
+
+            writer.close();
+        } catch (IOException err) {
+
+        }
+    }
+
+    /**
+     * Сохраняет все данные в файл (перезаписывая его)
+     * TODO: Exception
+     */
+    private void resaveAll() {
+        try {
+            var writer = new PrintWriter(new FileWriter(dataFile, false));
+
+            for (int i = 0; i < len; i++) {
+                writer.println(data[i].toString());
+            }
+
             writer.close();
         } catch (IOException err) {
 
@@ -131,9 +187,15 @@ public class TextStorage<T> implements IStorage<T> {
         return arr;
     }
 
-    private void createFile(String url) {
+    private void initFile(String url) {
         dataFile = new File("test.txt");
+    }
 
+    /**
+     * Создает файл на диске (если он еще не существует)
+     * TODO: Exception
+     */
+    private void createFile() {
         try {
             boolean created = dataFile.createNewFile();
 
@@ -144,6 +206,6 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     private T parseItem(String itemStr) {
-        
+        return (T)new Integer(5);
     }
 }
