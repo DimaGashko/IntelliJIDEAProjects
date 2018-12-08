@@ -3,9 +3,8 @@
 <?import com.jfoenix.controls.JFXSlider?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.Index">
    <children>
-      <JFXSlider layoutX="132.0" layoutY="126.0" />
+      <JFXSlider layoutX="183.0" layoutY="126.0" majorTickUnit="20.0" minorTickCount="5" showTickLabels="true" showTickMarks="true" value="20.0" />
    </children>
 </AnchorPane>
