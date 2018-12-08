@@ -1,7 +1,5 @@
 package com.labs.lab5.ELib.models.storage;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.*;
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -18,6 +16,7 @@ import java.util.function.Predicate;
 public class TextStorage<T> implements IStorage<T> {
     static final private int DEF_BUFFER_SIZE = 100;
 
+    //Размер массива для хранения данных
     private int bufferSize;
 
     //Текстовый файл для хранения данных
@@ -249,7 +248,7 @@ public class TextStorage<T> implements IStorage<T> {
      * @param strs  массив строк для записи
      * @param clean запись в конец файла
      */
-    private boolean _writeArrStrToFile(@NotNull String[] strs, boolean clean) {
+    private boolean _writeArrStrToFile(String[] strs, boolean clean) {
         createFile();
 
         try {
