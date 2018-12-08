@@ -8,20 +8,25 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class ELib extends Application {
-    private final static String title = "ELib - the world of books";
+    private final static String defTitle = "ELib - the world of books";
+    private final static int minWidth = 500;
+    private final static int minHeight = 400;
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage mainWindow) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("views/index.fxml"));
-        primaryStage.setTitle(title);
+        mainWindow.setTitle(defTitle);
 
         Image icon = new Image(getClass().getResource("img/icon.png").toString());
-        primaryStage.getIcons().add(icon);
+        mainWindow.getIcons().add(icon);
 
         Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
+        mainWindow.setScene(scene);
 
-        primaryStage.show();
+        mainWindow.setMinWidth(minWidth);
+        mainWindow.setMinHeight(minHeight);
+
+        mainWindow.show();
     }
 
     public static void main(String[] args) {
