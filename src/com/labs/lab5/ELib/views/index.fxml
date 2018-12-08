@@ -12,25 +12,32 @@
    <top>
       <VBox BorderPane.alignment="CENTER">
          <children>
+
+             <!-- Menu -->
             <MenuBar styleClass="mainMenu">
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" text="Exit" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
+                    <MenuItem mnemonicParsing="false" text="Add new book" />
+                        <MenuItem mnemonicParsing="false" text="Edit the book" />
+                        <MenuItem mnemonicParsing="false" text="Remove selected books" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" text="Help" />
+                        <MenuItem mnemonicParsing="false" text="About" />
                   </items>
                 </Menu>
               </menus>
             </MenuBar>
+
+             <!-- Toolbar -->
             <ToolBar>
               <items>
                 <Button mnemonicParsing="false" text="Button" />
@@ -39,9 +46,12 @@
          </children></VBox>
    </top>
    <left>
+       <!-- Filters -->
       <VBox BorderPane.alignment="CENTER" />
    </left>
    <center>
+
+       <!-- Books -->
       <VBox BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
