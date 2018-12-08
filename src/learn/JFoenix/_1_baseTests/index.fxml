@@ -7,7 +7,8 @@
 <?import javafx.scene.effect.Reflection?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
-
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="learn.JFoenix._1_baseTests.Index">
    <children>
@@ -31,5 +32,15 @@
          </cursor>
       </JFXSlider>
       <JFXButton layoutX="248.0" layoutY="109.0" />
+      <JFXButton buttonType="RAISED" layoutX="323.0" layoutY="109.0" prefHeight="38.0" prefWidth="122.0" style="-fx-background-color: #c00;" textAlignment="CENTER" textFill="WHITE">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.23809523809523808" startY="0.10952380952380952">
+               <stops>
+                  <Stop color="#1a186bb2" />
+                  <Stop color="#aca9d9c8" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+      </JFXButton>
    </children>
 </AnchorPane>
