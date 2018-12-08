@@ -38,7 +38,7 @@
             </MenuBar>
 
              <!-- Toolbar -->
-            <ToolBar>
+            <ToolBar styleClass="mainToolbar">
               <items>
                 <Button mnemonicParsing="false" text="Button" />
               </items>
