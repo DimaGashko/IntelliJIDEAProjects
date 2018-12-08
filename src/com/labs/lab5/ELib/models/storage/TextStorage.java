@@ -172,15 +172,15 @@ public class TextStorage<T> implements IStorage<T> {
     private boolean setData(T[] items) {
         T[] prevData = data;
 
-        data = _getTArray(bufferSize);
-        System.arraycopy( items, 0, data, 0, items.length);
+        //data = _getTArray(bufferSize);
+        //System.arraycopy( items, 0, data, 0, items.length);
 
         boolean saved = resaveAll();
-
+/*
         if (!saved) {
             data = prevData;
             return false;
-        }
+        }*/
 
         return true;
     }

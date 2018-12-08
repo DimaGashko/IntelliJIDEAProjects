@@ -48,6 +48,10 @@ public class ELib extends Application {
 
         System.out.println(Arrays.toString(storage.getArrOfData()));
 
+        storage.remove(item -> item.getYear() > 2005);
+
+        System.out.println(Arrays.toString(storage.getArrOfData()));
+
         //launch(args);
     }
 }
