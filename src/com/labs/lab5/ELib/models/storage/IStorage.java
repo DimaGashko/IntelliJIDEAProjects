@@ -13,7 +13,7 @@ public interface IStorage<T> {
      * @param item добавляемый элемент
      * @return удалось ли добавить элемент
      */
-    void add(T item);
+    boolean add(T item);
 
     /**
      * @return данных в виде массива
