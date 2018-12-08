@@ -32,10 +32,14 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
-        var storage = new TextStorage<Integer>("data/test.txt", Integer.class);
+        var storage = new TextStorage<Integer>(
+                "data/test.txt",
+                Object::toString,
+                Integer::parseInt,
+                Integer.class);
 
         for (int i = 0; i < 20; i++) {
-            storage.add(i);
+            //storage.add(i);
         }
 
         System.out.println(Arrays.toString(storage.getArrOfData()));

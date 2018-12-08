@@ -7,25 +7,6 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
-
-/**
- * Функция преобразования объекта в строку
- * @param <T> тип объекта
- */
-@FunctionalInterface
-interface StringifyFunction<T> {
-    String call(T item);
-}
-
-/**
- * Функция преобразования строки в объект
- * @param <T> тип объекта
- */
-@FunctionalInterface
-interface ParseFunction<T> {
-    T call(String strT);
-}
-
 /**
  * Класс для хранения данных на основании текстового файла
  * @param <T> класс хранимых данных
