@@ -65,6 +65,13 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     @Override
+    public void addAll(T[] items) {
+        for (T item : items) {
+            add(item);
+        }
+    }
+
+    @Override
     public T[] getArrOfData() {
         return Arrays.stream(Arrays.copyOf(data, len))
                 .filter(item -> !Objects.isNull(item))
