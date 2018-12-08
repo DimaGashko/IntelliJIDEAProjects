@@ -1,20 +1,7 @@
-0
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
+JavaScript: The Definitive Guide;David Flanagan;O'Reilly;2006;999;50.0
+Java Programming;Donald Bales;O'Reilly;2001;450;60.0
+Thinking in Java;Bruce Eckel;Oracle;2002;328;50.0
+JS.Next;Aaron Frost;O'Reilly;2015;250;50.0
+You don't know JS;Simpson K.;O'Reilly;2015;88;30.0
+Angular;David Flanagan;O'Reilly;2016;396;30.0
+Java in a Nutshell;David Flanagan;O'Reilly;2014;396;60.0

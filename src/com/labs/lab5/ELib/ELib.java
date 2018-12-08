@@ -9,8 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.lang.reflect.Array;
-import java.net.URL;
 import java.util.Arrays;
 
 public class ELib extends Application {
@@ -32,15 +30,21 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
-        var storage = new TextStorage<Integer>(
+        var storage = new TextStorage<Book>(
                 "data/test.txt",
-                Object::toString,
-                Integer::parseInt,
-                Integer.class);
+                Book::toString,
+                Book::parse,
+                Book.class);
 
-        for (int i = 0; i < 20; i++) {
-            //storage.add(i);
-        }
+        /*
+        storage.add(new Book("JavaScript: The Definitive Guide", "David Flanagan", "O'Reilly", 2006, 999, 50));
+        storage.add(new Book("Java Programming", "Donald Bales", "O'Reilly", 2001, 450, 60));
+        storage.add(new Book("Thinking in Java", "Bruce Eckel", "Oracle", 2002, 328, 50));
+        storage.add(new Book("JS.Next", "Aaron Frost", "O'Reilly", 2015, 250, 50));
+        storage.add(new Book("You don't know JS", "Simpson K.", "O'Reilly", 2015, 88, 30));
+        storage.add(new Book("Angular", "David Flanagan", "O'Reilly", 2016, 396, 30));
+        storage.add(new Book("Java in a Nutshell", "David Flanagan", "O'Reilly", 2014, 396, 60));
+        */
 
         System.out.println(Arrays.toString(storage.getArrOfData()));
 

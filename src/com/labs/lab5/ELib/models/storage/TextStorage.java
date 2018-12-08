@@ -78,7 +78,7 @@ public class TextStorage<T> implements IStorage<T> {
     @Override
     public boolean remove(T item) {
         T[] newData = Arrays.stream(getArrOfData())
-                .filter(el -> el != item)
+                .filter(el -> !el.equals(item))
                 .toArray(this::_getTArray);
 
         return setData(newData);
@@ -97,6 +97,7 @@ public class TextStorage<T> implements IStorage<T> {
     /**
      * Загружает данные из текстового файла в массив данных
      * TODO: Exception
+     * TODO: parseErrorsCheck
      */
     private void load() {
         String itemStr;

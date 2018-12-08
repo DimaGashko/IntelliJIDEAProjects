@@ -1,7 +1,12 @@
 package com.labs.lab3.part1.library;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.time.LocalDate;
+import java.util.Arrays;
 import java.util.UUID;
+
+//TODO: исключить возможность появления разделителя parse/toStirng в полях
 
 public class Book {
     private final UUID id = UUID.randomUUID();
@@ -75,11 +80,29 @@ public class Book {
 
     @Override
     public String toString() {
-        return getAuthor() + ", " +
-                getName() + ", " +
-                getPublisher() + ", " +
-                getYear() + ", " +
-                getPages() + " (price: $" +
-                getPrice() + ")";
+        return getName() + ";" +
+                getAuthor() + ";" +
+                getPublisher() + ";" +
+                getYear() + ";" +
+                getPages() + ";" +
+                getPrice();
+    }
+
+    static public Book parse(String strBook) {
+        String[] components = strBook.split(";");
+        System.out.println(Arrays.toString(components));
+        if (components.length < 6) {
+            return null;
+        }
+
+        String name = components[1];
+        String author = components[0];
+        String publisher = components[2];
+
+        int year = Integer.parseInt(components[3]);
+        int pages = Integer.parseInt(components[4]);
+        double price = Double.parseDouble(components[5]);
+
+        return new Book(name, author, publisher, year, pages, price);
     }
 }
