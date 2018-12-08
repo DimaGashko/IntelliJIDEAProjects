@@ -91,7 +91,7 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     /**
-     * Добавляет элемент данных в массив данных
+     * Добавл8яет элемент данных в массив данных
      * @param item добавляемый массив
      * TODO: убрать после внедрения ArrayList
      */
@@ -102,25 +102,24 @@ public class TextStorage<T> implements IStorage<T> {
 
     /**
      * Загружает данные из текстового файла в массив данных
-     * @return true если загрузка удалась
+     * TODO: Exception
      */
-    private boolean load() {
+    private void load() {
         String itemStr;
 
         try {
             var reader = new BufferedReader(new FileReader(dataFile));
 
             while ((itemStr = reader.readLine()) != null) {
-                addToArr(parseItem(itemStr));
+                addToArr(parse.call(itemStr));
             }
 
             reader.close();
 
         } catch (IOException err) {
-            return false;
+
         }
 
-        return true;
     }
 
     /**
@@ -147,22 +146,16 @@ public class TextStorage<T> implements IStorage<T> {
         dataFile = new File("test.txt");
     }
 
-    /**
-     * Создает файл на диске (если он еще не существует)
-     * TODO: Exception
-     */
-    private boolean createFile() {
-        try {
-            return dataFile.createNewFile();
-
-        } catch (IOException err) {
-            return false;
-        }
-
+    private void setDataClass(Class<T> dataClass) {
+        this.dataClass = dataClass;
     }
 
-    private T parseItem(String itemStr) {
-        return (T) new Integer(5);
+    public void setStringify(StringifyFunction<T> stringify) {
+        this.stringify = stringify;
+    }
+
+    public void setParse(ParseFunction<T> parse) {
+        this.parse = parse;
     }
 
     /**
@@ -187,6 +180,8 @@ public class TextStorage<T> implements IStorage<T> {
      * @param append запись в конец файла
      */
     private boolean _writeStrToFile(String str, boolean append) {
+        createFile();
+
         try {
             var writer = new PrintWriter(new FileWriter(dataFile, append));
             writer.println(str);
@@ -199,18 +194,6 @@ public class TextStorage<T> implements IStorage<T> {
         return true;
     }
 
-    private void setDataClass(Class dataClass) {
-        this.dataClass = dataClass;
-    }
-
-    public void setStringify(StringifyFunction stringify) {
-        this.stringify = stringify;
-    }
-
-    public void setParse(ParseFunction parse) {
-        this.parse = parse;
-    }
-
     /**
      * Записывает в файл строки
      *
@@ -218,6 +201,8 @@ public class TextStorage<T> implements IStorage<T> {
      * @param append запись в конец файла
      */
     private boolean _writeArrStrToFile(String[] strs, boolean append) {
+        createFile();
+
         try {
             var writer = new PrintWriter(new FileWriter(dataFile, append));
 
@@ -232,6 +217,20 @@ public class TextStorage<T> implements IStorage<T> {
         }
 
         return true;
+    }
+
+    /**
+     * Создает файл на диске (если он еще не существует)
+     * TODO: Exception
+     */
+    private void createFile() {
+        try {
+            dataFile.createNewFile();
+
+        } catch (IOException err) {
+           System.out.println(err.getMessage());
+        }
+
     }
 
 }
