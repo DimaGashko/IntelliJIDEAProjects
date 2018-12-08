@@ -7,16 +7,14 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.util.ResourceBundle;
-
 public class ELib extends Application {
-    private final static String title = "ELib - your world of the books";
+    private final static String title = "ELib - the world of books";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("views/index.fxml"));
         primaryStage.setTitle(title);
-        
+
         Image icon = new Image(getClass().getResource("img/icon.png").toString());
         primaryStage.getIcons().add(icon);
 
