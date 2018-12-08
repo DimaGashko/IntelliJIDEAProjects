@@ -14,7 +14,7 @@ import java.util.function.Predicate;
  */
 @FunctionalInterface
 interface StringifyFunction<T> {
-    String stringify(T item);
+    String call(T item);
 }
 
 /**
@@ -23,7 +23,7 @@ interface StringifyFunction<T> {
  */
 @FunctionalInterface
 interface ParseFunction<T> {
-    T parse(String strT);
+    T call(String strT);
 }
 
 /**
@@ -42,7 +42,7 @@ public class TextStorage<T> implements IStorage<T> {
     // Класс хранимих данных
     // Используется для создания new T[]
     // TODO: убрать после внедрения ArrayList
-    private Class dataClass;
+    private Class<T> dataClass;
 
     // Массив хранимых данных
     private T[] data;
@@ -50,13 +50,13 @@ public class TextStorage<T> implements IStorage<T> {
     // Количество данных
     private int len = 0;
 
-    private StringifyFunction stringify;
-    private ParseFunction parse;
+    private StringifyFunction<T> stringify;
+    private ParseFunction<T> parse;
 
     /**
      * TODO: после внедрения ArrayList убрать аргумент dataClass
      */
-    public TextStorage(String url, StringifyFunction stringify, ParseFunction parse, Class dataClass) {
+    public TextStorage(String url, StringifyFunction<T> stringify, ParseFunction<T> parse, Class<T> dataClass) {
         setDataClass(dataClass);
         setStringify(stringify);
         setParse(parse);
@@ -129,7 +129,7 @@ public class TextStorage<T> implements IStorage<T> {
      * @param item сохраняемый элемент
      */
     private boolean save(T item) {
-        return _writeStrToFile(, true);
+        return _writeStrToFile(stringify.call(item), true);
     }
 
     /**
