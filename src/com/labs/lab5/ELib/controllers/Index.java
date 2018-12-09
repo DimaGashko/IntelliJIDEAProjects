@@ -5,12 +5,12 @@ import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
 import com.jfoenix.controls.*;
+import javafx.event.ActionEvent;
 import javafx.scene.control.*;
 import javafx.fxml.FXML;
 
 import javafx.fxml.Initializable;
 
-import java.awt.event.ActionEvent;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -50,69 +50,69 @@ public class Index implements Initializable {
     }
 
     // Fx Menu Events
-    @FXML void fxOnActionMenuAbout(ActionEvent event) {
+    @FXML private void fxOnActionMenuAbout(ActionEvent event) {
         System.out.println("Menu About");
     }
 
-    @FXML void fxOnActionMenuAddBook(ActionEvent event) {
+    @FXML private void fxOnActionMenuAddBook(ActionEvent event) {
         System.out.println("Menu Add");
     }
 
-    @FXML void fxOnActionMenuAppExit(ActionEvent event) {
+    @FXML private void fxOnActionMenuAppExit(ActionEvent event) {
         System.out.println("Menu Exit");
     }
 
-    @FXML void fxOnActionMenuEditBook(ActionEvent event) {
+    @FXML private void fxOnActionMenuEditBook(ActionEvent event) {
         System.out.println("Menu Edit");
     }
 
-    @FXML  void fxOnActionMenuHelp(ActionEvent event) {
+    @FXML private void fxOnActionMenuHelp(ActionEvent event) {
         System.out.println("Menu Help");
     }
 
-    @FXML void fxOnActionMenuRemoveBooks(ActionEvent event) {
+    @FXML private void fxOnActionMenuRemoveBooks(ActionEvent event) {
         System.out.println("Menu Remove");
     }
 
-    @FXML void fxOnActionMenuResetFilters(ActionEvent event) {
+    @FXML private void fxOnActionMenuResetFilters(ActionEvent event) {
         System.out.println("Menu Reset Filters");
     }
 
     // Fx Tools Events
-    @FXML void fxOnActionToolAdd(ActionEvent event) {
+    @FXML private void fxOnActionToolAdd(ActionEvent event) {
         System.out.println("Tool Add");
     }
 
-    @FXML void fxOnActionToolEdit(ActionEvent event) {
+    @FXML private void fxOnActionToolEdit(ActionEvent event) {
         System.out.println("Tool Edit");
     }
 
-    @FXML void fxOnActionToolRemove(ActionEvent event) {
+    @FXML private void fxOnActionToolRemove(ActionEvent event) {
         System.out.println("Tool Remove");
     }
 
     // Fx Filters Events
-    @FXML void fxOnActionFilterName(ActionEvent event) {
+    @FXML private void fxOnActionFilterName(ActionEvent event) {
         System.out.println("Filter Name");
     }
 
-    @FXML void fxOnActionFilterAuthor(ActionEvent event) {
+    @FXML private void fxOnActionFilterAuthor(ActionEvent event) {
         System.out.println("Filter A");
     }
 
-    @FXML void fxOnActionFilterPublisher(ActionEvent event) {
+    @FXML private void fxOnActionFilterPublisher(ActionEvent event) {
         System.out.println("Filter Publisher");
     }
 
-    @FXML void fxOnActionFilterDateFrom(ActionEvent event) {
+    @FXML private void fxOnActionFilterDateFrom(ActionEvent event) {
         System.out.println("Filter DateFrom");
     }
 
-    @FXML void fxOnActionFilterDateTo(ActionEvent event) {
+    @FXML private void fxOnActionFilterDateTo(ActionEvent event) {
         System.out.println("Filter DateTo");
     }
 
-    @FXML void fxOnActionResetFilters(ActionEvent event) {
+    @FXML private void fxOnActionResetFilters(ActionEvent event) {
         System.out.println("Reset Filters");
     }
 

@@ -1,8 +1,5 @@
 package com.labs.lab5.ELib;
 
-import com.labs.lab3.part1.library.Book;
-import com.labs.lab5.ELib.controllers.Index;
-import com.labs.lab5.ELib.models.storage.TextStorage;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +7,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
 
 public class ELib extends Application {
