@@ -41,8 +41,8 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                    <MenuItem fx:id="fxMenuHelp" onAction="#fxOnMenuHelp" mnemonicParsing="false" text="Help" />
-                        <MenuItem fx:id="fxMenuAbout" onAction="#fxOnMenuAbout" mnemonicParsing="false" text="About" />
+                    <MenuItem fx:id="fxMenuHelp" mnemonicParsing="false" onAction="#fxOnMenuHelp" text="Help" />
+                        <MenuItem fx:id="fxMenuAbout" mnemonicParsing="false" onAction="#fxOnMenuAbout" text="About" />
                   </items>
                 </Menu>
               </menus>
@@ -73,46 +73,46 @@
                         </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Name:" />
-                             <JFXTextField fx:id="fxFilterName" onKeyTyped="#fxOnFilterName" onAction="#fxOnFilterName" promptText="The name" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterName" onAction="#fxOnFilterName" onKeyTyped="#fxOnFilterName" promptText="The name" styleClass="filterGroup__field" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Author:" />
-                             <JFXTextField fx:id="fxFilterAuthor" onKeyTyped="#fxOnFilterAuthor" onAction="#fxOnFilterAuthor" promptText="The author" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterAuthor" onAction="#fxOnFilterAuthor" onKeyTyped="#fxOnFilterAuthor" promptText="The author" styleClass="filterGroup__field" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Publisher:" />
-                             <JFXTextField fx:id="fxFilterPublisher" onKeyTyped="#fxOnFilterPublisher" onAction="#fxOnFilterPublisher" promptText="The publisher" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterPublisher" onAction="#fxOnFilterPublisher" onKeyTyped="#fxOnFilterPublisher" promptText="The publisher" styleClass="filterGroup__field" />
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Price:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                           <JFXSlider fx:id="fxFilterPriceFrom" onKeyReleased="#fxOnPriceFrom" onMouseClicked="#fxOnPriceFrom" showTickLabels="true" showTickMarks="true" value="0" />
+                           <JFXSlider fx:id="fxFilterPriceFrom" majorTickUnit="100.0" onKeyReleased="#fxOnPriceFrom" onMouseClicked="#fxOnPriceFrom" showTickLabels="true" showTickMarks="true" value="0" />
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                           <JFXSlider fx:id="fxFilterPriceTo" onKeyReleased="#fxOnPriceTo" onMouseClicked="#fxOnPriceTo" showTickLabels="true" showTickMarks="true" value="0" />
+                           <JFXSlider fx:id="fxFilterPriceTo" majorTickUnit="100.0" onKeyReleased="#fxOnPriceTo" onMouseClicked="#fxOnPriceTo" showTickLabels="true" showTickMarks="true" value="0" />
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Pages:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                             <JFXSlider fx:id="fxFilterPagesFrom" onKeyReleased="#fxOnPagesFrom" onMouseClicked="#fxOnPagesFrom" showTickLabels="true" showTickMarks="true" value="0" />
+                             <JFXSlider fx:id="fxFilterPagesFrom" majorTickUnit="100.0" onKeyReleased="#fxOnPagesFrom" onMouseClicked="#fxOnPagesFrom" showTickLabels="true" showTickMarks="true" value="0" />
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                             <JFXSlider fx:id="fxFilterPagesTo" onKeyReleased="#fxOnPagesTo" onMouseClicked="#fxOnPagesTo" showTickLabels="true" showTickMarks="true" value="0" />
+                             <JFXSlider fx:id="fxFilterPagesTo" majorTickUnit="100.0" onKeyReleased="#fxOnPagesTo" onMouseClicked="#fxOnPagesTo" showTickLabels="true" showTickMarks="true" value="0" />
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Date:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                             <JFXDatePicker fx:id="fxFilterDateFrom" onKeyTyped="#fxOnFilterDateFrom" onAction="#fxOnFilterDateFrom">
+                             <JFXDatePicker fx:id="fxFilterDateFrom" onAction="#fxOnFilterDateFrom" onKeyTyped="#fxOnFilterDateFrom">
                               <VBox.margin>
                                  <Insets bottom="10.0" />
                               </VBox.margin>
                            </JFXDatePicker>
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                             <JFXDatePicker fx:id="fxFilterDateTo" onKeyTyped="#fxOnFilterDateTo" onAction="#fxOnFilterDateTo">
+                             <JFXDatePicker fx:id="fxFilterDateTo" onAction="#fxOnFilterDateTo" onKeyTyped="#fxOnFilterDateTo">
                               <padding>
                                  <Insets bottom="10.0" />
                               </padding>
@@ -120,7 +120,7 @@
                          </VBox>
                         <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <JFXButton fx:id="fxResetFilters" onAction="#fxOnResetFilters" buttonType="RAISED" styleClass="filters__reset" text="Reset filters" />
+                              <JFXButton fx:id="fxResetFilters" buttonType="RAISED" onAction="#fxOnResetFilters" styleClass="filters__reset" text="Reset filters" />
                            </children>
                         </VBox>
                      </children>

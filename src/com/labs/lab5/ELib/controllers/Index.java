@@ -29,10 +29,10 @@ public class Index implements Initializable {
     private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
     private BookFilters filters = new BookFilters();
 
-    private SimpleDoubleProperty minPrice;
-    private SimpleDoubleProperty maxPrice;
-    private SimpleIntegerProperty minPages;
-    private SimpleIntegerProperty maxPages;
+    private SimpleDoubleProperty minPrice = new SimpleDoubleProperty();
+    private SimpleDoubleProperty maxPrice = new SimpleDoubleProperty();
+    private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
+    private SimpleIntegerProperty maxPages = new SimpleIntegerProperty();
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -60,8 +60,8 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        findFilterLimits();
         updateFilterLimits();
+        initBinds();
     }
 
     // Fx Menu Events
