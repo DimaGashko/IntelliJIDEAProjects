@@ -47,9 +47,9 @@
              <!-- Toolbar -->
             <ToolBar nodeOrientation="RIGHT_TO_LEFT" styleClass="toolbar">
                <items>
-                  <JFXButton buttonType="RAISED" styleClass="toolbar__tool" text="Remove" />
-                  <JFXButton buttonType="RAISED" styleClass="toolbar__tool" text="Edit" />
-                  <JFXButton buttonType="RAISED" styleClass="toolbar__tool" text="Add" />
+                  <JFXButton styleClass="toolbar__tool" text="Remove" />
+                  <JFXButton styleClass="toolbar__tool" text="Edit" />
+                  <JFXButton styleClass="toolbar__tool" text="Add" />
                </items>
             </ToolBar>
          </children></VBox>
