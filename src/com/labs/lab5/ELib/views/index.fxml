@@ -64,12 +64,21 @@
             <VBox styleClass="filters">
                <children>
                    <Label styleClass="filters__title" text="Filters" />
-                   <HBox>
-                       <children>
-                           <Label text="Name" />
-                           <JFXTextField labelFloat="true" promptText="The name of the book" />
-                       </children>
-                   </HBox>
+                   <VBox styleClass="filterGroup">
+                       <Label styleClass="filterGroup__title" text="Name" />
+                       <JFXTextField styleClass="filterGroup__field" promptText="The name" />
+                   </VBox>
+                   <VBox styleClass="filterGroup">
+                       <Label styleClass="filterGroup__title" text="Author" />
+                       <JFXTextField styleClass="filterGroup__field" promptText="The author" />
+                   </VBox>
+                   <VBox styleClass="filterGroup">
+                       <Label styleClass="filterGroup__title" text="Author" />
+                       <JFXTextField styleClass="filterGroup__field" promptText="The publisher" />
+                   </VBox>
+                   <VBox styleClass="filterGroup">
+                       <Label styleClass="filterGroup__title" text="Price" />
+                   </VBox>
                </children>
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
