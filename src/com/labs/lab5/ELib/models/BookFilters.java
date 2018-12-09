@@ -28,6 +28,34 @@ public class BookFilters {
      * @return удовлетворяет ли книга фильтру
      */
     public boolean check(Book book) {
+
+        return (
+                   checkStringFilter(name, book.getName())
+                && checkStringFilter(author, book.getAuthor())
+                && checkStringFilter(publisher, book.getPublisher())
+
+                && (priceFrom <= book.getPrice())
+                && (priceTo >= book.getPrice())
+
+                && (pagesFrom <= book.getPages())
+                && (pagesTo >= book.getPages())
+
+                && (dateFrom.compareTo(book.getDate()) < 0)
+                && (dateTo.compareTo(book.getDate()) > 0)
+
+        );
+
+    }
+
+    /**
+     * Проверяет удовлетворяет ли строковый параметр фильтру
+     * @param filter фильтр
+     * @param param проверяемое значение
+     * @return удовлетворяет ли строковый параметр фильтру
+     *
+     * TODO: do this method
+     */
+    public boolean checkStringFilter(String filter, String param) {
         return true;
     }
 
