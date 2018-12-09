@@ -32,6 +32,7 @@
                     <MenuItem mnemonicParsing="false" text="Add new book" />
                         <MenuItem mnemonicParsing="false" text="Edit the book" />
                         <MenuItem mnemonicParsing="false" text="Remove selected books" />
+                        <MenuItem mnemonicParsing="false" text="Reset filters" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
@@ -54,12 +55,16 @@
          </children></VBox>
    </top>
    <left>
-      <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" vvalue="1.0" BorderPane.alignment="CENTER">
+      <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
           <content>
           <!-- Filters -->
             <VBox spacing="15.0" styleClass="filters">
                <children>
-                   <Label styleClass="filters__title" text="Filters" />
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                         <Label styleClass="filters__title" text="Filters" />
+                     </children>
+                  </VBox>
                    <VBox styleClass="filterGroup">
                        <Label styleClass="filterGroup__title" text="Name:" />
                        <JFXTextField promptText="The name" styleClass="filterGroup__field" />
@@ -105,6 +110,11 @@
                            <Insets bottom="10.0" />
                         </padding></JFXDatePicker>
                    </VBox>
+                  <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <JFXButton buttonType="RAISED" styleClass="filters__reset" text="Reset filters" />
+                     </children>
+                  </VBox>
                </children>
             <padding>
                <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
