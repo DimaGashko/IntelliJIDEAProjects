@@ -124,6 +124,19 @@ public class Index implements Initializable {
 
     private void resetFilters() {
         filters.reset();
+
+        fxFilterName.clear();
+        fxFilterAuthor.clear();
+        fxFilterPublisher.clear();
+
+        fxFilterPriceFrom.setValue(minPrice.getValue());
+        fxFilterPriceTo.setValue(minPrice.getValue());
+
+        fxFilterPagesFrom.setValue(minPages.getValue());
+        fxFilterPagesTo.setValue(minPages.getValue());
+
+        fxFilterDateFrom.setValue(null);
+        fxFilterDateTo.setValue(null);
     }
 
     /**
