@@ -12,12 +12,18 @@
   &__title
     @extend %h1
 
+    -fx-text-fill: #fff
     -fx-font-size: 32px
 
 .form
 
+  &__button
+    @extend %baseButton
+
 .formGroup
-  -fx-max-width: 350px
+  -fx-max-width: 500px
+
+  &__field
 
   &__date
     -fx-pref-width: 200px
