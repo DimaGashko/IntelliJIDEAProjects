@@ -142,35 +142,35 @@ public class BookFilters {
         this.publisherFilter = publisherFilter;
     }
 
-    public double getPriceFromFilter() {
+    public Double getPriceFromFilter() {
         return priceFromFilter;
     }
 
-    public void setPriceFromFilter(double priceFromFilter) {
+    public void setPriceFromFilter(Double priceFromFilter) {
         this.priceFromFilter = priceFromFilter;
     }
 
-    public double getPriceToFilter() {
+    public Double getPriceToFilter() {
         return priceToFilter;
     }
 
-    public void setPriceToFilter(double priceToFilter) {
+    public void setPriceToFilter(Double priceToFilter) {
         this.priceToFilter = priceToFilter;
     }
 
-    public int getPagesFromFilter() {
+    public Integer getPagesFromFilter() {
         return pagesFromFilter;
     }
 
-    public void setPagesFromFilter(int pagesFromFilter) {
+    public void setPagesFromFilter(Integer pagesFromFilter) {
         this.pagesFromFilter = pagesFromFilter;
     }
 
-    public int getPagesToFilter() {
+    public Integer getPagesToFilter() {
         return pagesToFilter;
     }
 
-    public void setPagesToFilter(int pagesToFilter) {
+    public void setPagesToFilter(Integer pagesToFilter) {
         this.pagesToFilter = pagesToFilter;
     }
 
@@ -178,8 +178,8 @@ public class BookFilters {
         return dateFromFilter;
     }
 
-    public void setDateFromFilter(LocalDate dateFromFIlter) {
-        this.dateFromFilter = dateFromFIlter;
+    public void setDateFromFilter(LocalDate dateFromFilter) {
+        this.dateFromFilter = dateFromFilter;
     }
 
     public LocalDate getDateToFilter() {

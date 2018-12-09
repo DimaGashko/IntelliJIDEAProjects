@@ -40,15 +40,15 @@ public class ELib extends Application {
         LocalDate d2 = LocalDate.of(1001, 1, 1);
         LocalDate d3 = LocalDate.of(1002, 1, 1);
 
-        Book book = new Book("JavaScript", "Jonathan", "Apple", d2, 200, 300);
+        Book book = new Book("JavaScript", "Jonathan", "Apple", d2, 200, 301);
 
         BookFilters filters = new BookFilters();
 
         filters.setNameFilter("JavaScript");
         filters.setAuthorFilter("th");
         filters.setPublisherFilter("Apple");
-        filters.setPriceFromFilter(200);
-        filters.setPriceToFilter(400);
+        filters.setPriceFromFilter(null);
+        filters.setPriceToFilter(200d);
         filters.setDateFromFilter(d1);
         filters.setDateToFilter(d3);
 
