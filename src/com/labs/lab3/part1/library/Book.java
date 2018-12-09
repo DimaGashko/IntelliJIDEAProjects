@@ -31,6 +31,15 @@ public class Book {
         setPrice(price);
     }
 
+    public Book(String name, String author, String publisher, LocalDate date, int pages, double price) {
+        setName(name);
+        setAuthor(author);
+        setPublisher(publisher);
+        setDate(date);
+        setPages(pages);
+        setPrice(price);
+    }
+
     public String getName() {
         return name;
     }
@@ -79,12 +88,20 @@ public class Book {
         date = LocalDate.of(year, date.getMonth(), date.getDayOfYear());
     }
 
+    public LocalDate getDate() {
+        return this.date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return getName() + ";" +
                 getAuthor() + ";" +
                 getPublisher() + ";" +
-                getYear() + ";" +
+                getDate() + ";" +
                 getPages() + ";" +
                 getPrice();
     }
@@ -100,10 +117,10 @@ public class Book {
         String author = components[0];
         String publisher = components[2];
 
-        int year = Integer.parseInt(components[3]);
+        LocalDate date = LocalDate.parse(components[3]);
         int pages = Integer.parseInt(components[4]);
         double price = Double.parseDouble(components[5]);
 
-        return new Book(name, author, publisher, year, pages, price);
+        return new Book(name, author, publisher, date, pages, price);
     }
 }
