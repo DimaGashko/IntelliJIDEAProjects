@@ -73,21 +73,21 @@
                         </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Name:" />
-                             <JFXTextField fx:id="fxFilterName" onAction="#fxOnActionFilterName" promptText="The name" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterName" onKeyReleased="#fxOnKeyReleasedFilterName" onAction="#fxOnActionFilterName" promptText="The name" styleClass="filterGroup__field" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Author:" />
-                             <JFXTextField fx:id="fxFilterAuthor" onAction="#fxOnActionFilterAuthor" promptText="The author" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterAuthor" onKeyReleased="#fxOnKeyReleasedFilterAuthor" onAction="#fxOnActionFilterAuthor" promptText="The author" styleClass="filterGroup__field" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Publisher:" />
-                             <JFXTextField fx:id="fxFilterPublisher" onAction="#fxOnActionFilterPublisher" promptText="The publisher" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterPublisher" onKeyReleased="#fxOnKeyReleasedFilterPublisher" onAction="#fxOnActionFilterPublisher" promptText="The publisher" styleClass="filterGroup__field" />
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Price:" />
@@ -106,13 +106,13 @@
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Date:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                             <JFXDatePicker fx:id="fxFilterDateFrom" onAction="#fxOnActionFilterDateFrom">
+                             <JFXDatePicker fx:id="fxFilterDateFrom" onKeyReleased="#fxOnKeyReleasedFilterDateFrom" onAction="#fxOnActionFilterDateFrom">
                               <VBox.margin>
                                  <Insets bottom="10.0" />
                               </VBox.margin>
                            </JFXDatePicker>
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                             <JFXDatePicker fx:id="fxFilterDateTo" onAction="#fxOnActionFilterDateTo">
+                             <JFXDatePicker fx:id="fxFilterDateTo" onKeyReleased="#fxOnKeyReleasedFilterDateTo" onAction="#fxOnActionFilterDateTo">
                               <padding>
                                  <Insets bottom="10.0" />
                               </padding>

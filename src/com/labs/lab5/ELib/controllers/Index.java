@@ -7,12 +7,14 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import com.jfoenix.controls.*;
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-import javafx.fxml.FXML;
 
 import javafx.fxml.Initializable;
+import javafx.scene.input.KeyEvent;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.fxml.FXML;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
@@ -96,20 +98,40 @@ public class Index implements Initializable {
         System.out.println("Filter Name");
     }
 
+    @FXML public void fxOnKeyReleasedFilterName(KeyEvent keyEvent) {
+        System.out.println("DateName key");
+    }
+
     @FXML private void fxOnActionFilterAuthor(ActionEvent event) {
         System.out.println("Filter A");
+    }
+
+    @FXML public void fxOnKeyReleasedFilterAuthor(KeyEvent keyEvent) {
+        System.out.println("Author key");
     }
 
     @FXML private void fxOnActionFilterPublisher(ActionEvent event) {
         System.out.println("Filter Publisher");
     }
 
+    @FXML public void fxOnKeyReleasedFilterPublisher(KeyEvent keyEvent) {
+        System.out.println("Publisher key");
+    }
+
     @FXML private void fxOnActionFilterDateFrom(ActionEvent event) {
         System.out.println("Filter DateFrom");
     }
 
+    @FXML public void fxOnKeyReleasedFilterDateFrom(KeyEvent keyEvent) {
+        System.out.println("DateFrom key");
+    }
+
     @FXML private void fxOnActionFilterDateTo(ActionEvent event) {
         System.out.println("Filter DateTo");
+    }
+
+    @FXML public void fxOnKeyReleasedFilterDateTo(KeyEvent keyEvent) {
+        System.out.println("DateTo key");
     }
 
     @FXML private void fxOnActionResetFilters(ActionEvent event) {
