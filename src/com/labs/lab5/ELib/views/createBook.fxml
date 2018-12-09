@@ -17,16 +17,54 @@
                <padding>
                   <Insets bottom="50.0" left="25.0" right="25.0" top="50.0" />
                </padding>
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
                 </VBox>
-                <VBox styleClass="body">
+                <VBox alignment="CENTER" spacing="25.0" styleClass="form">
                     <children>
-                        <VBox>
+                        <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Name">
+                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Name" styleClass="formGroup__field">
                            <padding>
                               <Insets bottom="5.0" left="5.0" top="25.0" />
                            </padding></JFXTextField>
                             </children>
+                        </VBox>
+                        <VBox styleClass="formGroup">
+                            <children>
+                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Author" styleClass="formGroup__field">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" top="25.0" />
+                                    </padding></JFXTextField>
+                            </children>
+                        </VBox>
+                        <VBox styleClass="formGroup">
+                            <children>
+                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Publisher" styleClass="formGroup__field">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" top="25.0" />
+                                    </padding></JFXTextField>
+                            </children>
+                        </VBox>
+                        <VBox styleClass="formGroup">
+                            <children>
+                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Price" styleClass="formGroup__field">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" top="25.0" />
+                                    </padding></JFXTextField>
+                            </children>
+                        </VBox>
+                        <VBox styleClass="formGroup">
+                            <children>
+                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Pages" styleClass="formGroup__field">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" top="25.0" />
+                                    </padding></JFXTextField>
+                            </children>
+                        </VBox>
+                        <VBox styleClass="formGroup">
+
                         </VBox>
                     </children>
                <padding>
