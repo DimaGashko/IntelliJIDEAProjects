@@ -115,7 +115,7 @@ public class Index implements Initializable {
     // Other methods
 
     private void runFilter() {
-        System.out.println("Filtering...");
+
     }
 
     private void initBinds() {
@@ -123,7 +123,7 @@ public class Index implements Initializable {
     }
 
     private void resetFilters() {
-        
+        filters.reset();
     }
 
     /**

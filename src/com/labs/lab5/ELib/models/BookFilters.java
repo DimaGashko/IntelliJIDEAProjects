@@ -45,6 +45,21 @@ public class BookFilters {
     }
 
     /**
+     * Восстанавливает значение фильтров в исходного состояние
+     */
+    public void reset() {
+        nameFilter = null;
+        authorFilter = null;
+        publisherFilter = null;
+        priceFromFilter = null;
+        priceToFilter = null;
+        pagesFromFilter = null;
+        pagesToFilter = null;
+        dateFromFilter = null;
+        dateToFilter = null;
+    }
+
+    /**
      * Проверяет удовлетворяет ли строковый параметр фильтру
      * Если и from и to равены null, то считается, что параметр может быть любым
      * Если from равен null то считается подходящим все до to
