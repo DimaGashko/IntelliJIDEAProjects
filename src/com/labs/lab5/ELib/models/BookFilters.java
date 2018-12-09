@@ -1,5 +1,7 @@
 package com.labs.lab5.ELib.models;
 
+import com.labs.lab3.part1.library.Book;
+
 import java.time.LocalDate;
 
 /**
@@ -18,6 +20,15 @@ public class BookFilters {
 
     public BookFilters() {
 
+    }
+
+    /**
+     * Проверяет удовлетворяет ли переданная книга данному фильтру
+     * @param book проверяемая книга
+     * @return удовлетворяет ли книга фильтру
+     */
+    public boolean check(Book book) {
+        return true;
     }
 
     public String getName() {
