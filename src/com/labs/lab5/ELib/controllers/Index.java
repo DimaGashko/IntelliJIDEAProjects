@@ -115,11 +115,26 @@ public class Index implements Initializable {
     // Other methods
 
     private void runFilter() {
-
+        updateFilters();
     }
 
     private void initBinds() {
         bindFilterLimits();
+    }
+
+    private void updateFilters() {
+        filters.setNameFilter(fxFilterName.getText());
+        filters.setAuthorFilter(fxFilterAuthor.getText());
+        filters.setPublisherFilter(fxFilterPublisher.getText());
+
+        filters.setPriceFromFilter(fxFilterPriceFrom.getValue());
+        filters.setPriceToFilter(fxFilterPriceTo.getValue());
+
+        filters.setPagesFromFilter((int)fxFilterPagesFrom.getValue());
+        filters.setPagesToFilter((int)fxFilterPagesTo.getValue());
+
+        filters.setDateFromFilter(fxFilterDateFrom.getValue());
+        filters.setDateToFilter(fxFilterDateTo.getValue());
     }
 
     private void resetFilters() {
