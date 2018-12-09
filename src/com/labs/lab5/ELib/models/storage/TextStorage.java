@@ -162,7 +162,10 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     private void initFile(String url) {
-        dataFile = new File("test.txt");
+        dataFile = new File(url);
+
+        // Создает родительские каталоги
+        dataFile.getParentFile().mkdirs();
     }
 
     private void setDataClass(Class<T> dataClass) {

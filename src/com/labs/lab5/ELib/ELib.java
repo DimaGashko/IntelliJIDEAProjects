@@ -10,6 +10,9 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.IOException;
+
 public class ELib extends Application {
     private final static String defTitle = "ELib - the world of books";
     private final static int minWidth = 600;
@@ -34,7 +37,7 @@ public class ELib extends Application {
         mainWindow.show();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         launch(args);
     }
 }
