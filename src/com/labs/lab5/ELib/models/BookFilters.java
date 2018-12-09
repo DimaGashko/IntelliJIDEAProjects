@@ -1,7 +1,6 @@
 package com.labs.lab5.ELib.models;
 
 import com.labs.lab3.part1.library.Book;
-
 import java.time.LocalDate;
 
 /**
@@ -34,29 +33,67 @@ public class BookFilters {
                 && checkStringFilter(author, book.getAuthor())
                 && checkStringFilter(publisher, book.getPublisher())
 
-                && (priceFrom <= book.getPrice())
-                && (priceTo >= book.getPrice())
+                && checkNumberFilter(priceFrom, priceTo, book.getPrice())
+                && checkNumberFilter(pagesFrom, pagesTo, book.getPages())
 
-                && (pagesFrom <= book.getPages())
-                && (pagesTo >= book.getPages())
-
-                && (dateFrom.compareTo(book.getDate()) < 0)
-                && (dateTo.compareTo(book.getDate()) > 0)
-
+                && checkDateFilter(dateFrom, dateTo, book.getDate())
         );
 
     }
 
     /**
      * Проверяет удовлетворяет ли строковый параметр фильтру
+     * Если фильтр пустой, то считается, что паарметр может быть любым
      * @param filter фильтр
      * @param param проверяемое значение
-     * @return удовлетворяет ли строковый параметр фильтру
-     *
-     * TODO: do this method
+     * @return удовлетворяет ли параметр фильтру
      */
     public boolean checkStringFilter(String filter, String param) {
-        return true;
+        if (filter.isEmpty()) return true;
+
+        return param.contains(filter);
+    }
+
+    /**
+     * Проверяет удовлетворяет ли числовой параметр фильтру
+     * Если и from и to равены 0, то считается, что параметр может быть любым
+     * @param from минимальное значение
+     * @param to максимальное значение
+     * @param param проверяемое значение
+     * @return удовлетворяет ли параметр фильтру
+     */
+    public boolean checkNumberFilter(Double from, Double to, Double param) {
+        if (from == 0 && to == 0) return true;
+
+        return (from <= param) && (to >= param);
+    }
+
+    /**
+     * Проверяет удовлетворяет ли числовой параметр фильтру
+     * Если и from и to равены 0, то считается, что параметр может быть любым
+     * @param from минимальное значение
+     * @param to максимальное значение
+     * @param param проверяемое значение
+     * @return удовлетворяет ли параметр фильтру
+     */
+    public boolean checkNumberFilter(int from, int to, int param) {
+        if (from == 0 && to == 0) return true;
+
+        return (from <= param) && (to >= param);
+    }
+
+    /**
+     * Проверяет удовлетворяет ли фильтра-дата параметр фильтру
+     * Если и from и to равены null, то считается, что параметр может быть любым
+     * @param from минимальное значение
+     * @param to максимальное значение
+     * @param param проверяемое значение
+     * @return удовлетворяет ли параметр фильтру
+     */
+    public boolean checkDateFilter(LocalDate from, LocalDate to, LocalDate param) {
+        if (from == null && to == null) return true;
+
+        return (from.compareTo(param) <= 0) && (to.compareTo(param) => 0);
     }
 
     public String getName() {
