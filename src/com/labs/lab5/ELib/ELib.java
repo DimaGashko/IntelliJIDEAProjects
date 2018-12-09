@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class ELib extends Application {
     private final static String defTitle = "ELib - the world of books";
-    private final static int minWidth = 500;
+    private final static int minWidth = 600;
     private final static int minHeight = 400;
 
     @Override

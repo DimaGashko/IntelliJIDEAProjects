@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSlider?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
@@ -64,25 +65,29 @@
                <children>
                    <Label styleClass="filters__title" text="Filters" />
                    <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Name" />
+                       <Label styleClass="filterGroup__title" text="Name:" />
                        <JFXTextField promptText="The name" styleClass="filterGroup__field" />
                   <VBox.margin>
                      <Insets />
                   </VBox.margin>
                    </VBox>
                    <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Author" />
+                       <Label styleClass="filterGroup__title" text="Author:" />
                        <JFXTextField promptText="The author" styleClass="filterGroup__field" />
                   <VBox.margin>
                      <Insets />
                   </VBox.margin>
                    </VBox>
                    <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Publisher" />
+                       <Label styleClass="filterGroup__title" text="Publisher:" />
                        <JFXTextField promptText="The publisher" styleClass="filterGroup__field" />
                    </VBox>
                    <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Price" />
+                       <Label styleClass="filterGroup__title" text="Price:" />
+                       <Label styleClass="filterGroup__subtitle" text="From:" />
+                     <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                       <Label styleClass="filterGroup__subtitle" text="To:" />
+                     <JFXSlider showTickLabels="true" showTickMarks="true" value="0"/>
                    </VBox>
                </children>
             <padding>
