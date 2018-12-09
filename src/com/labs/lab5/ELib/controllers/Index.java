@@ -13,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -49,7 +50,9 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        for (Book book : storage.getArrOfData()) {
+            System.out.println(book.toString());
+        }
     }
 
     // Fx Menu Events
