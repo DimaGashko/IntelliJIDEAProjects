@@ -14,7 +14,13 @@ public class ELib extends Application {
 
     @Override
     public void start(Stage mainWindow) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("views/index.fxml"));
+        var loader = new FXMLLoader(getClass().getResource("views/index.fxml"));
+
+        loader.setControllerFactory(() -> {
+
+        });
+
+        Parent root = loader.load();
         mainWindow.setTitle(defTitle);
 
         Image icon = new Image(getClass().getResource("img/icon.png").toString());
