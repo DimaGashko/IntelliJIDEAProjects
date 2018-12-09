@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane styleClass="wrapper" stylesheets="@../styles/createBook.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.CreateBook" fitToHeight="true" fitToWidth="true">
+<ScrollPane fitToHeight="true" fitToWidth="true" styleClass="wrapper" stylesheets="@../styles/createBook.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.CreateBook">
     <content>
         <VBox>
             <children>
-                <VBox styleClass="header">
+                <VBox alignment="CENTER" styleClass="header">
                     <children>
                         <Label text="Add new Book" />
                     </children>
+               <padding>
+                  <Insets bottom="50.0" left="25.0" right="25.0" top="50.0" />
+               </padding>
                 </VBox>
                 <VBox styleClass="body">
                     <children>
                         <VBox>
                             <children>
-                                <JFXTextField />
+                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Name">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" top="25.0" />
+                           </padding></JFXTextField>
                             </children>
                         </VBox>
                     </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
                 </VBox>
             </children>
         </VBox>
