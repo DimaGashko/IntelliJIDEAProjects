@@ -15,6 +15,9 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.ResourceBundle;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 import javafx.fxml.FXML;
 
@@ -23,6 +26,11 @@ public class Index implements Initializable {
 
     private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
     private BookFilters filters = new BookFilters();
+
+    private double minPrice;
+    private double maxPrice;
+    private int minPages;
+    private int maxPages;
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -50,9 +58,8 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        for (Book book : storage.getArrOfData()) {
-            System.out.println(book.toString());
-        }
+        findFilterLimits();
+        updateFilterLimits();
     }
 
     // Fx Menu Events
@@ -136,6 +143,50 @@ public class Index implements Initializable {
 
     @FXML private void fxOnResetFilters() {
         System.out.println("Reset Filters");
+    }
+
+    // Other methods
+
+    /**
+     * Вычисляет граници фильтров
+     * (обновляет поля min/max price/pages и др)
+     */
+    private void findFilterLimits() {
+        var books = storage.getArrOfData();
+
+        minPages = _getMinByCondition(books, (next, min) -> (next.getPages() < min.getPages())).getPages();
+        maxPages = _getMinByCondition(books, (next, max) -> (next.getPages() > max.getPages())).getPages();
+
+        minPrice = _getMinByCondition(books, (next, min) -> (next.getPages() < min.getPrice())).getPrice();
+        maxPrice = _getMinByCondition(books, (next, max) -> (next.getPages() > max.getPrice())).getPrice();
+
+        System.out.println(minPages);
+        System.out.println(maxPages);
+        System.out.println(minPrice);
+        System.out.println(maxPrice);
+    }
+
+    private void updateFilterLimits() {
+
+    }
+
+    /**
+     * Возвращает минимальный элемент по переданными правилам сравнения
+     * Используется для нахождения минимального/максимального
+     * Элемента массива по необходимому полю
+     * @param items массив
+     * @param compare функция сравнения
+     * @param <T> тип обрабатываемых элементов
+     * @return
+     */
+    private <T> T _getMinByCondition(T[] items, BiFunction<T, T, Boolean> compare) {
+        T res = items[0];
+
+        for (int i = 1; i < items.length; i++) {
+            if (compare.apply(items[i], res)) res = items[i];
+        }
+
+        return res;
     }
 
 }
