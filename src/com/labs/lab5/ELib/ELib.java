@@ -1,6 +1,7 @@
 package com.labs.lab5.ELib;
 
 import com.labs.lab3.part1.library.Book;
+import com.labs.lab5.ELib.models.BookFilters;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -33,9 +34,11 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
-        var book = new Book("JavaScript", "Jonatan", "Apple", 100, 200, 300);
+        Book book = new Book("JavaScript", "Jonatan", "Apple", 100, 200, 300);
 
+        BookFilters filters = new BookFilters();
 
+        System.out.println(filters.check());
 
         //launch(args);
     }

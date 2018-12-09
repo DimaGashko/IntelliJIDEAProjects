@@ -7,15 +7,15 @@ import java.time.LocalDate;
  * Класс фильтров книг
  */
 public class BookFilters {
-    private String name;
-    private String author;
-    private String publisher;
-    private double priceFrom;
-    private double priceTo;
-    private int pagesFrom;
-    private int pagesTo;
-    private LocalDate dateFrom;
-    private LocalDate dateTo;
+    private String nameFilter;
+    private String authorFilter;
+    private String publisherFilter;
+    private double priceFromFilter;
+    private double priceToFilter;
+    private int pagesFromFilter;
+    private int pagesToFilter;
+    private LocalDate dateFromFIlter;
+    private LocalDate dateToFilter;
 
     public BookFilters() {
 
@@ -29,14 +29,14 @@ public class BookFilters {
     public boolean check(Book book) {
 
         return (
-                   checkStringFilter(name, book.getName())
-                && checkStringFilter(author, book.getAuthor())
-                && checkStringFilter(publisher, book.getPublisher())
+                   checkStringFilter(nameFilter, book.getName())
+                && checkStringFilter(authorFilter, book.getAuthor())
+                && checkStringFilter(publisherFilter, book.getPublisher())
 
-                && checkNumberFilter(priceFrom, priceTo, book.getPrice())
-                && checkNumberFilter(pagesFrom, pagesTo, book.getPages())
+                && checkNumberFilter(priceFromFilter, priceToFilter, book.getPrice())
+                && checkNumberFilter(pagesFromFilter, pagesToFilter, book.getPages())
 
-                && checkDateFilter(dateFrom, dateTo, book.getDate())
+                && checkDateFilter(dateFromFIlter, dateToFilter, book.getDate())
         );
 
     }
@@ -48,7 +48,7 @@ public class BookFilters {
      * @param param проверяемое значение
      * @return удовлетворяет ли параметр фильтру
      */
-    public boolean checkStringFilter(String filter, String param) {
+    private boolean checkStringFilter(String filter, String param) {
         if (filter.isEmpty()) return true;
 
         filter = filter.toLowerCase().trim();
@@ -65,7 +65,7 @@ public class BookFilters {
      * @param param проверяемое значение
      * @return удовлетворяет ли параметр фильтру
      */
-    public boolean checkNumberFilter(Double from, Double to, Double param) {
+    private boolean checkNumberFilter(Double from, Double to, Double param) {
         if (from == 0 && to == 0) return true;
 
         return (from <= param) && (to >= param);
@@ -79,7 +79,7 @@ public class BookFilters {
      * @param param проверяемое значение
      * @return удовлетворяет ли параметр фильтру
      */
-    public boolean checkNumberFilter(int from, int to, int param) {
+    private boolean checkNumberFilter(int from, int to, int param) {
         if (from == 0 && to == 0) return true;
 
         return (from <= param) && (to >= param);
@@ -93,81 +93,81 @@ public class BookFilters {
      * @param param проверяемое значение
      * @return удовлетворяет ли параметр фильтру
      */
-    public boolean checkDateFilter(LocalDate from, LocalDate to, LocalDate param) {
+    private boolean checkDateFilter(LocalDate from, LocalDate to, LocalDate param) {
         if (from == null && to == null) return true;
 
         return (from.compareTo(param) <= 0) && (to.compareTo(param) >= 0);
     }
 
-    public String getName() {
-        return name;
+    public String getNameFilter() {
+        return nameFilter;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameFilter(String nameFilter) {
+        this.nameFilter = nameFilter;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getAuthorFilter() {
+        return authorFilter;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setAuthorFilter(String authorFilter) {
+        this.authorFilter = authorFilter;
     }
 
-    public String getPublisher() {
-        return publisher;
+    public String getPublisherFilter() {
+        return publisherFilter;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
+    public void setPublisherFilter(String publisherFilter) {
+        this.publisherFilter = publisherFilter;
     }
 
-    public double getPriceFrom() {
-        return priceFrom;
+    public double getPriceFromFilter() {
+        return priceFromFilter;
     }
 
-    public void setPriceFrom(double priceFrom) {
-        this.priceFrom = priceFrom;
+    public void setPriceFromFilter(double priceFromFilter) {
+        this.priceFromFilter = priceFromFilter;
     }
 
-    public double getPriceTo() {
-        return priceTo;
+    public double getPriceToFilter() {
+        return priceToFilter;
     }
 
-    public void setPriceTo(double priceTo) {
-        this.priceTo = priceTo;
+    public void setPriceToFilter(double priceToFilter) {
+        this.priceToFilter = priceToFilter;
     }
 
-    public int getPagesFrom() {
-        return pagesFrom;
+    public int getPagesFromFilter() {
+        return pagesFromFilter;
     }
 
-    public void setPagesFrom(int pagesFrom) {
-        this.pagesFrom = pagesFrom;
+    public void setPagesFromFilter(int pagesFromFilter) {
+        this.pagesFromFilter = pagesFromFilter;
     }
 
-    public int getPagesTo() {
-        return pagesTo;
+    public int getPagesToFilter() {
+        return pagesToFilter;
     }
 
-    public void setPagesTo(int pagesTo) {
-        this.pagesTo = pagesTo;
+    public void setPagesToFilter(int pagesToFilter) {
+        this.pagesToFilter = pagesToFilter;
     }
 
-    public LocalDate getDateFrom() {
-        return dateFrom;
+    public LocalDate getDateFromFIlter() {
+        return dateFromFIlter;
     }
 
-    public void setDateFrom(LocalDate dateFrom) {
-        this.dateFrom = dateFrom;
+    public void setDateFromFIlter(LocalDate dateFromFIlter) {
+        this.dateFromFIlter = dateFromFIlter;
     }
 
-    public LocalDate getDateTo() {
-        return dateTo;
+    public LocalDate getDateToFilter() {
+        return dateToFilter;
     }
 
-    public void setDateTo(LocalDate dateTo) {
-        this.dateTo = dateTo;
+    public void setDateToFilter(LocalDate dateToFilter) {
+        this.dateToFilter = dateToFilter;
     }
 }
