@@ -106,19 +106,19 @@
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Date:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                             <JFXDatePicker fx:id="fxFilterDateFrom" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter">
+                             <JFXDatePicker fx:id="fxFilterDateFrom" defaultColor="rgba(117,117,117,1)" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter">
                               <VBox.margin>
                                  <Insets bottom="10.0" />
                               </VBox.margin>
                            </JFXDatePicker>
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                             <JFXDatePicker fx:id="fxFilterDateTo" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter">
+                             <JFXDatePicker fx:id="fxFilterDateTo" defaultColor="rgba(117,117,117,1)" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter">
                               <padding>
                                  <Insets bottom="10.0" />
                               </padding>
                            </JFXDatePicker>
                          </VBox>
-                        <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="100.0">
+                        <VBox nodeOrientation="RIGHT_TO_LEFT">
                            <children>
                               <JFXButton fx:id="fxResetFilters" buttonType="RAISED" onAction="#fxOnResetFilters" styleClass="filters__reset" text="Reset filters" />
                            </children>
@@ -141,8 +141,7 @@
                         </VBox>
                         <VBox>
                            <children>
-                              <JFXTreeTableView fx:id="fxBooksTable" prefHeight="300.0" />
-                              <Label fx:id="fxNoBooks" text=" No books with these filters" />
+                              <JFXTreeTableView fx:id="fxBooksTable" prefHeight="150.0" />
                            </children>
                         </VBox>
                      </children>

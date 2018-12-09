@@ -75,7 +75,7 @@
                                     <Insets right="25.0" />
                                  </HBox.margin>
                               </Label>
-                              <JFXDatePicker styleClass="formGroup__date" />
+                              <JFXDatePicker styleClass="formGroup__date" defaultColor="rgba(117,117,117,1)" />
                            </children>
                         </HBox>
                      </children>
