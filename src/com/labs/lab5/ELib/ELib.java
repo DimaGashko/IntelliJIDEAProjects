@@ -1,5 +1,6 @@
 package com.labs.lab5.ELib;
 
+import com.labs.lab3.part1.library.Book;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,6 +33,10 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
-        launch(args);
+        var book = new Book("JavaScript", "Jonatan", "Apple", 100, 200, 300);
+
+
+
+        //launch(args);
     }
 }

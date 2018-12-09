@@ -51,6 +51,9 @@ public class BookFilters {
     public boolean checkStringFilter(String filter, String param) {
         if (filter.isEmpty()) return true;
 
+        filter = filter.toLowerCase().trim();
+        param = param.toLowerCase().trim();
+
         return param.contains(filter);
     }
 
@@ -93,7 +96,7 @@ public class BookFilters {
     public boolean checkDateFilter(LocalDate from, LocalDate to, LocalDate param) {
         if (from == null && to == null) return true;
 
-        return (from.compareTo(param) <= 0) && (to.compareTo(param) => 0);
+        return (from.compareTo(param) <= 0) && (to.compareTo(param) >= 0);
     }
 
     public String getName() {
