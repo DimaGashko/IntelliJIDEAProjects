@@ -9,7 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Index implements Initializable {
-    static final private String DB_URL =
+    static final private String DB_URL = "com/labs/lab5/ELib/configs/books-db.txt";
 
     // Объект для хранения книг
     private IStorage<Book> storage;
@@ -24,4 +24,11 @@ public class Index implements Initializable {
     }
 
 
+    public IStorage<Book> getStorage() {
+        return storage;
+    }
+
+    public void setStorage(IStorage<Book> storage) {
+        this.storage = storage;
+    }
 }
