@@ -5,16 +5,16 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<ScrollPane styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.CreateBook" fitToHeight="true" fitToWidth="true">
+<ScrollPane styleClass="wrapper" stylesheets="@../styles/createBook.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.CreateBook" fitToHeight="true" fitToWidth="true">
     <content>
         <VBox>
             <children>
-                <VBox>
+                <VBox styleClass="header">
                     <children>
-                        <Label text="Label" />
+                        <Label text="Add new Book" />
                     </children>
                 </VBox>
-                <VBox>
+                <VBox styleClass="body">
                     <children>
                         <VBox>
                             <children>
