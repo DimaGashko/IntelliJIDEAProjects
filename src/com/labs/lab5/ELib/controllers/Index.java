@@ -1,5 +1,7 @@
 package com.labs.lab5.ELib.controllers;
 
+import com.jfoenix.validation.DoubleValidator;
+import com.jfoenix.validation.ValidationFacade;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
@@ -122,7 +124,7 @@ public class Index implements Initializable {
     }
 
     @FXML private void fxOnFilterDateFrom() {
-        System.out.println("Filter DateFrom");
+        System.out.println(fxFilterDateFrom.getValue().getClass());
     }
 
     @FXML private void fxOnFilterDateTo() {
@@ -137,4 +139,5 @@ public class Index implements Initializable {
         storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
 
     }
+
 }
