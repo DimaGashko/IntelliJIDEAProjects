@@ -38,7 +38,7 @@ public class ELib extends Application {
 
         BookFilters filters = new BookFilters();
 
-        System.out.println(filters.check());
+        System.out.println(filters.);
 
         //launch(args);
     }

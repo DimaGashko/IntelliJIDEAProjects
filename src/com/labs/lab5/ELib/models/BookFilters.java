@@ -14,7 +14,7 @@ public class BookFilters {
     private double priceToFilter;
     private int pagesFromFilter;
     private int pagesToFilter;
-    private LocalDate dateFromFIlter;
+    private LocalDate dateFromFilter;
     private LocalDate dateToFilter;
 
     public BookFilters() {
@@ -36,7 +36,7 @@ public class BookFilters {
                 && checkNumberFilter(priceFromFilter, priceToFilter, book.getPrice())
                 && checkNumberFilter(pagesFromFilter, pagesToFilter, book.getPages())
 
-                && checkDateFilter(dateFromFIlter, dateToFilter, book.getDate())
+                && checkDateFilter(dateFromFilter, dateToFilter, book.getDate())
         );
 
     }
@@ -156,11 +156,11 @@ public class BookFilters {
     }
 
     public LocalDate getDateFromFIlter() {
-        return dateFromFIlter;
+        return dateFromFilter;
     }
 
     public void setDateFromFIlter(LocalDate dateFromFIlter) {
-        this.dateFromFIlter = dateFromFIlter;
+        this.dateFromFilter = dateFromFIlter;
     }
 
     public LocalDate getDateToFilter() {
