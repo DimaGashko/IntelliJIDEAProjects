@@ -129,7 +129,7 @@
    <center>
       <ScrollPane fx:id="centerScroll" fitToWidth="true" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="books" prefWidth="${centerScroll.width}" styleClass="books">
+            <VBox fx:id="books" styleClass="books">
                <children>
                   <VBox>
                      <children>
@@ -138,7 +138,7 @@
                   </VBox>
                   <VBox>
                      <children>
-                        <JFXTreeTableView prefWidth="${books.width}" />
+                        <JFXTreeTableView />
                      </children>
                   </VBox>
                </children>
