@@ -7,15 +7,15 @@ import java.time.LocalDate;
  * Класс фильтров книг
  */
 public class BookFilters {
-    private String nameFilter;
-    private String authorFilter;
-    private String publisherFilter;
-    private double priceFromFilter;
-    private double priceToFilter;
-    private int pagesFromFilter;
-    private int pagesToFilter;
-    private LocalDate dateFromFilter;
-    private LocalDate dateToFilter;
+    private String nameFilter = "";
+    private String authorFilter = "";
+    private String publisherFilter = "";
+    private double priceFromFilter = 0;
+    private double priceToFilter = 0;
+    private int pagesFromFilter = 0;
+    private int pagesToFilter = 0;
+    private LocalDate dateFromFilter = null;
+    private LocalDate dateToFilter = null;
 
     public BookFilters() {
 

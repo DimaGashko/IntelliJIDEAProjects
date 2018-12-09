@@ -34,11 +34,11 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
-        Book book = new Book("JavaScript", "Jonatan", "Apple", 100, 200, 300);
+        Book book = new Book("JavaScript", "Jonathan", "Apple", 100, 200, 300);
 
         BookFilters filters = new BookFilters();
 
-        System.out.println(filters.);
+        System.out.println(filters.check(book));
 
         //launch(args);
     }
