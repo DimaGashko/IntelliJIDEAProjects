@@ -95,9 +95,15 @@
                    <VBox styleClass="filterGroup">
                        <Label styleClass="filterGroup__title" text="Date:" />
                        <Label styleClass="filterGroup__subtitle" text="From:" />
-                       <JFXDatePicker />
+                       <JFXDatePicker>
+                        <VBox.margin>
+                           <Insets bottom="10.0" />
+                        </VBox.margin></JFXDatePicker>
                        <Label styleClass="filterGroup__subtitle" text="To:" />
-                       <JFXDatePicker />
+                       <JFXDatePicker>
+                        <padding>
+                           <Insets bottom="10.0" />
+                        </padding></JFXDatePicker>
                    </VBox>
                </children>
             <padding>
