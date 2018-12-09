@@ -154,11 +154,11 @@ public class Index implements Initializable {
     private void findFilterLimits() {
         var books = storage.getArrOfData();
 
-        minPages = _getMinByCondition(books, (next, min) -> (next.getPages() < min.getPages())).getPages();
-        maxPages = _getMinByCondition(books, (next, max) -> (next.getPages() > max.getPages())).getPages();
+        minPages = _getSuitable(books, (next, min) -> (next.getPages() < min.getPages())).getPages();
+        maxPages = _getSuitable(books, (next, max) -> (next.getPages() > max.getPages())).getPages();
 
-        minPrice = _getMinByCondition(books, (next, min) -> (next.getPages() < min.getPrice())).getPrice();
-        maxPrice = _getMinByCondition(books, (next, max) -> (next.getPages() > max.getPrice())).getPrice();
+        minPrice = _getSuitable(books, (next, min) -> (next.getPrice() < min.getPrice())).getPrice();
+        maxPrice = _getSuitable(books, (next, max) -> (next.getPrice() > max.getPrice())).getPrice();
 
         System.out.println(minPages);
         System.out.println(maxPages);
@@ -171,15 +171,15 @@ public class Index implements Initializable {
     }
 
     /**
-     * Возвращает минимальный элемент по переданными правилам сравнения
-     * Используется для нахождения минимального/максимального
+     * Возвращает наиболее подходящий элемент по переданным правилам сравнения
+     * Можно использовать для нахождения минимального/максимального
      * Элемента массива по необходимому полю
      * @param items массив
      * @param compare функция сравнения
      * @param <T> тип обрабатываемых элементов
-     * @return
+     * @return наиболее подходящий элемент
      */
-    private <T> T _getMinByCondition(T[] items, BiFunction<T, T, Boolean> compare) {
+    private <T> T _getSuitable(T[] items, BiFunction<T, T, Boolean> compare) {
         T res = items[0];
 
         for (int i = 1; i < items.length; i++) {
