@@ -15,11 +15,8 @@ import javafx.scene.control.*;
 import javafx.fxml.Initializable;
 
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
-import java.util.function.Function;
-import java.util.function.Predicate;
 
 import javafx.fxml.FXML;
 
@@ -107,50 +104,26 @@ public class Index implements Initializable {
     }
 
     // Fx Filters Events
-    @FXML private void fxOnFilterName() {
-        System.out.println("Filter Name");
-    }
-
-    @FXML private void fxOnFilterAuthor() {
-        System.out.println("Filter A");
-    }
-
-    @FXML private void fxOnFilterPublisher() {
-        System.out.println("Filter Publisher");
-    }
-
-    @FXML private void fxOnPriceFrom() {
-        System.out.println("Price From");
-    }
-
-    @FXML private void fxOnPriceTo() {
-        System.out.println("Price To");
-    }
-
-    @FXML private void fxOnPagesFrom() {
-        System.out.println("Pages From");
-    }
-
-    @FXML private void fxOnPagesTo() {
-        System.out.println("Pages To");
-    }
-
-    @FXML private void fxOnFilterDateFrom() {
-        System.out.println(fxFilterDateFrom.getValue().getClass());
-    }
-
-    @FXML private void fxOnFilterDateTo() {
-        System.out.println("Filter DateTo");
+    @FXML private void fxOnRunFilter() {
+        runFilter();
     }
 
     @FXML private void fxOnResetFilters() {
-        System.out.println("Reset Filters");
+        resetFilters();
     }
 
     // Other methods
 
+    private void runFilter() {
+        System.out.println("Filtering...");
+    }
+
     private void initBinds() {
         bindFilterLimits();
+    }
+
+    private void resetFilters() {
+        
     }
 
     /**
