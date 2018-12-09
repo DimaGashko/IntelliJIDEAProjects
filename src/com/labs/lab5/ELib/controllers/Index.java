@@ -49,86 +49,72 @@ public class Index implements Initializable {
         initStorage();
     }
 
-    @FXML
-    void fxOnActionFilterAuthor(ActionEvent event) {
-
+    // Fx Menu Events
+    @FXML void fxOnActionMenuAbout(ActionEvent event) {
+        System.out.println("Menu About");
     }
 
-    @FXML
-    void fxOnActionFilterDateFrom(ActionEvent event) {
-
+    @FXML void fxOnActionMenuAddBook(ActionEvent event) {
+        System.out.println("Menu Add");
     }
 
-    @FXML
-    void fxOnActionFilterDateTo(ActionEvent event) {
-
+    @FXML void fxOnActionMenuAppExit(ActionEvent event) {
+        System.out.println("Menu Exit");
     }
 
-    @FXML
-    void fxOnActionFilterName(ActionEvent event) {
-
+    @FXML void fxOnActionMenuEditBook(ActionEvent event) {
+        System.out.println("Menu Edit");
     }
 
-    @FXML
-    void fxOnActionFilterPublisher(ActionEvent event) {
-
+    @FXML  void fxOnActionMenuHelp(ActionEvent event) {
+        System.out.println("Menu Help");
     }
 
-    @FXML
-    void fxOnActionMenuAbout(ActionEvent event) {
-
+    @FXML void fxOnActionMenuRemoveBooks(ActionEvent event) {
+        System.out.println("Menu Remove");
     }
 
-    @FXML
-    void fxOnActionMenuAddBook(ActionEvent event) {
-
+    @FXML void fxOnActionMenuResetFilters(ActionEvent event) {
+        System.out.println("Menu Reset Filters");
     }
 
-    @FXML
-    void fxOnActionMenuAppExit(ActionEvent event) {
-
+    // Fx Tools Events
+    @FXML void fxOnActionToolAdd(ActionEvent event) {
+        System.out.println("Tool Add");
     }
 
-    @FXML
-    void fxOnActionMenuEditBook(ActionEvent event) {
-
+    @FXML void fxOnActionToolEdit(ActionEvent event) {
+        System.out.println("Tool Edit");
     }
 
-    @FXML
-    void fxOnActionMenuHelp(ActionEvent event) {
-
+    @FXML void fxOnActionToolRemove(ActionEvent event) {
+        System.out.println("Tool Remove");
     }
 
-    @FXML
-    void fxOnActionMenuRemoveBooks(ActionEvent event) {
-
+    // Fx Filters Events
+    @FXML void fxOnActionFilterName(ActionEvent event) {
+        System.out.println("Filter Name");
     }
 
-    @FXML
-    void fxOnActionMenuResetFilters(ActionEvent event) {
-
+    @FXML void fxOnActionFilterAuthor(ActionEvent event) {
+        System.out.println("Filter A");
     }
 
-    @FXML
-    void fxOnActionResetFilters(ActionEvent event) {
-
+    @FXML void fxOnActionFilterPublisher(ActionEvent event) {
+        System.out.println("Filter Publisher");
     }
 
-    @FXML
-    void fxOnActionToolAdd(ActionEvent event) {
-
+    @FXML void fxOnActionFilterDateFrom(ActionEvent event) {
+        System.out.println("Filter DateFrom");
     }
 
-    @FXML
-    void fxOnActionToolEdit(ActionEvent event) {
-
+    @FXML void fxOnActionFilterDateTo(ActionEvent event) {
+        System.out.println("Filter DateTo");
     }
 
-    @FXML
-    void fxOnActionToolRemove(ActionEvent event) {
-
+    @FXML void fxOnActionResetFilters(ActionEvent event) {
+        System.out.println("Reset Filters");
     }
-
 
     private void initStorage() {
         storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
