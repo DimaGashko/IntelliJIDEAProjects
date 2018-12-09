@@ -12,6 +12,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
@@ -57,96 +58,101 @@
             </ToolBar>
          </children></VBox>
    </top>
-   <left>
-      <ScrollPane fitToHeight="true" fitToWidth="true" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
-          <content>
-          <!-- Filters -->
-            <VBox spacing="15.0" styleClass="filters">
-               <children>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                         <Label styleClass="filters__title" text="Filters" />
-                     </children>
-                  </VBox>
-                   <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Name:" />
-                       <JFXTextField promptText="The name" styleClass="filterGroup__field" />
-                  <VBox.margin>
-                     <Insets />
-                  </VBox.margin>
-                   </VBox>
-                   <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Author:" />
-                       <JFXTextField promptText="The author" styleClass="filterGroup__field" />
-                  <VBox.margin>
-                     <Insets />
-                  </VBox.margin>
-                   </VBox>
-                   <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Publisher:" />
-                       <JFXTextField promptText="The publisher" styleClass="filterGroup__field" />
-                   </VBox>
-                   <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Price:" />
-                       <Label styleClass="filterGroup__subtitle" text="From:" />
-                     <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
-                       <Label styleClass="filterGroup__subtitle" text="To:" />
-                     <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
-                   </VBox>
-                   <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Pages:" />
-                       <Label styleClass="filterGroup__subtitle" text="From:" />
-                       <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
-                       <Label styleClass="filterGroup__subtitle" text="To:" />
-                       <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
-                   </VBox>
-                   <VBox styleClass="filterGroup">
-                       <Label styleClass="filterGroup__title" text="Date:" />
-                       <Label styleClass="filterGroup__subtitle" text="From:" />
-                       <JFXDatePicker>
-                        <VBox.margin>
-                           <Insets bottom="10.0" />
-                        </VBox.margin></JFXDatePicker>
-                       <Label styleClass="filterGroup__subtitle" text="To:" />
-                       <JFXDatePicker>
-                        <padding>
-                           <Insets bottom="10.0" />
-                        </padding></JFXDatePicker>
-                   </VBox>
-                  <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <JFXButton buttonType="RAISED" styleClass="filters__reset" text="Reset filters" />
-                     </children>
-                  </VBox>
-               </children>
-            <padding>
-               <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
-            </padding>
-            </VBox>
-          </content>
-      </ScrollPane>
-   </left>
    <center>
-      <ScrollPane fx:id="centerScroll" fitToWidth="true" BorderPane.alignment="CENTER">
-         <content>
-            <VBox fx:id="books" styleClass="books">
-               <children>
+      <SplitPane dividerPositions="0.3" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <ScrollPane styleClass="filters" fitToHeight="true" fitToWidth="true" focusTraversable="true" nodeOrientation="LEFT_TO_RIGHT">
+                <content>
+                <!-- Filters -->
+                  <VBox spacing="15.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                               <Label styleClass="filters__title" text="Filters" />
+                           </children>
+                        </VBox>
+                         <VBox styleClass="filterGroup">
+                             <Label styleClass="filterGroup__title" text="Name:" />
+                             <JFXTextField promptText="The name" styleClass="filterGroup__field" />
+                        <VBox.margin>
+                           <Insets />
+                        </VBox.margin>
+                         </VBox>
+                         <VBox styleClass="filterGroup">
+                             <Label styleClass="filterGroup__title" text="Author:" />
+                             <JFXTextField promptText="The author" styleClass="filterGroup__field" />
+                        <VBox.margin>
+                           <Insets />
+                        </VBox.margin>
+                         </VBox>
+                         <VBox styleClass="filterGroup">
+                             <Label styleClass="filterGroup__title" text="Publisher:" />
+                             <JFXTextField promptText="The publisher" styleClass="filterGroup__field" />
+                         </VBox>
+                         <VBox styleClass="filterGroup">
+                             <Label styleClass="filterGroup__title" text="Price:" />
+                             <Label styleClass="filterGroup__subtitle" text="From:" />
+                           <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                             <Label styleClass="filterGroup__subtitle" text="To:" />
+                           <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                         </VBox>
+                         <VBox styleClass="filterGroup">
+                             <Label styleClass="filterGroup__title" text="Pages:" />
+                             <Label styleClass="filterGroup__subtitle" text="From:" />
+                             <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                             <Label styleClass="filterGroup__subtitle" text="To:" />
+                             <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                         </VBox>
+                         <VBox styleClass="filterGroup">
+                             <Label styleClass="filterGroup__title" text="Date:" />
+                             <Label styleClass="filterGroup__subtitle" text="From:" />
+                             <JFXDatePicker>
+                              <VBox.margin>
+                                 <Insets bottom="10.0" />
+                              </VBox.margin>
+                           </JFXDatePicker>
+                             <Label styleClass="filterGroup__subtitle" text="To:" />
+                             <JFXDatePicker>
+                              <padding>
+                                 <Insets bottom="10.0" />
+                              </padding>
+                           </JFXDatePicker>
+                         </VBox>
+                        <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" styleClass="filters__reset" text="Reset filters" />
+                           </children>
+                        </VBox>
+                     </children>
+                  <padding>
+                     <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                  </padding>
+                  </VBox>
+                </content>
+            </ScrollPane>
+            <ScrollPane styleClass="books" fitToWidth="true">
+               <content>
                   <VBox>
                      <children>
-                        <Label styleClass="books__title" text="Books" />
+                        <VBox>
+                           <children>
+                              <Label styleClass="books__title" text="Books" />
+                           </children>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <JFXTreeTableView prefHeight="300.0" />
+                              <Label text=" No books with these filters" />
+                           </children>
+                        </VBox>
                      </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
                   </VBox>
-                  <VBox>
-                     <children>
-                        <JFXTreeTableView prefHeight="300.0" />
-                        <Label text=" No books with these filters" />
-                     </children>
-                  </VBox>
-               </children>
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-            </VBox>
-         </content></ScrollPane>
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
    </center>
 </BorderPane>
