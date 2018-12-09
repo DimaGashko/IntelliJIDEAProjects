@@ -138,7 +138,8 @@
                   </VBox>
                   <VBox>
                      <children>
-                        <JFXTreeTableView />
+                        <JFXTreeTableView prefHeight="300.0" />
+                        <Label text=" No books with these filters" />
                      </children>
                   </VBox>
                </children>
