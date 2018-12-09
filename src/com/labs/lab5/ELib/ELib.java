@@ -9,6 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.time.LocalDate;
+
 public class ELib extends Application {
     private final static String defTitle = "ELib - the world of books";
     private final static int minWidth = 600;
@@ -34,9 +36,21 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
-        Book book = new Book("JavaScript", "Jonathan", "Apple", 100, 200, 300);
+        LocalDate d1 = LocalDate.of(1000,1,1);
+        LocalDate d2 = LocalDate.of(1001, 1, 1);
+        LocalDate d3 = LocalDate.of(1002, 1, 1);
+
+        Book book = new Book("JavaScript", "Jonathan", "Apple", d2, 200, 300);
 
         BookFilters filters = new BookFilters();
+
+        filters.setNameFilter("JavaScript");
+        filters.setAuthorFilter("th");
+        filters.setPublisherFilter("Apple");
+        filters.setPriceFromFilter(200);
+        filters.setPriceToFilter(400);
+        filters.setDateFromFilter(d1);
+        filters.setDateToFilter(d3);
 
         System.out.println(filters.check(book));
 

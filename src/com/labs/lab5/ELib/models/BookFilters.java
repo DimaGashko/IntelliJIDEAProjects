@@ -155,11 +155,11 @@ public class BookFilters {
         this.pagesToFilter = pagesToFilter;
     }
 
-    public LocalDate getDateFromFIlter() {
+    public LocalDate getDateFromFilter() {
         return dateFromFilter;
     }
 
-    public void setDateFromFIlter(LocalDate dateFromFIlter) {
+    public void setDateFromFilter(LocalDate dateFromFIlter) {
         this.dateFromFilter = dateFromFIlter;
     }
 
