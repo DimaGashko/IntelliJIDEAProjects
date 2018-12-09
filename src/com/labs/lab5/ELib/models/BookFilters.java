@@ -92,7 +92,11 @@ public class BookFilters {
      * @return удовлетворяет ли параметр фильтру
      */
     private boolean checkNumberFilter(Integer from, Integer to, Integer param) {
-        return checkNumberFilter(from.doubleValue(), to.doubleValue(), param.doubleValue());
+        return checkNumberFilter(
+                (from != null) ? from.doubleValue() : null,
+                (to != null) ? to.doubleValue() : null,
+                (param != null) ? param.doubleValue() : null
+        );
     }
 
     /**
