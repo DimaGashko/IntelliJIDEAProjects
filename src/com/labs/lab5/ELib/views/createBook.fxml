@@ -8,11 +8,11 @@
 
 <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="wrapper" stylesheets="@../styles/createBook.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.CreateBook">
     <content>
-        <VBox>
+        <VBox alignment="TOP_CENTER" styleClass="wrapper__container">
             <children>
                 <VBox alignment="CENTER" styleClass="header">
                     <children>
-                        <Label text="Add new Book" />
+                        <Label styleClass="header__title" text="Add New Book" />
                     </children>
                <padding>
                   <Insets bottom="50.0" left="25.0" right="25.0" top="50.0" />
