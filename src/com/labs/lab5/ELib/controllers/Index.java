@@ -3,6 +3,7 @@ package com.labs.lab5.ELib.controllers;
 import com.jfoenix.validation.DoubleValidator;
 import com.jfoenix.validation.ValidationFacade;
 import com.labs.lab3.part1.library.Book;
+import com.labs.lab5.ELib.models.BookFilters;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
@@ -15,13 +16,12 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
-import javafx.scene.input.KeyEvent;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
 
-    // Объект для хранения книг
-    private IStorage<Book> storage;
+    private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
+    private BookFilters filters = new BookFilters();
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -49,7 +49,7 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initStorage();
+
     }
 
     // Fx Menu Events
@@ -133,11 +133,6 @@ public class Index implements Initializable {
 
     @FXML private void fxOnResetFilters() {
         System.out.println("Reset Filters");
-    }
-
-    private void initStorage() {
-        storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
-
     }
 
 }

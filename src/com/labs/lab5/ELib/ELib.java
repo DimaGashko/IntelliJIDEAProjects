@@ -36,6 +36,7 @@ public class ELib extends Application {
     }
 
     public static void main(String[] args) {
+        /*
         LocalDate d1 = LocalDate.of(1000,1,1);
         LocalDate d2 = LocalDate.of(1001, 1, 1);
         LocalDate d3 = LocalDate.of(1002, 1, 1);
@@ -53,7 +54,8 @@ public class ELib extends Application {
         filters.setDateToFilter(d3);
 
         System.out.println(filters.check(book));
+        */
 
-        //launch(args);
+        launch(args);
     }
 }
