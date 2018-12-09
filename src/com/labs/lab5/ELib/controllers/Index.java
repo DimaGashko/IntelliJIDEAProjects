@@ -140,5 +140,7 @@ public class Index implements Initializable {
 
     private void initStorage() {
         storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
+
+        fxFilterPriceFrom
     }
 }
