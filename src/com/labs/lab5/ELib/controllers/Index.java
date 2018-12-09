@@ -8,6 +8,8 @@ import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
 import com.jfoenix.controls.*;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.scene.control.*;
 
 import javafx.fxml.Initializable;
@@ -27,10 +29,10 @@ public class Index implements Initializable {
     private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
     private BookFilters filters = new BookFilters();
 
-    private double minPrice;
-    private double maxPrice;
-    private int minPages;
-    private int maxPages;
+    private SimpleDoubleProperty minPrice;
+    private SimpleDoubleProperty maxPrice;
+    private SimpleIntegerProperty minPages;
+    private SimpleIntegerProperty maxPages;
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -147,27 +149,39 @@ public class Index implements Initializable {
 
     // Other methods
 
+    private void initBinds() {
+        bindFilterLimits();
+    }
+
+    /**
+     * Устанавливает привязку полей фильтров к граничным значениям
+     */
+    private void bindFilterLimits() {
+        fxFilterPriceFrom.minProperty().bind(minPrice);
+        fxFilterPriceFrom.maxProperty().bind(maxPrice);
+
+        fxFilterPriceTo.minProperty().bind(minPrice);
+        fxFilterPriceTo.maxProperty().bind(maxPrice);
+
+        fxFilterPagesFrom.minProperty().bind(minPages);
+        fxFilterPagesFrom.maxProperty().bind(maxPages);
+
+        fxFilterPagesTo.minProperty().bind(minPages);
+        fxFilterPagesTo.maxProperty().bind(maxPages);
+    }
+
     /**
      * Вычисляет граници фильтров
      * (обновляет поля min/max price/pages и др)
      */
-    private void findFilterLimits() {
+    private void updateFilterLimits() {
         var books = storage.getArrOfData();
 
-        minPages = _getSuitable(books, (next, min) -> (next.getPages() < min.getPages())).getPages();
-        maxPages = _getSuitable(books, (next, max) -> (next.getPages() > max.getPages())).getPages();
+        minPages.set(_getSuitable(books, (next, min) -> (next.getPages() < min.getPages())).getPages());
+        maxPages.set(_getSuitable(books, (next, max) -> (next.getPages() > max.getPages())).getPages());
 
-        minPrice = _getSuitable(books, (next, min) -> (next.getPrice() < min.getPrice())).getPrice();
-        maxPrice = _getSuitable(books, (next, max) -> (next.getPrice() > max.getPrice())).getPrice();
-
-        System.out.println(minPages);
-        System.out.println(maxPages);
-        System.out.println(minPrice);
-        System.out.println(maxPrice);
-    }
-
-    private void updateFilterLimits() {
-
+        minPrice.set(_getSuitable(books, (next, min) -> (next.getPrice() < min.getPrice())).getPrice());
+        maxPrice.set(_getSuitable(books, (next, max) -> (next.getPrice() > max.getPrice())).getPrice());
     }
 
     /**
