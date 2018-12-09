@@ -30,7 +30,7 @@ public class BookFilters {
      * @return удовлетворяет ли книга фильтру
      */
     public boolean check(Book book) {
-
+        System.out.println(book);
         return (
                    checkStringFilter(nameFilter, book.getName())
                 && checkStringFilter(authorFilter, book.getAuthor())
@@ -203,5 +203,18 @@ public class BookFilters {
 
     public void setDateToFilter(LocalDate dateToFilter) {
         this.dateToFilter = dateToFilter;
+    }
+
+    @Override
+    public String toString() {
+        return nameFilter + ";"
+                + authorFilter + ";"
+                + publisherFilter + ";"
+                + priceFromFilter + ";"
+                + priceToFilter + ";"
+                + pagesFromFilter + ";"
+                + pagesToFilter + ";"
+                + dateFromFilter + ";"
+                + dateToFilter;
     }
 }

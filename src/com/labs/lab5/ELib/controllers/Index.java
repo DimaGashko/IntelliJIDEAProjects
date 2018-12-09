@@ -31,6 +31,9 @@ public class Index implements Initializable {
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
     private SimpleIntegerProperty maxPages = new SimpleIntegerProperty();
 
+    // Массив книг удовлетворяющих текущему фильтру
+    private Book[] filteredBooks;
+
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
     @FXML private MenuItem fxMenuRemoveBooks;
@@ -116,6 +119,16 @@ public class Index implements Initializable {
 
     private void runFilter() {
         updateFilters();
+        filter();
+        renderFiltered();
+    }
+
+    private void renderFiltered() {
+        System.out.println(filteredBooks.length);
+    }
+
+    private void filter() {
+        filteredBooks = storage.getArrOfData(book -> filters.check(book));
     }
 
     private void initBinds() {
@@ -178,11 +191,11 @@ public class Index implements Initializable {
     private void updateFilterLimits() {
         var books = storage.getArrOfData();
 
-        minPages.set(_getSuitable(books, (next, min) -> (next.getPages() < min.getPages())).getPages());
-        maxPages.set(_getSuitable(books, (next, max) -> (next.getPages() > max.getPages())).getPages());
+        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
+        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
 
-        minPrice.set(_getSuitable(books, (next, min) -> (next.getPrice() < min.getPrice())).getPrice());
-        maxPrice.set(_getSuitable(books, (next, max) -> (next.getPrice() > max.getPrice())).getPrice());
+        minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
+        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
     }
 
     /**
