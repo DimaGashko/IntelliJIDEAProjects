@@ -7,13 +7,16 @@ import java.time.LocalDate;
  * Класс фильтров книг
  */
 public class BookFilters {
-    private String nameFilter = "";
-    private String authorFilter = "";
-    private String publisherFilter = "";
-    private double priceFromFilter = 0;
-    private double priceToFilter = 0;
-    private int pagesFromFilter = 0;
-    private int pagesToFilter = 0;
+    // Классы-обертки, так как необходимо,
+    // Что бы было доступным значение null
+
+    private String nameFilter = null;
+    private String authorFilter = null;
+    private String publisherFilter = null;
+    private Double priceFromFilter = null;
+    private Double priceToFilter = null;
+    private Integer pagesFromFilter = null;
+    private Integer pagesToFilter = null;
     private LocalDate dateFromFilter = null;
     private LocalDate dateToFilter = null;
 
@@ -43,13 +46,15 @@ public class BookFilters {
 
     /**
      * Проверяет удовлетворяет ли строковый параметр фильтру
-     * Если фильтр пустой, то считается, что паарметр может быть любым
+     * Если и from и to равены null, то считается, что параметр может быть любым
+     * Если from равен null то считается подходящим все до to
+     * Если to равен null то считается подходящим все после from
      * @param filter фильтр
      * @param param проверяемое значение
      * @return удовлетворяет ли параметр фильтру
      */
     private boolean checkStringFilter(String filter, String param) {
-        if (filter.isEmpty()) return true;
+        if (filter == null || filter.isEmpty()) return true;
 
         filter = filter.toLowerCase().trim();
         param = param.toLowerCase().trim();
@@ -59,35 +64,42 @@ public class BookFilters {
 
     /**
      * Проверяет удовлетворяет ли числовой параметр фильтру
-     * Если и from и to равены 0, то считается, что параметр может быть любым
+     * Если и from и to равены null, то считается, что параметр может быть любым
+     * Если from равен null то считается подходящим все до to
+     * Если to равен null то считается подходящим все после from
      * @param from минимальное значение
      * @param to максимальное значение
      * @param param проверяемое значение
      * @return удовлетворяет ли параметр фильтру
      */
     private boolean checkNumberFilter(Double from, Double to, Double param) {
-        if (from == 0 && to == 0) return true;
+        if (from == null && to == null) return true;
+
+        if (to == null) return param >= from;
+        if (from == null) return param <= to;
 
         return (from <= param) && (to >= param);
     }
 
     /**
      * Проверяет удовлетворяет ли числовой параметр фильтру
-     * Если и from и to равены 0, то считается, что параметр может быть любым
+     * Если и from и to равены null, то считается, что параметр может быть любым
+     * Если from равен null то считается подходящим все до to
+     * Если to равен null то считается подходящим все после from
      * @param from минимальное значение
      * @param to максимальное значение
      * @param param проверяемое значение
      * @return удовлетворяет ли параметр фильтру
      */
-    private boolean checkNumberFilter(int from, int to, int param) {
-        if (from == 0 && to == 0) return true;
-
-        return (from <= param) && (to >= param);
+    private boolean checkNumberFilter(Integer from, Integer to, Integer param) {
+        return checkNumberFilter(from.doubleValue(), to.doubleValue(), param.doubleValue());
     }
 
     /**
      * Проверяет удовлетворяет ли фильтра-дата параметр фильтру
      * Если и from и to равены null, то считается, что параметр может быть любым
+     * Если from равен null то считается подходящим все до to
+     * Если to равен null то считается подходящим все после from
      * @param from минимальное значение
      * @param to максимальное значение
      * @param param проверяемое значение
@@ -95,6 +107,9 @@ public class BookFilters {
      */
     private boolean checkDateFilter(LocalDate from, LocalDate to, LocalDate param) {
         if (from == null && to == null) return true;
+
+        if (to == null) return param.compareTo(from) >= 0;
+        if (from == null) return param.compareTo(to) <= 0;
 
         return (from.compareTo(param) <= 0) && (to.compareTo(param) >= 0);
     }
