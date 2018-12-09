@@ -27,22 +27,22 @@
               <menus>
                 <Menu mnemonicParsing="false" text="File">
                   <items>
-                      <MenuItem mnemonicParsing="false" text="Add new book" />
-                      <MenuItem mnemonicParsing="false" text="Reset filters" />
+                      <MenuItem mnemonicParsing="false" text="Add new book" fx:id="fxMenuAddBook" />
+                      <MenuItem mnemonicParsing="false" text="Reset filters" fx:id="fxMenuResetFilters" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem mnemonicParsing="false" text="Exit" />
+                    <MenuItem mnemonicParsing="false" text="Exit" fx:id="fxMenuAppExit" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Edit">
                   <items>
-                        <MenuItem mnemonicParsing="false" text="Edit the book" />
-                        <MenuItem mnemonicParsing="false" text="Remove selected books" />
+                        <MenuItem mnemonicParsing="false" text="Edit the book" fx:id="fxMenuEditBook" />
+                        <MenuItem mnemonicParsing="false" text="Remove selected books" fx:id="fxMenuRemoveBook"/>
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Help" />
-                        <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" text="Help" fx:id="fxMenuHelp" />
+                        <MenuItem mnemonicParsing="false" text="About" fx:id="fxMenuAbout" />
                   </items>
                 </Menu>
               </menus>
@@ -51,9 +51,9 @@
              <!-- Toolbar -->
             <ToolBar nodeOrientation="RIGHT_TO_LEFT" styleClass="toolbar">
                <items>
-                  <JFXButton styleClass="toolbar__tool" text="Remove" />
-                  <JFXButton styleClass="toolbar__tool" text="Edit" />
-                  <JFXButton styleClass="toolbar__tool" text="Add" />
+                  <JFXButton styleClass="toolbar__tool" text="Remove" fx:id="fxToolRemove" />
+                  <JFXButton styleClass="toolbar__tool" text="Edit" fx:id="fxToolEdit" />
+                  <JFXButton styleClass="toolbar__tool" text="Add" fx:id="fxToolAdd" />
                </items>
             </ToolBar>
          </children></VBox>
@@ -73,46 +73,46 @@
                         </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Name:" />
-                             <JFXTextField promptText="The name" styleClass="filterGroup__field" />
+                             <JFXTextField promptText="The name" styleClass="filterGroup__field" fx:id="fxFilterName" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Author:" />
-                             <JFXTextField promptText="The author" styleClass="filterGroup__field" />
+                             <JFXTextField promptText="The author" styleClass="filterGroup__field" fx:id="fxFilterAuthor" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Publisher:" />
-                             <JFXTextField promptText="The publisher" styleClass="filterGroup__field" />
+                             <JFXTextField promptText="The publisher" styleClass="filterGroup__field" fx:id="fxFilterPublisher"/>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Price:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                           <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                           <JFXSlider showTickLabels="true" showTickMarks="true" value="0" fx:id="fxFilterPriceFrom" />
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                           <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                           <JFXSlider showTickLabels="true" showTickMarks="true" value="0" fx:id="fxFilterPriceTo" />
                          </VBox>
                          <VBox styleClass="filterGroup">
-                             <Label styleClass="filterGroup__title" text="Pages:" />
+                             <Label styleClass="filterGroup__title" text="Pages:" fx:id="fxFilterPagesFrom" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
                              <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                             <JFXSlider showTickLabels="true" showTickMarks="true" value="0" />
+                             <JFXSlider showTickLabels="true" showTickMarks="true" value="0" fx:id="fxFilterPagesTo" />
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Date:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                             <JFXDatePicker>
+                             <JFXDatePicker fx:id="fxFilterDateFrom">
                               <VBox.margin>
                                  <Insets bottom="10.0" />
                               </VBox.margin>
                            </JFXDatePicker>
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                             <JFXDatePicker>
+                             <JFXDatePicker fx:id="fxFilterDateTo">
                               <padding>
                                  <Insets bottom="10.0" />
                               </padding>
@@ -120,7 +120,7 @@
                          </VBox>
                         <VBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="200.0" prefWidth="100.0">
                            <children>
-                              <JFXButton buttonType="RAISED" styleClass="filters__reset" text="Reset filters" />
+                              <JFXButton buttonType="RAISED" styleClass="filters__reset" text="Reset filters" fx:id="fxResetFilters" />
                            </children>
                         </VBox>
                      </children>
@@ -141,8 +141,8 @@
                         </VBox>
                         <VBox>
                            <children>
-                              <JFXTreeTableView prefHeight="300.0" />
-                              <Label text=" No books with these filters" />
+                              <JFXTreeTableView prefHeight="300.0" fx:id="fxBooksTable" />
+                              <Label text=" No books with these filters" fx:id="fxNoBooks" />
                            </children>
                         </VBox>
                      </children>
