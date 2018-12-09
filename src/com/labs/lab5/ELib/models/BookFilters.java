@@ -31,7 +31,9 @@ public class BookFilters {
      */
     public boolean check(Book book) {
         System.out.println(book);
-        return (
+        System.out.println(this);
+
+        boolean res = (
                    checkStringFilter(nameFilter, book.getName())
                 && checkStringFilter(authorFilter, book.getAuthor())
                 && checkStringFilter(publisherFilter, book.getPublisher())
@@ -42,6 +44,10 @@ public class BookFilters {
                 && checkDateFilter(dateFromFilter, dateToFilter, book.getDate())
         );
 
+        System.out.println(res);
+        System.out.println("- - - - ");
+
+        return res;
     }
 
     /**

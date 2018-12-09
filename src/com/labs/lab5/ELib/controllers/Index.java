@@ -62,6 +62,8 @@ public class Index implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         updateFilterLimits();
         initBinds();
+
+        resetFilters();
     }
 
     // Fx Menu Events
@@ -150,6 +152,10 @@ public class Index implements Initializable {
         filters.setDateToFilter(fxFilterDateTo.getValue());
     }
 
+    /**
+     * Сбрасывает фильтры
+     * Первый вызов должен быть после первого вызова метода initBinds()
+     */
     private void resetFilters() {
         filters.reset();
 
@@ -158,10 +164,10 @@ public class Index implements Initializable {
         fxFilterPublisher.clear();
 
         fxFilterPriceFrom.setValue(minPrice.getValue());
-        fxFilterPriceTo.setValue(minPrice.getValue());
+        fxFilterPriceTo.setValue(maxPrice.getValue());
 
         fxFilterPagesFrom.setValue(minPages.getValue());
-        fxFilterPagesTo.setValue(minPages.getValue());
+        fxFilterPagesTo.setValue(maxPages.getValue());
 
         fxFilterDateFrom.setValue(null);
         fxFilterDateTo.setValue(null);
