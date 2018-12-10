@@ -191,6 +191,7 @@ public class Index implements Initializable {
 
     private void addNewBook() {
         storage.add(windowAddBook.getController().create());
+        windowAddBook.getController().reset();
         runFilter();
     }
 
