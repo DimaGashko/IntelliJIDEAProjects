@@ -11,6 +11,8 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import com.jfoenix.controls.*;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.value.ObservableStringValue;
+import javafx.beans.value.ObservableValue;
 import javafx.scene.control.*;
 
 import javafx.fxml.Initializable;
@@ -20,6 +22,7 @@ import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
 import javafx.fxml.FXML;
+import javafx.util.Callback;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
@@ -134,7 +137,9 @@ public class Index implements Initializable {
         var thPages = new JFXTreeTableColumn<BookRow, Integer>("Pages");
         var thYear = new JFXTreeTableColumn<BookRow, Integer>("Year");
 
-        
+        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
+        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
+        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
     }
 
     private void filter() {

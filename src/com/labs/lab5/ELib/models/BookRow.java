@@ -41,6 +41,14 @@ public class BookRow extends RecursiveTreeObject<BookRow> {
         return name.get();
     }
 
+    public SimpleIntegerProperty yearProperty() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year.set(year);
+    }
+
     public StringProperty nameProperty() {
         return name;
     }
