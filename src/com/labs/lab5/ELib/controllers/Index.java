@@ -128,10 +128,13 @@ public class Index implements Initializable {
 
     private void renderFiltered() {
         var thName = new JFXTreeTableColumn<BookRow, String>("Name");
-        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
-        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
-        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
-        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
+        var thAuthor = new JFXTreeTableColumn<BookRow, String>("Author");
+        var thPublisher = new JFXTreeTableColumn<BookRow, String>("Publisher");
+        var thPrice = new JFXTreeTableColumn<BookRow, Double>("Price");
+        var thPages = new JFXTreeTableColumn<BookRow, Integer>("Pages");
+        var thYear = new JFXTreeTableColumn<BookRow, Integer>("Year");
+
+        
     }
 
     private void filter() {
