@@ -7,7 +7,7 @@ import javafx.beans.property.*;
 /**
  * Класс представления книги в таблице
  */
-public class BookRow extends RecursiveTreeObject<BookRow> {
+public class BookInTable extends RecursiveTreeObject<BookInTable> {
     private Book book;
 
     private SimpleStringProperty name = new SimpleStringProperty();
@@ -17,11 +17,8 @@ public class BookRow extends RecursiveTreeObject<BookRow> {
     private SimpleIntegerProperty pages = new SimpleIntegerProperty();
     private SimpleIntegerProperty year = new SimpleIntegerProperty();
 
-    private SimpleBooleanProperty selected = new SimpleBooleanProperty();
-
-    public BookRow(Book book) {
+    public BookInTable(Book book) {
         setBook(book);
-        setSelected(true);
     }
 
     public void setBook(Book book) {
@@ -115,18 +112,6 @@ public class BookRow extends RecursiveTreeObject<BookRow> {
 
     public IntegerProperty dateProperty() {
         return year;
-    }
-
-    public boolean isSelected() {
-        return selected.get();
-    }
-
-    public BooleanProperty selectedProperty() {
-        return selected;
-    }
-
-    public void setSelected(boolean selected) {
-        this.selected.set(selected);
     }
 
     public void setDate(int date) {
