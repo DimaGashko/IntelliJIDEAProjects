@@ -113,8 +113,8 @@ public class Book {
             return null;
         }
 
-        String name = components[1];
-        String author = components[0];
+        String name = components[0];
+        String author = components[1];
         String publisher = components[2];
 
         LocalDate date = LocalDate.parse(components[3]);

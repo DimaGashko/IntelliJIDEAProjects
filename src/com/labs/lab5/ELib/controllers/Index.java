@@ -186,21 +186,16 @@ public class Index implements Initializable {
 
     private void showWindowEditBook() {
         editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
-        if (editingBook == null) return;
+        if (editingBook == null) return; //TODO: Alert - Not Selected
 
         if (windowEditBook == null) {
             initWindowEditBook();
         }
 
         windowEditBook.getController().setValuesBy(editingBook);
-
         windowEditBook.getWindow().show();
     }
 
-    /**
-     * Инициализирует окно создания новой книги
-     * TODO: Exception
-     */
     private void initWindowAddBook() {
         try {
             windowAddBook = new WindowAddBook();
@@ -208,6 +203,7 @@ public class Index implements Initializable {
             windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
 
         } catch (IOException err) {
+            //TODO: Exception
             System.out.println(err.toString());
         }
     }
@@ -218,12 +214,14 @@ public class Index implements Initializable {
             windowEditBook.getController().getOnSaveListeners().add(this::editBook);
 
         } catch (IOException err) {
+            //TODO: Exception
             System.out.println(err.toString());
         }
     }
 
     private void addNewBook() {
         storage.add(windowAddBook.getController().create());
+        
         windowAddBook.getController().reset();
         windowAddBook.getWindow().close();
         runFilter();
@@ -231,7 +229,11 @@ public class Index implements Initializable {
 
     private void editBook() {
         storage.remove(editingBook);
-        addNewBook();
+        storage.add(windowEditBook.getController().create());
+
+        windowEditBook.getController().reset();
+        windowEditBook.getWindow().close();
+        runFilter();
     }
 
     private void initTable() {

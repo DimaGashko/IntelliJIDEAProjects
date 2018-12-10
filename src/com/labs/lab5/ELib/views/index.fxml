@@ -4,7 +4,6 @@
 <?import com.jfoenix.controls.JFXDatePicker?>
 <?import com.jfoenix.controls.JFXSlider?>
 <?import com.jfoenix.controls.JFXTextField?>
-<?import com.jfoenix.controls.JFXTreeTableView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
@@ -13,12 +12,12 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.TableView?>
 <BorderPane styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.Index">
    <top>
       <VBox BorderPane.alignment="CENTER">
@@ -75,21 +74,21 @@
                         </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Name:" />
-                             <JFXTextField fx:id="fxFilterName" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter" promptText="The name" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterName" focusColor="#757575" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter" promptText="The name" styleClass="filterGroup__field" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Author:" />
-                             <JFXTextField fx:id="fxFilterAuthor" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter" promptText="The author" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterAuthor" focusColor="#757575" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter" promptText="The author" styleClass="filterGroup__field" />
                         <VBox.margin>
                            <Insets />
                         </VBox.margin>
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Publisher:" />
-                             <JFXTextField fx:id="fxFilterPublisher" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter" promptText="The publisher" styleClass="filterGroup__field" />
+                             <JFXTextField fx:id="fxFilterPublisher" focusColor="#757575" onAction="#fxOnRunFilter" onKeyTyped="#fxOnRunFilter" promptText="The publisher" styleClass="filterGroup__field" />
                          </VBox>
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Price:" />
