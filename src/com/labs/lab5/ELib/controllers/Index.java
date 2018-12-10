@@ -4,6 +4,7 @@ import com.jfoenix.validation.DoubleValidator;
 import com.jfoenix.validation.ValidationFacade;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
+import com.labs.lab5.ELib.models.BookRow;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
@@ -55,7 +56,7 @@ public class Index implements Initializable {
     @FXML private JFXDatePicker fxFilterDateFrom;
     @FXML private JFXDatePicker fxFilterDateTo;
     @FXML private JFXButton fxResetFilters;
-    @FXML private JFXTreeTableView<?> fxBooksTable;
+    @FXML private JFXTreeTableView<BookRow> fxBooksTable;
     @FXML private Label fxNoBooks;
 
     @Override
@@ -126,7 +127,11 @@ public class Index implements Initializable {
     }
 
     private void renderFiltered() {
-
+        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
+        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
+        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
+        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
+        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
     }
 
     private void filter() {

@@ -2,10 +2,7 @@ package com.labs.lab5.ELib.models;
 
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.labs.lab3.part1.library.Book;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 /**
  * Класс представления книги в таблице
@@ -13,18 +10,31 @@ import javafx.beans.property.StringProperty;
 public class BookRow extends RecursiveTreeObject<BookRow> {
     private Book book;
 
-    private StringProperty name;
-    private StringProperty author;
-    private StringProperty publisher;
-    private DoubleProperty price;
-    private IntegerProperty pages;
-    private IntegerProperty date;
+    private SimpleStringProperty name;
+    private SimpleStringProperty author;
+    private SimpleStringProperty publisher;
+    private SimpleDoubleProperty price;
+    private SimpleIntegerProperty pages;
+    private SimpleIntegerProperty year;
 
     private BooleanProperty selected;
 
     BookRow(Book book) {
         setBook(book);
         setSelected(true);
+    }
+
+    public void setBook(Book book) {
+        this.book = book;
+
+        name = new SimpleStringProperty(book.getName());
+        author = new SimpleStringProperty(book.getAuthor());
+        publisher = new SimpleStringProperty(book.getPublisher());
+
+        price = new SimpleDoubleProperty(book.getPrice());
+        pages = new SimpleIntegerProperty(book.getPages());
+
+        year = new SimpleIntegerProperty(book.getYear());
     }
 
     public String getName() {
@@ -91,12 +101,12 @@ public class BookRow extends RecursiveTreeObject<BookRow> {
         this.pages.set(pages);
     }
 
-    public int getDate() {
-        return date.get();
+    public int getYear() {
+        return year.get();
     }
 
     public IntegerProperty dateProperty() {
-        return date;
+        return year;
     }
 
     public boolean isSelected() {
@@ -112,10 +122,7 @@ public class BookRow extends RecursiveTreeObject<BookRow> {
     }
 
     public void setDate(int date) {
-        this.date.set(date);
+        this.year.set(date);
     }
 
-    public void setBook(Book book) {
-        this.book = book;
-    }
 }
