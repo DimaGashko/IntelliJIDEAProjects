@@ -1,15 +1,11 @@
 package com.labs.lab5.ELib;
 
-import com.labs.lab3.part1.library.Book;
-import com.labs.lab5.ELib.models.BookFilters;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
-import java.time.LocalDate;
 
 public class ELib extends Application {
     private final static String defTitle = "ELib - the world of books";
@@ -30,6 +26,8 @@ public class ELib extends Application {
 
         mainWindow.setMinWidth(minWidth);
         mainWindow.setMinHeight(minHeight);
+
+        mainWindow.setMaximized(true);
 
         mainWindow.show();
     }

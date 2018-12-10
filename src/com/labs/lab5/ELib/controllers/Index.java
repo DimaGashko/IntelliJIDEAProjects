@@ -8,22 +8,27 @@ import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
 import com.jfoenix.controls.*;
-import javafx.beans.InvalidationListener;
-import javafx.beans.property.ReadOnlyDoubleProperty;
+
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import javafx.fxml.Initializable;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.Image;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
@@ -38,6 +43,8 @@ public class Index implements Initializable {
 
     // Массив книг на экране
     private ObservableList<BookRow> filteredBooks = FXCollections.observableArrayList();
+
+    private CreateBook controllerCreateBook;
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -103,6 +110,7 @@ public class Index implements Initializable {
     // Fx Tools Events
     @FXML private void fxOnToolAdd() {
         System.out.println("Tool Add");
+        showFxCreateBook();
     }
 
     @FXML private void fxOnToolEdit() {
@@ -128,6 +136,37 @@ public class Index implements Initializable {
     private void runFilter() {
         updateFilters();
         updateFilteredBooks();
+    }
+
+    /**
+     * Инициализирует окно создания новой книги
+     * TODO: Exception
+     */
+    private void showFxCreateBook() {
+        //if (controllerCreateBook == null) {
+            loadFxCreateBook();
+        //}
+    }
+
+    private void loadFxCreateBook() {
+        try {
+            var loader = new FXMLLoader(getClass().getResource("../views/createBook.fxml"));
+            Parent root = loader.load();
+            controllerCreateBook = loader.getController();
+
+            Stage window =  new Stage();
+            window.initModality(Modality.APPLICATION_MODAL);
+            //controllerCreateBook.setWindow(window);
+
+            Scene scene = new Scene(root);
+            window.setScene(scene);
+
+            window.show();
+
+        } catch (IOException err) {
+            System.out.println(err);
+
+        }
     }
 
     private void initTable() {
