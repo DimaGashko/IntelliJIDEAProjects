@@ -78,7 +78,7 @@ public class Index implements Initializable {
         updateFilterLimits();
         initBinds();
         resetFilters();
-        update();
+        runFilter();
     }
 
     // Fx Menu Events
@@ -112,12 +112,11 @@ public class Index implements Initializable {
 
     // Fx Tools Events
     @FXML private void fxOnToolAdd() {
-        System.out.println("Tool Add");
-        showFxCreateBook();
+        windowCreateBook.showLikeAdd();
     }
 
     @FXML private void fxOnToolEdit() {
-        System.out.println("Tool Edit");
+        windowCreateBook.showLikeEdit(filteredBooks.get(0).getBook());
     }
 
     @FXML private void fxOnToolRemove() {
@@ -162,39 +161,30 @@ public class Index implements Initializable {
         fxBooksTable.setShowRoot(false);
     }
 
-    private void update() {
+    private void runFilter() {
         updateFilters();
         updateFilteredBooks();
+    }
+
+    private void showWindowCreateBook(String title) {
+        if (windowCreateBook == null) {
+            initWindowCreateBook();
+        }
+
+        windowCreateBook.setTitle(title);
+        windowCreateBook.getWindow().show();
     }
 
     /**
      * Инициализирует окно создания новой книги
      * TODO: Exception
      */
-    private void showFxCreateBook() {
-        //if (controllerCreateBook == null) {
-            loadFxCreateBook();
-        //}
-    }
-
-    private void loadFxCreateBook() {
+    private void initWindowCreateBook() {
         try {
-            var loader = new FXMLLoader(getClass().getResource("../views/createBook.fxml"));
-            Parent root = loader.load();
-            controllerCreateBook = loader.getController();
-
-            Stage window =  new Stage();
-            window.initModality(Modality.WINDOW_MODAL);
-            //controllerCreateBook.setWindow(window);
-
-            Scene scene = new Scene(root);
-            window.setScene(scene);
-
-            window.show();
+            windowCreateBook = new WindowCreateBook();
 
         } catch (IOException err) {
-
-
+            System.out.println(err.toString());
         }
     }
 

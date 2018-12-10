@@ -15,6 +15,10 @@ public class CreateBook implements Initializable {
         //initWindow();
     }
 
+    public void setTitle(String title) {
+
+    }
+
     private Book createNewWindow() {
         return new Book();
     }
