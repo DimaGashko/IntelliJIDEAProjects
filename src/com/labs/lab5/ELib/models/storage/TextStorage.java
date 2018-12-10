@@ -14,7 +14,7 @@ import java.util.function.Predicate;
  * TODO: заменить Array на ArrayList
  */
 public class TextStorage<T> implements IStorage<T> {
-    static final private int DEF_BUFFER_SIZE = 250;
+    static final private int DEF_BUFFER_SIZE = 500;
 
     //Размер массива для хранения данных
     private int bufferSize;

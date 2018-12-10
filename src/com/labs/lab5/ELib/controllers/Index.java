@@ -8,8 +8,11 @@ import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
 import com.jfoenix.controls.*;
+import javafx.beans.InvalidationListener;
+import javafx.beans.property.ReadOnlyDoubleProperty;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
@@ -117,6 +120,7 @@ public class Index implements Initializable {
 
     @FXML private void fxOnResetFilters() {
         resetFilters();
+        runFilter();
     }
 
     // Other methods
@@ -146,7 +150,6 @@ public class Index implements Initializable {
         fxBooksTable.setRoot(root);
         fxBooksTable.getColumns().setAll(thName, thAuthor, thPublisher, thPrice, thPages, thYear);
         fxBooksTable.setShowRoot(false);
-
     }
 
     private void updateFilteredBooks() {
