@@ -1,8 +1,8 @@
 package com.labs.lab5.ELib.controllers;
 
 import com.labs.lab3.part1.library.Book;
-import com.labs.lab5.ELib.components.BookRow;
 import com.labs.lab5.ELib.models.BookFilters;
+import com.labs.lab5.ELib.models.BookRow;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
 import javafx.fxml.FXML;
-import javafx.scene.layout.VBox;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
@@ -58,7 +57,7 @@ public class Index implements Initializable {
     @FXML private JFXDatePicker fxFilterDateFrom;
     @FXML private JFXDatePicker fxFilterDateTo;
     @FXML private JFXButton fxResetFilters;
-    @FXML public VBox fxBooksContainer;
+    @FXML private JFXTreeTableView fxBooksTable;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -128,17 +127,19 @@ public class Index implements Initializable {
     }
 
     private void renderFiltered() {
-        fxBooksContainer.getChildren().clear();
+        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
+        var thAuthor = new JFXTreeTableColumn<BookRow, String>("Author");
+        var thPublisher = new JFXTreeTableColumn<BookRow, String>("Publisher");
+        var thPrice = new JFXTreeTableColumn<BookRow, Double>("Price");
+        var thPages = new JFXTreeTableColumn<BookRow, Integer>("Pages");
+        var thYear = new JFXTreeTableColumn<BookRow, Integer>("Year");
 
-        BookRow bookRows[] = new BookRow[filteredBooks.length];
-
-        for (int i = 0; i < filteredBooks.length; i++) {
-            bookRows[i] = new BookRow(filteredBooks[i]);
-            fxBooksContainer.getChildren().add(bookRows[i].getFxRoot());
-        }
-
-        System.out.println(fxBooksContainer.getChildren().size());
-       // System.out.println(filteredBooks.length);
+        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
+        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
+        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
+        thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
+        thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
+        thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
     }
 
     private void filter() {
