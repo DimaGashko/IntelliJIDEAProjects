@@ -36,7 +36,7 @@ public class CreateBook implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setValidators();
+        //setValidators();
     }
 
     public Book create() {

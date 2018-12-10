@@ -50,6 +50,9 @@ public class Index implements Initializable {
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
     private SimpleIntegerProperty maxPages = new SimpleIntegerProperty();
 
+    // Последняя книга, что редактировалась
+    private Book editingBook;
+
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
     @FXML private MenuItem fxMenuRemoveBooks;
@@ -182,9 +185,14 @@ public class Index implements Initializable {
     }
 
     private void showWindowEditBook() {
+        editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        if (editingBook == null) return;
+
         if (windowEditBook == null) {
             initWindowEditBook();
         }
+
+        windowEditBook.getController().setValuesBy(editingBook);
 
         windowEditBook.getWindow().show();
     }
@@ -207,8 +215,7 @@ public class Index implements Initializable {
     private void initWindowEditBook() {
         try {
             windowEditBook = new WindowEditBook();
-
-            windowAddBook.getController().getOnSaveListeners().add(this::editBook);
+            windowEditBook.getController().getOnSaveListeners().add(this::editBook);
 
         } catch (IOException err) {
             System.out.println(err.toString());
@@ -223,11 +230,8 @@ public class Index implements Initializable {
     }
 
     private void editBook() {
-        //storage.add(windowAddBook.getController().create());
-
-        windowAddBook.getController().reset();
-        windowAddBook.getWindow().close();
-        runFilter();
+        storage.remove(editingBook);
+        addNewBook();
     }
 
     private void initTable() {
