@@ -140,6 +140,9 @@ public class Index implements Initializable {
         thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
         thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
         thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
+        thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
+        thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
+        thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
     }
 
     private void filter() {
