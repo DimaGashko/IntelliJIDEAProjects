@@ -1,14 +1,15 @@
 package com.labs.lab5.ELib.controllers;
 
-import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
 import com.labs.lab5.ELib.models.BookInTable;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.jfoenix.controls.*;
 
+import com.labs.lab5.ELib.windows.WindowCreateBook;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
@@ -32,18 +33,21 @@ import javafx.stage.Stage;
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
 
+    // Хранилице книг - содежит все книги
     private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
+
+    // Массив книг удовлетворяющих фильт (привязан к содержимому таблици)
+    private ObservableList<BookInTable> filteredBooks = FXCollections.observableArrayList();
+
+    // Фильтры книг
     private BookFilters filters = new BookFilters();
+
+    private WindowCreateBook windowCreateBook;
 
     private SimpleDoubleProperty minPrice = new SimpleDoubleProperty();
     private SimpleDoubleProperty maxPrice = new SimpleDoubleProperty();
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
     private SimpleIntegerProperty maxPages = new SimpleIntegerProperty();
-
-    // Массив отфильтрованных книг для отображения в таблице
-    private ObservableList<BookInTable> filteredBooks = FXCollections.observableArrayList();
-
-    private CreateBook controllerCreateBook;
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -70,12 +74,11 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("initialize");
         initTable();
         updateFilterLimits();
         initBinds();
         resetFilters();
-        runFilter();
+        update();
     }
 
     // Fx Menu Events
@@ -133,12 +136,36 @@ public class Index implements Initializable {
 
     // Other methods
 
-    private void runFilter() {
+    private void initBinds() {
+        bindFilterLimits();
+    }
+
+    private void initTable() {
+        var thName = new JFXTreeTableColumn<BookInTable, String>("Name");
+        var thAuthor = new JFXTreeTableColumn<BookInTable, String>("Author");
+        var thPublisher = new JFXTreeTableColumn<BookInTable, String>("Publisher");
+        var thPrice = new JFXTreeTableColumn<BookInTable, Double>("Price");
+        var thPages = new JFXTreeTableColumn<BookInTable, Integer>("Pages");
+        var thYear = new JFXTreeTableColumn<BookInTable, Integer>("Year");
+
+        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
+        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
+        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
+        thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
+        thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
+        thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
+
+        final TreeItem<BookInTable> root = new RecursiveTreeItem<>(filteredBooks, RecursiveTreeObject::getChildren);
+
+        fxBooksTable.setRoot(root);
+        fxBooksTable.getColumns().setAll(thName, thAuthor, thPublisher, thPrice, thPages, thYear);
+        fxBooksTable.setShowRoot(false);
+    }
+
+    private void update() {
         updateFilters();
         updateFilteredBooks();
     }
-
-
 
     /**
      * Инициализирует окно создания новой книги
@@ -171,28 +198,6 @@ public class Index implements Initializable {
         }
     }
 
-    private void initTable() {
-        var thName = new JFXTreeTableColumn<BookInTable, String>("Name");
-        var thAuthor = new JFXTreeTableColumn<BookInTable, String>("Author");
-        var thPublisher = new JFXTreeTableColumn<BookInTable, String>("Publisher");
-        var thPrice = new JFXTreeTableColumn<BookInTable, Double>("Price");
-        var thPages = new JFXTreeTableColumn<BookInTable, Integer>("Pages");
-        var thYear = new JFXTreeTableColumn<BookInTable, Integer>("Year");
-
-        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
-        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
-        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
-        thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
-        thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
-        thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
-
-        final TreeItem<BookInTable> root = new RecursiveTreeItem<>(filteredBooks, RecursiveTreeObject::getChildren);
-
-        fxBooksTable.setRoot(root);
-        fxBooksTable.getColumns().setAll(thName, thAuthor, thPublisher, thPrice, thPages, thYear);
-        fxBooksTable.setShowRoot(false);
-    }
-
     private void updateFilteredBooks() {
         var books = storage.getArrOfData(book -> filters.check(book));
 
@@ -201,10 +206,6 @@ public class Index implements Initializable {
         for (Book book : books) {
             filteredBooks.add(new BookInTable(book));
         }
-    }
-
-    private void initBinds() {
-        bindFilterLimits();
     }
 
     private void updateFilters() {

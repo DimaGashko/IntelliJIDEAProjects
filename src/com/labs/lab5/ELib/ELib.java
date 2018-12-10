@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
-import java.util.Scanner;
+import java.io.IOException;
 
 public class ELib extends Application {
     private final static String defTitle = "ELib - the world of books";
@@ -15,7 +15,7 @@ public class ELib extends Application {
     private final static int minHeight = 400;
 
     @Override
-    public void start(Stage mainWindow) throws Exception {
+    public void start(Stage mainWindow) throws IOException {
         var loader = new FXMLLoader(getClass().getResource("views/index.fxml"));
         Parent root = loader.load();
         mainWindow.setTitle(defTitle);
