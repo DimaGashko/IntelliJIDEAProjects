@@ -1,18 +1,13 @@
 package com.labs.lab5.ELib.controllers;
 
-import com.jfoenix.validation.DoubleValidator;
-import com.jfoenix.validation.ValidationFacade;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
-import com.labs.lab5.ELib.models.BookRow;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
 import com.jfoenix.controls.*;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
-import javafx.beans.value.ObservableStringValue;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.control.*;
 
 import javafx.fxml.Initializable;
@@ -22,7 +17,7 @@ import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
 import javafx.fxml.FXML;
-import javafx.util.Callback;
+import javafx.scene.layout.VBox;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
@@ -59,15 +54,14 @@ public class Index implements Initializable {
     @FXML private JFXDatePicker fxFilterDateFrom;
     @FXML private JFXDatePicker fxFilterDateTo;
     @FXML private JFXButton fxResetFilters;
-    @FXML private JFXTreeTableView<BookRow> fxBooksTable;
-    @FXML private Label fxNoBooks;
+    @FXML public VBox fxBooksContainer;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         updateFilterLimits();
         initBinds();
-
         resetFilters();
+        runFilter();
     }
 
     // Fx Menu Events
@@ -130,16 +124,13 @@ public class Index implements Initializable {
     }
 
     private void renderFiltered() {
-        var thName = new JFXTreeTableColumn<BookRow, String>("Name");
-        var thAuthor = new JFXTreeTableColumn<BookRow, String>("Author");
-        var thPublisher = new JFXTreeTableColumn<BookRow, String>("Publisher");
-        var thPrice = new JFXTreeTableColumn<BookRow, Double>("Price");
-        var thPages = new JFXTreeTableColumn<BookRow, Integer>("Pages");
-        var thYear = new JFXTreeTableColumn<BookRow, Integer>("Year");
+        StringBuffer res = new StringBuffer();
 
-        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
-        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
-        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
+        for (Book book : filteredBooks) {
+            res.append(book.toString() + "\n");
+        }
+
+        System.out.println(res);
     }
 
     private void filter() {
