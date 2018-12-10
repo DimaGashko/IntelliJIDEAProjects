@@ -138,6 +138,8 @@ public class Index implements Initializable {
         updateFilteredBooks();
     }
 
+
+
     /**
      * Инициализирует окно создания новой книги
      * TODO: Exception
@@ -155,7 +157,7 @@ public class Index implements Initializable {
             controllerCreateBook = loader.getController();
 
             Stage window =  new Stage();
-            window.initModality(Modality.APPLICATION_MODAL);
+            window.initModality(Modality.WINDOW_MODAL);
             //controllerCreateBook.setWindow(window);
 
             Scene scene = new Scene(root);
@@ -164,7 +166,7 @@ public class Index implements Initializable {
             window.show();
 
         } catch (IOException err) {
-            System.out.println(err);
+
 
         }
     }
