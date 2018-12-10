@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
@@ -73,10 +74,10 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initTable();
         initBinds();
         resetFilters();
         runFilter();
+        initTable();
     }
 
     private void initBinds() {
@@ -105,7 +106,7 @@ public class Index implements Initializable {
     }
 
     /**
-     * TODO: Заменить for на методы, после внедрени ArrayList
+     * TODO: Заменить for на forEach, после внедрени ArrayList
      */
     private void updateFilteredBooks() {
         var books = storage.getArrOfData(book -> filters.check(book));
@@ -115,6 +116,60 @@ public class Index implements Initializable {
         for (Book book : books) {
             filteredBooks.add(new BookInTable(book));
         }
+    }
+
+    /**
+     * Вычисляет граници фильтров
+     * (обновляет поля min/max price/pages и др)
+     */
+    private void updateFilterLimits() {
+        var books = storage.getArrOfData();
+
+        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
+        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
+
+        minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
+        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
+    }
+
+    /**
+     * Устанавливает привязку элементов фильтров к граничным значениям
+     */
+    private void bindFilterLimits() {
+        updateFilterLimits();
+
+        fxFilterPriceFrom.minProperty().bind(minPrice);
+        fxFilterPriceFrom.maxProperty().bind(maxPrice);
+
+        fxFilterPriceTo.minProperty().bind(minPrice);
+        fxFilterPriceTo.maxProperty().bind(maxPrice);
+
+        fxFilterPagesFrom.minProperty().bind(minPages);
+        fxFilterPagesFrom.maxProperty().bind(maxPages);
+
+        fxFilterPagesTo.minProperty().bind(minPages);
+        fxFilterPagesTo.maxProperty().bind(maxPages);
+    }
+
+    /**
+     * Сбрасывает фильтры (значения элементов fxml)
+     * Первый вызов должен быть после первого вызова метода initBinds()
+     */
+    private void resetFilters() {
+        filters.reset();
+
+        fxFilterName.clear();
+        fxFilterAuthor.clear();
+        fxFilterPublisher.clear();
+
+        fxFilterPriceFrom.setValue(minPrice.getValue());
+        fxFilterPriceTo.setValue(maxPrice.getValue());
+
+        fxFilterPagesFrom.setValue(minPages.getValue());
+        fxFilterPagesTo.setValue(maxPages.getValue());
+
+        fxFilterDateFrom.setValue(null);
+        fxFilterDateTo.setValue(null);
     }
 
     private void showWindowInitBook() {
@@ -147,58 +202,6 @@ public class Index implements Initializable {
         runFilter();
     }
 
-    /**
-     * Сбрасывает фильтры
-     * Первый вызов должен быть после первого вызова метода initBinds()
-     */
-    private void resetFilters() {
-        filters.reset();
-
-        fxFilterName.clear();
-        fxFilterAuthor.clear();
-        fxFilterPublisher.clear();
-
-        fxFilterPriceFrom.setValue(minPrice.getValue());
-        fxFilterPriceTo.setValue(maxPrice.getValue());
-
-        fxFilterPagesFrom.setValue(minPages.getValue());
-        fxFilterPagesTo.setValue(maxPages.getValue());
-
-        fxFilterDateFrom.setValue(null);
-        fxFilterDateTo.setValue(null);
-    }
-
-    /**
-     * Устанавливает привязку элементов фильтровк граничным значениям
-     */
-    private void bindFilterLimits() {
-        fxFilterPriceFrom.minProperty().bind(minPrice);
-        fxFilterPriceFrom.maxProperty().bind(maxPrice);
-
-        fxFilterPriceTo.minProperty().bind(minPrice);
-        fxFilterPriceTo.maxProperty().bind(maxPrice);
-
-        fxFilterPagesFrom.minProperty().bind(minPages);
-        fxFilterPagesFrom.maxProperty().bind(maxPages);
-
-        fxFilterPagesTo.minProperty().bind(minPages);
-        fxFilterPagesTo.maxProperty().bind(maxPages);
-    }
-
-    /**
-     * Вычисляет граници фильтров
-     * (обновляет поля min/max price/pages и др)
-     */
-    private void updateFilterLimits() {
-        var books = storage.getArrOfData();
-
-        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
-        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
-
-        minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
-        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
-    }
-
     private void initTable() {
         var thName = new JFXTreeTableColumn<BookInTable, String>("Name");
         var thAuthor = new JFXTreeTableColumn<BookInTable, String>("Author");
@@ -206,6 +209,13 @@ public class Index implements Initializable {
         var thPrice = new JFXTreeTableColumn<BookInTable, Double>("Price");
         var thPages = new JFXTreeTableColumn<BookInTable, Integer>("Pages");
         var thYear = new JFXTreeTableColumn<BookInTable, Integer>("Year");
+
+        thName.setMaxWidth(150);
+        thAuthor.setMaxWidth(150);
+        thPublisher.setMaxWidth(150);
+        thPrice.setMaxWidth(50);
+        thPages.setMaxWidth(50);
+        thYear.setMaxWidth(50);
 
         thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
         thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
