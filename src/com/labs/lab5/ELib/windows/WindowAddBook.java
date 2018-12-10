@@ -14,6 +14,7 @@ import java.io.IOException;
 public class WindowAddBook extends BaseWindow<CreateBook> {
     public WindowAddBook() throws IOException {
         super();
+        setTitle("Add New Book");
     }
 
     public void setTitle(String title) {
@@ -30,6 +31,7 @@ public class WindowAddBook extends BaseWindow<CreateBook> {
         Scene scene = new Scene(root);
 
         window = new Stage();
+        window.initModality(Modality.APPLICATION_MODAL);
 
         Image icon = new Image(getClass().getResource("../img/icon.png").toString());
         window.getIcons().add(icon);
@@ -38,7 +40,6 @@ public class WindowAddBook extends BaseWindow<CreateBook> {
 
         window.setMinWidth(500);
         window.setMinHeight(680);
-        window.initModality(Modality.WINDOW_MODAL);
     }
 
     protected void initEvents() {
