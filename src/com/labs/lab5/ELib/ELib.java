@@ -20,7 +20,6 @@ public class ELib extends Application {
     public void start(Stage mainWindow) throws Exception {
         var loader = new FXMLLoader(getClass().getResource("views/index.fxml"));
         Parent root = loader.load();
-
         mainWindow.setTitle(defTitle);
 
         Image icon = new Image(getClass().getResource("img/icon.png").toString());

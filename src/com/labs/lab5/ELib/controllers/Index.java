@@ -1,6 +1,7 @@
 package com.labs.lab5.ELib.controllers;
 
 import com.labs.lab3.part1.library.Book;
+import com.labs.lab5.ELib.components.BookRow;
 import com.labs.lab5.ELib.models.BookFilters;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
@@ -32,6 +33,9 @@ public class Index implements Initializable {
 
     // Массив книг удовлетворяющих текущему фильтру
     private Book[] filteredBooks;
+
+    // Массив книг на экране
+    private BookRow[] bookRows;
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -124,13 +128,17 @@ public class Index implements Initializable {
     }
 
     private void renderFiltered() {
-        StringBuffer res = new StringBuffer();
+        fxBooksContainer.getChildren().clear();
 
-        for (Book book : filteredBooks) {
-            res.append(book.toString() + "\n");
+        BookRow bookRows[] = new BookRow[filteredBooks.length];
+
+        for (int i = 0; i < filteredBooks.length; i++) {
+            bookRows[i] = new BookRow(filteredBooks[i]);
+            fxBooksContainer.getChildren().add(bookRows[i].getFxRoot());
         }
 
-        System.out.println(res);
+        System.out.println(fxBooksContainer.getChildren().size());
+       // System.out.println(filteredBooks.length);
     }
 
     private void filter() {
