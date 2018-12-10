@@ -125,11 +125,11 @@ public class Index implements Initializable {
     private void updateFilterLimits() {
         var books = storage.getArrOfData();
 
-        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
-        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
-
         minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
         maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
+
+        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
+        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
     }
 
     /**
@@ -209,13 +209,6 @@ public class Index implements Initializable {
         var thPrice = new JFXTreeTableColumn<BookInTable, Double>("Price");
         var thPages = new JFXTreeTableColumn<BookInTable, Integer>("Pages");
         var thYear = new JFXTreeTableColumn<BookInTable, Integer>("Year");
-
-        thName.setMaxWidth(150);
-        thAuthor.setMaxWidth(150);
-        thPublisher.setMaxWidth(150);
-        thPrice.setMaxWidth(50);
-        thPages.setMaxWidth(50);
-        thYear.setMaxWidth(50);
 
         thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
         thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
