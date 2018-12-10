@@ -68,11 +68,11 @@ public class CreateBook implements Initializable {
     }
 
     public void reset() {
-        fxName.setText(null);
-        fxAuthor.setText(null);
-        fxPublisher.setText(null);
-        fxPrice.setText(null);
-        fxPages.setText(null);
+        fxName.clear();
+        fxAuthor.clear();
+        fxPublisher.clear();
+        fxPrice.clear();
+        fxPages.clear();
         fxDate.setValue(null);
     }
 

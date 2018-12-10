@@ -14,9 +14,6 @@ import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import javafx.fxml.Initializable;
@@ -27,8 +24,6 @@ import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
 import javafx.fxml.FXML;
-import javafx.stage.Modality;
-import javafx.stage.Stage;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
@@ -36,14 +31,18 @@ public class Index implements Initializable {
     // Хранилице книг - содежит все книги
     private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
 
-    // Массив книг удовлетворяющих фильт (привязан к содержимому таблици)
+    // Массив книг удовлетворяющих фильтр (привязан к содержимому таблици)
     private ObservableList<BookInTable> filteredBooks = FXCollections.observableArrayList();
 
     // Фильтры книг
     private BookFilters filters = new BookFilters();
 
+    // Другие окна приложения
     private WindowAddBook windowAddBook;
 
+    // Граничные значение параметров книг
+    // Привязываються к минимальны/максимальным значения
+    // Fxml-элементов фильтров
     private SimpleDoubleProperty minPrice = new SimpleDoubleProperty();
     private SimpleDoubleProperty maxPrice = new SimpleDoubleProperty();
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
@@ -75,10 +74,151 @@ public class Index implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initTable();
-        updateFilterLimits();
         initBinds();
         resetFilters();
         runFilter();
+    }
+
+    private void initBinds() {
+        bindFilterLimits();
+    }
+
+    private void runFilter() {
+        updateFilters();
+        updateFilteredBooks();
+        updateFilterLimits();
+    }
+
+    private void updateFilters() {
+        filters.setNameFilter(fxFilterName.getText());
+        filters.setAuthorFilter(fxFilterAuthor.getText());
+        filters.setPublisherFilter(fxFilterPublisher.getText());
+
+        filters.setPriceFromFilter(fxFilterPriceFrom.getValue());
+        filters.setPriceToFilter(fxFilterPriceTo.getValue());
+
+        filters.setPagesFromFilter((int)fxFilterPagesFrom.getValue());
+        filters.setPagesToFilter((int)fxFilterPagesTo.getValue());
+
+        filters.setDateFromFilter(fxFilterDateFrom.getValue());
+        filters.setDateToFilter(fxFilterDateTo.getValue());
+    }
+
+    /**
+     * TODO: Заменить for на методы, после внедрени ArrayList
+     */
+    private void updateFilteredBooks() {
+        var books = storage.getArrOfData(book -> filters.check(book));
+
+        filteredBooks.clear();
+
+        for (Book book : books) {
+            filteredBooks.add(new BookInTable(book));
+        }
+    }
+
+    private void showWindowInitBook() {
+        if (windowAddBook == null) {
+            initWindowAddBook();
+        }
+
+        windowAddBook.getWindow().show();
+    }
+
+    /**
+     * Инициализирует окно создания новой книги
+     * TODO: Exception
+     */
+    private void initWindowAddBook() {
+        try {
+            windowAddBook = new WindowAddBook();
+
+            windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
+
+        } catch (IOException err) {
+            System.out.println(err.toString());
+        }
+    }
+
+    private void addNewBook() {
+        storage.add(windowAddBook.getController().create());
+        windowAddBook.getController().reset();
+        windowAddBook.getWindow().close();
+        runFilter();
+    }
+
+    /**
+     * Сбрасывает фильтры
+     * Первый вызов должен быть после первого вызова метода initBinds()
+     */
+    private void resetFilters() {
+        filters.reset();
+
+        fxFilterName.clear();
+        fxFilterAuthor.clear();
+        fxFilterPublisher.clear();
+
+        fxFilterPriceFrom.setValue(minPrice.getValue());
+        fxFilterPriceTo.setValue(maxPrice.getValue());
+
+        fxFilterPagesFrom.setValue(minPages.getValue());
+        fxFilterPagesTo.setValue(maxPages.getValue());
+
+        fxFilterDateFrom.setValue(null);
+        fxFilterDateTo.setValue(null);
+    }
+
+    /**
+     * Устанавливает привязку элементов фильтровк граничным значениям
+     */
+    private void bindFilterLimits() {
+        fxFilterPriceFrom.minProperty().bind(minPrice);
+        fxFilterPriceFrom.maxProperty().bind(maxPrice);
+
+        fxFilterPriceTo.minProperty().bind(minPrice);
+        fxFilterPriceTo.maxProperty().bind(maxPrice);
+
+        fxFilterPagesFrom.minProperty().bind(minPages);
+        fxFilterPagesFrom.maxProperty().bind(maxPages);
+
+        fxFilterPagesTo.minProperty().bind(minPages);
+        fxFilterPagesTo.maxProperty().bind(maxPages);
+    }
+
+    /**
+     * Вычисляет граници фильтров
+     * (обновляет поля min/max price/pages и др)
+     */
+    private void updateFilterLimits() {
+        var books = storage.getArrOfData();
+
+        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
+        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
+
+        minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
+        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
+    }
+
+    private void initTable() {
+        var thName = new JFXTreeTableColumn<BookInTable, String>("Name");
+        var thAuthor = new JFXTreeTableColumn<BookInTable, String>("Author");
+        var thPublisher = new JFXTreeTableColumn<BookInTable, String>("Publisher");
+        var thPrice = new JFXTreeTableColumn<BookInTable, Double>("Price");
+        var thPages = new JFXTreeTableColumn<BookInTable, Integer>("Pages");
+        var thYear = new JFXTreeTableColumn<BookInTable, Integer>("Year");
+
+        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
+        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
+        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
+        thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
+        thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
+        thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
+
+        final TreeItem<BookInTable> root = new RecursiveTreeItem<>(filteredBooks, RecursiveTreeObject::getChildren);
+
+        fxBooksTable.setRoot(root);
+        fxBooksTable.getColumns().setAll(thName, thAuthor, thPublisher, thPrice, thPages, thYear);
+        fxBooksTable.setShowRoot(false);
     }
 
     // Fx Menu Events
@@ -131,145 +271,6 @@ public class Index implements Initializable {
     @FXML private void fxOnResetFilters() {
         resetFilters();
         runFilter();
-    }
-
-    // Other methods
-
-    private void initBinds() {
-        bindFilterLimits();
-    }
-
-    private void initTable() {
-        var thName = new JFXTreeTableColumn<BookInTable, String>("Name");
-        var thAuthor = new JFXTreeTableColumn<BookInTable, String>("Author");
-        var thPublisher = new JFXTreeTableColumn<BookInTable, String>("Publisher");
-        var thPrice = new JFXTreeTableColumn<BookInTable, Double>("Price");
-        var thPages = new JFXTreeTableColumn<BookInTable, Integer>("Pages");
-        var thYear = new JFXTreeTableColumn<BookInTable, Integer>("Year");
-
-        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
-        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
-        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
-        thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
-        thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
-        thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
-
-        final TreeItem<BookInTable> root = new RecursiveTreeItem<>(filteredBooks, RecursiveTreeObject::getChildren);
-
-        fxBooksTable.setRoot(root);
-        fxBooksTable.getColumns().setAll(thName, thAuthor, thPublisher, thPrice, thPages, thYear);
-        fxBooksTable.setShowRoot(false);
-    }
-
-    private void runFilter() {
-        updateFilters();
-        updateFilteredBooks();
-    }
-
-    private void showWindowInitBook() {
-        if (windowAddBook == null) {
-            initWindowAddBook();
-        }
-
-        windowAddBook.getWindow().show();
-    }
-
-    /**
-     * Инициализирует окно создания новой книги
-     * TODO: Exception
-     */
-    private void initWindowAddBook() {
-        try {
-            windowAddBook = new WindowAddBook();
-
-            windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
-
-        } catch (IOException err) {
-            System.out.println(err.toString());
-        }
-    }
-
-    private void addNewBook() {
-        storage.add(windowAddBook.getController().create());
-        windowAddBook.getController().reset();
-        runFilter();
-    }
-
-    private void updateFilteredBooks() {
-        var books = storage.getArrOfData(book -> filters.check(book));
-
-        filteredBooks.clear();
-
-        for (Book book : books) {
-            filteredBooks.add(new BookInTable(book));
-        }
-    }
-
-    private void updateFilters() {
-        filters.setNameFilter(fxFilterName.getText());
-        filters.setAuthorFilter(fxFilterAuthor.getText());
-        filters.setPublisherFilter(fxFilterPublisher.getText());
-
-        filters.setPriceFromFilter(fxFilterPriceFrom.getValue());
-        filters.setPriceToFilter(fxFilterPriceTo.getValue());
-
-        filters.setPagesFromFilter((int)fxFilterPagesFrom.getValue());
-        filters.setPagesToFilter((int)fxFilterPagesTo.getValue());
-
-        filters.setDateFromFilter(fxFilterDateFrom.getValue());
-        filters.setDateToFilter(fxFilterDateTo.getValue());
-    }
-
-    /**
-     * Сбрасывает фильтры
-     * Первый вызов должен быть после первого вызова метода initBinds()
-     */
-    private void resetFilters() {
-        filters.reset();
-
-        fxFilterName.clear();
-        fxFilterAuthor.clear();
-        fxFilterPublisher.clear();
-
-        fxFilterPriceFrom.setValue(minPrice.getValue());
-        fxFilterPriceTo.setValue(maxPrice.getValue());
-
-        fxFilterPagesFrom.setValue(minPages.getValue());
-        fxFilterPagesTo.setValue(maxPages.getValue());
-
-        fxFilterDateFrom.setValue(null);
-        fxFilterDateTo.setValue(null);
-    }
-
-    /**
-     * Устанавливает привязку полей фильтров к граничным значениям
-     */
-    private void bindFilterLimits() {
-        fxFilterPriceFrom.minProperty().bind(minPrice);
-        fxFilterPriceFrom.maxProperty().bind(maxPrice);
-
-        fxFilterPriceTo.minProperty().bind(minPrice);
-        fxFilterPriceTo.maxProperty().bind(maxPrice);
-
-        fxFilterPagesFrom.minProperty().bind(minPages);
-        fxFilterPagesFrom.maxProperty().bind(maxPages);
-
-        fxFilterPagesTo.minProperty().bind(minPages);
-        fxFilterPagesTo.maxProperty().bind(maxPages);
-    }
-
-    /**
-     * Вычисляет граници фильтров
-     * (обновляет поля min/max price/pages и др)
-     */
-    private void updateFilterLimits() {
-        var books = storage.getArrOfData();
-
-        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
-        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
-
-        minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
-        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
     }
 
     /**
