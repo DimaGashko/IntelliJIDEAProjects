@@ -1,5 +1,6 @@
 package com.labs.lab5.ELib.controllers;
 
+import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
 import com.labs.lab5.ELib.models.BookRow;
@@ -60,6 +61,7 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        initTable();
         updateFilterLimits();
         initBinds();
         resetFilters();
@@ -124,7 +126,7 @@ public class Index implements Initializable {
         updateFilteredBooks();
     }
 
-    private void renderFiltered() {
+    private void initTable() {
         var thName = new JFXTreeTableColumn<BookRow, String>("Name");
         var thAuthor = new JFXTreeTableColumn<BookRow, String>("Author");
         var thPublisher = new JFXTreeTableColumn<BookRow, String>("Publisher");
@@ -139,8 +141,12 @@ public class Index implements Initializable {
         thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
         thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
 
-        // - - - -
-        ObservableList<BookRow> rows = FXCollections.observableArrayList();
+        final TreeItem<BookRow> root = new RecursiveTreeItem<>(filteredBooks, RecursiveTreeObject::getChildren);
+
+        fxBooksTable.setRoot(root);
+        fxBooksTable.getColumns().setAll(thName, thAuthor, thPublisher, thPrice, thPages, thYear);
+        fxBooksTable.setShowRoot(false);
+
     }
 
     private void updateFilteredBooks() {

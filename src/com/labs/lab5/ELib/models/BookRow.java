@@ -10,14 +10,14 @@ import javafx.beans.property.*;
 public class BookRow extends RecursiveTreeObject<BookRow> {
     private Book book;
 
-    private SimpleStringProperty name;
-    private SimpleStringProperty author;
-    private SimpleStringProperty publisher;
-    private SimpleDoubleProperty price;
-    private SimpleIntegerProperty pages;
-    private SimpleIntegerProperty year;
+    private SimpleStringProperty name = new SimpleStringProperty();
+    private SimpleStringProperty author = new SimpleStringProperty();
+    private SimpleStringProperty publisher = new SimpleStringProperty();
+    private SimpleDoubleProperty price = new SimpleDoubleProperty();
+    private SimpleIntegerProperty pages = new SimpleIntegerProperty();
+    private SimpleIntegerProperty year = new SimpleIntegerProperty();
 
-    private BooleanProperty selected;
+    private SimpleBooleanProperty selected = new SimpleBooleanProperty();
 
     public BookRow(Book book) {
         setBook(book);
