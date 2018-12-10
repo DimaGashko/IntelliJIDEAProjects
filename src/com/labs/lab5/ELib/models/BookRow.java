@@ -19,7 +19,7 @@ public class BookRow extends RecursiveTreeObject<BookRow> {
     private DoubleProperty price;
     private IntegerProperty pages;
     private IntegerProperty date;
-    
+
     private BooleanProperty selected;
 
     BookRow(Book book) {
