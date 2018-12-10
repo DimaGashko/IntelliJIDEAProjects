@@ -112,11 +112,11 @@ public class Index implements Initializable {
 
     // Fx Tools Events
     @FXML private void fxOnToolAdd() {
-        windowCreateBook.showLikeAdd();
+        showWindowCreateBook("add");
     }
 
     @FXML private void fxOnToolEdit() {
-        windowCreateBook.showLikeEdit(filteredBooks.get(0).getBook());
+        showWindowCreateBook("edit");
     }
 
     @FXML private void fxOnToolRemove() {
@@ -166,13 +166,17 @@ public class Index implements Initializable {
         updateFilteredBooks();
     }
 
-    private void showWindowCreateBook(String title) {
+    private void showWindowCreateBook(String type) {
         if (windowCreateBook == null) {
             initWindowCreateBook();
         }
 
-        windowCreateBook.setTitle(title);
-        windowCreateBook.getWindow().show();
+        if (type == "edit") {
+            windowCreateBook.showLikeEdit(filteredBooks.get(0).getBook());
+
+        } else {
+            windowCreateBook.showLikeAdd();
+        }
     }
 
     /**

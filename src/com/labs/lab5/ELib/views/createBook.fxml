@@ -15,7 +15,7 @@
             <children>
                 <VBox alignment="CENTER" styleClass="header">
                     <children>
-                        <Label styleClass="header__title" text="Add New Book" />
+                        <Label fx:id="fxTitle" styleClass="header__title" text="Add New Book" />
                     </children>
                <padding>
                   <Insets bottom="35.0" left="25.0" right="25.0" top="35.0" />
@@ -28,7 +28,7 @@
                     <children>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Name" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxName" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Name" styleClass="formGroup__field">
                            <padding>
                               <Insets bottom="5.0" left="5.0" top="25.0" />
                            </padding></JFXTextField>
@@ -36,7 +36,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Author" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxAuthor" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Author" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
@@ -44,7 +44,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Publisher" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxPublisher" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Publisher" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
@@ -52,7 +52,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Price" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxPrice" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Price" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
@@ -60,7 +60,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Pages" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxPages" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Pages" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
@@ -75,7 +75,7 @@
                                     <Insets right="25.0" />
                                  </HBox.margin>
                               </Label>
-                              <JFXDatePicker styleClass="formGroup__date" defaultColor="rgba(117,117,117,1)" />
+                              <JFXDatePicker fx:id="fxDate" defaultColor="rgba(117,117,117,1)" styleClass="formGroup__date" />
                            </children>
                         </HBox>
                      </children>
@@ -89,8 +89,8 @@
                <children>
                   <HBox alignment="CENTER" spacing="25.0">
                      <children>
-                        <JFXButton buttonType="RAISED" styleClass="form__button" text="Save" />
-                        <JFXButton buttonType="RAISED" styleClass="form__button" text="Cancel" />
+                        <JFXButton fx:id="fxSave" buttonType="RAISED" styleClass="form__button" text="Save" />
+                        <JFXButton fx:id="sfCancel" buttonType="RAISED" styleClass="form__button" text="Cancel" />
                      </children>
                   </HBox>
                </children>

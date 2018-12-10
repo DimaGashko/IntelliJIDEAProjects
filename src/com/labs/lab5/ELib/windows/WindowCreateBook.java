@@ -34,7 +34,7 @@ public class WindowCreateBook {
 
     public void showLikeEdit(Book book) {
         setTitle("Edit the Book");
-        controller.setValueBy(book);
+        controller.setValuesBy(book);
         window.show();
     }
 
