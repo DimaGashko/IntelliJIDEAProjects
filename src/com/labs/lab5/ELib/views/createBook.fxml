@@ -28,7 +28,7 @@
                     <children>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField fx:id="fxName" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Name" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxName" alignment="CENTER" focusColor="#757575" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Name" styleClass="formGroup__field">
                            <padding>
                               <Insets bottom="5.0" left="5.0" top="25.0" />
                            </padding></JFXTextField>
@@ -36,7 +36,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField fx:id="fxAuthor" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Author" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxAuthor" alignment="CENTER" focusColor="#757575" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Author" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
@@ -44,7 +44,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField fx:id="fxPublisher" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Publisher" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxPublisher" alignment="CENTER" focusColor="#757575" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Publisher" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
@@ -52,7 +52,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField fx:id="fxPrice" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Price" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxPrice" alignment="CENTER" focusColor="#757575" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Price" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
@@ -60,7 +60,7 @@
                         </VBox>
                         <VBox styleClass="formGroup">
                             <children>
-                                <JFXTextField fx:id="fxPages" alignment="CENTER" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Pages" styleClass="formGroup__field">
+                                <JFXTextField fx:id="fxPages" alignment="CENTER" focusColor="#757575" labelFloat="true" nodeOrientation="LEFT_TO_RIGHT" promptText="Pages" styleClass="formGroup__field">
                                     <padding>
                                         <Insets bottom="5.0" left="5.0" top="25.0" />
                                     </padding></JFXTextField>
