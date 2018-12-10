@@ -10,6 +10,7 @@ import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.jfoenix.controls.*;
 
 import com.labs.lab5.ELib.windows.WindowAddBook;
+import com.labs.lab5.ELib.windows.WindowEditBook;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
@@ -40,6 +41,7 @@ public class Index implements Initializable {
 
     // Другие окна приложения
     private WindowAddBook windowAddBook;
+    private WindowEditBook windowEditBook;
 
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения
@@ -172,12 +174,20 @@ public class Index implements Initializable {
         fxFilterDateTo.setValue(null);
     }
 
-    private void showWindowInitBook() {
+    private void showWindowAddBook() {
         if (windowAddBook == null) {
             initWindowAddBook();
         }
 
         windowAddBook.getWindow().show();
+    }
+
+    private void showWindowEditBook() {
+        if (windowEditBook == null) {
+            initWindowEditBook();
+        }
+
+        windowEditBook.getWindow().show();
     }
 
     /**
@@ -195,8 +205,27 @@ public class Index implements Initializable {
         }
     }
 
+    private void initWindowEditBook() {
+        try {
+            windowEditBook = new WindowEditBook();
+
+            windowAddBook.getController().getOnSaveListeners().add(this::editBook);
+
+        } catch (IOException err) {
+            System.out.println(err.toString());
+        }
+    }
+
     private void addNewBook() {
         storage.add(windowAddBook.getController().create());
+        windowAddBook.getController().reset();
+        windowAddBook.getWindow().close();
+        runFilter();
+    }
+
+    private void editBook() {
+        //storage.add(windowAddBook.getController().create());
+
         windowAddBook.getController().reset();
         windowAddBook.getWindow().close();
         runFilter();
@@ -255,11 +284,11 @@ public class Index implements Initializable {
 
     // Fx Tools Events
     @FXML private void fxOnToolAdd() {
-        showWindowInitBook();
+        showWindowAddBook();
     }
 
     @FXML private void fxOnToolEdit() {
-
+        showWindowEditBook();
     }
 
     @FXML private void fxOnToolRemove() {
