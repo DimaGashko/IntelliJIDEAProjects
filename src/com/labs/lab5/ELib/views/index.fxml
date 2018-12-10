@@ -18,6 +18,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import javafx.scene.control.TableView?>
 <BorderPane styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.Index">
    <top>
       <VBox BorderPane.alignment="CENTER">
@@ -138,7 +139,7 @@
                         <Label styleClass="books__title" text="Books" />
                      </children>
                   </VBox>
-                     <JFXTreeTableView fx:id="fxBooksTable" prefHeight="350.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+                     <TableView fx:id="fxBooksTable" prefHeight="350.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
                </children>
             </AnchorPane>
          </items>

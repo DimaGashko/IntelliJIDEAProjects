@@ -2,11 +2,9 @@ package com.labs.lab5.ELib.controllers;
 
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
-import com.labs.lab5.ELib.models.BookInTable;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
-import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.jfoenix.controls.*;
 
 import com.labs.lab5.ELib.windows.WindowAddBook;
@@ -21,11 +19,12 @@ import javafx.fxml.Initializable;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Index implements Initializable {
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
@@ -34,12 +33,12 @@ public class Index implements Initializable {
     private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
 
     // Массив книг удовлетворяющих фильтр (привязан к содержимому таблици)
-    private ObservableList<BookInTable> filteredBooks = FXCollections.observableArrayList();
+    private ObservableList<Book> filteredBooks = FXCollections.observableArrayList();
 
     // Фильтры книг
     private BookFilters filters = new BookFilters();
 
-    // Другие окна приложения
+    // Другие окна
     private WindowAddBook windowAddBook;
     private WindowEditBook windowEditBook;
 
@@ -72,7 +71,7 @@ public class Index implements Initializable {
     @FXML private JFXDatePicker fxFilterDateFrom;
     @FXML private JFXDatePicker fxFilterDateTo;
     @FXML private JFXButton fxResetFilters;
-    @FXML private JFXTreeTableView fxBooksTable;
+    @FXML private TableView fxBooksTable;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -116,7 +115,7 @@ public class Index implements Initializable {
         filteredBooks.clear();
 
         for (Book book : books) {
-            filteredBooks.add(new BookInTable(book));
+            filteredBooks.add(book);
         }
     }
 
@@ -232,25 +231,22 @@ public class Index implements Initializable {
     }
 
     private void initTable() {
-        var thName = new JFXTreeTableColumn<BookInTable, String>("Name");
-        var thAuthor = new JFXTreeTableColumn<BookInTable, String>("Author");
-        var thPublisher = new JFXTreeTableColumn<BookInTable, String>("Publisher");
-        var thPrice = new JFXTreeTableColumn<BookInTable, Double>("Price");
-        var thPages = new JFXTreeTableColumn<BookInTable, Integer>("Pages");
-        var thYear = new JFXTreeTableColumn<BookInTable, Integer>("Year");
+        var thName = new TableColumn<Book, String>("Name");
+        var thAuthor = new TableColumn<Book, String>("Author");
+        var thPublisher = new TableColumn<Book, String>("Publisher");
+        var thPrice = new TableColumn<Book, Double>("Price");
+        var thPages = new TableColumn<Book, Integer>("Pages");
+        var thDate = new TableColumn<Book, LocalDate>("Date");
 
-        thName.setCellValueFactory(value -> value.getValue().getValue().nameProperty());
-        thAuthor.setCellValueFactory(value -> value.getValue().getValue().authorProperty());
-        thPublisher.setCellValueFactory(value -> value.getValue().getValue().publisherProperty());
-        thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
-        thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
-        thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
+        thName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        thAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
+        thPublisher.setCellValueFactory(new PropertyValueFactory<>("publisher"));
+        thPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        thPages.setCellValueFactory(new PropertyValueFactory<>("pages"));
+        thDate.setCellValueFactory(new PropertyValueFactory<>("date"));
 
-        final TreeItem<BookInTable> root = new RecursiveTreeItem<>(filteredBooks, RecursiveTreeObject::getChildren);
-
-        fxBooksTable.setRoot(root);
-        fxBooksTable.getColumns().setAll(thName, thAuthor, thPublisher, thPrice, thPages, thYear);
-        fxBooksTable.setShowRoot(false);
+        fxBooksTable.setItems(filteredBooks);
+        fxBooksTable.getColumns().addAll(thName, thAuthor, thPublisher, thPrice, thPages, thDate);
     }
 
     // Fx Menu Events
