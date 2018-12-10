@@ -126,7 +126,7 @@ public class Index implements Initializable {
     }
 
     private void renderFiltered() {
-        System.out.println(filteredBooks.length);
+
     }
 
     private void filter() {
