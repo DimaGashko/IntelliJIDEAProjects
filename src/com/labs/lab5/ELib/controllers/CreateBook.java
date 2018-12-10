@@ -54,6 +54,15 @@ public class CreateBook implements Initializable {
         fxDate.setValue(book.getDate());
     }
 
+    public void reset() {
+        fxName.setText(null);
+        fxAuthor.setText(null);
+        fxPublisher.setText(null);
+        fxPrice.setText(null);
+        fxPages.setText(null);
+        fxDate.setValue(null);
+    }
+
     private void onCancel() {
         onCancelListeners.forEach(HandlerFunction::call);
     }

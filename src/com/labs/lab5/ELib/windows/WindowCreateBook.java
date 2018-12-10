@@ -29,6 +29,7 @@ public class WindowCreateBook {
 
     public void showLikeAdd() {
         setTitle("Add New Book");
+        controller.reset();
         window.show();
     }
 
@@ -65,7 +66,7 @@ public class WindowCreateBook {
         window.setScene(scene);
 
         window.setMinWidth(500);
-        window.setMinHeight(650);
+        window.setMinHeight(670);
     }
 
     private void initEvents() {
