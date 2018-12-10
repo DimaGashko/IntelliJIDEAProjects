@@ -9,6 +9,8 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import com.jfoenix.controls.*;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 
 import javafx.fxml.Initializable;
@@ -30,11 +32,8 @@ public class Index implements Initializable {
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
     private SimpleIntegerProperty maxPages = new SimpleIntegerProperty();
 
-    // Массив книг удовлетворяющих текущему фильтру
-    private Book[] filteredBooks;
-
     // Массив книг на экране
-    private BookRow[] bookRows;
+    private ObservableList<BookRow> filteredBooks = FXCollections.observableArrayList();
 
     @FXML private MenuItem fxMenuAddBook;
     @FXML private MenuItem fxMenuResetFilters;
@@ -122,8 +121,7 @@ public class Index implements Initializable {
 
     private void runFilter() {
         updateFilters();
-        filter();
-        renderFiltered();
+        updateFilteredBooks();
     }
 
     private void renderFiltered() {
@@ -140,10 +138,19 @@ public class Index implements Initializable {
         thPrice.setCellValueFactory(value -> value.getValue().getValue().priceProperty().asObject());
         thPages.setCellValueFactory(value -> value.getValue().getValue().pagesProperty().asObject());
         thYear.setCellValueFactory(value -> value.getValue().getValue().yearProperty().asObject());
+
+        // - - - -
+        ObservableList<BookRow> rows = FXCollections.observableArrayList();
     }
 
-    private void filter() {
-        filteredBooks = storage.getArrOfData(book -> filters.check(book));
+    private void updateFilteredBooks() {
+        var books = storage.getArrOfData(book -> filters.check(book));
+
+        filteredBooks.clear();
+
+        for (Book book : books) {
+            filteredBooks.add(new BookRow(book));
+        }
     }
 
     private void initBinds() {

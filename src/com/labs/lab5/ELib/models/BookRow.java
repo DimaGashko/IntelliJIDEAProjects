@@ -19,7 +19,7 @@ public class BookRow extends RecursiveTreeObject<BookRow> {
 
     private BooleanProperty selected;
 
-    BookRow(Book book) {
+    public BookRow(Book book) {
         setBook(book);
         setSelected(true);
     }
