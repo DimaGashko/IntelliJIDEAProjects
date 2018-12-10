@@ -9,7 +9,7 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import com.jfoenix.controls.datamodels.treetable.RecursiveTreeObject;
 import com.jfoenix.controls.*;
 
-import com.labs.lab5.ELib.windows.WindowCreateBook;
+import com.labs.lab5.ELib.windows.WindowAddBook;
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
@@ -42,7 +42,7 @@ public class Index implements Initializable {
     // Фильтры книг
     private BookFilters filters = new BookFilters();
 
-    private WindowCreateBook windowCreateBook;
+    private WindowAddBook windowAddBook;
 
     private SimpleDoubleProperty minPrice = new SimpleDoubleProperty();
     private SimpleDoubleProperty maxPrice = new SimpleDoubleProperty();
@@ -112,11 +112,11 @@ public class Index implements Initializable {
 
     // Fx Tools Events
     @FXML private void fxOnToolAdd() {
-        showWindowCreateBook("add");
+        showWindowInitBook();
     }
 
     @FXML private void fxOnToolEdit() {
-        showWindowCreateBook("edit");
+
     }
 
     @FXML private void fxOnToolRemove() {
@@ -166,30 +166,32 @@ public class Index implements Initializable {
         updateFilteredBooks();
     }
 
-    private void showWindowCreateBook(String type) {
-        if (windowCreateBook == null) {
-            initWindowCreateBook();
+    private void showWindowInitBook() {
+        if (windowAddBook == null) {
+            initWindowAddBook();
         }
 
-        if (type == "edit") {
-            windowCreateBook.showLikeEdit(filteredBooks.get(0).getBook());
-
-        } else {
-            windowCreateBook.showLikeAdd();
-        }
+        windowAddBook.getWindow().show();
     }
 
     /**
      * Инициализирует окно создания новой книги
      * TODO: Exception
      */
-    private void initWindowCreateBook() {
+    private void initWindowAddBook() {
         try {
-            windowCreateBook = new WindowCreateBook();
+            windowAddBook = new WindowAddBook();
+
+            windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
 
         } catch (IOException err) {
             System.out.println(err.toString());
         }
+    }
+
+    private void addNewBook() {
+        storage.add(windowAddBook.getController().create());
+        runFilter();
     }
 
     private void updateFilteredBooks() {

@@ -5,11 +5,13 @@ import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.HandlerFunction;
+import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -39,6 +41,17 @@ public class CreateBook implements Initializable {
 
     @FXML public void fxOnCancel() {
         onCancel();
+    }
+
+    public Book create() {
+        String name = fxName.getText();
+        String author = fxAuthor.getText();
+        String publisher = fxPublisher.getText();
+        double price = Double.parseDouble(fxPrice.getText());
+        int pages = Integer.parseInt(fxPages.getText());
+        LocalDate date = fxDate.getValue();
+
+        return new Book(name, author, publisher, date, pages, price);
     }
 
     public void setTitle(String title) {
