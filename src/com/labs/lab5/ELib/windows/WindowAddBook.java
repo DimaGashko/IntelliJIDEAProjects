@@ -12,8 +12,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class WindowAddBook extends BaseWindow<CreateBook> {
-   final static private String FXML_URL = "../views/createBook.fxml";
-
     public WindowAddBook() throws IOException {
         super();
     }
@@ -24,8 +22,22 @@ public class WindowAddBook extends BaseWindow<CreateBook> {
     }
 
     protected void load() throws IOException {
-        super.load();
+        var loader = new FXMLLoader(getClass().getResource("../views/createBook.fxml"));
 
+        Parent root = loader.load();
+        controller = loader.getController();
+
+        Scene scene = new Scene(root);
+
+        window = new Stage();
+
+        Image icon = new Image(getClass().getResource("../img/icon.png").toString());
+        window.getIcons().add(icon);
+
+        window.setScene(scene);
+
+        window.setMinWidth(500);
+        window.setMinHeight(680);
         window.initModality(Modality.WINDOW_MODAL);
     }
 
