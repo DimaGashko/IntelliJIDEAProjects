@@ -70,6 +70,7 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        System.out.println("initialize");
         initTable();
         updateFilterLimits();
         initBinds();

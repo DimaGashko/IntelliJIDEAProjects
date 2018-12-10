@@ -7,6 +7,8 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.util.Scanner;
+
 public class ELib extends Application {
     private final static String defTitle = "ELib - the world of books";
     private final static int minWidth = 600;
@@ -17,7 +19,6 @@ public class ELib extends Application {
         var loader = new FXMLLoader(getClass().getResource("views/index.fxml"));
         Parent root = loader.load();
         mainWindow.setTitle(defTitle);
-
         Image icon = new Image(getClass().getResource("img/icon.png").toString());
         mainWindow.getIcons().add(icon);
 
@@ -27,9 +28,10 @@ public class ELib extends Application {
         mainWindow.setMinWidth(minWidth);
         mainWindow.setMinHeight(minHeight);
 
-        mainWindow.setMaximized(true);
+        //mainWindow.setMaximized(true);
 
         mainWindow.show();
+        System.out.println("show");
     }
 
     public static void main(String[] args) {
