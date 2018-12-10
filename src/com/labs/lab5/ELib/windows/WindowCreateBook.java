@@ -44,6 +44,11 @@ public class WindowCreateBook {
     }
 
     private void init() throws IOException {
+        load();
+        initEvents();
+    }
+
+    private void load() throws IOException {
         var loader = new FXMLLoader(getClass().getResource("../views/createBook.fxml"));
 
         Parent root = loader.load();
@@ -61,5 +66,11 @@ public class WindowCreateBook {
 
         window.setMinWidth(500);
         window.setMinHeight(650);
+    }
+
+    private void initEvents() {
+        controller.getOnCancelListeners().add(() -> {
+            window.hide();
+        });
     }
 }

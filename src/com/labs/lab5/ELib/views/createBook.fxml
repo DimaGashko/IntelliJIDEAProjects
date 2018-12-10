@@ -89,8 +89,8 @@
                <children>
                   <HBox alignment="CENTER" spacing="25.0">
                      <children>
-                        <JFXButton fx:id="fxSave" buttonType="RAISED" styleClass="form__button" text="Save" />
-                        <JFXButton fx:id="sfCancel" buttonType="RAISED" styleClass="form__button" text="Cancel" />
+                        <JFXButton fx:id="fxSave" onAction="#fxOnSave" buttonType="RAISED" styleClass="form__button" text="Save" />
+                        <JFXButton fx:id="sfCancel" onAction="#fxOnCancel" buttonType="RAISED" styleClass="form__button" text="Cancel" />
                      </children>
                   </HBox>
                </children>
