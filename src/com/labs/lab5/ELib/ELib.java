@@ -41,7 +41,6 @@ public class ELib extends Application {
         LocalDate d3 = LocalDate.of(1002, 1, 1);
 
         Book book = new Book("JavaScript", "Jonathan", "Apple", d2, 200, 301);
-
         BookFilters filters = new BookFilters();
 
         filters.setNameFilter("JavaScript");
