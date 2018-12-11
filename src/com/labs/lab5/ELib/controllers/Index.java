@@ -10,6 +10,7 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import java.net.URL;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
@@ -113,17 +114,9 @@ public class Index implements Initializable {
         filters.setDateToFilter(fxFilterDateTo.getValue());
     }
 
-    /**
-     * TODO: Заменить for на forEach, после внедрени ArrayList
-     */
     private void updateFilteredBooks() {
-        var books = storage.getArrOfData(book -> filters.check(book));
-
         filteredBooks.clear();
-
-        for (Book book : books) {
-            filteredBooks.add(book);
-        }
+        filteredBooks.addAll(storage.getArrOfData(book -> filters.check(book)));
     }
 
     /**
@@ -298,7 +291,7 @@ public class Index implements Initializable {
     }
 
     private void onExit() {
-        System.out.println("Edit");
+        System.out.println("Exit");
     }
 
     private void onResetFilters() {
