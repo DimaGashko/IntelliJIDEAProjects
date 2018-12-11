@@ -5,7 +5,6 @@ Ulysses;James Joyce;Overlook Press;1230-12-12;208;583.0
 The Catcher in the Rye;J. D. Salinger;Indiana University Press;1903-12-15;356;927.0
 Beloved;Toni Morrison;Creation Books;1270-12-06;118;836.0
 The Sound and the Fury;William Faulkner;English;1488-12-19;40;313.0
-To Kill a Mockingbird  ;Harper Lee;Page information;1278-12-17;488;404.0
 The Lord of the Rings;J. R. R. Tolkien;Wikidata item;1282-12-02;804;170.0
 One Hundred Years of Solitude;Gabriel García Márquez;Simple talk;1224-12-24;159;717.0
 Brave New World;Aldous Huxley;Disclaimers;1732-12-02;134;882.0
@@ -339,9 +338,7 @@ Treasure Island;Robert Louis Stevenson;Detritus.com;1643-12-24;985;946.0
 Ragtime;E. L. Doctorow;Wordsworth Editions Website;1888-12-11;269;950.0
 The Kite Runner;Khaled Hosseini;University of Nebraska Press;1916-12-18;403;232.0
 Confusion: The Private Papers of Privy Councillor R. von D.;Stefan Zweig;Publishing;1854-12-26;950;968.0
-A Wizard of Earthsea;Ursula K. Le Guin;Oomf, Inc.;1094-12-12;344;829.0
 The Warden;Anthony Trollope;Open Court Book;1256-12-04;513;262.0
-The Riddle of the Sands;Erskine Childers;Indiana University Press;1654-12-17;541;498.0
 Gormenghast;Mervyn Peake;Vintage Books at Random House (UK);1799-12-07;541;1003.0
 The Secret History;Donna Tartt;Athlone Books;1968-12-09;989;287.0
 Lookout cartridge;Joseph McElroy;Cookie statement;1725-12-20;147;151.0
@@ -601,22 +598,15 @@ The Arabian Nights: Tales from a Thousand and One Nights;Richard Burton;Stone Br
 A People's History of the United States;Howard Zinn;Cambridge University Press;1231-12-17;532;920.0
 The Van;Roddy Doyle;Glas New Russian Writing;1556-12-04;413;630.0
 The Good Soldier Svejk;Jaroslav Hasek;Permanent link;1902-12-04;571;853.0
-The Autobiography of Malcolm X;Malcolm X;Make a book;1518-12-23;1110;357.0
-Easy Travel to Other Planets;Ted Mooney;Black Sparrow Books;1772-12-04;415;148.0
-The Postman Always Rings Twice;James M. Cain;Hackett;1032-12-20;939;832.0
 Where Angels Fear to Tread;E. M. Forster;Wordsworth Editions Website;1545-12-16;189;940.0
 Sometimes a Great Notion;Ken Kesey;Basic Books;1884-12-06;104;1045.0
-Gaston, tome 1;André Franquin;randomhouse.com (US);1174-12-11;409;695.0
 Tours of the Black Clock;Steve Erickson;Pantheon Books at Random House;1492-12-03;515;316.0
 Girls in Love;Jacqueline Wilson;Page;1558-12-03;537;401.0
 Earthly Powers;Anthony Burgess;Contributions;1549-12-15;863;1119.0
 Eminent Victorians;Lytton Strachey;Thames & Hudson (USA);1499-12-05;924;1098.0
 The Ginger Man;J. P. Donleavy;W.W. Norton & Company;1910-12-02;1007;1063.0
-Hawaii;James A. Michener;Oxford University Press - US;1865-12-05;330;434.0
 In Memoriam to Identity;Kathy Acker;Stanford University Press;1487-12-14;777;801.0
 The Princess Diaries;Meg Cabot;Modern Library;1930-12-15;272;43.0
 The Second World War;Winston S. Churchill;Kessinger Publishing;1754-12-06;469;612.0
 The Education of Little Tree;Forrest Carter;Lists;1910-12-08;753;611.0
 The Horse Whisperer;Nicholas Evans;Arcade Publishing;1219-12-25;226;630.0
-Hogg;Samuel R. Delany;NYRB Classics;1284-12-12;292;256.0
---Lolita--;Vladimir Nabokov;Picador UK;1295-12-10;1000;472.5

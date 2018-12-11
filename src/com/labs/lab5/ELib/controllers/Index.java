@@ -221,7 +221,7 @@ public class Index implements Initializable {
 
     private void addNewBook() {
         storage.add(windowAddBook.getController().create());
-        
+
         windowAddBook.getController().reset();
         windowAddBook.getWindow().close();
         runFilter();
@@ -233,6 +233,15 @@ public class Index implements Initializable {
 
         windowEditBook.getController().reset();
         windowEditBook.getWindow().close();
+        runFilter();
+    }
+
+    private void removeSelectedBook() {
+        Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        if (selected == null) return; //TODO: Alert - No selected books
+
+        //TODO: Alert - Are you sure?
+        storage.remove(selected);
         runFilter();
     }
 
@@ -253,6 +262,15 @@ public class Index implements Initializable {
 
         fxBooksTable.setItems(filteredBooks);
         fxBooksTable.getColumns().addAll(thName, thAuthor, thPublisher, thPrice, thPages, thDate);
+    }
+
+    private void onResetFilters() {
+        resetFilters();
+        runFilter();
+    }
+
+    private void onRemoveSelectedBook() {
+        removeSelectedBook();
     }
 
     // Fx Menu Events
@@ -281,7 +299,7 @@ public class Index implements Initializable {
     }
 
     @FXML private void fxOnMenuResetFilters() {
-        System.out.println("Menu Reset Filters");
+        onResetFilters();
     }
 
     // Fx Tools Events
@@ -294,7 +312,7 @@ public class Index implements Initializable {
     }
 
     @FXML private void fxOnToolRemove() {
-        System.out.println("Tool Remove");
+        onRemoveSelectedBook();
     }
 
     // Fx Filters Events
@@ -303,8 +321,7 @@ public class Index implements Initializable {
     }
 
     @FXML private void fxOnResetFilters() {
-        resetFilters();
-        runFilter();
+        onResetFilters();
     }
 
     /**
