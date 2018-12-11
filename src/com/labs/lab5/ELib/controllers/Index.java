@@ -10,7 +10,6 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import java.net.URL;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
@@ -283,11 +282,11 @@ public class Index implements Initializable {
     }
 
     private void onHelp() {
-        System.out.println("Menu Help");
+        System.out.println("Help");
     }
 
     private void onAbout() {
-        System.out.println("Menu About");
+        System.out.println("About");
     }
 
     private void onExit() {
