@@ -27,6 +27,35 @@ import javafx.fxml.FXML;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 public class Index implements Initializable {
+    @FXML private JFXTextField fxFilterName;
+    @FXML private JFXTextField fxFilterAuthor;
+    @FXML private JFXTextField fxFilterPublisher;
+    @FXML private JFXSlider fxFilterPriceFrom;
+    @FXML private JFXSlider fxFilterPriceTo;
+    @FXML private JFXSlider fxFilterPagesFrom;
+    @FXML private JFXSlider fxFilterPagesTo;
+    @FXML private JFXDatePicker fxFilterDateFrom;
+    @FXML private JFXDatePicker fxFilterDateTo;
+    @FXML private TableView fxBooksTable;
+
+    // Fx Menu Events
+    @FXML private void fxOnMenuAbout() { onAbout(); }
+    @FXML private void fxOnMenuAddBook() { onAddBook(); }
+    @FXML private void fxOnMenuAppExit() { onExit(); }
+    @FXML private void fxOnMenuEditBook() { onEditBook(); }
+    @FXML private void fxOnMenuHelp() { onHelp(); }
+    @FXML private void fxOnMenuRemoveBooks() { onRemoveBook(); }
+    @FXML private void fxOnMenuResetFilters() { onResetFilters(); }
+
+    // Fx Tools Events
+    @FXML private void fxOnToolAdd() { onAddBook(); }
+    @FXML private void fxOnToolEdit() { onEditBook(); }
+    @FXML private void fxOnToolRemove() { onRemoveBook(); }
+
+    // Fx Filters Events
+    @FXML private void fxOnRunFilter() { onRunFilter(); }
+    @FXML private void fxOnResetFilters() { onResetFilters(); }
+
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
 
     // Хранилице книг - содежит все книги
@@ -52,29 +81,6 @@ public class Index implements Initializable {
 
     // Последняя книга, что редактировалась
     private Book editingBook;
-
-    @FXML private MenuItem fxMenuAddBook;
-    @FXML private MenuItem fxMenuResetFilters;
-    @FXML private MenuItem fxMenuRemoveBooks;
-    @FXML private MenuItem fxMenuAppExit;
-    @FXML private MenuItem fxMenuEditBook;
-    @FXML private MenuItem fxMenuRemoveBook;
-    @FXML private MenuItem fxMenuHelp;
-    @FXML private MenuItem fxMenuAbout;
-    @FXML private JFXButton fxToolRemove;
-    @FXML private JFXButton fxToolEdit;
-    @FXML private JFXButton fxToolAdd;
-    @FXML private JFXTextField fxFilterName;
-    @FXML private JFXTextField fxFilterAuthor;
-    @FXML private JFXTextField fxFilterPublisher;
-    @FXML private JFXSlider fxFilterPriceFrom;
-    @FXML private JFXSlider fxFilterPriceTo;
-    @FXML private JFXSlider fxFilterPagesFrom;
-    @FXML private JFXSlider fxFilterPagesTo;
-    @FXML private JFXDatePicker fxFilterDateFrom;
-    @FXML private JFXDatePicker fxFilterDateTo;
-    @FXML private JFXButton fxResetFilters;
-    @FXML private TableView fxBooksTable;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -260,68 +266,46 @@ public class Index implements Initializable {
         thPages.setCellValueFactory(new PropertyValueFactory<>("pages"));
         thDate.setCellValueFactory(new PropertyValueFactory<>("date"));
 
+        //TODO: minWidth in css
+        thName.setMaxWidth(300);
+        thAuthor.setMaxWidth(300);
+        thPublisher.setMaxWidth(300);
+
         fxBooksTable.setItems(filteredBooks);
         fxBooksTable.getColumns().addAll(thName, thAuthor, thPublisher, thPrice, thPages, thDate);
+    }
+
+    private void onAddBook() {
+        showWindowAddBook();
+    }
+
+    private void onEditBook() {
+        showWindowEditBook();
+    }
+
+    private void onRunFilter() {
+        runFilter();
+    }
+
+    private void onRemoveBook() {
+        removeSelectedBook();
+    }
+
+    private void onHelp() {
+        System.out.println("Menu Help");
+    }
+
+    private void onAbout() {
+        System.out.println("Menu About");
+    }
+
+    private void onExit() {
+        System.out.println("Edit");
     }
 
     private void onResetFilters() {
         resetFilters();
         runFilter();
-    }
-
-    private void onRemoveSelectedBook() {
-        removeSelectedBook();
-    }
-
-    // Fx Menu Events
-    @FXML private void fxOnMenuAbout() {
-        System.out.println("Menu About");
-    }
-
-    @FXML private void fxOnMenuAddBook() {
-        showWindowAddBook();
-    }
-
-    @FXML private void fxOnMenuAppExit() {
-        System.out.println("Menu Exit");
-    }
-
-    @FXML private void fxOnMenuEditBook() {
-        showWindowEditBook();
-    }
-
-    @FXML private void fxOnMenuHelp() {
-        System.out.println("Menu Help");
-    }
-
-    @FXML private void fxOnMenuRemoveBooks() {
-        onRemoveSelectedBook();
-    }
-
-    @FXML private void fxOnMenuResetFilters() {
-        onResetFilters();
-    }
-
-    // Fx Tools Events
-    @FXML private void fxOnToolAdd() {
-        showWindowAddBook();
-    }
-
-    @FXML private void fxOnToolEdit() {
-        showWindowEditBook();
-    }
-
-    @FXML private void fxOnToolRemove() {
-        onRemoveSelectedBook();
-    }
-
-    // Fx Filters Events
-    @FXML private void fxOnRunFilter() {
-        runFilter();
-    }
-
-    @FXML private void fxOnResetFilters() {
-        onResetFilters();
     }
 
     /**

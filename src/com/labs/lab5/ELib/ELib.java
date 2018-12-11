@@ -28,7 +28,7 @@ public class ELib extends Application {
         mainWindow.setMinWidth(minWidth);
         mainWindow.setMinHeight(minHeight);
 
-        //mainWindow.setMaximized(true);
+        mainWindow.setMaximized(true);
 
         mainWindow.show();
     }
