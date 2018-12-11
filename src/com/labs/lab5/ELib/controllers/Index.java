@@ -279,7 +279,7 @@ public class Index implements Initializable {
     }
 
     @FXML private void fxOnMenuAddBook() {
-        System.out.println("Menu Add");
+        showWindowAddBook();
     }
 
     @FXML private void fxOnMenuAppExit() {
@@ -287,7 +287,7 @@ public class Index implements Initializable {
     }
 
     @FXML private void fxOnMenuEditBook() {
-        System.out.println("Menu Edit");
+        showWindowEditBook();
     }
 
     @FXML private void fxOnMenuHelp() {
@@ -295,7 +295,7 @@ public class Index implements Initializable {
     }
 
     @FXML private void fxOnMenuRemoveBooks() {
-        System.out.println("Menu Remove");
+        onRemoveSelectedBook();
     }
 
     @FXML private void fxOnMenuResetFilters() {
