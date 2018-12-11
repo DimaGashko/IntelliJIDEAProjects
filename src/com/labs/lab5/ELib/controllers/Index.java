@@ -2,29 +2,27 @@ package com.labs.lab5.ELib.controllers;
 
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
+import com.labs.lab5.ELib.windows.WindowAddBook;
+import com.labs.lab5.ELib.windows.WindowEditBook;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
-import com.jfoenix.controls.*;
-
-import com.labs.lab5.ELib.windows.WindowAddBook;
-import com.labs.lab5.ELib.windows.WindowEditBook;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.scene.control.*;
-
-import javafx.fxml.Initializable;
-
-import java.io.IOException;
 import java.net.URL;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
-import javafx.fxml.FXML;
+import com.jfoenix.controls.*;
+
+import javafx.fxml.Initializable;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.*;
+import javafx.fxml.FXML;
 
 public class Index implements Initializable {
     @FXML private JFXTextField fxFilterName;
@@ -38,7 +36,7 @@ public class Index implements Initializable {
     @FXML private JFXDatePicker fxFilterDateTo;
     @FXML private TableView fxBooksTable;
 
-    // Fx Menu Events
+    // Menu Events
     @FXML private void fxOnMenuAbout() { onAbout(); }
     @FXML private void fxOnMenuAddBook() { onAddBook(); }
     @FXML private void fxOnMenuAppExit() { onExit(); }
@@ -47,12 +45,12 @@ public class Index implements Initializable {
     @FXML private void fxOnMenuRemoveBooks() { onRemoveBook(); }
     @FXML private void fxOnMenuResetFilters() { onResetFilters(); }
 
-    // Fx Tools Events
+    // Tools Events
     @FXML private void fxOnToolAdd() { onAddBook(); }
     @FXML private void fxOnToolEdit() { onEditBook(); }
     @FXML private void fxOnToolRemove() { onRemoveBook(); }
 
-    // Fx Filters Events
+    // Filters Events
     @FXML private void fxOnRunFilter() { onRunFilter(); }
     @FXML private void fxOnResetFilters() { onResetFilters(); }
 
