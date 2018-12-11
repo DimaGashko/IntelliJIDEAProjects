@@ -63,7 +63,6 @@ The Golden Notebook;Doris Lessing;Dover Publications;1211-12-23;94;748.0
 Adventures of Huckleberry Finn;Mark Twain;Bison Books;1094-12-26;834;1086.0
 Things Fall Apart;Chinua Achebe;Create account;1515-12-04;928;1061.0
 Tom Jones;Henry Fielding;View history;1974-12-02;84;385.0
-Harry Potter and the Philosopher's Stone;J. K. Rowling;Belknap Press of Harvard University Press;1856-12-25;1115;513.0
 Song of Solomon;Toni Morrison;Wisdom Publications;1035-12-08;843;62.0
 Molloy Malone Dies; The Unnamable;Samuel Beckett;1317-12-19;548;925.0
 Finnegans Wake;James Joyce;Paulist Press;1076-12-11;860;210.0
@@ -198,7 +197,6 @@ The Stand;Stephen King;Da Capo Press;1149-12-26;649;610.0
 Austerlitz;W.G. Sebald;About Wikipedia;1489-12-09;996;706.0
 Cat's Cradle;Kurt Vonnegut;Wordsworth Editions Website;1678-12-02;694;1006.0
 The Public Burning;Robert Coover;Scholastic Inc.;1716-12-02;570;879.0
-Harry Potter and the Goblet of Fire;J. K. Rowling;Steerforth Press;1990-12-02;821;300.0
 The Wind-Up Bird Chronicle;Haruki Murakami;HarperCollins Publishers;1302-12-20;585;47.0
 Man's Fate;Andre Malraux;Main page;1514-12-15;787;576.0
 Jazz;Toni Morrison;Harvard University Press;1220-12-21;230;148.0
@@ -264,13 +262,11 @@ The Interrogation;J. M. G. Le Clezio;Picador USA;1789-12-18;793;735.0
 Appointment in Samarra;John O'Hara;Page information;1012-12-23;474;679.0
 A House for Mr.Biswas;V. S. Naipaul;Belknap Press of Harvard University Press;1414-12-11;567;673.0
 Perfume: The Story of a Murderer;Patrick Suskind;Anvil Press Poetry;1961-12-03;64;479.0
-Harry Potter and the Chamber of Secrets;J. K. Rowling;Hrvatski;1707-12-17;641;1106.0
 The Secret Garden ;Frances Hodgson Burnett;Pathfinder Books;1084-12-03;674;267.0
 Asterix the Gaul;René Goscinny;Routledge;1716-12-09;906;1104.0
 The Wasp Factory;Iain Banks;Page information;1012-12-02;189;68.0
 The Fountainhead;Ayn Rand;Hackett;1815-12-08;1036;956.0
 Four Plays;Eugene Ionesco;iBooks, Inc.;1746-12-04;1023;89.0
-Harry Potter and the Prisoner of Azkaban;J. K. Rowling;Text is available under the Creative Commons Attribution/Share-Alike License and the GFDL additional terms may apply. See Terms of Use for details.;1610-12-24;999;1070.0
 Germinal;Émile Zola;Welcome to Random House;1232-12-19;325;52.0
 The Moonstone;Wilkie Collins;Atlas Press;1737-12-09;1082;566.0
 Paddy Clarke Ha Ha Ha;Roddy Doyle;Tuttle Publishing;1268-12-24;578;680.0
@@ -560,12 +556,7 @@ The Adventures of Sherlock Holmes ;Sir Arthur Conan Doyle;Stanford University Pr
 The Periodic Table;Primo Levi;Verso Books;1024-12-05;439;1024.0
 Magician;Raymond E. Feist;University of Chicago Press;1542-12-23;835;503.0
 Talk Before Sleep;Elizabeth Berg;Pan Macmillan;2002-12-04;133;191.0
-Loving;Henry Green;Change;1779-12-20;138;288.0
-No Orchids for Miss Blandish;James Hadley Chase;Dover Publications;1357-12-19;825;449.0
-The Varieties of Religious Experience;William James;Central European University Press;1262-12-04;189;358.0
 The Secret of the Swordfish;Edgar P. Jacobs;University of California Press Books;1544-12-02;622;1071.0
-Money;Martin Amis;Shanti Sadan Publications;1848-12-14;536;1044.0
-The Universal Baseball Association, inc.;Robert Coover;Developers;1204-12-26;702;874.0
 Creamy and Delicious;Steve Katz;MIT Press;1675-12-25;325;450.0
 Tobacco Road;Erskine Caldwell;Creation Books;1427-12-04;1061;446.0
 The Notebooks of Malte Laurids Brigge;Rainer Maria Rilke;Change source;1464-12-20;790;481.0
@@ -610,3 +601,4 @@ The Princess Diaries;Meg Cabot;Modern Library;1930-12-15;272;43.0
 The Second World War;Winston S. Churchill;Kessinger Publishing;1754-12-06;469;612.0
 The Education of Little Tree;Forrest Carter;Lists;1910-12-08;753;611.0
 The Horse Whisperer;Nicholas Evans;Arcade Publishing;1219-12-25;226;630.0
+Harry Potter and the Prisoner of Azkaban;J. K. Rowling;Hello;1610-12-24;1000;1000.0
