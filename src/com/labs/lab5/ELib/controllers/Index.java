@@ -75,6 +75,10 @@ public class Index implements Initializable {
     // Другие окна
     private WindowCreateBook windowAddBook;
     private WindowCreateBook windowEditBook;
+    private Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);
+    private Alert alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
+    private Alert alertWarn = new Alert(Alert.AlertType.WARNING);
+    private Alert alertErr = new Alert(Alert.AlertType.ERROR);
 
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
