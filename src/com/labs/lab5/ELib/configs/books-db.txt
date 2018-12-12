@@ -1,7 +1,3 @@
-Jane Eyre;Charlotte Brontë;Show any page;1641-12-17;697;764.0
-On the Road;Jack Kerouac;Harvard University Press;1930-12-24;911;952.0
-Pride and Prejudice;Jane Austen;University of Chicago Press;1962-12-06;745;941.0
-Lord of the Flies;William Golding;MIT Press;1408-12-05;847;790.0
 Middlemarch;George Eliot;Welcome to Random House;1101-12-09;927;289.0
 Anna Karenina;Leo Tolstoy;Developers;1672-12-02;310;376.0
 Animal Farm;George Orwell;Central European University Press;1495-12-22;862;259.0

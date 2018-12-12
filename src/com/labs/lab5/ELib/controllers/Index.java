@@ -220,7 +220,7 @@ public class Index implements Initializable {
             windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
 
         } catch (IOException err) {
-            //TODO: Alert - Can't open the window
+            showAlert(alertErr, "Can't open the window");
             System.out.println(err.toString());
         }
     }
@@ -231,7 +231,7 @@ public class Index implements Initializable {
             windowEditBook.getController().getOnSaveListeners().add(this::editBook);
 
         } catch (IOException err) {
-            //TODO: Alert - Can't open the window
+            showAlert(alertErr, "Can't open the window");
             System.out.println(err.toString());
         }
     }
@@ -241,7 +241,7 @@ public class Index implements Initializable {
      */
     private void addNewBook() {
         if (!windowAddBook.getController().isReady()) {
-            //TODO: Alert - Incorrect data
+            showAlert(alertErr, "Incorrect data");
         }
 
         storage.add(windowAddBook.getController().create());
@@ -260,12 +260,12 @@ public class Index implements Initializable {
      */
     private void editBook() {
         if (editingBook == null) {
-            //TODO: Alert - Failed to save changes
+            showAlert(alertErr, "Failed to save changes");
             return;
         }
 
         if (!windowEditBook.getController().isReady()) {
-            //TODO: Alert - Incorrect data
+            showAlert(alertErr, "Incorrect data");
             return;
         }
 
@@ -286,11 +286,11 @@ public class Index implements Initializable {
         Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
 
         if (selected == null) {
-            //TODO: Alert - No selected books
+            showAlert(alertErr, "No selected books");
             return;
         }
 
-        //TODO: Alert - Are you sure?
+        //showAlert(alertConfirm, "Are yor sure?");
 
         storage.remove(selected);
 
