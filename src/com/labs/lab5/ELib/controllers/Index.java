@@ -91,13 +91,15 @@ public class Index implements Initializable {
     //Книга что редактируется в данный момент (проверка на null обязательна)
     private Book editingBook;
 
-    public Index() {
-        initAlerts();
-        initStorage();
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        initAlerts();
+        initStorage();
+
+        if (storage == null) {
+            onExit();
+            return;
+        }
 
         initBinds();
         resetFilters();
@@ -161,10 +163,11 @@ public class Index implements Initializable {
         minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
 
         if (books.length == 1) {
+            // FIXME: Когда в таблице одна книга, она не отображается
             maxPrice.set(minPages.get() + 10);
             maxPages.set(minPages.get() + 10);
             return;
-        } 
+        }
 
         maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
         maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
@@ -285,8 +288,8 @@ public class Index implements Initializable {
             return;
         }
 
-
         try {
+            //FIXME: null pointer exception
             Book newBook = windowAddBook.getController().create();
             storage.replace(editingBook, newBook);
 
@@ -410,10 +413,14 @@ public class Index implements Initializable {
 
         } catch (IOException err) {
             showAlert(alertErr, "Can't load the data");
-            showAlert(alertConfirm, "Try again");
-            // TODO: loop initStorage
-            //initStorage();
+
+            var res = showAlert(alertConfirm, "Try again");
+
+            if (_getAnswer(res)) {
+                initStorage();
+            }
         }
+
     }
 
     public double getMinPrice() {
