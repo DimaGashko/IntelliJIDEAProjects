@@ -91,9 +91,9 @@ public class Index implements Initializable {
     //Книга что редактируется в данный момент (проверка на null обязательна)
     private Book editingBook;
 
-    private Index() {
-        initStorage();
+    public Index() {
         initAlerts();
+        initStorage();
     }
 
     @Override
@@ -155,6 +155,7 @@ public class Index implements Initializable {
 
     private void updateFilterLimits() {
         var books = storage.getArrOfData();
+        if (books.length == 0) return;
 
         minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
         maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
@@ -411,6 +412,7 @@ public class Index implements Initializable {
      * @return наиболее подходящий элемент
      */
     private <T> T _getSuitable(T[] items, BiFunction<T, T, Boolean> compare) {
+        if (items.length == 0) return null;
         T res = items[0];
 
         for (int i = 1; i < items.length; i++) {
@@ -425,8 +427,10 @@ public class Index implements Initializable {
             storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
 
         } catch (IOException err) {
-            showAlert(alertErr, "Can't load data");
-            initStorage();
+            showAlert(alertErr, "Can't load the data");
+            showAlert(alertConfirm, "Try again");
+            // TODO: loop initStorage
+            //initStorage();
         }
     }
 

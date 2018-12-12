@@ -183,10 +183,12 @@ public class TextStorage<T> implements IStorage<T> {
      * Загружает данные из текстового файла в массив данных
      */
     private void load() throws IOException {
+        dataFile.createNewFile();
+
         String itemStr;
 
         try (var fr = new FileReader(dataFile);
-             var reader = new BufferedReader(fr);
+             var reader = new BufferedReader(fr)
         ) {
 
             while ((itemStr = reader.readLine()) != null) {
