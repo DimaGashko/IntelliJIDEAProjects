@@ -77,9 +77,6 @@ public class Index implements Initializable {
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
     private SimpleIntegerProperty maxPages = new SimpleIntegerProperty();
 
-    // Последняя книга, что редактировалась
-    private Book editingBook;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initBinds();
@@ -118,10 +115,6 @@ public class Index implements Initializable {
         filteredBooks.addAll(storage.getArrOfData(book -> filters.check(book)));
     }
 
-    /**
-     * Вычисляет граници фильтров
-     * (обновляет поля min/max price/pages и др)
-     */
     private void updateFilterLimits() {
         var books = storage.getArrOfData();
 
@@ -152,7 +145,7 @@ public class Index implements Initializable {
     }
 
     /**
-     * Сбрасывает фильтры (значения элементов fxml)
+     * Сбрасывает фильтры (значения полей fxml)
      * Первый вызов должен быть после первого вызова метода initBinds()
      */
     private void resetFilters() {
@@ -181,7 +174,7 @@ public class Index implements Initializable {
     }
 
     private void showWindowEditBook() {
-        editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        Book editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
         if (editingBook == null) return; //TODO: Alert - Not Selected
 
         if (windowEditBook == null) {
@@ -223,7 +216,18 @@ public class Index implements Initializable {
         runFilter();
     }
 
+    /**
+     * Редактирует текущюю вибраную книгу
+     */
     private void editBook() {
+        Book editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+            if (editingBook == null) return; //TODO: Alert - Failed to save changes
+
+        if (!windowEditBook.getController().isReady()) {
+            //TODO: Alert - Incorrect data
+            return;
+        }
+
         storage.remove(editingBook);
         storage.add(windowEditBook.getController().create());
 
