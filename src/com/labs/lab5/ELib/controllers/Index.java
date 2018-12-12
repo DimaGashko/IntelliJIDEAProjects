@@ -158,15 +158,16 @@ public class Index implements Initializable {
         if (books.length == 0) return;
 
         minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
-        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
-
         minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
-        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
 
-        System.out.println(minPrice.getValue());
-        System.out.println(maxPrice.getValue());
-        System.out.println(minPages.getValue());
-        System.out.println(maxPages.getValue());
+        if (books.length == 1) {
+            maxPrice.set(minPages.get() + 10);
+            maxPages.set(minPages.get() + 10);
+            return;
+        } 
+
+        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
+        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
     }
 
     /**
@@ -312,16 +313,17 @@ public class Index implements Initializable {
         }
 
         String mes = "Are you really want to remove '"+ selected.getName() +"'?";
-        Optional<ButtonType> answer = showAlert(alertConfirm, mes);
+        var res = (showAlert(alertConfirm, mes));
 
-        if (answer.isPresent() && answer.get() == ButtonType.YES) {
-            //return;
+        if (!_getAnswer(res)) {
+            return;
         }
 
         try {
             storage.remove(selected);
 
         } catch (IOException err) {
+            //TODO: Stack Trace
             showAlert(alertErr, "Something's wrong. Can't remove the book");
         }
 
@@ -402,26 +404,6 @@ public class Index implements Initializable {
         runFilter();
     }
 
-    /**
-     * Возвращает наиболее подходящий элемент по переданным правилам сравнения
-     * Можно использовать для нахождения минимального/максимального
-     * Элемента массива по необходимому полю
-     * @param items массив
-     * @param compare функция сравнения
-     * @param <T> тип обрабатываемых элементов
-     * @return наиболее подходящий элемент
-     */
-    private <T> T _getSuitable(T[] items, BiFunction<T, T, Boolean> compare) {
-        if (items.length == 0) return null;
-        T res = items[0];
-
-        for (int i = 1; i < items.length; i++) {
-            if (compare.apply(items[i], res)) res = items[i];
-        }
-
-        return res;
-    }
-
     private void initStorage() {
         try {
             storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
@@ -480,5 +462,33 @@ public class Index implements Initializable {
 
     private void setMaxPages(int maxPages) {
         this.maxPages.set(maxPages);
+    }
+
+    /**
+     * Возвращает наиболее подходящий элемент по переданным правилам сравнения
+     * Можно использовать для нахождения минимального/максимального
+     * Элемента массива по необходимому полю
+     * @param items массив
+     * @param compare функция сравнения
+     * @param <T> тип обрабатываемых элементов
+     * @return наиболее подходящий элемент
+     */
+    private <T> T _getSuitable(T[] items, BiFunction<T, T, Boolean> compare) {
+        if (items.length == 0) return null;
+        T res = items[0];
+
+        for (int i = 1; i < items.length; i++) {
+            if (compare.apply(items[i], res)) res = items[i];
+        }
+
+        return res;
+    }
+
+    /**
+     * @return Возвращает ответ пользователя в AlertConfirm
+     */
+    private boolean _getAnswer(Optional<ButtonType> option) {
+        // TODO: add isPresent check
+        return (option.get() == ButtonType.OK);
     }
 }
