@@ -40,6 +40,7 @@ public class CreateBook implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        title.set(title.getValue() + "In Init ");
         //setValidators();
     }
 

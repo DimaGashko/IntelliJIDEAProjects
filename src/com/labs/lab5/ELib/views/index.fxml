@@ -94,7 +94,7 @@
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Price:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                           <JFXSlider fx:id="fxFilterPriceFrom"  majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
+                           <JFXSlider fx:id="fxFilterPriceFrom" min="${controller.minPrice}" max="${controller.maxPrice}" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
                              <Label styleClass="filterGroup__subtitle" text="To:" />
                            <JFXSlider fx:id="fxFilterPriceTo" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
                          </VBox>

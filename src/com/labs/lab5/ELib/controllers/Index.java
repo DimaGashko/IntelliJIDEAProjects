@@ -80,12 +80,14 @@ public class Index implements Initializable {
     private Alert alertConfirm;
     private Alert alertErr;
 
+    private JFXAlert alertT = new JFXAlert();
+
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
-    private final DoubleProperty minPrice = new SimpleDoubleProperty();
-    private final DoubleProperty maxPrice = new SimpleDoubleProperty();
-    private final IntegerProperty minPages = new SimpleIntegerProperty();
-    private final IntegerProperty maxPages = new SimpleIntegerProperty();
+    private final DoubleProperty minPrice = new SimpleDoubleProperty(20);
+    private final DoubleProperty maxPrice = new SimpleDoubleProperty(100);
+    private final IntegerProperty minPages = new SimpleIntegerProperty(20);
+    private final IntegerProperty maxPages = new SimpleIntegerProperty(100);
 
     //Книга что редактируется в данный момент (проверка на null обязательна)
     private Book editingBook;
@@ -97,13 +99,16 @@ public class Index implements Initializable {
         resetFilters();
         runFilter();
         initTable();
+        alertT.setSize(250, 150);
+        alertT.show();
+
     }
 
     private void initBinds() {
         updateFilterLimits();
 
-        fxFilterPriceFrom.minProperty().bind(minPrice);
-        fxFilterPriceFrom.maxProperty().bind(maxPrice);
+        //fxFilterPriceFrom.minProperty().bind(minPrice);
+        //fxFilterPriceFrom.maxProperty().bind(maxPrice);
 
         fxFilterPriceTo.minProperty().bind(minPrice);
         fxFilterPriceTo.maxProperty().bind(maxPrice);
@@ -287,11 +292,16 @@ public class Index implements Initializable {
         Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
 
         if (selected == null) {
-            showAlert(alertErr, "No selected books");
+            showAlert(alertInfo, "No selected books");
             return;
         }
 
-        Optional<ButtonType> answer = showAlert(alertConfirm, "Are yor sure?");
+        String mes = "Are you really want to remove '"+ selected.getName() +"'?";
+        Optional<ButtonType> answer = showAlert(alertConfirm, mes);
+
+        if (answer.isPresent() && answer.get() == ButtonType.YES) {
+            //return;
+        }
 
         storage.remove(selected);
 
@@ -319,12 +329,12 @@ public class Index implements Initializable {
 
     private void initAlertConfirm() {
         alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
-        alertInfo.setTitle("ELib - your world of books");
+        alertConfirm.setTitle("ELib - your world of books");
     }
 
     private void initAlertErr() {
         alertErr = new Alert(Alert.AlertType.ERROR);
-        alertInfo.setTitle("ELib - your world of books");
+        alertErr.setTitle("ELib - your world of books");
     }
 
     private void initTable() {
