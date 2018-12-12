@@ -95,6 +95,12 @@ public class TextStorage<T> implements IStorage<T> {
         setData(newData);
     }
 
+    @Override
+    public void replace(T prevItem, T newItem) throws IOException {
+        remove(prevItem);
+        add(newItem);
+    }
+
     /**
      * Добавл8яет элемент данных в массив данных
      * @param item добавляемый массив

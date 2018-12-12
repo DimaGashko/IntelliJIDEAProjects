@@ -62,10 +62,11 @@ public class Index implements Initializable {
     @FXML private void fxOnRunFilter() { onRunFilter(); }
     @FXML private void fxOnResetFilters() { onResetFilters(); }
 
+    // Путь к файлу в котором хранятся книги
     static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
 
     // Хранилице книг - содежит все книги
-    private IStorage<Book> storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
+    private IStorage<Book> storage;
 
     // Массив книг удовлетворяющих фильтр (привязан к содержимому таблици)
     private ObservableList<Book> filteredBooks = FXCollections.observableArrayList();
@@ -90,9 +91,14 @@ public class Index implements Initializable {
     //Книга что редактируется в данный момент (проверка на null обязательна)
     private Book editingBook;
 
+    private Index() {
+        initStorage();
+        initAlerts();
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initAlerts();
+
         initBinds();
         resetFilters();
         runFilter();
@@ -245,10 +251,17 @@ public class Index implements Initializable {
             showAlert(alertErr, "Incorrect data");
         }
 
-        storage.add(windowAddBook.getController().create());
+        try {
+            storage.add(windowAddBook.getController().create());
+
+        } catch ( IOException err) {
+            showAlert(alertErr, "Something's wrong. Can't save the book");
+            return;
+        }
 
         windowAddBook.getController().reset();
         windowAddBook.getWindow().close();
+
         runFilter();
     }
 
@@ -261,7 +274,7 @@ public class Index implements Initializable {
      */
     private void editBook() {
         if (editingBook == null) {
-            showAlert(alertErr, "Failed to save changes");
+            showAlert(alertErr, "Something's wrong. Can't save the changes");
             return;
         }
 
@@ -270,8 +283,14 @@ public class Index implements Initializable {
             return;
         }
 
-        storage.remove(editingBook);
-        storage.add(windowEditBook.getController().create());
+
+        try {
+            Book newBook = windowAddBook.getController().create();
+            storage.replace(editingBook, newBook);
+
+        } catch (IOException err) {
+            showAlert(alertErr, "Something's wrong. Can't save the changes");
+        }
 
         windowEditBook.getController().reset();
         windowEditBook.getWindow().close();
@@ -298,7 +317,13 @@ public class Index implements Initializable {
             //return;
         }
 
-        storage.remove(selected);
+        try {
+            storage.remove(selected);
+
+        } catch (IOException err) {
+            showAlert(alertErr, "Something's wrong. Can't remove the book");
+        }
+
 
         runFilter();
 
@@ -393,6 +418,16 @@ public class Index implements Initializable {
         }
 
         return res;
+    }
+
+    private void initStorage() {
+        try {
+            storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
+
+        } catch (IOException err) {
+            showAlert(alertErr, "Can't load data");
+            initStorage();
+        }
     }
 
     public double getMinPrice() {

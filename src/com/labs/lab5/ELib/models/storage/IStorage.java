@@ -38,6 +38,7 @@ public interface IStorage<T> {
      * Удаляет из хранилища все элементы, что "equals" к item
      * @param item удаляемый элемент
      * @return удалось ли удаление
+     * @throws IOException
      */
     void remove(T item) throws IOException;
 
@@ -45,6 +46,15 @@ public interface IStorage<T> {
      * Удаляет все элементы что удовлетворяют предикату isRemoved
      * @param isRemoved нужно ли удалять элемент
      * @return удалось ли удаление
+     * @throws IOException
      */
-    void remove(Predicate<T> isRemoved) throws IOException
+    void remove(Predicate<T> isRemoved) throws IOException;
+
+    /**
+     * Заменяет prevItem на newItem
+     * @param prevItem заменяемый элемент
+     * @param newItem на что нужно заменить prevItem
+     * @throws IOException
+     */
+    void replace(T prevItem, T newItem) throws IOException;
 }
