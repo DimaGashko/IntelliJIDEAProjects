@@ -2,9 +2,8 @@ package com.labs.lab5.ELib.controllers;
 
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
-import com.labs.lab5.ELib.windows.WindowAddBook;
-import com.labs.lab5.ELib.windows.WindowEditBook;
 import com.labs.lab5.ELib.models.storage.IStorage;
+import com.labs.lab5.ELib.windows.WindowCreateBook;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
 import java.net.URL;
@@ -66,12 +65,11 @@ public class Index implements Initializable {
     private BookFilters filters = new BookFilters();
 
     // Другие окна
-    private WindowAddBook windowAddBook;
-    private WindowEditBook windowEditBook;
+    private WindowCreateBook windowAddBook;
+    private WindowCreateBook windowEditBook;
 
     // Граничные значение параметров книг
-    // Привязываються к минимальны/максимальным значения
-    // Fxml-элементов фильтров
+    // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
     private SimpleDoubleProperty minPrice = new SimpleDoubleProperty();
     private SimpleDoubleProperty maxPrice = new SimpleDoubleProperty();
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
@@ -202,7 +200,7 @@ public class Index implements Initializable {
 
     private void initWindowAddBook() {
         try {
-            windowAddBook = new WindowAddBook();
+            windowAddBook = new WindowCreateBook("Add New Book");
             windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
 
         } catch (IOException err) {
@@ -213,7 +211,7 @@ public class Index implements Initializable {
 
     private void initWindowEditBook() {
         try {
-            windowEditBook = new WindowEditBook();
+            windowEditBook = new WindowCreateBook("Edit The Book");
             windowEditBook.getController().getOnSaveListeners().add(this::editBook);
 
         } catch (IOException err) {
