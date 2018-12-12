@@ -15,7 +15,6 @@ The Portrait of a Lady;Henry James;Read;1476-12-12;632;383.0
 The Trial ;Franz Kafka;Continuum - Athlone;1184-12-05;1009;225.0
 Crime and Punishment;Fyodor Dostoyevsky;What links here;1003-12-10;1006;558.0
 A Clockwork Orange;Anthony Burgess;Main page;1916-12-12;1031;596.0
-The Age of Innocence;Edith Wharton;Disclaimers;1386-12-02;899;521.0
 Don Quixote;Miguel de Cervantes;Page for printing;1728-12-04;663;1045.0
 As I Lay Dying;William Faulkner;Da Capo Press;1817-12-14;480;593.0
 His Dark Materials;Philip Pullman;Prometheus Books;1068-12-20;585;441.0

@@ -360,11 +360,11 @@ public class Index implements Initializable {
     }
 
     private void onHelp() {
-        System.out.println("Help");
+        alerts.show(alerts.getAlertInfo(), "Only You Can Help yourself!");
     }
 
     private void onAbout() {
-        System.out.println("About");
+        alerts.show(alerts.getAlertInfo(), "ELib - Your World Of Books!");
     }
 
     private void onExit() {
