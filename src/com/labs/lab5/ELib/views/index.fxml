@@ -37,7 +37,7 @@
                 <Menu mnemonicParsing="false" text="Edit">
                   <items>
                         <MenuItem fx:id="fxMenuEditBook" mnemonicParsing="false" onAction="#fxOnMenuEditBook" text="Edit the book" />
-                        <MenuItem fx:id="fxMenuRemoveBooks" mnemonicParsing="false" onAction="#fxOnMenuRemoveBooks" text="Remove selected books" />
+                        <MenuItem fx:id="fxMenuRemoveBooks" mnemonicParsing="false" onAction="#fxOnMenuRemoveBooks" text="Remove the books" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">

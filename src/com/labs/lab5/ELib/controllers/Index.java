@@ -245,8 +245,6 @@ public class Index implements Initializable {
      * (Например, окно windowEditBook может быть APPLICATION_MODAL)
      */
     private void editBook() {
-        Book editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
-
         if (editingBook == null) {
             //TODO: Alert - Failed to save changes
             return;
@@ -262,6 +260,9 @@ public class Index implements Initializable {
 
         windowEditBook.getController().reset();
         windowEditBook.getWindow().close();
+
+        editingBook = null;
+
         runFilter();
     }
 
