@@ -1,18 +1,13 @@
 package com.labs.lab5.ELib.controllers;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.HandlerFunction;
-import javafx.beans.property.Property;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -31,8 +26,9 @@ public class CreateBook implements Initializable {
     @FXML private JFXTextField fxPrice;
     @FXML private JFXTextField fxPages;
     @FXML private JFXDatePicker fxDate;
-    @FXML private JFXButton fxSave;
-    @FXML private JFXButton fxCancel;
+
+    @FXML public void fxOnSave() { onSave(); }
+    @FXML public void fxOnCancel() { onCancel(); }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -73,7 +69,15 @@ public class CreateBook implements Initializable {
         fxDate.setValue(null);
     }
 
-    private void setValidators() {
+    /**
+     * @return можноли ли формировать новую книгу из введенный в форме данных
+     * TODO: реализовать этот метод
+     */
+    private boolean isReady() {
+        return true;
+    }
+
+    public void setValidators() {
         String mess = "Required field";
 
         fxName.getValidators().add(new RequiredFieldValidator(mess));
@@ -105,13 +109,5 @@ public class CreateBook implements Initializable {
 
     public List<HandlerFunction> getOnSaveListeners() {
         return onSaveListeners;
-    }
-
-    @FXML public void fxOnSave() {
-        onSave();
-    }
-
-    @FXML public void fxOnCancel() {
-        onCancel();
     }
 }
