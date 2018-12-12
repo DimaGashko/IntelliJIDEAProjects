@@ -225,24 +225,21 @@ public class TextStorage<T> implements IStorage<T> {
      * @param str   строка для записи
      * @param clean очистить перед записью (либо записывать в конец)
      */
-    private boolean _writeStrToFile(String str, boolean clean) {
-        createFile();
+    private void _writeStrToFile(String str, boolean clean) throws IOException {
+        dataFile.createNewFile();
 
-        try {
-            var writer = new PrintWriter(new FileWriter(dataFile, !clean));
+        try(var fr = new FileWriter(dataFile, !clean);
+            var writer = new PrintWriter(fr)
+        ) {
 
             if (clean) {
                 writer.print("");
             }
 
             writer.println(str);
-            writer.close();
 
-        } catch (IOException err) {
-            return false;
         }
 
-        return true;
     }
 
     /**
@@ -251,11 +248,12 @@ public class TextStorage<T> implements IStorage<T> {
      * @param strs  массив строк для записи
      * @param clean запись в конец файла
      */
-    private boolean _writeArrStrToFile(String[] strs, boolean clean) {
-        createFile();
+    private void _writeArrStrToFile(String[] strs, boolean clean) throws IOException {
+        dataFile.createNewFile();
 
-        try {
-            var writer = new PrintWriter(new FileWriter(dataFile, !clean));
+        try(var fr = new FileWriter(dataFile, !clean);
+            var writer = new PrintWriter(fr)
+        ) {
 
             if (clean) {
                 writer.print("");
@@ -265,27 +263,7 @@ public class TextStorage<T> implements IStorage<T> {
                 writer.println(str);
             }
 
-            writer.close();
-
-        } catch (IOException err) {
-            return false;
         }
-
-        return true;
-    }
-
-    /**
-     * Создает файл на диске (если он еще не существует)
-     * TODO: Exception
-     */
-    private void createFile() {
-        try {
-            dataFile.createNewFile();
-
-        } catch (IOException err) {
-           System.out.println(err.getMessage());
-        }
-
     }
 
 }

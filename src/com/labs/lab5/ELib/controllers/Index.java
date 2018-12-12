@@ -80,8 +80,6 @@ public class Index implements Initializable {
     private Alert alertConfirm;
     private Alert alertErr;
 
-    private JFXAlert alertT = new JFXAlert();
-
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
     private final DoubleProperty minPrice = new SimpleDoubleProperty(20);
@@ -99,16 +97,13 @@ public class Index implements Initializable {
         resetFilters();
         runFilter();
         initTable();
-        alertT.setSize(250, 150);
-        alertT.show();
-
     }
 
     private void initBinds() {
         updateFilterLimits();
 
-        //fxFilterPriceFrom.minProperty().bind(minPrice);
-        //fxFilterPriceFrom.maxProperty().bind(maxPrice);
+        fxFilterPriceFrom.minProperty().bind(minPrice);
+        fxFilterPriceFrom.maxProperty().bind(maxPrice);
 
         fxFilterPriceTo.minProperty().bind(minPrice);
         fxFilterPriceTo.maxProperty().bind(maxPrice);
