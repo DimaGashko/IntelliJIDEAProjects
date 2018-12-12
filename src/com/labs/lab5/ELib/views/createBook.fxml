@@ -15,7 +15,7 @@
             <children>
                 <VBox alignment="CENTER" styleClass="header">
                     <children>
-                        <Label fx:id="fxTitle" styleClass="header__title" text="Add New Book" />
+                        <Label fx:id="fxTitle" styleClass="header__title" text="${controller.title}" />
                     </children>
                <padding>
                   <Insets bottom="35.0" left="25.0" right="25.0" top="35.0" />

@@ -16,10 +16,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CreateBook implements Initializable {
-    private List<HandlerFunction> onCancelListeners = new ArrayList<>();
-    private List<HandlerFunction> onSaveListeners = new ArrayList<>();
-
-    @FXML private Label fxTitle;
     @FXML private JFXTextField fxName;
     @FXML private JFXTextField fxAuthor;
     @FXML private JFXTextField fxPublisher;
@@ -29,6 +25,11 @@ public class CreateBook implements Initializable {
 
     @FXML public void fxOnSave() { onSave(); }
     @FXML public void fxOnCancel() { onCancel(); }
+
+    private List<HandlerFunction> onCancelListeners = new ArrayList<>();
+    private List<HandlerFunction> onSaveListeners = new ArrayList<>();
+
+    private String title = "Create New Book";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -45,10 +46,6 @@ public class CreateBook implements Initializable {
         LocalDate date = fxDate.getValue();
 
         return new Book(name, author, publisher, date, pages, price);
-    }
-
-    public void setTitle(String title) {
-        fxTitle.setText(title);
     }
 
     public void setValuesBy(Book book) {
@@ -109,5 +106,13 @@ public class CreateBook implements Initializable {
 
     public List<HandlerFunction> getOnSaveListeners() {
         return onSaveListeners;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
