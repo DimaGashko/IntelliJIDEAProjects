@@ -1,10 +1,12 @@
 package com.labs.lab5.ELib;
 
+import com.labs.lab5.ELib.windows.WindowAddBook;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -32,7 +34,9 @@ public class ELib extends Application {
 
         mainWindow.show();
 
-        
+        WindowAddBook addBook = new WindowAddBook();
+
+        mainWindow.initModality(Modality.WINDOW_MODAL);
     }
 
     public static void main(String[] args) {
