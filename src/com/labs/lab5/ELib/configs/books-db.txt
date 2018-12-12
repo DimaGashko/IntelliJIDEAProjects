@@ -1,48 +1,7 @@
 The Great Gatsby;F. Scott Fitzgerald;Interlink Publishing Online;1697-12-08;417;1063.0
 Nineteen Eighty-Four;George Orwell;Catbird Press;1366-12-03;895;209.0
-Ulysses;James Joyce;Overlook Press;1230-12-12;208;583.0
-Lolitka;Vladimir Nabokov;Picador UK;1293-12-10;1003;472.0
-Catch-22;Joseph Heller;Northwestern University Press;1186-12-05;676;831.0
-The Catcher in the Rye;J. D. Salinger;Indiana University Press;1903-12-15;356;927.0
-Beloved;Toni Morrison;Creation Books;1270-12-06;118;836.0
-The Sound and the Fury;William Faulkner;English;1488-12-19;40;313.0
-To Kill a Mockingbird  ;Harper Lee;Page information;1278-12-17;488;404.0
-The Lord of the Rings;J. R. R. Tolkien;Wikidata item;1282-12-02;804;170.0
-One Hundred Years of Solitude;Gabriel García Márquez;Simple talk;1224-12-24;159;717.0
-Brave New World;Aldous Huxley;Disclaimers;1732-12-02;134;882.0
-To the Lighthouse;Virginia Woolf;Paulist Press;1700-12-02;613;628.0
-Invisible Man;Ralph Ellison;Penguin Classics;1752-12-17;845;422.0
-Gone with the Wind ;Margaret Mitchell;Atlas Press;1307-12-03;357;588.0
-Jane Eyre;Charlotte Brontë;Show any page;1641-12-17;697;764.0
-On the Road;Jack Kerouac;Harvard University Press;1930-12-24;911;952.0
-Pride and Prejudice;Jane Austen;University of Chicago Press;1962-12-06;745;941.0
-Lord of the Flies;William Golding;MIT Press;1408-12-05;847;790.0
-Middlemarch;George Eliot;Welcome to Random House;1101-12-09;927;289.0
-Anna Karenina;Leo Tolstoy;Developers;1672-12-02;310;376.0
-Animal Farm;George Orwell;Central European University Press;1495-12-22;862;259.0
-A Passage to India;E. M. Forster;Thames & Hudson (USA);1163-12-25;585;283.0
-In Search of Lost Time;Marcel Proust;Godine Publishing;1113-12-23;309;637.0
-Wuthering Heights;Emily Brontë;Ivan R. Dee;1864-12-18;862;899.0
-The Chronicles of Narnia;C. S. Lewis;Harvard University Press;1089-12-07;951;1088.0
-The Color Purple;Alice Walker;Northwestern University Press;1594-12-09;833;851.0
-Midnight's Children;Salman Rushdie;Vintage Books at Random House (UK);1988-12-05;232;855.0
-A Portrait of the Artist as a Young Man;James Joyce;Harvard University Press;1795-12-19;879;858.0
-Winnie-the-Pooh;A. A. Milne;Open Court Book;1591-12-08;691;649.0
-Heart of Darkness;Joseph Conrad;Upload file;1937-12-12;563;87.0
-Mrs Dalloway;Virginia Woolf;Hesperus press;1219-12-15;1006;924.0
-Slaughterhouse-Five;Kurt Vonnegut;Tuttle Publishing;1544-12-23;1029;753.0
-War and Peace;Leo Tolstoy;Atlas Press;1414-12-19;576;779.0
-Of Mice and Men;John Steinbeck;Dover Publications;1261-12-04;1117;961.0
-Moby-Dick;Herman Melville;Show any page;1094-12-25;1025;406.0
-Little Women ;Louisa May Alcott;Text is available under the Creative Commons Attribution/Share-Alike License and the GFDL additional terms may apply. See Terms of Use for details.;1830-12-12;207;273.0
-Native Son;Richard Wright;Mobile view;2016-12-07;960;263.0
-The Hitchhiker's Guide to the Galaxy;Douglas Adams;University of California Press Books;1823-12-15;592;548.0
-Great Expectations;Charles Dickens;Wordsworth Editions Website;1295-12-18;290;732.0
-The Sun Also Rises;Ernest Hemingway;Hackett;1428-12-15;1011;305.0
-Rebecca;Daphne du Maurier;Enable previews;1646-12-03;1098;107.0
-The Stranger;Albert Camus;University of California Press Books;1808-12-13;430;815.0
-Alice's Adventures in Wonderland and Through the Looking Glass;Lewis Carroll;Copper Canyon Press;1282-12-10;415;395.0
-For Whom the Bell Tolls;Ernest Hemingway;Download as PDF;1072-12-21;468;218.0
+U_lysses;James Joyce;Overlook Press;1230-12-12;208;583.0
+Lolita;Vladimir Nabokov;Picador UK;1293-12-10;1003;472.0
 The Hobbit;J. R. R. Tolkien;Duckworth Online;1430-12-10;594;654.0
 Madame Bovary;Gustave Flaubert;Godine Publishing;1560-12-11;58;881.0
 The Wind in the Willows;Kenneth Grahame;About Wikipedia;1145-12-05;788;320.0
@@ -621,3 +580,4 @@ The Education of Little Tree;Forrest Carter;Lists;1910-12-08;753;611.0
 The Horse Whisperer;Nicholas Evans;Arcade Publishing;1219-12-25;226;630.0
 Hogg;Samuel R. Delany;NYRB Classics;1284-12-12;292;256.0
 The Grapes of Wrath;John Steinbeck;Steerforth Press;1385-12-12;1013;604.0
+48;48;48;0004-04-04;48;48.0

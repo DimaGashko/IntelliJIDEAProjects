@@ -204,10 +204,14 @@ public class Index implements Initializable {
 
     private void showWindowEditBook() {
         // Редактируется ли уже какая-то книга
-        boolean alreadyEditing = (editingBook != null);
+        Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        boolean alreadyEditing = false;
 
-        if (!alreadyEditing) {
-            editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        if (editingBook != null && editingBook == selected) {
+            alreadyEditing = true;
+
+        } else  {
+            editingBook = selected;
         }
 
         if (editingBook == null) {
