@@ -77,6 +77,9 @@ public class Index implements Initializable {
     private SimpleIntegerProperty minPages = new SimpleIntegerProperty();
     private SimpleIntegerProperty maxPages = new SimpleIntegerProperty();
 
+    //Книга что редактируется в данный момент (проверка на null обязательна)
+    private Book editingBook;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         initBinds();
@@ -174,25 +177,36 @@ public class Index implements Initializable {
     }
 
     private void showWindowEditBook() {
-        Book editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
-        if (editingBook == null) return; //TODO: Alert - Not Selected
+        // Редактируется ли уже какая-то книга
+        boolean alreadyEditing = (editingBook != null);
+
+        if (!alreadyEditing) {
+            editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        }
+
+        if (editingBook == null) {
+            //TODO: Alert - No selected books
+            return;
+        }
 
         if (windowEditBook == null) {
             initWindowEditBook();
         }
 
-        windowEditBook.getController().setValuesBy(editingBook);
+        if (!alreadyEditing) {
+            windowEditBook.getController().setValuesBy(editingBook);
+        }
+
         windowEditBook.getWindow().show();
     }
 
     private void initWindowAddBook() {
         try {
             windowAddBook = new WindowAddBook();
-
             windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
 
         } catch (IOException err) {
-            //TODO: Exception
+            //TODO: Alert - Can't open the window
             System.out.println(err.toString());
         }
     }
@@ -203,12 +217,19 @@ public class Index implements Initializable {
             windowEditBook.getController().getOnSaveListeners().add(this::editBook);
 
         } catch (IOException err) {
-            //TODO: Exception
+            //TODO: Alert - Can't open the window
             System.out.println(err.toString());
         }
     }
 
+    /**
+     * Добавляет новую книгу в storage из windowAddBook
+     */
     private void addNewBook() {
+        if (!windowAddBook.getController().isReady()) {
+            //TODO: Alert - Incorrect data
+        }
+
         storage.add(windowAddBook.getController().create());
 
         windowAddBook.getController().reset();
@@ -218,10 +239,18 @@ public class Index implements Initializable {
 
     /**
      * Редактирует текущюю вибраную книгу
+     * (на деле заменяет текущую выбранную книну на книгу созаную пользователем в windowEditBook)
+     * Для правильной работы нужно убедиться, что за время, пока пользователь
+     * Вводил данные книги выбранная книга в таблице не поменялась
+     * (Например, окно windowEditBook может быть APPLICATION_MODAL)
      */
     private void editBook() {
         Book editingBook = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
-            if (editingBook == null) return; //TODO: Alert - Failed to save changes
+
+        if (editingBook == null) {
+            //TODO: Alert - Failed to save changes
+            return;
+        }
 
         if (!windowEditBook.getController().isReady()) {
             //TODO: Alert - Incorrect data

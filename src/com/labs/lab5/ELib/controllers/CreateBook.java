@@ -73,7 +73,7 @@ public class CreateBook implements Initializable {
      * @return можноли ли формировать новую книгу из введенный в форме данных
      * TODO: реализовать этот метод
      */
-    private boolean isReady() {
+    public boolean isReady() {
         return true;
     }
 
