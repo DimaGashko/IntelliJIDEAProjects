@@ -1,7 +1,5 @@
 Middlemarch;George Eliot;Welcome to Random House;1101-12-09;927;289.0
 Anna Karenina;Leo Tolstoy;Developers;1672-12-02;310;376.0
-Animal Farm;George Orwell;Central European University Press;1495-12-22;862;259.0
-A Passage to India;E. M. Forster;Thames & Hudson (USA);1163-12-25;585;283.0
 In Search of Lost Time;Marcel Proust;Godine Publishing;1113-12-23;309;637.0
 Wuthering Heights;Emily Brontë;Ivan R. Dee;1864-12-18;862;899.0
 The Chronicles of Narnia;C. S. Lewis;Harvard University Press;1089-12-07;951;1088.0

@@ -17,26 +17,19 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CreateBook implements Initializable {
-    @FXML
-    private JFXTextField fxName;
-    @FXML
-    private JFXTextField fxAuthor;
-    @FXML
-    private JFXTextField fxPublisher;
-    @FXML
-    private JFXTextField fxPrice;
-    @FXML
-    private JFXTextField fxPages;
-    @FXML
-    private JFXDatePicker fxDate;
+    @FXML private JFXTextField fxName;
+    @FXML private JFXTextField fxAuthor;
+    @FXML private JFXTextField fxPublisher;
+    @FXML private JFXTextField fxPrice;
+    @FXML private JFXTextField fxPages;
+    @FXML private JFXDatePicker fxDate;
 
     @FXML
-    public void fxOnSave() {
-        onSave();
-    }
+    public void fxOnSave() { onSave(); }
 
     @FXML
     public void fxOnCancel() {
+        title.set(title.getValue() + "1 ");
         onCancel();
     }
 

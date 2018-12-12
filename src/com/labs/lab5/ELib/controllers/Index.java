@@ -9,6 +9,7 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import java.net.URL;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
 
@@ -98,6 +99,22 @@ public class Index implements Initializable {
         initTable();
     }
 
+    private void initBinds() {
+        updateFilterLimits();
+
+        fxFilterPriceFrom.minProperty().bind(minPrice);
+        fxFilterPriceFrom.maxProperty().bind(maxPrice);
+
+        fxFilterPriceTo.minProperty().bind(minPrice);
+        fxFilterPriceTo.maxProperty().bind(maxPrice);
+
+        fxFilterPagesFrom.minProperty().bind(minPages);
+        fxFilterPagesFrom.maxProperty().bind(maxPages);
+
+        fxFilterPagesTo.minProperty().bind(minPages);
+        fxFilterPagesTo.maxProperty().bind(maxPages);
+    }
+
     private void initAlerts() {
         initAlertInfo();
         initAlertConfirm();
@@ -143,22 +160,6 @@ public class Index implements Initializable {
         System.out.println(maxPrice.getValue());
         System.out.println(minPages.getValue());
         System.out.println(maxPages.getValue());
-    }
-
-    private void initBinds() {
-        updateFilterLimits();
-
-        fxFilterPriceFrom.minProperty().bind(minPrice);
-        fxFilterPriceFrom.maxProperty().bind(maxPrice);
-
-        fxFilterPriceTo.minProperty().bind(minPrice);
-        fxFilterPriceTo.maxProperty().bind(maxPrice);
-
-        fxFilterPagesFrom.minProperty().bind(minPages);
-        fxFilterPagesFrom.maxProperty().bind(maxPages);
-
-        fxFilterPagesTo.minProperty().bind(minPages);
-        fxFilterPagesTo.maxProperty().bind(maxPages);
     }
 
     /**
@@ -290,7 +291,7 @@ public class Index implements Initializable {
             return;
         }
 
-        //showAlert(alertConfirm, "Are yor sure?");
+        Optional<ButtonType> answer = showAlert(alertConfirm, "Are yor sure?");
 
         storage.remove(selected);
 
@@ -300,15 +301,15 @@ public class Index implements Initializable {
         fxBooksTable.getSelectionModel().select(selectedIndex);
     }
 
-    private void showAlert(Alert alert, String header, String content) {
+    private Optional<ButtonType> showAlert(Alert alert, String header, String content) {
         alert.setHeaderText(header);
         alert.setContentText(content);
 
-        alert.showAndWait();
+        return alert.showAndWait();
     }
 
-    private void showAlert(Alert alert, String header) {
-        showAlert(alert, header, "");
+    private Optional<ButtonType> showAlert(Alert alert, String header) {
+        return showAlert(alert, header, "");
     }
 
     private void initAlertInfo() {
