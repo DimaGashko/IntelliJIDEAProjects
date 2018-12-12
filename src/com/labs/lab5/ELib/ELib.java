@@ -32,10 +32,6 @@ public class ELib extends Application {
         mainWindow.setMaximized(true);
 
         mainWindow.show();
-
-        WindowAddBook addBook = new WindowAddBook();
-
-        mainWindow.initModality(Modality.WINDOW_MODAL);
     }
 
     public static void main(String[] args) {

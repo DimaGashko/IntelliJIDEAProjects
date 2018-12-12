@@ -34,6 +34,12 @@ public class Index implements Initializable {
     @FXML private JFXDatePicker fxFilterDateFrom;
     @FXML private JFXDatePicker fxFilterDateTo;
     @FXML private TableView fxBooksTable;
+    @FXML private TableColumn fxBooksTableColumnName;
+    @FXML private TableColumn fxBooksTableColumnAuthor;
+    @FXML private TableColumn fxBooksTableColumnPublisher;
+    @FXML private TableColumn fxBooksTableColumnPrice;
+    @FXML private TableColumn fxBooksTableColumnPages;
+    @FXML private TableColumn fxBooksTableColumnDate;
 
     // Menu Events
     @FXML private void fxOnMenuAbout() { onAbout(); }
@@ -285,27 +291,14 @@ public class Index implements Initializable {
     }
 
     private void initTable() {
-        var thName = new TableColumn<Book, String>("Name");
-        var thAuthor = new TableColumn<Book, String>("Author");
-        var thPublisher = new TableColumn<Book, String>("Publisher");
-        var thPrice = new TableColumn<Book, Double>("Price");
-        var thPages = new TableColumn<Book, Integer>("Pages");
-        var thDate = new TableColumn<Book, LocalDate>("Date");
-
-        thName.setCellValueFactory(new PropertyValueFactory<>("name"));
-        thAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
-        thPublisher.setCellValueFactory(new PropertyValueFactory<>("publisher"));
-        thPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
-        thPages.setCellValueFactory(new PropertyValueFactory<>("pages"));
-        thDate.setCellValueFactory(new PropertyValueFactory<>("date"));
-
-        //TODO: minWidth in css
-        thName.setMaxWidth(300);
-        thAuthor.setMaxWidth(300);
-        thPublisher.setMaxWidth(300);
+        fxBooksTableColumnName.setCellValueFactory(new PropertyValueFactory<Book, String>("name"));
+        fxBooksTableColumnAuthor.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
+        fxBooksTableColumnPublisher.setCellValueFactory(new PropertyValueFactory<Book, String>("publisher"));
+        fxBooksTableColumnPrice.setCellValueFactory(new PropertyValueFactory<Book, Double>("price"));
+        fxBooksTableColumnPages.setCellValueFactory(new PropertyValueFactory<Book, Package>("pages"));
+        fxBooksTableColumnDate.setCellValueFactory(new PropertyValueFactory<Book, LocalDate>("date"));
 
         fxBooksTable.setItems(filteredBooks);
-        fxBooksTable.getColumns().addAll(thName, thAuthor, thPublisher, thPrice, thPages, thDate);
     }
 
     private void onAddBook() {
