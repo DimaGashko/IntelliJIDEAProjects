@@ -3,6 +3,7 @@ package com.labs.lab5.ELib.controllers;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
 import com.labs.lab5.ELib.models.storage.IStorage;
+import com.labs.lab5.ELib.windows.Alerts;
 import com.labs.lab5.ELib.windows.WindowCreateBook;
 import com.labs.lab5.ELib.models.storage.TextStorage;
 
@@ -77,9 +78,7 @@ public class Index implements Initializable {
     // Другие окна
     private WindowCreateBook windowAddBook;
     private WindowCreateBook windowEditBook;
-    private Alert alertInfo;
-    private Alert alertConfirm;
-    private Alert alertErr;
+    private Alerts alerts = new Alerts();
 
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
@@ -93,7 +92,6 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initAlerts();
         initStorage();
 
         if (storage == null) {
@@ -121,12 +119,6 @@ public class Index implements Initializable {
 
         fxFilterPagesTo.minProperty().bind(minPages);
         fxFilterPagesTo.maxProperty().bind(maxPages);
-    }
-
-    private void initAlerts() {
-        initAlertInfo();
-        initAlertConfirm();
-        initAlertErr();
     }
 
     private void runFilter() {
@@ -215,7 +207,7 @@ public class Index implements Initializable {
         }
 
         if (editingBook == null) {
-            showAlert(alertInfo,  "No selected books");
+            alerts.show(alerts.getAlertInfo(),  "No selected books");
             return;
         }
 
@@ -236,7 +228,7 @@ public class Index implements Initializable {
             windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
 
         } catch (IOException err) {
-            showAlert(alertErr, "Can't open the window");
+            alerts.show(alerts.getAlertErr(), "Can't open the window");
             System.out.println(err.toString());
         }
     }
@@ -247,7 +239,7 @@ public class Index implements Initializable {
             windowEditBook.getController().getOnSaveListeners().add(this::editBook);
 
         } catch (IOException err) {
-            showAlert(alertErr, "Can't open the window");
+            alerts.show(alerts.getAlertErr(), "Can't open the window");
             System.out.println(err.toString());
         }
     }
@@ -257,14 +249,14 @@ public class Index implements Initializable {
      */
     private void addNewBook() {
         if (!windowAddBook.getController().isReady()) {
-            showAlert(alertErr, "Incorrect data");
+            alerts.show(alerts.getAlertErr(), "Incorrect data");
         }
 
         try {
             storage.add(windowAddBook.getController().create());
 
         } catch ( IOException err) {
-            showAlert(alertErr, "Something's wrong. Can't save the book");
+            alerts.show(alerts.getAlertErr(), "Something's wrong. Can't save the book");
             return;
         }
 
@@ -283,12 +275,12 @@ public class Index implements Initializable {
      */
     private void editBook() {
         if (editingBook == null) {
-            showAlert(alertErr, "Something's wrong. Can't save the changes");
+            alerts.show(alerts.getAlertErr(), "Something's wrong. Can't save the changes");
             return;
         }
 
         if (!windowEditBook.getController().isReady()) {
-            showAlert(alertErr, "Incorrect data");
+            alerts.show(alerts.getAlertErr(), "Incorrect data");
             return;
         }
 
@@ -297,7 +289,7 @@ public class Index implements Initializable {
             storage.replace(editingBook, newBook);
 
         } catch (IOException err) {
-            showAlert(alertErr, "Something's wrong. Can't save the changes");
+            alerts.show(alerts.getAlertErr(), "Something's wrong. Can't save the changes");
         }
 
         windowEditBook.getController().reset();
@@ -314,14 +306,14 @@ public class Index implements Initializable {
         Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
 
         if (selected == null) {
-            showAlert(alertInfo, "No selected books");
+            alerts.show(alerts.getAlertInfo(), "No selected books");
             return;
         }
 
         String mes = "Are you really want to remove '"+ selected.getName() +"'?";
-        var res = (showAlert(alertConfirm, mes));
+        var res = (alerts.show(alerts.getAlertConfirm(), mes));
 
-        if (!_getAnswer(res)) {
+        if (!alerts.getAnswer(res)) {
             return;
         }
 
@@ -330,7 +322,7 @@ public class Index implements Initializable {
 
         } catch (IOException err) {
             //TODO: Stack Trace
-            showAlert(alertErr, "Something's wrong. Can't remove the book");
+            alerts.show(alerts.getAlertErr(), "Something's wrong. Can't remove the book");
         }
 
 
@@ -338,32 +330,6 @@ public class Index implements Initializable {
 
         // Восстановить выделение книги в таблице (обязательно после runFilter)
         fxBooksTable.getSelectionModel().select(selectedIndex);
-    }
-
-    private Optional<ButtonType> showAlert(Alert alert, String header, String content) {
-        alert.setHeaderText(header);
-        alert.setContentText(content);
-
-        return alert.showAndWait();
-    }
-
-    private Optional<ButtonType> showAlert(Alert alert, String header) {
-        return showAlert(alert, header, "");
-    }
-
-    private void initAlertInfo() {
-        alertInfo = new Alert(Alert.AlertType.INFORMATION);
-        alertInfo.setTitle("ELib - your world of books");
-    }
-
-    private void initAlertConfirm() {
-        alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
-        alertConfirm.setTitle("ELib - your world of books");
-    }
-
-    private void initAlertErr() {
-        alertErr = new Alert(Alert.AlertType.ERROR);
-        alertErr.setTitle("ELib - your world of books");
     }
 
     private void initTable() {
@@ -415,15 +381,35 @@ public class Index implements Initializable {
             storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
 
         } catch (IOException err) {
-            showAlert(alertErr, "Can't load the data");
+            alerts.show(alerts.getAlertErr(), "Can't load the data");
 
-            var res = showAlert(alertConfirm, "Try again");
+            var res = alerts.show(alerts.getAlertConfirm(), "Try again");
 
-            if (_getAnswer(res)) {
+            if (alerts.getAnswer(res)) {
                 initStorage();
             }
         }
 
+    }
+
+    /**
+     * Возвращает наиболее подходящий элемент по переданным правилам сравнения
+     * Можно использовать для нахождения минимального/максимального
+     * Элемента массива по необходимому полю
+     * @param items массив
+     * @param compare функция сравнения
+     * @param <T> тип обрабатываемых элементов
+     * @return наиболее подходящий элемент
+     */
+    private <T> T _getSuitable(T[] items, BiFunction<T, T, Boolean> compare) {
+        if (items.length == 0) return null;
+        T res = items[0];
+
+        for (int i = 1; i < items.length; i++) {
+            if (compare.apply(items[i], res)) res = items[i];
+        }
+
+        return res;
     }
 
     public double getMinPrice() {
@@ -472,33 +458,5 @@ public class Index implements Initializable {
 
     private void setMaxPages(int maxPages) {
         this.maxPages.set(maxPages);
-    }
-
-    /**
-     * Возвращает наиболее подходящий элемент по переданным правилам сравнения
-     * Можно использовать для нахождения минимального/максимального
-     * Элемента массива по необходимому полю
-     * @param items массив
-     * @param compare функция сравнения
-     * @param <T> тип обрабатываемых элементов
-     * @return наиболее подходящий элемент
-     */
-    private <T> T _getSuitable(T[] items, BiFunction<T, T, Boolean> compare) {
-        if (items.length == 0) return null;
-        T res = items[0];
-
-        for (int i = 1; i < items.length; i++) {
-            if (compare.apply(items[i], res)) res = items[i];
-        }
-
-        return res;
-    }
-
-    /**
-     * @return Возвращает ответ пользователя в AlertConfirm
-     */
-    private boolean _getAnswer(Optional<ButtonType> option) {
-        // TODO: add isPresent check
-        return (option.get() == ButtonType.OK);
     }
 }
