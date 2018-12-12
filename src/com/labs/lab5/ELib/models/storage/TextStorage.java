@@ -39,7 +39,7 @@ public class TextStorage<T> implements IStorage<T> {
     /**
      * TODO: после внедрения ArrayList убрать аргумент dataClass
      */
-    public TextStorage(String url, StringifyFunction<T> stringify, ParseFunction<T> parse, Class<T> dataClass) {
+    public TextStorage(String url, StringifyFunction<T> stringify, ParseFunction<T> parse, Class<T> dataClass) throws IOException {
         setBufferSize(DEF_BUFFER_SIZE);
 
         setDataClass(dataClass);
@@ -53,18 +53,13 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     @Override
-    public boolean add(T item) {
-        boolean saved = save(item);
-
-        if (saved) {
-            addToArr(item);
-        }
-
-        return saved;
+    public void add(T item) throws IOException {
+        save(item);
+        addToArr(item);
     }
 
     @Override
-    public void addAll(T[] items) {
+    public void addAll(T[] items) throws IOException {
         for (T item : items) {
             add(item);
         }
@@ -85,19 +80,19 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     @Override
-    public boolean remove(T item) {
-        return remove(el -> el.equals(item));
+    public void remove(T item) throws IOException {
+        remove(el -> el.equals(item));
     }
 
     @Override
-    public boolean remove(Predicate<T> isRemoved) {
+    public void remove(Predicate<T> isRemoved) throws IOException {
         T[] newData = Arrays.stream(getArrOfData())
                 // Не через методы типа indexOf
                 // Так как может быть несколько одинковых элементов
                 .filter(el -> !isRemoved.test(el))
                 .toArray(this::_getTArray);
 
-        return setData(newData);
+        setData(newData);
     }
 
     /**
@@ -111,93 +106,52 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     /**
-     * Загружает данные из текстового файла в массив данных
-     * TODO: Exception
-     * TODO: parseErrorsCheck
-     */
-    private void load() {
-        String itemStr;
-
-        try {
-            var reader = new BufferedReader(new FileReader(dataFile));
-
-            while ((itemStr = reader.readLine()) != null) {
-                addToArr(parse.call(itemStr));
-            }
-
-            reader.close();
-
-        } catch (IOException err) {
-
-        }
-
-    }
-
-    /**
      * Сохраняет переданный элемент в текстовом файле
-     *
      * @param item сохраняемый элемент
      */
-    private boolean save(T item) {
-        return _writeStrToFile(stringify.call(item), false);
-    }
-
-    /**
-     * Сохраняет все данные в файл (перезаписывая его)
-     */
-    private boolean resaveAll() {
-        var strItems = Arrays.stream(getArrOfData())
-                .map(T::toString)
-                .toArray(String[]::new);
-
-        return _writeArrStrToFile(strItems, true);
-    }
-
-    public void setStringify(StringifyFunction<T> stringify) {
-        this.stringify = stringify;
-    }
-
-    public void setParse(ParseFunction<T> parse) {
-        this.parse = parse;
-    }
-
-    private void initFile(String url) {
-        dataFile = new File(url);
-
-        // Создает родительские каталоги
-        dataFile.getParentFile().mkdirs();
-    }
-
-    private void setDataClass(Class<T> dataClass) {
-        this.dataClass = dataClass;
-    }
-
-    private void setBufferSize(int bufferSize) {
-        this.bufferSize = bufferSize;
+    private void save(T item) throws IOException {
+        _writeToFile(stringify.call(item), false);
     }
 
     /**
      * Устанавливает новые данные (старые удаляются)
      * @param items новые данные
-     * @return удалось ли установить данные
      */
-    private boolean setData(T[] items) {
+    private void setData(T[] items) throws IOException{
         T[] prevData = data;
+        int prevLen = len;
 
         setCleanDataArr();
+
         len = items.length;
         System.arraycopy(items, 0, data, 0, len);
 
-        boolean saved = resaveAll();
+        try {
+            resaveAll();
 
-        if (!saved) {
+        } catch(IOException err) {
             data = prevData;
-            return false;
-        }
+            len = prevLen;
 
-        return true;
+            throw err;
+        }
     }
 
+    /**
+     * Сохраняет все данные в файл (перезаписывая его)
+     */
+    private void resaveAll() throws IOException {
+        var strItems = Arrays.stream(getArrOfData())
+                .map(T::toString)
+                .toArray(String[]::new);
+
+        _writeToFile(strItems, true);
+    }
+
+    /**
+     * Удаляет все данные из массивов (не влияет на данные в файле)
+     * TODO: удалить после внедрения ArrayList
+     */
     private void setCleanDataArr() {
         data = _getTArray(bufferSize);
         len = 0;
@@ -220,26 +174,32 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     /**
+     * Загружает данные из текстового файла в массив данных
+     */
+    private void load() throws IOException {
+        String itemStr;
+
+        try (var fr = new FileReader(dataFile);
+             var reader = new BufferedReader(fr);
+        ) {
+
+            while ((itemStr = reader.readLine()) != null) {
+                addToArr(parse.call(itemStr));
+            }
+
+        }
+
+    }
+
+    /**
      * Записывает в файл строку
      *
      * @param str   строка для записи
      * @param clean очистить перед записью (либо записывать в конец)
      */
-    private void _writeStrToFile(String str, boolean clean) throws IOException {
-        dataFile.createNewFile();
-
-        try(var fr = new FileWriter(dataFile, !clean);
-            var writer = new PrintWriter(fr)
-        ) {
-
-            if (clean) {
-                writer.print("");
-            }
-
-            writer.println(str);
-
-        }
-
+    private void _writeToFile(String str, boolean clean) throws IOException {
+        String[] strs = {str};
+        _writeToFile(strs, clean);
     }
 
     /**
@@ -248,7 +208,7 @@ public class TextStorage<T> implements IStorage<T> {
      * @param strs  массив строк для записи
      * @param clean запись в конец файла
      */
-    private void _writeArrStrToFile(String[] strs, boolean clean) throws IOException {
+    private void _writeToFile(String[] strs, boolean clean) throws IOException {
         dataFile.createNewFile();
 
         try(var fr = new FileWriter(dataFile, !clean);
@@ -266,4 +226,26 @@ public class TextStorage<T> implements IStorage<T> {
         }
     }
 
+    private void initFile(String url) {
+        dataFile = new File(url);
+
+        // Создает родительские каталоги
+        dataFile.getParentFile().mkdirs();
+    }
+
+    private void setDataClass(Class<T> dataClass) {
+        this.dataClass = dataClass;
+    }
+
+    private void setBufferSize(int bufferSize) {
+        this.bufferSize = bufferSize;
+    }
+
+    public void setStringify(StringifyFunction<T> stringify) {
+        this.stringify = stringify;
+    }
+
+    public void setParse(ParseFunction<T> parse) {
+        this.parse = parse;
+    }
 }

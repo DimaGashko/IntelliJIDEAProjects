@@ -1,5 +1,6 @@
 package com.labs.lab5.ELib.models.storage;
 
+import java.io.IOException;
 import java.util.function.Predicate;
 
 /**
@@ -13,13 +14,13 @@ public interface IStorage<T> {
      * @param item добавляемый элемент
      * @return удалось ли добавить элемент
      */
-    boolean add(T item);
+    void add(T item) throws IOException;
 
     /**
      * Добавляет в хранилище массив переданных элементов
      * @param items массив элементов
      */
-    void addAll(T[] items);
+    void addAll(T[] items) throws IOException;
 
     /**
      * @return данных в виде массива
@@ -38,12 +39,12 @@ public interface IStorage<T> {
      * @param item удаляемый элемент
      * @return удалось ли удаление
      */
-    boolean remove(T item);
+    void remove(T item) throws IOException;
 
     /**
      * Удаляет все элементы что удовлетворяют предикату isRemoved
      * @param isRemoved нужно ли удалять элемент
      * @return удалось ли удаление
      */
-    boolean remove(Predicate<T> isRemoved);
+    void remove(Predicate<T> isRemoved) throws IOException
 }
