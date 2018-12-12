@@ -31,6 +31,8 @@ public class ELib extends Application {
         mainWindow.setMaximized(true);
 
         mainWindow.show();
+
+        
     }
 
     public static void main(String[] args) {

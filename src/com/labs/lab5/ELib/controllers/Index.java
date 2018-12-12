@@ -267,12 +267,23 @@ public class Index implements Initializable {
     }
 
     private void removeSelectedBook() {
+        int selectedIndex = fxBooksTable.getSelectionModel().getSelectedIndex();
+
         Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
-        if (selected == null) return; //TODO: Alert - No selected books
+
+        if (selected == null) {
+            //TODO: Alert - No selected books
+            return;
+        }
 
         //TODO: Alert - Are you sure?
+
         storage.remove(selected);
+
         runFilter();
+
+        // Восстановить выделение книги в таблице (обязательно после runFilter)
+        fxBooksTable.getSelectionModel().select(selectedIndex);
     }
 
     private void initTable() {
