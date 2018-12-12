@@ -97,8 +97,14 @@ public class TextStorage<T> implements IStorage<T> {
 
     @Override
     public void replace(T prevItem, T newItem) throws IOException {
-        remove(prevItem);
-        add(newItem);
+        for (int i = 0; i < data.length; i++) {
+            if (!data[i].equals(prevItem)) continue;
+
+            data[i] = newItem;
+            break;
+        }
+
+        resaveAll();
     }
 
     /**

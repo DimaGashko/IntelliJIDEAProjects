@@ -289,8 +289,7 @@ public class Index implements Initializable {
         }
 
         try {
-            //FIXME: null pointer exception
-            Book newBook = windowAddBook.getController().create();
+            Book newBook = windowEditBook.getController().create();
             storage.replace(editingBook, newBook);
 
         } catch (IOException err) {
