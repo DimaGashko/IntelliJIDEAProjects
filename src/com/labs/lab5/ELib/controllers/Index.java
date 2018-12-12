@@ -75,10 +75,9 @@ public class Index implements Initializable {
     // Другие окна
     private WindowCreateBook windowAddBook;
     private WindowCreateBook windowEditBook;
-    private Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);
-    private Alert alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
-    private Alert alertWarn = new Alert(Alert.AlertType.WARNING);
-    private Alert alertErr = new Alert(Alert.AlertType.ERROR);
+    private Alert alertInfo;
+    private Alert alertConfirm;
+    private Alert alertErr;
 
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
@@ -92,10 +91,17 @@ public class Index implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        initAlerts();
         initBinds();
         resetFilters();
         runFilter();
         initTable();
+    }
+
+    private void initAlerts() {
+        initAlertInfo();
+        initAlertConfirm();
+        initAlertErr();
     }
 
     private void runFilter() {
@@ -193,7 +199,7 @@ public class Index implements Initializable {
         }
 
         if (editingBook == null) {
-            //TODO: Alert - No selected books
+            showAlert(alertInfo,  "No selected books");
             return;
         }
 
@@ -292,6 +298,32 @@ public class Index implements Initializable {
 
         // Восстановить выделение книги в таблице (обязательно после runFilter)
         fxBooksTable.getSelectionModel().select(selectedIndex);
+    }
+
+    private void showAlert(Alert alert, String header, String content) {
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+
+        alert.showAndWait();
+    }
+
+    private void showAlert(Alert alert, String header) {
+        showAlert(alert, header, "");
+    }
+
+    private void initAlertInfo() {
+        alertInfo = new Alert(Alert.AlertType.INFORMATION);
+        alertInfo.setTitle("ELib - your world of books");
+    }
+
+    private void initAlertConfirm() {
+        alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
+        alertInfo.setTitle("ELib - your world of books");
+    }
+
+    private void initAlertErr() {
+        alertErr = new Alert(Alert.AlertType.ERROR);
+        alertInfo.setTitle("ELib - your world of books");
     }
 
     private void initTable() {
