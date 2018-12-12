@@ -46,7 +46,6 @@ public class WindowCreateBook extends BaseWindow<CreateBook> {
         Scene scene = new Scene(root);
 
         controller = loader.getController();
-        window = new Stage();
 
         window.setScene(scene);
 

@@ -2,6 +2,7 @@ package com.labs.lab5.ELib.controllers;
 
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;
+import com.labs.lab5.ELib.models.HandlerFunction;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.windows.Alerts;
 import com.labs.lab5.ELib.windows.WindowCreateBook;
@@ -10,6 +11,8 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import java.net.URL;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.function.BiFunction;
@@ -87,13 +90,22 @@ public class Index implements Initializable {
     private final IntegerProperty minPages = new SimpleIntegerProperty(20);
     private final IntegerProperty maxPages = new SimpleIntegerProperty(100);
 
-    //Книга что редактируется в данный момент (проверка на null обязательна)
+    // Книга что редактируется в данный момент (проверка на null обязательна)
     private Book editingBook;
+
+    // Функция закритыя окна
+    private HandlerFunction onExit;
+
+    public Index() {
+
+    }
+
+    public Index(IStorage<Book> storage) {
+        this.storage = storage;
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        initStorage();
-
         if (storage == null) {
             onExit();
             return;
@@ -187,10 +199,7 @@ public class Index implements Initializable {
     }
 
     private void showWindowAddBook() {
-        if (windowAddBook == null) {
-            initWindowAddBook();
-        }
-
+        initWindowAddBook();
         windowAddBook.getWindow().show();
     }
 
@@ -211,9 +220,7 @@ public class Index implements Initializable {
             return;
         }
 
-        if (windowEditBook == null) {
-            initWindowEditBook();
-        }
+        initWindowEditBook();
 
         if (!alreadyEditing) {
             windowEditBook.getController().setValuesBy(editingBook);
@@ -223,6 +230,8 @@ public class Index implements Initializable {
     }
 
     private void initWindowAddBook() {
+        if (windowAddBook != null) return;
+
         try {
             windowAddBook = new WindowCreateBook("Add New Book");
             windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
@@ -234,6 +243,8 @@ public class Index implements Initializable {
     }
 
     private void initWindowEditBook() {
+        if (windowEditBook != null) return;
+
         try {
             windowEditBook = new WindowCreateBook("Edit The Book");
             windowEditBook.getController().getOnSaveListeners().add(this::editBook);
@@ -368,28 +379,12 @@ public class Index implements Initializable {
     }
 
     private void onExit() {
-        System.out.println("Exit");
+        onExit.call();
     }
 
     private void onResetFilters() {
         resetFilters();
         runFilter();
-    }
-
-    private void initStorage() {
-        try {
-            storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
-
-        } catch (IOException err) {
-            alerts.show(alerts.getAlertErr(), "Can't load the data");
-
-            var res = alerts.show(alerts.getAlertConfirm(), "Try again");
-
-            if (alerts.getAnswer(res)) {
-                initStorage();
-            }
-        }
-
     }
 
     /**
@@ -458,5 +453,9 @@ public class Index implements Initializable {
 
     private void setMaxPages(int maxPages) {
         this.maxPages.set(maxPages);
+    }
+
+    public void setOnExit(HandlerFunction handler) {
+        this.onExit = handler;
     }
 }

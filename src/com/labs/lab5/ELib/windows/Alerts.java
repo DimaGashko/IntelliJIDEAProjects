@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public class Alerts {
 
-    private Alert alertInfo;
-    private Alert alertConfirm;
-    private Alert alertErr;
+    static private Alert alertInfo;
+    static private Alert alertConfirm;
+    static private Alert alertErr;
 
     public Alerts() {
         initAlerts();
@@ -41,16 +41,22 @@ public class Alerts {
     }
 
     private void initAlertInfo() {
+        if (alertInfo != null) return;
+
         alertInfo = new Alert(Alert.AlertType.INFORMATION);
         alertInfo.setTitle("ELib - your world of books");
     }
 
     private void initAlertConfirm() {
+        if (alertConfirm != null) return;
+
         alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
         alertConfirm.setTitle("ELib - your world of books");
     }
 
     private void initAlertErr() {
+        if (alertErr != null) return;
+
         alertErr = new Alert(Alert.AlertType.ERROR);
         alertErr.setTitle("ELib - your world of books");
     }

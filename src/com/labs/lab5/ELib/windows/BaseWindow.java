@@ -11,9 +11,27 @@ abstract public class BaseWindow<T> {
     protected Stage window;
     protected T controller;
 
-    BaseWindow() throws IOException {
+    public BaseWindow() throws IOException {
+        init();
+
+        setWindow(new Stage());
+    }
+
+    public BaseWindow(Stage window) throws IOException {
+        setWindow(window);
+
         init();
     }
+
+    private void setWindow(Stage window) {
+        this.window = window;
+    }
+
+    protected void init() throws IOException {
+        load();
+    }
+
+    abstract protected void load() throws IOException;
 
     public Stage getWindow() {
         return window;
@@ -22,10 +40,4 @@ abstract public class BaseWindow<T> {
     public T getController() {
         return controller;
     }
-
-    protected void init() throws IOException {
-        load();
-    }
-
-    abstract protected void load() throws IOException;
 }
