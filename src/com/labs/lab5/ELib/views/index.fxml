@@ -98,6 +98,7 @@
                              <Label styleClass="filterGroup__subtitle" text="To:" />
                            <JFXSlider fx:id="fxFilterPriceTo" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
                          </VBox>
+                         <!-- min="${controller.minPrice}" max="${controller.maxPrice}"-->
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Pages:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />

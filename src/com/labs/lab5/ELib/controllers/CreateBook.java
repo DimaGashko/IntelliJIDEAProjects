@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.HandlerFunction;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -16,20 +17,33 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class CreateBook implements Initializable {
-    @FXML private JFXTextField fxName;
-    @FXML private JFXTextField fxAuthor;
-    @FXML private JFXTextField fxPublisher;
-    @FXML private JFXTextField fxPrice;
-    @FXML private JFXTextField fxPages;
-    @FXML private JFXDatePicker fxDate;
+    @FXML
+    private JFXTextField fxName;
+    @FXML
+    private JFXTextField fxAuthor;
+    @FXML
+    private JFXTextField fxPublisher;
+    @FXML
+    private JFXTextField fxPrice;
+    @FXML
+    private JFXTextField fxPages;
+    @FXML
+    private JFXDatePicker fxDate;
 
-    @FXML public void fxOnSave() { onSave(); }
-    @FXML public void fxOnCancel() { onCancel(); }
+    @FXML
+    public void fxOnSave() {
+        onSave();
+    }
+
+    @FXML
+    public void fxOnCancel() {
+        onCancel();
+    }
 
     private List<HandlerFunction> onCancelListeners = new ArrayList<>();
     private List<HandlerFunction> onSaveListeners = new ArrayList<>();
 
-    private String title = "Create New Book";
+    private SimpleStringProperty title = new SimpleStringProperty("Create New Book");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -84,12 +98,24 @@ public class CreateBook implements Initializable {
         fxPages.getValidators().add(new RequiredFieldValidator(mess));
         fxDate.getValidators().add(new RequiredFieldValidator(mess));
 
-        fxName.focusedProperty().addListener((a, b, c) -> {if (!c) fxName.validate();});
-        fxAuthor.focusedProperty().addListener((a, b, c) -> {if (!c) fxAuthor.validate();});
-        fxPublisher.focusedProperty().addListener((a, b, c) -> {if (!c) fxPublisher.validate();});
-        fxPrice.focusedProperty().addListener((a, b, c) -> {if (!c) fxPrice.validate();});
-        fxPages.focusedProperty().addListener((a, b, c) -> {if (!c) fxPages.validate();});
-        fxDate.focusedProperty().addListener((a, b, c) -> {if (!c) fxDate.validate();});
+        fxName.focusedProperty().addListener((a, b, c) -> {
+            if (!c) fxName.validate();
+        });
+        fxAuthor.focusedProperty().addListener((a, b, c) -> {
+            if (!c) fxAuthor.validate();
+        });
+        fxPublisher.focusedProperty().addListener((a, b, c) -> {
+            if (!c) fxPublisher.validate();
+        });
+        fxPrice.focusedProperty().addListener((a, b, c) -> {
+            if (!c) fxPrice.validate();
+        });
+        fxPages.focusedProperty().addListener((a, b, c) -> {
+            if (!c) fxPages.validate();
+        });
+        fxDate.focusedProperty().addListener((a, b, c) -> {
+            if (!c) fxDate.validate();
+        });
     }
 
     private void onCancel() {
@@ -109,10 +135,15 @@ public class CreateBook implements Initializable {
     }
 
     public String getTitle() {
+        return title.get();
+    }
+
+    public SimpleStringProperty titleProperty() {
         return title;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        this.title.set(title);
     }
 }
+
