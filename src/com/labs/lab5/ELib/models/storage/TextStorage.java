@@ -19,8 +19,7 @@ public class TextStorage<T> implements IStorage<T> {
     //Размер массива для хранения данных
     private int bufferSize;
 
-    //Текстовый файл для хранения данных
-    private File dataFile;
+    private String url;
 
     // Класс хранимих данных
     // Используется для создания new T[]
@@ -47,7 +46,6 @@ public class TextStorage<T> implements IStorage<T> {
         setParse(parse);
 
         setCleanDataArr();
-        initFile(url);
 
         load();
     }
@@ -189,11 +187,9 @@ public class TextStorage<T> implements IStorage<T> {
      * Загружает данные из текстового файла в массив данных
      */
     private void load() throws IOException {
-        dataFile.createNewFile();
-
         String itemStr;
 
-        try (var fr = new FileReader(dataFile);
+        try (var fr = new FileReader(url);
              var reader = new BufferedReader(fr)
         ) {
 
@@ -223,9 +219,7 @@ public class TextStorage<T> implements IStorage<T> {
      * @param clean запись в конец файла
      */
     private void _writeToFile(String[] strs, boolean clean) throws IOException {
-        dataFile.createNewFile();
-
-        try(var fr = new FileWriter(dataFile, !clean);
+        try(var fr = new FileWriter(url, !clean);
             var writer = new PrintWriter(fr)
         ) {
 
@@ -238,13 +232,6 @@ public class TextStorage<T> implements IStorage<T> {
             }
 
         }
-    }
-
-    private void initFile(String url) {
-        dataFile = new File(url);
-
-        // Создает родительские каталоги
-        dataFile.getParentFile().mkdirs();
     }
 
     private void setDataClass(Class<T> dataClass) {

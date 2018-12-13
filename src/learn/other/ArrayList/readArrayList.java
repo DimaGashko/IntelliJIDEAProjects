@@ -8,7 +8,9 @@ import java.util.stream.Stream;
 public class readArrayList {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
-        ArrayList<Test> arr = new ArrayList<>();
+        
+
+        /*ArrayList<Test> arr = new ArrayList<>();
         arr.add(new Test(1, 2));
         arr.add(new Test(2, 3));
         arr.add(new Test(3, 3));
@@ -34,7 +36,7 @@ public class readArrayList {
 
         System.out.println(arr.stream().map(Test::toString).collect(Collectors.joining(" ")));
         System.out.println(arr.stream().map(Test::toString).collect(Collectors.joining(" ")));
-
+*/
     }
 
     static private class Test implements Serializable {
