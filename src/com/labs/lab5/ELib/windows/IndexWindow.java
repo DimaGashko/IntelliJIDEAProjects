@@ -81,18 +81,10 @@ public class IndexWindow extends BaseWindow<Index> {
             storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
 
         } catch (IOException err) {
-            System.err.println(getStackTrace(err));
+            err.printStackTrace();
             //Обработка ошибки происходит в Index.initialize
         }
 
-    }
-
-    private String getStackTrace(Exception e) {
-        StringWriter sw = new StringWriter();
-        PrintWriter pw = new PrintWriter(sw);
-        e.printStackTrace(pw);
-        String s = sw.toString();
-        return s;
     }
 
 }

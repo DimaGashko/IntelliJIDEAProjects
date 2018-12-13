@@ -130,16 +130,16 @@ public class BinaryStorage<T> implements IStorage<T> {
      * Загружает данные из текстового файла в массив данных
      */
     private void load() throws IOException {
-        dataFile.createNewFile();
+        //dataFile.createNewFile();
 
-        try(FileInputStream fis = new FileInputStream("src/com/labs/lab5/ELib/configs/books");
+        try(FileInputStream fis = new FileInputStream("test");
             ObjectInputStream ois = new ObjectInputStream(fis)) {
 
             ArrayList<T> loaded = (ArrayList<T>)ois.readObject();
             if (loaded != null) data = loaded;
 
         } catch (ClassNotFoundException err) {
-            throw new IOException();
+
         }
 
         System.out.println(data);
