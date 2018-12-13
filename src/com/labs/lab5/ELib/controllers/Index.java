@@ -1,4 +1,4 @@
-package com.labs.lab5.ELib.controllers.index;
+package com.labs.lab5.ELib.controllers;
 
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.BookFilters;

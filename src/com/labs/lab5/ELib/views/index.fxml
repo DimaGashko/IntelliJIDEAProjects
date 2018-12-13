@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TableColumn?>
 
-<BorderPane styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.index.Index">
+<BorderPane styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab5.ELib.controllers.Index">
    <top>
       <VBox BorderPane.alignment="CENTER">
          <children>
