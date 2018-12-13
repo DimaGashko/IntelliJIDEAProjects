@@ -236,7 +236,7 @@ public class Index implements Initializable {
 
         try {
             windowAddBook = new WindowCreateBook("Add New Book");
-            windowAddBook.getController().getOnSaveListeners().add(this::addNewBook);
+            windowAddBook.getController().setOnSave(this::addNewBook);
 
         } catch (IOException err) {
             alerts.show(alerts.getAlertErr(), "Can't open the window");
@@ -249,7 +249,7 @@ public class Index implements Initializable {
 
         try {
             windowEditBook = new WindowCreateBook("Edit The Book");
-            windowEditBook.getController().getOnSaveListeners().add(this::editBook);
+            windowEditBook.getController().setOnSave(this::editBook);
 
         } catch (IOException err) {
             alerts.show(alerts.getAlertErr(), "Can't open the window");

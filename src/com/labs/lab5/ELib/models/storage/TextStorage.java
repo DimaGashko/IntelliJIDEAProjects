@@ -52,6 +52,15 @@ public class TextStorage<T> implements IStorage<T> {
         load();
     }
 
+    /**
+     * Функция преобразования объекта в строку
+     * @param <T> тип объекта
+     */
+    @FunctionalInterface
+    public interface StringifyFunction<T> {
+        String call(T item);
+    }
+
     @Override
     public void add(T item) throws IOException {
         save(item);
@@ -190,7 +199,6 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private void load() throws IOException {
         dataFile.createNewFile();
-        dataFile.delete();
 
         String itemStr;
 

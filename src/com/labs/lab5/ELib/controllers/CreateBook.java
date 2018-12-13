@@ -33,14 +33,13 @@ public class CreateBook implements Initializable {
         onCancel();
     }
 
-    private List<HandlerFunction> onCancelListeners = new ArrayList<>();
-    private List<HandlerFunction> onSaveListeners = new ArrayList<>();
+    private HandlerFunction onCancel;
+    private HandlerFunction onSave;
 
     private SimpleStringProperty title = new SimpleStringProperty("Create New Book");
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        title.set(title.getValue() + "In Init ");
         //setValidators();
     }
 
@@ -113,19 +112,19 @@ public class CreateBook implements Initializable {
     }
 
     private void onCancel() {
-        onCancelListeners.forEach(HandlerFunction::call);
+        onCancel.call();
     }
 
     private void onSave() {
-        onSaveListeners.forEach(HandlerFunction::call);
+        onSave.call();
     }
 
-    public List<HandlerFunction> getOnCancelListeners() {
-        return onCancelListeners;
+    public void setOnCancel(HandlerFunction onCancel) {
+        this.onCancel = onCancel;
     }
 
-    public List<HandlerFunction> getOnSaveListeners() {
-        return onSaveListeners;
+    public void setOnSave(HandlerFunction onSave) {
+        this.onSave = onSave;
     }
 
     public String getTitle() {
