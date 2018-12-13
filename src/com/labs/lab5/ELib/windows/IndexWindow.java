@@ -1,7 +1,7 @@
 package com.labs.lab5.ELib.windows;
 
 import com.labs.lab3.part1.library.Book;
-import com.labs.lab5.ELib.controllers.Index;
+import com.labs.lab5.ELib.controllers.index.Index;
 import com.labs.lab5.ELib.models.storage.BinaryStorage;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import javafx.application.Platform;
