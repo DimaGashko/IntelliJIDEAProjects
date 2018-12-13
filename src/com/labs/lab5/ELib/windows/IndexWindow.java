@@ -4,7 +4,6 @@ import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.controllers.Index;
 import com.labs.lab5.ELib.models.storage.BinaryStorage;
 import com.labs.lab5.ELib.models.storage.IStorage;
-import com.labs.lab5.ELib.models.storage.TextStorage;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,9 +12,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
-import java.util.Arrays;
 
 public class IndexWindow extends BaseWindow<Index> {
 

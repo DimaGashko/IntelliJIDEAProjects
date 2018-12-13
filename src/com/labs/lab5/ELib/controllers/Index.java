@@ -75,7 +75,6 @@ public class Index implements Initializable {
     // Фильтры книг
     private BookFilters filters = new BookFilters();
 
-    // Другие окна
     private WindowCreateBook windowAddBook;
     private WindowCreateBook windowEditBook;
     private Alerts alerts = new Alerts();
