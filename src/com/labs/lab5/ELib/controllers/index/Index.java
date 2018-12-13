@@ -6,13 +6,11 @@ import com.labs.lab5.ELib.models.HandlerFunction;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.windows.Alerts;
 import com.labs.lab5.ELib.windows.WindowCreateBook;
-import com.labs.lab5.ELib.models.storage.TextStorage;
 
 import java.net.URL;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.function.BiFunction;
 
 import com.jfoenix.controls.*;
 
@@ -37,13 +35,13 @@ public class Index implements Initializable {
     @FXML private JFXSlider fxFilterPagesTo;
     @FXML private JFXDatePicker fxFilterDateFrom;
     @FXML private JFXDatePicker fxFilterDateTo;
-    @FXML private TableView fxBooksTable;
-    @FXML private TableColumn fxBooksTableColumnName;
-    @FXML private TableColumn fxBooksTableColumnAuthor;
-    @FXML private TableColumn fxBooksTableColumnPublisher;
-    @FXML private TableColumn fxBooksTableColumnPrice;
-    @FXML private TableColumn fxBooksTableColumnPages;
-    @FXML private TableColumn fxBooksTableColumnDate;
+    @FXML private TableView<Book> fxBooksTable;
+    @FXML private TableColumn<Book, String> fxBooksTableColumnName;
+    @FXML private TableColumn<Book, String> fxBooksTableColumnAuthor;
+    @FXML private TableColumn<Book, String> fxBooksTableColumnPublisher;
+    @FXML private TableColumn<Book, Double> fxBooksTableColumnPrice;
+    @FXML private TableColumn<Book, Package> fxBooksTableColumnPages;
+    @FXML private TableColumn<Book, LocalDate> fxBooksTableColumnDate;
 
     // Menu Events
     @FXML private void fxOnMenuAbout() { onAbout(); }
@@ -206,7 +204,7 @@ public class Index implements Initializable {
 
     private void showWindowEditBook() {
         // Редактируется ли уже какая-то книга
-        Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        Book selected = fxBooksTable.getSelectionModel().getSelectedItem();
         boolean alreadyEditing = false;
 
         if (editingBook != null && editingBook == selected) {
@@ -277,6 +275,8 @@ public class Index implements Initializable {
         windowAddBook.getWindow().close();
 
         runFilter();
+
+        fxBooksTable.getSelectionModel().select(newBook);
     }
 
     /**
@@ -287,6 +287,8 @@ public class Index implements Initializable {
      * (Например, окно windowEditBook может быть APPLICATION_MODAL)
      */
     private void editBook() {
+        int selectedIndex = fxBooksTable.getSelectionModel().getSelectedIndex();
+
         if (editingBook == null) {
             alerts.show(alerts.getAlertErr(), "Something's wrong. Can't save the changes");
             return;
@@ -312,10 +314,14 @@ public class Index implements Initializable {
         editingBook = null;
 
         runFilter();
+
+        fxBooksTable.getSelectionModel().select(selectedIndex);
     }
 
     private void removeSelectedBook() {
-        Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
+        int selectedIndex = fxBooksTable.getSelectionModel().getSelectedIndex();
+
+        Book selected = fxBooksTable.getSelectionModel().getSelectedItem();
 
         if (selected == null) {
             alerts.show(alerts.getAlertInfo(), "No selected books");
@@ -338,19 +344,17 @@ public class Index implements Initializable {
 
         runFilter();
 
-        int selectedIndex = fxBooksTable.getSelectionModel().getSelectedIndex();
-
         // Восстановить выделение книги в таблице (обязательно после runFilter)
         fxBooksTable.getSelectionModel().select(selectedIndex);
     }
 
     private void initTable() {
-        fxBooksTableColumnName.setCellValueFactory(new PropertyValueFactory<Book, String>("name"));
-        fxBooksTableColumnAuthor.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
-        fxBooksTableColumnPublisher.setCellValueFactory(new PropertyValueFactory<Book, String>("publisher"));
-        fxBooksTableColumnPrice.setCellValueFactory(new PropertyValueFactory<Book, Double>("price"));
-        fxBooksTableColumnPages.setCellValueFactory(new PropertyValueFactory<Book, Package>("pages"));
-        fxBooksTableColumnDate.setCellValueFactory(new PropertyValueFactory<Book, LocalDate>("date"));
+        fxBooksTableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        fxBooksTableColumnAuthor.setCellValueFactory(new PropertyValueFactory<>("author"));
+        fxBooksTableColumnPublisher.setCellValueFactory(new PropertyValueFactory<>("publisher"));
+        fxBooksTableColumnPrice.setCellValueFactory(new PropertyValueFactory<>("price"));
+        fxBooksTableColumnPages.setCellValueFactory(new PropertyValueFactory<>("pages"));
+        fxBooksTableColumnDate.setCellValueFactory(new PropertyValueFactory<>("date"));
 
         fxBooksTable.setItems(filteredBooks);
     }

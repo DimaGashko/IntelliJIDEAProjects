@@ -176,20 +176,6 @@ public class TextStorage<T> implements IStorage<T> {
         len = 0;
     }
 
-
-    /**
-     * Создает массив new T[len]
-     *
-     * @param len длина массива
-     * @return массив данных
-     */
-    private T[] _getTArray(int len) {
-        @SuppressWarnings("unchecked")
-        var arr = (T[]) Array.newInstance(dataClass, len);
-
-        return arr;
-    }
-
     /**
      * Загружает данные из текстового файла в массив данных
      */
@@ -208,6 +194,19 @@ public class TextStorage<T> implements IStorage<T> {
 
         }
 
+    }
+
+    /**
+     * Создает массив new T[len]
+     *
+     * @param len длина массива
+     * @return массив данных
+     */
+    private T[] _getTArray(int len) {
+        @SuppressWarnings("unchecked")
+        var arr = (T[]) Array.newInstance(dataClass, len);
+
+        return arr;
     }
 
     /**
