@@ -2,6 +2,7 @@ package com.labs.lab5.ELib.models.storage;
 
 import java.io.*;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.Predicate;
@@ -66,10 +67,19 @@ public class TextStorage<T> implements IStorage<T> {
     }
 
     @Override
+    public ArrayList<T> getData() {
+        return new ArrayList<>(Arrays.asList(data));
+    }
+
+    @Override
+    public ArrayList<T> getData(Predicate<T> filter) {
+        T[] res = getArrOfData(filter);
+        return new ArrayList<>(Arrays.asList(res));
+    }
+
+    @Override
     public T[] getArrOfData() {
-        return Arrays.stream(Arrays.copyOf(data, len))
-                .filter(item -> !Objects.isNull(item))
-                .toArray(this::_getTArray);
+        return data.clone();
     }
 
     @Override

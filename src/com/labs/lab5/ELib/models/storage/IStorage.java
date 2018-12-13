@@ -1,6 +1,7 @@
 package com.labs.lab5.ELib.models.storage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.function.Predicate;
 
 /**
@@ -9,6 +10,31 @@ import java.util.function.Predicate;
  * @param <T> класс хранимых данных
  */
 public interface IStorage<T> {
+
+    /**
+     * @return возвращает все сохранненые данные
+     */
+    ArrayList<T> getData();
+
+    /**
+     * Возвращает данные, что удовлетворяют фильтру
+     * @param filter фильтр
+     * @return Возвращает данные, что удовлетворяют фильтру
+     */
+    ArrayList<T> getData(Predicate<T> filter);
+
+    /**
+     * @return данных в виде массива
+     */
+    T[] getArrOfData();
+
+    /**
+     * Возвращает данные (в виде массива), что удовлетворяют придекат filter
+     * @param filter фильтр
+     * @return данные (в виде массива), что удовлетворяют предикат filter
+     */
+    T[] getArrOfData(Predicate<T> filter);
+
     /**
      * Добавляет элемент в хранилище
      * @param item добавляемый элемент
@@ -19,20 +45,9 @@ public interface IStorage<T> {
     /**
      * Добавляет в хранилище массив переданных элементов
      * @param items массив элементов
+     * @throws IOException
      */
     void addAll(T[] items) throws IOException;
-
-    /**
-     * @return данных в виде массива
-     */
-    T[] getArrOfData();
-
-    /**
-     * Возвращает данные (в виде массива), что удовлетворяют придекат filter
-     * @param filter выражение для фильтрации данных
-     * @return данные (в виде массива), что удовлетворяют предикат filter
-     */
-    T[] getArrOfData(Predicate<T> filter);
 
     /**
      * Удаляет из хранилища все элементы, что "equals" к item
