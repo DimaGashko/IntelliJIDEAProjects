@@ -82,10 +82,10 @@ public class Index implements Initializable {
 
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
-    private final DoubleProperty minPrice = new SimpleDoubleProperty(20);
-    private final DoubleProperty maxPrice = new SimpleDoubleProperty(100);
-    private final IntegerProperty minPages = new SimpleIntegerProperty(20);
-    private final IntegerProperty maxPages = new SimpleIntegerProperty(100);
+    private final DoubleProperty minPrice = new SimpleDoubleProperty();
+    private final DoubleProperty maxPrice = new SimpleDoubleProperty();
+    private final IntegerProperty minPages = new SimpleIntegerProperty();
+    private final IntegerProperty maxPages = new SimpleIntegerProperty();
 
     // Книга что редактируется в данный момент (проверка на null обязательна)
     private Book editingBook;
@@ -161,14 +161,20 @@ public class Index implements Initializable {
     private void updateFilterLimits() {
         var books = storage.getArrOfData();
 
-        minPrice.set(Arrays.stream(books).min(Comparator.comparingDouble(Book::getPrice)).get().getPrice() - 10);
-        minPages.set(Arrays.stream(books).min(Comparator.comparingInt(Book::getPages)).get().getPages() - 10);
+        double _minPrice = Arrays.stream(books).min(Comparator.comparingDouble(Book::getPrice)).get().getPrice() - 10;
+        double _maxPrice = Arrays.stream(books).max(Comparator.comparingDouble(Book::getPrice)).get().getPrice() + 10;
 
-        maxPrice.set(Arrays.stream(books).max(Comparator.comparingDouble(Book::getPrice)).get().getPrice() + 10);
-        maxPages.set(Arrays.stream(books).max(Comparator.comparingInt(Book::getPages)).get().getPages() + 10);
+        int _minPages = Arrays.stream(books).min(Comparator.comparingInt(Book::getPages)).get().getPages() - 10;
+        int _maxPages = Arrays.stream(books).max(Comparator.comparingInt(Book::getPages)).get().getPages() + 10;
 
-        if (minPrice.get() < 0) minPrice.set(0);
-        if (minPages.get() < 0) minPages.set(0);
+        if (_minPrice < 0) _minPrice = 0;
+        if (_minPages < 0) _minPages = 0;
+
+        minPrice.set(_minPrice);
+        minPages.set(_minPages);
+
+        maxPrice.set(_maxPrice);
+        maxPages.set(_maxPages);
     }
 
     /**
@@ -326,7 +332,6 @@ public class Index implements Initializable {
             storage.remove(selected);
 
         } catch (IOException err) {
-            //TODO: Stack Trace
             alerts.show(alerts.getAlertErr(), "Something's wrong. Can't remove the book");
         }
 
