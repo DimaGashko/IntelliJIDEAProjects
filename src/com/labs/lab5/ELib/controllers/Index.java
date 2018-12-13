@@ -232,7 +232,6 @@ public class Index implements Initializable {
 
         } catch (IOException err) {
             alerts.show(alerts.getAlertErr(), "Can't open the window");
-            System.out.println(err.toString());
         }
     }
 
@@ -330,7 +329,6 @@ public class Index implements Initializable {
             //TODO: Stack Trace
             alerts.show(alerts.getAlertErr(), "Something's wrong. Can't remove the book");
         }
-
 
         runFilter();
 

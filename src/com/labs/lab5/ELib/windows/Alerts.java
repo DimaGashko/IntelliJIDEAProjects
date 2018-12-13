@@ -3,6 +3,8 @@ package com.labs.lab5.ELib.windows;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Optional;
 
 public class Alerts {
@@ -55,6 +57,7 @@ public class Alerts {
 
         alertErr = new Alert(Alert.AlertType.ERROR);
         alertErr.setTitle("ELib - your world of books");
+        alertErr.getDialogPane().setMaxHeight(400);
     }
 
     private void initAlertWarn() {
@@ -82,5 +85,13 @@ public class Alerts {
     public Alert getAlertWarn() {
         initAlertWarn();
         return alertWarn;
+    }
+
+    public String getStackTrace(Exception err) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+
+        err.printStackTrace(pw);
+        return sw.toString();
     }
 }
