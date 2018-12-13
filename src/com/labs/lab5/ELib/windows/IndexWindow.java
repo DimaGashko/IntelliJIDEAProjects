@@ -49,6 +49,8 @@ public class IndexWindow extends BaseWindow<Index> {
         Image icon = new Image(getClass().getResource("../img/icon.png").toString());
         window.getIcons().add(icon);
 
+        window.setMinWidth(700);
+        window.setMinHeight(400);
 
         window.setMaximized(true);
     }

@@ -77,6 +77,9 @@
                               </Label>
                               <JFXDatePicker fx:id="fxDate" defaultColor="rgba(117,117,117,1)" styleClass="formGroup__date" />
                            </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
                         </HBox>
                      </children>
                   </VBox>
@@ -89,8 +92,8 @@
                <children>
                   <HBox alignment="CENTER" spacing="25.0">
                      <children>
-                        <JFXButton fx:id="fxSave" onAction="#fxOnSave" buttonType="RAISED" styleClass="form__button" text="Save" />
-                        <JFXButton fx:id="sfCancel" onAction="#fxOnCancel" buttonType="RAISED" styleClass="form__button" text="Cancel" />
+                        <JFXButton fx:id="fxSave" buttonType="RAISED" onAction="#fxOnSave" styleClass="form__button" text="Save" />
+                        <JFXButton fx:id="sfCancel" buttonType="RAISED" onAction="#fxOnCancel" styleClass="form__button" text="Cancel" />
                      </children>
                   </HBox>
                </children>

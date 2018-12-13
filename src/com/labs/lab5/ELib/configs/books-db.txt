@@ -620,3 +620,5 @@ The Second World War;Winston S. Churchill;Kessinger Publishing;1754-12-06;469;61
 The Education of Little Tree;Forrest Carter;Lists;1910-12-08;753;611.0
 The Horse Whisperer;Nicholas Evans;Arcade Publishing;1219-12-25;226;630.0
 Hogg;Samuel R. Delany;NYRB Classics;1284-12-12;292;256.0
+asdf;asdf;asdf;2018-12-26;15;15.0
+ол;одл;олд;2018-12-18;12;11.0

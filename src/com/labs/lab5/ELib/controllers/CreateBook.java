@@ -2,11 +2,18 @@ package com.labs.lab5.ELib.controllers;
 
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.base.IFXLabelFloatControl;
+import com.jfoenix.controls.base.IFXValidatableControl;
+import com.jfoenix.validation.DoubleValidator;
+import com.jfoenix.validation.IntegerValidator;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.HandlerFunction;
 import com.labs.lab5.ELib.windows.Alerts;
+import javafx.beans.property.ReadOnlyBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -34,7 +41,7 @@ public class CreateBook implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setValidators();
+        initValidators();
     }
 
     /**
@@ -93,14 +100,18 @@ public class CreateBook implements Initializable {
 
     }
 
-    public void setValidators() {
-        String mess = "Required field";
+    private void initValidators() {
+        var required = new RequiredFieldValidator("Required field");
 
-        fxName.getValidators().add(new RequiredFieldValidator(mess));
+        fxName.getValidators().add(required);
+        fxAuthor.getValidators().add(required);
+        fxPublisher.getValidators().add(required);
+        fxPrice.getValidators().add(required);
+        fxPages.getValidators().add(required);
+        fxDate.getValidators().add(required);
 
-        fxName.focusedProperty().addListener((a, b, c) -> {
-            if (!c) fxName.validate();
-        });
+        fxPrice.getValidators().add(new DoubleValidator("Not a number"));
+        fxPrice.getValidators().add(new IntegerValidator("Not an integer"));
     }
 
     private void onCancel() {
@@ -109,7 +120,7 @@ public class CreateBook implements Initializable {
 
     private void onSave() {
         if (!isReady()) {
-            alerts.show(alerts.getAlertWarn(), "Incorrect Data");
+            alerts.show(alerts.getAlertWarn(), "Check your inputs");
             return;
         }
 
