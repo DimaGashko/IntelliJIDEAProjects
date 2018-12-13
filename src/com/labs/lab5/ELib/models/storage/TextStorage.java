@@ -190,6 +190,7 @@ public class TextStorage<T> implements IStorage<T> {
      */
     private void load() throws IOException {
         dataFile.createNewFile();
+        dataFile.delete();
 
         String itemStr;
 

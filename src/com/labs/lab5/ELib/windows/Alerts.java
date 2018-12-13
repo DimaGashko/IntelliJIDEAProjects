@@ -12,14 +12,9 @@ public class Alerts {
     static private Alert alertErr;
 
     public Alerts() {
-        initAlerts();
+
     }
 
-    private void initAlerts() {
-        initAlertInfo();
-        initAlertConfirm();
-        initAlertErr();
-    }
 
     public Optional<ButtonType> show(Alert alert, String header, String content) {
         alert.setHeaderText(header);
@@ -55,21 +50,24 @@ public class Alerts {
     }
 
     private void initAlertErr() {
-        if (alertErr != null) return;
-
+        //if (alertErr != null) return;
         alertErr = new Alert(Alert.AlertType.ERROR);
+
         alertErr.setTitle("ELib - your world of books");
     }
 
     public Alert getAlertInfo() {
+        initAlertInfo();
         return alertInfo;
     }
 
     public Alert getAlertConfirm() {
+        initAlertConfirm();
         return alertConfirm;
     }
 
     public Alert getAlertErr() {
+        initAlertErr();
         return alertErr;
     }
 }

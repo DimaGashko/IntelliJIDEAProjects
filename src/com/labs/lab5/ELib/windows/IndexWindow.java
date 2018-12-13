@@ -4,6 +4,7 @@ import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.controllers.Index;
 import com.labs.lab5.ELib.models.storage.IStorage;
 import com.labs.lab5.ELib.models.storage.TextStorage;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -20,10 +21,10 @@ public class IndexWindow extends BaseWindow<Index> {
     // Хранилице книг - содежит все книги
     private IStorage<Book> storage;
 
-    private Alerts alerts;
+    private Alerts alerts = new Alerts();
 
     private IndexWindow() throws IOException {
-        super();
+
     }
 
     public IndexWindow(Stage window) throws IOException {
@@ -31,6 +32,8 @@ public class IndexWindow extends BaseWindow<Index> {
     }
 
     protected void load() throws IOException {
+        initStorage();
+
         var loader = new FXMLLoader(getClass().getResource("../views/index.fxml"));
         loader.setControllerFactory(this::controllerFactory);
 
@@ -51,12 +54,16 @@ public class IndexWindow extends BaseWindow<Index> {
     }
 
     private Index controllerFactory(Class<?> type) {
-        initStorage();
-
         Index index = new Index(storage);
-        index.setOnExit(() -> window.close());
+        index.setOnExit(this::onExit);
 
         return index;
+    }
+
+    private void onExit() {
+        window.close();
+        Platform.exit();
+        System.exit(0);
     }
 
     private void initStorage() {
@@ -64,16 +71,10 @@ public class IndexWindow extends BaseWindow<Index> {
 
         try {
             storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
-            storage = null;
 
         } catch (IOException err) {
-            alerts.show(alerts.getAlertErr(), "Can't load the data");
+            //Обработка ошибки происходит в Index.initialize
 
-            var res = alerts.show(alerts.getAlertConfirm(), "Try again");
-
-            if (alerts.getAnswer(res)) {
-                initStorage();
-            }
         }
 
     }

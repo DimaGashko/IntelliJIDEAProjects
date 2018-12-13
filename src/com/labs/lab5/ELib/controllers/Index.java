@@ -107,6 +107,8 @@ public class Index implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         if (storage == null) {
+            alerts.show(alerts.getAlertErr(), "Sorry, something have broken. Can't run the app");
+
             onExit();
             return;
         }
