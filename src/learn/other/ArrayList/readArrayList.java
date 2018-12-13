@@ -1,5 +1,7 @@
 package learn.other.ArrayList;
 
+import com.labs.lab3.part1.library.Book;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -8,33 +10,32 @@ import java.util.stream.Stream;
 public class readArrayList {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
+        ArrayList<Book> arr = new ArrayList<>();
+        /*arr.add(new Book("a", "a", "a", 1,1,1));
+        arr.add(new Book("b", "b", "b", 2,2,2));
+        arr.add(new Book("c", "c", "c", 3,3,3));
 
-        ArrayList<Test> arr = new ArrayList<>();
-        arr.add(new Test(1, 2));
-        arr.add(new Test(2, 3));
-        arr.add(new Test(3, 3));
-        arr.add(new Test(4, 5));
-        arr.add(new Test(5, 8));
-
-        try(FileOutputStream fis = new FileOutputStream("test", true);
+        try(FileOutputStream fis = new FileOutputStream("test");
             ObjectOutputStream ois = new ObjectOutputStream(fis)) {
 
             ois.writeObject(arr);
 
-        }
+        }*/
 
-        ArrayList<Test> arr2 = new ArrayList<>();
+        ArrayList<Book> arr2 = new ArrayList<>();
 
-        try(FileInputStream fis = new FileInputStream("test/a");
+        try(FileInputStream fis = new FileInputStream("test");
             ObjectInputStream ois = new ObjectInputStream(fis)) {
 
-            ArrayList<Test> loaded = (ArrayList<Test>)ois.readObject();
+            ArrayList<Book> loaded = (ArrayList<Book>)ois.readObject();
             if (loaded != null) arr2 = loaded;
 
+        } catch (EOFException err) {
+            System.out.println("No Data");
         }
 
-        System.out.println(arr.stream().map(Test::toString).collect(Collectors.joining(" ")));
-        System.out.println(arr.stream().map(Test::toString).collect(Collectors.joining(" ")));
+        System.out.println(arr.stream().map(Book::getName).collect(Collectors.joining(" ")));
+        System.out.println(arr2.stream().map(Book::getName).collect(Collectors.joining(" ")));
 
     }
 
