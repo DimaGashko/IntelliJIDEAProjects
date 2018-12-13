@@ -261,12 +261,14 @@ public class Index implements Initializable {
      * Добавляет новую книгу в storage из windowAddBook
      */
     private void addNewBook() {
-        if (!windowAddBook.getController().isReady()) {
+        Book newBook = windowAddBook.getController().create();
+
+        if (newBook == null) {
             alerts.show(alerts.getAlertErr(), "Incorrect data");
         }
 
         try {
-            storage.add(windowAddBook.getController().create());
+            storage.add(newBook);
 
         } catch ( IOException err) {
             alerts.show(alerts.getAlertErr(), "Something's wrong. Can't save the book");
@@ -292,14 +294,15 @@ public class Index implements Initializable {
             return;
         }
 
-        if (!windowEditBook.getController().isReady()) {
+        Book edited = windowEditBook.getController().create();
+
+        if (edited == null) {
             alerts.show(alerts.getAlertErr(), "Incorrect data");
             return;
         }
 
         try {
-            Book newBook = windowEditBook.getController().create();
-            storage.replace(editingBook, newBook);
+            storage.replace(editingBook, edited);
 
         } catch (IOException err) {
             alerts.show(alerts.getAlertErr(), "Something's wrong. Can't save the changes");
@@ -314,8 +317,6 @@ public class Index implements Initializable {
     }
 
     private void removeSelectedBook() {
-        int selectedIndex = fxBooksTable.getSelectionModel().getSelectedIndex();
-
         Book selected = (Book)fxBooksTable.getSelectionModel().getSelectedItem();
 
         if (selected == null) {
@@ -340,6 +341,8 @@ public class Index implements Initializable {
 
 
         runFilter();
+
+        int selectedIndex = fxBooksTable.getSelectionModel().getSelectedIndex();
 
         // Восстановить выделение книги в таблице (обязательно после runFilter)
         fxBooksTable.getSelectionModel().select(selectedIndex);

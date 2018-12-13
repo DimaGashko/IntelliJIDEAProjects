@@ -31,7 +31,7 @@ public class CreateBook implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        //setValidators();
+        setValidators();
     }
 
     /**
@@ -39,6 +39,10 @@ public class CreateBook implements Initializable {
      * @return книга созданная на основании введенних данных
      */
     public Book create() {
+        if (!isReady()) {
+            return null;
+        }
+
         String name = fxName.getText();
         String author = fxAuthor.getText();
         String publisher = fxPublisher.getText();
@@ -90,29 +94,9 @@ public class CreateBook implements Initializable {
         String mess = "Required field";
 
         fxName.getValidators().add(new RequiredFieldValidator(mess));
-        fxAuthor.getValidators().add(new RequiredFieldValidator(mess));
-        fxPublisher.getValidators().add(new RequiredFieldValidator(mess));
-        fxPrice.getValidators().add(new RequiredFieldValidator(mess));
-        fxPages.getValidators().add(new RequiredFieldValidator(mess));
-        fxDate.getValidators().add(new RequiredFieldValidator(mess));
 
         fxName.focusedProperty().addListener((a, b, c) -> {
             if (!c) fxName.validate();
-        });
-        fxAuthor.focusedProperty().addListener((a, b, c) -> {
-            if (!c) fxAuthor.validate();
-        });
-        fxPublisher.focusedProperty().addListener((a, b, c) -> {
-            if (!c) fxPublisher.validate();
-        });
-        fxPrice.focusedProperty().addListener((a, b, c) -> {
-            if (!c) fxPrice.validate();
-        });
-        fxPages.focusedProperty().addListener((a, b, c) -> {
-            if (!c) fxPages.validate();
-        });
-        fxDate.focusedProperty().addListener((a, b, c) -> {
-            if (!c) fxDate.validate();
         });
     }
 

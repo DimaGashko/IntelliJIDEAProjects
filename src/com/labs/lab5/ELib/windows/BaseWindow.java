@@ -12,9 +12,7 @@ abstract public class BaseWindow<T> {
     protected T controller;
 
     public BaseWindow() throws IOException {
-        init();
-
-        setWindow(new Stage());
+        this(new Stage());
     }
 
     public BaseWindow(Stage window) throws IOException {

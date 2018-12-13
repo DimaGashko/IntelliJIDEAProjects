@@ -1,8 +1,8 @@
 The Great Gatsby;F. Scott Fitzgerald;Interlink Publishing Online;1697-12-08;417;1063.0
 The Grapes of Wrath;John Steinbeck;Steerforth Press;1385-12-12;1014;604.0
 Nineteen Eighty-Four;George Orwell;Catbird Press;1366-12-03;895;209.0
-Lolita;Vladimir Nabokov;Picador UK;1293-12-10;1003;472.0
-Catch-22;Joseph Heller;Northwestern University Press;1186-12-05;676;831.0
+Lolita;Vladimir Nabok;Picador UKK;1293-12-10;1003;472.0
+Catch-2;Joseph Heller;Northwestern University Press;1186-12-05;676;831.0
 The Catcher in the Rye;J. D. Salinger;Indiana University Press;1903-12-15;356;927.0
 Beloved;Toni Morrison;Creation Books;1270-12-06;118;836.0
 The Sound and the Fury;William Faulkner;English;1488-12-19;40;313.0
