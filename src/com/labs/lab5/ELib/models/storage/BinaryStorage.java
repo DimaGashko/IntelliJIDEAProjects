@@ -2,6 +2,7 @@ package com.labs.lab5.ELib.models.storage;
 
 import java.io.*;
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Objects;
 import java.util.function.Predicate;
@@ -9,62 +10,24 @@ import java.util.function.Predicate;
 /**
  * Класс для хранения данных на основании текстового файла
  * @param <T> класс хранимых данных
- * @version 0.0.0.1
- *
- * TODO: заменить Array на ArrayList
  */
-public class FileStorage<T> implements IStorage<T> {
-    static final private int DEF_BUFFER_SIZE = 1000;
+public class BinaryStorage<T> implements IStorage<T> {
 
-    //Размер массива для хранения данных
-    private int bufferSize;
-
-    //Текстовый файл для хранения данных
+    // Текстовый файл для хранения данных
     private File dataFile;
 
-    // Класс хранимих данных
-    // Используется для создания new T[]
-    // TODO: убрать после внедрения ArrayList
-    private Class<T> dataClass;
+    // Хранимые данные
+    private ArrayList<T> data = new ArrayList<>();
 
-    // Массив хранимых данных
-    private T[] data;
-
-    // Количество данных
-    private int len;
-
-    private StringifyFunction<T> stringify;
-    private ParseFunction<T> parse;
-
-    /**
-     * TODO: после внедрения ArrayList убрать аргумент dataClass
-     */
-    public FileStorage(String url, StringifyFunction<T> stringify, ParseFunction<T> parse, Class<T> dataClass) throws IOException {
-        setBufferSize(DEF_BUFFER_SIZE);
-
-        setDataClass(dataClass);
-        setStringify(stringify);
-        setParse(parse);
-
-        setCleanDataArr();
+    public BinaryStorage(String url) throws IOException {
         initFile(url);
-
         load();
-    }
-
-    /**
-     * Функция преобразования объекта в строку
-     * @param <T> тип объекта
-     */
-    @FunctionalInterface
-    public interface StringifyFunction<T> {
-        String call(T item);
     }
 
     @Override
     public void add(T item) throws IOException {
         save(item);
-        addToArr(item);
+        data.add(item);
     }
 
     @Override
@@ -76,16 +39,12 @@ public class FileStorage<T> implements IStorage<T> {
 
     @Override
     public T[] getArrOfData() {
-        return Arrays.stream(Arrays.copyOf(data, len))
-                .filter(item -> !Objects.isNull(item))
-                .toArray(this::_getTArray);
+        return data.toArray();
     }
 
     @Override
-    public T[] getArrOfData(Predicate<T> filter) {
-        return Arrays.stream(getArrOfData())
-                .filter(filter)
-                .toArray(this::_getTArray);
+    public ArrayList getArrOfData(Predicate<T> filter) {
+        return data.stream().filter(filter);
     }
 
     @Override
@@ -200,17 +159,7 @@ public class FileStorage<T> implements IStorage<T> {
     private void load() throws IOException {
         dataFile.createNewFile();
 
-        String itemStr;
 
-        try (var fr = new FileReader(dataFile);
-             var reader = new BufferedReader(fr)
-        ) {
-
-            while ((itemStr = reader.readLine()) != null) {
-                addToArr(parse.call(itemStr));
-            }
-
-        }
 
     }
 

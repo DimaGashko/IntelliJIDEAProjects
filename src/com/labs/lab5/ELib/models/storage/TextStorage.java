@@ -9,7 +9,6 @@ import java.util.function.Predicate;
 /**
  * Класс для хранения данных на основании текстового файла
  * @param <T> класс хранимых данных
- * @version 0.0.0.1
  *
  * TODO: заменить Array на ArrayList
  */
