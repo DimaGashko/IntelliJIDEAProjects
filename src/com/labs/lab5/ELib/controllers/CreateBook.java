@@ -146,5 +146,53 @@ public class CreateBook implements Initializable {
     public void setTitle(String title) {
         this.title.set(title);
     }
+
+    public JFXTextField getFxName() {
+        return fxName;
+    }
+
+    public void setFxName(JFXTextField fxName) {
+        this.fxName = fxName;
+    }
+
+    public JFXTextField getFxAuthor() {
+        return fxAuthor;
+    }
+
+    public void setFxAuthor(JFXTextField fxAuthor) {
+        this.fxAuthor = fxAuthor;
+    }
+
+    public JFXTextField getFxPublisher() {
+        return fxPublisher;
+    }
+
+    public void setFxPublisher(JFXTextField fxPublisher) {
+        this.fxPublisher = fxPublisher;
+    }
+
+    public JFXTextField getFxPrice() {
+        return fxPrice;
+    }
+
+    public void setFxPrice(JFXTextField fxPrice) {
+        this.fxPrice = fxPrice;
+    }
+
+    public JFXTextField getFxPages() {
+        return fxPages;
+    }
+
+    public void setFxPages(JFXTextField fxPages) {
+        this.fxPages = fxPages;
+    }
+
+    public JFXDatePicker getFxDate() {
+        return fxDate;
+    }
+
+    public void setFxDate(JFXDatePicker fxDate) {
+        this.fxDate = fxDate;
+    }
 }
 

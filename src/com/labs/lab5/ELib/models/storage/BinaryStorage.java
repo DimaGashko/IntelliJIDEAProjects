@@ -93,8 +93,6 @@ public class BinaryStorage<T> implements IStorage<T> {
 
             out.writeObject(data);
         }
-
-        throw new IOException();
     }
 
     /**

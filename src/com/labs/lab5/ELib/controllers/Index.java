@@ -216,7 +216,7 @@ public class Index implements Initializable {
         }
 
         if (editingBook == null) {
-            alerts.show(alerts.getAlertInfo(),  "No selected books");
+            alerts.show(alerts.getAlertInfo(), "No selected books");
             return;
         }
 
@@ -224,6 +224,7 @@ public class Index implements Initializable {
 
         if (!alreadyEditing) {
             windowEditBook.getController().setValuesBy(editingBook);
+            windowEditBook.getController().
         }
 
         windowEditBook.getWindow().show();
