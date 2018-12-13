@@ -63,9 +63,7 @@ public class BinaryStorage<T> implements IStorage<T> {
 
     @Override
     public T[] getArrOfData(Predicate<T> filter) {
-        return Arrays.stream(getArrOfData())
-                .filter(filter)
-                .toArray(this::_getTArray);
+        return data.stream().filter(filter).toArray(this::_getTArray);
     }
 
     @Override
