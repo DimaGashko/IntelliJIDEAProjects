@@ -9,6 +9,7 @@ import java.util.function.Predicate;
 /**
  * Класс для хранения данных на основании текстового файла
  * @param <T> класс хранимых данных
+ * @version 0.0.0.1
  *
  * TODO: заменить Array на ArrayList
  */
@@ -49,15 +50,6 @@ public class TextStorage<T> implements IStorage<T> {
         initFile(url);
 
         load();
-    }
-
-    /**
-     * Функция преобразования объекта в строку
-     * @param <T> тип объекта
-     */
-    @FunctionalInterface
-    public interface StringifyFunction<T> {
-        String call(T item);
     }
 
     @Override
@@ -269,5 +261,23 @@ public class TextStorage<T> implements IStorage<T> {
 
     public void setParse(ParseFunction<T> parse) {
         this.parse = parse;
+    }
+
+    /**
+     * Функция преобразования объекта в строку
+     * @param <T> тип объекта
+     */
+    @FunctionalInterface
+    public interface StringifyFunction<T> {
+        String call(T item);
+    }
+
+    /**
+     * Функция преобразования строки в объект
+     * @param <T> тип объекта
+     */
+    @FunctionalInterface
+    public interface ParseFunction<T> {
+        T call(String strT);
     }
 }

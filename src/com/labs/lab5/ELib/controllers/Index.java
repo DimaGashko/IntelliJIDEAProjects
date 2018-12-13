@@ -158,7 +158,7 @@ public class Index implements Initializable {
 
     private void updateFilteredBooks() {
         filteredBooks.clear();
-        filteredBooks.addAll(storage.getArrOfData(book -> filters.check(book)));
+        filteredBooks.addAll((Book[])storage.getArrOfData(book -> filters.check((Book)book)));
     }
 
     private void updateFilterLimits() {
