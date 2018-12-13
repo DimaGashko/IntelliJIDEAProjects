@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.HandlerFunction;
+import com.labs.lab5.ELib.windows.Alerts;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,6 +29,8 @@ public class CreateBook implements Initializable {
     private HandlerFunction onSaveHandler;
 
     private SimpleStringProperty title = new SimpleStringProperty("Create New Book");
+
+    private Alerts alerts = new Alerts();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -105,6 +108,11 @@ public class CreateBook implements Initializable {
     }
 
     private void onSave() {
+        if (!isReady()) {
+            alerts.show(alerts.getAlertWarn(), "Incorrect Data");
+            return;
+        }
+
         onSaveHandler.call();
     }
 

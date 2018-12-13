@@ -10,6 +10,7 @@ public class Alerts {
     static private Alert alertInfo;
     static private Alert alertConfirm;
     static private Alert alertErr;
+    static private Alert alertWarn;
 
     public Alerts() {
 
@@ -50,10 +51,17 @@ public class Alerts {
     }
 
     private void initAlertErr() {
-        //if (alertErr != null) return;
-        alertErr = new Alert(Alert.AlertType.ERROR);
+        if (alertErr != null) return;
 
+        alertErr = new Alert(Alert.AlertType.ERROR);
         alertErr.setTitle("ELib - your world of books");
+    }
+
+    private void initAlertWarn() {
+        if (alertWarn != null) return;
+
+        alertWarn = new Alert(Alert.AlertType.WARNING);
+        alertWarn.setTitle("ELib - your world of books");
     }
 
     public Alert getAlertInfo() {
@@ -69,5 +77,10 @@ public class Alerts {
     public Alert getAlertErr() {
         initAlertErr();
         return alertErr;
+    }
+
+    public Alert getAlertWarn() {
+        initAlertWarn();
+        return alertWarn;
     }
 }
