@@ -5,10 +5,7 @@ import com.labs.lab3.part1.library.Book;
 import java.io.*;
 import java.lang.reflect.Array;
 import java.nio.file.Files;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -53,7 +50,8 @@ public class BinaryStorage<T> implements IStorage<T> {
 
     @Override
     public ArrayList<T> getData(Predicate<T> filter) {
-        return data.stream().filter(filter).collect(Collectors.toCollection(ArrayList::new));
+        return data.stream().filter(filter)
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
@@ -73,23 +71,15 @@ public class BinaryStorage<T> implements IStorage<T> {
 
     @Override
     public void remove(Predicate<T> isRemoved) throws IOException {
-        T[] newData = Arrays.stream(getArrOfData())
-                // Не через методы типа indexOf
-                // Так как может быть несколько одинковых элементов
-                .filter(el -> !isRemoved.test(el))
-                .toArray(this::_getTArray);
+        data = data.stream().filter(item -> !isRemoved.test(item))
+                .collect(Collectors.toCollection(ArrayList::new));
 
-        //setData(newData);
+        save();
     }
 
     @Override
     public void replace(T prevItem, T newItem) throws IOException {
-        data.stream().map(item -> {
-            return (item.equals(prevItem)) ? newItem : item;
-
-
-        });
-
+        Collections.replaceAll(data, prevItem, newItem);
         save();
     }
 
@@ -119,7 +109,6 @@ public class BinaryStorage<T> implements IStorage<T> {
             data = (ArrayList<T>)ois.readObject();
 
         } catch (EOFException err) {
-            System.out.println(err);
             data = new ArrayList<>();
 
         } catch (ClassNotFoundException err) {
@@ -136,12 +125,11 @@ public class BinaryStorage<T> implements IStorage<T> {
     }
 
     /**
-     * Создает массив данных (new T[])
+     * Создает массив new T[len]
      *
      * @param len длина массива
      * @return массив данных
      * <p>
-     * TODO: удалить после внедрения ArrayList
      */
     private T[] _getTArray(int len) {
         @SuppressWarnings("unchecked")

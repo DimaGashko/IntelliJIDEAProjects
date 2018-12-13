@@ -25,7 +25,6 @@ public class TextStorage<T> implements IStorage<T> {
 
     // Класс хранимих данных
     // Используется для создания new T[]
-    // TODO: убрать после внедрения ArrayList
     private Class<T> dataClass;
 
     // Массив хранимых данных
@@ -37,9 +36,6 @@ public class TextStorage<T> implements IStorage<T> {
     private StringifyFunction<T> stringify;
     private ParseFunction<T> parse;
 
-    /**
-     * TODO: после внедрения ArrayList убрать аргумент dataClass
-     */
     public TextStorage(String url, StringifyFunction<T> stringify, ParseFunction<T> parse, Class<T> dataClass) throws IOException {
         setBufferSize(DEF_BUFFER_SIZE);
 
@@ -182,12 +178,10 @@ public class TextStorage<T> implements IStorage<T> {
 
 
     /**
-     * Создает массив данных (new T[])
+     * Создает массив new T[len]
      *
      * @param len длина массива
      * @return массив данных
-     * <p>
-     * TODO: удалить после внедрения ArrayList
      */
     private T[] _getTArray(int len) {
         @SuppressWarnings("unchecked")
