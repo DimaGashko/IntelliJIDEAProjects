@@ -100,6 +100,34 @@ public class BinaryStorage<T> implements IStorage<T> {
     }
 
     /**
+     * Загружает данные из текстового файла в массив данных
+     */
+    private void load() throws IOException {
+        dataFile.createNewFile();
+
+        try(FileInputStream fis = new FileInputStream(dataFile);
+            ObjectInputStream ois = new ObjectInputStream(fis)) {
+
+            data = (ArrayList<T>)ois.readObject();
+
+        } catch (EOFException err) {
+            System.out.println(err);
+            data = new ArrayList<>();
+
+        } catch (ClassNotFoundException err) {
+            err.printStackTrace();
+
+        }
+    }
+
+    private void initFile(String url) {
+        dataFile = new File(url);
+
+        // Создает родительские каталоги
+        dataFile.getParentFile().mkdirs();
+    }
+
+    /**
      * Создает массив данных (new T[])
      *
      * @param len длина массива
@@ -112,33 +140,6 @@ public class BinaryStorage<T> implements IStorage<T> {
         var arr = (T[]) Array.newInstance(dataClass, len);
 
         return arr;
-    }
-
-    /**
-     * Загружает данные из текстового файла в массив данных
-     */
-    private void load() throws IOException {
-        //dataFile.createNewFile();
-
-        try(FileInputStream fis = new FileInputStream("test");
-            ObjectInputStream ois = new ObjectInputStream(fis)) {
-
-            ArrayList<T> loaded = (ArrayList<T>)ois.readObject();
-            if (loaded != null) data = loaded;
-
-        } catch (ClassNotFoundException err) {
-            err.printStackTrace();
-
-        }
-
-        System.out.println(data);
-    }
-
-    private void initFile(String url) {
-        dataFile = new File(url);
-
-        // Создает родительские каталоги
-        dataFile.getParentFile().mkdirs();
     }
 
     private void setDataClass(Class<T> dataClass) {

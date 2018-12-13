@@ -20,7 +20,7 @@ import java.util.Arrays;
 public class IndexWindow extends BaseWindow<Index> {
 
     // Путь к файлу в котором хранятся книги
-    static final private String DB_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
+    static final private String DB_TEXT_URL = "src/com/labs/lab5/ELib/configs/books-db.txt";
     static final private String DB_BIN_URL = "src/com/labs/lab5/ELib/configs/books-db";
 
     // Хранилице книг - содежит все книги
@@ -78,7 +78,7 @@ public class IndexWindow extends BaseWindow<Index> {
 
         try {
             storage = new BinaryStorage<>(DB_BIN_URL, Book.class);
-            //storage = new TextStorage<>(DB_URL, Book::toString, Book::parse, Book.class);
+            //storage = new TextStorage<>(DB_TEXT_URL, Book::toString, Book::parse, Book.class);
 
         } catch (IOException err) {
             err.printStackTrace();
