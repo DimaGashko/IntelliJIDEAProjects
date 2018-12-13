@@ -79,7 +79,8 @@ public class TextStorage<T> implements IStorage<T> {
 
     @Override
     public T[] getArrOfData() {
-        return data.clone();
+        return Arrays.stream(Arrays.copyOf(data, len))
+                .toArray(this::_getTArray);
     }
 
     @Override

@@ -10,6 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * Класс для хранения данных на основании текстового файла
@@ -41,11 +42,18 @@ public class BinaryStorage<T> implements IStorage<T> {
 
     @Override
     public void addAll(T[] items) throws IOException {
-        for (T item : items) {
-            data.add(item);
-        }
-
+        data.addAll(Arrays.asList(items));
         save();
+    }
+
+    @Override
+    public ArrayList<T> getData() {
+        return data;
+    }
+
+    @Override
+    public ArrayList<T> getData(Predicate<T> filter) {
+        return data.stream().filter(filter).collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
