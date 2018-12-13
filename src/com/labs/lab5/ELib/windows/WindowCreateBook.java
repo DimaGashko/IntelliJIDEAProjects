@@ -58,7 +58,7 @@ public class WindowCreateBook extends BaseWindow<CreateBook> {
     }
 
     private void initEvents() {
-        controller.setOnCancel(() -> window.hide());
+        controller.setOnCancelHandler(() -> window.hide());
     }
 
     private String getTitle() {

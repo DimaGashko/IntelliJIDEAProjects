@@ -94,7 +94,7 @@ public class Index implements Initializable {
     private Book editingBook;
 
     // Функция закритыя окна
-    private HandlerFunction onExit;
+    private HandlerFunction onExitHandler;
 
     public Index() {
 
@@ -236,7 +236,7 @@ public class Index implements Initializable {
 
         try {
             windowAddBook = new WindowCreateBook("Add New Book");
-            windowAddBook.getController().setOnSave(this::addNewBook);
+            windowAddBook.getController().setOnSaveHandler(this::addNewBook);
 
         } catch (IOException err) {
             alerts.show(alerts.getAlertErr(), "Can't open the window");
@@ -249,7 +249,7 @@ public class Index implements Initializable {
 
         try {
             windowEditBook = new WindowCreateBook("Edit The Book");
-            windowEditBook.getController().setOnSave(this::editBook);
+            windowEditBook.getController().setOnSaveHandler(this::editBook);
 
         } catch (IOException err) {
             alerts.show(alerts.getAlertErr(), "Can't open the window");
@@ -381,7 +381,7 @@ public class Index implements Initializable {
     }
 
     private void onExit() {
-        onExit.call();
+        onExitHandler.call();
     }
 
     private void onResetFilters() {
@@ -458,6 +458,6 @@ public class Index implements Initializable {
     }
 
     public void setOnExit(HandlerFunction handler) {
-        this.onExit = handler;
+        this.onExitHandler = handler;
     }
 }

@@ -8,12 +8,9 @@ import com.labs.lab5.ELib.models.HandlerFunction;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class CreateBook implements Initializable {
@@ -24,17 +21,11 @@ public class CreateBook implements Initializable {
     @FXML private JFXTextField fxPages;
     @FXML private JFXDatePicker fxDate;
 
-    @FXML
-    public void fxOnSave() { onSave(); }
+    @FXML public void fxOnSave() { onSave(); }
+    @FXML public void fxOnCancel() { onCancel(); }
 
-    @FXML
-    public void fxOnCancel() {
-        title.set(title.getValue() + "1 ");
-        onCancel();
-    }
-
-    private HandlerFunction onCancel;
-    private HandlerFunction onSave;
+    private HandlerFunction onCancelHandler;
+    private HandlerFunction onSaveHandler;
 
     private SimpleStringProperty title = new SimpleStringProperty("Create New Book");
 
@@ -43,6 +34,10 @@ public class CreateBook implements Initializable {
         //setValidators();
     }
 
+    /**
+     * Создает и возващает книгу на основании введенных пользователем данных
+     * @return книга созданная на основании введенних данных
+     */
     public Book create() {
         String name = fxName.getText();
         String author = fxAuthor.getText();
@@ -55,6 +50,10 @@ public class CreateBook implements Initializable {
         return new Book(name, author, publisher, date, pages, price);
     }
 
+    /**
+     * Устанавливает в поля формы данних переданной книги
+     * @param book книга данные которой будут установлены в поля формы
+     */
     public void setValuesBy(Book book) {
         fxName.setText(book.getName());
         fxAuthor.setText(book.getAuthor());
@@ -74,11 +73,17 @@ public class CreateBook implements Initializable {
     }
 
     /**
-     * @return можноли ли формировать новую книгу из введенный в форме данных
-     * TODO: реализовать этот метод
+     * @return можно ли ли формировать новую книгу из введенный в форме данных
      */
     public boolean isReady() {
-        return true;
+
+        return fxName.validate()
+                && fxAuthor.validate()
+                && fxPublisher.validate()
+                && fxPrice.validate()
+                && fxPages.validate()
+                && fxDate.validate();
+
     }
 
     public void setValidators() {
@@ -112,19 +117,19 @@ public class CreateBook implements Initializable {
     }
 
     private void onCancel() {
-        onCancel.call();
+        onCancelHandler.call();
     }
 
     private void onSave() {
-        onSave.call();
+        onSaveHandler.call();
     }
 
-    public void setOnCancel(HandlerFunction onCancel) {
-        this.onCancel = onCancel;
+    public void setOnCancelHandler(HandlerFunction onCancelHandler) {
+        this.onCancelHandler = onCancelHandler;
     }
 
-    public void setOnSave(HandlerFunction onSave) {
-        this.onSave = onSave;
+    public void setOnSaveHandler(HandlerFunction onSaveHandler) {
+        this.onSaveHandler = onSaveHandler;
     }
 
     public String getTitle() {
