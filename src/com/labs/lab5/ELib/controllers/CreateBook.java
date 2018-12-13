@@ -2,18 +2,13 @@ package com.labs.lab5.ELib.controllers;
 
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.base.IFXLabelFloatControl;
-import com.jfoenix.controls.base.IFXValidatableControl;
 import com.jfoenix.validation.DoubleValidator;
 import com.jfoenix.validation.IntegerValidator;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.HandlerFunction;
 import com.labs.lab5.ELib.windows.Alerts;
-import javafx.beans.property.ReadOnlyBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -147,52 +142,28 @@ public class CreateBook implements Initializable {
         this.title.set(title);
     }
 
-    public JFXTextField getFxName() {
-        return fxName;
+    public void setNameField(String text) {
+        this.fxName.setText(text);
     }
 
-    public void setFxName(JFXTextField fxName) {
-        this.fxName = fxName;
+    public void setAuthorField(String text) {
+        this.fxAuthor.setText(text);
     }
 
-    public JFXTextField getFxAuthor() {
-        return fxAuthor;
+    public void setPublisherField(String text) {
+        this.fxPublisher.setText(text);
     }
 
-    public void setFxAuthor(JFXTextField fxAuthor) {
-        this.fxAuthor = fxAuthor;
+    public void setPriceField(double val) {
+        this.fxPrice.setText(Double.toString(val));
     }
 
-    public JFXTextField getFxPublisher() {
-        return fxPublisher;
+    public void setPagesField(int val) {
+        this.fxPages.setText(Integer.toString(val));
     }
 
-    public void setFxPublisher(JFXTextField fxPublisher) {
-        this.fxPublisher = fxPublisher;
-    }
-
-    public JFXTextField getFxPrice() {
-        return fxPrice;
-    }
-
-    public void setFxPrice(JFXTextField fxPrice) {
-        this.fxPrice = fxPrice;
-    }
-
-    public JFXTextField getFxPages() {
-        return fxPages;
-    }
-
-    public void setFxPages(JFXTextField fxPages) {
-        this.fxPages = fxPages;
-    }
-
-    public JFXDatePicker getFxDate() {
-        return fxDate;
-    }
-
-    public void setFxDate(JFXDatePicker fxDate) {
-        this.fxDate = fxDate;
+    public void setDateField(LocalDate date) {
+        this.fxDate.setValue(date);
     }
 }
 

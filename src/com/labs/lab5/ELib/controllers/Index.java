@@ -224,7 +224,7 @@ public class Index implements Initializable {
 
         if (!alreadyEditing) {
             windowEditBook.getController().setValuesBy(editingBook);
-            windowEditBook.getController().
+            windowEditBook.getController().get
         }
 
         windowEditBook.getWindow().show();
