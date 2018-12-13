@@ -11,10 +11,7 @@ import com.labs.lab5.ELib.models.storage.TextStorage;
 import java.net.URL;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
 import java.util.function.BiFunction;
 
 import com.jfoenix.controls.*;
@@ -163,20 +160,15 @@ public class Index implements Initializable {
 
     private void updateFilterLimits() {
         var books = storage.getArrOfData();
-        if (books.length == 0) return;
 
-        minPrice.set(_getSuitable(books, (next, min) -> next.getPrice() < min.getPrice()).getPrice());
-        minPages.set(_getSuitable(books, (next, min) -> next.getPages() < min.getPages()).getPages());
+        minPrice.set(Arrays.stream(books).min(Comparator.comparingDouble(Book::getPrice)).get().getPrice() - 10);
+        minPages.set(Arrays.stream(books).min(Comparator.comparingInt(Book::getPages)).get().getPages() - 10);
 
-        if (books.length == 1) {
-            // FIXME: Когда в таблице одна книга, она не отображается
-            maxPrice.set(minPages.get() + 10);
-            maxPages.set(minPages.get() + 10);
-            return;
-        }
+        maxPrice.set(Arrays.stream(books).max(Comparator.comparingDouble(Book::getPrice)).get().getPrice() + 10);
+        maxPages.set(Arrays.stream(books).max(Comparator.comparingInt(Book::getPages)).get().getPages() + 10);
 
-        maxPrice.set(_getSuitable(books, (next, max) -> next.getPrice() > max.getPrice()).getPrice());
-        maxPages.set(_getSuitable(books, (next, max) -> next.getPages() > max.getPages()).getPages());
+        if (minPrice.get() < 0) minPrice.set(0);
+        if (minPages.get() < 0) minPages.set(0);
     }
 
     /**
@@ -390,26 +382,6 @@ public class Index implements Initializable {
     private void onResetFilters() {
         resetFilters();
         runFilter();
-    }
-
-    /**
-     * Возвращает наиболее подходящий элемент по переданным правилам сравнения
-     * Можно использовать для нахождения минимального/максимального
-     * Элемента массива по необходимому полю
-     * @param items массив
-     * @param compare функция сравнения
-     * @param <T> тип обрабатываемых элементов
-     * @return наиболее подходящий элемент
-     */
-    private <T> T _getSuitable(T[] items, BiFunction<T, T, Boolean> compare) {
-        if (items.length == 0) return null;
-        T res = items[0];
-
-        for (int i = 1; i < items.length; i++) {
-            if (compare.apply(items[i], res)) res = items[i];
-        }
-
-        return res;
     }
 
     public double getMinPrice() {
