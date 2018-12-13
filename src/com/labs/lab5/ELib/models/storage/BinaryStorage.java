@@ -35,15 +35,17 @@ public class BinaryStorage<T> implements IStorage<T> {
 
     @Override
     public void add(T item) throws IOException {
-        save(item, true);
         data.add(item);
+        save();
     }
 
     @Override
     public void addAll(T[] items) throws IOException {
         for (T item : items) {
-            add(item);
+            data.add(item);
         }
+
+        save();
     }
 
     @Override
@@ -82,32 +84,18 @@ public class BinaryStorage<T> implements IStorage<T> {
 
         });
 
-        save(data, false);
-    }
-
-    /**
-     * Сохраняет переданный элемент в бинарном файле
-     * @param item сохраняемый элемент
-     */
-    private void save(T item, boolean append) throws IOException {
-
-        try (FileOutputStream fos = new FileOutputStream(dataFile, append);
-             ObjectOutputStream out = new ObjectOutputStream(fos)) {
-
-            out.writeObject(item);
-        }
+        save();
     }
 
     /**
      * Сохраняет переданные элементы в бинарном файле
-     * @param items сохраняемые элементы
      */
-    private void save(ArrayList<T> items, boolean append) throws IOException {
+    private void save() throws IOException {
 
-        try (FileOutputStream fos = new FileOutputStream(dataFile, append);
+        try (FileOutputStream fos = new FileOutputStream(dataFile);
              ObjectOutputStream out = new ObjectOutputStream(fos)) {
 
-            out.writeObject(items);
+            out.writeObject(data);
         }
     }
 
@@ -139,6 +127,7 @@ public class BinaryStorage<T> implements IStorage<T> {
             if (loaded != null) data = loaded;
 
         } catch (ClassNotFoundException err) {
+            err.printStackTrace();
 
         }
 

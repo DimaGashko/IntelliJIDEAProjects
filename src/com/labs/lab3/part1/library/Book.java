@@ -2,6 +2,7 @@ package com.labs.lab3.part1.library;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Objects;
@@ -9,7 +10,7 @@ import java.util.UUID;
 
 //TODO: исключить возможность появления разделителя parse/toStirng в полях
 
-public class Book {
+public class Book implements Serializable  {
     private final UUID id = UUID.randomUUID();
     private String name = "No name";
     private String author = "No author";
