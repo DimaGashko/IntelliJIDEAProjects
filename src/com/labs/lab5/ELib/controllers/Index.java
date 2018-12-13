@@ -200,6 +200,8 @@ public class Index implements Initializable {
 
     private void showWindowAddBook() {
         initWindowAddBook();
+
+        windowAddBook.getController().setDateField(LocalDate.now());
         windowAddBook.getWindow().show();
     }
 
@@ -224,7 +226,6 @@ public class Index implements Initializable {
 
         if (!alreadyEditing) {
             windowEditBook.getController().setValuesBy(editingBook);
-            windowEditBook.getController().get
         }
 
         windowEditBook.getWindow().show();

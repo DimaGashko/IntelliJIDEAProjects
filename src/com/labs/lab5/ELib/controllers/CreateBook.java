@@ -106,7 +106,7 @@ public class CreateBook implements Initializable {
         fxDate.getValidators().add(required);
 
         fxPrice.getValidators().add(new DoubleValidator("Not a number"));
-        fxPrice.getValidators().add(new IntegerValidator("Not an integer"));
+        fxPages.getValidators().add(new IntegerValidator("Not an integer"));
     }
 
     private void onCancel() {
