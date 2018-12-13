@@ -277,6 +277,7 @@ public class Index implements Initializable {
         runFilter();
 
         fxBooksTable.getSelectionModel().select(newBook);
+        fxBooksTable.scrollTo(newBook);
     }
 
     /**
