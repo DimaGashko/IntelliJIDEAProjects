@@ -2,12 +2,15 @@ package com.labs.lab5.ELib.controllers;
 
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
+import com.jfoenix.controls.base.IFXValidatableControl;
 import com.jfoenix.validation.DoubleValidator;
 import com.jfoenix.validation.IntegerValidator;
 import com.jfoenix.validation.RequiredFieldValidator;
 import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.models.HandlerFunction;
 import com.labs.lab5.ELib.windows.Alerts;
+import javafx.beans.property.Property;
+import javafx.beans.property.ReadOnlyBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -86,27 +89,41 @@ public class CreateBook implements Initializable {
      */
     public boolean isReady() {
 
-        return fxName.validate()
-                && fxAuthor.validate()
-                && fxPublisher.validate()
-                && fxPrice.validate()
-                && fxPages.validate()
-                && fxDate.validate();
+        // Все значения вычисляются до проверки, так как нужно что бы отработали все validate()
+        var name = fxName.validate();
+        var author = fxAuthor.validate();
+        var publisher = fxPublisher.validate();
+        var price = fxPrice.validate();
+        var pages = fxPages.validate();
+        var date = fxDate.validate();
 
+        return name && author && publisher
+                && price && pages && date;
     }
 
     private void initValidators() {
         var required = new RequiredFieldValidator("Required field");
 
-        fxName.getValidators().add(required);
-        fxAuthor.getValidators().add(required);
-        fxPublisher.getValidators().add(required);
-        fxPrice.getValidators().add(required);
-        fxPages.getValidators().add(required);
-        fxDate.getValidators().add(required);
+        setRequiredValidator(fxName, fxName.focusedProperty());
+        setRequiredValidator(fxAuthor, fxAuthor.focusedProperty());
+        setRequiredValidator(fxPublisher, fxPublisher.focusedProperty());
+        setRequiredValidator(fxPrice, fxPrice.focusedProperty());
+        setRequiredValidator(fxPages, fxPages.focusedProperty());
+        setRequiredValidator(fxDate, fxDate.focusedProperty());
 
         fxPrice.getValidators().add(new DoubleValidator("Not a number"));
         fxPages.getValidators().add(new IntegerValidator("Not an integer"));
+    }
+
+    private void setRequiredValidator(IFXValidatableControl node, ReadOnlyBooleanProperty focusedProperty) {
+        var required = new RequiredFieldValidator("Required field");
+        node.getValidators().add(required);
+
+        focusedProperty.addListener((o, oldVal, newVal) -> {
+            if (!newVal) {
+                fxName.validate();
+            }
+        });
     }
 
     private void onCancel() {
