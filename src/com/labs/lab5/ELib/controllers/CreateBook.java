@@ -12,6 +12,7 @@ import com.labs.lab5.ELib.windows.Alerts;
 import javafx.beans.property.Property;
 import javafx.beans.property.ReadOnlyBooleanProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
@@ -102,8 +103,6 @@ public class CreateBook implements Initializable {
     }
 
     private void initValidators() {
-        var required = new RequiredFieldValidator("Required field");
-
         setRequiredValidator(fxName, fxName.focusedProperty());
         setRequiredValidator(fxAuthor, fxAuthor.focusedProperty());
         setRequiredValidator(fxPublisher, fxPublisher.focusedProperty());
@@ -111,19 +110,33 @@ public class CreateBook implements Initializable {
         setRequiredValidator(fxPages, fxPages.focusedProperty());
         setRequiredValidator(fxDate, fxDate.focusedProperty());
 
-        fxPrice.getValidators().add(new DoubleValidator("Not a number"));
-        fxPages.getValidators().add(new IntegerValidator("Not an integer"));
+        setDoubleValidator(fxPrice, fxPrice.textProperty());
+        setIntValidator(fxPages, fxPages.textProperty());
     }
 
-    private void setRequiredValidator(IFXValidatableControl node, ReadOnlyBooleanProperty focusedProperty) {
-        var required = new RequiredFieldValidator("Required field");
-        node.getValidators().add(required);
-
-        focusedProperty.addListener((o, oldVal, newVal) -> {
+    private void setRequiredValidator(IFXValidatableControl node, ReadOnlyBooleanProperty property) {
+        var validator = new RequiredFieldValidator("Required field");
+        node.getValidators().add(validator);
+        node.activeValidatorProperty();
+        /*property.addListener((o, oldVal, newVal) -> {
             if (!newVal) {
                 fxName.validate();
             }
-        });
+        });*/
+    }
+
+    private void setDoubleValidator(IFXValidatableControl node, StringProperty property) {
+        var validator = new DoubleValidator("Not a number");
+        node.getValidators().add(validator);
+
+        //property.addListener((o, oldVal, newVal) -> fxName.validate());
+    }
+
+    private void setIntValidator(IFXValidatableControl node, StringProperty property) {
+        var required = new RequiredFieldValidator("Not an integer");
+        node.getValidators().add(required);
+
+        //property.addListener((o, oldVal, newVal) -> fxName.validate());
     }
 
     private void onCancel() {
