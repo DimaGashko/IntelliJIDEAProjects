@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="50" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="learn.JFoenix._2_ValidatorAndAlingCenterTest.Controller">
+    <children>
+        <JFXTextField fx:id="fxField1" alignment="CENTER" labelFloat="true" prefHeight="40.0" prefWidth="500.0" promptText="Text Filed 1" />
+        <JFXTextField fx:id="fxField2" alignment="CENTER" labelFloat="true" prefHeight="40.0" prefWidth="500.0" promptText="Text Filed 2" />
+    </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</VBox>
