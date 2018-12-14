@@ -24,6 +24,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.fxml.FXML;
+import javafx.scene.input.MouseEvent;
 
 public class Index implements Initializable {
     @FXML private JFXTextField fxFilterName;
@@ -437,5 +438,9 @@ public class Index implements Initializable {
 
     public void setOnExit(HandlerFunction handler) {
         this.onExitHandler = handler;
+    }
+
+    public void onTest(MouseEvent mouseEvent) {
+        System.out.println("test");
     }
 }
