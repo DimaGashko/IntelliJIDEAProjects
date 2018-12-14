@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ELib extends Application {
-    IndexWindow indexWindow;
+    private IndexWindow indexWindow;
 
     @Override
     public void start(Stage primaryStage) throws IOException {

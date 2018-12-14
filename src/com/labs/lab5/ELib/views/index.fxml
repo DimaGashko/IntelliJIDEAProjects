@@ -94,15 +94,15 @@
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Price:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                           <JFXSlider fx:id="fxFilterPriceFrom" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
+                           <JFXSlider fx:id="fxFilterPriceFrom" min="${controller.minPrice}" max="${controller.maxPrice}" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
                              <Label styleClass="filterGroup__subtitle" text="To:" />
-                           <JFXSlider fx:id="fxFilterPriceTo" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
+                           <JFXSlider fx:id="fxFilterPriceTo" min="${controller.minPrice}" max="${controller.maxPrice}" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
                          </VBox>
                          <!-- min="${controller.minPrice}" max="${controller.maxPrice}"-->
                          <VBox styleClass="filterGroup">
                              <Label styleClass="filterGroup__title" text="Pages:" />
                              <Label styleClass="filterGroup__subtitle" text="From:" />
-                             <JFXSlider fx:id="fxFilterPagesFrom" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
+                             <JFXSlider fx:id="fxFilterPagesFrom" min="${controller.minPages}" max="${controller.maxPages}" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
                              <Label styleClass="filterGroup__subtitle" text="To:" />
                              <JFXSlider fx:id="fxFilterPagesTo" majorTickUnit="100.0" onKeyReleased="#fxOnRunFilter" onMouseClicked="#fxOnRunFilter" showTickLabels="true" showTickMarks="true" value="0" />
                          </VBox>

@@ -79,10 +79,10 @@ public class Index implements Initializable {
 
     // Граничные значение параметров книг
     // Привязываються к минимальны/максимальным значения фильтров (fxml-элементов)
-    private final DoubleProperty minPrice = new SimpleDoubleProperty();
-    private final DoubleProperty maxPrice = new SimpleDoubleProperty();
-    private final IntegerProperty minPages = new SimpleIntegerProperty();
-    private final IntegerProperty maxPages = new SimpleIntegerProperty();
+    private final DoubleProperty minPrice = new SimpleDoubleProperty(0);
+    private final DoubleProperty maxPrice = new SimpleDoubleProperty(100);
+    private final IntegerProperty minPages = new SimpleIntegerProperty(0);
+    private final IntegerProperty maxPages = new SimpleIntegerProperty(100);
 
     // Книга что редактируется в данный момент (проверка на null обязательна)
     private Book editingBook;
@@ -107,26 +107,11 @@ public class Index implements Initializable {
             return;
         }
 
-        initBinds();
+        updateFilterLimits();
         resetFilters();
+
         runFilter();
         initTable();
-    }
-
-    private void initBinds() {
-        updateFilterLimits();
-
-        fxFilterPriceFrom.minProperty().bind(minPrice);
-        fxFilterPriceFrom.maxProperty().bind(maxPrice);
-
-        fxFilterPriceTo.minProperty().bind(minPrice);
-        fxFilterPriceTo.maxProperty().bind(maxPrice);
-
-        fxFilterPagesFrom.minProperty().bind(minPages);
-        fxFilterPagesFrom.maxProperty().bind(maxPages);
-
-        fxFilterPagesTo.minProperty().bind(minPages);
-        fxFilterPagesTo.maxProperty().bind(maxPages);
     }
 
     private void runFilter() {
@@ -157,6 +142,7 @@ public class Index implements Initializable {
 
     private void updateFilterLimits() {
         var books = storage.getArrOfData();
+        if (books.length == 0) return;
 
         double _minPrice = Arrays.stream(books).min(Comparator.comparingDouble(Book::getPrice)).get().getPrice() - 10;
         double _maxPrice = Arrays.stream(books).max(Comparator.comparingDouble(Book::getPrice)).get().getPrice() + 10;
@@ -393,15 +379,23 @@ public class Index implements Initializable {
         runFilter();
     }
 
+    public JFXTextField getFxFilterName() {
+        return fxFilterName;
+    }
+
+    public void setFxFilterName(JFXTextField fxFilterName) {
+        this.fxFilterName = fxFilterName;
+    }
+
     public double getMinPrice() {
         return minPrice.get();
     }
 
-    private DoubleProperty minPriceProperty() {
+    public DoubleProperty minPriceProperty() {
         return minPrice;
     }
 
-    private void setMinPrice(double minPrice) {
+    public void setMinPrice(double minPrice) {
         this.minPrice.set(minPrice);
     }
 
@@ -409,11 +403,11 @@ public class Index implements Initializable {
         return maxPrice.get();
     }
 
-    private DoubleProperty maxPriceProperty() {
+    public DoubleProperty maxPriceProperty() {
         return maxPrice;
     }
 
-    private void setMaxPrice(double maxPrice) {
+    public void setMaxPrice(double maxPrice) {
         this.maxPrice.set(maxPrice);
     }
 
@@ -421,11 +415,11 @@ public class Index implements Initializable {
         return minPages.get();
     }
 
-    private IntegerProperty minPagesProperty() {
+    public IntegerProperty minPagesProperty() {
         return minPages;
     }
 
-    private void setMinPages(int minPages) {
+    public void setMinPages(int minPages) {
         this.minPages.set(minPages);
     }
 
@@ -433,11 +427,11 @@ public class Index implements Initializable {
         return maxPages.get();
     }
 
-    private IntegerProperty maxPagesProperty() {
+    public IntegerProperty maxPagesProperty() {
         return maxPages;
     }
 
-    private void setMaxPages(int maxPages) {
+    public void setMaxPages(int maxPages) {
         this.maxPages.set(maxPages);
     }
 
