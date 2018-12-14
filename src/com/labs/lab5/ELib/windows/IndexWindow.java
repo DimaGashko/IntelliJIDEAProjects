@@ -68,10 +68,10 @@ public class IndexWindow extends BaseWindow<Index> {
         if (storage != null) return;
 
         try {
-            storage = new BinaryStorage<>(DB_BIN_URL, Book.class);
-            var storageT = new TextStorage<>(DB_TEXT_URL, Book::toString, Book::parse, Book.class);
+            //storage = new BinaryStorage<>(DB_BIN_URL, Book.class);
+            storage = new TextStorage<>(DB_TEXT_URL, Book::toString, Book::parse, Book.class);
 
-            storage.addAll(storageT.getArrOfData());
+            //storage.addAll(storage1.getArrOfData());
 
         } catch (IOException err) {
             err.printStackTrace();
