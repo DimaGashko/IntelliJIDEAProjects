@@ -4,6 +4,7 @@ import com.labs.lab3.part1.library.Book;
 import com.labs.lab5.ELib.controllers.Index;
 import com.labs.lab5.ELib.models.storage.BinaryStorage;
 import com.labs.lab5.ELib.models.storage.IStorage;
+import com.labs.lab5.ELib.models.storage.TextStorage;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -33,8 +34,6 @@ public class IndexWindow extends BaseWindow<Index> {
     }
 
     protected void load() throws IOException {
-        initStorage();
-
         var loader = new FXMLLoader(getClass().getResource("../views/index.fxml"));
         loader.setControllerFactory(this::controllerFactory);
 
@@ -57,30 +56,32 @@ public class IndexWindow extends BaseWindow<Index> {
     }
 
     private Index controllerFactory(Class<?> type) {
+        initStorage();
+
         Index index = new Index(storage);
         index.setOnExit(this::onExit);
 
         return index;
     }
 
-    private void onExit() {
-        window.close();
-        Platform.exit();
-        System.exit(0);
-    }
-
     private void initStorage() {
         if (storage != null) return;
 
         try {
-            storage = new BinaryStorage<>(DB_BIN_URL, Book.class);
-            //storage = new TextStorage<>(DB_TEXT_URL, Book::toString, Book::parse, Book.class);
+            //storage = new BinaryStorage<>(DB_BIN_URL, Book.class);
+            storage = new TextStorage<>(DB_TEXT_URL, Book::toString, Book::parse, Book.class);
 
         } catch (IOException err) {
             err.printStackTrace();
 
         }
 
+    }
+
+    private void onExit() {
+        window.close();
+        Platform.exit();
+        System.exit(0);
     }
 
 }

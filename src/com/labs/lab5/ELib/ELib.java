@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ELib extends Application {
-    IndexWindow window;
+    IndexWindow indexWindow;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        window = new IndexWindow(primaryStage);
-        window.getWindow().show();
+        indexWindow = new IndexWindow(primaryStage);
+        indexWindow.getWindow().show();
     }
 
     public static void main(String[] args) {
