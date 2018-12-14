@@ -47,7 +47,7 @@ public class CreateBook implements Initializable {
      * @return книга созданная на основании введенних данных
      */
     public Book create() {
-        if (!isReady()) {
+        if (isInvalid()) {
             return null;
         }
 
@@ -87,7 +87,7 @@ public class CreateBook implements Initializable {
     /**
      * @return можно ли ли формировать новую книгу из введенный в форме данных
      */
-    public boolean isReady() {
+    public boolean isInvalid() {
 
         // Все значения вычисляются до проверки, так как нужно что бы отработали все validate()
         var name = fxName.validate();
@@ -97,8 +97,8 @@ public class CreateBook implements Initializable {
         var pages = fxPages.validate();
         var date = fxDate.validate();
 
-        return name && author && publisher
-                && price && pages && date;
+        return !(name && author && publisher
+                && price && pages && date);
     }
 
     private void initValidators() {
@@ -131,7 +131,7 @@ public class CreateBook implements Initializable {
     }
 
     private void onSave() {
-        if (!isReady()) {
+        if (isInvalid()) {
             alerts.show(alerts.getAlertWarn(), "Check your inputs");
             return;
         }
