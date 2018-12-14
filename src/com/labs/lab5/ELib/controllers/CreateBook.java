@@ -137,10 +137,15 @@ public class CreateBook implements Initializable {
     }
 
     private void initValidators(JFXTextField node) {
-        node.textProperty().addListener((o, oldVal, newVal) -> node.validate());
         node.focusedProperty().addListener((o, oldVal, newVal) -> {
             node.setAlignment(Pos.TOP_LEFT);
             if (!newVal) node.validate();
+            node.setAlignment(Pos.CENTER);
+        });
+
+        node.textProperty().addListener((o, oldVal, newVal) -> {
+            node.setAlignment(Pos.TOP_LEFT);
+            node.validate();
             node.setAlignment(Pos.CENTER);
         });
     }
