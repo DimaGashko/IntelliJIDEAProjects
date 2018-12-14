@@ -51,7 +51,7 @@ public class CreateBook implements Initializable {
         String name = fxName.getText();
         String author = fxAuthor.getText();
         String publisher = fxPublisher.getText();
-        System.out.println(fxPrice.getText());
+
         double price = Double.parseDouble(fxPrice.getText());
         int pages = Integer.parseInt(fxPages.getText());
         LocalDate date = fxDate.getValue();
