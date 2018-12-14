@@ -87,6 +87,13 @@ public class CreateBook implements Initializable {
         fxPrice.clear();
         fxPages.clear();
         fxDate.setValue(null);
+
+        fxName.resetValidation();
+        fxAuthor.resetValidation();
+        fxPublisher.resetValidation();
+        fxPrice.resetValidation();
+        fxPages.resetValidation();
+        fxDate.resetValidation();
     }
 
     /**

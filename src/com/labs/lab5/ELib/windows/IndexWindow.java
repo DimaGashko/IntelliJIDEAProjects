@@ -71,8 +71,6 @@ public class IndexWindow extends BaseWindow<Index> {
             storage = new BinaryStorage<>(DB_BIN_URL, Book.class);
             //storage = new TextStorage<>(DB_TEXT_URL, Book::toString, Book::parse, Book.class);
 
-            //storage.addAll(storage1.getArrOfData());
-
         } catch (IOException err) {
             err.printStackTrace();
 
