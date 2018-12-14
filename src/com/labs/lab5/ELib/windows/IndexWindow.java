@@ -23,8 +23,6 @@ public class IndexWindow extends BaseWindow<Index> {
     // Хранилице книг - содежит все книги
     private IStorage<Book> storage;
 
-    private Alerts alerts = new Alerts();
-
     private IndexWindow() throws IOException {
 
     }

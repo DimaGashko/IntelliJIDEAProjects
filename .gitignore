@@ -1,5 +1,5 @@
-.idea
-out
-src/**/*.css
-src/**/*.map
+#.idea
+#out
+#src/**/*.css
+#src/**/*.map
 *.log

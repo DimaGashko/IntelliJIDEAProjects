@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<ScrollPane styleClass="wrapper" stylesheets="@../styles/index.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.lab4.controllers.Index">
+    <GridPane styleClass="f2">
+        <children>
+            <Text text="Function" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <ImageView styleClass="f2__equation" GridPane.columnIndex="1" GridPane.rowIndex="0">
+               <image>
+                   <Image url="@../img/equation.png" />
+               </image>
+            </ImageView>
+   
+            <Text text="Parameter &quot;a&quot;" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+            <TextField fx:id="a" onKeyReleased="#onInputChange" styleClass="f2__input" text="2.3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   
+            <Text text="Min X" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="minX" onKeyReleased="#onInputChange" styleClass="f2__input" text="0.1" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   
+            <Text text="Max X" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextField fx:id="maxX" onKeyReleased="#onInputChange" styleClass="f2__input" text="5.3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   
+            <Text text="Step" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="step" onKeyReleased="#onInputChange" styleClass="f2__input" text="0.001" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   
+            <Text text="Min Y" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <Text fx:id="minY" styleClass="f2__resultText" text="0.15" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   
+            <Text text="Max Y" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+            <Text fx:id="maxY" styleClass="f2__resultText" text="15" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+   
+            <Text text="Sum of elements" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+            <Text fx:id="sumOfElements" styleClass="f2__resultText" text="1556" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+   
+            <Text text="Average" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+            <Text fx:id="average" styleClass="f2__resultText" text="1556" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+
+            <Text text="Coordinates" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+            <CheckBox fx:id="coordinatesVisible" onAction="#onChangeCoordinatesVisible" selected="true" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+            <ScrollPane fx:id="coordinatesRoot" styleClass="f2__coordinatesRoot" GridPane.columnSpan="2" GridPane.rowIndex="10">
+                <Label fx:id="coordinates" styleClass="f2__coordinates" />
+            </ScrollPane>
+        </children>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+</ScrollPane>
