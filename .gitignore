@@ -1,5 +1,4 @@
-#.idea
-#out
-#src/**/*.css
-#src/**/*.map
+out
+src/**/*.css
+src/**/*.map
 *.log
