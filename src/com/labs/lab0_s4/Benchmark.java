@@ -24,27 +24,14 @@ public class Benchmark {
     }
 
     public void run() {
-
         System.out.println("Test: \"from end\"");
-        int endTime = test((arr) -> {
-            while (arr.size() > 0) {
-                arr.remove(arr.size() - 1);
-            }
-        });
+        int endTime = test((arr) -> arr.remove(arr.size() - 1));
 
         System.out.println("Test: \"from the middle\"");
-        int middleTime = test((arr) -> {
-            while (arr.size() > 0) {
-                arr.remove(arr.size() / 2);
-            }
-        });
+        int middleTime = test((arr) -> arr.remove(arr.size() / 2));
 
         System.out.println("Test: \"from the beginning\"");
-        int beginTime = test((arr) -> {
-            while (arr.size() > 0) {
-                arr.remove(0);
-            }
-        });
+        int beginTime = test((arr) -> arr.remove(0));
 
         System.out.println("Remove item from end: " + endTime + "ns");
         System.out.println("Remove item from the middle: " + middleTime + "ns");
@@ -62,9 +49,12 @@ public class Benchmark {
             int size = arr.size();
 
             long startTime = System.nanoTime();
-            testFunc.apply(arr);
 
-            res += (int) (System.nanoTime() - startTime) / size;
+            while (arr.size() > 0) {
+                testFunc.apply(arr);
+            }
+
+            res += (System.nanoTime() - startTime) / size;
         }
 
         return res / testRepeat;
