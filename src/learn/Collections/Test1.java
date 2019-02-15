@@ -1,21 +1,54 @@
 package learn.Collections;
 
+import javafx.beans.property.StringProperty;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
+
 public class Test1 {
 
     public static void main(String[] args) {
 
-        HashMap<Integer, Integer> map = new HashMap<>();
+        ArrayList<User> users = new ArrayList<>();
 
-        map.put(1, 5);
-        map.put(2, 4);
-        map.put(3, 3);
-        map.put(4, 2);
-        map.put(5, 1);
+        users.add(new User("User1", 10));
+        users.add(new User("User2", 65));
+        users.add(new User("User3", 15));
+        users.add(new User("User4", 18));
+        users.add(new User("User5", 13));
+        users.add(new User("User6", 24));
+        users.add(new User("User7", 36));
+        users.add(new User("User8", 25));
+        users.add(new User("User9", 19));
+        users.add(new User("User10", 17));
+        users.add(new User("User11", 36));
 
-        System.out.println(map);
+        users.sort((User a, User b) -> (int)Math.round(Math.sin((double)b.age / a.age) - 0.5) * 100);
+
+        System.out.println(users);
     }
 
+}
+
+class User implements Comparable<User> {
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String name;
+    public int age;
+
+    @Override
+    public String toString() {
+        return name + " (" + age + ")";
+    }
+
+    @Override
+    public int compareTo(@NotNull User o) {
+        return this.age - o.age;
+    }
 }
