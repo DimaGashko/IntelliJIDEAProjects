@@ -26,7 +26,7 @@ public class Test1 {
         users.add(new User("User10", 17));
         users.add(new User("User11", 36));
 
-        users.sort((User a, User b) -> (int)Math.round(Math.sin((double)b.age / a.age) - 0.5) * 100);
+        users.sort((User a, User b) -> b.age - a.age);
 
         System.out.println(users);
     }
