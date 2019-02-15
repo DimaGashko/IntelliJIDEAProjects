@@ -24,22 +24,17 @@ public class Benchmark {
     }
 
     public void run() {
-        System.out.println("Test: \"from end\"");
-        int endTime = test((arr) -> arr.remove(arr.size() - 1));
-
-        System.out.println("Test: \"from the middle\"");
-        int middleTime = test((arr) -> arr.remove(arr.size() / 2));
-
-        System.out.println("Test: \"from the beginning\"");
-        int beginTime = test((arr) -> arr.remove(0));
+        int endTime = test((arr) -> arr.remove(arr.size() - 1), "from end");
+        int middleTime = test((arr) -> arr.remove(arr.size() / 2), "from the middle");
+        int beginTime = test((arr) -> arr.remove(0), "from the beginning");
 
         System.out.println("Remove item from end: " + endTime + "ns");
         System.out.println("Remove item from the middle: " + middleTime + "ns");
         System.out.println("Remove item from the beginning: " + beginTime + "ns");
-
     }
 
-    private int test(TestFunc<List<Integer>> testFunc) {
+    private int test(TestFunc<List<Integer>> testFunc, String testName) {
+        System.out.println("Test: \"" + testName + "\"");
         int res = 0;
 
         for (int i = 0; i < testRepeat; i++) {
@@ -87,7 +82,7 @@ public class Benchmark {
     }
 
     @FunctionalInterface
-    public interface TestFunc<T> {
+    private interface TestFunc<T> {
         void apply(T t);
     }
 
