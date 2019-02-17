@@ -4,6 +4,10 @@ import java.io.*;
 import java.util.Collection;
 import java.util.HashSet;
 
+import static com.helpers.console.ConsoleElements.hr;
+import static com.helpers.console.ConsolePrompt.promptInt;
+import static com.helpers.console.ConsolePrompt.promptLine;
+
 public class Lab1 {
     private static final String USERS_STORAGE_URL = "src/com/labs/lab_s4_1/users";
 
@@ -15,15 +19,50 @@ public class Lab1 {
     }
 
     public void run() {
-        users.add(new User("aaa", "bbb"));
-        users.add(new User("aaa", "bbb"));
-        users.add(new User("aaa", "bbb"));
-        users.add(new User("aaa", "bbb"));
-        users.add(new User("aaa", "bbb"));
-        users.add(new User("aaa", "bbb"));
-        users.add(new User("aaa", "bbb"));
 
-        printUsers(users);
+        runCLI();
+    }
+
+    private void runCLI() {
+        printHelp();
+
+        while (true) {
+            String command = promptLine("Enter command: ").trim();
+
+            if (command.equalsIgnoreCase("exit")) {
+                break;
+
+            } else {
+                useCommand(command);
+
+            }
+
+            hr();
+        }
+
+    }
+
+    private void useCommand(String command) {
+        if (command.equalsIgnoreCase("")) {
+            String author = promptLine("Enter the author: ");
+            //printBooks(library.getBooksByAuthor(author));
+
+        } else if (command.equalsIgnoreCase("help")) {
+            printHelp();
+
+        } else {
+            System.out.println("Command not found. Try again: ");
+        }
+    }
+
+    private void printHelp() {
+        System.out.println("Commands:");
+        System.out.println("> all #Print all users");
+        System.out.println();
+        System.out.println("> help #Print Help");
+        System.out.println("> exit #Exit");
+
+        hr();
     }
 
     /**
@@ -53,10 +92,9 @@ public class Lab1 {
         System.out.println("[");
 
         users.forEach((item) -> {
-            System.out.println("\t" + item);
+            System.out.println("\t" + item + ",");
         });
 
         System.out.println("[");
     }
-
 }
