@@ -35,7 +35,7 @@ public class User implements Comparable<User> {
     }
 
     public String getFullName() {
-        return firstName + " " + lastName;
+        return lastName + " " + firstName;
     }
 
     @Override
@@ -120,8 +120,8 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(@NotNull User o) {
-        return Comparator.comparing(User::getFirstName, String::compareTo)
-                .thenComparing(User::getLastName, String::compareTo)
+        return Comparator.comparing(User::getLastName, String::compareTo)
+                .thenComparing(User::getFirstName, String::compareTo)
                 .thenComparingInt(User::getAge).compare(this, o);
 
     }
