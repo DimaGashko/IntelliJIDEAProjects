@@ -2,8 +2,8 @@ package com.labs.lab_s4_1;
 
 import java.io.*;
 import java.time.LocalDate;
-import java.util.Collection;
-import java.util.HashSet;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.helpers.console.ConsoleElements.hr;
 import static com.helpers.console.ConsolePrompt.*;
@@ -51,16 +51,7 @@ public class Lab1 {
 
     private void useCommand(String command) {
         if (command.equalsIgnoreCase("add")) {
-            var user = getNewUser();
-            users.add(user);
-
-            try {
-                saveUsers();
-                System.out.println(user);
-            } catch (IOException err) {
-                users.remove(user);
-                System.out.println("Can't save users");
-            }
+            addUser();
 
         } else if (command.equalsIgnoreCase("remove")) {
             removeElement();
@@ -68,11 +59,27 @@ public class Lab1 {
         } else if (command.equalsIgnoreCase("showAll")) {
             printUsers(users);
 
+        } else if (command.equalsIgnoreCase("showByFilter")) {
+            showUsersByFilter();
+
         } else if (command.equalsIgnoreCase("help")) {
             printHelp();
 
         } else {
             System.out.println("Command not found. Try again: ");
+        }
+    }
+
+    private void addUser() {
+        var user = getNewUser();
+        users.add(user);
+
+        try {
+            saveUsers();
+            System.out.println(user);
+        } catch (IOException err) {
+            users.remove(user);
+            System.out.println("Can't save users");
         }
     }
 
@@ -101,11 +108,48 @@ public class Lab1 {
         }
     }
 
+    private void showUsersByFilter() {
+        printFiltersHelp();
+        String filter = promptLine("Select Filter:");
+
+        if (filter.equalsIgnoreCase("a")) {
+            String country = promptLine("Country:");
+
+            var result = users.stream().filter(user -> user.getCountry().equalsIgnoreCase(country))
+                    .sorted(Comparator.comparing(User::getRegistered, LocalDate::compareTo))
+                    .collect(Collectors.toCollection(ArrayList::new));
+
+            printUsers(result);
+
+        } else {
+            System.out.println("Can't find filter");
+        }
+    }
+
+    /**
+
+     Comparator.comparing(User::getLastName, String::compareTo)
+     .thenComparing(User::getFirstName, String::compareTo)
+     .thenComparingInt(User::getAge).compare(this, o)
+
+     */
+
+    private void printFiltersHelp() {
+        System.out.println("Filters:");
+        System.out.println("> a #Список користувачів заданої країни в порядку зростання дати реєстрації");
+        System.out.println("> b #Список користувачів з заданим ім'ям");
+        System.out.println("> c #Список користувачів що зареєструвалися після вказаного року");
+        System.out.println("> d #Список користувачів online в алфавітному порядку");
+        System.out.println("> e #Список імен зареєстрованих користувачів без повторів");
+        System.out.println("> f #Список країн і всіх користувачів, що проживають в цих країнах");
+    }
+
     private void printHelp() {
         System.out.println("Commands:");
         System.out.println("> add #Add new user");
         System.out.println("> remove #Remove the user by ID");
         System.out.println("> showAll #Show all users");
+        System.out.println("> showByFilter #Show users by filter");
         System.out.println();
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");
