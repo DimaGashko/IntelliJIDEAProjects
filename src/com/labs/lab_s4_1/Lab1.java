@@ -67,12 +67,12 @@ public class Lab1 {
 
     private User getNewUser() {
         return new User(
-                promptLine("First Name: "),
-                promptLine("Last Name: "),
+                promptLine("First Name:"),
+                promptLine("Last Name:"),
                 promptLine("Country"),
-                promptInt("Age: "),
-                promptBool("Online: "),
-                LocalDate.of(promptInt("Registered year: "), 1, 1)
+                promptInt("Age:"),
+                promptBool("Online:"),
+                LocalDate.of(promptInt("Registered year:"), 1, 1)
         );
     }
 

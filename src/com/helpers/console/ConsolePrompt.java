@@ -1,6 +1,7 @@
 package com.helpers.console;
 
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 /**
  * Запрашивает у пользователя данные через консольный интерфейс
@@ -36,8 +37,18 @@ public class ConsolePrompt {
      * @param title Текст, что будет показан пользователю в запрос
      */
     static public boolean promptBool(String title) {
-        System.out.println(title);
-        return scanner.nextBoolean();
+        System.out.println(title + " (y / n)");
+        String res = "";
+
+        while (!res.equals("y") && !res.equals("n")) {
+            res = scanner.nextLine();
+
+            if (res.isEmpty()) {
+                res = scanner.nextLine();
+            }
+        }
+
+        return res.equals("y");
     }
 
     /**
