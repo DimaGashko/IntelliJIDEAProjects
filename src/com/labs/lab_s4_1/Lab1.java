@@ -1,12 +1,12 @@
 package com.labs.lab_s4_1;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.HashSet;
 
 import static com.helpers.console.ConsoleElements.hr;
-import static com.helpers.console.ConsolePrompt.promptInt;
-import static com.helpers.console.ConsolePrompt.promptLine;
+import static com.helpers.console.ConsolePrompt.*;
 
 public class Lab1 {
     private static final String USERS_STORAGE_URL = "src/com/labs/lab_s4_1/users";
@@ -25,6 +25,7 @@ public class Lab1 {
 
     private void runCLI() {
         printHelp();
+        hr();
 
         while (true) {
             String command = promptLine("Enter command: ").trim();
@@ -43,9 +44,10 @@ public class Lab1 {
     }
 
     private void useCommand(String command) {
-        if (command.equalsIgnoreCase("")) {
-            String author = promptLine("Enter the author: ");
-            //printBooks(library.getBooksByAuthor(author));
+        if (command.equalsIgnoreCase("add")) {
+            var user = getNewUser();
+            users.add(user);
+            printUsers(users);
 
         } else if (command.equalsIgnoreCase("help")) {
             printHelp();
@@ -57,12 +59,21 @@ public class Lab1 {
 
     private void printHelp() {
         System.out.println("Commands:");
-        System.out.println("> all #Print all users");
+        System.out.println("> add #Add new user");
         System.out.println();
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");
+    }
 
-        hr();
+    private User getNewUser() {
+        return new User(
+                promptLine("First Name: "),
+                promptLine("Last Name: "),
+                promptLine("Country"),
+                promptInt("Age: "),
+                promptBool("Online: "),
+                LocalDate.of(promptInt("Registered year: "), 1, 1)
+        );
     }
 
     /**
@@ -89,12 +100,6 @@ public class Lab1 {
     }
 
     private void printUsers(Collection<User> users) {
-        System.out.println("[");
-
-        users.forEach((item) -> {
-            System.out.println("\t" + item + ",");
-        });
-
-        System.out.println("[");
+        users.forEach((item) -> System.out.println("\t" + item));
     }
 }

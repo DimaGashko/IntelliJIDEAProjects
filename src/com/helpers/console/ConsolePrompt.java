@@ -31,6 +31,16 @@ public class ConsolePrompt {
     }
 
     /**
+     * Запрашивает у пользователя ответ типа Boolean
+     *
+     * @param title Текст, что будет показан пользователю в запрос
+     */
+    static public boolean promptBool(String title) {
+        System.out.println(title);
+        return scanner.nextBoolean();
+    }
+
+    /**
      * Запрашивает у пользователя строку (с пробелмами)
      *
      * @param title Текст, что будет показан пользователю в запросе
