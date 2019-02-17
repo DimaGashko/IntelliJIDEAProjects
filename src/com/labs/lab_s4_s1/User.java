@@ -95,6 +95,9 @@ public class User {
     }
 
     public void setAge(int age) {
+        if (age < 1) age = 1;
+        else if (age > 200) age = 200;
+
         this.age = age;
     }
 }
