@@ -2,6 +2,8 @@ package com.labs.lab_s4_1;
 
 import org.jetbrains.annotations.NotNull;
 
+import javax.print.DocFlavor;
+import javax.xml.transform.Templates;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -41,7 +43,10 @@ public class User implements Comparable<User>, Serializable {
 
     @Override
     public String toString() {
-        return getFullName();
+        return String.format(
+                "{name: %s, country: %s, age: %d, online: %b, registered: %s}",
+                getFullName(), country, age, online, registered
+        );
     }
 
     @Override
