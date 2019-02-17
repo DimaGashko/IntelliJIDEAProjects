@@ -43,8 +43,8 @@ public class User implements Comparable<User>, Serializable {
     @Override
     public String toString() {
         return String.format(
-                "{name: %s, country: %s, age: %d, online: %b, registered: %s}",
-                getFullName(), country, age, online, registered
+                "{id: %s, name: %s, country: %s, age: %d, online: %b, registered: %s}",
+                id, getFullName(), country, age, online, registered
         );
     }
 
