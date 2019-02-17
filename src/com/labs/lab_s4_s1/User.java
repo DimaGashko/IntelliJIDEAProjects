@@ -1,10 +1,13 @@
 package com.labs.lab_s4_s1;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Objects;
 import java.util.UUID;
 
-public class User {
+public class User implements Comparable<User> {
     private final UUID id = UUID.randomUUID();
     private String firstName;
     private String lastName;
@@ -20,6 +23,15 @@ public class User {
     public User(String firstName, String lastName) {
         setFirstName(firstName);
         setLastName(lastName);
+    }
+
+    public User(String firstName, String lastName, String country, int age, boolean online, LocalDate registered) {
+        setFirstName(firstName);
+        setLastName(lastName);
+        setCountry(country);
+        setOnline(online);
+        setRegistered(registered);
+        setAge(age);
     }
 
     public String getFullName() {
@@ -90,6 +102,11 @@ public class User {
         return registered;
     }
 
+    private void setRegistered(LocalDate registered) {
+        this.registered = registered;
+    }
+
+
     public int getAge() {
         return age;
     }
@@ -99,5 +116,13 @@ public class User {
         else if (age > 200) age = 200;
 
         this.age = age;
+    }
+
+    @Override
+    public int compareTo(@NotNull User o) {
+        return Comparator.comparing(User::getFirstName, String::compareTo)
+                .thenComparing(User::getLastName, String::compareTo)
+                .thenComparingInt(User::getAge).compare(this, o);
+
     }
 }
