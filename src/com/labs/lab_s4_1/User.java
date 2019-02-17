@@ -1,13 +1,14 @@
-package com.labs.lab_s4_s1;
+package com.labs.lab_s4_1;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.Objects;
 import java.util.UUID;
 
-public class User implements Comparable<User> {
+public class User implements Comparable<User>, Serializable {
     private final UUID id = UUID.randomUUID();
     private String firstName;
     private String lastName;

@@ -1,10 +1,10 @@
-package com.labs.lab_s4_s1;
+package com.labs.lab_s4_1;
 
 import java.io.*;
 import java.util.HashSet;
 
 public class Lab1 {
-    private static final String USERS_STORAGE_URL = "./users.storage";
+    private static final String USERS_STORAGE_URL = "src/com/labs/lab_s4_1/users";
 
     private HashSet<User> users = new HashSet<>();
 
