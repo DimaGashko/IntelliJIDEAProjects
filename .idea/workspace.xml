@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/users" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,12 +55,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="461">
-                  <caret line="87" column="55" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="55" />
+                <state relative-caret-position="393">
+                  <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#2616#2617#0" expanded="true" />
-                    <element signature="e#2689#2690#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -116,7 +111,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab3/part1/Lab3Part1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="62">
+                <state relative-caret-position="19">
                   <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
                 </state>
               </provider>
@@ -441,7 +436,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550436898449" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550438172255" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -663,7 +658,7 @@
       <workItem from="1550219690847" duration="2811000" />
       <workItem from="1550224088272" duration="1482000" />
       <workItem from="1550409601486" duration="2759000" />
-      <workItem from="1550415950883" duration="11770000" />
+      <workItem from="1550415950883" duration="12843000" />
     </task>
     <servers />
   </component>
@@ -700,7 +695,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="455504000" />
+    <option name="totallyTimeSpent" value="456577000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -715,7 +710,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22239032" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22239032" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -726,7 +721,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.4222586" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.95090014" />
       <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" weight="0.3715221" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
@@ -830,14 +825,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/CreateBook.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/semester3/lab1/lab2/F2.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/semester3/lab1/lab3/part1/Lab3Part1.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab2/F2.java">
@@ -1112,7 +1099,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab3/part1/Lab3Part1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
+        <state relative-caret-position="19">
           <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
         </state>
       </provider>
@@ -1165,14 +1152,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="1107" column="26" selection-start-line="1107" selection-start-column="26" selection-end-line="1107" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="87" column="55" lean-forward="true" selection-start-line="87" selection-start-column="32" selection-end-line="87" selection-end-column="55" />
+        <state relative-caret-position="393">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2689#2690#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -79,7 +79,19 @@ public class Lab1 {
     private void removeElement() {
         String id = promptLine("Enter user id: ");
 
-        users.removeIf((user) -> user.getId().equals(id));
+        var found = users.stream().filter((user -> user.getId().equals(id))).findFirst();
+
+        if (!found.isPresent()) {
+            System.out.println("No user have the id");
+            return;
+        }
+
+        var user = found.get();
+
+        boolean check = promptBool("Are you really want to remove user: \n" + user);
+        if (!check) return;;
+
+        users.removeIf((item) -> item.getId().equals(id));
 
         try {
             saveUsers();
@@ -135,6 +147,11 @@ public class Lab1 {
     }
 
     private void printUsers(Collection<User> users) {
+        if (users.isEmpty()) {
+            System.out.println("There are no users");
+            return;
+        }
+
         users.forEach((item) -> System.out.println("\t" + item));
     }
 }
