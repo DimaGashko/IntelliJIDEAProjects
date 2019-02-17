@@ -62,6 +62,9 @@ public class Lab1 {
                 System.out.println("Can't save users");
             }
 
+        } else if (command.equalsIgnoreCase("remove")) {
+            removeElement();
+
         } else if (command.equalsIgnoreCase("showAll")) {
             printUsers(users);
 
@@ -73,9 +76,23 @@ public class Lab1 {
         }
     }
 
+    private void removeElement() {
+        String id = promptLine("Enter user id: ");
+
+        users.removeIf((user) -> user.getId().equals(id));
+
+        try {
+            saveUsers();
+            System.out.println("Successfully");
+        } catch (IOException err) {
+            System.out.println("Can't apply changes");
+        }
+    }
+
     private void printHelp() {
         System.out.println("Commands:");
         System.out.println("> add #Add new user");
+        System.out.println("> remove #Remove the user by ID");
         System.out.println("> showAll #Show all users");
         System.out.println();
         System.out.println("> help #Print Help");
@@ -84,6 +101,7 @@ public class Lab1 {
 
     private User getNewUser() {
         return new User(
+                promptLine("Id:"),
                 promptLine("First Name:"),
                 promptLine("Last Name:"),
                 promptLine("Country"),

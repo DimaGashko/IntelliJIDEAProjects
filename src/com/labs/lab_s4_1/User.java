@@ -2,16 +2,13 @@ package com.labs.lab_s4_1;
 
 import org.jetbrains.annotations.NotNull;
 
-import javax.print.DocFlavor;
-import javax.xml.transform.Templates;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Comparator;
 import java.util.Objects;
-import java.util.UUID;
 
 public class User implements Comparable<User>, Serializable {
-    private final UUID id = UUID.randomUUID();
+    private String id;
     private String firstName;
     private String lastName;
     private String country;
@@ -23,12 +20,14 @@ public class User implements Comparable<User>, Serializable {
 
     }
 
-    public User(String firstName, String lastName) {
+    public User(String id, String firstName, String lastName) {
+        setId(id);
         setFirstName(firstName);
         setLastName(lastName);
     }
 
-    public User(String firstName, String lastName, String country, int age, boolean online, LocalDate registered) {
+    public User(String id, String firstName, String lastName, String country, int age, boolean online, LocalDate registered) {
+        setId(id);
         setFirstName(firstName);
         setLastName(lastName);
         setCountry(country);
@@ -67,8 +66,12 @@ public class User implements Comparable<User>, Serializable {
         return Objects.hash(firstName, lastName, country, online, registered, age);
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFirstName() {
