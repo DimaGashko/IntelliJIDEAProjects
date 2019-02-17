@@ -3,14 +3,13 @@ package learn.Collections;
 import javafx.beans.property.StringProperty;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class Test1 {
 
     public static void main(String[] args) {
+
+        Set<Integer> m = new HashSet<>();
 
         ArrayList<User> users = new ArrayList<>();
 
