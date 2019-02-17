@@ -20,6 +20,12 @@ public class Lab1 {
 
     public void run() {
 
+        try {
+            loadUsers();
+        } catch (IOException | ClassNotFoundException err) {
+            System.out.println("Can't load users from file");
+        }
+
         runCLI();
     }
 
@@ -47,6 +53,16 @@ public class Lab1 {
         if (command.equalsIgnoreCase("add")) {
             var user = getNewUser();
             users.add(user);
+
+            try {
+                saveUsers();
+                System.out.println(user);
+            } catch (IOException err) {
+                users.remove(user);
+                System.out.println("Can't save users");
+            }
+
+        } else if (command.equalsIgnoreCase("showAll")) {
             printUsers(users);
 
         } else if (command.equalsIgnoreCase("help")) {
@@ -60,6 +76,7 @@ public class Lab1 {
     private void printHelp() {
         System.out.println("Commands:");
         System.out.println("> add #Add new user");
+        System.out.println("> showAll #Show all users");
         System.out.println();
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");

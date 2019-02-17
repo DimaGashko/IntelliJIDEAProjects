@@ -1,7 +1,6 @@
 package com.helpers.console;
 
 import java.util.Scanner;
-import java.util.regex.Pattern;
 
 /**
  * Запрашивает у пользователя данные через консольный интерфейс
