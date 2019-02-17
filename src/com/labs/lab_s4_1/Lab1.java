@@ -1,6 +1,7 @@
 package com.labs.lab_s4_1;
 
 import java.io.*;
+import java.util.Collection;
 import java.util.HashSet;
 
 public class Lab1 {
@@ -14,7 +15,15 @@ public class Lab1 {
     }
 
     public void run() {
+        users.add(new User("aaa", "bbb"));
+        users.add(new User("aaa", "bbb"));
+        users.add(new User("aaa", "bbb"));
+        users.add(new User("aaa", "bbb"));
+        users.add(new User("aaa", "bbb"));
+        users.add(new User("aaa", "bbb"));
+        users.add(new User("aaa", "bbb"));
 
+        printUsers(users);
     }
 
     /**
@@ -38,6 +47,16 @@ public class Lab1 {
 
             out.writeObject(users);
         }
+    }
+
+    private void printUsers(Collection<User> users) {
+        System.out.println("[");
+
+        users.forEach((item) -> {
+            System.out.println("\t" + item);
+        });
+
+        System.out.println("[");
     }
 
 }

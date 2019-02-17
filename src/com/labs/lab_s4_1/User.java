@@ -56,7 +56,6 @@ public class User implements Comparable<User>, Serializable {
         User user = (User) o;
         return online == user.online &&
                 age == user.age &&
-                Objects.equals(id, user.id) &&
                 Objects.equals(firstName, user.firstName) &&
                 Objects.equals(lastName, user.lastName) &&
                 Objects.equals(country, user.country) &&
@@ -65,7 +64,7 @@ public class User implements Comparable<User>, Serializable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, country, online, registered, age);
+        return Objects.hash(firstName, lastName, country, online, registered, age);
     }
 
     public UUID getId() {

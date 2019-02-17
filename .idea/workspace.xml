@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +34,7 @@
     <splitter split-orientation="horizontal" split-proportion="0.6439689">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="193">
@@ -72,11 +72,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="176">
-                  <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+                <state relative-caret-position="307">
+                  <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Iterable.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="132">
+                  <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
                 </state>
               </provider>
             </entry>
@@ -217,8 +226,8 @@
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/User.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/UsersStorage.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/Lab1.java" />
-        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" />
       </list>
     </option>
   </component>
@@ -397,7 +406,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550431951994" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550432407580" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -619,7 +628,7 @@
       <workItem from="1550219690847" duration="2811000" />
       <workItem from="1550224088272" duration="1482000" />
       <workItem from="1550409601486" duration="2759000" />
-      <workItem from="1550415950883" duration="6858000" />
+      <workItem from="1550415950883" duration="7198000" />
     </task>
     <servers />
   </component>
@@ -656,7 +665,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="450592000" />
+    <option name="totallyTimeSpent" value="450932000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -681,8 +690,8 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49848714" weight="0.30769232" />
-      <window_info active="true" anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" visible="true" weight="0.18821605" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.30769232" />
+      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" weight="0.18821605" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -785,7 +794,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/Index.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/configs/books-db">
       <provider selected="true" editor-type-id="text-editor">
@@ -1063,16 +1071,6 @@
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/users">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.xml/javax/xml/transform/Templates.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1089,6 +1087,23 @@
             <element signature="e#2491#2492#0" expanded="true" />
             <element signature="e#2535#2536#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="47" column="17" lean-forward="true" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
         </state>
       </provider>
     </entry>
