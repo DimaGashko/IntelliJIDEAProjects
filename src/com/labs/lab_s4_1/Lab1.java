@@ -165,7 +165,10 @@ public class Lab1 {
                 map.put(country, countyUsers);
             });
 
-            System.out.println(map);
+            map.forEach((country, countyUsers) -> {
+                System.out.println(" - " + country);
+                printUsers(countyUsers);
+            });
 
         } else {
             System.out.println("Can't find the filter");
