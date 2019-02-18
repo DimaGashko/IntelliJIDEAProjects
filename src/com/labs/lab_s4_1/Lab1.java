@@ -60,7 +60,7 @@ public class Lab1 {
         } else if (command.equalsIgnoreCase("showAll")) {
             printUsers(users);
 
-        } else if (command.equalsIgnoreCase("showByFilter")) {
+        } else if (command.equalsIgnoreCase("filter")) {
             showUsersByFilter();
 
         } else if (command.equalsIgnoreCase("help")) {
@@ -198,7 +198,7 @@ public class Lab1 {
         System.out.println("> add #Add new user");
         System.out.println("> remove #Remove the user by ID");
         System.out.println("> showAll #Show all users");
-        System.out.println("> showByFilter #Show users by filter");
+        System.out.println("> filter #Show users by filter");
         System.out.println();
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");
