@@ -128,8 +128,7 @@ public class User implements Comparable<User>, Serializable {
 
     @Override
     public int compareTo(@NotNull User o) {
-        return Comparator.comparing(User::getLastName, String::compareTo)
-                .thenComparing(User::getFirstName, String::compareTo)
+        return Comparator.comparing(User::getFullName, String::compareTo)
                 .thenComparingInt(User::getAge).compare(this, o);
 
     }

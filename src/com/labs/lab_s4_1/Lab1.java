@@ -3,6 +3,7 @@ package com.labs.lab_s4_1;
 import java.io.*;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 import static com.helpers.console.ConsoleElements.hr;
@@ -121,8 +122,38 @@ public class Lab1 {
 
             printUsers(result);
 
+        } else if (filter.equalsIgnoreCase("b")) {
+            String name = promptLine("Name:");
+
+            var result = users.stream().filter(user -> user.getFirstName().equalsIgnoreCase(name))
+                    .collect(Collectors.toCollection(ArrayList::new));
+
+            printUsers(result);
+
+        } else if (filter.equalsIgnoreCase("c")) {
+          int year = promptInt("Year:");
+
+          var result = users.stream().filter(user -> user.getRegistered().getYear() > year)
+                  .collect(Collectors.toCollection(ArrayList::new));
+
+          printUsers(result);
+
+        } else if (filter.equalsIgnoreCase("d")) {
+            var result = users.stream().filter(User::isOnline)
+                    .sorted(Comparator.comparing(User::getFullName, String::compareTo))
+                    .collect(Collectors.toCollection(ArrayList::new));
+
+            printUsers(result);
+
+        } else if (filter.equalsIgnoreCase("e")) {
+            var result = users.stream().map(User::getFirstName)
+                    .collect(Collectors.toCollection(HashSet::new));
+
+            System.out.println(result);
+
         } else {
-            System.out.println("Can't find filter");
+            System.out.println("Can't find the filter");
+            return;
         }
     }
 
