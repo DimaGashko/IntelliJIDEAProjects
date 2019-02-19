@@ -58,8 +58,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+                <state relative-caret-position="200">
+                  <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -399,7 +399,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550589295051" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550589310106" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -624,7 +624,7 @@
       <workItem from="1550415950883" duration="14937000" />
       <workItem from="1550472820609" duration="3975000" />
       <workItem from="1550485224034" duration="470000" />
-      <workItem from="1550587414095" duration="1715000" />
+      <workItem from="1550587414095" duration="2067000" />
     </task>
     <servers />
   </component>
@@ -661,7 +661,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="464831000" />
+    <option name="totallyTimeSpent" value="465183000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -686,7 +686,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.95090014" />
-      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.3715221" />
+      <window_info active="true" anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" visible="true" weight="0.3715221" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -794,7 +794,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/labs/semester3/lab1/lab3/part1/Lab3Part1.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab2/F2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="528">
@@ -1124,10 +1123,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Scanner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="2800" column="6" lean-forward="true" selection-start-line="2800" selection-start-column="6" selection-end-line="2800" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="200">
+          <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

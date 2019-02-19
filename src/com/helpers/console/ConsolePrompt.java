@@ -35,17 +35,12 @@ public class ConsolePrompt {
     static public double promptDouble(String title) {
         System.out.println(title);
 
-        boolean success = false;
-        double res = 0;
-
-        while (!success) try {
-            res = scanner.nextDouble();
-            success = true;
-        } catch (InputMismatchException err) {
-
+        while (!scanner.hasNextDouble()) {
+            System.out.println("Error, try again");
+            scanner.next();
         }
 
-        return res;
+        return scanner.nextDouble();
     }
 
     /**
