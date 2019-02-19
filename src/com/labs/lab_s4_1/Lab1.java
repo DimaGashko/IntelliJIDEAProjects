@@ -1,10 +1,9 @@
 package com.labs.lab_s4_1;
 
-import java.io.*;
 import java.time.LocalDate;
-import java.util.*;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
+import java.util.*;
+import java.io.*;
 
 import static com.helpers.console.ConsoleElements.hr;
 import static com.helpers.console.ConsolePrompt.*;
@@ -72,7 +71,7 @@ public class Lab1 {
     }
 
     private void addUser() {
-        var user = getNewUser();
+        var user = createNewUser();
         users.add(user);
 
         try {
@@ -172,16 +171,9 @@ public class Lab1 {
 
         } else {
             System.out.println("Can't find the filter");
+
         }
     }
-
-    /**
-
-     Comparator.comparing(User::getLastName, String::compareTo)
-     .thenComparing(User::getFirstName, String::compareTo)
-     .thenComparingInt(User::getAge).compare(this, o)
-
-     */
 
     private void printFiltersHelp() {
         System.out.println("Filters:");
@@ -204,7 +196,7 @@ public class Lab1 {
         System.out.println("> exit #Exit");
     }
 
-    private User getNewUser() {
+    private User createNewUser() {
         return new User(
                 promptLine("Id:"),
                 promptLine("First Name:"),
@@ -214,6 +206,15 @@ public class Lab1 {
                 promptBool("Online:"),
                 LocalDate.of(promptInt("Registered year:"), 1, 1)
         );
+    }
+
+    private void printUsers(Collection<User> users) {
+        if (users.isEmpty()) {
+            System.out.println("There are no users");
+            return;
+        }
+
+        users.forEach((item) -> System.out.println("\t" + item));
     }
 
     /**
@@ -237,14 +238,5 @@ public class Lab1 {
 
             out.writeObject(users);
         }
-    }
-
-    private void printUsers(Collection<User> users) {
-        if (users.isEmpty()) {
-            System.out.println("There are no users");
-            return;
-        }
-
-        users.forEach((item) -> System.out.println("\t" + item));
     }
 }
