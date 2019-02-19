@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/console/ConsolePrompt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/console/ConsolePrompt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/users" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/users" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +50,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+                <state relative-caret-position="291">
+                  <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -58,11 +62,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="200">
-                  <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="393">
+                  <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -399,7 +400,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550589310106" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550590625914" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -407,6 +408,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
@@ -624,7 +626,7 @@
       <workItem from="1550415950883" duration="14937000" />
       <workItem from="1550472820609" duration="3975000" />
       <workItem from="1550485224034" duration="470000" />
-      <workItem from="1550587414095" duration="2067000" />
+      <workItem from="1550587414095" duration="3146000" />
     </task>
     <servers />
   </component>
@@ -661,7 +663,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="465183000" />
+    <option name="totallyTimeSpent" value="466262000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -686,7 +688,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.95090014" />
-      <window_info active="true" anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" visible="true" weight="0.3715221" />
+      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.3715221" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1113,16 +1115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -1130,13 +1122,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="42" column="19" lean-forward="true" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        <state relative-caret-position="291">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="62" column="13" selection-start-line="62" selection-start-column="13" selection-end-line="62" selection-end-column="13" />
         </state>
       </provider>
     </entry>

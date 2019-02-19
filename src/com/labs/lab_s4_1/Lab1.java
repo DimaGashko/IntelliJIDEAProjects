@@ -72,6 +72,10 @@ public class Lab1 {
 
     private void addUser() {
         var user = createNewUser();
+
+        boolean check = promptBool("Are you really want to add the user:\n" + user);
+        if (!check) return;
+
         users.add(user);
 
         try {
@@ -95,7 +99,7 @@ public class Lab1 {
 
         var user = found.get();
 
-        boolean check = promptBool("Are you really want to remove user: \n" + user);
+        boolean check = promptBool("Are you really want to remove user:\n" + user);
         if (!check) return;;
 
         users.removeIf((item) -> item.getId().equals(id));

@@ -1,6 +1,5 @@
 package com.helpers.console;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -19,7 +18,7 @@ public class ConsolePrompt {
         System.out.println(title);
 
         while (!scanner.hasNextInt()) {
-            System.out.println("Error, try again");
+            System.out.println("Error. Try again:");
             scanner.next();
         }
 
@@ -36,7 +35,7 @@ public class ConsolePrompt {
         System.out.println(title);
 
         while (!scanner.hasNextDouble()) {
-            System.out.println("Error, try again");
+            System.out.println("Error. Try again:");
             scanner.next();
         }
 
@@ -50,13 +49,17 @@ public class ConsolePrompt {
      */
     static public boolean promptBool(String title) {
         System.out.println(title + " (y / n)");
-        String res = "";
+        String res;
 
-        while (!res.equals("y") && !res.equals("n")) {
-            res = scanner.nextLine();
+        while (true) {
+            res = scanner.nextLine().trim();
 
-            if (res.isEmpty()) {
-                res = scanner.nextLine();
+            if (res.equals("y") || res.equals("n")) {
+                break;
+            }
+
+            if (!res.isEmpty()) {
+                System.out.println("Error. Try again:");
             }
         }
 
