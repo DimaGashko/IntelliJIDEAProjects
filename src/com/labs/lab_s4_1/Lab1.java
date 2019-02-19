@@ -161,11 +161,11 @@ public class Lab1 {
             HashMap<String, HashSet<User>> map = new HashMap<>();
 
             countries.forEach((country) -> {
-                HashSet<User> countyUsers = users.stream()
+                HashSet<User> countryUsers = users.stream()
                         .filter(user -> user.getCountry().equals(country))
                         .collect(Collectors.toCollection(HashSet::new));
 
-                map.put(country, countyUsers);
+                map.put(country, countryUsers);
             });
 
             map.forEach((country, countyUsers) -> {

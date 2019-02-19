@@ -51,19 +51,14 @@ public class User implements Comparable<User>, Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof User)) return false;
         User user = (User) o;
-        return online == user.online &&
-                age == user.age &&
-                Objects.equals(firstName, user.firstName) &&
-                Objects.equals(lastName, user.lastName) &&
-                Objects.equals(country, user.country) &&
-                Objects.equals(registered, user.registered);
+        return id.equals(user.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, country, online, registered, age);
+        return Objects.hash(id);
     }
 
     public String getId() {
