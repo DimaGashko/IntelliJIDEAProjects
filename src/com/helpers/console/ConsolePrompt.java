@@ -1,5 +1,6 @@
 package com.helpers.console;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -16,6 +17,12 @@ public class ConsolePrompt {
      */
     static public int promptInt(String title) {
         System.out.println(title);
+
+        while (!scanner.hasNextInt()) {
+            System.out.println("Error, try again");
+            scanner.next();
+        }
+
         return scanner.nextInt();
     }
 
@@ -27,7 +34,18 @@ public class ConsolePrompt {
      */
     static public double promptDouble(String title) {
         System.out.println(title);
-        return scanner.nextDouble();
+
+        boolean success = false;
+        double res = 0;
+
+        while (!success) try {
+            res = scanner.nextDouble();
+            success = true;
+        } catch (InputMismatchException err) {
+
+        }
+
+        return res;
     }
 
     /**
