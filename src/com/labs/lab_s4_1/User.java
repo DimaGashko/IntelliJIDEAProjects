@@ -16,10 +16,6 @@ public class User implements Comparable<User>, Serializable {
     private LocalDate registered;
     private int age;
 
-    private User() {
-
-    }
-
     public User(String id, String firstName, String lastName) {
         setId(id);
         setFirstName(firstName);
@@ -123,8 +119,6 @@ public class User implements Comparable<User>, Serializable {
 
     @Override
     public int compareTo(@NotNull User o) {
-        return Comparator.comparing(User::getFullName, String::compareTo)
-                .thenComparingInt(User::getAge).compare(this, o);
-
+        return Comparator.comparing(User::getId, String::compareTo).compare(this, o);
     }
 }
