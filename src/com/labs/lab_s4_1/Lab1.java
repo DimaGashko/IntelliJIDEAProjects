@@ -155,12 +155,9 @@ public class Lab1 {
             System.out.println(result);
 
         } else if (filter.equalsIgnoreCase("f")) {
-            var countries = users.stream().map(User::getCountry)
-                    .collect(Collectors.toCollection(HashSet::new));
-
             HashMap<String, HashSet<User>> map = new HashMap<>();
 
-            countries.forEach((country) -> {
+            users.stream().map(User::getCountry).forEach(country -> {
                 HashSet<User> countryUsers = users.stream()
                         .filter(user -> user.getCountry().equals(country))
                         .collect(Collectors.toCollection(HashSet::new));
