@@ -136,7 +136,7 @@ public class Lab1 {
         } else if (filter.equalsIgnoreCase("c")) {
           int year = promptInt("Year:");
 
-          var result = users.stream().filter(user -> user.getRegistered().getYear() > year)
+            var result = users.stream().filter(user -> user.getRegistered().getYear() > year)
                   .collect(Collectors.toCollection(ArrayList::new));
 
           printUsers(result);
@@ -157,7 +157,10 @@ public class Lab1 {
         } else if (filter.equalsIgnoreCase("f")) {
             HashMap<String, HashSet<User>> map = new HashMap<>();
 
-            users.stream().map(User::getCountry).forEach(country -> {
+            Set<String> countries = users.stream().map(User::getCountry)
+                    .collect(Collectors.toCollection(HashSet::new));
+
+            countries.forEach((country) -> {
                 HashSet<User> countryUsers = users.stream()
                         .filter(user -> user.getCountry().equals(country))
                         .collect(Collectors.toCollection(HashSet::new));
@@ -165,9 +168,9 @@ public class Lab1 {
                 map.put(country, countryUsers);
             });
 
-            map.forEach((country, countyUsers) -> {
+            map.forEach((country, countryUsers) -> {
                 System.out.println(" - " + country);
-                printUsers(countyUsers);
+                printUsers(countryUsers);
             });
 
         } else {
