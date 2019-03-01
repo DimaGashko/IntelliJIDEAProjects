@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" afterDir="false" />
-    </list>
+    <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,8 +47,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="165" column="62" selection-start-line="165" selection-start-column="62" selection-end-line="165" selection-end-column="62" />
+            <state relative-caret-position="877">
+              <caret line="197" column="29" lean-forward="true" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -236,6 +233,20 @@
       <recent name="com.labs.lab2" />
       <recent name="com.labs.lab3.part2" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.labs.lab5.ELib.models.storage" />
+      <recent name="com.labs.lab5.ELib.windows" />
+      <recent name="learn.javaFx._16_CSS" />
+      <recent name="learn.javaFx._15_menus" />
+      <recent name="learn.javaFx._14_tableView1" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -245,20 +256,6 @@
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\Coordinates" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\learn\javaFx\_19_sceneBuilder" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\learn\javaFx\_18_Controller" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.labs.lab5.ELib.models.storage" />
-      <recent name="com.labs.lab5.ELib.windows" />
-      <recent name="learn.javaFx._16_CSS" />
-      <recent name="learn.javaFx._15_menus" />
-      <recent name="learn.javaFx._14_tableView1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -452,7 +449,7 @@
       <workItem from="1550822663338" duration="3733000" />
       <workItem from="1551089771870" duration="412000" />
       <workItem from="1551253638271" duration="6000" />
-      <workItem from="1551346599570" duration="567000" />
+      <workItem from="1551346599570" duration="618000" />
     </task>
     <servers />
   </component>
@@ -489,7 +486,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="476191000" />
+    <option name="totallyTimeSpent" value="476242000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -962,8 +959,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="165" column="62" selection-start-line="165" selection-start-column="62" selection-end-line="165" selection-end-column="62" />
+        <state relative-caret-position="877">
+          <caret line="197" column="29" lean-forward="true" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
