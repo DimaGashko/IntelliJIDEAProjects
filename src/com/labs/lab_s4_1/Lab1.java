@@ -155,18 +155,8 @@ public class Lab1 {
             System.out.println(result);
 
         } else if (filter.equalsIgnoreCase("f")) {
-            HashMap<String, HashSet<User>> map = new HashMap<>();
-
-            Set<String> countries = users.stream().map(User::getCountry)
-                    .collect(Collectors.toCollection(HashSet::new));
-
-            countries.forEach((country) -> {
-                HashSet<User> countryUsers = users.stream()
-                        .filter(user -> user.getCountry().equals(country))
-                        .collect(Collectors.toCollection(HashSet::new));
-
-                map.put(country, countryUsers);
-            });
+            Map<String, HashSet<User>> map = users.stream()
+                    .collect(Collectors.groupingBy(User::getCountry, Collectors.toCollection(HashSet::new)));
 
             map.forEach((country, countryUsers) -> {
                 System.out.println(" - " + country);

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="" />
+    <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +50,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="877">
-              <caret line="197" column="29" lean-forward="true" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
+            <state relative-caret-position="223">
+              <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,7 +194,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -203,6 +205,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -233,20 +236,6 @@
       <recent name="com.labs.lab2" />
       <recent name="com.labs.lab3.part2" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.labs.lab5.ELib.models.storage" />
-      <recent name="com.labs.lab5.ELib.windows" />
-      <recent name="learn.javaFx._16_CSS" />
-      <recent name="learn.javaFx._15_menus" />
-      <recent name="learn.javaFx._14_tableView1" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -256,6 +245,20 @@
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\Coordinates" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\learn\javaFx\_19_sceneBuilder" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\learn\javaFx\_18_Controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.labs.lab5.ELib.models.storage" />
+      <recent name="com.labs.lab5.ELib.windows" />
+      <recent name="learn.javaFx._16_CSS" />
+      <recent name="learn.javaFx._15_menus" />
+      <recent name="learn.javaFx._14_tableView1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -450,6 +453,7 @@
       <workItem from="1551089771870" duration="412000" />
       <workItem from="1551253638271" duration="6000" />
       <workItem from="1551346599570" duration="618000" />
+      <workItem from="1551427775587" duration="1262000" />
     </task>
     <servers />
   </component>
@@ -486,7 +490,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="476242000" />
+    <option name="totallyTimeSpent" value="477504000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -501,7 +505,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15885022" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16111952" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -619,21 +623,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab4/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/semester3/lab4/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/semester3/lab1/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/semester3/lab2/F2.java" />
     <entry file="file://$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/sample.fxml">
@@ -776,13 +765,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_s1/UsersStorage.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="1211" column="17" selection-start-line="1211" selection-start-column="17" selection-end-line="1211" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/users.storage" />
     <entry file="file://$PROJECT_DIR$/src/learn/Collections/Test1.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -957,10 +939,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/stream/Collectors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="1129" column="10" lean-forward="true" selection-start-line="1129" selection-start-column="10" selection-end-line="1129" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="879" column="16" selection-start-line="879" selection-start-column="16" selection-end-line="879" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectOutputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="342" column="22" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="334" column="11" selection-start-line="334" selection-start-column="11" selection-end-line="334" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="877">
-          <caret line="197" column="29" lean-forward="true" selection-start-line="197" selection-start-column="29" selection-end-line="197" selection-end-column="29" />
+        <state relative-caret-position="223">
+          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
