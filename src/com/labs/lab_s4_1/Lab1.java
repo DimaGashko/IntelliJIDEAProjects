@@ -155,12 +155,23 @@ public class Lab1 {
             System.out.println(result);
 
         } else if (filter.equalsIgnoreCase("f")) {
-            Map<String, HashSet<User>> map = users.stream()
+            /*Map<String, HashSet<User>> map = users.stream()
                     .collect(Collectors.groupingBy(User::getCountry, Collectors.toCollection(HashSet::new)));
 
             map.forEach((country, countryUsers) -> {
                 System.out.println(" - " + country);
                 printUsers(countryUsers);
+            });*/
+
+             Map<Integer, Optional<User>> m = users.stream()
+                    .collect(Collectors.groupingBy(
+                            (user) -> user.getRegistered().getYear(),
+                            Collectors.maxBy(Comparator.comparingInt(User::getAge))
+                    ));
+
+            m.forEach((year, user) -> {
+                if (!user.isPresent()) return;
+                System.out.println(year + ": " + user.get());
             });
 
         } else {
