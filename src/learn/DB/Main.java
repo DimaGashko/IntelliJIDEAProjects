@@ -13,7 +13,7 @@ public class Main {
         try {
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/test_db",
-                    "root", "");
+                    "db_user", "qqqqqqqqww");
 
 
         } catch (SQLException e) {
