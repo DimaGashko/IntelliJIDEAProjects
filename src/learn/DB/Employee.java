@@ -13,6 +13,17 @@ public class Employee {
     private int superId;
     private int branchId;
 
+    public Employee(int id, String firstName, String lastName, LocalDate birthDay, String sex, int salary, int superId, int branchId) {
+        setId(id);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setBirthDay(birthDay);
+        setSex(sex);
+        setSalary(salary);
+        setSuperId(superId);
+        setBranchId(branchId);
+    }
+
     @Override
     public String toString() {
         return "Employee{" +

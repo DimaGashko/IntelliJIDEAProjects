@@ -1,6 +1,7 @@
 package learn.DB;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.Properties;
 
 public class Main {
@@ -19,10 +20,18 @@ public class Main {
             ResultSet rs = statement.executeQuery("SELECT * FROM employee");
 
             while(rs.next()) {
-                String firstName = rs.getString("first_name");
-                String lastName = rs.getString("last_name");
+                Employee employee = new Employee(
+                        rs.getInt("emp_id"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name"),
+                        LocalDate.parse(rs.getString("birth_day")),
+                        rs.getString("sex"),
+                        rs.getInt("salary"),
+                        rs.getInt("super_id"),
+                        rs.getInt("branch_id")
+                );
 
-                System.out.println(firstName + " " + lastName);
+                System.out.println(employee);
             }
 
         } catch (SQLException e) {
