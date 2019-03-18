@@ -17,7 +17,7 @@ public class Main {
             System.out.println("Connected!");
 
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT * FROM employee");
+            ResultSet rs = statement.executeQuery("SELECT * FROM employee WHERE salary >= 60000");
 
             while(rs.next()) {
                 Employee employee = new Employee(
