@@ -11,5 +11,10 @@
       <user-name>db_user</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
+    <data-source name="books_java_semester4_lab3@localhost" uuid="e80342ef-c6b1-4c0f-a349-f88d111028a1">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>db_user</user-name>
+    </data-source>
   </component>
 </project>
