@@ -34,16 +34,16 @@ public class App {
 
     private void useCommand(String command) {
         if (command.equalsIgnoreCase("add")) {
-            //addBook();
+            addBook();
 
         } else if (command.equalsIgnoreCase("remove")) {
-            //removeBook();
+            removeBook();
 
         } else if (command.equalsIgnoreCase("showAll")) {
-            //showAllBooks();
+            showAllBooks();
 
         } else if (command.equalsIgnoreCase("filter")) {
-            //showBooksByFilter();
+            showBooksByFilter();
 
         } else if (command.equalsIgnoreCase("help")) {
             printHelp();
@@ -51,6 +51,22 @@ public class App {
         } else {
             System.out.println("Command not found. Try again: ");
         }
+    }
+
+    private void addBook() {
+
+    }
+
+    private void removeBook() {
+
+    }
+
+    private void showAllBooks() {
+
+    }
+
+    private void showBooksByFilter() {
+
     }
 
     private void printFiltersHelp() {
