@@ -1,9 +1,15 @@
 package com.labs.lab_s4_3;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 import static com.helpers.console.ConsoleElements.hr;
 import static com.helpers.console.ConsolePrompt.promptLine;
 
 public class App {
+    Connection dbConnection;
+
     public static void main(String[] args) {
         App app = new App();
         app.run();
@@ -66,7 +72,7 @@ public class App {
     }
 
     private void showBooksByFilter() {
-
+        printFiltersHelp();
     }
 
     private void printFiltersHelp() {
@@ -88,5 +94,11 @@ public class App {
         System.out.println();
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");
+    }
+
+    private void connetectToDb() throws SQLException {
+        dbConnection = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/books_java_semester4_lab3",
+                "db_user", "qqqqqqqqww");
     }
 }
