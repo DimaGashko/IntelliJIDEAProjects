@@ -11,7 +11,7 @@ import static com.helpers.console.ConsolePrompt.promptLine;
 public class App {
     Connection connection;
 
-    private int limitToShow = 10;
+    private int limitToShow = 15;
 
     public static void main(String[] args) {
         App app = new App();

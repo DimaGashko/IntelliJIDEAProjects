@@ -28,15 +28,13 @@ public class Book implements Comparable<Book>, Serializable {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
+        return "id=" + id +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", publishDate=" + publishDate +
                 ", pages=" + pages +
-                ", price=" + price +
-                '}';
+                ", price=" + price;
     }
 
     @Override
