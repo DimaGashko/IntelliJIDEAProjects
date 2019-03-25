@@ -8,7 +8,7 @@ import static com.helpers.console.ConsoleElements.hr;
 import static com.helpers.console.ConsolePrompt.promptLine;
 
 public class App {
-    Connection dbConnection;
+    Connection connection;
 
     public static void main(String[] args) {
         App app = new App();
@@ -16,6 +16,7 @@ public class App {
     }
 
     public void run() {
+        connect();
         runCli();
     }
 
@@ -27,6 +28,7 @@ public class App {
             String command = promptLine("Enter command: ").trim();
 
             if (command.equalsIgnoreCase("exit")) {
+                exitApp();
                 break;
 
             } else {
@@ -96,9 +98,9 @@ public class App {
         System.out.println("> exit #Exit");
     }
 
-    private void connetectToDb() {
+    private void connect() {
         try {
-            dbConnection = DriverManager.getConnection(
+            connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/books_java_semester4_lab3",
                     "db_user", "qqqqqqqqww"
             );
@@ -109,11 +111,15 @@ public class App {
         }
     }
 
-    private void disconnectDb() {
+    private void disconnect() {
         try {
-            dbConnection.close();
+            connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private void exitApp() {
+        disconnect();
     }
 }
