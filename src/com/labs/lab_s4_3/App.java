@@ -1,14 +1,17 @@
 package com.labs.lab_s4_3;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.helpers.console.ConsoleElements.hr;
 import static com.helpers.console.ConsolePrompt.promptLine;
 
 public class App {
     Connection connection;
+
+    private int limitToShow = 10;
 
     public static void main(String[] args) {
         App app = new App();
@@ -70,7 +73,14 @@ public class App {
     }
 
     private void showAllBooks() {
+        try (Statement statement = connection.createStatement();) {
+            ResultSet rs = statement.executeQuery("SELECT * FROM book LIMIT " + limitToShow);
+            var books = createBooksFromRs(rs);
 
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     private void showBooksByFilter() {
@@ -109,6 +119,25 @@ public class App {
             System.out.println("Can't connect to DB");
             e.printStackTrace();
         }
+    }
+
+    private ArrayList<Book> createBooksFromRs(ResultSet rs) throws SQLException {
+        ArrayList<Book> books = new ArrayList<>();
+
+        while (rs.next()) {
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            String author = rs.getString("autor");
+            String publisher = rs.getString("publisher");
+            LocalDate publishDate = rs.getDate("publish_date").toLocalDate();
+            int pages = rs.getInt("pages");
+            double price = rs.getDouble("price");
+
+            Book book = new Book(id, name, author, publisher, publishDate, pages, price);
+            books.add(book);
+        }
+
+        return books;
     }
 
     private void disconnect() {
