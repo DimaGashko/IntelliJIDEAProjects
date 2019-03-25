@@ -76,8 +76,7 @@ public class App {
         try (Statement statement = connection.createStatement();) {
             ResultSet rs = statement.executeQuery("SELECT * FROM book LIMIT " + limitToShow);
             var books = createBooksFromRs(rs);
-
-
+            printBooks(books);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -127,7 +126,7 @@ public class App {
         while (rs.next()) {
             int id = rs.getInt("id");
             String name = rs.getString("name");
-            String author = rs.getString("autor");
+            String author = rs.getString("author");
             String publisher = rs.getString("publisher");
             LocalDate publishDate = rs.getDate("publish_date").toLocalDate();
             int pages = rs.getInt("pages");
@@ -138,6 +137,15 @@ public class App {
         }
 
         return books;
+    }
+
+    private void printBooks(List<Book> books) {
+        if (books.isEmpty()) {
+            System.out.println("There are no users");
+            return;
+        }
+
+        books.forEach((item) -> System.out.println("\t" + item));
     }
 
     private void disconnect() {
