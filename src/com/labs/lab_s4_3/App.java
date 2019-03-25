@@ -96,9 +96,24 @@ public class App {
         System.out.println("> exit #Exit");
     }
 
-    private void connetectToDb() throws SQLException {
-        dbConnection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/books_java_semester4_lab3",
-                "db_user", "qqqqqqqqww");
+    private void connetectToDb() {
+        try {
+            dbConnection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/books_java_semester4_lab3",
+                    "db_user", "qqqqqqqqww"
+            );
+
+        } catch (SQLException e) {
+            System.out.println("Can't connect to DB");
+            e.printStackTrace();
+        }
+    }
+
+    private void disconnectDb() {
+        try {
+            dbConnection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

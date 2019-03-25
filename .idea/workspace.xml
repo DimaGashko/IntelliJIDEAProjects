@@ -70,7 +70,7 @@
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="119">
-                  <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+                  <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
                   <folding>
                     <element signature="e#1450#1451#0" expanded="true" />
                     <element signature="e#1475#1476#0" expanded="true" />
@@ -82,14 +82,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="118">
-                  <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#284#285#0" expanded="true" />
-                    <element signature="e#308#309#0" expanded="true" />
-                    <element signature="e#1367#1368#0" expanded="true" />
-                    <element signature="e#1398#1399#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="178">
+                  <caret line="104" column="12" lean-forward="true" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
                 </state>
               </provider>
             </entry>
@@ -106,8 +100,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="98">
-                  <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+                <state relative-caret-position="136">
+                  <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
                 </state>
               </provider>
             </entry>
@@ -146,7 +140,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1288">
+                <state relative-caret-position="3077">
                   <caret line="187" column="10" selection-start-line="187" selection-start-column="10" selection-end-line="187" selection-end-column="10" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -158,8 +152,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/learn/DB/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="154">
-                  <caret line="45" column="41" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="41" />
+                <state relative-caret-position="272">
+                  <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -309,6 +303,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,7 +362,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,7 +378,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553069341757" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553549487012" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -401,20 +395,6 @@
       <recent name="com.labs.lab2" />
       <recent name="com.labs.lab3.part2" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.labs.lab5.ELib.models.storage" />
-      <recent name="com.labs.lab5.ELib.windows" />
-      <recent name="learn.javaFx._16_CSS" />
-      <recent name="learn.javaFx._15_menus" />
-      <recent name="learn.javaFx._14_tableView1" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -424,6 +404,20 @@
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\views" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\Coordinates" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\learn\javaFx\_19_sceneBuilder" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.labs.lab5.ELib.models.storage" />
+      <recent name="com.labs.lab5.ELib.windows" />
+      <recent name="learn.javaFx._16_CSS" />
+      <recent name="learn.javaFx._15_menus" />
+      <recent name="learn.javaFx._14_tableView1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -438,7 +432,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ELib">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.labs.lab_s4_3.App" />
       <module name="JavaProjects" />
@@ -513,8 +507,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ELib" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.ELib" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Lab1" />
         <item itemvalue="Application.Benchmark" />
@@ -615,7 +609,9 @@
       <workItem from="1553006655056" duration="6374000" />
       <workItem from="1553066723276" duration="2650000" />
       <workItem from="1553239208511" duration="512000" />
-      <workItem from="1553437979035" duration="1538000" />
+      <workItem from="1553437979035" duration="2206000" />
+      <workItem from="1553547593875" duration="52000" />
+      <workItem from="1553547941129" duration="1126000" />
     </task>
     <servers />
   </component>
@@ -652,7 +648,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="506676000" />
+    <option name="totallyTimeSpent" value="508522000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -667,7 +663,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.022692889" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022692889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -676,8 +672,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.34860885" />
-      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" visible="true" weight="0.3715221" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.13420622" />
+      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.3715221" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1062,6 +1058,31 @@
     <entry file="file://$PROJECT_DIR$/../../realProjects/4. ELib/ELib.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#1450#1451#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/HandlerFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1083,23 +1104,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaProjects.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1288">
+        <state relative-caret-position="3077">
           <caret line="187" column="10" selection-start-line="187" selection-start-column="10" selection-end-line="187" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1107,24 +1114,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/JavaProjects.iml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/learn/DB/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="45" column="41" lean-forward="true" selection-start-line="43" selection-start-column="8" selection-end-line="45" selection-end-column="41" />
+        <state relative-caret-position="272">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1133,14 +1129,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="96" column="5" lean-forward="true" selection-start-line="96" selection-start-column="5" selection-end-line="96" selection-end-column="5" />
-          <folding>
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#1367#1368#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="104" column="12" lean-forward="true" selection-start-line="104" selection-start-column="12" selection-end-line="104" selection-end-column="12" />
         </state>
       </provider>
     </entry>
