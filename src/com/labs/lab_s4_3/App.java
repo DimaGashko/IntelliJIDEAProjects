@@ -135,9 +135,12 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("c")) {
-                int year = promptInt("Year:");
-
-
+                LocalDate date = promptDate("Publish Date:");
+                System.out.println(date);
+                var rs = connection.createStatement().executeQuery(
+                        "SELECT * FROM book WHERE publish_date > '" + date + "' LIMIT " + limitToShow
+                );
+                printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("d")) {
 
@@ -161,11 +164,11 @@ public class App {
 
     private void printFiltersHelp() {
         System.out.println("Filters:");
-        System.out.println("> a #Список книг заданого автора в порядку зростання року видання;");
+        System.out.println("> a #Список книг заданого автора в порядку зростання року видання");
         System.out.println("> b #Список книг, що видані заданим видавництвом");
-        System.out.println("> c #Список книг, що випущені після заданого року");
+        System.out.println("> c #Список книг, що випущені після заданої дати");
         System.out.println("> d #Список авторів в алфавітному порядку;");
-        System.out.println("> e #Список видавництв, книги яких зареєстровані в системі без повторів;");
+        System.out.println("> e #Список видавництв, книги яких зареєстровані в системі без повторів");
         System.out.println("> f #Для кожного видавництва визначити список книг, виданих ним");
     }
 
