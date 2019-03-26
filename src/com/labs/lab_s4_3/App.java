@@ -121,9 +121,9 @@ public class App {
 
             if (filter.equalsIgnoreCase("a")) {
                 String author = promptLine("Author:");
-                var st = connection.createStatement();
-                var rs = st.executeQuery(
-                        "SELECT * FROM book WHERE author LIKE '%" + author + "%' LIMIT " + limitToShow
+                var rs = connection.createStatement().executeQuery(
+                        "SELECT * FROM book WHERE author LIKE '%" + author + "%' " +
+                                "ORDER BY publish_date LIMIT " + limitToShow
                 );
                 printBooks(rs);
 
