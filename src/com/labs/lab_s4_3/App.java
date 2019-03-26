@@ -86,7 +86,15 @@ public class App {
     }
 
     private void removeBook() {
+        int bookId = promptInt("Enter the book id");
 
+        try (Statement statement = connection.createStatement()) {
+           statement.executeUpdate("DELETE FROM book WHERE id = " + bookId);
+            System.out.println("Success");
+        } catch (SQLException e) {
+            System.out.println("Can't remove the book");
+            e.printStackTrace();
+        }
     }
 
     private void showAllBooks() {
