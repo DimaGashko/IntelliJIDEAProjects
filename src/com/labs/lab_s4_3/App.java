@@ -143,7 +143,17 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("d")) {
+                var rs = connection.createStatement().executeQuery(
+                        "SELECT DISTINCT author FROM book ORDER BY author LIMIT " + limitToShow
+                );
 
+                List<String> authors = new ArrayList<>();
+
+                while (rs.next()) {
+                    authors.add(rs.getString("author"));
+                }
+
+                authors.forEach(System.out::println);
 
             } else if (filter.equalsIgnoreCase("e")) {
 
@@ -167,7 +177,7 @@ public class App {
         System.out.println("> a #Список книг заданого автора в порядку зростання року видання");
         System.out.println("> b #Список книг, що видані заданим видавництвом");
         System.out.println("> c #Список книг, що випущені після заданої дати");
-        System.out.println("> d #Список авторів в алфавітному порядку;");
+        System.out.println("> d #Список авторів в алфавітному порядку");
         System.out.println("> e #Список видавництв, книги яких зареєстровані в системі без повторів");
         System.out.println("> f #Для кожного видавництва визначити список книг, виданих ним");
     }
