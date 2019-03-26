@@ -1,12 +1,15 @@
 package com.labs.lab_s4_3;
 
+import com.labs.lab_s4_1.User;
+
 import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.helpers.console.ConsoleElements.hr;
-import static com.helpers.console.ConsolePrompt.promptLine;
+import static com.helpers.console.ConsolePrompt.*;
+import static com.helpers.console.ConsolePrompt.promptInt;
 
 public class App {
     Connection connection;
@@ -65,7 +68,21 @@ public class App {
     }
 
     private void addBook() {
+        Book book = createNewBook();
 
+        try (var preparedSt = connection.prepareStatement("INSERT INTO book VALUES(NULL,?,?,?,?,?,?)")) {
+            preparedSt.setString(1, book.getName());
+            preparedSt.setString(2, book.getAuthor());
+            preparedSt.setString(3, book.getPublisher());
+            preparedSt.setDate(4, Date.valueOf(book.getPublishDate()));
+            preparedSt.setInt(5, book.getPages());
+            preparedSt.setDouble(6, book.getPrice());
+            preparedSt.executeUpdate();
+            System.out.println("Success!");
+        } catch (SQLException e) {
+            System.out.println("Can't add the book!");
+            e.printStackTrace();
+        }
     }
 
     private void removeBook() {
@@ -73,11 +90,12 @@ public class App {
     }
 
     private void showAllBooks() {
-        try (Statement statement = connection.createStatement();) {
+        try (Statement statement = connection.createStatement()) {
             ResultSet rs = statement.executeQuery("SELECT * FROM book LIMIT " + limitToShow);
             var books = createBooksFromRs(rs);
             printBooks(books);
         } catch (SQLException e) {
+            System.out.println("Can't load books");
             e.printStackTrace();
         }
     }
@@ -105,6 +123,18 @@ public class App {
         System.out.println();
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");
+    }
+
+    private Book createNewBook() {
+        return new Book(
+                0,
+                promptLine("Name:"),
+                promptLine("Author:"),
+                promptLine("Publisher"),
+                LocalDate.of(promptInt("Publish Date (yyyy-mm-dd):"), 1, 1),
+                promptInt("Pages:"),
+                promptDouble("Price:")
+        );
     }
 
     private void connect() {

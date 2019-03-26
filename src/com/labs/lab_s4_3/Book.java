@@ -33,7 +33,7 @@ public class Book implements Comparable<Book>, Serializable {
                 ", author='" + author + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", publishDate=" + publishDate +
-                ", pages=" + pages +
+             ", pages=" + pages +
                 ", price=" + price;
     }
 
