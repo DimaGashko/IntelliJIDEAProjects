@@ -128,9 +128,11 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("b")) {
-                String name = promptLine("Name:");
-
-
+                String publisher = promptLine("Publisher:");
+                var rs = connection.createStatement().executeQuery(
+                        "SELECT * FROM book WHERE publisher LIKE '%" + publisher + "%' LIMIT " + limitToShow
+                );
+                printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("c")) {
                 int year = promptInt("Year:");
