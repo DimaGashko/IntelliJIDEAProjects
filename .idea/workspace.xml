@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,16 +66,41 @@
     <splitter split-orientation="horizontal" split-proportion="0.7128483">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="103">
-                  <caret line="74" column="54" lean-forward="true" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+                <state relative-caret-position="137">
+                  <caret line="98" column="12" lean-forward="true" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="32" />
                   <folding>
                     <element signature="e#1863#1864#0" expanded="true" />
                     <element signature="e#1897#1898#0" expanded="true" />
                     <element signature="e#4226#4227#0" expanded="true" />
                     <element signature="e#4254#4255#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="206">
+                  <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/time/LocalDate.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="414" lean-forward="true" selection-start-line="414" selection-end-line="414" />
+                  <folding>
+                    <element signature="e#17155#17156#0" expanded="true" />
+                    <element signature="e#17223#17224#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -271,7 +295,6 @@
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/UsersStorage.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/Lab1.java" />
         <option value="$PROJECT_DIR$/src/learn/regexp/Test1.java" />
-        <option value="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e98f459c-9535-48e7-b9fa-dc2a2e715ee4/console.sql" />
@@ -282,6 +305,7 @@
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/Lab1.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" />
+        <option value="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" />
       </list>
     </option>
   </component>
@@ -387,7 +411,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553585562788" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553587237828" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -620,7 +644,7 @@
       <workItem from="1553239208511" duration="512000" />
       <workItem from="1553437979035" duration="2206000" />
       <workItem from="1553547593875" duration="52000" />
-      <workItem from="1553547941129" duration="7374000" />
+      <workItem from="1553547941129" duration="9160000" />
     </task>
     <servers />
   </component>
@@ -657,7 +681,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="514770000" />
+    <option name="totallyTimeSpent" value="516556000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -670,7 +694,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022692889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -841,13 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/time/LocalDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="1988" column="16" selection-start-line="1988" selection-start-column="16" selection-end-line="1988" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/TreeSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -892,13 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
           <caret line="2800" column="6" lean-forward="true" selection-start-line="2800" selection-start-column="6" selection-end-line="2800" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="22" selection-start-line="57" selection-start-column="22" selection-end-line="57" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -1081,13 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/TextStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1138,15 +1140,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="74" column="54" lean-forward="true" selection-start-line="74" selection-start-column="54" selection-end-line="74" selection-end-column="54" />
+        <state relative-caret-position="137">
+          <caret line="98" column="12" lean-forward="true" selection-start-line="98" selection-start-column="12" selection-end-line="98" selection-end-column="32" />
           <folding>
             <element signature="e#1863#1864#0" expanded="true" />
             <element signature="e#1897#1898#0" expanded="true" />
             <element signature="e#4226#4227#0" expanded="true" />
             <element signature="e#4254#4255#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/time/LocalDate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="414" lean-forward="true" selection-start-line="414" selection-end-line="414" />
+          <folding>
+            <element signature="e#17155#17156#0" expanded="true" />
+            <element signature="e#17223#17224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="105" column="47" selection-start-line="105" selection-start-column="47" selection-end-line="105" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

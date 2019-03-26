@@ -1,5 +1,7 @@
 package com.helpers.console;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 /**
@@ -81,6 +83,30 @@ public class ConsolePrompt {
         }
 
         return res;
+    }
+
+    /**
+     * Запрашивает у пользователя дату
+     *
+     * @param title Текст, что будет показан пользователю в запросе
+     * @return дата, введенная пользователем
+     */
+    static public LocalDate promptDate(String title) {
+        System.out.println(title);
+        System.out.println("yyyy-dd-mm");
+        String strDate = scanner.nextLine();
+
+        while (strDate.isEmpty()) {
+            strDate = scanner.nextLine();
+        }
+
+        try {
+            return LocalDate.parse(strDate);
+        } catch (DateTimeParseException e) {
+            System.out.println("Invalid Date");
+            return promptDate(title);
+        }
+
     }
 
 }

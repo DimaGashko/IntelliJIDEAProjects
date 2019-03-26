@@ -131,7 +131,7 @@ public class App {
                 promptLine("Name:"),
                 promptLine("Author:"),
                 promptLine("Publisher"),
-                LocalDate.of(promptInt("Publish Date (yyyy-mm-dd):"), 1, 1),
+                promptDate("Publish Date:"),
                 promptInt("Pages:"),
                 promptDouble("Price:")
         );
