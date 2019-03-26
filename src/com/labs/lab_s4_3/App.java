@@ -59,6 +59,9 @@ public class App {
         } else if (command.equalsIgnoreCase("filter")) {
             showBooksByFilter();
 
+        } else if (command.equalsIgnoreCase("limit")) {
+            setLimit();
+
         } else if (command.equalsIgnoreCase("help")) {
             printHelp();
 
@@ -129,8 +132,14 @@ public class App {
         System.out.println("> showAll #Show all books");
         System.out.println("> filter #Show books by filter");
         System.out.println();
+        System.out.println("> limit #Set Limit to show");
         System.out.println("> help #Print Help");
         System.out.println("> exit #Exit");
+    }
+
+    private void setLimit() {
+        System.out.println("Current limit: " + limitToShow);
+        limitToShow = promptInt("Enter new limit: ");
     }
 
     private Book createNewBook() {
@@ -143,19 +152,6 @@ public class App {
                 promptInt("Pages:"),
                 promptDouble("Price:")
         );
-    }
-
-    private void connect() {
-        try {
-            connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/books_java_semester4_lab3",
-                    "db_user", "qqqqqqqqww"
-            );
-
-        } catch (SQLException e) {
-            System.out.println("Can't connect to DB");
-            e.printStackTrace();
-        }
     }
 
     private ArrayList<Book> createBooksFromRs(ResultSet rs) throws SQLException {
@@ -186,15 +182,28 @@ public class App {
         books.forEach((item) -> System.out.println("\t" + item));
     }
 
+    private void exitApp() {
+        disconnect();
+    }
+
+    private void connect() {
+        try {
+            connection = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/books_java_semester4_lab3",
+                    "db_user", "qqqqqqqqww"
+            );
+
+        } catch (SQLException e) {
+            System.out.println("Can't connect to DB");
+            e.printStackTrace();
+        }
+    }
+
     private void disconnect() {
         try {
             connection.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
-
-    private void exitApp() {
-        disconnect();
     }
 }
