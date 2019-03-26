@@ -2,10 +2,12 @@ package com.labs.lab_s4_3;
 
 import com.labs.lab_s4_1.User;
 
+import javax.xml.transform.Result;
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static com.helpers.console.ConsoleElements.hr;
 import static com.helpers.console.ConsolePrompt.*;
@@ -113,6 +115,46 @@ public class App {
 
     private void showBooksByFilter() {
         printFiltersHelp();
+        String filter = promptLine("Select Filter:");
+
+        try {
+
+            if (filter.equalsIgnoreCase("a")) {
+                String author = promptLine("Author:");
+                var st = connection.createStatement();
+                var rs = st.executeQuery(
+                        "SELECT * FROM book WHERE author LIKE '%" + author + "%' LIMIT " + limitToShow
+                );
+                printBooks(rs);
+
+            } else if (filter.equalsIgnoreCase("b")) {
+                String name = promptLine("Name:");
+
+
+
+            } else if (filter.equalsIgnoreCase("c")) {
+                int year = promptInt("Year:");
+
+
+
+            } else if (filter.equalsIgnoreCase("d")) {
+
+
+            } else if (filter.equalsIgnoreCase("e")) {
+
+
+            } else if (filter.equalsIgnoreCase("f")) {
+
+
+            } else {
+                System.out.println("Can't find the filter");
+
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Filter error");
+            e.printStackTrace();
+        }
     }
 
     private void printFiltersHelp() {
@@ -180,6 +222,11 @@ public class App {
         }
 
         books.forEach((item) -> System.out.println("\t" + item));
+    }
+
+    private void printBooks(ResultSet rs) throws SQLException {
+        var books = createBooksFromRs(rs);
+        printBooks(books);
     }
 
     private void exitApp() {
