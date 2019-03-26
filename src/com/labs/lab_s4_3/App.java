@@ -156,10 +156,28 @@ public class App {
                 authors.forEach(System.out::println);
 
             } else if (filter.equalsIgnoreCase("e")) {
+                var rs = connection.createStatement().executeQuery(
+                        "SELECT DISTINCT publisher FROM book LIMIT " + limitToShow
+                );
 
+                List<String> publishers = new ArrayList<>();
+
+                while (rs.next()) {
+                    publishers.add(rs.getString("publisher"));
+                }
+
+                publishers.forEach(System.out::println);
 
             } else if (filter.equalsIgnoreCase("f")) {
+                var rs = connection.createStatement().executeQuery("SELECT * FROM book LIMIT " + limitToShow);
+                var books = createBooksFromRs(rs);
+                Map<String, HashSet<Book>> map = books.stream()
+                        .collect(Collectors.groupingBy(Book::getPublisher, Collectors.toCollection(HashSet::new)));
 
+                map.forEach((publisher, publishersBook) -> {
+                    System.out.println(" - " + publisher);
+                    printBooks(publishersBook);
+                });
 
             } else {
                 System.out.println("Can't find the filter");
@@ -230,7 +248,7 @@ public class App {
         return books;
     }
 
-    private void printBooks(List<Book> books) {
+    private void printBooks(Collection<Book> books) {
         if (books.isEmpty()) {
             System.out.println("There are no users");
             return;
