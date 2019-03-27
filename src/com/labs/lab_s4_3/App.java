@@ -100,6 +100,9 @@ public class App {
             System.out.println("Can't remove the book");
             e.printStackTrace();
         }
+
+        String s = `adsf`;
+
     }
 
     private void showAllBooks() {
@@ -121,6 +124,12 @@ public class App {
 
             if (filter.equalsIgnoreCase("a")) {
                 String author = promptLine("Author:");
+
+                var rs = connection.createStatement().executeQuery(
+                        "SELECT * FROM book WHERE author LIKE '%" + author + "%' " +
+                                "ORDER BY publish_date LIMIT " + limitToShow
+                );
+
                 var rs = connection.createStatement().executeQuery(
                         "SELECT * FROM book WHERE author LIKE '%" + author + "%' " +
                                 "ORDER BY publish_date LIMIT " + limitToShow
@@ -286,4 +295,5 @@ public class App {
             e.printStackTrace();
         }
     }
+
 }
