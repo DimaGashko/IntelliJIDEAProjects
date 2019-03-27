@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -69,11 +70,14 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="222">
-                  <caret line="130" column="31" lean-forward="true" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
+                <state relative-caret-position="232">
+                  <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
                   <folding>
-                    <element signature="e#8936#8937#0" expanded="true" />
-                    <element signature="e#8964#8965#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#2133#2134#0" expanded="true" />
+                    <element signature="e#2201#2202#0" expanded="true" />
+                    <element signature="e#8896#8897#0" expanded="true" />
+                    <element signature="e#8924#8925#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -412,7 +416,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553718327667" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553721913388" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -429,6 +433,20 @@
       <recent name="com.labs.lab2" />
       <recent name="com.labs.lab3.part2" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.labs.lab5.ELib.models.storage" />
+      <recent name="com.labs.lab5.ELib.windows" />
+      <recent name="learn.javaFx._16_CSS" />
+      <recent name="learn.javaFx._15_menus" />
+      <recent name="learn.javaFx._14_tableView1" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -438,20 +456,6 @@
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\views" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\Coordinates" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\learn\javaFx\_19_sceneBuilder" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.labs.lab5.ELib.models.storage" />
-      <recent name="com.labs.lab5.ELib.windows" />
-      <recent name="learn.javaFx._16_CSS" />
-      <recent name="learn.javaFx._15_menus" />
-      <recent name="learn.javaFx._14_tableView1" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -647,7 +651,7 @@
       <workItem from="1553547593875" duration="52000" />
       <workItem from="1553547941129" duration="18343000" />
       <workItem from="1553704087968" duration="119000" />
-      <workItem from="1553704478446" duration="4787000" />
+      <workItem from="1553704478446" duration="8347000" />
     </task>
     <servers />
   </component>
@@ -684,7 +688,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="530645000" />
+    <option name="totallyTimeSpent" value="534205000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -699,7 +703,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18078668" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18078668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -709,7 +713,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.95090014" />
-      <window_info active="true" anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" visible="true" weight="0.32242227" />
+      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.32242227" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -1174,11 +1178,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="130" column="31" lean-forward="true" selection-start-line="130" selection-start-column="31" selection-end-line="130" selection-end-column="31" />
+        <state relative-caret-position="232">
+          <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
           <folding>
-            <element signature="e#8936#8937#0" expanded="true" />
-            <element signature="e#8964#8965#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2201#2202#0" expanded="true" />
+            <element signature="e#8896#8897#0" expanded="true" />
+            <element signature="e#8924#8925#0" expanded="true" />
           </folding>
         </state>
       </provider>

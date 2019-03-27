@@ -1,8 +1,5 @@
 package com.labs.lab_s4_3;
 
-import com.labs.lab_s4_1.User;
-
-import javax.xml.transform.Result;
 import java.sql.*;
 import java.sql.Date;
 import java.time.LocalDate;
@@ -16,7 +13,7 @@ import static com.helpers.console.ConsolePrompt.promptInt;
 public class App {
     Connection connection;
 
-    private int limitToShow = 15;
+    private int limitToShow = 10;
 
     public static void main(String[] args) {
         App app = new App();
@@ -49,26 +46,24 @@ public class App {
     }
 
     private void useCommand(String command) {
-        if (command.equalsIgnoreCase("add")) {
-            addBook();
+        command = command.toLowerCase();
 
-        } else if (command.equalsIgnoreCase("remove")) {
-            removeBook();
-
-        } else if (command.equalsIgnoreCase("showAll")) {
-            showAllBooks();
-
-        } else if (command.equalsIgnoreCase("filter")) {
-            showBooksByFilter();
-
-        } else if (command.equalsIgnoreCase("limit")) {
-            setLimit();
-
-        } else if (command.equalsIgnoreCase("help")) {
-            printHelp();
-
-        } else {
-            System.out.println("Command not found. Try again: ");
+        switch (command) {
+            case "add":
+                addBook(); break;
+            case "remove":
+                removeBook(); break;
+            case "showall":
+                showAllBooks(); break;
+            case "filter":
+                showBooksByFilter(); break;
+            case "limit":
+                setLimit(); break;
+            case "help":
+                printHelp(); break;
+            default:
+                System.out.println("Command not found. Try again: ");
+                break;
         }
     }
 
@@ -93,21 +88,21 @@ public class App {
     private void removeBook() {
         int bookId = promptInt("Enter the book id");
 
-        try (Statement statement = connection.createStatement()) {
-           statement.executeUpdate("DELETE FROM book WHERE id = " + bookId);
+        try (var preparedSt = connection.prepareStatement("DELETE FROM book WHERE id = ?")) {
+            preparedSt.setInt(1, bookId);
+            preparedSt.executeUpdate();
             System.out.println("Success");
         } catch (SQLException e) {
             System.out.println("Can't remove the book");
             e.printStackTrace();
         }
 
-        String s = `adsf`;
-
     }
 
     private void showAllBooks() {
-        try (Statement statement = connection.createStatement()) {
-            ResultSet rs = statement.executeQuery("SELECT * FROM book LIMIT " + limitToShow);
+        try (var preparedSt = connection.prepareStatement("SELECT * FROM book LIMIT ?")) {
+            preparedSt.setInt(1, limitToShow);
+            var rs = preparedSt.executeQuery();
             var books = createBooksFromRs(rs);
             printBooks(books);
         } catch (SQLException e) {
@@ -119,16 +114,12 @@ public class App {
     private void showBooksByFilter() {
         printFiltersHelp();
         String filter = promptLine("Select Filter:");
+        String name = "name";
 
         try {
 
             if (filter.equalsIgnoreCase("a")) {
                 String author = promptLine("Author:");
-
-                var rs = connection.createStatement().executeQuery(
-                        "SELECT * FROM book WHERE author LIKE '%" + author + "%' " +
-                                "ORDER BY publish_date LIMIT " + limitToShow
-                );
 
                 var rs = connection.createStatement().executeQuery(
                         "SELECT * FROM book WHERE author LIKE '%" + author + "%' " +
