@@ -114,38 +114,54 @@ public class App {
     private void showBooksByFilter() {
         printFiltersHelp();
         String filter = promptLine("Select Filter:");
-        String name = "name";
 
         try {
 
             if (filter.equalsIgnoreCase("a")) {
                 String author = promptLine("Author:");
 
-                var rs = connection.createStatement().executeQuery(
-                        "SELECT * FROM book WHERE author LIKE '%" + author + "%' " +
-                                "ORDER BY publish_date LIMIT " + limitToShow
+                var prepareSt = connection.prepareStatement(
+                        "SELECT * FROM book WHERE author LIKE ?" +
+                        "ORDER BY publish_date LIMIT ?"
                 );
+
+                prepareSt.setString(1, "%" + author + "%");
+                prepareSt.setInt(2, limitToShow);
+
+                var rs = prepareSt.executeQuery();
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("b")) {
-                String publisher = promptLine("Publisher:");
-                var rs = connection.createStatement().executeQuery(
-                        "SELECT * FROM book WHERE publisher LIKE '%" + publisher + "%' LIMIT " + limitToShow
+                var prepareSt = connection.prepareStatement(
+                        "SELECT * FROM book WHERE publisher LIKE ? LIMIT ?"
                 );
+
+                String publisher = promptLine("Publisher:");
+                prepareSt.setString(1, "%" + publisher + "%");
+                prepareSt.setInt(2, limitToShow);
+
+                var rs = prepareSt.executeQuery();
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("c")) {
-                LocalDate date = promptDate("Publish Date:");
-                System.out.println(date);
-                var rs = connection.createStatement().executeQuery(
-                        "SELECT * FROM book WHERE publish_date > '" + date + "' LIMIT " + limitToShow
+                var prepareSt = connection.prepareStatement(
+                        "SELECT * FROM book WHERE publish_date > ? LIMIT ?"
                 );
+
+                LocalDate date = promptDate("Publish Date:");
+                prepareSt.setString(1, date.toString());
+                prepareSt.setInt(2, limitToShow);
+
+                var rs = prepareSt.executeQuery();
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("d")) {
-                var rs = connection.createStatement().executeQuery(
-                        "SELECT DISTINCT author FROM book ORDER BY author LIMIT " + limitToShow
+                var prepareSt = connection.prepareStatement(
+                        "SELECT DISTINCT author FROM book ORDER BY author LIMIT ?"
                 );
+
+                prepareSt.setInt(1, limitToShow);
+                var rs = prepareSt.executeQuery();
 
                 List<String> authors = new ArrayList<>();
 
@@ -156,9 +172,12 @@ public class App {
                 authors.forEach(System.out::println);
 
             } else if (filter.equalsIgnoreCase("e")) {
-                var rs = connection.createStatement().executeQuery(
-                        "SELECT DISTINCT publisher FROM book LIMIT " + limitToShow
+                var prepareSt = connection.prepareStatement(
+                        "SELECT DISTINCT publisher FROM book LIMIT ?"
                 );
+
+                prepareSt.setInt(1, limitToShow);
+                var rs = prepareSt.executeQuery();
 
                 List<String> publishers = new ArrayList<>();
 
@@ -169,7 +188,13 @@ public class App {
                 publishers.forEach(System.out::println);
 
             } else if (filter.equalsIgnoreCase("f")) {
-                var rs = connection.createStatement().executeQuery("SELECT * FROM book LIMIT " + limitToShow);
+                var prepareSt = connection.prepareStatement(
+                        "SELECT * FROM book LIMIT  ?"
+                );
+
+                prepareSt.setInt(1, limitToShow);
+                var rs = prepareSt.executeQuery();
+
                 var books = createBooksFromRs(rs);
                 Map<String, HashSet<Book>> map = books.stream()
                         .collect(Collectors.groupingBy(Book::getPublisher, Collectors.toCollection(HashSet::new)));
