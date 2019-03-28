@@ -13,7 +13,7 @@ import static com.helpers.console.ConsolePrompt.promptInt;
 public class App {
     Connection connection;
 
-    private int limitToShow = 10;
+    private int limitToShow = 15;
 
     public static void main(String[] args) {
         App app = new App();
@@ -26,7 +26,7 @@ public class App {
     }
 
     private void runCli() {
-        printHelp();
+        cliPrintHelp();
         hr();
 
         while (true) {
@@ -43,12 +43,12 @@ public class App {
 
     private void useCommand(String command) {
         switch (command) {
+            case "showall":
+                cliShowAllBooks(); break;
             case "add":
                 cliAddBook(); break;
             case "remove":
                 cliRemoveBook(); break;
-            case "showall":
-                cliShowAllBooks(); break;
             case "filter":
                 cliShowBooksByFilter(); break;
             case "limit":
@@ -218,15 +218,14 @@ public class App {
     }
 
     private Book createNewBook() {
-        return new Book(
-                0,
-                promptLine("Name:"),
-                promptLine("Author:"),
-                promptLine("Publisher"),
-                promptDate("Publish Date:"),
-                promptInt("Pages:"),
-                promptDouble("Price:")
-        );
+        String name = promptLine("Name:");
+        String author = promptLine("Author:");
+        String publisher = promptLine("Publisher");
+        LocalDate publishDate = promptDate("Publish Date:");
+        int pages = promptInt("Pages:");
+        double price = promptDouble("Price:");
+
+        return new Book(0, name, author, publisher, publishDate, pages, price);
     }
 
     private ArrayList<Book> createBooksFromRs(ResultSet rs) throws SQLException {
@@ -287,6 +286,18 @@ public class App {
         }
     }
 
+    private void cliPrintHelp() {
+        System.out.println("Commands:");
+        System.out.println("> showAll #Show all books");
+        System.out.println("> add #Add new book");
+        System.out.println("> remove #Remove the book by ID");
+        System.out.println("> filter #Show books by filter");
+        System.out.println();
+        System.out.println("> limit #Set Limit to show");
+        System.out.println("> help #Print Help");
+        System.out.println("> exit #Exit");
+    }
+
     private void printFiltersHelp() {
         System.out.println("Filters:");
         System.out.println("> a #Список книг заданого автора в порядку зростання року видання");
@@ -295,18 +306,6 @@ public class App {
         System.out.println("> d #Список авторів в алфавітному порядку");
         System.out.println("> e #Список видавництв, книги яких зареєстровані в системі без повторів");
         System.out.println("> f #Для кожного видавництва визначити список книг, виданих ним");
-    }
-
-    private void printHelp() {
-        System.out.println("Commands:");
-        System.out.println("> add #Add new book");
-        System.out.println("> remove #Remove the book by ID");
-        System.out.println("> showAll #Show all books");
-        System.out.println("> filter #Show books by filter");
-        System.out.println();
-        System.out.println("> limit #Set Limit to show");
-        System.out.println("> help #Print Help");
-        System.out.println("> exit #Exit");
     }
 
 }
