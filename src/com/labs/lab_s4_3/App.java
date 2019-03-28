@@ -30,44 +30,38 @@ public class App {
         hr();
 
         while (true) {
-            String command = promptLine("Enter command: ").trim();
+            String command = promptLine("Enter command: ").trim().toLowerCase();
 
-            if (command.equalsIgnoreCase("exit")) {
-                exitApp();
-                break;
-
-            } else {
-                useCommand(command);
-
-            }
+            if (command.equals("exit")) break;
+            else useCommand(command);
 
             hr();
         }
+
+        exitApp();
     }
 
     private void useCommand(String command) {
-        command = command.toLowerCase();
-
         switch (command) {
             case "add":
-                addBook(); break;
+                cliAddBook(); break;
             case "remove":
-                removeBook(); break;
+                cliRemoveBook(); break;
             case "showall":
-                showAllBooks(); break;
+                cliShowAllBooks(); break;
             case "filter":
-                showBooksByFilter(); break;
+                cliShowBooksByFilter(); break;
             case "limit":
-                setLimit(); break;
+                cliSetLimit(); break;
             case "help":
-                printHelp(); break;
+                cliPrintHelp(); break;
             default:
                 System.out.println("Command not found. Try again: ");
                 break;
         }
     }
 
-    private void addBook() {
+    private void cliAddBook() {
         Book book = createNewBook();
 
         try (var preparedSt = connection.prepareStatement("INSERT INTO book VALUES(NULL,?,?,?,?,?,?)")) {
@@ -77,6 +71,7 @@ public class App {
             preparedSt.setDate(4, Date.valueOf(book.getPublishDate()));
             preparedSt.setInt(5, book.getPages());
             preparedSt.setDouble(6, book.getPrice());
+
             preparedSt.executeUpdate();
             System.out.println("Success!");
         } catch (SQLException e) {
@@ -85,11 +80,12 @@ public class App {
         }
     }
 
-    private void removeBook() {
+    private void cliRemoveBook() {
         int bookId = promptInt("Enter the book id");
 
         try (var preparedSt = connection.prepareStatement("DELETE FROM book WHERE id = ?")) {
             preparedSt.setInt(1, bookId);
+
             preparedSt.executeUpdate();
             System.out.println("Success");
         } catch (SQLException e) {
@@ -99,9 +95,10 @@ public class App {
 
     }
 
-    private void showAllBooks() {
+    private void cliShowAllBooks() {
         try (var preparedSt = connection.prepareStatement("SELECT * FROM book LIMIT ?")) {
             preparedSt.setInt(1, limitToShow);
+
             var rs = preparedSt.executeQuery();
             var books = createBooksFromRs(rs);
             printBooks(books);
@@ -111,7 +108,7 @@ public class App {
         }
     }
 
-    private void showBooksByFilter() {
+    private void cliShowBooksByFilter() {
         printFiltersHelp();
         String filter = promptLine("Select Filter:");
 
@@ -215,29 +212,7 @@ public class App {
         }
     }
 
-    private void printFiltersHelp() {
-        System.out.println("Filters:");
-        System.out.println("> a #Список книг заданого автора в порядку зростання року видання");
-        System.out.println("> b #Список книг, що видані заданим видавництвом");
-        System.out.println("> c #Список книг, що випущені після заданої дати");
-        System.out.println("> d #Список авторів в алфавітному порядку");
-        System.out.println("> e #Список видавництв, книги яких зареєстровані в системі без повторів");
-        System.out.println("> f #Для кожного видавництва визначити список книг, виданих ним");
-    }
-
-    private void printHelp() {
-        System.out.println("Commands:");
-        System.out.println("> add #Add new book");
-        System.out.println("> remove #Remove the book by ID");
-        System.out.println("> showAll #Show all books");
-        System.out.println("> filter #Show books by filter");
-        System.out.println();
-        System.out.println("> limit #Set Limit to show");
-        System.out.println("> help #Print Help");
-        System.out.println("> exit #Exit");
-    }
-
-    private void setLimit() {
+    private void cliSetLimit() {
         System.out.println("Current limit: " + limitToShow);
         limitToShow = promptInt("Enter new limit: ");
     }
@@ -310,6 +285,28 @@ public class App {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    private void printFiltersHelp() {
+        System.out.println("Filters:");
+        System.out.println("> a #Список книг заданого автора в порядку зростання року видання");
+        System.out.println("> b #Список книг, що видані заданим видавництвом");
+        System.out.println("> c #Список книг, що випущені після заданої дати");
+        System.out.println("> d #Список авторів в алфавітному порядку");
+        System.out.println("> e #Список видавництв, книги яких зареєстровані в системі без повторів");
+        System.out.println("> f #Для кожного видавництва визначити список книг, виданих ним");
+    }
+
+    private void printHelp() {
+        System.out.println("Commands:");
+        System.out.println("> add #Add new book");
+        System.out.println("> remove #Remove the book by ID");
+        System.out.println("> showAll #Show all books");
+        System.out.println("> filter #Show books by filter");
+        System.out.println();
+        System.out.println("> limit #Set Limit to show");
+        System.out.println("> help #Print Help");
+        System.out.println("> exit #Exit");
     }
 
 }
