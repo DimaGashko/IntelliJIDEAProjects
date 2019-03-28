@@ -17,7 +17,7 @@ public class App {
             "    publisher.name AS publisher, book.publish_date, book.pages, book.price\n" +
             "FROM book \n" +
             "LEFT JOIN author ON book.author_id = author.id\n" +
-            "LEFT JOIN publisher ON book.publisher_id = publisher.id\n";
+            "LEFT JOIN publisher ON book.publisher_id = publisher.id\n ";
 
     private int limitToShow = 15;
 
@@ -107,16 +107,7 @@ public class App {
     }
 
     private void cliShowAllBooks() {
-        try {
-            var preparedSt = connection.prepareStatement(
-                    "SELECT book.id, book.name, author.name AS author, \n" +
-                            "    publisher.name AS publisher, book.publish_date, book.pages, book.price\n" +
-                            "FROM book \n" +
-                            "LEFT JOIN author ON book.author_id = author.id\n" +
-                            "LEFT JOIN publisher ON book.publisher_id = publisher.id\n" +
-                            "LIMIT ?"
-            );
-
+        try (var preparedSt = connection.prepareStatement(sqlSelectAll + "LIMIT ?")) {
             preparedSt.setInt(1, limitToShow);
 
             var rs = preparedSt.executeQuery();
@@ -138,9 +129,7 @@ public class App {
                 String author = promptLine("Author:");
 
                 var prepareSt = connection.prepareStatement(
-                        sqlSelectAll +
-                                " WHERE author.name LIKE ?\n" +
-                                "ORDER BY book.publish_date LIMIT ?"
+                        sqlSelectAll + "WHERE author.name LIKE ? ORDER BY book.publish_date LIMIT ?"
                 );
 
                 prepareSt.setString(1, "%" + author + "%");
@@ -150,9 +139,7 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("b")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT * FROM book WHERE publisher LIKE ? LIMIT ?"
-                );
+                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publisher LIKE ? LIMIT ?");
 
                 String publisher = promptLine("Publisher:");
                 prepareSt.setString(1, "%" + publisher + "%");
@@ -162,9 +149,7 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("c")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT * FROM book WHERE publish_date > ? LIMIT ?"
-                );
+                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publish_date > ? LIMIT ?");
 
                 LocalDate date = promptDate("Publish Date:");
                 prepareSt.setString(1, date.toString());
