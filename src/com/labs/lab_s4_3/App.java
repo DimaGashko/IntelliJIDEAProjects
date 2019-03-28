@@ -50,44 +50,23 @@ public class App {
     private void useCommand(String command) {
         switch (command) {
             case "showall":
-                cliShowAllBooks(); break;
-            case "add":
-                cliAddBook(); break;
+                cliShowAllBooks();
+                break;
             case "remove":
-                cliRemoveBook(); break;
+                cliRemoveBook();
+                break;
             case "filter":
-                cliShowBooksByFilter(); break;
+                cliShowBooksByFilter();
+                break;
             case "limit":
-                cliSetLimit(); break;
+                cliSetLimit();
+                break;
             case "help":
-                cliPrintHelp(); break;
+                cliPrintHelp();
+                break;
             default:
                 System.out.println("Command not found. Try again: ");
                 break;
-        }
-    }
-
-    private void cliAddBook() {
-        Book book = createNewBook();
-
-        try {
-            // TODO: add book
-            var preparedSt = connection.prepareStatement(
-                    "INSERT INTO book VALUES(NULL,?,?,?,?,?,?)"
-            );
-
-            preparedSt.setString(1, book.getName());
-            preparedSt.setString(2, book.getAuthor());
-            preparedSt.setString(3, book.getPublisher());
-            preparedSt.setDate(4, Date.valueOf(book.getPublishDate()));
-            preparedSt.setInt(5, book.getPages());
-            preparedSt.setDouble(6, book.getPrice());
-
-            preparedSt.executeUpdate();
-            System.out.println("Success!");
-        } catch (SQLException e) {
-            System.out.println("Can't add the book!");
-            e.printStackTrace();
         }
     }
 
@@ -139,7 +118,7 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("b")) {
-                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publisher LIKE ? LIMIT ?");
+                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publisher.name LIKE ? LIMIT ?");
 
                 String publisher = promptLine("Publisher:");
                 prepareSt.setString(1, "%" + publisher + "%");
@@ -160,7 +139,9 @@ public class App {
 
             } else if (filter.equalsIgnoreCase("d")) {
                 var prepareSt = connection.prepareStatement(
-                        "SELECT DISTINCT author FROM book ORDER BY author LIMIT ?"
+                        "SELECT DISTINCT author.name AS author FROM book\n" +
+                                "INNER JOIN author ON book.author_id = author.id\n" +
+                                "ORDER BY author.name LIMIT ?"
                 );
 
                 prepareSt.setInt(1, limitToShow);
@@ -176,7 +157,9 @@ public class App {
 
             } else if (filter.equalsIgnoreCase("e")) {
                 var prepareSt = connection.prepareStatement(
-                        "SELECT DISTINCT publisher FROM book LIMIT ?"
+                        "SELECT DISTINCT publisher.name AS publisher FROM book\n" +
+                                "INNER JOIN publisher ON book.publisher_id = publisher.id\n " +
+                                "LIMIT ?"
                 );
 
                 prepareSt.setInt(1, limitToShow);
@@ -191,9 +174,7 @@ public class App {
                 publishers.forEach(System.out::println);
 
             } else if (filter.equalsIgnoreCase("f")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT * FROM book LIMIT  ?"
-                );
+                var prepareSt = connection.prepareStatement(sqlSelectAll + "LIMIT ?");
 
                 prepareSt.setInt(1, limitToShow);
                 var rs = prepareSt.executeQuery();
@@ -295,7 +276,6 @@ public class App {
     private void cliPrintHelp() {
         System.out.println("Commands:");
         System.out.println("> showAll #Show all books");
-        System.out.println("> add #Add new book");
         System.out.println("> remove #Remove the book by ID");
         System.out.println("> filter #Show books by filter");
         System.out.println();
