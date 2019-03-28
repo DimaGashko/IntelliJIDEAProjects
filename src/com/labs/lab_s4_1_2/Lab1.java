@@ -1,4 +1,4 @@
-package com.labs.lab_s4_1;
+package com.labs.lab_s4_1_2;
 
 import java.time.LocalDate;
 import java.util.stream.Collectors;
@@ -9,7 +9,7 @@ import static com.helpers.console.ConsoleElements.hr;
 import static com.helpers.console.ConsolePrompt.*;
 
 public class Lab1 {
-    private static final String USERS_STORAGE_URL = "src/com/labs/lab_s4_1/users";
+    private static final String USERS_STORAGE_URL = "src/com/labs/lab_s4_1_2/users";
 
     private HashSet<User> users = new HashSet<>();
 
