@@ -379,7 +379,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553768516773" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553768952705" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -435,11 +435,11 @@
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.labs.lab_s4_3.App" />
+      <option name="MAIN_CLASS_NAME" value="com.labs.lab_s4_3_4.App" />
       <module name="JavaProjects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.labs.lab_s4_3.*" />
+          <option name="PATTERN" value="com.labs.lab_s4_3_4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -474,11 +474,11 @@
       </method>
     </configuration>
     <configuration name="Lab1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.labs.lab_s4_1.Lab1" />
+      <option name="MAIN_CLASS_NAME" value="com.labs.lab_s4_1_2.Lab1" />
       <module name="JavaProjects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.labs.lab_s4_1.*" />
+          <option name="PATTERN" value="com.labs.lab_s4_1_2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
