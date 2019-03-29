@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,14 +66,12 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
+            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3_4/App.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+                <state relative-caret-position="184">
+                  <caret line="282" column="43" selection-start-line="282" selection-start-column="43" selection-end-line="282" selection-end-column="43" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#8896#8897#0" expanded="true" />
-                    <element signature="e#8924#8925#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -130,9 +127,9 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
+            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/Lab1.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-556">
+                <state relative-caret-position="17">
                   <caret line="168" column="7" selection-start-line="168" selection-start-column="7" selection-end-line="168" selection-end-column="7" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -142,7 +139,7 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
+            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3_4/Book.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="765">
                   <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
@@ -223,7 +220,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/learn/other/readArrayList.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java" />
         <option value="$PROJECT_DIR$/test" />
         <option value="$PROJECT_DIR$/src/learn/other/ArrayList/readArrayList.java" />
@@ -274,6 +270,7 @@
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" />
         <option value="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3_4/App.java" />
       </list>
     </option>
   </component>
@@ -334,15 +331,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="lab_s4_1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="IntelijIdiaJavaProjects" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="lab_s4_3" type="462c0819:PsiDirectoryNode" />
+              <item name="lab_s4_3_4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
@@ -379,7 +368,7 @@
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553768952705" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553769177583" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
@@ -614,7 +603,8 @@
       <workItem from="1553547593875" duration="52000" />
       <workItem from="1553547941129" duration="18343000" />
       <workItem from="1553704087968" duration="119000" />
-      <workItem from="1553704478446" duration="14875000" />
+      <workItem from="1553704478446" duration="15428000" />
+      <workItem from="1553769552166" duration="602000" />
     </task>
     <servers />
   </component>
@@ -651,7 +641,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="540733000" />
+    <option name="totallyTimeSpent" value="541888000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -663,9 +653,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022692889" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23524962" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -674,8 +664,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.95090014" />
-      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.32242227" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.95090014" />
+      <window_info active="true" anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" visible="true" weight="0.32242227" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -785,7 +775,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/users">
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/users">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.xml/javax/xml/transform/Templates.java">
@@ -954,7 +944,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="das://923da427-dc75-43eb-886a-99d6edc17361/schema/test_db/table/student" />
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/User.java">
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
@@ -1049,6 +1039,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/book">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/publisher">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/author">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3_4/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="282" column="43" selection-start-line="282" selection-start-column="43" selection-end-line="282" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1084,7 +1105,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/Lab1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="168" column="7" selection-start-line="168" selection-start-column="7" selection-end-line="168" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3_4/Book.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
           <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
@@ -1103,49 +1134,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaProjects.iml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-556">
-          <caret line="168" column="7" selection-start-line="168" selection-start-column="7" selection-end-line="168" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/publisher">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/author">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="76" column="41" lean-forward="true" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8896#8897#0" expanded="true" />
-            <element signature="e#8924#8925#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
   </component>
   <component name="masterDetails">
