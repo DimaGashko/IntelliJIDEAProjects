@@ -1,4 +1,4 @@
-package com.labs.lab_s4_3_4;
+package com.labs.lab_s4_3;
 
 import org.jetbrains.annotations.NotNull;
 

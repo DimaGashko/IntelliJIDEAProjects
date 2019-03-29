@@ -1,6 +1,7 @@
-package com.labs.lab_s4_3_4;
+package com.labs.lab_s4_3;
 
 import java.sql.*;
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -10,13 +11,7 @@ import static com.helpers.console.ConsolePrompt.*;
 import static com.helpers.console.ConsolePrompt.promptInt;
 
 public class App {
-    private Connection connection;
-
-    private static final String sqlSelectAll = "SELECT book.id, book.name, author.name AS author, \n" +
-            "    publisher.name AS publisher, book.publish_date, book.pages, book.price\n" +
-            "FROM book \n" +
-            "LEFT JOIN author ON book.author_id = author.id\n" +
-            "LEFT JOIN publisher ON book.publisher_id = publisher.id\n ";
+    Connection connection;
 
     private int limitToShow = 15;
 
@@ -49,23 +44,39 @@ public class App {
     private void useCommand(String command) {
         switch (command) {
             case "showall":
-                cliShowAllBooks();
-                break;
+                cliShowAllBooks(); break;
+            case "add":
+                cliAddBook(); break;
             case "remove":
-                cliRemoveBook();
-                break;
+                cliRemoveBook(); break;
             case "filter":
-                cliShowBooksByFilter();
-                break;
+                cliShowBooksByFilter(); break;
             case "limit":
-                cliSetLimit();
-                break;
+                cliSetLimit(); break;
             case "help":
-                cliPrintHelp();
-                break;
+                cliPrintHelp(); break;
             default:
                 System.out.println("Command not found. Try again: ");
                 break;
+        }
+    }
+
+    private void cliAddBook() {
+        Book book = createNewBook();
+
+        try (var preparedSt = connection.prepareStatement("INSERT INTO book VALUES(NULL,?,?,?,?,?,?)")) {
+            preparedSt.setString(1, book.getName());
+            preparedSt.setString(2, book.getAuthor());
+            preparedSt.setString(3, book.getPublisher());
+            preparedSt.setDate(4, Date.valueOf(book.getPublishDate()));
+            preparedSt.setInt(5, book.getPages());
+            preparedSt.setDouble(6, book.getPrice());
+
+            preparedSt.executeUpdate();
+            System.out.println("Success!");
+        } catch (SQLException e) {
+            System.out.println("Can't add the book!");
+            e.printStackTrace();
         }
     }
 
@@ -85,7 +96,7 @@ public class App {
     }
 
     private void cliShowAllBooks() {
-        try (var preparedSt = connection.prepareStatement(sqlSelectAll + "LIMIT ?")) {
+        try (var preparedSt = connection.prepareStatement("SELECT * FROM book LIMIT ?")) {
             preparedSt.setInt(1, limitToShow);
 
             var rs = preparedSt.executeQuery();
@@ -107,7 +118,8 @@ public class App {
                 String author = promptLine("Author:");
 
                 var prepareSt = connection.prepareStatement(
-                        sqlSelectAll + "WHERE author.name LIKE ? ORDER BY book.publish_date LIMIT ?"
+                        "SELECT * FROM book WHERE author LIKE ?" +
+                                "ORDER BY publish_date LIMIT ?"
                 );
 
                 prepareSt.setString(1, "%" + author + "%");
@@ -117,7 +129,9 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("b")) {
-                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publisher.name LIKE ? LIMIT ?");
+                var prepareSt = connection.prepareStatement(
+                        "SELECT * FROM book WHERE publisher LIKE ? LIMIT ?"
+                );
 
                 String publisher = promptLine("Publisher:");
                 prepareSt.setString(1, "%" + publisher + "%");
@@ -127,7 +141,9 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("c")) {
-                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publish_date > ? LIMIT ?");
+                var prepareSt = connection.prepareStatement(
+                        "SELECT * FROM book WHERE publish_date > ? LIMIT ?"
+                );
 
                 LocalDate date = promptDate("Publish Date:");
                 prepareSt.setString(1, date.toString());
@@ -138,9 +154,7 @@ public class App {
 
             } else if (filter.equalsIgnoreCase("d")) {
                 var prepareSt = connection.prepareStatement(
-                        "SELECT DISTINCT author.name AS author FROM book\n" +
-                                "INNER JOIN author ON book.author_id = author.id\n" +
-                                "ORDER BY author.name LIMIT ?"
+                        "SELECT DISTINCT author FROM book ORDER BY author LIMIT ?"
                 );
 
                 prepareSt.setInt(1, limitToShow);
@@ -156,9 +170,7 @@ public class App {
 
             } else if (filter.equalsIgnoreCase("e")) {
                 var prepareSt = connection.prepareStatement(
-                        "SELECT DISTINCT publisher.name AS publisher FROM book\n" +
-                                "INNER JOIN publisher ON book.publisher_id = publisher.id\n " +
-                                "LIMIT ?"
+                        "SELECT DISTINCT publisher FROM book LIMIT ?"
                 );
 
                 prepareSt.setInt(1, limitToShow);
@@ -173,7 +185,9 @@ public class App {
                 publishers.forEach(System.out::println);
 
             } else if (filter.equalsIgnoreCase("f")) {
-                var prepareSt = connection.prepareStatement(sqlSelectAll + "LIMIT ?");
+                var prepareSt = connection.prepareStatement(
+                        "SELECT * FROM book LIMIT  ?"
+                );
 
                 prepareSt.setInt(1, limitToShow);
                 var rs = prepareSt.executeQuery();
@@ -254,7 +268,7 @@ public class App {
     private void connect() {
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/books_java_sem4_lab4",
+                    "jdbc:mysql://localhost:3306/books_java_semester4_lab3",
                     "db_user", "qqqqqqqqww"
             );
 
@@ -275,6 +289,7 @@ public class App {
     private void cliPrintHelp() {
         System.out.println("Commands:");
         System.out.println("> showAll #Show all books");
+        System.out.println("> add #Add new book");
         System.out.println("> remove #Remove the book by ID");
         System.out.println("> filter #Show books by filter");
         System.out.println();
