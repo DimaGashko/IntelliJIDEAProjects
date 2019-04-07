@@ -1,7 +1,5 @@
 package com.labs.lab_s4_1_2;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -118,7 +116,7 @@ public class User implements Comparable<User>, Serializable {
     }
 
     @Override
-    public int compareTo(@NotNull User o) {
+    public int compareTo(User o) {
         return Comparator.comparing(User::getId, String::compareTo).compare(this, o);
     }
 }

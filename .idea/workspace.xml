@@ -1,7 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="" />
+    <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cssdialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cssdialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/923da427-dc75-43eb-886a-99d6edc17361.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/923da427-dc75-43eb-886a-99d6edc17361.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afca583c-6a7e-4ef3-95bf-b9050645ac19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/afca583c-6a7e-4ef3-95bf-b9050645ac19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e80342ef-c6b1-4c0f-a349-f88d111028a1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e80342ef-c6b1-4c0f-a349-f88d111028a1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/dgash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/dgash.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_15.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_mysql_connector_java_8_0_15.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaProjects.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProjects.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/console/ConsoleElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/console/ConsoleElements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/console/ConsolePrompt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/console/ConsolePrompt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/javaFx/TextFormatters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/helpers/javaFx/TextFormatters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab2/F2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab2/F2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part1/Lab3Part1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part1/Lab3Part1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part1/library/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part1/library/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part1/library/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part1/library/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part2/Cleaner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part2/Cleaner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part2/Lab3Part2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab3/part2/Lab3Part2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/controllers/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/controllers/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/styles/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/styles/index.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/views/index.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab4/views/index.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/ELib.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/ELib.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/configs/books-backup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/configs/books-backup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/configs/books-db.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/configs/books-db.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/controllers/CreateBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/controllers/CreateBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/controllers/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/controllers/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/BookFilters.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/BookFilters.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/HandlerFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/HandlerFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/BinaryStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/BinaryStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/IStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/IStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/TextStorage$ParseFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/TextStorage$ParseFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/TextStorage$StringifyFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/TextStorage$StringifyFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/TextStorage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/models/storage/TextStorage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/createBook.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/createBook.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/index.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_base.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_base.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_scrollBar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_scrollBar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_slider.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_slider.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_table.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_table.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_vars.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/styles/shared/_vars.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/views/createBook.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/views/createBook.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/views/index.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/views/index.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/Alerts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/Alerts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/BaseWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/BaseWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/IndexWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/IndexWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/WindowCreateBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/com/labs/lab5/ELib/windows/WindowCreateBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/JFoenix/_1_baseTests/Index.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/JFoenix/_1_baseTests/Index.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/JFoenix/_1_baseTests/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/JFoenix/_1_baseTests/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/JFoenix/_1_baseTests/index.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/JFoenix/_1_baseTests/index.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_10_onChange/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_10_onChange/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_11_comboBox/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_11_comboBox/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_12_listView/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_12_listView/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_13_treeView/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_13_treeView/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_14_tableView1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_14_tableView1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_14_tableView1/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_14_tableView1/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_15_menus/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_15_menus/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_16_CSS/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_16_CSS/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_16_CSS/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_16_CSS/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_16_CSS/Main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_16_CSS/Main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_17_FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_18_Controller/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_19_sceneBuilder/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_19_sceneBuilder/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_19_sceneBuilder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_19_sceneBuilder/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_19_sceneBuilder/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_19_sceneBuilder/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_1_init/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_1_init/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_20_Chart/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_20_Chart/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_21_BuindTests/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_21_BuindTests/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_21_BuindTests/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_21_BuindTests/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_21_BuindTests/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_21_BuindTests/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_2_alertBoxes/AlertBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_2_alertBoxes/AlertBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_2_alertBoxes/ConfirmBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_2_alertBoxes/ConfirmBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_2_alertBoxes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_2_alertBoxes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_3_Events/Main2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_3_Events/Main2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_4_closeTheApp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_4_closeTheApp/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_5_layouts/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_5_layouts/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_6_gridPane/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_6_gridPane/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_7_extractAndValidate/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_7_extractAndValidate/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_8_checkbox/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_8_checkbox/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_9_choiceBox/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/javaFx/_9_choiceBox/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/other/ArrayList/readArrayList$Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/other/ArrayList/readArrayList$Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/other/ArrayList/readArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/other/ArrayList/readArrayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/regexp/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/regexp/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaProjects/learn/regexp/Test1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaProjects/learn/regexp/Test1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/helpers/console/ConsoleElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/helpers/console/ConsoleElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/helpers/javaFx/TextFormatters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/helpers/javaFx/TextFormatters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab2/F2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab2/F2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab3/part1/Lab3Part1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab3/part1/Lab3Part1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab3/part1/library/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab3/part1/library/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab3/part2/Cleaner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab3/part2/Cleaner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab3/part2/Lab3Part2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab3/part2/Lab3Part2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab4/controllers/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab4/controllers/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab4/styles/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab4/styles/index.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab4/views/index.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab4/views/index.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/configs/books-backup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/configs/books-backup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/configs/books-db.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/configs/books-db.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/CreateBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/CreateBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/HandlerFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/HandlerFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/IStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/IStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/TextStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/TextStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/createBook.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/createBook.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/index.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/index.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_base.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_base.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_scrollBar.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_scrollBar.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_slider.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_slider.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_table.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_table.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_vars.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/styles/shared/_vars.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/views/createBook.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/views/createBook.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/views/index.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/views/index.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/Alerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/Alerts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/BaseWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/BaseWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/IndexWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/IndexWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/WindowCreateBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/WindowCreateBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_0/Benchmark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_0/Benchmark.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1_2/Lab1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1_2/Lab1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/lib/windows/IWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/lib/windows/IWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/Collections/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/Collections/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/DB/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/DB/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/DB/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/DB/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/JFoenix/_1_baseTests/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/JFoenix/_1_baseTests/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/JFoenix/_1_baseTests/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/JFoenix/_1_baseTests/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/JFoenix/_1_baseTests/index.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/JFoenix/_1_baseTests/index.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/JFoenix/_2_ValidatorAndAlingCenterTest/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_10_onChange/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_10_onChange/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_11_comboBox/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_11_comboBox/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_12_listView/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_12_listView/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_13_treeView/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_13_treeView/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_14_tableView1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_14_tableView1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_14_tableView1/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_14_tableView1/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_15_menus/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_15_menus/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_16_CSS/Main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_16_CSS/Main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_16_CSS/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_16_CSS/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_16_CSS/Main.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_16_CSS/Main.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_17_FXML/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_17_FXML/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_17_FXML/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_17_FXML/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_17_FXML/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_17_FXML/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_18_Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_18_Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_18_Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_18_Controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_18_Controller/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_18_Controller/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_19_sceneBuilder/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_19_sceneBuilder/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_19_sceneBuilder/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_19_sceneBuilder/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_19_sceneBuilder/main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_19_sceneBuilder/main.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_1_init/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_1_init/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_20_Chart/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_20_Chart/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_21_BuindTests/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_21_BuindTests/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_21_BuindTests/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_21_BuindTests/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_21_BuindTests/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_21_BuindTests/sample.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_2_alertBoxes/AlertBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_2_alertBoxes/AlertBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_2_alertBoxes/ConfirmBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_2_alertBoxes/ConfirmBox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_2_alertBoxes/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_2_alertBoxes/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_3_Events/Main2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_3_Events/Main2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_4_closeTheApp/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_4_closeTheApp/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_5_layouts/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_5_layouts/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_6_gridPane/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_6_gridPane/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_7_extractAndValidate/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_7_extractAndValidate/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_8_checkbox/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_8_checkbox/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/javaFx/_9_choiceBox/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/javaFx/_9_choiceBox/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/other/ArrayList/readArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/other/ArrayList/readArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/learn/regexp/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/learn/regexp/Test1.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,92 +219,122 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books_java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books_java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books_java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="books_java_sem4_lab4: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books_java_semester4_lab3@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books_java_semester4_lab3@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="books_java_semester4_lab3@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="books_java_semester4_lab3: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.8988989">
+    <splitter split-orientation="horizontal" split-proportion="0.72409153">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/learn/javaFx/_18_Controller/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="45">
+                  <caret line="10" selection-start-line="10" selection-end-line="10" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/labs/lab1/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="23" selection-start-line="23" selection-end-line="23" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+                <state relative-caret-position="165">
+                  <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1335">
+                  <caret line="121" selection-start-line="121" selection-end-line="121" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/learn/Collections/Test1.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="585">
+                  <caret line="41" selection-start-line="41" selection-end-line="41" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1110">
+                  <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#2368#2369#0" expanded="true" />
+                    <element signature="e#2461#2462#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="28" selection-start-column="28" selection-end-column="28" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
-              <provider selected="true" editor-type-id="text-editor" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/author">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/publisher">
-              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-                <state>
-                  <filtering enabled="true" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/HandlerFunction.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+                <state relative-caret-position="1080">
+                  <caret line="105" selection-start-line="105" selection-end-line="105" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#2368#2369#0" expanded="true" />
+                    <element signature="e#2461#2462#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -121,7 +342,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
+                <state relative-caret-position="150">
                   <caret line="11" selection-start-line="11" selection-end-line="11" />
                 </state>
               </provider>
@@ -130,7 +351,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/TextStorage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
+                <state relative-caret-position="165">
                   <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
                 </state>
               </provider>
@@ -143,8 +364,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/learn/DB/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="162">
-                  <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+                <state relative-caret-position="307">
+                  <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -213,11 +434,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java" />
-        <option value="$PROJECT_DIR$/test" />
-        <option value="$PROJECT_DIR$/src/learn/other/ArrayList/readArrayList.java" />
-        <option value="$PROJECT_DIR$/src/com/labs/lab5/ELib/windows/Alerts.java" />
-        <option value="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/IStorage.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/index/IndexWindowsManager.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab5/ELib/controllers/index/Index.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java" />
@@ -247,7 +463,6 @@
         <option value="$PROJECT_DIR$/src/com/lib/windows/IWindow.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab0_s4/Benchmark.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/UserStorage.java" />
-        <option value="$PROJECT_DIR$/src/learn/Collections/Test1.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/User.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/UsersStorage.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_s1/Lab1.java" />
@@ -256,14 +471,20 @@
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_1/Lab1.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e98f459c-9535-48e7-b9fa-dc2a2e715ee4/console.sql" />
         <option value="$PROJECT_DIR$/src/learn/DB/Employee.java" />
-        <option value="$PROJECT_DIR$/src/learn/DB/Main.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_2/Lab1.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/User.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/Lab1.java" />
         <option value="$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3_4/App.java" />
-        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" />
         <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java" />
+        <option value="$PROJECT_DIR$/src/learn/DB/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java" />
+        <option value="$PROJECT_DIR$/src/learn/Collections/Test1.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java" />
+        <option value="$PROJECT_DIR$/src/com/labs/lab1/Main.java" />
       </list>
     </option>
   </component>
@@ -280,10 +501,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="y" value="27" />
+    <option name="width" value="1366" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -294,6 +514,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -325,6 +546,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="lab1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntelijIdiaJavaProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="ELib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntelijIdiaJavaProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
+              <item name="lab_s4_1_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntelijIdiaJavaProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="labs" type="462c0819:PsiDirectoryNode" />
               <item name="lab_s4_3" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,13 +578,28 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="labs" type="462c0819:PsiDirectoryNode" />
-              <item name="lab_s4_3_4" type="462c0819:PsiDirectoryNode" />
+              <item name="lab_s4_4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
               <item name="IntelijIdiaJavaProjects" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="learn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntelijIdiaJavaProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="Collections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IntelijIdiaJavaProjects" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="learn" type="462c0819:PsiDirectoryNode" />
+              <item name="Collections" type="462c0819:PsiDirectoryNode" />
+              <item name="Test1.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </path>
             <path>
               <item name="IntelijIdiaJavaProjects" type="b2602c69:ProjectViewProjectNode" />
@@ -352,7 +612,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,18 +625,19 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ToolWindowDuplicate detector.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553852245584" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553852320202" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/usr/lib/jvm/jfoenix-9.0.8.jar!/" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.4229885" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
@@ -385,20 +645,6 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.labs.lab2" />
       <recent name="com.labs.lab3.part2" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
-      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.labs.lab5.ELib.models.storage" />
-      <recent name="com.labs.lab5.ELib.windows" />
-      <recent name="learn.javaFx._16_CSS" />
-      <recent name="learn.javaFx._15_menus" />
-      <recent name="learn.javaFx._14_tableView1" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -409,6 +655,20 @@
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\views" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\Coordinates" />
       <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\learn\javaFx\_19_sceneBuilder" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.labs.lab_s4_3" />
+      <recent name="com.labs.lab5.ELib.models.storage" />
+      <recent name="com.labs.lab5.ELib.windows" />
+      <recent name="learn.javaFx._16_CSS" />
+      <recent name="learn.javaFx._15_menus" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\learn\JFoenix\_2_ValidatorAndAlingCenterTest" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\styles\shared" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\IntelijIdiaJavaProjects\src\com\labs\lab5\ELib\img" />
+      <recent name="C:\Users\dgash\Desktop\projects\SchoolProjects\NUK\Java\JavaProjects\src\com\labs\lab4\styles" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -423,7 +683,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Application.ELib">
     <configuration name="App (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.labs.lab_s4_3.App" />
       <module name="JavaProjects" />
@@ -453,6 +713,7 @@
     <configuration name="ELib" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.labs.lab5.ELib.ELib" />
       <module name="JavaProjects" />
+      <option name="VM_PARAMETERS" value="--module-path /usr/lib/jvm/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.labs.lab5.ELib.*" />
@@ -463,12 +724,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Lab1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.labs.lab_s4_1_2.Lab1" />
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="learn.javaFx._18_Controller.Main" />
       <module name="JavaProjects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.labs.lab_s4_1_2.*" />
+          <option name="PATTERN" value="learn.javaFx._18_Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -476,12 +737,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="learn.DB.Main" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.labs.lab1.Main" />
       <module name="JavaProjects" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="learn.DB.*" />
+          <option name="PATTERN" value="com.labs.lab1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -490,19 +751,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Lab1" />
-      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.App" />
       <item itemvalue="Application.ELib" />
       <item itemvalue="Application.App (1)" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ELib" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.App (1)" />
-        <item itemvalue="Application.ELib" />
-        <item itemvalue="Application.Main (1)" />
-        <item itemvalue="Application.Lab1" />
       </list>
     </recent_temporary>
   </component>
@@ -606,6 +867,11 @@
       <workItem from="1553704087968" duration="119000" />
       <workItem from="1553704478446" duration="15428000" />
       <workItem from="1553769552166" duration="602000" />
+      <workItem from="1553960279527" duration="1558000" />
+      <workItem from="1554452539356" duration="116000" />
+      <workItem from="1554452696316" duration="1279000" />
+      <workItem from="1554650691082" duration="985000" />
+      <workItem from="1554651726163" duration="1070000" />
     </task>
     <servers />
   </component>
@@ -642,7 +908,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="542882000" />
+    <option name="totallyTimeSpent" value="548318000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -654,10 +920,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21028744" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22727273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -666,17 +931,17 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.95090014" />
-      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" visible="true" weight="0.31423897" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.9495114" />
+      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.33387622" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32733223" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.3715221" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32569557" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3502455" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.35016286" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" auto_hide="true" id="Duplicate detector" order="12" type="SLIDING" weight="0.3289689" />
+      <window_info anchor="bottom" auto_hide="true" id="Duplicate detector" internal_type="SLIDING" order="12" type="SLIDING" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.48772505" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -686,7 +951,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.24962178" />
-      <window_info anchor="right" id="Database" order="7" weight="0.22087745" />
+      <window_info active="true" anchor="right" id="Database" order="7" visible="true" weight="0.22045454" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
       <window_info anchor="right" id="Maven" order="9" />
     </layout>
@@ -710,7 +975,7 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32569557" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3502455" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" auto_hide="true" id="Duplicate detector" order="12" type="SLIDING" weight="0.3289689" />
+      <window_info anchor="bottom" auto_hide="true" id="Duplicate detector" internal_type="SLIDING" order="12" type="SLIDING" weight="0.3289689" />
       <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Console" order="14" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -777,88 +1042,12 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Iterable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="71" column="17" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsoleElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/learn/regexp/Test1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Optional.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="145" column="13" selection-start-line="145" selection-start-column="13" selection-end-line="145" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="91" column="13" selection-start-line="91" selection-start-column="13" selection-end-line="91" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/HashSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="91" column="54" selection-start-line="91" selection-start-column="54" selection-end-line="91" selection-end-column="54" />
-          <folding>
-            <element signature="e#3745#3746#0" expanded="true" />
-            <element signature="e#3782#3783#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21420">
-          <caret line="1320" column="6" selection-start-line="1320" selection-start-column="6" selection-end-line="1320" selection-end-column="6" />
-          <folding>
-            <element signature="e#19292#19293#0" expanded="true" />
-            <element signature="e#19375#19376#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32980">
-          <caret line="2021" column="19" selection-start-line="2021" selection-start-column="19" selection-end-line="2021" selection-end-column="19" />
-          <folding>
-            <element signature="e#80867#80868#0" expanded="true" />
-            <element signature="e#80918#80919#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Scanner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="2800" column="6" lean-forward="true" selection-start-line="2800" selection-start-column="6" selection-end-line="2800" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="194" column="14" lean-forward="true" selection-start-line="194" selection-start-column="14" selection-end-line="194" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/TreeSet.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/HashSet.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/HashMap.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/String.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/Scanner.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/stream/Stream.java" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab3/part1/Lab3Part1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -870,13 +1059,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="239">
           <caret line="77" column="15" lean-forward="true" selection-start-line="77" selection-start-column="15" selection-end-line="77" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-556">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -897,64 +1079,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="1129" column="10" lean-forward="true" selection-start-line="1129" selection-start-column="10" selection-end-line="1129" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/PrintStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2184">
-          <caret line="879" column="16" selection-start-line="879" selection-start-column="16" selection-end-line="879" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="342" column="22" selection-start-line="342" selection-start-column="22" selection-end-line="342" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="334" column="11" selection-start-line="334" selection-start-column="11" selection-end-line="334" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e98f459c-9535-48e7-b9fa-dc2a2e715ee4/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/923da427-dc75-43eb-886a-99d6edc17361/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/stream/Collectors.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/PrintStream.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectOutputStream.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectInputStream.java" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e98f459c-9535-48e7-b9fa-dc2a2e715ee4/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/923da427-dc75-43eb-886a-99d6edc17361/console.sql" />
     <entry file="das://923da427-dc75-43eb-886a-99d6edc17361/schema/test_db/table/student" />
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="103" column="35" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1572#1573#0" expanded="true" />
-            <element signature="e#1597#1598#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.sql/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="679" column="18" selection-start-line="679" selection-start-column="18" selection-end-line="679" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.sql/java/sql/ResultSet.java" />
     <entry file="file://$PROJECT_DIR$/src/learn/DB/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -973,12 +1105,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e80342ef-c6b1-4c0f-a349-f88d111028a1/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afca583c-6a7e-4ef3-95bf-b9050645ac19/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e80342ef-c6b1-4c0f-a349-f88d111028a1/console.sql" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/afca583c-6a7e-4ef3-95bf-b9050645ac19/console.sql" />
     <entry file="das://923da427-dc75-43eb-886a-99d6edc17361/schema/test_db/table/employee">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -996,20 +1124,8 @@
     <entry file="file://$PROJECT_DIR$/../../realProjects/4. ELib/ELib.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.sql/java/sql/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="99" column="6" lean-forward="true" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.sql/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="77" column="14" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.sql/java/sql/Connection.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.sql/java/sql/PreparedStatement.java" />
     <entry file="file://$PROJECT_DIR$/src/com/helpers/console/ConsolePrompt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
@@ -1020,63 +1136,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/time/LocalDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5236">
-          <caret line="414" selection-start-line="414" selection-end-line="414" />
-          <folding>
-            <element signature="e#17155#17156#0" expanded="true" />
-            <element signature="e#17223#17224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/time/LocalDate.java" />
     <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/book">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/publisher">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/author">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/HandlerFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/TextStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1090,17 +1154,164 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3_4/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="53" column="10" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="10" />
+        <state relative-caret-position="60">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8416#8417#0" expanded="true" />
+            <element signature="e#8444#8445#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/learn/javaFx/_15_menus/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/author">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://afca583c-6a7e-4ef3-95bf-b9050645ac19/schema/books_java_sem4_lab4/table/publisher">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/BinaryStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/HandlerFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/learn/javaFx/_18_Controller/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab1/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab3/part1/library/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1335">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/learn/Collections/Test1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1110">
+          <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2368#2369#0" expanded="true" />
+            <element signature="e#2461#2462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2680#2681#0" expanded="true" />
+            <element signature="e#2772#2773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2368#2369#0" expanded="true" />
+            <element signature="e#2461#2462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/BookFilters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/models/storage/TextStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/learn/DB/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+        <state relative-caret-position="307">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1108,29 +1319,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaProjects.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3_4/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="173" lean-forward="true" selection-start-line="173" selection-end-line="173" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/ELib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/Book.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_3/App.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
@@ -1142,7 +1330,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4229885" />
               </list>
             </option>
           </splitter-proportions>
@@ -1154,7 +1342,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4229885" />
               </list>
             </option>
           </splitter-proportions>
@@ -1165,7 +1353,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4229885" />
               </list>
             </option>
           </splitter-proportions>
@@ -1177,7 +1365,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4229885" />
               </list>
             </option>
           </splitter-proportions>
@@ -1189,7 +1377,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4229885" />
               </list>
             </option>
           </splitter-proportions>
@@ -1201,7 +1389,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.4229885" />
               </list>
             </option>
           </splitter-proportions>

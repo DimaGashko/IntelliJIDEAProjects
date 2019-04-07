@@ -43,6 +43,6 @@ public class Main {
     void connect() throws SQLException {
         connection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3306/test_db",
-                "db_user", "qqqqqqqqww");
+                "db_user", "*******");
     }
 }

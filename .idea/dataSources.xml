@@ -15,12 +15,12 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="books_java_semester4_lab3@localhost" uuid="e80342ef-c6b1-4c0f-a349-f88d111028a1">
-      <driver-ref>mysql</driver-ref>
+    <data-source source="LOCAL" name="java_sem4_lab3@localhost" uuid="e80342ef-c6b1-4c0f-a349-f88d111028a1">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <remarks>Semester4LabWork3</remarks>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/books_java_semester4_lab3</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/java_sem4_lab3</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
@@ -30,12 +30,12 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="books_java_sem4_lab4@localhost" uuid="afca583c-6a7e-4ef3-95bf-b9050645ac19">
-      <driver-ref>mysql</driver-ref>
+    <data-source source="LOCAL" name="java_sem4_lab4@localhost" uuid="afca583c-6a7e-4ef3-95bf-b9050645ac19">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <remarks>Semester4LabWork4</remarks>
-      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/books_java_sem4_lab4</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/java_sem4_lab4</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

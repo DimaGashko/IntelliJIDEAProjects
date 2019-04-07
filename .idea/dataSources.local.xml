@@ -21,8 +21,8 @@
       <user-name>db_user</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="books_java_sem4_lab4@localhost" uuid="afca583c-6a7e-4ef3-95bf-b9050645ac19">
-      <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="8.0.15" exact-driver-version="5.1">
+    <data-source name="java_sem4_lab4@localhost" uuid="afca583c-6a7e-4ef3-95bf-b9050645ac19">
+      <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="8.0.15">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>

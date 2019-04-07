@@ -1,7 +1,5 @@
 package com.labs.lab3.part1.library;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Arrays;

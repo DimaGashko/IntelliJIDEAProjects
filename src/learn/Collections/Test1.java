@@ -1,7 +1,6 @@
 package learn.Collections;
 
 import javafx.beans.property.StringProperty;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
 
@@ -47,7 +46,7 @@ class User implements Comparable<User> {
     }
 
     @Override
-    public int compareTo(@NotNull User o) {
+    public int compareTo(User o) {
         return this.age - o.age;
     }
 }
