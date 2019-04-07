@@ -11,22 +11,22 @@
       <user-name>db_user</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
-    <data-source name="books_java_semester4_lab3@localhost" uuid="e80342ef-c6b1-4c0f-a349-f88d111028a1">
-      <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="8.0.15" exact-driver-version="5.1">
+    <data-source name="java_sem4_lab3@localhost" uuid="e80342ef-c6b1-4c0f-a349-f88d111028a1">
+      <database-info product="MySQL" version="5.7.25-0ubuntu0.18.10.2" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="5.7.25" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>db_user</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
     <data-source name="java_sem4_lab4@localhost" uuid="afca583c-6a7e-4ef3-95bf-b9050645ac19">
-      <database-info product="MySQL" version="8.0.15" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="8.0.15">
+      <database-info product="MySQL" version="5.7.25-0ubuntu0.18.10.2" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="5.7.25" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>db_user</user-name>
       <introspection-schemas>*:@</introspection-schemas>

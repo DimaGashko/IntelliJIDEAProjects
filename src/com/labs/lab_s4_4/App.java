@@ -254,7 +254,7 @@ public class App {
     private void connect() {
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/books_java_sem4_lab4",
+                    "jdbc:mysql://localhost:3306/java_sem4_lab4",
                     "db_user", "qqqqqqqqww"
             );
 
