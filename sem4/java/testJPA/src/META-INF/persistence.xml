@@ -8,7 +8,7 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <exclude-unlisted-classes>false</exclude-unlisted-classes>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test_jpa?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC&amp;useSSL=false"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test_jpa?serverTimezone=UTC&amp;useSSL=false"/>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="javax.persistence.jdbc.user" value="db_user"/>
             <property name="javax.persistence.jdbc.password" value="qqqqqqqqww"/>
