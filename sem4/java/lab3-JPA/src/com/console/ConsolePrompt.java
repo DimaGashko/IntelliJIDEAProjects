@@ -93,7 +93,7 @@ public class ConsolePrompt {
      */
     static public LocalDate promptDate(String title) {
         System.out.println(title);
-        System.out.println("yyyy-dd-mm");
+        System.out.println("yyyy-mm-dd");
         String strDate = scanner.nextLine();
 
         while (strDate.isEmpty()) {

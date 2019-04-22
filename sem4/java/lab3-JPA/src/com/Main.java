@@ -16,32 +16,15 @@ import static com.console.ConsoleElements.hr;
 import static com.console.ConsolePrompt.*;
 
 public class Main {
+    private BookDao bookDao;
 
-    public static void main(String[] args) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
-        EntityManager em = factory.createEntityManager();
-
-        BookDao bookDao = new BookDao(em);
-
-        var books = bookDao.findAll();
-        books.forEach(System.out::println);
-
-        System.out.println("Hello");
-    }
-
-}
-
-class App {
-
-    BookDao bookDao;
-
-    Connection connection;
+    private Connection connection;
 
     private int limitToShow = 15;
 
     public static void main(String[] args) {
-        App app = new App();
-        app.run();
+        Main main = new Main();
+        main.run();
     }
 
     private void run() {
@@ -93,21 +76,8 @@ class App {
 
     private void cliAddBook() {
         Book book = createNewBook();
-
-        try (var preparedSt = connection.prepareStatement("INSERT INTO book VALUES(NULL,?,?,?,?,?,?)")) {
-            preparedSt.setString(1, book.getName());
-            preparedSt.setString(2, book.getAuthor());
-            preparedSt.setString(3, book.getPublisher());
-            preparedSt.setDate(4, Date.valueOf(book.getPublishDate()));
-            preparedSt.setInt(5, book.getPages());
-            preparedSt.setDouble(6, book.getPrice());
-
-            preparedSt.executeUpdate();
-            System.out.println("Success!");
-        } catch (SQLException e) {
-            System.out.println("Can't add the book!");
-            e.printStackTrace();
-        }
+        bookDao.add(book);
+        System.out.println("Done!");
     }
 
     private void cliRemoveBook() {
