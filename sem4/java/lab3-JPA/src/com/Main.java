@@ -6,19 +6,15 @@ import schemas.Book;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.sql.*;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
+import java.sql.*;
 
 import static com.console.ConsoleElements.hr;
 import static com.console.ConsolePrompt.*;
 
 public class Main {
     private BookDao bookDao;
-
-    private Connection connection;
 
     private int limitToShow = 15;
 
@@ -94,7 +90,7 @@ public class Main {
     private void cliShowBooksByFilter() {
         printFiltersHelp();
         String filter = promptLine("Select Filter:");
-
+/*
         try {
 
             if (filter.equalsIgnoreCase("a")) {
@@ -183,7 +179,7 @@ public class Main {
                     System.out.println(" - " + publisher);
                     printBooks(publishersBook);
                 });
-*/
+
             } else {
                 System.out.println("Can't find the filter");
 
@@ -192,7 +188,7 @@ public class Main {
         } catch (SQLException e) {
             System.out.println("Filter error");
             e.printStackTrace();
-        }
+        }*/
     }
 
     private void cliSetLimit() {
