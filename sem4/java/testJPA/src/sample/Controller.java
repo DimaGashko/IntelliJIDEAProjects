@@ -31,6 +31,7 @@ public class Controller {
     public void initialize() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
+
         studentDAO = new StudentDAO(em);
         subjDAO = new SubjDAO(em);
 
