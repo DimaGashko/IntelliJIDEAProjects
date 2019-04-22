@@ -87,16 +87,8 @@ public class Main {
     }
 
     private void cliShowAllBooks() {
-        try (var preparedSt = connection.prepareStatement("SELECT * FROM book LIMIT ?")) {
-            preparedSt.setInt(1, limitToShow);
-
-            var rs = preparedSt.executeQuery();
-            //var books = createBooksFromRs(rs);
-            //printBooks(books);
-        } catch (SQLException e) {
-            System.out.println("Can't load books");
-            e.printStackTrace();
-        }
+        var books = bookDao.findAll(limitToShow);
+        printBooks(books);
     }
 
     private void cliShowBooksByFilter() {

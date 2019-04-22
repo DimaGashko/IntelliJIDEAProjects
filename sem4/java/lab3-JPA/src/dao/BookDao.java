@@ -12,8 +12,9 @@ public class BookDao {
         this.em = em;
     }
 
-    public List<Book> findAll() {
+    public List<Book> findAll(int limit) {
         return em.createQuery("select b from Book b", Book.class)
+                .setMaxResults(limit)
                 .getResultList();
     }
 
