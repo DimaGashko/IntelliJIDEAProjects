@@ -1,4 +1,4 @@
-package com.schemas;
+package schemas;
 
 import javax.persistence.*;
 import java.time.LocalDate;
