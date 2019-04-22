@@ -23,11 +23,15 @@ public class BookDao {
         em.getTransaction().commit();
     }
 
-    public void delete(Book book) {
+    public void delete(int id) {
         em.getTransaction().begin();
-        var toDelete = em.find(Book.class, book.getId());
+        var toDelete = em.find(Book.class, id);
         em.remove(toDelete);
         em.getTransaction().commit();
+    }
+
+    public void delete(Book book) {
+        delete(book.getId());
     }
 
 }

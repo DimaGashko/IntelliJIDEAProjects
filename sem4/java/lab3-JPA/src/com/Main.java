@@ -82,17 +82,8 @@ public class Main {
 
     private void cliRemoveBook() {
         int bookId = promptInt("Enter the book id");
-
-        try (var preparedSt = connection.prepareStatement("DELETE FROM book WHERE id = ?")) {
-            preparedSt.setInt(1, bookId);
-
-            preparedSt.executeUpdate();
-            System.out.println("Success");
-        } catch (SQLException e) {
-            System.out.println("Can't remove the book");
-            e.printStackTrace();
-        }
-
+        bookDao.delete(bookId);
+        System.out.println("Done!");
     }
 
     private void cliShowAllBooks() {
