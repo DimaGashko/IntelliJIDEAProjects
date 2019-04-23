@@ -96,40 +96,19 @@ public class Main {
             var books = bookDao.findAllByAuthor(author, limitToShow);
             printBooks(books);
 
-        } else if (1 == 5) {
+        } else if (filter.equals("b")) {
+            String publisher = promptLine("Publisher:");
+            var books = bookDao.findAllByPublisher(publisher, limitToShow);
+            printBooks(books);
+
+        } else if (filter.equals("c")) {
 
         }
 
 /*
         try {
 
-            if (filter.equalsIgnoreCase("a")) {
-
-
-                var prepareSt = connection.prepareStatement(
-                        "SELECT * FROM book WHERE author LIKE ?" +
-                                "ORDER BY publish_date LIMIT ?"
-                );
-
-                prepareSt.setString(1, "%" + author + "%");
-                prepareSt.setInt(2, limitToShow);
-
-                var rs = prepareSt.executeQuery();
-                //printBooks(rs);
-
-            } else if (filter.equalsIgnoreCase("b")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT * FROM book WHERE publisher LIKE ? LIMIT ?"
-                );
-
-                String publisher = promptLine("Publisher:");
-                prepareSt.setString(1, "%" + publisher + "%");
-                prepareSt.setInt(2, limitToShow);
-
-                var rs = prepareSt.executeQuery();
-                //printBooks(rs);
-
-            } else if (filter.equalsIgnoreCase("c")) {
+            else if (filter.equalsIgnoreCase("c")) {
                 var prepareSt = connection.prepareStatement(
                         "SELECT * FROM book WHERE publish_date > ? LIMIT ?"
                 );
