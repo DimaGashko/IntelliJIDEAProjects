@@ -89,12 +89,22 @@ public class Main {
 
     private void cliShowBooksByFilter() {
         printFiltersHelp();
-        String filter = promptLine("Select Filter:");
+        String filter = promptLine("Select Filter:").toLowerCase();
+
+        if (filter.equals("a")) {
+            String author = promptLine("Author:");
+            var books = bookDao.findAllByAuthor(author, limitToShow);
+            printBooks(books);
+
+        } else if (1 == 5) {
+
+        }
+
 /*
         try {
 
             if (filter.equalsIgnoreCase("a")) {
-                String author = promptLine("Author:");
+
 
                 var prepareSt = connection.prepareStatement(
                         "SELECT * FROM book WHERE author LIKE ?" +

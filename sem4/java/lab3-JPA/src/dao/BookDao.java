@@ -18,6 +18,15 @@ public class BookDao {
                 .getResultList();
     }
 
+    public List<Book> findAllByAuthor(String author, int limit) {
+        var query = em.createQuery("select b from Book b where b.author like :author order by b.publishDate", Book.class);
+        query.setParameter("author", "%" + author + "%");
+
+        return query
+                .setMaxResults(limit)
+                .getResultList();
+    }
+
     public void add(Book book) {
         em.getTransaction().begin();
         em.persist(book);
