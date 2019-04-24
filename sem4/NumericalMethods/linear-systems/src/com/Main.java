@@ -8,7 +8,9 @@ public class Main {
     }
 
     private void run() {
-        System.out.println("Hello");
+        Matrix matrix = new Matrix(2, 2);
+
+
     }
 
 }
