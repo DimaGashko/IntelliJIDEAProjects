@@ -12,10 +12,11 @@ import static com.helpers.console.ConsolePrompt.promptInt;
 public class App {
     private Connection connection;
 
-    private static final String sqlSelectAll = "SELECT book.id, book.name, author.name AS author, \n" +
-            "    publisher.name AS publisher, book.publish_date, book.pages, book.price\n" +
-            "FROM book \n" +
-            "LEFT JOIN author ON book.author_id = author.id\n" +
+    private static final String sqlSelectAll = "SELECT book.id, book.name, author.name as author,\n" +
+            "    publisher.name AS publisher, book.publis_date, book.pages, book.price\n" +
+            "FROM book\n" +
+            "LEFT JOIN book_author ON book.id = book_author.book_id\n" +
+            "LEFT JOIN author ON author.id = book_author.author_id\n" +
             "LEFT JOIN publisher ON book.publisher_id = publisher.id\n ";
 
     private int limitToShow = 15;
@@ -139,7 +140,8 @@ public class App {
             } else if (filter.equalsIgnoreCase("d")) {
                 var prepareSt = connection.prepareStatement(
                         "SELECT DISTINCT author.name AS author FROM book\n" +
-                                "INNER JOIN author ON book.author_id = author.id\n" +
+                                "LEFT JOIN book_author ON book.id = book_author.book_id\n" +
+                                "LEFT JOIN author ON author.id = book_author.author_id\n" +
                                 "ORDER BY author.name LIMIT ?"
                 );
 
@@ -254,7 +256,7 @@ public class App {
     private void connect() {
         try {
             connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/java_sem4_lab4",
+                    "jdbc:mysql://localhost:3306/java_sem4_lab4?serverTimezone=UTC",
                     "db_user", "qqqqqqqqww"
             );
 

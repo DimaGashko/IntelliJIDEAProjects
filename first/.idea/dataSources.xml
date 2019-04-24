@@ -35,7 +35,7 @@
       <synchronize>true</synchronize>
       <remarks>Semester4LabWork4</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/java_sem4_lab4</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/java_sem4_lab4?serverTimezone=UTC</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
