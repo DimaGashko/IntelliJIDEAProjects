@@ -105,6 +105,10 @@ public class Main {
             LocalDate date = promptDate("Publish Date:");
             var books = bookDao.findAllByDate(date, limitToShow);
             printBooks(books);
+
+        } else if (filter.equals("d")) {
+             var authors = bookDao.findAllAuthors(limitToShow);
+             authors.forEach(System.out::println);
         }
 
 /*

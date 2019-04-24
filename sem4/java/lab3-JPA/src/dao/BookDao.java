@@ -64,6 +64,12 @@ public class BookDao {
                 .getResultList();
     }
 
+    public List<String> findAllAuthors(int limit) {
+        return em.createQuery("select distinct b.author from Book b order by b.author", String.class)
+                .setMaxResults(limit)
+                .getResultList();
+    }
+
     public void delete(Book book) {
         delete(book.getId());
     }
