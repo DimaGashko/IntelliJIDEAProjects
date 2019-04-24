@@ -2,14 +2,9 @@ package dao;
 
 import schemas.Book;
 
-import javax.persistence.AttributeConverter;
-import javax.persistence.Converter;
 import javax.persistence.EntityManager;
 import java.time.LocalDate;
 import java.util.List;
-
-import java.sql.Date;
-import java.time.LocalDate;
 
 public class BookDao {
     private EntityManager em;

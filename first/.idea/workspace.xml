@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem4/java/lab3-JPA/.idea/libraries/JPA_2_0_2_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../sem4/java/lab3-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/java/lab3-JPA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem4/java/lab3-JPA/lab3-JPA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/java/lab3-JPA/lab3-JPA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem4/java/lab3-JPA/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/java/lab3-JPA/src/com/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sem4/java/lab3-JPA/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/java/lab3-JPA/src/dao/BookDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sem4/java/testJPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/java/testJPA/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -667,7 +663,7 @@
       <workItem from="1554651726163" duration="2320000" />
       <workItem from="1554659131996" duration="87000" />
       <workItem from="1554661687664" duration="640000" />
-      <workItem from="1555967314217" duration="6784000" />
+      <workItem from="1555967314217" duration="7152000" />
     </task>
     <servers />
   </component>
@@ -704,7 +700,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="557079000" />
+    <option name="totallyTimeSpent" value="557447000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -728,7 +724,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" visible="true" weight="0.0732899" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.0732899" />
       <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.33387622" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />

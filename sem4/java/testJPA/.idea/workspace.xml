@@ -3,12 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a553d383-ed08-46bc-9fb1-b75bd6666a17" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3-JPA/.idea/libraries/JPA_2_0_2_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3-JPA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3-JPA/lab3-JPA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3-JPA/lab3-JPA.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab3-JPA/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3-JPA/src/com/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab3-JPA/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3-JPA/src/dao/BookDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,7 +106,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/dao/StudentDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="247">
               <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -209,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="741" />
@@ -357,15 +353,15 @@
       <workItem from="1555926308770" duration="3178000" />
       <workItem from="1555966077640" duration="1183000" />
       <workItem from="1555967738445" duration="128000" />
-      <workItem from="1555967886706" duration="7774000" />
+      <workItem from="1555967886706" duration="8373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19700000" />
+    <option name="totallyTimeSpent" value="20299000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="1" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.56514657" visible="true" weight="0.275" />
@@ -378,7 +374,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30456027" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.30456027" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -595,7 +591,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/StudentDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="247">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />

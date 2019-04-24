@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../NumericalMethods/linear-systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NumericalMethods/linear-systems/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6b7b150e-e4ab-449f-a2cf-dc8e3971aac0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/BookDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/BookDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../testJPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testJPA/.idea/workspace.xml" afterDir="false" />
@@ -52,16 +55,15 @@
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="115" column="12" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
+            <state relative-caret-position="270">
+              <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -69,20 +71,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dao/BookDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="72" column="41" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="41" />
+            <state relative-caret-position="240">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#152#153#0" expanded="true" />
-                <element signature="e#180#181#0" expanded="true" />
-                <element signature="e#0#20#1" expanded="true" />
-                <element signature="e#0#71#1" expanded="true" />
-                <element signature="e#0#54#1" expanded="true" />
-                <element signature="e#0#51#1" expanded="true" />
-                <element signature="e#0#48#1" expanded="true" />
-                <element signature="e#0#54#1" expanded="true" />
-                <element signature="e#0#60#1" expanded="true" />
-                <element signature="e#2426#2427#0" expanded="true" />
+                <element signature="e#2258#2259#0" expanded="true" />
+                <element signature="e#2294#2295#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -91,8 +85,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="240">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -127,12 +121,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/schemas/Book.java" />
-        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/dao/StudentDao.java" />
         <option value="$PROJECT_DIR$/src/com/console/ConsolePrompt.java" />
         <option value="$PROJECT_DIR$/src/com/LocalDateAttributeConverter.java" />
         <option value="$PROJECT_DIR$/src/schemas/Book.java" />
         <option value="$PROJECT_DIR$/src/dao/BookDao.java" />
+        <option value="$PROJECT_DIR$/src/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/com/Main.java" />
       </list>
     </option>
@@ -150,6 +144,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -173,13 +168,6 @@
               <item name="lab3-JPA" type="b2602c69:ProjectViewProjectNode" />
               <item name="lab3-JPA" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="console" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3-JPA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3-JPA" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -198,7 +186,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,10 +197,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4229885" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -265,12 +252,14 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555967259581</updated>
-      <workItem from="1555967264808" duration="16166000" />
+      <workItem from="1555967264808" duration="16714000" />
+      <workItem from="1556085541462" duration="712000" />
+      <workItem from="1556097177437" duration="1904000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16166000" />
+    <option name="totallyTimeSpent" value="19330000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -291,12 +280,12 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Persistence" order="5" sideWeight="0.50325733" side_tool="true" weight="0.18712121" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49674267" visible="true" weight="0.18712121" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49674267" visible="true" weight="0.19318181" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.78664494" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.28338763" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007657" side_tool="true" weight="0.4819079" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.09283388" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4992343" weight="0.19572368" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32899022" />
@@ -309,7 +298,7 @@
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Maven" order="1" />
-      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.15681818" />
+      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.18484849" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
@@ -323,26 +312,26 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info id="Persistence" order="5" sideWeight="0.5048544" side_tool="true" weight="0.20681818" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49514562" weight="0.20681818" />
+      <window_info id="Persistence" order="5" sideWeight="0.50325733" side_tool="true" weight="0.18712121" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" sideWeight="0.49674267" visible="true" weight="0.1898928" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" />
-      <window_info anchor="bottom" id="Java Enterprise" order="3" />
-      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32899022" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007657" side_tool="true" weight="0.4819079" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.78664494" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4992343" visible="true" weight="0.19572368" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="6" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" />
-      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.32899022" />
-      <window_info anchor="bottom" id="Debug" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.32899022" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32899022" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Maven" order="1" />
-      <window_info active="true" anchor="right" id="Database" order="2" visible="true" weight="0.20757575" />
+      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.15620214" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
@@ -355,9 +344,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6b7b150e-e4ab-449f-a2cf-dc8e3971aac0/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6b7b150e-e4ab-449f-a2cf-dc8e3971aac0/console.sql" />
     <entry file="jar://$PROJECT_DIR$/lib/javax.persistence.jar!/javax/persistence/GenerationType.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -372,16 +359,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/jakarta.persistence/2.2.2/jakarta.persistence-2.2.2.jar!/javax/persistence/EntityManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3acb7c7-76ce-4d28-94bd-bf7e9ae281fd/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/eclipse/persistence/jakarta.persistence/2.2.2/jakarta.persistence-2.2.2.jar!/javax/persistence/EntityManager.class" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b3acb7c7-76ce-4d28-94bd-bf7e9ae281fd/console.sql" />
     <entry file="uml://Persistence/JavaeeElement:/827662f9/MyPU/lab3-JPA/jpa/JPA/PersistenceModel">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -392,23 +371,18 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="233.5" y="97.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="234.0" y="97.0" />
           <SelectedNodes />
           <Categories>
             <Category>Properties</Category>
             <Category>Embeddables</Category>
             <Category>Superclasses</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/lib.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/lib.java" />
     <entry file="file://$PROJECT_DIR$/src/com/console/ConsoleElements.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -423,24 +397,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+    <entry file="file://$PROJECT_DIR$/src/com/LocalDateAttributeConverter.java" />
+    <entry file="file://$PROJECT_DIR$/src/dao/BookDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="240">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2258#2259#0" expanded="true" />
+            <element signature="e#2294#2295#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/LocalDateAttributeConverter.java">
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -456,30 +429,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/BookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="72" column="41" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#152#153#0" expanded="true" />
-            <element signature="e#180#181#0" expanded="true" />
-            <element signature="e#0#20#1" expanded="true" />
-            <element signature="e#0#71#1" expanded="true" />
-            <element signature="e#0#54#1" expanded="true" />
-            <element signature="e#0#51#1" expanded="true" />
-            <element signature="e#0#48#1" expanded="true" />
-            <element signature="e#0#54#1" expanded="true" />
-            <element signature="e#0#60#1" expanded="true" />
-            <element signature="e#2426#2427#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="115" column="12" selection-start-line="115" selection-start-column="12" selection-end-line="115" selection-end-column="12" />
+        <state relative-caret-position="270">
+          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -547,7 +500,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>JPA 2.2-2.2</last-edited>
+          <last-edited>org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
