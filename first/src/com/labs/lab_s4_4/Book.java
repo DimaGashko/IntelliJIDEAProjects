@@ -2,13 +2,16 @@ package com.labs.lab_s4_4;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Book implements Comparable<Book>, Serializable {
     private int id;
     private String name;
-    private String author;
+    private ArrayList<String> authors = new ArrayList<>();
     private String publisher;
     private LocalDate publishDate;
     private int pages;
@@ -17,7 +20,7 @@ public class Book implements Comparable<Book>, Serializable {
     public Book(int id, String name, String author, String publisher, LocalDate publishDate, int pages, double price) {
         setId(id);
         setName(name);
-        setAuthor(author);
+        addAuthor(author);
         setPublisher(publisher);
         setPublishDate(publishDate);
         setPages(pages);
@@ -28,11 +31,15 @@ public class Book implements Comparable<Book>, Serializable {
     public String toString() {
         return "id=" + id +
                 ", name='" + name + '\'' +
-                ", author='" + author + '\'' +
+                ", authors='" + authorsToString() + '\'' +
                 ", publisher='" + publisher + '\'' +
                 ", publishDate=" + publishDate +
              ", pages=" + pages +
                 ", price=" + price;
+    }
+
+    private String authorsToString() {
+       return String.join(", ", authors);
     }
 
     @Override
@@ -64,12 +71,12 @@ public class Book implements Comparable<Book>, Serializable {
         this.name = name;
     }
 
-    public String getAuthor() {
-        return author;
+    public List<String> getAuthors() {
+        return authors;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void addAuthor(String author) {
+        this.authors.add(author);
     }
 
     public String getPublisher() {

@@ -217,22 +217,28 @@ public class App {
     }
 
     private ArrayList<Book> createBooksFromRs(ResultSet rs) throws SQLException {
-        ArrayList<Book> books = new ArrayList<>();
+        HashMap<Integer, Book> booksMap = new HashMap<>();
 
         while (rs.next()) {
             int id = rs.getInt("id");
-            String name = rs.getString("name");
             String author = rs.getString("author");
+
+            if (booksMap.containsKey(id)) {
+                booksMap.get(id).addAuthor(author);
+                continue;
+            }
+
+            String name = rs.getString("name");
             String publisher = rs.getString("publisher");
             LocalDate publishDate = rs.getDate("publis_date").toLocalDate();
             int pages = rs.getInt("pages");
             double price = rs.getDouble("price");
 
             Book book = new Book(id, name, author, publisher, publishDate, pages, price);
-            books.add(book);
+            booksMap.put(book.getId(), book);
         }
 
-        return books;
+        return new ArrayList<>(booksMap.values());
     }
 
     private void printBooks(Collection<Book> books) {
