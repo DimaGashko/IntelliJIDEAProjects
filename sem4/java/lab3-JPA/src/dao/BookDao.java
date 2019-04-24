@@ -2,8 +2,14 @@ package dao;
 
 import schemas.Book;
 
+import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
 import javax.persistence.EntityManager;
+import java.time.LocalDate;
 import java.util.List;
+
+import java.sql.Date;
+import java.time.LocalDate;
 
 public class BookDao {
     private EntityManager em;
@@ -49,8 +55,18 @@ public class BookDao {
                 .getResultList();
     }
 
+    public List<Book> findAllByDate(LocalDate date, int limit) {
+        var query = em.createQuery("select b from Book b where b.publishDate > :date", Book.class);
+        query.setParameter("date", date);
+
+        return query
+                .setMaxResults(limit)
+                .getResultList();
+    }
+
     public void delete(Book book) {
         delete(book.getId());
     }
 
 }
+

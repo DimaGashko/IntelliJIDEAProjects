@@ -102,25 +102,14 @@ public class Main {
             printBooks(books);
 
         } else if (filter.equals("c")) {
-
+            LocalDate date = promptDate("Publish Date:");
+            var books = bookDao.findAllByDate(date, limitToShow);
+            printBooks(books);
         }
 
 /*
         try {
-
-            else if (filter.equalsIgnoreCase("c")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT * FROM book WHERE publish_date > ? LIMIT ?"
-                );
-
-                LocalDate date = promptDate("Publish Date:");
-                prepareSt.setString(1, date.toString());
-                prepareSt.setInt(2, limitToShow);
-
-                var rs = prepareSt.executeQuery();
-                //printBooks(rs);
-
-            } else if (filter.equalsIgnoreCase("d")) {
+                else if (filter.equalsIgnoreCase("d")) {
                 var prepareSt = connection.prepareStatement(
                         "SELECT DISTINCT author FROM book ORDER BY author LIMIT ?"
                 );
