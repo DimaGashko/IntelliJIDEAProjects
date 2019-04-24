@@ -1,5 +1,7 @@
 package com;
 
+import static com.console.ConsolePrompt.promptInt;
+
 public class Matrix {
 
     private int n;
@@ -28,6 +30,10 @@ public class Matrix {
         matrix[i][j] = val;
     }
 
+    public int[][] getInternal() {
+        return matrix;
+    }
+
     private void init() {
         matrix = new int[n][m];
     }
@@ -46,5 +52,15 @@ public class Matrix {
 
     private void setM(int m) {
         this.m = m;
+    }
+
+    public static void enterMatrix(Matrix matrix) {
+        for (int i = 0; i < matrix.getM(); i++) {
+            for (int j = 0; j < matrix.getN(); j++) {
+                int next = promptInt(String.format("[%d][%d]", i, j));
+                matrix.set(i, j, next);
+            }
+        }
+
     }
 }
