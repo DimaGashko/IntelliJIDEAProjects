@@ -109,43 +109,15 @@ public class Main {
         } else if (filter.equals("d")) {
              var authors = bookDao.findAllAuthors(limitToShow);
              authors.forEach(System.out::println);
+
+        }  else if (filter.equals("e")) {
+            var publisher = bookDao.findAllPublishers(limitToShow);
+            publisher.forEach(System.out::println);
+
         }
 
 /*
-        try {
-                else if (filter.equalsIgnoreCase("d")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT DISTINCT author FROM book ORDER BY author LIMIT ?"
-                );
-
-                prepareSt.setInt(1, limitToShow);
-                var rs = prepareSt.executeQuery();
-
-                List<String> authors = new ArrayList<>();
-
-                while (rs.next()) {
-                    authors.add(rs.getString("author"));
-                }
-
-                authors.forEach(System.out::println);
-
-            } else if (filter.equalsIgnoreCase("e")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT DISTINCT publisher FROM book LIMIT ?"
-                );
-
-                prepareSt.setInt(1, limitToShow);
-                var rs = prepareSt.executeQuery();
-
-                List<String> publishers = new ArrayList<>();
-
-                while (rs.next()) {
-                    publishers.add(rs.getString("publisher"));
-                }
-
-                publishers.forEach(System.out::println);
-
-            } else if (filter.equalsIgnoreCase("f")) {
+     else if (filter.equalsIgnoreCase("f")) {
                 var prepareSt = connection.prepareStatement(
                         "SELECT * FROM book LIMIT  ?"
                 );

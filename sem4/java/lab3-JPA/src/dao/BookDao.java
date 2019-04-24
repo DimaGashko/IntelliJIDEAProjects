@@ -70,6 +70,12 @@ public class BookDao {
                 .getResultList();
     }
 
+    public List<String> findAllPublishers(int limit) {
+        return em.createQuery("select distinct b.publisher from Book b", String.class)
+                .setMaxResults(limit)
+                .getResultList();
+    }
+
     public void delete(Book book) {
         delete(book.getId());
     }
