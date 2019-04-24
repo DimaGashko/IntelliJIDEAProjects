@@ -108,7 +108,7 @@ public class App {
                 String author = promptLine("Author:");
 
                 var prepareSt = connection.prepareStatement(
-                        sqlSelectAll + "WHERE author.name LIKE ? ORDER BY book.publish_date LIMIT ?"
+                        sqlSelectAll + "WHERE author.name LIKE ? ORDER BY book.publis_date LIMIT ?"
                 );
 
                 prepareSt.setString(1, "%" + author + "%");
@@ -128,7 +128,7 @@ public class App {
                 printBooks(rs);
 
             } else if (filter.equalsIgnoreCase("c")) {
-                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publish_date > ? LIMIT ?");
+                var prepareSt = connection.prepareStatement(sqlSelectAll + "WHERE publis_date > ? LIMIT ?");
 
                 LocalDate date = promptDate("Publish Date:");
                 prepareSt.setString(1, date.toString());
@@ -224,7 +224,7 @@ public class App {
             String name = rs.getString("name");
             String author = rs.getString("author");
             String publisher = rs.getString("publisher");
-            LocalDate publishDate = rs.getDate("publish_date").toLocalDate();
+            LocalDate publishDate = rs.getDate("publis_date").toLocalDate();
             int pages = rs.getInt("pages");
             double price = rs.getDouble("price");
 
