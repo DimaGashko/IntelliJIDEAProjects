@@ -1,13 +1,13 @@
-package com;
+package com.console.Matrix;
 
 import static com.console.ConsolePrompt.promptInt;
 
 public class Matrix {
 
-    private int n;
-    private int m;
+    protected int n;
+    protected int m;
 
-    private int[][] matrix;
+    protected int[][] matrix;
 
     public Matrix(int n, int m) {
         setN(n);
@@ -16,7 +16,7 @@ public class Matrix {
         init();
     }
 
-    private int get(int i, int j) {
+    public int get(int i, int j) {
         if (i >= n || i < 0) return 0;
         if (j >= m || j < 0) return 0;
 
@@ -54,11 +54,11 @@ public class Matrix {
         this.m = m;
     }
 
-    public static void enterMatrix(Matrix matrix) {
-        for (int i = 0; i < matrix.getM(); i++) {
-            for (int j = 0; j < matrix.getN(); j++) {
+    public void enter() {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
                 int next = promptInt(String.format("[%d][%d]", i, j));
-                matrix.set(i, j, next);
+                set(i, j, next);
             }
         }
 
