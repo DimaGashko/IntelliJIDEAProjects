@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 import java.time.LocalDate;
 import java.util.*;
 import java.sql.*;
+import java.util.stream.Collectors;
 
 import static com.console.ConsoleElements.hr;
 import static com.console.ConsolePrompt.*;
@@ -91,41 +92,42 @@ public class Main {
         printFiltersHelp();
         String filter = promptLine("Select Filter:").toLowerCase();
 
-        if (filter.equals("a")) {
-            String author = promptLine("Author:");
-            var books = bookDao.findAllByAuthor(author, limitToShow);
-            printBooks(books);
+        switch (filter) {
+            case "a": {
+                String author = promptLine("Author:");
+                var books = bookDao.findAllByAuthor(author, limitToShow);
+                printBooks(books);
 
-        } else if (filter.equals("b")) {
-            String publisher = promptLine("Publisher:");
-            var books = bookDao.findAllByPublisher(publisher, limitToShow);
-            printBooks(books);
+                break;
+            }
+            case "b": {
+                String publisher = promptLine("Publisher:");
+                var books = bookDao.findAllByPublisher(publisher, limitToShow);
+                printBooks(books);
 
-        } else if (filter.equals("c")) {
-            LocalDate date = promptDate("Publish Date:");
-            var books = bookDao.findAllByDate(date, limitToShow);
-            printBooks(books);
+                break;
+            }
+            case "c": {
+                LocalDate date = promptDate("Publish Date:");
+                var books = bookDao.findAllByDate(date, limitToShow);
+                printBooks(books);
 
-        } else if (filter.equals("d")) {
-             var authors = bookDao.findAllAuthors(limitToShow);
-             authors.forEach(System.out::println);
+                break;
+            }
+            case "d":
+                var authors = bookDao.findAllAuthors(limitToShow);
+                authors.forEach(System.out::println);
 
-        }  else if (filter.equals("e")) {
-            var publisher = bookDao.findAllPublishers(limitToShow);
-            publisher.forEach(System.out::println);
+                break;
+            case "e": {
+                var publisher = bookDao.findAllPublishers(limitToShow);
+                publisher.forEach(System.out::println);
 
-        }
+                break;
+            }
+            case "f": {
+                var books = bookDao.findAll(limitToShow);
 
-/*
-     else if (filter.equalsIgnoreCase("f")) {
-                var prepareSt = connection.prepareStatement(
-                        "SELECT * FROM book LIMIT  ?"
-                );
-
-                prepareSt.setInt(1, limitToShow);
-                var rs = prepareSt.executeQuery();
-
-                /*var books = createBooksFromRs(rs);
                 Map<String, HashSet<Book>> map = books.stream()
                         .collect(Collectors.groupingBy(Book::getPublisher, Collectors.toCollection(HashSet::new)));
 
@@ -134,15 +136,14 @@ public class Main {
                     printBooks(publishersBook);
                 });
 
-            } else {
+                break;
+            }
+            default:
                 System.out.println("Can't find the filter");
 
-            }
+                break;
+        }
 
-        } catch (SQLException e) {
-            System.out.println("Filter error");
-            e.printStackTrace();
-        }*/
     }
 
     private void cliSetLimit() {
