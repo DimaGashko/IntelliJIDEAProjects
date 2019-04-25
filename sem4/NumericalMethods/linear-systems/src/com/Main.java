@@ -3,12 +3,14 @@ package com;
 import com.Matrix.Matrix;
 import com.Matrix.Vector;
 import com.linearSystem.GaussMethodCommand;
+import com.linearSystem.GetResidualCommand;
 
 import static com.console.ConsolePrompt.promptInt;
 
 public class Main {
 
     private GaussMethodCommand GaussMethod = new GaussMethodCommand();
+    private GetResidualCommand getResidualCommand = new GetResidualCommand();
 
     private Matrix A;
     private Vector B;
@@ -26,13 +28,17 @@ public class Main {
 
     private void runCalc() {
        runGauss();
+
     }
 
     private void runGauss() {
-        Vector x = GaussMethod.execute(new Matrix(A), new Vector(B));
+        Vector X = GaussMethod.execute(new Matrix(A), new Vector(B));
+        var residual = getResidualCommand.execute(A, X, B);
 
         System.out.println("Gauss Elimination Method: ");
-        System.out.println(x);
+        System.out.println(X);
+        System.out.println("Residual:");
+        System.out.println(residual);
     }
 
     protected void init() {

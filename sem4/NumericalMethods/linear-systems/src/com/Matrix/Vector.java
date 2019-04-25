@@ -32,6 +32,10 @@ public class Vector extends Matrix {
         super.set(i, 0, val);
     }
 
+    public int getSize() {
+        return size;
+    }
+
     @Override
     public void enter() {
         for (int i = 0; i < size; i++) {

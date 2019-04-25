@@ -1,7 +1,6 @@
 package com.Matrix;
 
 import static com.console.ConsolePrompt.promptDouble;
-import static com.console.ConsolePrompt.promptInt;
 
 public class Matrix {
 
@@ -104,8 +103,20 @@ public class Matrix {
         return res.toString();
     }
 
-    static public Matrix multiple() {
-        return null;
+    static public Vector mulMatToVec(Matrix mat, Vector vec) {
+        Vector res = new Vector(vec.getN());
+
+        for (int i = 0; i < vec.getSize(); i++) {
+            double iRes = 0;
+
+            for (int j = 0; j < mat.getM(); j++) {
+                iRes += vec.get(j) * mat.get(i, j);
+            }
+
+            res.set(i, iRes);
+        }
+
+        return res;
     }
 
 }
