@@ -47,6 +47,12 @@ public class Matrix {
         matrix[i][j] = val;
     }
 
+    public void swapLines(int lineA, int lineB) {
+        var _aLine = matrix[lineA];
+        matrix[lineA] = matrix[lineB];
+        matrix[lineB] = _aLine;
+    }
+
     public int[][] getInternal() {
         return matrix;
     }
