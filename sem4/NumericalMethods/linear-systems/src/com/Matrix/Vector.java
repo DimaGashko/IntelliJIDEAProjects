@@ -8,6 +8,18 @@ public class Vector extends Matrix {
         super(1, size);
     }
 
+    public Vector(Vector matrix) {
+        setN(matrix.getN());
+        setM(matrix.getM());
+
+        init();
+
+        for (int i = 0; i < getM(); i++) {
+            set(i, matrix.get(0, i));
+        }
+
+    }
+
     public void set(int index, int value) {
         super.set(0, index, value);
     }

@@ -29,13 +29,13 @@ public class Main {
     }
 
     private void runGauss() {
-        Vector x = GaussMethod.execute(A, B);
+        Vector x = GaussMethod.execute(new Matrix(A), new Vector(B));
 
         System.out.println("Gauss Elimination Method: ");
         System.out.println(x);
     }
 
-    private void init() {
+    protected void init() {
         size = promptInt("Enter the number of equations:");
         A = askForA();
         B = askForB();
