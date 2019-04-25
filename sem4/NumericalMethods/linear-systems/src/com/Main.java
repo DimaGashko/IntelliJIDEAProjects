@@ -7,29 +7,34 @@ import static com.console.ConsolePrompt.promptInt;
 
 public class Main {
 
+    Matrix A;
+    Vector B;
+    int size;
+
     public static void main(String[] args) {
         Main main = new Main();
         main.run();
     }
 
     private void run() {
-        Matrix matrix = askForMatrix();
-        Vector vector = askForVector();
+        int size = promptInt("Enter the number of equations:");
+        Matrix A = askForA();
+        Vector B = askForB();
+
 
     }
 
-    private Matrix askForMatrix() {
-        int m = promptInt("Enter the number of rows: ");
-        int n = promptInt("Enter the number of columns: ");
+    private Matrix askForA() {
+        int n = promptInt("Enter the number of equations: ");
         System.out.println("Enter elements of the matrix: ");
 
-        Matrix matrix = new Matrix(m, n);
+        Matrix matrix = new Matrix(n, n);
         matrix.enter();
 
         return matrix;
     }
 
-    private Vector askForVector() {
+    private Vector askForB() {
         int size = promptInt("Enter vector size: ");
         System.out.println("Enter elements of a the vector: ");
 

@@ -16,6 +16,20 @@ public class Matrix {
         init();
     }
 
+    public Matrix(Matrix matrix) {
+        setN(matrix.getN());
+        setM(matrix.getM());
+
+        init();
+
+        for (int i = 0; i < getN(); i++) {
+            for (int j = 0; j < getM(); j++) {
+                set(i, j, matrix.get(i, j));
+            }
+        }
+
+    }
+
     public int get(int i, int j) {
         if (i >= n || i < 0) return 0;
         if (j >= m || j < 0) return 0;
