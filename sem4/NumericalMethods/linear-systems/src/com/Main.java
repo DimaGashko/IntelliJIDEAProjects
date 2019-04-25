@@ -1,15 +1,18 @@
 package com;
 
-import com.console.Matrix.Matrix;
-import com.console.Matrix.Vector;
+import com.Matrix.Matrix;
+import com.Matrix.Vector;
+import com.linearSystem.GaussMethodCommand;
 
 import static com.console.ConsolePrompt.promptInt;
 
 public class Main {
 
-    Matrix A;
-    Vector B;
-    int size;
+    private GaussMethodCommand GaussMethod = new GaussMethodCommand();
+
+    private Matrix A;
+    private Vector B;
+    private int size;
 
     public static void main(String[] args) {
         Main main = new Main();
@@ -22,17 +25,24 @@ public class Main {
     }
 
     private void runCalc() {
+       runGauss();
+    }
 
+    private void runGauss() {
+        Vector x = GaussMethod.execute(A, B);
+
+        System.out.println("Gauss Elimination Method: ");
+        System.out.println(x);
     }
 
     private void init() {
-        int size = promptInt("Enter the number of equations:");
-        Matrix A = askForA();
-        Vector B = askForB();
+        size = promptInt("Enter the number of equations:");
+        A = askForA();
+        B = askForB();
     }
 
     private Matrix askForA() {
-        System.out.println("Enter elements of the A matrix: ");
+        System.out.println("Enter elements of A matrix: ");
 
         Matrix matrix = new Matrix(size, size);
         matrix.enter();
@@ -41,7 +51,7 @@ public class Main {
     }
 
     private Vector askForB() {
-        System.out.println("Enter elements of a B matrix: ");
+        System.out.println("Enter elements of B matrix: ");
 
         Vector vector = new Vector(size);
         vector.enter();

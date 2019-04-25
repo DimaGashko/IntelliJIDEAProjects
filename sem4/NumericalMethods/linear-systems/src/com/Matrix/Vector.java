@@ -1,4 +1,4 @@
-package com.console.Matrix;
+package com.Matrix;
 
 import static com.console.ConsolePrompt.promptInt;
 
@@ -19,7 +19,7 @@ public class Vector extends Matrix {
     @Override
     public void enter() {
         for (int i = 0; i < m; i++) {
-            int next = promptInt(String.format("[%d]", i));
+            int next = promptInt(String.format("[%d]", i + 1));
             set(i, next);
         }
 

@@ -1,4 +1,6 @@
-package com.console.Matrix;
+package com.Matrix;
+
+import java.lang.reflect.Array;
 
 import static com.console.ConsolePrompt.promptInt;
 
@@ -71,10 +73,26 @@ public class Matrix {
     public void enter() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                int next = promptInt(String.format("[%d][%d]", i, j));
+                int next = promptInt(String.format("[%d][%d]", i + 1, j + 1));
                 set(i, j, next);
             }
         }
 
     }
+
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                res.append(matrix[i][j]).append(" ");
+            }
+
+            res.append("\n");
+        }
+
+        return res.toString();
+    }
+
 }
