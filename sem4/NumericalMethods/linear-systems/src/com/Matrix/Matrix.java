@@ -104,5 +104,9 @@ public class Matrix {
         return res.toString();
     }
 
+    static public Matrix multiple() {
+        return null;
+    }
+
 }
 

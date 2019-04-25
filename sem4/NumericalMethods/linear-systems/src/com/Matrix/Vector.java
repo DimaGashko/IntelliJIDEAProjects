@@ -19,16 +19,24 @@ public class Vector extends Matrix {
         init();
 
         for (int i = 0; i < size; i++) {
-            set(i, 0, matrix.get(i,0));
+            set(i, 0, matrix.get(i));
         }
 
+    }
+
+    public double get(int i) {
+        return super.get(i, 0);
+    }
+
+    public void set(int i, double val) {
+        super.set(i, 0, val);
     }
 
     @Override
     public void enter() {
         for (int i = 0; i < size; i++) {
             double next = promptDouble(String.format("[%d]", i + 1));
-            set(i, 0, next);
+            set(i, next);
         }
 
     }

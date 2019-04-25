@@ -19,10 +19,7 @@ public class GaussMethodCommand {
         forward();
         back();
 
-        System.out.println("X:");
-        System.out.println(X);
-
-        return B;
+        return X;
     }
 
     private void forward() {
@@ -41,7 +38,7 @@ public class GaussMethodCommand {
                 }
 
                 // Element of B
-                B.set(j, 0, B.get(j, 0) - B.get(i, 0) * k);
+                B.set(j, B.get(j, 0) - B.get(i) * k);
             }
 
         }
@@ -55,11 +52,11 @@ public class GaussMethodCommand {
 
 
             for (int j = i + 1; j < n; j++) {
-                base += A.get(i, j) * X.get(j, 0);
+                base += A.get(i, j) * X.get(j);
             }
 
-            double x = (B.get(i, 0) - base) / A.get(i, i);
-            X.set(i, 0, x);
+            double x = (B.get(i) - base) / A.get(i, i);
+            X.set(i, x);
         }
 
         this.X = X;
