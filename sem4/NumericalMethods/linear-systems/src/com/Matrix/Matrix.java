@@ -1,5 +1,6 @@
 package com.Matrix;
 
+import static com.console.ConsolePrompt.promptDouble;
 import static com.console.ConsolePrompt.promptInt;
 
 public class Matrix {
@@ -7,7 +8,7 @@ public class Matrix {
     protected int n;
     protected int m;
 
-    protected int[][] matrix;
+    protected double[][] matrix;
 
     public Matrix() {
 
@@ -33,14 +34,14 @@ public class Matrix {
         }
     }
 
-    public int get(int i, int j) {
+    public double get(int i, int j) {
         if (i >= n || i < 0) return 0;
         if (j >= m || j < 0) return 0;
 
         return matrix[i][j];
     }
 
-    public void set(int i, int j, int val) {
+    public void set(int i, int j, double val) {
         if (i >= n || i < 0) return;
         if (j >= m || j < 0) return;
 
@@ -53,12 +54,12 @@ public class Matrix {
         matrix[lineB] = _aLine;
     }
 
-    public int[][] getInternal() {
+    public double[][] getInternal() {
         return matrix;
     }
 
     protected void init() {
-        matrix = new int[n][m];
+        matrix = new double[n][m];
     }
 
     public int getN() {
@@ -80,7 +81,8 @@ public class Matrix {
     public void enter() {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
-                int next = promptInt(String.format("[%d][%d]", i + 1, j + 1));
+                // TODO: use prompt double
+                double next = promptDouble(String.format("[%d][%d]", i + 1, j + 1));
                 set(i, j, next);
             }
         }
@@ -103,3 +105,4 @@ public class Matrix {
     }
 
 }
+

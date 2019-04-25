@@ -1,5 +1,6 @@
 package com.Matrix;
 
+import static com.console.ConsolePrompt.promptDouble;
 import static com.console.ConsolePrompt.promptInt;
 
 public class Vector extends Matrix {
@@ -18,24 +19,16 @@ public class Vector extends Matrix {
         init();
 
         for (int i = 0; i < size; i++) {
-            set(i, matrix.get(i, 0));
+            set(i, 0, matrix.get(i,0));
         }
 
-    }
-
-    public void set(int index, int value) {
-        super.set(index, 0, value);
-    }
-
-    public void get(int index) {
-        super.get(index, 0);
     }
 
     @Override
     public void enter() {
         for (int i = 0; i < size; i++) {
-            int next = promptInt(String.format("[%d]", i + 1));
-            set(i, next);
+            double next = promptDouble(String.format("[%d]", i + 1));
+            set(i, 0, next);
         }
 
     }
