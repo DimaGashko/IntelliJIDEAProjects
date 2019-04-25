@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a46a493c-8347-4478-b2e0-3f7d8bf17fca" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Matrix/Matrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Matrix/Matrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Matrix/Vector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Matrix/Vector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/linearSystem/GaussMethodCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/linearSystem/GaussMethodCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java/lab3-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/lab3-JPA/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,7 +19,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
+            <state relative-caret-position="193">
               <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -225,12 +221,12 @@
       <workItem from="1555620588255" duration="595000" />
       <workItem from="1555762417225" duration="166000" />
       <workItem from="1556085510025" duration="22000" />
-      <workItem from="1556144754163" duration="19424000" />
+      <workItem from="1556144754163" duration="20187000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20755000" />
+    <option name="totallyTimeSpent" value="21518000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -244,11 +240,11 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4218241" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4218241" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48045602" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.40553746" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.40553746" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
@@ -376,7 +372,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
+        <state relative-caret-position="193">
           <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
