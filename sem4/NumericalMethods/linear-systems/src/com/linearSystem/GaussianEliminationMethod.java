@@ -5,7 +5,7 @@ import com.Matrix.Vector;
 
 import static java.lang.Math.abs;
 
-public class GaussianEliminationMethod {
+public class GaussianEliminationMethod implements ILinearSystem {
     private Matrix A;
     private Vector B;
     private Vector X;
