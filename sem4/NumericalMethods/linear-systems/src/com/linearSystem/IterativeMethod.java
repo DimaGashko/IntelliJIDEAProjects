@@ -9,11 +9,14 @@ public class IterativeMethod {
     private int size;
     private double eps = 0.00000001;
 
+    private int iterCount = 0;
+
     private GetResidual getResidual = new GetResidual();
 
     public Vector executeIterative(Matrix A, Vector B, double eps) {
         size = B.getSize();
         this.eps = eps;
+        iterCount = 0;
 
         Vector b = prepareB(A, B);
         Vector x = new Vector(b);
@@ -21,6 +24,7 @@ public class IterativeMethod {
 
         while (!isDone(A, x, B)) {
             x = nextIterativeStep(a, x, b);
+            iterCount++;;
         }
 
         return x;
@@ -29,6 +33,7 @@ public class IterativeMethod {
     public Vector executeGaussSeidel(Matrix A, Vector B, double eps) {
         size = B.getSize();
         this.eps = eps;
+        iterCount = 0;
 
         Vector b = prepareB(A, B);
         Vector x = new Vector(b.getSize());
@@ -36,6 +41,7 @@ public class IterativeMethod {
 
         while (!isDone(A, x, B)) {
             x = nextGaussSeidelStep(a, x, b);
+            iterCount++;
         }
 
         return x;
@@ -117,4 +123,7 @@ public class IterativeMethod {
         this.eps = eps;
     }
 
+    public int getIterCount() {
+        return iterCount;
+    }
 }

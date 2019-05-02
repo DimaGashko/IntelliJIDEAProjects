@@ -44,6 +44,7 @@ public class Main {
         var residual = getResidualCommand.execute(A, X, B);
 
         System.out.println("Gauss-Seidel Method: ");
+        System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
         System.out.println(X);
         System.out.println("Residual:");
         System.out.println(residual);
@@ -54,6 +55,7 @@ public class Main {
         var residual = getResidualCommand.execute(A, X, B);
 
         System.out.println("Iterative Method: ");
+        System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
         System.out.println(X);
         System.out.println("Residual:");
         System.out.println(residual);
