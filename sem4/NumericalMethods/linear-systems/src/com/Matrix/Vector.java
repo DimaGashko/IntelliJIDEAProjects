@@ -36,13 +36,4 @@ public class Vector extends Matrix {
         return size;
     }
 
-    @Override
-    public void enter() {
-        for (int i = 0; i < size; i++) {
-            double next = promptDouble(String.format("[%d]", i + 1));
-            set(i, next);
-        }
-
-    }
-
 }

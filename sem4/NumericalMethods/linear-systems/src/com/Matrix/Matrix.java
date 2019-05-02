@@ -77,17 +77,6 @@ public class Matrix {
         this.m = m;
     }
 
-    public void enter() {
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                // TODO: use prompt double
-                double next = promptDouble(String.format("[%d][%d]", i + 1, j + 1));
-                set(i, j, next);
-            }
-        }
-
-    }
-
     @Override
     public String toString() {
         StringBuilder res = new StringBuilder();

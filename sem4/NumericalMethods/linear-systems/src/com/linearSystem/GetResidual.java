@@ -5,7 +5,7 @@ import static java.lang.Math.abs;
 import com.Matrix.Matrix;
 import com.Matrix.Vector;
 
-public class GetResidualCommand {
+public class GetResidual {
 
     public Vector execute(Matrix A, Vector X, Vector B) {
         Vector XA = Matrix.mulMatToVec(A, X);

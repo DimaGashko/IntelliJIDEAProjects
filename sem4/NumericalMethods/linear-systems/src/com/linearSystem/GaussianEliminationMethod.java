@@ -5,7 +5,7 @@ import com.Matrix.Vector;
 
 import static java.lang.Math.abs;
 
-public class GaussMethodCommand {
+public class GaussianEliminationMethod {
     private Matrix A;
     private Vector B;
     private Vector X;
