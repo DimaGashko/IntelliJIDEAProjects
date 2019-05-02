@@ -5,13 +5,12 @@ import com.Matrix.Vector;
 
 import static java.lang.Math.abs;
 
-public class GaussianEliminationMethod implements ILinearSystemSolver {
+public class GaussianEliminationMethod {
     private Matrix A;
     private Vector B;
     private Vector X;
     private int n;
 
-    @Override
     public Vector execute(Matrix A, Vector B) {
         this.A = A;
         this.B = B;

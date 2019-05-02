@@ -5,28 +5,63 @@ import com.Matrix.Vector;
 
 import static java.lang.Math.abs;
 
-public class IterativeMethod implements ILinearSystemSolver {
+public class IterativeMethod {
     private int size;
     private double eps = 0.00000001;
 
     private GetResidual getResidual = new GetResidual();
 
-    @Override
-    public Vector execute(Matrix A, Vector B) {
+    public Vector executeIterative(Matrix A, Vector B, double eps) {
         size = B.getSize();
+        this.eps = eps;
 
         Vector b = prepareB(A, B);
         Vector x = new Vector(b);
         Matrix a = prepareA(A, B);
 
         while (!isDone(A, x, B)) {
-            x = nextStep(a, x, b);
+            x = nextIterativeStep(a, x, b);
         }
 
         return x;
     }
 
-    private Vector nextStep(Matrix a, Vector x, Vector b) {
+    public Vector executeGaussSeidel(Matrix A, Vector B, double eps) {
+        size = B.getSize();
+        this.eps = eps;
+
+        Vector b = prepareB(A, B);
+        Vector x = new Vector(b);
+        Matrix a = prepareA(A, B);
+
+        while (!isDone(A, x, B)) {
+            x = nextGaussSeidelStep(a, x, b);
+        }
+
+        return x;
+    }
+
+    private Vector nextGaussSeidelStep(Matrix a, Vector x, Vector b) {
+        Vector res = new Vector(x);
+
+        for (int i = 0; i < size; i++) {
+            double newVal = 0;
+
+            for (int j = 0; j < size; j++) {
+                newVal += res.get(j) * a.get(i, j);
+            }
+
+            res.set(i, newVal);
+        }
+
+        for (int i = 0; i < size; i++) {
+            res.set(i, res.get(i) + b.get(i));
+        }
+
+        return res;
+    }
+
+    private Vector nextIterativeStep(Matrix a, Vector x, Vector b) {
         Vector res = Matrix.mulMatToVec(a, x);
 
         for (int i = 0; i < size; i++) {
@@ -60,6 +95,7 @@ public class IterativeMethod implements ILinearSystemSolver {
                 double newVal = 0;
 
                 if (i != j) {
+                    //System.out.println(A.get(i, j) + " " +A.get(i, i) +  " " + A.get(i, j) / A.get(i, i));
                     newVal = A.get(i, j) / A.get(i, i);
                     newVal = -newVal;
                 }

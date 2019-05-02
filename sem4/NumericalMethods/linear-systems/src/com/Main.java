@@ -31,13 +31,23 @@ public class Main {
     }
 
     private void runCalc() {
-       runGauss();
-       runIterative();
+       //runGauss();
+       //runIterative();
+       runGaussSeidel();
+    }
 
+    private void runGaussSeidel() {
+        Vector X = iterativeMethod.executeGaussSeidel(new Matrix(A), new Vector(B), 0.000001);
+        var residual = getResidualCommand.execute(A, X, B);
+
+        System.out.println("Gauss-Seidel Method: ");
+        System.out.println(X);
+        System.out.println("Residual:");
+        System.out.println(residual);
     }
 
     private void runIterative() {
-        Vector X = iterativeMethod.execute(new Matrix(A), new Vector(B));
+        Vector X = iterativeMethod.executeIterative(new Matrix(A), new Vector(B), 0.000001);
         var residual = getResidualCommand.execute(A, X, B);
 
         System.out.println("Iterative Method: ");
@@ -103,5 +113,10 @@ public class Main {
 4 0.24 -0.08 8
 0.09 3 -0.15 9
 0.04 0.08 -4 20
+
+8 4 2 10
+3 5 1 5
+3 -2 10 4
+
 
 */
