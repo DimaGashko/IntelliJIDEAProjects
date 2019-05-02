@@ -4,6 +4,7 @@ import com.Matrix.Matrix;
 import com.Matrix.Vector;
 import com.linearSystem.GaussianEliminationMethod;
 import com.linearSystem.GetResidual;
+import com.linearSystem.IterativeMethod;
 
 import java.util.Scanner;
 
@@ -12,6 +13,7 @@ import static com.console.ConsolePrompt.promptInt;
 public class Main {
 
     private GaussianEliminationMethod gaussMethod = new GaussianEliminationMethod();
+    private IterativeMethod iterativeMethod = new IterativeMethod();
     private GetResidual getResidualCommand = new GetResidual();
 
     private Matrix A;
@@ -30,14 +32,25 @@ public class Main {
 
     private void runCalc() {
        runGauss();
+       runIterative();
 
+    }
+
+    private void runIterative() {
+        Vector X = iterativeMethod.execute(new Matrix(A), new Vector(B));
+        var residual = getResidualCommand.execute(A, X, B);
+
+        System.out.println("Iterative Method: ");
+        System.out.println(X);
+        System.out.println("Residual:");
+        System.out.println(residual);
     }
 
     private void runGauss() {
         Vector X = gaussMethod.execute(new Matrix(A), new Vector(B));
         var residual = getResidualCommand.execute(A, X, B);
 
-        System.out.println("Gauss Elimination Method: ");
+        System.out.println("Gaussian Elimination Method: ");
         System.out.println(X);
         System.out.println("Residual:");
         System.out.println(residual);
@@ -86,5 +99,9 @@ public class Main {
 
 -1.0660660660661	0.4204204204204	-0.3123123123123	0.7537537537538	0.3933933933934
 
+- - - -
+4 0.24 -0.08 8
+0.09 3 -0.15 9
+0.04 0.08 -4 20
 
 */

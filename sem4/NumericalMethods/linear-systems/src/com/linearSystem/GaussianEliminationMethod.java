@@ -11,6 +11,7 @@ public class GaussianEliminationMethod implements ILinearSystemSolver {
     private Vector X;
     private int n;
 
+    @Override
     public Vector execute(Matrix A, Vector B) {
         this.A = A;
         this.B = B;
