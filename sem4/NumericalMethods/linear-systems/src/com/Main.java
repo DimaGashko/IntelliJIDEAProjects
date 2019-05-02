@@ -31,9 +31,12 @@ public class Main {
     }
 
     private void runCalc() {
-       //runGauss();
-       //runIterative();
-       runGaussSeidel();
+        System.out.println("- - - - - - - -\n");
+        runGauss();
+        System.out.println("- - - - - - - -\n");
+        runIterative();
+        System.out.println("- - - - - - - -\n");
+        runGaussSeidel();
     }
 
     private void runGaussSeidel() {
@@ -118,5 +121,9 @@ public class Main {
 3 5 1 5
 3 -2 10 4
 
+
+27 0.9 -1.5 35
+4.5 -28 6.7 26
+5.1 3.7 -14 -14
 
 */

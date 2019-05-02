@@ -31,7 +31,7 @@ public class IterativeMethod {
         this.eps = eps;
 
         Vector b = prepareB(A, B);
-        Vector x = new Vector(b);
+        Vector x = new Vector(b.getSize());
         Matrix a = prepareA(A, B);
 
         while (!isDone(A, x, B)) {
@@ -51,11 +51,7 @@ public class IterativeMethod {
                 newVal += res.get(j) * a.get(i, j);
             }
 
-            res.set(i, newVal);
-        }
-
-        for (int i = 0; i < size; i++) {
-            res.set(i, res.get(i) + b.get(i));
+            res.set(i, newVal + b.get(i));
         }
 
         return res;
