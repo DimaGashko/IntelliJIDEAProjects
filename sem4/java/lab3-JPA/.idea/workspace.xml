@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../first/.idea/dataSources/afca583c-6a7e-4ef3-95bf-b9050645ac19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/.idea/dataSources/afca583c-6a7e-4ef3-95bf-b9050645ac19.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../first/src/com/labs/lab_s4_4/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/src/com/labs/lab_s4_4/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../NumericalMethods/linear-systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NumericalMethods/linear-systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +56,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+            <state relative-caret-position="390">
+              <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
         </entry>
@@ -70,12 +72,6 @@
               <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#0#20#1" expanded="true" />
-                <element signature="e#0#71#1" expanded="true" />
-                <element signature="e#0#54#1" expanded="true" />
-                <element signature="e#0#48#1" expanded="true" />
-                <element signature="e#0#54#1" expanded="true" />
-                <element signature="e#0#39#1" expanded="true" />
                 <element signature="e#2258#2259#0" expanded="true" />
                 <element signature="e#2294#2295#0" expanded="true" />
               </folding>
@@ -86,17 +82,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/schemas/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+            <state relative-caret-position="150">
+              <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1513#1514#0" expanded="true" />
@@ -132,7 +128,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="741" />
@@ -145,8 +141,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,6 +181,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,10 +194,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../first" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.4229885" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -259,11 +255,12 @@
       <workItem from="1556133220486" duration="717000" />
       <workItem from="1556132862719" duration="50000" />
       <workItem from="1556181102491" duration="1226000" />
+      <workItem from="1556864339069" duration="4618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21538000" />
+    <option name="totallyTimeSpent" value="26156000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,7 +272,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="0" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -284,12 +281,12 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Persistence" order="5" sideWeight="0.50325733" side_tool="true" weight="0.18712121" />
-      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49674267" visible="true" weight="0.20227273" />
+      <window_info content_ui="combo" id="Project" order="6" sideWeight="0.49674267" visible="true" weight="0.20530303" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5007657" side_tool="true" weight="0.4819079" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.09283388" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4992343" visible="true" weight="0.1921824" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23127036" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.4992343" weight="0.30944625" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32899022" />
@@ -369,37 +366,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/LocalDateAttributeConverter.java" />
-    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schemas/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1513#1514#0" expanded="true" />
-            <element signature="e#1545#1546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/BookDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#0#20#1" expanded="true" />
-            <element signature="e#0#71#1" expanded="true" />
-            <element signature="e#0#54#1" expanded="true" />
-            <element signature="e#0#48#1" expanded="true" />
-            <element signature="e#0#54#1" expanded="true" />
-            <element signature="e#0#39#1" expanded="true" />
             <element signature="e#2258#2259#0" expanded="true" />
             <element signature="e#2294#2295#0" expanded="true" />
           </folding>
@@ -408,8 +380,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="35" column="34" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        <state relative-caret-position="390">
+          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/Book.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1513#1514#0" expanded="true" />
+            <element signature="e#1545#1546#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -477,7 +468,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.4</last-edited>
+          <last-edited>mysql:mysql-connector-java:8.0.15</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
