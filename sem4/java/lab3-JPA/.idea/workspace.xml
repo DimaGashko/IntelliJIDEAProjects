@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../first/.idea/dataSources/afca583c-6a7e-4ef3-95bf-b9050645ac19.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/.idea/dataSources/afca583c-6a7e-4ef3-95bf-b9050645ac19.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../first/src/com/labs/lab_s4_4/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../first/src/com/labs/lab_s4_4/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../NumericalMethods/linear-systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../NumericalMethods/linear-systems/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -255,12 +250,12 @@
       <workItem from="1556133220486" duration="717000" />
       <workItem from="1556132862719" duration="50000" />
       <workItem from="1556181102491" duration="1226000" />
-      <workItem from="1556864339069" duration="4618000" />
+      <workItem from="1556864339069" duration="4867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26156000" />
+    <option name="totallyTimeSpent" value="26405000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -273,7 +268,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
