@@ -9,11 +9,14 @@ import com.linearSystem.IterativeMethod;
 import java.util.Scanner;
 
 import static com.console.ConsolePrompt.promptInt;
+import static com.console.ConsoleElements.hr;
 
 public class Main {
 
+    private double eps = 0.0000001;
+
     private GaussianEliminationMethod gaussMethod = new GaussianEliminationMethod();
-    private IterativeMethod iterativeMethod = new IterativeMethod();
+    private IterativeMethod iterativeMethod = new IterativeMethod(eps);
     private GetResidual getResidualCommand = new GetResidual();
 
     private Matrix A;
@@ -31,42 +34,34 @@ public class Main {
     }
 
     private void runCalc() {
-        System.out.println("- - - - - - - -\n");
         runGauss();
-        System.out.println("- - - - - - - -\n");
         runIterative();
-        System.out.println("- - - - - - - -\n");
         runGaussSeidel();
-    }
-
-    private void runGaussSeidel() {
-        Vector X = iterativeMethod.executeGaussSeidel(new Matrix(A), new Vector(B), 0.000001);
-        var residual = getResidualCommand.execute(A, X, B);
-
-        System.out.println("Gauss-Seidel Method: ");
-        System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
-        System.out.println(X);
-        System.out.println("Residual:");
-        System.out.println(residual);
-    }
-
-    private void runIterative() {
-        Vector X = iterativeMethod.executeIterative(new Matrix(A), new Vector(B), 0.000001);
-        var residual = getResidualCommand.execute(A, X, B);
-
-        System.out.println("Iterative Method: ");
-        System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
-        System.out.println(X);
-        System.out.println("Residual:");
-        System.out.println(residual);
     }
 
     private void runGauss() {
         Vector X = gaussMethod.execute(new Matrix(A), new Vector(B));
-        var residual = getResidualCommand.execute(A, X, B);
+        printResults("Gaussian Elimination Method:", A, X, B);
+    }
 
-        System.out.println("Gaussian Elimination Method: ");
-        System.out.println(X);
+    private void runIterative() {
+        Vector X = iterativeMethod.executeIterative(new Matrix(A), new Vector(B));
+        printResults("Iterative Method:", A, X, B);
+        System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
+    }
+
+    private void runGaussSeidel() {
+        Vector X = iterativeMethod.executeGaussSeidel(new Matrix(A), new Vector(B));
+        printResults("Gauss-Seidel Method:", A, X, B);
+        System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
+    }
+
+    private void printResults(String title, Matrix a, Vector x, Vector b) {
+        var residual = getResidualCommand.execute(a, b, x);
+
+        hr();
+        System.out.println(title);
+        System.out.println(x);
         System.out.println("Residual:");
         System.out.println(residual);
     }
@@ -80,7 +75,7 @@ public class Main {
     }
 
     private void enterEquation() {
-        System.out.println("Enter the equation (each row is a A's number and a B's number");
+        System.out.println("Enter the equation (each line is a line of A and a B's item at the end)");
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 0; i < size; i++) {

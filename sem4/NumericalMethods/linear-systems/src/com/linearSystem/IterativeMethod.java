@@ -13,9 +13,16 @@ public class IterativeMethod {
 
     private GetResidual getResidual = new GetResidual();
 
-    public Vector executeIterative(Matrix A, Vector B, double eps) {
+    public IterativeMethod() {
+
+    }
+
+    public IterativeMethod(double eps) {
+        setEps(eps);
+    }
+
+    public Vector executeIterative(Matrix A, Vector B) {
         size = B.getSize();
-        this.eps = eps;
         iterCount = 0;
 
         Vector b = prepareB(A, B);
@@ -30,9 +37,8 @@ public class IterativeMethod {
         return x;
     }
 
-    public Vector executeGaussSeidel(Matrix A, Vector B, double eps) {
+    public Vector executeGaussSeidel(Matrix A, Vector B) {
         size = B.getSize();
-        this.eps = eps;
         iterCount = 0;
 
         Vector b = prepareB(A, B);
@@ -97,7 +103,6 @@ public class IterativeMethod {
                 double newVal = 0;
 
                 if (i != j) {
-                    //System.out.println(A.get(i, j) + " " +A.get(i, i) +  " " + A.get(i, j) / A.get(i, i));
                     newVal = A.get(i, j) / A.get(i, i);
                     newVal = -newVal;
                 }
