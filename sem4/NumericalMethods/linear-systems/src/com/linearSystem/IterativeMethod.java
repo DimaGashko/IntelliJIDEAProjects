@@ -10,6 +10,7 @@ public class IterativeMethod {
     private double eps = 0.00000001;
 
     private int iterCount = 0;
+    private int maxIterations = 10000;
 
     private GetResidual getResidual = new GetResidual();
 
@@ -31,7 +32,11 @@ public class IterativeMethod {
 
         while (!isDone(A, x, B)) {
             x = nextIterativeStep(a, x, b);
-            iterCount++;;
+            iterCount++;
+
+            if (iterCount > maxIterations) {
+                throwsIterationsOut();
+            }
         }
 
         return x;
@@ -48,6 +53,10 @@ public class IterativeMethod {
         while (!isDone(A, x, B)) {
             x = nextGaussSeidelStep(a, x, b);
             iterCount++;
+
+            if (iterCount > maxIterations) {
+                throwsIterationsOut();
+            }
         }
 
         return x;
@@ -130,5 +139,9 @@ public class IterativeMethod {
 
     public int getIterCount() {
         return iterCount;
+    }
+
+    private void throwsIterationsOut() {
+        throw new RuntimeException("Invalid system (too many iterations)");
     }
 }

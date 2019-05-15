@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../sem4/java/lab3-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/java/lab3-JPA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/src/com/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,34 +48,6 @@
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="java_sem4_lab4: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="author: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="java_sem4_lab4: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="book: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="java_sem4_lab4: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="book_author: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="java_sem4_lab4@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="java_sem4_lab4: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="publisher: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="postindustria_week4And5_task1@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
@@ -97,20 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="315">
+              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,52 +82,52 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="uml://DATABASE/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.SCHEMA:postindustria_week4And5_task1">
+        <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/afca583c-6a7e-4ef3-95bf-b9050645ac19.SCHEMA:java_sem4_lab4">
           <provider selected="true" editor-type-id="UmlEditorProvider">
             <state>
               <ID>DATABASE</ID>
-              <OriginalElement>1c0ad15f-ac55-4a7e-aa25-96d31e12140d.SCHEMA:postindustria_week4And5_task1</OriginalElement>
+              <OriginalElement>afca583c-6a7e-4ef3-95bf-b9050645ac19.SCHEMA:java_sem4_lab4</OriginalElement>
               <nodes>
-                <node x="0.0" y="12.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.shop</node>
-                <node x="176.0" y="173.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase</node>
-                <node x="393.0" y="24.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product</node>
-                <node x="480.89583333333337" y="221.5">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category</node>
-                <node x="184.0" y="0.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.user</node>
-                <node x="572.0" y="24.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.category</node>
+                <node x="179.0" y="0.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
+                <node x="171.0" y="125.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book</node>
+                <node x="91.0" y="346.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author</node>
+                <node x="0.0" y="173.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author</node>
               </nodes>
               <notes />
               <edges>
-                <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product">
-                  <point x="68.33333333333337" y="-85.5" />
-                  <point x="346.83333333333337" y="148.0" />
-                  <point x="432.75" y="148.0" />
-                  <point x="-39.75" y="37.5" />
-                </edge>
-                <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.shop">
-                  <point x="-68.33333333333331" y="-85.5" />
-                  <point x="210.16666666666669" y="148.0" />
-                  <point x="82.0" y="148.0" />
-                  <point x="0.0" y="49.5" />
-                </edge>
-                <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product">
-                  <point x="-51.25" y="-37.0" />
-                  <point x="532.1458333333334" y="148.0" />
-                  <point x="512.25" y="148.0" />
-                  <point x="39.75" y="37.5" />
-                </edge>
-                <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.category">
-                  <point x="51.25" y="-37.0" />
-                  <point x="634.6458333333334" y="148.0" />
-                  <point x="647.5" y="148.0" />
+                <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher">
+                  <point x="0.0" y="-85.5" />
                   <point x="0.0" y="37.5" />
                 </edge>
-                <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.user">
-                  <point x="0.0" y="-85.5" />
-                  <point x="0.0" y="61.5" />
+                <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author">
+                  <point x="-37.0" y="-37.0" />
+                  <point x="128.0" y="321.0" />
+                  <point x="75.5" y="321.0" />
+                  <point x="0.0" y="37.5" />
+                </edge>
+                <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book">
+                  <point x="37.0" y="-37.0" />
+                  <point x="202.0" y="321.0" />
+                  <point x="254.5" y="321.0" />
+                  <point x="0.0" y="85.5" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="361.5" y="172.0" />
-              <SelectedNodes />
+              <settings layout="Hierarchic Group" zoom="1.0" x="169.0" y="210.0" />
+              <SelectedNodes>
+                <node>afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
+              </SelectedNodes>
               <Categories>
                 <Category>Key columns</Category>
                 <Category>Columns</Category>
@@ -296,7 +259,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="27" />
-    <option name="width" value="1366" />
+    <option name="width" value="1360" />
     <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -406,7 +369,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems" />
     <property name="list.type.of.created.stylesheet" value="Sass" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -651,6 +614,8 @@
       <workItem from="1556139054219" duration="3360000" />
       <workItem from="1556132916934" duration="428000" />
       <workItem from="1556864390322" duration="6031000" />
+      <workItem from="1557474163563" duration="489000" />
+      <workItem from="1557935387835" duration="774000" />
     </task>
     <servers />
   </component>
@@ -687,7 +652,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="567266000" />
+    <option name="totallyTimeSpent" value="568529000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -700,6 +665,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022727273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -710,8 +676,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.31260228" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.4315961" />
-      <window_info active="true" anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" visible="true" weight="0.23778501" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4977307" weight="0.95114005" />
+      <window_info anchor="bottom" x="8" y="181" width="1322" height="310" id="Terminal" order="3" sideWeight="0.49924356" weight="0.23701298" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49924356" weight="0.39836067" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -730,7 +696,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.24962178" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.3189394" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.33409092" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
       <window_info anchor="right" id="Maven" order="9" />
     </layout>
@@ -821,7 +787,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/PrintStream.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectOutputStream.java" />
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/io/ObjectInputStream.java" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e98f459c-9535-48e7-b9fa-dc2a2e715ee4/console.sql" />
@@ -1068,18 +1033,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1c0ad15f-ac55-4a7e-aa25-96d31e12140d/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="uml://DATABASE/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.SCHEMA:postindustria_week4And5_task1">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>1c0ad15f-ac55-4a7e-aa25-96d31e12140d.SCHEMA:postindustria_week4And5_task1</OriginalElement>
+          <nodes>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.shop</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.user</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase_product</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.category</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.6460296096904441" x="653.0" y="238.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/1c0ad15f-ac55-4a7e-aa25-96d31e12140d">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>1c0ad15f-ac55-4a7e-aa25-96d31e12140d</OriginalElement>
+          <nodes>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.shop</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.user</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase_product</node>
+            <node x="" y="">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.category</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="310.0" y="222.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="315">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1c0ad15f-ac55-4a7e-aa25-96d31e12140d/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="uml://DATABASE/afca583c-6a7e-4ef3-95bf-b9050645ac19.SCHEMA:java_sem4_lab4">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -1087,15 +1104,34 @@
           <ID>DATABASE</ID>
           <OriginalElement>afca583c-6a7e-4ef3-95bf-b9050645ac19.SCHEMA:java_sem4_lab4</OriginalElement>
           <nodes>
-            <node x="" y="">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author</node>
-            <node x="" y="">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
-            <node x="" y="">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book</node>
-            <node x="" y="">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author</node>
+            <node x="179.0" y="0.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
+            <node x="171.0" y="125.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book</node>
+            <node x="91.0" y="346.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author</node>
+            <node x="0.0" y="173.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author</node>
           </nodes>
           <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="414.5" y="182.0" />
-          <SelectedNodes />
+          <edges>
+            <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher">
+              <point x="0.0" y="-85.5" />
+              <point x="0.0" y="37.5" />
+            </edge>
+            <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author">
+              <point x="-37.0" y="-37.0" />
+              <point x="128.0" y="321.0" />
+              <point x="75.5" y="321.0" />
+              <point x="0.0" y="37.5" />
+            </edge>
+            <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book">
+              <point x="37.0" y="-37.0" />
+              <point x="202.0" y="321.0" />
+              <point x="254.5" y="321.0" />
+              <point x="0.0" y="85.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="169.0" y="210.0" />
+          <SelectedNodes>
+            <node>afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
+          </SelectedNodes>
           <Categories>
             <Category>Key columns</Category>
             <Category>Columns</Category>
@@ -1105,64 +1141,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="15">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.SCHEMA:postindustria_week4And5_task1">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>1c0ad15f-ac55-4a7e-aa25-96d31e12140d.SCHEMA:postindustria_week4And5_task1</OriginalElement>
-          <nodes>
-            <node x="0.0" y="12.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.shop</node>
-            <node x="176.0" y="173.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase</node>
-            <node x="393.0" y="24.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product</node>
-            <node x="480.89583333333337" y="221.5">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category</node>
-            <node x="184.0" y="0.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.user</node>
-            <node x="572.0" y="24.0">1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.category</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product">
-              <point x="68.33333333333337" y="-85.5" />
-              <point x="346.83333333333337" y="148.0" />
-              <point x="432.75" y="148.0" />
-              <point x="-39.75" y="37.5" />
-            </edge>
-            <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.shop">
-              <point x="-68.33333333333331" y="-85.5" />
-              <point x="210.16666666666669" y="148.0" />
-              <point x="82.0" y="148.0" />
-              <point x="0.0" y="49.5" />
-            </edge>
-            <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product">
-              <point x="-51.25" y="-37.0" />
-              <point x="532.1458333333334" y="148.0" />
-              <point x="512.25" y="148.0" />
-              <point x="39.75" y="37.5" />
-            </edge>
-            <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.product_category" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.category">
-              <point x="51.25" y="-37.0" />
-              <point x="634.6458333333334" y="148.0" />
-              <point x="647.5" y="148.0" />
-              <point x="0.0" y="37.5" />
-            </edge>
-            <edge source="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.purchase" target="1c0ad15f-ac55-4a7e-aa25-96d31e12140d.TABLE:postindustria_week4And5_task1.user">
-              <point x="0.0" y="-85.5" />
-              <point x="0.0" y="61.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="361.5" y="172.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
         </state>
       </provider>
     </entry>

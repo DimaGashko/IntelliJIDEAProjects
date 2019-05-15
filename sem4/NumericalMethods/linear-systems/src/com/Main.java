@@ -35,32 +35,46 @@ public class Main {
 
     private void runCalc() {
         runGauss();
-        runIterative();
-        runGaussSeidel();
+
+        try {
+            runIterative();
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            runGaussSeidel();
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     private void runGauss() {
+        hr();
+        System.out.println("Gaussian Elimination Method:");
         Vector X = gaussMethod.execute(new Matrix(A), new Vector(B));
-        printResults("Gaussian Elimination Method:", A, X, B);
+        printResults(A, X, B);
     }
 
     private void runIterative() {
+        hr();
+        System.out.println("Iterative Method:");
         Vector X = iterativeMethod.executeIterative(new Matrix(A), new Vector(B));
-        printResults("Iterative Method:", A, X, B);
+        printResults(A, X, B);
         System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
     }
 
     private void runGaussSeidel() {
+        hr();
+        System.out.println("Gauss-Seidel Method:");
         Vector X = iterativeMethod.executeGaussSeidel(new Matrix(A), new Vector(B));
-        printResults("Gauss-Seidel Method:", A, X, B);
+        printResults(A, X, B);
         System.out.println("Number of Iteration: " + iterativeMethod.getIterCount());
     }
 
-    private void printResults(String title, Matrix a, Vector x, Vector b) {
-        var residual = getResidualCommand.execute(a, b, x);
+    private void printResults(Matrix a, Vector x, Vector b) {
+        var residual = getResidualCommand.execute(a, x, b);
 
-        hr();
-        System.out.println(title);
         System.out.println(x);
         System.out.println("Residual:");
         System.out.println(residual);
@@ -92,22 +106,23 @@ public class Main {
 /*
 
 
-
 1.16 1.3 1.14       0.43
 0.83 -0.48 -2.44    -0.15
 2 -0.16 1.3         1.5
 
-0.512823173185892	-0.403279486381378	0.315253027543997
-
 - - - - - - - - -
+
+33 2.1 2.8 8
+4.1 37 4.8 57
+2.7 1.8 11 53
+
+- - - - - - -
 
 1 5 3 2 1   2
 1 2 4 2 5   2
 2 5 1 5 4   5
 4 5 1 2 5   1
 -1 5 4 2 4  5
-
--1.0660660660661	0.4204204204204	-0.3123123123123	0.7537537537538	0.3933933933934
 
 - - - -
 4 0.24 -0.08 8
