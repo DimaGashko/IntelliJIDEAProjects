@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51a996b1-1a51-4fd5-9317-67d9ad20839f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../sem4/NumericalMethods/linear-systems/src/com/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,7 +81,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
+            <state relative-caret-position="17">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -100,31 +97,31 @@
               <ID>DATABASE</ID>
               <OriginalElement>afca583c-6a7e-4ef3-95bf-b9050645ac19.SCHEMA:java_sem4_lab4</OriginalElement>
               <nodes>
-                <node x="179.0" y="0.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
-                <node x="171.0" y="125.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book</node>
-                <node x="91.0" y="346.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author</node>
-                <node x="0.0" y="173.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author</node>
+                <node x="149.0" y="0.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
+                <node x="0.0" y="166.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author</node>
+                <node x="76.5" y="332.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author</node>
+                <node x="144.0" y="122.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book</node>
               </nodes>
               <notes />
               <edges>
                 <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher">
-                  <point x="0.0" y="-85.5" />
-                  <point x="0.0" y="37.5" />
+                  <point x="0.0" y="-80.0" />
+                  <point x="0.0" y="36.0" />
                 </edge>
                 <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author">
-                  <point x="-37.0" y="-37.0" />
-                  <point x="128.0" y="321.0" />
-                  <point x="75.5" y="321.0" />
-                  <point x="0.0" y="37.5" />
+                  <point x="-30.0" y="-35.5" />
+                  <point x="106.5" y="307.0" />
+                  <point x="62.0" y="307.0" />
+                  <point x="0.0" y="36.0" />
                 </edge>
                 <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book">
-                  <point x="37.0" y="-37.0" />
-                  <point x="202.0" y="321.0" />
-                  <point x="254.5" y="321.0" />
-                  <point x="0.0" y="85.5" />
+                  <point x="30.0" y="-35.5" />
+                  <point x="166.5" y="307.0" />
+                  <point x="211.0" y="307.0" />
+                  <point x="0.0" y="80.0" />
                 </edge>
               </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="169.0" y="210.0" />
+              <settings layout="Hierarchic Group" zoom="1.0" x="152.5" y="208.5" />
               <SelectedNodes>
                 <node>afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
               </SelectedNodes>
@@ -270,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -348,6 +344,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -616,6 +613,7 @@
       <workItem from="1556864390322" duration="6031000" />
       <workItem from="1557474163563" duration="489000" />
       <workItem from="1557935387835" duration="774000" />
+      <workItem from="1557992226212" duration="20000" />
     </task>
     <servers />
   </component>
@@ -652,7 +650,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="568529000" />
+    <option name="totallyTimeSpent" value="568549000" />
   </component>
   <component name="TodoView" selected-index="3">
     <todo-panel id="selected-file">
@@ -664,10 +662,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022727273" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.022692889" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -696,7 +693,7 @@
       <window_info anchor="right" id="Theme Preview" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.24962178" />
-      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.33409092" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.33358547" />
       <window_info anchor="right" id="Maven Projects" order="8" weight="0.32980332" />
       <window_info anchor="right" id="Maven" order="9" />
     </layout>
@@ -911,20 +908,20 @@
     </entry>
     <entry file="jar://$PATH_TO_FX$/javafx.graphics.jar!/javafx/scene/layout/HBox.class" />
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/views/createBook.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab5/ELib/views/index.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_1_2/User.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1033,9 +1030,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1c0ad15f-ac55-4a7e-aa25-96d31e12140d/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1c0ad15f-ac55-4a7e-aa25-96d31e12140d/console.sql" />
     <entry file="uml://DATABASE/1c0ad15f-ac55-4a7e-aa25-96d31e12140d.SCHEMA:postindustria_week4And5_task1">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -1090,8 +1085,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1104,31 +1099,31 @@
           <ID>DATABASE</ID>
           <OriginalElement>afca583c-6a7e-4ef3-95bf-b9050645ac19.SCHEMA:java_sem4_lab4</OriginalElement>
           <nodes>
-            <node x="179.0" y="0.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
-            <node x="171.0" y="125.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book</node>
-            <node x="91.0" y="346.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author</node>
-            <node x="0.0" y="173.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author</node>
+            <node x="149.0" y="0.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
+            <node x="0.0" y="166.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author</node>
+            <node x="76.5" y="332.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author</node>
+            <node x="144.0" y="122.0">afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book</node>
           </nodes>
           <notes />
           <edges>
             <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher">
-              <point x="0.0" y="-85.5" />
-              <point x="0.0" y="37.5" />
+              <point x="0.0" y="-80.0" />
+              <point x="0.0" y="36.0" />
             </edge>
             <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.author">
-              <point x="-37.0" y="-37.0" />
-              <point x="128.0" y="321.0" />
-              <point x="75.5" y="321.0" />
-              <point x="0.0" y="37.5" />
+              <point x="-30.0" y="-35.5" />
+              <point x="106.5" y="307.0" />
+              <point x="62.0" y="307.0" />
+              <point x="0.0" y="36.0" />
             </edge>
             <edge source="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book_author" target="afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.book">
-              <point x="37.0" y="-37.0" />
-              <point x="202.0" y="321.0" />
-              <point x="254.5" y="321.0" />
-              <point x="0.0" y="85.5" />
+              <point x="30.0" y="-35.5" />
+              <point x="166.5" y="307.0" />
+              <point x="211.0" y="307.0" />
+              <point x="0.0" y="80.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="169.0" y="210.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="152.5" y="208.5" />
           <SelectedNodes>
             <node>afca583c-6a7e-4ef3-95bf-b9050645ac19.TABLE:java_sem4_lab4.publisher</node>
           </SelectedNodes>
@@ -1141,7 +1136,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/labs/lab_s4_4/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
+        <state relative-caret-position="17">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
