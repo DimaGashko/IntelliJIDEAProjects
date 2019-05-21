@@ -26,12 +26,12 @@ public class PasswordUtils {
     }
 
     static public Optional<String> hashPassword(String password, String salt) {
-        char[] chars = password.toCharArray();
-        byte[] bytes = salt.getBytes();
+        char[] passwordChars = password.toCharArray();
+        byte[] saltBytes = salt.getBytes();
 
-        PBEKeySpec spec = new PBEKeySpec(chars, bytes, ITERATIONS, KEY_LENGTH);
+        PBEKeySpec spec = new PBEKeySpec(passwordChars, saltBytes, ITERATIONS, KEY_LENGTH);
 
-        Arrays.fill(chars, Character.MIN_VALUE);
+        Arrays.fill(passwordChars, Character.MIN_VALUE);
 
         try {
             SecretKeyFactory fac = SecretKeyFactory.getInstance(ALGORITHM);
@@ -45,11 +45,6 @@ public class PasswordUtils {
         } finally {
             spec.clearPassword();
         }
-    }
-
-    static public boolean verifyPassword (String password, String key, String salt) {
-        Optional<String> optEncrypted = hashPassword(password, salt);
-        return optEncrypted.map(s -> s.equals(key)).orElse(false);
     }
 
 }
