@@ -25,7 +25,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
 
         primaryStage.setTitle("Memory.pro");
-        setIcon("../img/logo.png");
+        setIcon("/img/logo.png");
 
         //primaryStage.setMaximized(true);
         primaryStage.setMinWidth(600);
