@@ -39,9 +39,11 @@ public class UserDao {
         return Optional.of(salts.get(0));
     }
 
-    public boolean checkExist(String username) {
-        var query = em.createQuery("select COUNT(u.id) from User u where u.username = :username", Long.class);
-        query.setParameter("username", username);
+    public boolean checkExist(User user) {
+        var query = em.createQuery("select COUNT(u.id) from User u where u.username = :username or u.email = :email or u.id = :id", Long.class);
+        query.setParameter("username", user.getUsername());
+        query.setParameter("email", user.getEmail());
+        query.setParameter("id", user.getId());
 
         long keysCount = query.setMaxResults(1).getResultList().get(0);
 

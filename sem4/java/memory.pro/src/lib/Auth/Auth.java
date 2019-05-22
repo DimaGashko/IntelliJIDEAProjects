@@ -4,6 +4,7 @@ import dao.UserDao;
 import schemas.User;
 import security.PasswordUtils;
 
+import javax.persistence.RollbackException;
 import java.io.*;
 import java.time.LocalDate;
 
@@ -18,7 +19,7 @@ public class Auth {
     }
 
     public void signup(User user) throws AuthException {
-        if (userDao.checkExist(user.getUsername())) {
+        if (userDao.checkExist(user)) {
             throw new AuthException("The user already exist");
         }
 
@@ -30,10 +31,14 @@ public class Auth {
         user.setPasswordKey(key);
         user.setRegisterDate(LocalDate.now());
 
-        userDao.add(user);
+        try {
+            userDao.add(user);
+        } catch (RollbackException e) {
+            throw new AuthException("Can't save the user");
+        }
     }
 
-    public boolean login(String username, String password) throws AuthException {
+    public void login(String username, String password) throws AuthException {
         String salt = userDao.getSaltByUsername(username)
                 .orElseThrow(() -> new AuthException("Login failed"));
 
@@ -41,7 +46,7 @@ public class Auth {
                 .orElseThrow(() -> new AuthException("Login failed"));
 
         if (!checkKey(username, key)) {
-            return false;
+            throw new AuthException("Login failed");
         }
 
         try {
@@ -50,8 +55,6 @@ public class Auth {
         } catch (IOException e) {
             throw new AuthException("Login successful, but cannot save login data");
         }
-
-        return true;
     }
 
     public boolean isLoggedIn() {
@@ -65,6 +68,10 @@ public class Auth {
         } catch (IOException | ClassNotFoundException e) {
             return false;
         }
+    }
+
+    public boolean logout() {
+        return loginDataFile.delete();
     }
 
     private void saveLoginData(String username, String key) throws IOException {

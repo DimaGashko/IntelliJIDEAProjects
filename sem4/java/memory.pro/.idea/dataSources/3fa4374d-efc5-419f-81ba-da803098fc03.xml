@@ -994,48 +994,30 @@
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="248" parent="238" name="password_key">
-      <ColNames>password_key</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="249" parent="238" name="password_salt">
+    <index id="248" parent="238" name="password_salt">
       <ColNames>password_salt</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="250" parent="238" name="register_date">
-      <ColNames>register_date</ColNames>
-      <Unique>1</Unique>
-      <Type>btree</Type>
-    </index>
-    <index id="251" parent="238" name="username">
+    <index id="249" parent="238" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="252" parent="238" name="PRIMARY">
+    <key id="250" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="253" parent="238" name="email">
+    <key id="251" parent="238" name="email">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
-    <key id="254" parent="238" name="password_key">
-      <ColNames>password_key</ColNames>
-      <UnderlyingIndexName>password_key</UnderlyingIndexName>
-    </key>
-    <key id="255" parent="238" name="password_salt">
+    <key id="252" parent="238" name="password_salt">
       <ColNames>password_salt</ColNames>
       <UnderlyingIndexName>password_salt</UnderlyingIndexName>
     </key>
-    <key id="256" parent="238" name="register_date">
-      <ColNames>register_date</ColNames>
-      <UnderlyingIndexName>register_date</UnderlyingIndexName>
-    </key>
-    <key id="257" parent="238" name="username">
+    <key id="253" parent="238" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>

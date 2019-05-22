@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/dictionaries/dgashko.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/dictionaries/dgashko.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/dataSources/3fa4374d-efc5-419f-81ba-da803098fc03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/dataSources/3fa4374d-efc5-419f-81ba-da803098fc03.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/data/auth/config" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/data/auth/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/schemas/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/schemas/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

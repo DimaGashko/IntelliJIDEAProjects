@@ -14,27 +14,63 @@ import java.util.Optional;
 import static security.PasswordUtils.hashPassword;
 
 public class Main {
+    private EntityManager em;
+    private UserDao userDao;
+    private Auth auth;
 
     public static void main(String[] args) {
+        Main main = new Main();
+        main.run();
+    }
+
+    private void run() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
-        EntityManager em = factory.createEntityManager();
+        em = factory.createEntityManager();
 
-        UserDao userDao = new UserDao(em);
+        userDao = new UserDao(em);
+        auth = new Auth(userDao);
 
-        Auth auth = new Auth(userDao);
+        //isLoggedIn();
+        //System.out.println(auth.logout());
+        isLoggedIn();
+        login("DmitryGashko", "qqqqqqqqww");
+        isLoggedIn();
+        login("DmitryGashko", "qqqqqqqqww");
+        isLoggedIn();
+        login("Kotlin", "kotlinkotlin");
+        isLoggedIn();
 
+        //signup();
+    }
+
+    private void login(String username, String password) {
+        try {
+            auth.login(username, password);
+            System.out.println("Success!");
+        } catch (AuthException e) {
+            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
+    }
+
+    private void isLoggedIn() {
+        System.out.println(auth.isLoggedIn() ? "You're online" : "You're offline");
+    }
+
+    private void signup() {
         User user = new User();
-        user.setFirstName("Dmitry");
-        user.setLastName("Gashko");
-        user.setUsername("DmitryGashko");
-        user.setEmail("dimagashko@gmail.com");
-        user.setPassword("qqqqqqqqww");
+        user.setFirstName("Jon");
+        user.setLastName("Kotlin");
+        user.setUsername("Kotlin");
+        user.setEmail("kotlinjon@gmail.com");
+        user.setPassword("kotlinkotlin");
 
         try {
             auth.signup(user);
         } catch (AuthException e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
+            return;
         }
 
         System.out.println("Success");
