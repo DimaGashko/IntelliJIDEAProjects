@@ -24,14 +24,17 @@ public class User {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "password_key", unique = true, nullable = false)
+    @Column(name = "password_key", nullable = false)
     private String passwordKey;
 
     @Column(name = "password_salt", length = 1300, unique = true, nullable = false)
     private String passwordSalt;
 
-    @Column(name = "register_date", unique = true, nullable = false)
+    @Column(name = "register_date", nullable = false)
     private LocalDate registerDate;
+
+    @Transient
+    private String password;
 
     public int getId() {
         return id;
@@ -95,6 +98,14 @@ public class User {
 
     public void setRegisterDate(LocalDate registerDate) {
         this.registerDate = registerDate;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override
