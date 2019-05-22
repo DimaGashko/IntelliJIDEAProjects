@@ -5,13 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
+import lib.Alerts.Alerts;
 import lib.Router.Router;
 import lib.Screen.ScreenController;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,6 +23,8 @@ public class Bootstrap implements Initializable {
     private Router router = new Router();
     private EntityManager em;
 
+    private Alerts alerts = new Alerts();
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initEntityManager();
@@ -32,7 +34,7 @@ public class Bootstrap implements Initializable {
     }
 
     private void start() {
-        //router.setRoute("index");
+        router.setRoute("index");
     }
 
     private void initEvents() {
@@ -42,29 +44,31 @@ public class Bootstrap implements Initializable {
     }
 
     private void showScreen(String path) {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
+        Parent root;
+
+        loader.setControllerFactory((ControllerClass) -> {
+            try {
+                ScreenController screenController = (ScreenController) ControllerClass.getDeclaredConstructor().newInstance();
+                screenController.setEntityManager(em);
+                screenController.setRouter(router);
+
+                return screenController;
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                alerts.showError("Screen Not Found", e);
+                return null;
+            }
+        });
+
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
-
-            loader.setControllerFactory((ControllerClass) -> {
-                try {
-                    ScreenController screenController = (ScreenController) ControllerClass.getDeclaredConstructor().newInstance();
-                    screenController.setEntityManager(em);
-                    screenController.setRouter(router);
-
-                    return screenController;
-                } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                    e.printStackTrace();
-                    return null;
-                }
-            });
-
-            Parent root = loader.load();
-
-            screenSlot.getChildren().clear();
-            screenSlot.getChildren().add(root);
-        } catch (IOException e) {
-            e.printStackTrace();
+            root = loader.load();
+        } catch (Exception e) {
+            alerts.showError("Screen Not Found", e);
+            return;
         }
+
+        screenSlot.getChildren().clear();
+        screenSlot.getChildren().add(root);
     }
 
     private void initEntityManager() {
@@ -75,5 +79,6 @@ public class Bootstrap implements Initializable {
     private void initRouter() {
         router.addRoute("index", "screens/index/index.fxml");
         router.addRoute("auth", "screens/auth/auth.fxml");
+        router.addRoute("screen1", "screens/screen1/screen1.fxml");
     }
 }

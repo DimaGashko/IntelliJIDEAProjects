@@ -9,80 +9,32 @@ import java.util.Optional;
 
 public class Alerts {
 
-    static private Alert alertInfo;
-    static private Alert alertConfirm;
-    static private Alert alertErr;
-    static private Alert alertWarn;
+    static public Alert alertInfo = new Alert(Alert.AlertType.INFORMATION);
+    static public Alert alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
+    static public Alert alertErr = new Alert(Alert.AlertType.ERROR);
+    static public Alert alertWarn = new Alert(Alert.AlertType.WARNING);
 
-    public Optional<ButtonType> show(Alert alert, String header, String content) {
+    public Optional<ButtonType> show(Alert alert, String title, String header, String content) {
+        alert.setTitle(title);
         alert.setHeaderText(header);
         alert.setContentText(content);
 
         return alert.showAndWait();
     }
 
-    public Optional<ButtonType> show(Alert alert, String header) {
-        return show(alert, header, "");
+    public Optional<ButtonType> show(Alert alert, String title, String content) {
+        return show(alert, title, title, content);
     }
 
-    /**
-     * @return Возвращает ответ пользователя в AlertConfirm
-     */
-    public boolean getAnswer(Optional<ButtonType> option) {
-        // TODO: add isPresent check
-        return (option.get() == ButtonType.OK);
+    public Optional<ButtonType> show(Alert alert, String title) {
+        return show(alert, title, title, "");
     }
 
-    private void initAlertInfo() {
-        if (alertInfo != null) return;
-
-        alertInfo = new Alert(Alert.AlertType.INFORMATION);
-        alertInfo.setTitle("ELib - your world of books");
+    public Optional<ButtonType> showError(String title, Exception e) {
+        return show(alertErr, title, title, getStackTrace(e));
     }
 
-    private void initAlertConfirm() {
-        if (alertConfirm != null) return;
-
-        alertConfirm = new Alert(Alert.AlertType.CONFIRMATION);
-        alertConfirm.setTitle("ELib - your world of books");
-    }
-
-    private void initAlertErr() {
-        if (alertErr != null) return;
-
-        alertErr = new Alert(Alert.AlertType.ERROR);
-        alertErr.setTitle("ELib - your world of books");
-        alertErr.getDialogPane().setMaxHeight(400);
-    }
-
-    private void initAlertWarn() {
-        if (alertWarn != null) return;
-
-        alertWarn = new Alert(Alert.AlertType.WARNING);
-        alertWarn.setTitle("ELib - your world of books");
-    }
-
-    public Alert getAlertInfo() {
-        initAlertInfo();
-        return alertInfo;
-    }
-
-    public Alert getAlertConfirm() {
-        initAlertConfirm();
-        return alertConfirm;
-    }
-
-    public Alert getAlertErr() {
-        initAlertErr();
-        return alertErr;
-    }
-
-    public Alert getAlertWarn() {
-        initAlertWarn();
-        return alertWarn;
-    }
-
-    public String getStackTrace(Exception err) {
+    private String getStackTrace(Exception err) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);
 

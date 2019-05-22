@@ -12,8 +12,9 @@ public class Router {
 
     public void setRoute(String alias) {
         if (!routes.containsKey(alias)) return;
-        currentRoute = new Pair<>(alias, routes.get(alias));
+        String path = routes.get(alias);
 
+        currentRoute = new Pair<>(alias, path);
         onScreenChangeCallbacks.forEach((callback) -> callback.call(currentRoute));
     }
 
