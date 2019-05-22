@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/data/auth/config" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/Bootstrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/bootstrap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/bootstrap.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/screens/index/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/screens/index/IndexScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/screens/index/index.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/screens/index/IndexScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/screens/screen1/Screen1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/screens/screen1/screen1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Component/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Screen/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Screen/ScreenRouter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Router/Router.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

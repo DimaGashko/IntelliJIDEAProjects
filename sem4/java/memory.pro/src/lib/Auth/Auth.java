@@ -133,12 +133,12 @@ public class Auth {
         }
     }
 
-    public Optional<String> getLoggedInUsername() {
+    public String getLoggedInUsername() {
         if (loginDataOpt.isEmpty() || !isLoggedIn()) {
-            return Optional.empty();
+            return "";
         }
 
-        return Optional.of(loginDataOpt.get().getUsername());
+        return loginDataOpt.get().getUsername();
     }
 
 }

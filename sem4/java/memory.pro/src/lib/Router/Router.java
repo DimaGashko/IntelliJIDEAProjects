@@ -29,6 +29,14 @@ public class Router {
         return onScreenChangeCallbacks;
     }
 
+    public HashMap<String, String> getScreens() {
+        return screens;
+    }
+
+    public HashMap<String, String> getComponents() {
+        return components;
+    }
+
     @FunctionalInterface
     public interface onScreenChangeCallback {
         void call(String path, HashMap<String, String> params);

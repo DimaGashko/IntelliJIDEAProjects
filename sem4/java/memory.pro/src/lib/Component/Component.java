@@ -1,6 +1,7 @@
 package lib.Component;
 
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import lib.Alerts.Alerts;
 import lib.Router.Router;
@@ -10,7 +11,7 @@ import javax.persistence.EntityManager;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 
-abstract public class Component {
+abstract public class Component implements Initializable {
     protected Router router = new Router();
     protected EntityManager em;
 
