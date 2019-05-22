@@ -1,4 +1,4 @@
-package lib.Router;
+package lib.Screen;
 
 import javafx.util.Pair;
 

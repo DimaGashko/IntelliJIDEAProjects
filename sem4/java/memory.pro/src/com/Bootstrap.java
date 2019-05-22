@@ -1,29 +1,20 @@
 package com;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
-import lib.Alerts.Alerts;
-import lib.Router.Router;
-import lib.Screen.ScreenController;
+import lib.Screen.Screen;
+import lib.Screen.ScreenException;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
-import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class Bootstrap implements Initializable {
+public class Bootstrap extends Screen implements Initializable {
     @FXML
     private VBox screenSlot;
-
-    private Router router = new Router();
-    private EntityManager em;
-
-    private Alerts alerts = new Alerts();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -44,25 +35,11 @@ public class Bootstrap implements Initializable {
     }
 
     private void showScreen(String path) {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         Parent root;
 
-        loader.setControllerFactory((ControllerClass) -> {
-            try {
-                ScreenController screenController = (ScreenController) ControllerClass.getDeclaredConstructor().newInstance();
-                screenController.setEntityManager(em);
-                screenController.setRouter(router);
-
-                return screenController;
-            } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                alerts.showError("Screen Not Found", e);
-                return null;
-            }
-        });
-
         try {
-            root = loader.load();
-        } catch (Exception e) {
+            root = loadScreen(path);
+        } catch (ScreenException e) {
             alerts.showError("Screen Not Found", e);
             return;
         }
