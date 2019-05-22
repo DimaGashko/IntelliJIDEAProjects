@@ -1,16 +1,13 @@
 package com;
 
-import com.sun.glass.ui.Screen;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
-import javafx.util.Callback;
 import lib.Router.Router;
 import lib.Screen.ScreenController;
 
-import javax.naming.spi.Resolver;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -20,7 +17,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Bootstrap implements Initializable {
-    @FXML private VBox screenSlot;
+    @FXML
+    private VBox screenSlot;
 
     private Router router = new Router();
     private EntityManager em;
@@ -28,11 +26,24 @@ public class Bootstrap implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initEntityManager();
+        initRouter();
+        initEvents();
+        start();
+    }
 
-        System.out.println("Bootstrap");
+    private void start() {
+        //router.setRoute("index");
+    }
 
+    private void initEvents() {
+        router.getOnScreenChangeCallbacks().add((route) -> {
+            showScreen(route.getValue());
+        });
+    }
+
+    private void showScreen(String path) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("screens/screen1/screen1.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
 
             loader.setControllerFactory((ControllerClass) -> {
                 try {
@@ -49,6 +60,7 @@ public class Bootstrap implements Initializable {
 
             Parent root = loader.load();
 
+            screenSlot.getChildren().clear();
             screenSlot.getChildren().add(root);
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,5 +70,10 @@ public class Bootstrap implements Initializable {
     private void initEntityManager() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         em = factory.createEntityManager();
+    }
+
+    private void initRouter() {
+        router.addRoute("index", "screens/index/index.fxml");
+        router.addRoute("auth", "screens/auth/auth.fxml");
     }
 }
