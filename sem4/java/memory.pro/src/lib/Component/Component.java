@@ -1,5 +1,6 @@
 package lib.Component;
 
+import Global.Global;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -10,53 +11,46 @@ import lib.Screen.ScreenException;
 import javax.persistence.EntityManager;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
+import java.util.Optional;
 
 abstract public class Component implements Initializable {
-    protected Router router = new Router();
-    protected EntityManager em;
-
     protected HashMap<String, String> params;
     protected Alerts alerts = new Alerts();
+    protected Global global;
 
-    public void setRouter(Router router) {
-        this.router = router;
+
+    public void setGlobal(Global global) {
+        this.global = global;
     }
 
-    public void setEntityManager(EntityManager em) {
-        this.em = em;
-    }
-
-    protected Parent loadScreen(String path, HashMap<String, String> params) throws ScreenException {
+    protected Optional<Parent> loadComponent(String path, HashMap<String, String> params) {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         Parent root;
 
-        var originalControllerFactory = loader.getControllerFactory();
-
         loader.setControllerFactory((ControllerClass) -> {
-            try {
-                Component component = (Component) ControllerClass.getDeclaredConstructor().newInstance();
-                component.setEntityManager(em);
-                component.setRouter(router);
-                component.setParams(params);
+            Component component = null;
 
-                return component;
-            } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+            try {
+                component = (Component) ControllerClass.getDeclaredConstructor().newInstance();
+                component.setGlobal(global);
+                component.setParams(params);
+            } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
                 e.printStackTrace();
-                alerts.showError("Screen Error", e);
-                return originalControllerFactory.call(ControllerClass);
             }
+
+            return component;
         });
 
         try {
             root = loader.load();
         } catch (Exception e) {
-            throw new ScreenException("Screen not found");
+            return Optional.empty();
         }
 
-        return root;
+        return Optional.of(root);
     }
 
-    public void setParams(HashMap<String, String> params) {
+    private void setParams(HashMap<String, String> params) {
         this.params = params;
     }
 }

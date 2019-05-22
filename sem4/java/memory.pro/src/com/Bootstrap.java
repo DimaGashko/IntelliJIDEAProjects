@@ -5,11 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import lib.Alerts.Alerts;
+import lib.Component.Component;
 import lib.Screen.Screen;
 import lib.Screen.ScreenException;
 
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class Bootstrap extends Screen {
@@ -48,20 +50,19 @@ public class Bootstrap extends Screen {
             return;
         }
 
-        Parent root;
+        Optional<Parent> parentOpt = loadComponent(path, params);
 
-        try {
-            root = loadScreen(path, params);
-        } catch (ScreenException e) {
-            alerts.showError("Screen Not Found", e);
+        if (parentOpt.isEmpty()) {
             showScreen("index");
             return;
         }
 
+        Parent parent = parentOpt.get();
+
         currentScreen = alias;
 
         screenSlot.getChildren().clear();
-        screenSlot.getChildren().add(root);
+        screenSlot.getChildren().add(parent);
     }
 
     private void showScreen(String alias) {
