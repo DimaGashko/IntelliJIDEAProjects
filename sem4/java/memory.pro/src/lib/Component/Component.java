@@ -4,11 +4,13 @@ import Global.Global;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import javafx.util.Pair;
 import lib.Alerts.Alerts;
 import lib.Router.Router;
 import lib.Screen.ScreenException;
 
 import javax.persistence.EntityManager;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Optional;
@@ -18,12 +20,7 @@ abstract public class Component implements Initializable {
     protected Alerts alerts = new Alerts();
     protected Global global;
 
-
-    public void setGlobal(Global global) {
-        this.global = global;
-    }
-
-    protected Optional<Parent> loadComponent(String path, HashMap<String, String> params) {
+    protected Pair<Parent, Component> loadComponent(String path, HashMap<String, String> params) throws ComponentException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         Parent root;
 
@@ -32,7 +29,7 @@ abstract public class Component implements Initializable {
 
             try {
                 component = (Component) ControllerClass.getDeclaredConstructor().newInstance();
-                component.setGlobal(global);
+                component.setGlobal(getGlobal());
                 component.setParams(params);
             } catch (InstantiationException | IllegalAccessException | NoSuchMethodException | InvocationTargetException e) {
                 e.printStackTrace();
@@ -43,11 +40,22 @@ abstract public class Component implements Initializable {
 
         try {
             root = loader.load();
-        } catch (Exception e) {
-            return Optional.empty();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new ComponentException("Internal Error");
         }
 
-        return Optional.of(root);
+        Component component = loader.getController();
+
+        return new Pair<>(root, component);
+    }
+
+    public Global getGlobal() {
+        return global;
+    }
+
+    public void setGlobal(Global global) {
+        this.global = global;
     }
 
     private void setParams(HashMap<String, String> params) {

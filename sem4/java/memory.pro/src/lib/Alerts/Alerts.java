@@ -30,8 +30,8 @@ public class Alerts {
         return show(alert, title, title, "");
     }
 
-    public Optional<ButtonType> showError(String title, Exception e) {
-        return show(alertErr, title, title, getStackTrace(e));
+    public Optional<ButtonType> showError(Exception e) {
+        return show(alertErr, e.getMessage(), e.getMessage(), getStackTrace(e));
     }
 
     private String getStackTrace(Exception err) {

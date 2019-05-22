@@ -1,5 +1,6 @@
 package com.screens.index;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import lib.Screen.Screen;
 
@@ -14,4 +15,7 @@ public class IndexScreen extends Screen implements Initializable {
 
     }
 
+    public void click(ActionEvent actionEvent) {
+        global.setScreen("auth");
+    }
 }
