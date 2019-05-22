@@ -3,19 +3,19 @@ package lib.Component;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import lib.Alerts.Alerts;
-import lib.Screen.Router;
+import lib.Screen.ScreenRouter;
 import lib.Screen.ScreenException;
 
 import javax.persistence.EntityManager;
 import java.lang.reflect.InvocationTargetException;
 
 abstract public class Component {
-    protected Router router = new Router();
+    protected ScreenRouter router = new ScreenRouter();
     protected EntityManager em;
 
     protected Alerts alerts = new Alerts();
 
-    public void setRouter(Router router) {
+    public void setRouter(ScreenRouter router) {
         this.router = router;
     }
 

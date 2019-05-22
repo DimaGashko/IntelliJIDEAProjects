@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
+import lib.Alerts.Alerts;
 import lib.Screen.Screen;
 import lib.Screen.ScreenException;
 
@@ -25,16 +26,21 @@ public class Bootstrap extends Screen implements Initializable {
     }
 
     private void start() {
-        router.setRoute("index");
+        router.setScreen("index");
     }
 
     private void initEvents() {
-        router.getOnScreenChangeCallbacks().add((route) -> {
-            showScreen(route.getValue());
-        });
+        router.getOnScreenChangeCallbacks().add(this::showScreen);
     }
 
     private void showScreen(String path) {
+        System.out.println(path);
+
+        if (path == null || path.isEmpty()) {
+            alerts.show(Alerts.alertErr, "Screen Not Found");
+            return;
+        }
+
         Parent root;
 
         try {
@@ -54,8 +60,10 @@ public class Bootstrap extends Screen implements Initializable {
     }
 
     private void initRouter() {
-        router.addRoute("index", "screens/index/index.fxml");
-        router.addRoute("auth", "screens/auth/auth.fxml");
-        router.addRoute("screen1", "screens/screen1/screen1.fxml");
+        router.addScreen("index", "screens/index/index.fxml");
+        router.addScreen("auth", "screens/auth/auth.fxml");
+        router.addScreen("screen1", "screens/profile/profile.fxml");
+        router.addScreen("screen1", "screens/statistic/statistic.fxml");
+        router.addScreen("screen1", "screens/training/training.fxml");
     }
 }

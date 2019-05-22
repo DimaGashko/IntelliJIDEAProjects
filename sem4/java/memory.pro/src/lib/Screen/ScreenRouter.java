@@ -1,24 +1,17 @@
 package lib.Screen;
 
-import javafx.util.Pair;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Router {
+public class ScreenRouter {
     private ArrayList<onScreenChangeCallback> onScreenChangeCallbacks = new ArrayList<>();
     private HashMap<String, String> routes = new HashMap<>();
-    private Pair<String, String> currentRoute;
 
-    public void setRoute(String alias) {
-        if (!routes.containsKey(alias)) return;
-        String path = routes.get(alias);
-
-        currentRoute = new Pair<>(alias, path);
-        onScreenChangeCallbacks.forEach((callback) -> callback.call(currentRoute));
+    public void setScreen(String alias) {
+        onScreenChangeCallbacks.forEach((callback) -> callback.call(routes.get(alias)));
     }
 
-    public void addRoute(String alias, String path) {
+    public void addScreen(String alias, String path) {
         routes.put(alias, path);
     }
 
@@ -28,7 +21,7 @@ public class Router {
 
     @FunctionalInterface
     public interface onScreenChangeCallback {
-        void call(Pair<String, String> route);
+        void call(String path);
     }
 
 }

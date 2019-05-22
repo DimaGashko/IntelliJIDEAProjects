@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Screen/Screen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/Bootstrap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Router/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Screen/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Screen/ScreenController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Component/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Screen/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Screen/ScreenRouter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -282,6 +280,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Image Layers" order="1" />
