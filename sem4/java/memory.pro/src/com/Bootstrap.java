@@ -11,6 +11,7 @@ import lib.Screen.ScreenException;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class Bootstrap extends Screen implements Initializable {
@@ -30,10 +31,12 @@ public class Bootstrap extends Screen implements Initializable {
     }
 
     private void initEvents() {
-        router.getOnScreenChangeCallbacks().add(this::showScreen);
+        router.getOnScreenChangeCallbacks().add((path, params) -> {
+            this.showScreen(path, params);
+        });
     }
 
-    private void showScreen(String path) {
+    private void showScreen(String path, HashMap<String, String> params) {
         System.out.println(path);
 
         if (path == null || path.isEmpty()) {
@@ -44,7 +47,7 @@ public class Bootstrap extends Screen implements Initializable {
         Parent root;
 
         try {
-            root = loadScreen(path);
+            root = loadScreen(path, params);
         } catch (ScreenException e) {
             alerts.showError("Screen Not Found", e);
             return;
@@ -65,5 +68,9 @@ public class Bootstrap extends Screen implements Initializable {
         router.addScreen("profile", "screens/profile/profile.fxml");
         router.addScreen("statistic", "screens/statistic/statistic.fxml");
         router.addScreen("training", "screens/training/training.fxml");
+
+        router.addComponent("header", "components/header/header.fxml");
+        router.addComponent("login", "components/login/login.fxml");
+        router.addComponent("signup", "components/signup/signup.fxml");
     }
 }

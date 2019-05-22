@@ -8,11 +8,13 @@ import lib.Screen.ScreenException;
 
 import javax.persistence.EntityManager;
 import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
 
 abstract public class Component {
     protected Router router = new Router();
     protected EntityManager em;
 
+    protected HashMap<String, String> params;
     protected Alerts alerts = new Alerts();
 
     public void setRouter(Router router) {
@@ -23,7 +25,7 @@ abstract public class Component {
         this.em = em;
     }
 
-    protected Parent loadScreen(String path) throws ScreenException {
+    protected Parent loadScreen(String path, HashMap<String, String> params) throws ScreenException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(path));
         Parent root;
 
@@ -34,6 +36,7 @@ abstract public class Component {
                 Component component = (Component) ControllerClass.getDeclaredConstructor().newInstance();
                 component.setEntityManager(em);
                 component.setRouter(router);
+                component.setParams(params);
 
                 return component;
             } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
@@ -50,5 +53,9 @@ abstract public class Component {
         }
 
         return root;
+    }
+
+    public void setParams(HashMap<String, String> params) {
+        this.params = params;
     }
 }
