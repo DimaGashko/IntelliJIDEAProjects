@@ -21,11 +21,9 @@ public class Main extends Application {
         stage = primaryStage;
 
         Parent root = FXMLLoader.load(getClass().getResource("bootstrap.fxml"));
-
         Scene scene = new Scene(root);
 
         primaryStage.setTitle("Memory.pro");
-
         setIcon("../img/logo.png");
 
         //primaryStage.setMaximized(true);
