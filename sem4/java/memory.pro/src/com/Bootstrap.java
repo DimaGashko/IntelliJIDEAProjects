@@ -62,8 +62,8 @@ public class Bootstrap extends Screen implements Initializable {
     private void initRouter() {
         router.addScreen("index", "screens/index/index.fxml");
         router.addScreen("auth", "screens/auth/auth.fxml");
-        router.addScreen("screen1", "screens/profile/profile.fxml");
-        router.addScreen("screen1", "screens/statistic/statistic.fxml");
-        router.addScreen("screen1", "screens/training/training.fxml");
+        router.addScreen("profile", "screens/profile/profile.fxml");
+        router.addScreen("statistic", "screens/statistic/statistic.fxml");
+        router.addScreen("training", "screens/training/training.fxml");
     }
 }

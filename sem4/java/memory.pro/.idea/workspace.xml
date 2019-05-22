@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="s">
-      <change beforePath="$PROJECT_DIR$/../lab3-JPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab3-JPA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bootstrap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Component/Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Screen/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Screen/ScreenRouter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +52,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6060606">
+    <splitter split-orientation="horizontal" split-proportion="0.85208714">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -88,8 +85,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="62" column="58" lean-forward="true" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+                <state relative-caret-position="263">
+                  <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#897#898#0" expanded="true" />
@@ -434,12 +431,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558461270884</updated>
       <workItem from="1558461272904" duration="5701000" />
-      <workItem from="1558472363503" duration="41794000" />
+      <workItem from="1558472363503" duration="42176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47495000" />
+    <option name="totallyTimeSpent" value="47877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -455,12 +452,12 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.37459284" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37459284" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.29153094" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29153094" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32899022" />
@@ -881,8 +878,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="62" column="58" lean-forward="true" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
+        <state relative-caret-position="263">
+          <caret line="67" column="5" lean-forward="true" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#897#898#0" expanded="true" />

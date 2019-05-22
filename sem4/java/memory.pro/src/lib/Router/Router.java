@@ -1,14 +1,18 @@
-package lib.Screen;
+package lib.Router;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ScreenRouter {
+public class Router {
     private ArrayList<onScreenChangeCallback> onScreenChangeCallbacks = new ArrayList<>();
     private HashMap<String, String> routes = new HashMap<>();
 
+    public void setScreen(String alias, HashMap<String, String> params) {
+        onScreenChangeCallbacks.forEach((callback) -> callback.call(routes.get(alias), params));
+    }
+
     public void setScreen(String alias) {
-        onScreenChangeCallbacks.forEach((callback) -> callback.call(routes.get(alias)));
+        setScreen(alias, null);
     }
 
     public void addScreen(String alias, String path) {
@@ -21,7 +25,7 @@ public class ScreenRouter {
 
     @FunctionalInterface
     public interface onScreenChangeCallback {
-        void call(String path);
+        void call(String path, HashMap<String, String> params);
     }
 
 }
