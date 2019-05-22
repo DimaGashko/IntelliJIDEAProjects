@@ -26,6 +26,24 @@ public class UserDao {
         em.getTransaction().commit();
     }
 
+    public Optional<User> getUserByUsername(String username) {
+        var query = em.createQuery("select u from User u where u.username = :username", User.class);
+
+        query.setParameter("username", username);
+
+        var users = query.setMaxResults(1).getResultList();
+
+        if (users.isEmpty()) {
+            return Optional.empty();
+        }
+
+        var user = users.get(0);
+        user.setPasswordKey("");
+        user.setPasswordSalt("");
+
+        return Optional.of(user);
+    }
+
     public Optional<String> getSaltByUsername(String username) {
         var query = em.createQuery("select u.passwordSalt from User u where u.username = :username", String.class);
         query.setParameter("username", username);

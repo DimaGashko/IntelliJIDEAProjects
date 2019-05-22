@@ -7,15 +7,20 @@ import security.PasswordUtils;
 import javax.persistence.RollbackException;
 import java.io.*;
 import java.time.LocalDate;
+import java.util.Optional;
 
 public class Auth {
+    private String loginDataPath = "data/auth/config";
+
     private UserDao userDao;
-    private File loginDataFile = new File("data/auth/config");
+    private File loginDataFile;
+    private Optional<LoginData> loginDataOpt;
 
     public Auth(UserDao userDao) {
         this.userDao = userDao;
 
         initLoginDataFile();
+        loadLoginData();
     }
 
     public void signup(User user) throws AuthException {
@@ -39,6 +44,8 @@ public class Auth {
     }
 
     public void login(String username, String password) throws AuthException {
+        logout();
+
         String salt = userDao.getSaltByUsername(username)
                 .orElseThrow(() -> new AuthException("Login failed"));
 
@@ -49,41 +56,33 @@ public class Auth {
             throw new AuthException("Login failed");
         }
 
-        try {
-            saveLoginData(username, key);
+        setLoginData(username, key);
+    }
 
-        } catch (IOException e) {
-            throw new AuthException("Login successful, but cannot save login data");
-        }
+    public void signupAndLogin(User user) throws AuthException {
+        signup(user);
+        login(user.getUsername(), user.getPassword());
+
     }
 
     public boolean isLoggedIn() {
-        try(FileInputStream fis = new FileInputStream(loginDataFile);
-            ObjectInputStream ois = new ObjectInputStream(fis)
-        ) {
-
-            LoginData loginData = (LoginData) ois.readObject();
-            return checkKey(loginData.getUsername(), loginData.getKey());
-
-        } catch (IOException | ClassNotFoundException e) {
+        if (loginDataOpt.isEmpty()) {
             return false;
         }
+
+        LoginData loginData = loginDataOpt.get();
+
+        boolean res = checkKey(loginData.getUsername(), loginData.getKey());
+
+        if (!res) {
+            removeLoginData();
+        }
+
+        return res;
     }
 
     public boolean logout() {
-        return loginDataFile.delete();
-    }
-
-    private void saveLoginData(String username, String key) throws IOException {
-        LoginData loginData = new LoginData(username, key);
-
-        try(FileOutputStream fos = new FileOutputStream(loginDataFile);
-            ObjectOutputStream out = new ObjectOutputStream(fos)
-        ) {
-
-            out.writeObject(loginData);
-
-        }
+        return this.removeLoginData();
     }
 
     private boolean checkKey(String username, String key) {
@@ -91,6 +90,55 @@ public class Auth {
     }
 
     private void initLoginDataFile() {
+        loginDataFile = new File(loginDataPath);
         loginDataFile.getParentFile().mkdirs();
     }
+
+    private void saveLoginData() {
+        if (loginDataOpt.isEmpty()) {
+            return;
+        }
+
+        try(FileOutputStream fos = new FileOutputStream(loginDataFile);
+            ObjectOutputStream out = new ObjectOutputStream(fos)
+        ) {
+
+            out.writeObject(loginDataOpt.get());
+
+        } catch (IOException e) {
+            return;
+        }
+    }
+
+
+    private void setLoginData(String login, String key) {
+        loginDataOpt = Optional.of(new LoginData(login, key));
+        saveLoginData();
+    }
+
+    private boolean removeLoginData() {
+        loginDataOpt = Optional.empty();
+        return loginDataFile.delete();
+    }
+
+    private void loadLoginData() {
+        try(FileInputStream fis = new FileInputStream(loginDataFile);
+            ObjectInputStream ois = new ObjectInputStream(fis)
+        ) {
+
+            loginDataOpt = Optional.of((LoginData) ois.readObject());
+
+        } catch (IOException | ClassNotFoundException e) {
+            loginDataOpt = Optional.empty();
+        }
+    }
+
+    public Optional<String> getLoggedInUsername() {
+        if (loginDataOpt.isEmpty() || !isLoggedIn()) {
+            return Optional.empty();
+        }
+
+        return Optional.of(loginDataOpt.get().getUsername());
+    }
+
 }

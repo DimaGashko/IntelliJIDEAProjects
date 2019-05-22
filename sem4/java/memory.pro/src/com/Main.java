@@ -1,46 +1,77 @@
 package com;
 
-import dao.UserDao;
-import lib.Auth.Auth;
-import lib.Auth.AuthException;
-import lib.Auth.LoginData;
-import schemas.User;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import java.util.Optional;
+import java.io.IOException;
 
-import static security.PasswordUtils.hashPassword;
+public class Main extends Application {
+    Stage stage;
 
-public class Main {
-    private EntityManager em;
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        stage = primaryStage;
+
+        Parent root = FXMLLoader.load(getClass().getResource("bootstrap.fxml"));
+
+        Scene scene = new Scene(root);
+
+        primaryStage.setTitle("Memory.pro");
+
+        setIcon("../img/logo.png");
+
+        primaryStage.setMaximized(true);
+        primaryStage.setMinWidth(600);
+        primaryStage.setMinHeight(400);
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
+    private void setIcon(String path) {
+        try {
+            Image icon = new Image(getClass().getResource(path).toString());
+            stage.getIcons().add(icon);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+            System.out.println();
+        }
+    }
+
+    /*private EntityManager em;
     private UserDao userDao;
     private Auth auth;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Main main = new Main();
         main.run();
     }
 
-    private void run() {
+    private void run() throws Exception {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         em = factory.createEntityManager();
 
         userDao = new UserDao(em);
         auth = new Auth(userDao);
 
-        //isLoggedIn();
-        //System.out.println(auth.logout());
-        isLoggedIn();
-        login("DmitryGashko", "qqqqqqqqww");
-        isLoggedIn();
-        login("DmitryGashko", "qqqqqqqqww");
-        isLoggedIn();
-        login("Kotlin", "kotlinkotlin");
-        isLoggedIn();
 
-        //signup();
+        isLoggedIn();
+        //System.out.println(auth.logout());
+
+        //login("Kotlin", "kotlinkotlin");
+
+        String username = auth.getLoggedInUsername().orElseThrow(Exception::new);
+        User user = userDao.getUserByUsername(username).orElseThrow(Exception::new);
+
+        System.out.println(user);
     }
 
     private void login(String username, String password) {
@@ -74,6 +105,6 @@ public class Main {
         }
 
         System.out.println("Success");
-    }
+    }*/
 
 }

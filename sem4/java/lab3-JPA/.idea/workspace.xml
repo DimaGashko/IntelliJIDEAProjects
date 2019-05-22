@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/dataSources/3fa4374d-efc5-419f-81ba-da803098fc03.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/dataSources/3fa4374d-efc5-419f-81ba-da803098fc03.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/data/auth/config" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/data/auth/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/memory.pro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/memory.pro.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" afterDir="false" />
@@ -137,7 +136,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="741" />
@@ -264,12 +263,12 @@
       <workItem from="1556970203270" duration="20000" />
       <workItem from="1557126166886" duration="335000" />
       <workItem from="1558472272871" duration="15000" />
-      <workItem from="1558472516779" duration="3689000" />
+      <workItem from="1558472516779" duration="4288000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31347000" />
+    <option name="totallyTimeSpent" value="31946000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,7 +280,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <frame x="0" y="27" width="1366" height="741" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
