@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dbb30245-ff20-4327-ae27-840d011b3859" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/memory.pro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/memory.pro.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/lib/Auth/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/com/bootstrap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/com/bootstrap.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
