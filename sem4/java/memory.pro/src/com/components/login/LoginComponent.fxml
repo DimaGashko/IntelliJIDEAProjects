@@ -5,22 +5,14 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fillWidth="false" focusTraversable="true" styleClass="form-wrapper" stylesheets="@../../screens/auth/AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.login.LoginComponent">
-   <children>
+<VBox focusTraversable="true" styleClass="login-component" stylesheets="@../../screens/auth/AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.login.LoginComponent">
       <VBox styleClass="form-group">
-         <children>
-            <JFXTextField fx:id="fxUsername" labelFloat="true" promptText="Username" />
-         </children>
+            <JFXTextField fx:id="fxUsername" promptText="Username" />
       </VBox>
       <VBox styleClass="form-group">
-         <children>
-            <JFXPasswordField fx:id="fxPassword" labelFloat="true" promptText="Password" />
-         </children>
+            <JFXPasswordField fx:id="fxPassword" promptText="Password" />
       </VBox>
       <VBox styleClass="form-group">
-         <children>
-            <JFXButton buttonType="RAISED" onAction="#onLogin" text="Log In" />
-         </children>
+            <JFXButton onAction="#onLogin" text="Log In" />
       </VBox>
-   </children>
 </VBox>

@@ -13,5 +13,5 @@
         <JFXButton onAction="#onLogIn" styleClass="auth-screen__button" text="Log In" />
         <JFXButton onAction="#onSignUp" styleClass="auth-screen__button" text="Sign Up" />
     </HBox>
-    <VBox fx:id="authContent" />
+    <VBox fx:id="authContent" styleClass="auth-screen__content" />
 </VBox>

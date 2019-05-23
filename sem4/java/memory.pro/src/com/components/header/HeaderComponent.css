@@ -74,6 +74,11 @@
   -fx-alignment: center;
 }
 
+.jfx-text-field,
+.jfx-password-field {
+  -jfx-label-float: true;
+}
+
 .header-component {
   -fx-background-color: #24292e;
 }

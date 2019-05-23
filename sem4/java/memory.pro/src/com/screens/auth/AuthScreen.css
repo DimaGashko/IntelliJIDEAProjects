@@ -74,6 +74,11 @@
   -fx-alignment: center;
 }
 
+.jfx-text-field,
+.jfx-password-field {
+  -jfx-label-float: true;
+}
+
 .auth-screen {
   -fx-alignment: top_center;
   -fx-background-color: #fff;
@@ -102,6 +107,10 @@
 }
 .auth-screen__button:hover {
   -fx-border-style: dashed;
+}
+
+.auth-screen__content {
+  -fx-max-width: 500px;
 }
 
 /*# sourceMappingURL=AuthScreen.css.map */
