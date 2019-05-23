@@ -3,6 +3,7 @@ package com;
 import Global.Global;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Pair;
 import lib.Alerts.Alerts;
@@ -17,15 +18,15 @@ import java.util.ResourceBundle;
 public class Bootstrap extends Screen {
     private Global global;
 
-    private String currentScreen = "index";
+    private String currentScreen = "auth";
+
+    @FXML
+    private StackPane screenSlot;
 
     public Bootstrap() {
         super();
         global = new Global();
     }
-
-    @FXML
-    private VBox screenSlot;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

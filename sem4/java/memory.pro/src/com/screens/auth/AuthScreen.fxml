@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+ alignment="CENTER"  xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.auth.AuthScreen">
+
+-->
+
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox stylesheets="@AuthScreen.css" alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.auth.AuthScreen">
-<JFXButton />
+<VBox fillWidth="false" focusTraversable="true" styleClass="wrapper" stylesheets="@AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.auth.AuthScreen">
+    <children>
+      <VBox>
+         <children>
+              <Label styleClass="title" text="Memoty.pro" />
+         </children>
+      </VBox>
+      <HBox>
+         <children>
+            <JFXButton onAction="#onLogIn" text="Log In" />
+            <JFXButton onAction="#onSignUp" text="Sign Up" />
+         </children>
+      </HBox>
+      <VBox fx:id="authContent" />
+    </children>
 </VBox>
