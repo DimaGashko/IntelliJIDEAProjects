@@ -19,8 +19,7 @@ public class AuthScreen extends Screen {
     private Component logInController;
     private Component signUpController;
 
-    @FXML
-    private VBox authContent;
+    @FXML private VBox authContent;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -61,15 +60,11 @@ public class AuthScreen extends Screen {
         signUpController = signupPair.getValue();
     }
 
-    @FXML
-    void onLogIn() {
-        System.out.println("login");
+    @FXML void onLogIn() {
         openLogin();
     }
 
-    @FXML
-    void onSignUp() {
-        System.out.println("signup");
+    @FXML void onSignUp() {
         openSignup();
     }
 

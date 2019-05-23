@@ -44,8 +44,6 @@ public class Auth {
     }
 
     public void login(String username, String password) throws AuthException {
-        logout();
-
         String salt = userDao.getSaltByUsername(username)
                 .orElseThrow(() -> new AuthException("Login failed"));
 
@@ -109,7 +107,6 @@ public class Auth {
             return;
         }
     }
-
 
     private void setLoginData(String login, String key) {
         loginDataOpt = Optional.of(new LoginData(login, key));

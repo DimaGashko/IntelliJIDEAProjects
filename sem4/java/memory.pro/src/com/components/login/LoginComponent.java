@@ -12,11 +12,8 @@ import java.util.ResourceBundle;
 
 public class LoginComponent extends Component {
 
-    @FXML
-    private JFXTextField fxUsername;
-
-    @FXML
-    private JFXPasswordField fxPassword;
+    @FXML private JFXTextField fxUsername;
+    @FXML private JFXPasswordField fxPassword;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -37,8 +34,7 @@ public class LoginComponent extends Component {
         global.setScreen("index");
     }
 
-    @FXML
-    void onLogin() {
+    @FXML void onLogin() {
         login();
     }
 

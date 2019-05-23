@@ -2,25 +2,24 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXToolbar?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<JFXToolbar stylesheets="@HeaderComponent.css" style="-fx-background-color: #24292e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.header.HeaderComponent">
+<JFXToolbar styleClass="header-component" stylesheets="@HeaderComponent.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.header.HeaderComponent">
    <left>
-      <HBox BorderPane.alignment="CENTER">
+      <HBox>
          <children>
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onHome" text="Home" textFill="WHITE" />
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onTraining" text="Training" textFill="WHITE" />
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onStatistic" text="Statistic" textFill="WHITE" />
+            <JFXButton styleClass="header__button" onAction="#onHome" text="Home" />
+            <JFXButton styleClass="header__button" onAction="#onTraining" text="Training" />
+            <JFXButton styleClass="header__button" onAction="#onStatistic" text="Statistic" />
          </children>
       </HBox>
    </left>
    <right>
-      <HBox BorderPane.alignment="CENTER">
+      <HBox>
          <children>
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onLogout" text="Log out" textFill="WHITE" />
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onAuth" text="Log In" textFill="WHITE" />
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onProfile" text="Profile" textFill="WHITE" />
+            <JFXButton styleClass="header__button" onAction="#onLogout" text="Log out" />
+            <JFXButton styleClass="header__button" onAction="#onAuth" text="Log In" />
+            <JFXButton styleClass="header__button" onAction="#onProfile" text="Profile" />
          </children>
       </HBox>
    </right>

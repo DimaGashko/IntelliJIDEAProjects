@@ -49,33 +49,22 @@ public class HeaderComponent extends Component {
         global.setScreen("auth");
     }
 
-    @FXML
-    void onAuth() {
+    @FXML void onAuth() {
         goToAuth();
     }
-
-    @FXML
-    void onHome() {
+    @FXML void onHome() {
         goHome();
     }
-
-    @FXML
-    void onProfile() {
+    @FXML void onProfile() {
         goToProfile();
     }
-
-    @FXML
-    void onStatistic() {
+    @FXML void onStatistic() {
         goToStatistic();
     }
-
-    @FXML
-    void onTraining() {
+    @FXML void onTraining() {
         goToTraining();
     }
-
-    @FXML
-    void onLogout() {
+    @FXML void onLogout() {
         logout();
     }
 }

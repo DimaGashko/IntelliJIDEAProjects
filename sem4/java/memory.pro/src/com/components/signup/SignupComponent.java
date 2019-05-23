@@ -13,20 +13,11 @@ import java.util.ResourceBundle;
 
 public class SignupComponent extends Component {
 
-    @FXML
-    private JFXTextField fxFirstName;
-
-    @FXML
-    private JFXTextField fxLastName;
-
-    @FXML
-    private JFXTextField fxUsername;
-
-    @FXML
-    private JFXTextField fxEmail;
-
-    @FXML
-    private JFXPasswordField fxPassword;
+    @FXML private JFXTextField fxFirstName;
+    @FXML private JFXTextField fxLastName;
+    @FXML private JFXTextField fxUsername;
+    @FXML private JFXTextField fxEmail;
+    @FXML private JFXPasswordField fxPassword;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,8 +49,7 @@ public class SignupComponent extends Component {
         global.setScreen("index");
     }
 
-    @FXML
-    void onSignup() {
+    @FXML void onSignup() {
         signup();
     }
 
