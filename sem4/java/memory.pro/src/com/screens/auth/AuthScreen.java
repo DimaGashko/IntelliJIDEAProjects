@@ -16,15 +16,11 @@ public class AuthScreen extends Screen {
     private Parent loginRoot;
     private Parent signupRoot;
 
-    private Component logInController;
-    private Component signUpController;
-
     @FXML private VBox authContent;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initComponents();
-
         openLogin();
     }
 
@@ -39,31 +35,19 @@ public class AuthScreen extends Screen {
     }
 
     private void initComponents() {
-
-        Pair<Parent, Component> loginPair;
-        Pair<Parent, Component> signupPair;
-
         try {
-            loginPair = loadComponent(global.getComponents().get("login"), null);
-            signupPair = loadComponent(global.getComponents().get("signup"), null);
+            loginRoot = loadComponent(global.getComponents().get("login"), null).getKey();
+            signupRoot = loadComponent(global.getComponents().get("signup"), null).getKey();
 
         } catch (ComponentException e) {
             alerts.showError(e);
             System.exit(1);
-            return;
         }
-
-        loginRoot = loginPair.getKey();
-        logInController = loginPair.getValue();
-
-        signupRoot = signupPair.getKey();
-        signUpController = signupPair.getValue();
     }
 
     @FXML void onLogIn() {
         openLogin();
     }
-
     @FXML void onSignUp() {
         openSignup();
     }

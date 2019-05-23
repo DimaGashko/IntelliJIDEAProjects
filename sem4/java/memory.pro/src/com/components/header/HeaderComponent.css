@@ -70,6 +70,10 @@
   -fx-background-insets: 0;
 }
 
+.form-group {
+  -fx-alignment: center;
+}
+
 .header-component {
   -fx-background-color: #24292e;
 }

@@ -70,11 +70,17 @@
   -fx-background-insets: 0;
 }
 
+.form-group {
+  -fx-alignment: center;
+}
+
 .bootstrap {
   -fx-spacing: 5px;
+  -fx-background-color: #fff;
 }
 .bootstrap .headerSlot {
   -fx-padding: 0 0 15 0;
+  -fx-background-color: #fff;
 }
 
 /*# sourceMappingURL=Bootstrap.css.map */

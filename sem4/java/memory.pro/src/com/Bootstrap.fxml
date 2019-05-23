@@ -3,7 +3,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox styleClass="bootstrap" stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
+<VBox styleClass="bootstrap" focusTraversable="true" stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
 
     <ScrollPane fitToHeight="true" fitToWidth="true" vbarPolicy="NEVER">
         <content>
