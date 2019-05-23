@@ -34,6 +34,11 @@ public class Alerts {
         return show(alertErr, e.getMessage(), e.getMessage(), getStackTrace(e));
     }
 
+    public boolean ask(String question) {
+        var ans = show(Alerts.alertConfirm, "Confirm", question, null);
+        return (ans.isPresent() && ans.get() == ButtonType.OK);
+    }
+
     private String getStackTrace(Exception err) {
         StringWriter sw = new StringWriter();
         PrintWriter pw = new PrintWriter(sw);

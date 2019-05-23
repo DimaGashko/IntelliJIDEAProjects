@@ -6,14 +6,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.util.Pair;
 import lib.Alerts.Alerts;
-import lib.Router.Router;
-import lib.Screen.ScreenException;
 
-import javax.persistence.EntityManager;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
-import java.util.Optional;
 
 abstract public class Component implements Initializable {
     protected HashMap<String, String> params;

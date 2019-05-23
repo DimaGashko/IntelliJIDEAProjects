@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXToolbar?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.layout.HBox?>
 
-<JFXToolbar styleClass="header-component" stylesheets="@HeaderComponent.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.header.HeaderComponent">
-   <left>
-      <HBox>
-         <children>
-            <JFXButton styleClass="header__button" onAction="#onHome" text="Home" />
-            <JFXButton styleClass="header__button" onAction="#onTraining" text="Training" />
-            <JFXButton styleClass="header__button" onAction="#onStatistic" text="Statistic" />
-         </children>
-      </HBox>
-   </left>
-   <right>
-      <HBox>
-         <children>
-            <JFXButton styleClass="header__button" onAction="#onLogout" text="Log out" />
-            <JFXButton styleClass="header__button" onAction="#onAuth" text="Log In" />
-            <JFXButton styleClass="header__button" onAction="#onProfile" text="Profile" />
-         </children>
-      </HBox>
-   </right>
+<JFXToolbar xmlns:fx="http://javafx.com/fxml/1" styleClass="header-component" stylesheets="@HeaderComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.header.HeaderComponent">
+    <left>
+        <HBox>
+            <children>
+                <JFXButton styleClass="header__button" onAction="#onHome" text="Home"/>
+                <JFXButton styleClass="header__button" onAction="#onTraining" text="Training"/>
+                <JFXButton styleClass="header__button" onAction="#onStatistic" text="Statistic"/>
+                <JFXButton styleClass="header__button" onAction="#onProfile" text="Profile"/>
+            </children>
+        </HBox>
+    </left>
+    <right>
+        <HBox>
+            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onLogout" text="Log out"/>
+        </HBox>
+    </right>
+
 </JFXToolbar>

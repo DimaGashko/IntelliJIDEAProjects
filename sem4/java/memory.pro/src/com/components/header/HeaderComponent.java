@@ -1,8 +1,6 @@
 package com.components.header;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.ButtonType;
-import lib.Alerts.Alerts;
 import lib.Component.Component;
 
 import java.net.URL;
@@ -12,7 +10,7 @@ public class HeaderComponent extends Component {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Header");
+
     }
 
     private void goHome() {
@@ -20,49 +18,36 @@ public class HeaderComponent extends Component {
     }
 
     private void goToTraining() {
-        System.out.println("Training");
-        //global.setScreen("training");
+        global.setScreen("training");
     }
 
     private void goToStatistic() {
-        System.out.println("Statistic");
-        //global.setScreen("statistic");
-    }
-
-    private void goToAuth() {
-        global.setScreen("auth");
+        global.setScreen("statistic");
     }
 
     private void goToProfile() {
-        System.out.println("Profile");
-        //global.setScreen("profile");
+        global.setScreen("profile");
     }
 
     private void logout() {
-        var ans = alerts.show(Alerts.alertConfirm, "Logout?");
-
-        if (ans.isPresent() && ans.get() != ButtonType.OK) {
-            return;
-        }
+        if (!global.getAuth().isLoggedIn()) return;
+        if (!alerts.ask("Logout?")) return;
 
         global.getAuth().logout();
         global.setScreen("auth");
     }
 
-    @FXML void onAuth() {
-        goToAuth();
-    }
     @FXML void onHome() {
         goHome();
-    }
-    @FXML void onProfile() {
-        goToProfile();
     }
     @FXML void onStatistic() {
         goToStatistic();
     }
     @FXML void onTraining() {
         goToTraining();
+    }
+    @FXML void onProfile() {
+        goToProfile();
     }
     @FXML void onLogout() {
         logout();
