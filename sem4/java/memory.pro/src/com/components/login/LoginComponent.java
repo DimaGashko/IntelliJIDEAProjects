@@ -30,7 +30,7 @@ public class LoginComponent extends Component {
         try {
             global.getAuth().login(username, password);
         } catch (AuthException e) {
-            alerts.show(Alerts.alertWarn, "Wrong username of password");
+            alerts.show(Alerts.alertWarn, e.getMessage());
             return;
         }
 
