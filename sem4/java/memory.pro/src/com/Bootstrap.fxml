@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.StackPane?>
 
 
-<ScrollPane fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
+<ScrollPane stylesheets="@Bootstrap.css" fitToHeight="true" fitToWidth="true" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
    <content>
       <StackPane fx:id="screenSlot">
 

@@ -70,22 +70,4 @@
   -fx-background-insets: 0;
 }
 
-.wrapper {
-  -fx-padding: 20px;
-  -fx-alignment: top_center;
-}
-
-.title {
-  -fx-font-size: 25px;
-}
-
-.form-wrapper {
-  -fx-alignment: top_center;
-  -fx-spacing: 15px;
-}
-
-.form-group {
-  -fx-alignment: center;
-}
-
-/*# sourceMappingURL=AuthScreen.css.map */
+/*# sourceMappingURL=Bootstrap.css.map */

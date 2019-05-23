@@ -8,7 +8,6 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 public class Main extends Application {
     Stage stage;
@@ -21,7 +20,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         stage = primaryStage;
 
-        Parent root = FXMLLoader.load(getClass().getResource("bootstrap.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Bootstrap.fxml"));
         Scene scene = new Scene(root);
 
         primaryStage.setTitle("Memory.pro");
