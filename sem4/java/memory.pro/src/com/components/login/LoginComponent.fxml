@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.VBox?>
-<VBox fillWidth="false" focusTraversable="true" styleClass="wrapper" stylesheets="@LoginComponent.css"
-      xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.components.login.LoginComponent">
-    <children>
-        <VBox>
-            <children>
-                <Label styleClass="title" text="Log In"/>
-            </children>
-        </VBox>
-    </children>
+
+<VBox fillWidth="false" focusTraversable="true" styleClass="form-wrapper" stylesheets="@../../screens/auth/AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.login.LoginComponent">
+   <children>
+      <VBox styleClass="form-group">
+         <children>
+            <JFXTextField fx:id="fxUsername" labelFloat="true" promptText="Username" />
+         </children>
+      </VBox>
+      <VBox styleClass="form-group">
+         <children>
+            <JFXPasswordField fx:id="fxPassword" labelFloat="true" promptText="Password" />
+         </children>
+      </VBox>
+      <VBox styleClass="form-group">
+         <children>
+            <JFXButton onAction="#onLogin" text="Log In" />
+         </children>
+      </VBox>
+   </children>
 </VBox>
