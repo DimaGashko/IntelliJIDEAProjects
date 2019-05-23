@@ -71,12 +71,28 @@
 }
 
 .form-group {
+  -fx-padding: 0 0 35px 0;
   -fx-alignment: center;
 }
 
 .jfx-text-field,
 .jfx-password-field {
   -jfx-label-float: true;
+}
+
+.login-component__login {
+  -fx-background-color: #24292e;
+  -fx-text-fill: #fff;
+}
+
+.login-component .jfx-text-field,
+.login-component .jfx-password-field {
+  -fx-pref-width: 300px;
+}
+
+.login-component__login {
+  -fx-pref-width: 300px;
+  -fx-padding: 10px 0;
 }
 
 /*# sourceMappingURL=LoginComponent.css.map */

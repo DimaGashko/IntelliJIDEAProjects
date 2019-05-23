@@ -5,14 +5,23 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox focusTraversable="true" styleClass="login-component" stylesheets="@../../screens/auth/AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.login.LoginComponent">
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<VBox focusTraversable="true" styleClass="login-component" stylesheets="@LoginComponent.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.login.LoginComponent">
       <VBox styleClass="form-group">
-            <JFXTextField fx:id="fxUsername" promptText="Username" />
+            <JFXTextField fx:id="fxUsername" promptText="Username">
+                  <validators>
+                        <RequiredFieldValidator message="Please, enter your username" />
+                  </validators>
+            </JFXTextField>
       </VBox>
       <VBox styleClass="form-group">
-            <JFXPasswordField fx:id="fxPassword" promptText="Password" />
+            <JFXPasswordField fx:id="fxPassword" promptText="Password">
+                  <validators>
+                        <RequiredFieldValidator message="Please, enter your password" />
+                  </validators>
+            </JFXPasswordField>
       </VBox>
       <VBox styleClass="form-group">
-            <JFXButton onAction="#onLogin" text="Log In" />
+            <JFXButton onAction="#onLogin" styleClass="login-component__login" text="Log In" />
       </VBox>
 </VBox>

@@ -71,6 +71,7 @@
 }
 
 .form-group {
+  -fx-padding: 0 0 35px 0;
   -fx-alignment: center;
 }
 
@@ -81,10 +82,6 @@
 
 .bootstrap {
   -fx-spacing: 5px;
-  -fx-background-color: #fff;
-}
-.bootstrap .headerSlot {
-  -fx-padding: 0 0 15 0;
   -fx-background-color: #fff;
 }
 

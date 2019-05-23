@@ -1,4 +1,16 @@
 @import ../../styles/base
 
+$form-width: 300px
+
 .login-component
+
+  .jfx-text-field,
+  .jfx-password-field
+    -fx-pref-width: $form-width
+
+.login-component__login
+  @extend %contrast-button
+
+  -fx-pref-width: $form-width
+  -fx-padding: 10px 0
 
