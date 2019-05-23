@@ -19,7 +19,7 @@
       </VBox>
       <VBox styleClass="form-group">
          <children>
-            <JFXButton onAction="#onLogin" text="Log In" />
+            <JFXButton buttonType="RAISED" onAction="#onLogin" text="Log In" />
          </children>
       </VBox>
    </children>

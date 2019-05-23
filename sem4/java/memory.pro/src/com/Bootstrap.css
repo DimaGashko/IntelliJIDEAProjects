@@ -70,4 +70,11 @@
   -fx-background-insets: 0;
 }
 
+.bootstrap {
+  -fx-spacing: 5px;
+}
+.bootstrap .headerSlot {
+  -fx-padding: 0 0 15 0;
+}
+
 /*# sourceMappingURL=Bootstrap.css.map */

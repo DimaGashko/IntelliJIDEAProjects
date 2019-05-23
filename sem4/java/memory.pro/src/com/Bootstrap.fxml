@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
+<VBox styleClass="bootstrap" stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
 
-    <VBox fx:id="headerSlot" />
+    <ScrollPane fitToHeight="true" fitToWidth="true" vbarPolicy="NEVER">
+        <content>
+            <VBox fx:id="headerSlot" styleClass="headerSlot" />
+        </content>
+    </ScrollPane>
 
     <ScrollPane fitToHeight="true" fitToWidth="true">
         <content>
-            <VBox fx:id="screenSlot">
-            <padding>
-               <Insets top="20.0" />
-            </padding></VBox>
+            <VBox fx:id="screenSlot" />
         </content>
     </ScrollPane>
 

@@ -34,7 +34,7 @@
       </VBox>
       <VBox styleClass="form-group">
          <children>
-            <JFXButton text="Sign Up" onAction="#onSignup" />
+            <JFXButton buttonType="RAISED" onAction="#onSignup" text="Get Started" />
          </children>
       </VBox>
     </children>

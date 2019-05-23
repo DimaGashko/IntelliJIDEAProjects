@@ -1,6 +1,8 @@
 package com.components.header;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.ButtonType;
+import lib.Alerts.Alerts;
 import lib.Component.Component;
 
 import java.net.URL;
@@ -37,6 +39,12 @@ public class HeaderComponent extends Component {
     }
 
     private void logout() {
+        var ans = alerts.show(Alerts.alertConfirm, "Logout?");
+
+        if (ans.isPresent() && ans.get() != ButtonType.OK) {
+            return;
+        }
+
         global.getAuth().logout();
         global.setScreen("auth");
     }
