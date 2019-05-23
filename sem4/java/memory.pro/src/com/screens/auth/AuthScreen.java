@@ -16,7 +16,8 @@ public class AuthScreen extends Screen {
     private Parent loginRoot;
     private Parent signupRoot;
 
-    @FXML private VBox authContent;
+    @FXML private VBox fxAuthScreen;
+    @FXML private VBox fxAuthScreenContent;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -25,13 +26,19 @@ public class AuthScreen extends Screen {
     }
 
     private void openLogin() {
-        authContent.getChildren().clear();
-        authContent.getChildren().add(loginRoot);
+        fxAuthScreenContent.getChildren().clear();
+        fxAuthScreenContent.getChildren().add(loginRoot);
+
+        fxAuthScreen.getStyleClass().removeIf(className -> className.equals("auth-screen--signup"));
+        fxAuthScreen.getStyleClass().add("auth-screen--login");
     }
 
     private void openSignup() {
-        authContent.getChildren().clear();
-        authContent.getChildren().add(signupRoot);
+        fxAuthScreenContent.getChildren().clear();
+        fxAuthScreenContent.getChildren().add(signupRoot);
+
+        fxAuthScreen.getStyleClass().removeIf(className -> className.equals("auth-screen--login"));
+        fxAuthScreen.getStyleClass().add("auth-screen--signup");
     }
 
     private void initComponents() {
