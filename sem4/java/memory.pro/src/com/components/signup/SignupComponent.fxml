@@ -31,7 +31,7 @@
         <JFXTextField fx:id="fxEmail" labelFloat="true" promptText="Email">
             <validators>
                 <RequiredFieldValidator message="Required field" />
-                <RegexValidator regexPattern="${controller.emailRegExp}" />
+                <RegexValidator fx:id="fxEmailValidator" message="Please, enter a valid email address" />
             </validators>
         </JFXTextField>
     </VBox>
