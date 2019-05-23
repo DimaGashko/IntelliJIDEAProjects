@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<JFXToolbar style="-fx-background-color: #24292e;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.header.HeaderComponent">
+   <left>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#onHome" text="Home" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" onAction="#onTraining" text="Training" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" onAction="#onStatistic" text="Statistic" textFill="WHITE" />
+         </children>
+      </HBox>
+   </left>
+   <right>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#onProfile" text="Profile" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" onAction="#onAuth" text="Log In" textFill="WHITE" />
+            <JFXButton buttonType="RAISED" onAction="#onLogout" text="Log out" textFill="WHITE" />
+         </children>
+      </HBox>
+   </right>
+</JFXToolbar>

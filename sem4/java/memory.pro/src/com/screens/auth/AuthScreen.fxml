@@ -14,7 +14,7 @@
     <children>
       <VBox>
          <children>
-              <Label styleClass="title" text="Memoty.pro" />
+              <Label styleClass="title" text="MEMORY.PRO" />
          </children>
       </VBox>
       <HBox>

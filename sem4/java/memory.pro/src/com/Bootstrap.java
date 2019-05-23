@@ -18,10 +18,13 @@ import java.util.ResourceBundle;
 public class Bootstrap extends Screen {
     private Global global;
 
-    private String currentScreen = "auth";
+    private String currentScreen = "index";
 
     @FXML
-    private StackPane screenSlot;
+    private VBox screenSlot;
+
+    @FXML
+    private VBox headerSlot;
 
     public Bootstrap() {
         super();
@@ -35,6 +38,7 @@ public class Bootstrap extends Screen {
     }
 
     private void start() {
+        renderHeader();
         showScreen(currentScreen);
     }
 
@@ -75,6 +79,20 @@ public class Bootstrap extends Screen {
         screenSlot.getChildren().add(root);
 
         screen.showed();
+    }
+
+    private void renderHeader() {
+        Parent header = null;
+
+        try {
+            header = loadComponent(global.getComponents().get("header"), null).getKey();
+        } catch (ComponentException e) {
+            alerts.show(Alerts.alertErr, "Cannot render header");
+            e.printStackTrace();
+        }
+
+        headerSlot.getChildren().clear();
+        headerSlot.getChildren().add(header);
     }
 
     private void showScreen(String alias) {
