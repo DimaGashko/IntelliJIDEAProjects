@@ -1,11 +1,8 @@
-package com.screens.auth;
+package com.screens.AuthScreen;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
-import javafx.util.Pair;
-import lib.Component.Component;
 import lib.Component.ComponentException;
 import lib.Screen.Screen;
 
@@ -43,8 +40,8 @@ public class AuthScreen extends Screen {
 
     private void initComponents() {
         try {
-            loginRoot = loadComponent(global.getComponents().get("login"), null).getKey();
-            signupRoot = loadComponent(global.getComponents().get("signup"), null).getKey();
+            loginRoot = loadComponent("login").getKey();
+            signupRoot = loadComponent("signup").getKey();
 
         } catch (ComponentException e) {
             alerts.showError(e);

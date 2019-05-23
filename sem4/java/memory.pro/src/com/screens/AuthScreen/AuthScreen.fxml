@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox focusTraversable="true" fillWidth="false" fx:id="fxAuthScreen" styleClass="auth-screen" stylesheets="@AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.auth.AuthScreen">
+<VBox focusTraversable="true" fillWidth="false" fx:id="fxAuthScreen" styleClass="auth-screen" stylesheets="@AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.AuthScreen.AuthScreen">
     <VBox styleClass="auth-screen__header">
         <Label styleClass="auth-screen__title" text="MEMORY.PRO" />
     </VBox>

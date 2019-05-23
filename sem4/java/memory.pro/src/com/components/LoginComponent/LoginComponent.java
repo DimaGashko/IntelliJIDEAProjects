@@ -1,8 +1,7 @@
-package com.components.login;
+package com.components.LoginComponent;
 
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import com.jfoenix.controls.base.IFXLabelFloatControl;
 import javafx.fxml.FXML;
 import lib.Alerts.Alerts;
 import lib.Auth.AuthException;
@@ -34,13 +33,13 @@ public class LoginComponent extends Component {
         String password = fxPassword.getText();
 
         try {
-            global.getAuth().login(username, password);
+            common.getAuth().login(username, password);
         } catch (AuthException e) {
             alerts.show(Alerts.alertWarn, e.getMessage());
             return;
         }
 
-        global.setScreen("index");
+        common.setScreen("index");
     }
 
     private boolean isValid() {

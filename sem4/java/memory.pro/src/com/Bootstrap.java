@@ -1,9 +1,8 @@
 package com;
 
-import Global.Global;
+import com.Common.Common;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Pair;
 import lib.Alerts.Alerts;
@@ -16,7 +15,7 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class Bootstrap extends Screen {
-    private Global global;
+    private Common common;
 
     private String currentScreen;
 
@@ -28,7 +27,7 @@ public class Bootstrap extends Screen {
 
     public Bootstrap() {
         super();
-        global = new Global();
+        common = new Common();
     }
 
     @Override
@@ -43,13 +42,13 @@ public class Bootstrap extends Screen {
     }
 
     private void initEvents() {
-        global.getOnScreenChangeCallbacks().add(this::showScreen);
+        common.getOnScreenChangeCallbacks().add(this::showScreen);
     }
 
     private void showScreen(String alias, HashMap<String, String> params) {
         if (alias.equals(currentScreen)) return;
 
-        String path = global.getScreens().get(alias);
+        String path = common.getScreens().get(alias);
 
         if (path == null || path.isEmpty()) {
             alerts.show(Alerts.alertErr, "Screen Not Found");
@@ -62,18 +61,17 @@ public class Bootstrap extends Screen {
             return;
         }
 
-        Pair<Parent, Component> componentPair;
+        Pair<Parent, Screen> componentPair;
 
         try {
-            componentPair = loadComponent(path, params);
+            componentPair = loadScreen(alias, params);
         } catch (ComponentException e) {
             alerts.showError(e);
-            showScreen("index");
             return;
         }
 
         Parent root = componentPair.getKey();
-        Screen screen = (Screen)componentPair.getValue();
+        Screen screen = componentPair.getValue();
 
         currentScreen = alias;
 
@@ -87,9 +85,9 @@ public class Bootstrap extends Screen {
         Parent header = null;
 
         try {
-            header = loadComponent(global.getComponents().get("header"), null).getKey();
+            header = loadComponent("header").getKey();
         } catch (ComponentException e) {
-            alerts.show(Alerts.alertErr, "Cannot render header");
+            alerts.show(Alerts.alertErr, "Cannot render Header");
             e.printStackTrace();
         }
 
@@ -102,11 +100,11 @@ public class Bootstrap extends Screen {
     }
 
     private boolean checkAuth() {
-        return global.getAuth().isLoggedIn();
+        return common.getAuth().isLoggedIn();
     }
 
-    public Global getGlobal() {
-        return global;
+    public Common getCommon() {
+        return common;
     }
 
 }

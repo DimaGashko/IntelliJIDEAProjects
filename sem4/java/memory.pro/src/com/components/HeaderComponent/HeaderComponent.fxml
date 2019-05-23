@@ -3,7 +3,7 @@
 <?import com.jfoenix.controls.*?>
 <?import javafx.scene.layout.HBox?>
 
-<JFXToolbar xmlns:fx="http://javafx.com/fxml/1" styleClass="header-component" stylesheets="@HeaderComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.header.HeaderComponent">
+<JFXToolbar xmlns:fx="http://javafx.com/fxml/1" styleClass="header-component" stylesheets="@HeaderComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.HeaderComponent.HeaderComponent">
     <left>
         <HBox>
             <children>

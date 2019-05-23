@@ -1,4 +1,4 @@
-package com.components.header;
+package com.components.HeaderComponent;
 
 import javafx.fxml.FXML;
 import lib.Component.Component;
@@ -14,27 +14,27 @@ public class HeaderComponent extends Component {
     }
 
     private void goHome() {
-        global.setScreen("index");
+        common.setScreen("index");
     }
 
     private void goToTraining() {
-        global.setScreen("training");
+        common.setScreen("training");
     }
 
     private void goToStatistic() {
-        global.setScreen("statistic");
+        common.setScreen("statistic");
     }
 
     private void goToProfile() {
-        global.setScreen("profile");
+        common.setScreen("profile");
     }
 
     private void logout() {
-        if (!global.getAuth().isLoggedIn()) return;
+        if (!common.getAuth().isLoggedIn()) return;
         if (!alerts.ask("Logout?")) return;
 
-        global.getAuth().logout();
-        global.setScreen("auth");
+        common.getAuth().logout();
+        common.setScreen("auth");
     }
 
     @FXML void onHome() {

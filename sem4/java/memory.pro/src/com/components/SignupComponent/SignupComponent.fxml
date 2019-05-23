@@ -5,7 +5,7 @@
 <?import com.jfoenix.validation.RequiredFieldValidator?>
 <?import com.jfoenix.validation.RegexValidator?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true" styleClass="signup-component" stylesheets="@SignupComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.signup.SignupComponent">
+<VBox xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true" styleClass="signup-component" stylesheets="@SignupComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.SignupComponent.SignupComponent">
     <VBox styleClass="form-group">
         <JFXTextField fx:id="fxFirstName" labelFloat="true" promptText="First Name">
             <validators>

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import com.jfoenix.validation.RequiredFieldValidator?>
 
-<VBox focusTraversable="true" styleClass="login-component" stylesheets="@LoginComponent.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.login.LoginComponent">
+<VBox focusTraversable="true" styleClass="login-component" stylesheets="@LoginComponent.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.LoginComponent.LoginComponent">
       <VBox styleClass="form-group">
             <JFXTextField fx:id="fxUsername" promptText="Username">
                   <validators>

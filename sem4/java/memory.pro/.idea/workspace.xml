@@ -3,9 +3,34 @@
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="s">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Global/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Global/Global.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Global/Global.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Common/Common.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bootstrap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/header/HeaderComponent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/header/HeaderComponent.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/header/HeaderComponent.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/header/HeaderComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/header/HeaderComponent.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/login/LoginComponent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/login/LoginComponent.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/login/LoginComponent.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/login/LoginComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/login/LoginComponent.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/signup/SignupComponent.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/index/IndexScreen.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/index/IndexScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Auth/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Auth/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Component/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Router/Router.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,14 +80,14 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6968864">
+    <splitter split-orientation="horizontal" split-proportion="0.8033395">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+            <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
+                <state relative-caret-position="237">
+                  <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -71,20 +96,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
+            <entry file="file://$PROJECT_DIR$/src/lib/Alerts/Alerts.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="59" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="59" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Global/Global.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+                <state relative-caret-position="135">
+                  <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -93,20 +108,46 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/components/signup/SignupComponent.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
+            <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="57">
-                  <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+                <state relative-caret-position="105">
+                  <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#2386#2387#0" expanded="true" />
+                    <element signature="e#2425#2426#0" expanded="true" />
+                    <element signature="e#2460#2461#0" expanded="true" />
+                    <element signature="e#2512#2513#0" expanded="true" />
+                    <element signature="e#2545#2546#0" expanded="true" />
+                    <element signature="e#2574#2575#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/USER">
+              <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+                <state>
+                  <filtering enabled="true" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/components/signup/SignupComponent.java">
+            <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3fa4374d-efc5-419f-81ba-da803098fc03/console.sql">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="533">
-                  <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+                <state>
+                  <caret column="20" selection-start-column="20" selection-end-column="20" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/lib/Auth/Auth.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1170">
+                  <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -115,10 +156,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/components/login/LoginComponent.java">
+            <entry file="file://$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="173">
-                  <caret line="50" column="5" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+                <state relative-caret-position="210">
+                  <caret line="14" selection-start-line="14" selection-end-line="14" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -127,10 +168,31 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/screens/auth/AuthScreen.fxml">
+            <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="660">
+                  <caret line="60" selection-start-line="60" selection-end-line="60" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.fxml">
               <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
+                <state relative-caret-position="72">
                   <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
                 </state>
               </provider>
@@ -140,11 +202,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/components/login/LoginComponent.sass">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="90">
-                  <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+                  <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -153,14 +215,26 @@
             <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.fxml">
               <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="18" lean-forward="true" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+                <state relative-caret-position="90">
+                  <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="113">
+                  <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/screens/auth/AuthScreen.sass">
+            <entry file="file://$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="97">
                   <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
@@ -169,10 +243,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/components/signup/SignupComponent.sass">
+            <entry file="file://$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.sass">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="105">
-                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+                  <caret line="7" selection-start-line="7" selection-end-line="7" />
                 </state>
               </provider>
             </entry>
@@ -195,6 +269,10 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Book</find>
+      <find>setScreen</find>
+      <find>index</find>
+      <find>showScreen</find>
+      <find>System.out</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -203,17 +281,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/screens/index/index.fxml" />
-        <option value="$PROJECT_DIR$/src/com/screens/auth/index/index.fxml" />
-        <option value="$PROJECT_DIR$/src/com/screens/auth/index/AuthScreen.java" />
-        <option value="$PROJECT_DIR$/src/com/screens/auth/index/AuthScreen.fxml" />
-        <option value="$PROJECT_DIR$/src/lib/Router/Router.java" />
-        <option value="$PROJECT_DIR$/src/AppBus/AppBus.java" />
-        <option value="$PROJECT_DIR$/src/com/screens/index/IndexScreen.fxml" />
-        <option value="$PROJECT_DIR$/src/lib/Screen/Screen.java" />
-        <option value="$PROJECT_DIR$/src/com/screens/auth/css.css.sass" />
-        <option value="$PROJECT_DIR$/src/com/screens/auth/css.css" />
-        <option value="$PROJECT_DIR$/src/com/screens/styles/_vars.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/styles/components/_vars.sass" />
         <option value="$PROJECT_DIR$/src/com/bootstrap.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/styles/components/_global.sass" />
@@ -224,14 +291,12 @@
         <option value="$PROJECT_DIR$/src/com/components/header/Header.sass" />
         <option value="$PROJECT_DIR$/src/com/components/header/Header.fxml" />
         <option value="$PROJECT_DIR$/src/com/components/header/Header.java" />
-        <option value="$PROJECT_DIR$/src/com/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/lib/Auth/Auth.java" />
         <option value="$PROJECT_DIR$/src/com/components/header/HeaderComponent.fxml" />
         <option value="$PROJECT_DIR$/src/lib/Alerts/Alerts.java" />
         <option value="$PROJECT_DIR$/src/com/components/header/HeaderComponent.sass" />
         <option value="$PROJECT_DIR$/src/com/styles/_base.sass" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_button.sass" />
-        <option value="$PROJECT_DIR$/src/lib/Component/Component.java" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_vars.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.css" />
         <option value="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.sass" />
@@ -241,11 +306,9 @@
         <option value="$PROJECT_DIR$/src/com/components/login/LoginComponent.sass" />
         <option value="$PROJECT_DIR$/src/com/components/signup/SignupComponent.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/auth/AuthScreen.fxml" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3fa4374d-efc5-419f-81ba-da803098fc03/console.sql" />
         <option value="$PROJECT_DIR$/src/lib/InputValidation/InputValidation.java" />
         <option value="$PROJECT_DIR$/src/com/components/login/LoginComponent.java" />
         <option value="$PROJECT_DIR$/src/lib/Validation/Validation.java" />
-        <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/com/Bootstrap.fxml" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_global.sass" />
         <option value="$PROJECT_DIR$/src/com/Bootstrap.sass" />
@@ -254,6 +317,21 @@
         <option value="$PROJECT_DIR$/src/lib/Validation/EmailValidator.java" />
         <option value="$PROJECT_DIR$/src/com/components/signup/SignupComponent.fxml" />
         <option value="$PROJECT_DIR$/src/com/components/signup/SignupComponent.java" />
+        <option value="$PROJECT_DIR$/src/com/Global/Global.java" />
+        <option value="$PROJECT_DIR$/src/com/Common/Global.java" />
+        <option value="$PROJECT_DIR$/src/com/components/loginComponent/LoginComponent.java" />
+        <option value="$PROJECT_DIR$/src/com/components/headerComponent/HeaderComponent.java" />
+        <option value="$PROJECT_DIR$/src/com/components/signupComponent/SignupComponent.java" />
+        <option value="$PROJECT_DIR$/src/com/Common/Common.java" />
+        <option value="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.java" />
+        <option value="$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.java" />
+        <option value="$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.java" />
+        <option value="$PROJECT_DIR$/src/lib/Component/Component.java" />
+        <option value="$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/Bootstrap.java" />
+        <option value="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/Main.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/3fa4374d-efc5-419f-81ba-da803098fc03/console.sql" />
       </list>
     </option>
   </component>
@@ -287,11 +365,6 @@
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
               <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -305,7 +378,7 @@
               <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
@@ -313,7 +386,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="header" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
@@ -321,24 +393,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-              <item name="LoginComponent.sass" type="620a8d5e:NestingTreeNode" />
-            </path>
-            <path>
-              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="signup" type="462c0819:PsiDirectoryNode" />
+              <item name="HeaderComponent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
@@ -353,7 +408,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="AuthScreen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
@@ -361,34 +416,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="IndexScreen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
               <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Global" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
@@ -422,13 +456,14 @@
               <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
-              <item name="Validation" type="462c0819:PsiDirectoryNode" />
+              <item name="Screen" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
               <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="schemas" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="Validation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -527,18 +562,18 @@
       <updated>1558461270884</updated>
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
-      <workItem from="1558561743839" duration="51895000" />
+      <workItem from="1558561743839" duration="56108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119747000" />
+    <option name="totallyTimeSpent" value="123960000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.17272727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.18257576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50242716" side_tool="true" weight="0.16060606" />
@@ -547,7 +582,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.36482084" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.22149837" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -558,7 +593,7 @@
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.32899022" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
-      <window_info anchor="bottom" id="Database Console" order="12" weight="0.35504887" />
+      <window_info anchor="bottom" id="Database Console" order="12" weight="0.6026059" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -567,12 +602,12 @@
       <window_info anchor="right" id="Maven" order="3" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32954547" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.32954547" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.17272727" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" visible="true" weight="0.18257576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50242716" side_tool="true" weight="0.16060606" />
@@ -581,7 +616,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" visible="true" weight="0.50651467" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.4136808" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -724,7 +759,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/index/IndexScreen.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -744,16 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="41" column="25" selection-start-line="41" selection-start-column="25" selection-end-line="41" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/styles/components/_scrollBar.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -761,27 +786,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/index/IndexScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/Screen/Screen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/login/LoginComponent.css">
+    <entry file="file://$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/header/HeaderComponent.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -789,7 +797,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/header/HeaderComponent.sass">
+    <entry file="file://$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
@@ -803,26 +811,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="27" column="10" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/Alerts/Alerts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="71" lean-forward="true" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/styles/components/_vars.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -830,42 +818,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/Auth/Auth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="94" column="34" lean-forward="true" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/auth/AuthScreen.css">
+    <entry file="file://$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/auth/AuthScreen.sass">
+    <entry file="file://$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="97">
           <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/login/LoginComponent.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/auth/AuthScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -876,32 +847,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/signup/SignupComponent.css">
+    <entry file="file://$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3fa4374d-efc5-419f-81ba-da803098fc03/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="39" lean-forward="true" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/USER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="30" column="10" selection-start-line="30" selection-start-column="10" selection-end-line="30" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
@@ -910,10 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/signup/SignupComponent.sass">
+    <entry file="file://$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
@@ -979,40 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/header/HeaderComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#432#433#0" expanded="true" />
-            <element signature="e#468#469#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#547#548#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="59" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Global/Global.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/lib/Validation/EmailValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1030,22 +943,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/login/LoginComponent.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/auth/AuthScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/signup/SignupComponent.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1053,23 +951,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/login/LoginComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="50" column="5" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/signup/SignupComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state relative-caret-position="412">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Screen/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Alerts/Alerts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Auth/Auth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Bootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2386#2387#0" expanded="true" />
+            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2460#2461#0" expanded="true" />
+            <element signature="e#2512#2513#0" expanded="true" />
+            <element signature="e#2545#2546#0" expanded="true" />
+            <element signature="e#2574#2575#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/USER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3fa4374d-efc5-419f-81ba-da803098fc03/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>

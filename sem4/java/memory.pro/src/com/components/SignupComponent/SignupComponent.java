@@ -1,6 +1,6 @@
-package com.components.signup;
+package com.components.SignupComponent;
 
-import Global.Global;
+import com.Common.Common;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RegexValidator;
@@ -29,7 +29,7 @@ public class SignupComponent extends Component {
     }
 
     private void initValidation() {
-        fxEmailValidator.setRegexPattern(Global.EMAIL_REGEXP);
+        fxEmailValidator.setRegexPattern(Common.EMAIL_REGEXP);
 
         Validation.initValidation(fxFirstName);
         Validation.initValidation(fxLastName);
@@ -44,13 +44,13 @@ public class SignupComponent extends Component {
         User user = readUserData();
 
         try {
-            global.getAuth().signupAndLogin(user);
+            common.getAuth().signupAndLogin(user);
         } catch (AuthException e) {
             alerts.show(Alerts.alertErr, e.getMessage());
             return;
         }
 
-        global.setScreen("index");
+        common.setScreen("index");
     }
 
     private User readUserData() {
@@ -66,13 +66,13 @@ public class SignupComponent extends Component {
     }
 
     private boolean isValid() {
-        boolean firstname = fxFirstName.validate();
-        boolean lastname = fxLastName.validate();
+        boolean firstName = fxFirstName.validate();
+        boolean lastName = fxLastName.validate();
         boolean username = fxUsername.validate();
         boolean password = fxPassword.validate();
         boolean email = fxEmail.validate();
 
-        return username && password;
+        return firstName && lastName && username && password && email;
     }
 
     @FXML void onSignup() {
