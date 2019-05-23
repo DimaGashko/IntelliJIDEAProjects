@@ -1,3 +1,5 @@
-
+.header__button {
+  -fx-padding: 10px 15px;
+}
 
 /*# sourceMappingURL=HeaderComponent.css.map */

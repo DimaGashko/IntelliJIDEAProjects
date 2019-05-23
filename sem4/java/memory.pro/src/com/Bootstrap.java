@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 public class Bootstrap extends Screen {
     private Global global;
 
-    private String currentScreen = "index";
+    private String currentScreen;
 
     @FXML
     private VBox screenSlot;
@@ -39,7 +39,7 @@ public class Bootstrap extends Screen {
 
     private void start() {
         renderHeader();
-        showScreen(currentScreen);
+        showScreen("index");
     }
 
     private void initEvents() {
@@ -47,6 +47,8 @@ public class Bootstrap extends Screen {
     }
 
     private void showScreen(String alias, HashMap<String, String> params) {
+        if (alias.equals(currentScreen)) return;
+
         String path = global.getScreens().get(alias);
 
         if (path == null || path.isEmpty()) {
