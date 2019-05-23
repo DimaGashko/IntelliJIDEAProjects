@@ -36,7 +36,7 @@ abstract public class Component implements Initializable {
 
         try {
             root = loader.load();
-        } catch (IOException e) {
+        } catch (IOException | RuntimeException e) {
             e.printStackTrace();
             throw new ComponentException("Internal Error");
         }

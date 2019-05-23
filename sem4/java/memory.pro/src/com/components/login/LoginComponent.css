@@ -87,11 +87,15 @@
 
 .login-component .jfx-text-field,
 .login-component .jfx-password-field {
-  -fx-pref-width: 300px;
+  -fx-pref-width: 450px;
 }
 
 .login-component__login {
-  -fx-pref-width: 300px;
+  -fx-pref-width: 450px;
+  -fx-padding: 10px 0;
+}
+
+.login-component__login-container {
   -fx-padding: 10px 0;
 }
 

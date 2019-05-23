@@ -10,18 +10,18 @@
       <VBox styleClass="form-group">
             <JFXTextField fx:id="fxUsername" promptText="Username">
                   <validators>
-                        <RequiredFieldValidator message="Please, enter your username" />
+                        <RequiredFieldValidator message="Please, enter the username" />
                   </validators>
             </JFXTextField>
       </VBox>
       <VBox styleClass="form-group">
             <JFXPasswordField fx:id="fxPassword" promptText="Password">
                   <validators>
-                        <RequiredFieldValidator message="Please, enter your password" />
+                        <RequiredFieldValidator message="Please, enter the password" />
                   </validators>
             </JFXPasswordField>
       </VBox>
-      <VBox styleClass="form-group">
+      <VBox styleClass="form-group, login-component__login-container">
             <JFXButton onAction="#onLogin" styleClass="login-component__login" text="Log In" />
       </VBox>
 </VBox>
