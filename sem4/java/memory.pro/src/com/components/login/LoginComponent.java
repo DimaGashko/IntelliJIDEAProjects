@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import lib.Alerts.Alerts;
 import lib.Auth.AuthException;
 import lib.Component.Component;
+import lib.Validation.Validation;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,17 +23,8 @@ public class LoginComponent extends Component {
     }
 
     private void initValidation() {
-        fxUsername.focusedProperty().addListener((o,oldVal,newVal) -> {
-            if(!newVal) fxUsername.validate();
-        });
-
-        fxUsername.textProperty().addListener((o,oldVal,newVal) -> fxUsername.validate());
-
-        fxPassword.focusedProperty().addListener((o,oldVal,newVal) -> {
-            if(!newVal) fxPassword.validate();
-        });
-
-        fxPassword.textProperty().addListener((o,oldVal,newVal) -> fxPassword.validate());
+        Validation.initValidation(fxUsername);
+        Validation.initValidation(fxPassword);
     }
 
     private void login() {

@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXPasswordField?>
-<?import com.jfoenix.controls.JFXTextField?>
-<?import javafx.scene.layout.VBox?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import com.jfoenix.validation.RegexValidator?>
 
-<VBox fillWidth="false" focusTraversable="true" styleClass="form-wrapper" stylesheets="@../../screens/auth/AuthScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.signup.SignupComponent">
-    <children>
-        <VBox styleClass="form-group">
-            <children>
-                <JFXTextField fx:id="fxFirstName" labelFloat="true" promptText="First Name" />
-            </children>
-        </VBox>
-      <VBox styleClass="form-group">
-         <children>
-            <JFXTextField fx:id="fxLastName" labelFloat="true" promptText="Last Name" />
-         </children>
-      </VBox>
-      <VBox styleClass="form-group">
-         <children>
-            <JFXTextField fx:id="fxUsername" labelFloat="true" promptText="Username" />
-         </children>
-      </VBox>
-      <VBox styleClass="form-group">
-         <children>
-            <JFXTextField fx:id="fxEmail" labelFloat="true" promptText="Email" />
-         </children>
-      </VBox>
-      <VBox styleClass="form-group">
-         <children>
-            <JFXPasswordField fx:id="fxPassword" promptText="Password" />
-         </children>
-      </VBox>
-      <VBox styleClass="form-group">
-         <children>
-            <JFXButton buttonType="RAISED" onAction="#onSignup" text="Get Started" />
-         </children>
-      </VBox>
-    </children>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true" styleClass="signup-component" stylesheets="@SignupComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.signup.SignupComponent">
+    <VBox styleClass="form-group">
+        <JFXTextField fx:id="fxFirstName" labelFloat="true" promptText="First Name">
+            <validators>
+                <RequiredFieldValidator message="Required field" />
+            </validators>
+        </JFXTextField>
+    </VBox>
+    <VBox styleClass="form-group">
+        <JFXTextField fx:id="fxLastName" labelFloat="true" promptText="Last Name">
+            <validators>
+                <RequiredFieldValidator message="Required field" />
+            </validators>
+        </JFXTextField>
+    </VBox>
+    <VBox styleClass="form-group">
+        <JFXTextField fx:id="fxUsername" labelFloat="true" promptText="Username">
+            <validators>
+                <RequiredFieldValidator message="Required field" />
+            </validators>
+        </JFXTextField>
+    </VBox>
+    <VBox styleClass="form-group">
+        <JFXTextField fx:id="fxEmail" labelFloat="true" promptText="Email">
+            <validators>
+                <RequiredFieldValidator message="Required field" />
+                <RegexValidator regexPattern="${controller.emailRegExp}" />
+            </validators>
+        </JFXTextField>
+    </VBox>
+    <VBox styleClass="form-group">
+        <JFXPasswordField fx:id="fxPassword" promptText="Password">
+            <validators>
+                <RequiredFieldValidator message="Required field" />
+            </validators>
+        </JFXPasswordField>
+    </VBox>
+    <VBox styleClass="form-group, signup-component__signup-container">
+        <JFXButton styleClass="signup-component__signup" onAction="#onSignup" text="Get Started!"/>
+    </VBox>
 </VBox>

@@ -11,9 +11,9 @@
         </content>
     </ScrollPane>
 
-    <ScrollPane fitToHeight="true" fitToWidth="true">
+    <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="pageScroll">
         <content>
-            <VBox fx:id="screenSlot" />
+            <VBox fx:id="screenSlot" styleClass="screenSlot" />
         </content>
     </ScrollPane>
 
