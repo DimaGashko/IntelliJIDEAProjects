@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a553d383-ed08-46bc-9fb1-b75bd6666a17" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../memory.pro/src/schemas/WordsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/schemas/WordsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/schemas/NumbersResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/schemas/NumbersResultData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/schemas/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/schemas/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../memory.pro/src/schemas/WordsResultData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../memory.pro/src/schemas/WordsResultData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

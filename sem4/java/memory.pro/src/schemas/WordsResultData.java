@@ -9,17 +9,20 @@ import java.util.Collection;
 public class WordsResultData extends ResultData {
 
     @ManyToOne
-    private WordsResultData wordsResultData;
+    private WordsResult wordsResult;
 
     @OneToMany
     private Collection<Word> words;
 
-    public WordsResultData getWordsResultData() {
-        return wordsResultData;
+    @OneToMany
+    private Collection<Word> answer;
+
+    public WordsResult getWordsResult() {
+        return wordsResult;
     }
 
-    public void setWordsResultData(WordsResultData wordsResultData) {
-        this.wordsResultData = wordsResultData;
+    public void setWordsResult(WordsResult wordsResult) {
+        this.wordsResult = wordsResult;
     }
 
     public Collection<Word> getWords() {
@@ -28,5 +31,13 @@ public class WordsResultData extends ResultData {
 
     public void setWords(Collection<Word> words) {
         this.words = words;
+    }
+
+    public Collection<Word> getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(Collection<Word> answer) {
+        this.answer = answer;
     }
 }

@@ -12,9 +12,6 @@ abstract public class Result {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "user_id", nullable = false)
-    private int userId;
-
     @Column(name = "date", nullable = false)
     private LocalDate date;
 
@@ -30,14 +27,6 @@ abstract public class Result {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
     }
 
     public LocalDate getDate() {
@@ -70,7 +59,6 @@ abstract public class Result {
         if (o == null || getClass() != o.getClass()) return false;
         Result result = (Result) o;
         return id == result.id &&
-                userId == result.userId &&
                 grade == result.grade &&
                 Objects.equals(date, result.date) &&
                 Objects.equals(user, result.user);
@@ -78,14 +66,13 @@ abstract public class Result {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userId, date, grade, user);
+        return Objects.hash(id, date, grade, user);
     }
 
     @Override
     public String toString() {
         return "Result{" +
                 "id=" + id +
-                ", userId=" + userId +
                 ", date=" + date +
                 ", grade=" + grade +
                 ", users=" + user.getUsername() + // TODO: check if user always exist
