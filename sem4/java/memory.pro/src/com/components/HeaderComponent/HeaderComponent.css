@@ -87,5 +87,8 @@
   -fx-padding: 10px 15px;
   -fx-text-fill: #fff;
 }
+.header-component .ikonli-font-icon {
+  -fx-fill: #fff;
+}
 
 /*# sourceMappingURL=HeaderComponent.css.map */

@@ -50,5 +50,12 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="com.lgou2w:ldk-fx-fontawesomefx:0.1.8-rc" level="project" />
+    <orderEntry type="library" name="ikonli-weathericons-pack-11.3.4" level="project" />
+    <orderEntry type="library" name="org.kordamp.ikonli:ikonli-fontawesome-pack:2.3.0" level="project" />
+    <orderEntry type="library" name="org.kordamp.ikonli:ikonli-core:2.3.0" level="project" />
+    <orderEntry type="library" name="org.kordamp.ikonli:ikonli-fontawesome-pack:2.2.0" level="project" />
+    <orderEntry type="library" name="org.kordamp.ikonli:ikonli-javafx:2.3.0" level="project" />
+    <orderEntry type="library" name="org.kordamp.ikonli:ikonli-fontawesome5-pack:2.2.0" level="project" />
   </component>
 </module>

@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <BorderPane prefHeight="284.0" prefWidth="403.0" styleClass="profile-screen" stylesheets="@ProfileScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.ProfileScreen.ProfileScreen">
    <left>
@@ -34,7 +35,10 @@
                                     <Label styleClass="info-side__username" text="DmitryGashko" />
                                  </children>
                               </VBox>
-                              <JFXButton styleClass="info-side__button" text="Edit Profile" />
+                              <JFXButton styleClass="info-side__button" text="Edit Profile">
+                                 <graphic>
+                                    <FontIcon iconLiteral="fa-edit" />
+                                 </graphic></JFXButton>
                            </children>
                         </VBox>
                      </children>
@@ -45,7 +49,7 @@
                            <children>
                               <VBox layoutX="1.0" styleClass="info-side__field" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                  <children>
-                                    <Label text="Your Statistic" />
+                                    <Label contentDisplay="RIGHT" text="Your Statistic" />
                                     <HBox styleClass="data-side-h-group">
                                        <children>
                                           <JFXButton styleClass="info-side__button" text="Numbers" />
@@ -76,7 +80,10 @@
                <children>
                   <AnchorPane>
                      <children>
-                        <JFXButton styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <JFXButton styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <graphic>
+                              <FontIcon iconLiteral="fas-sign-out-alt" />
+                           </graphic></JFXButton>
                      </children>
                   </AnchorPane>
                </children></VBox>

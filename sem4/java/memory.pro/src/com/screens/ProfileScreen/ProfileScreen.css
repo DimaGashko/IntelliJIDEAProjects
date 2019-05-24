@@ -122,5 +122,8 @@
 .profile-screen .info-side__username {
   -fx-font-size: 12px;
 }
+.profile-screen .ikonli-font-icon {
+  -fx-fill: #fff;
+}
 
 /*# sourceMappingURL=ProfileScreen.css.map */
