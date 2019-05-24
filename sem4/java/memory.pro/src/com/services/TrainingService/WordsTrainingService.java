@@ -3,6 +3,8 @@ package com.services.TrainingService;
 import com.Common.Common;
 import schemas.Word;
 
+import java.util.ArrayList;
+
 public class WordsTrainingService extends TrainingService {
     private String tempalate;
     private int dataCount;
@@ -28,8 +30,8 @@ public class WordsTrainingService extends TrainingService {
         return 0;
     }
 
-    private Word loadWords() {
-
+    private ArrayList<String> loadWords() {
+        return null;
     }
 
 }

@@ -25,31 +25,30 @@ public class UserDao extends Dao {
         em.getTransaction().commit();
     }
 
-    public Optional<User> getUserByUsername(String username) {
+    public Optional<User> loadUserByUsername(String username) {
         var query = em.createQuery("select u from User u where u.username = :username", User.class);
         query.setParameter("username", username);
 
-        var users = query.setMaxResults(1).getResultList();
+        var user = query.getSingleResult();
 
-        if (users.isEmpty()) {
+        if (user == null) {
             return Optional.empty();
         }
 
-        var user = users.get(0);
         return Optional.of(user);
     }
 
-    public Optional<String> getSaltByUsername(String username) {
+    public Optional<String> loadSaltByUsername(String username) {
         var query = em.createQuery("select u.passwordSalt from User u where u.username = :username", String.class);
         query.setParameter("username", username);
 
-        var salts = query.setMaxResults(1).getResultList();
+        var salt = query.getSingleResult();
 
-        if (salts.isEmpty()) {
+        if (salt == null || salt.isEmpty()) {
             return Optional.empty();
         }
 
-        return Optional.of(salts.get(0));
+        return Optional.of(salt);
     }
 
     public boolean checkExist(User user) {
@@ -58,7 +57,7 @@ public class UserDao extends Dao {
         query.setParameter("email", user.getEmail());
         query.setParameter("id", user.getId());
 
-        long keysCount = query.setMaxResults(1).getResultList().get(0);
+        long keysCount = query.getSingleResult();
 
         return keysCount != 0;
     }
@@ -68,7 +67,7 @@ public class UserDao extends Dao {
         query.setParameter("username", username);
         query.setParameter("key", key);
 
-        long keysCount = query.setMaxResults(1).getResultList().get(0);
+        long keysCount = query.getSingleResult();
 
         return keysCount != 0;
     }
