@@ -86,13 +86,15 @@
 .profile-screen .info-side {
   -fx-pref-width: 250px;
   -fx-background-color: #282c47;
-  -fx-border-width: 0 2px 0 0;
-  -fx-border-color: #646464;
+  -fx-border-width: 0 1px 0 0;
+  -fx-border-color: #666;
+  -fx-min-height: 550px;
 }
 .profile-screen .info-side * {
   -fx-text-fill: #fff;
 }
 .profile-screen .data-side {
+  -fx-padding: 10px;
   -fx-background-color: #fff;
 }
 .profile-screen .info-side__group {
@@ -100,11 +102,25 @@
   -fx-border-width: 0 0 1px 0;
   -fx-border-color: rgba(255, 255, 255, 0.1);
 }
+.profile-screen .info-side__field {
+  -fx-padding: 0 0 0 20px;
+  -fx-spacing: 10px;
+}
 .profile-screen .info-side__avatar-container {
   -fx-alignment: center;
 }
 .profile-screen .info-side__button {
+  -fx-background-color: rgba(255, 255, 255, 0.1);
   -fx-padding: 10px;
+}
+.profile-screen .data-side-h-group {
+  -fx-spacing: 10px;
+}
+.profile-screen .info-side__full-name {
+  -fx-font-size: 25px;
+}
+.profile-screen .info-side__username {
+  -fx-font-size: 12px;
 }
 
 /*# sourceMappingURL=ProfileScreen.css.map */

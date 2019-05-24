@@ -6,6 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane prefHeight="284.0" prefWidth="403.0" styleClass="profile-screen" stylesheets="@ProfileScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.ProfileScreen.ProfileScreen">
@@ -27,31 +28,45 @@
                      <children>
                         <VBox styleClass="info-side__field">
                            <children>
-                              <Label text="Dmitry Gashko" />
-                              <Label text="dimagashko@gmail.com" />
+                              <VBox>
+                                 <children>
+                                    <Label styleClass="info-side__full-name" text="Dmitry Gashko" />
+                                    <Label styleClass="info-side__username" text="DmitryGashko" />
+                                 </children>
+                              </VBox>
+                              <JFXButton styleClass="info-side__button" text="Edit Profile" />
                            </children>
                         </VBox>
                      </children>
                   </VBox>
                   <VBox styleClass="info-side__group">
                      <children>
-                        <AnchorPane styleClass="info-side__field">
+                        <AnchorPane>
                            <children>
-                              <JFXButton styleClass="info-side__button" text="Statistic: Numbers" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane styleClass="info-side__field">
-                           <children>
-                              <JFXButton styleClass="info-side__button" text="Statistic: Words" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <VBox layoutX="1.0" styleClass="info-side__field" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <Label text="Your Statistic" />
+                                    <HBox styleClass="data-side-h-group">
+                                       <children>
+                                          <JFXButton styleClass="info-side__button" text="Numbers" />
+                                          <JFXButton styleClass="info-side__button" text="Words" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                      </children>
                   </VBox>
                   <VBox styleClass="info-side__group">
                      <children>
-                        <AnchorPane styleClass="info-side__field">
+                        <AnchorPane>
                            <children>
-                              <JFXButton styleClass="info-side__button" text="Let's Training" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <VBox layoutX="1.0" styleClass="info-side__field" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <children>
+                                    <JFXButton styleClass="info-side__button" text="Let's Training" />
+                                 </children>
+                              </VBox>
                            </children>
                         </AnchorPane>
                      </children>
@@ -59,7 +74,7 @@
                </children></VBox>
             <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <AnchorPane styleClass="info-side__field">
+                  <AnchorPane>
                      <children>
                         <JFXButton styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                      </children>
