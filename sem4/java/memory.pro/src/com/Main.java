@@ -1,5 +1,7 @@
 package com;
 
+import com.services.AuthService.AuthService;
+import com.services.AuthService.AuthServiceException;
 import dao.UserDao;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -26,41 +28,6 @@ public class Main extends Application {
     public static void main(String[] args) {
         //launch(args);
 
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
-        EntityManager em = factory.createEntityManager();
-
-        UserDao userDao = new UserDao(em);
-
-/*
-
-        User user = new User();
-
-        user.setFirstName("yyy4y");
-        user.setLastName("y4yy");
-        user.setEmail("yy4y");
-        user.setPasswordSalt("sghjhjkhkjhjklhjkhlklkjhjkl");
-        user.setPasswordKey("asf");
-        user.setUsername("aaa");
-        user.setRegisterDate(LocalDate.now());
-
-        userDao.add(user);
-
-*/
-       /* User dg = userDao.getUserByUsername("aaa").orElseThrow(null);
-
-       WordsResult wordsResult = new WordsResult();
-        wordsResult.setDate(LocalDate.now());
-        wordsResult.setGrade(256);
-        wordsResult.setUser(dg);
-
-        em.getTransaction().begin();
-        em.persist(wordsResult);
-        em.getTransaction().commit();*/
-       //System.out.println(wordsResult);
-
-        var res = em.createQuery("select r from Result r").getResultList();
-
-        System.out.println(res);
    }
 
     @Override
