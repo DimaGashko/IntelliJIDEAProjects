@@ -1,8 +1,6 @@
 package com.components.HeaderComponent;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import lib.Alerts.Alerts;
 import lib.Component.Component;
 
@@ -45,19 +43,9 @@ public class HeaderComponent extends Component {
         alerts.show(Alerts.alertInfo, "Memory.pro", title, content);
     }
 
-    @FXML void onHome() {
-        goHome();
-    }
-    @FXML void onStatistic() {
-        goToStatistic();
-    }
-    @FXML void onTraining() {
-        goToTraining();
-    }
-    @FXML void onProfile() {
-        goToProfile();
-    }
-    @FXML void onHelp() {
-        openHelp();
-    }
+    @FXML public void onHome() { goHome(); }
+    @FXML public void onStatistic() { goToStatistic(); }
+    @FXML public void onTraining() { goToTraining(); }
+    @FXML public void onProfile() { goToProfile(); }
+    @FXML public void onHelp() { openHelp(); }
 }

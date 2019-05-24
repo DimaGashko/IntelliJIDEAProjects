@@ -22,7 +22,7 @@
                             <Label styleClass="info-side__full-name" text="Dmitry Gashko"/>
                             <Label styleClass="info-side__username" text="DmitryGashko"/>
                         </VBox>
-                        <JFXButton styleClass="info-side__button" text="Edit Profile">
+                        <JFXButton onAction="#onEditProfile" styleClass="info-side__button" text="Edit Profile">
                             <graphic>
                                 <FontIcon iconLiteral="fa-edit"/>
                             </graphic>
@@ -34,8 +34,8 @@
                         <VBox styleClass="info-side__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
                             <Label contentDisplay="RIGHT" text="Your Statistic"/>
                             <HBox styleClass="data-side-h-group">
-                                <JFXButton styleClass="info-side__button" text="Numbers"/>
-                                <JFXButton styleClass="info-side__button" text="Words"/>
+                                <JFXButton onAction="#onNumberStatisticsOpen" styleClass="info-side__button" text="Numbers"/>
+                                <JFXButton onAction="#onWordsStatisticsOpen" styleClass="info-side__button" text="Words"/>
                             </HBox>
                         </VBox>
                     </AnchorPane>
@@ -43,14 +43,14 @@
                 <VBox styleClass="info-side__group">
                     <AnchorPane>
                         <VBox styleClass="info-side__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-                            <JFXButton styleClass="info-side__button" text="Let's Training"/>
+                            <JFXButton onAction="#onGoToTraining" styleClass="info-side__button" text="Let's Training"/>
                         </VBox>
                     </AnchorPane>
                 </VBox>
             </VBox>
             <VBox AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
                 <AnchorPane>
-                    <JFXButton styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                    <JFXButton onAction="#onLogout" styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
                         <graphic>
                             <FontIcon iconLiteral="fas-sign-out-alt"/>
                         </graphic>
@@ -61,7 +61,7 @@
     </left>
     <center>
         <VBox styleClass="data-side">
-            <Label styleClass="data-side__title" text="Statistics (words)"/>
+            <Label fx:id="fxDataSideTitle" styleClass="data-side__title" text="Statistics"/>
         </VBox>
     </center>
 </BorderPane>
