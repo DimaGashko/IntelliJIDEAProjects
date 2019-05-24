@@ -34,12 +34,6 @@ public class User {
     @Column(name = "register_date", nullable = false)
     private LocalDate registerDate;
 
-    @OneToMany
-    private Collection<WordsResult> wordResults;
-
-    @OneToMany
-    private Collection<NumbersResult> numbersResults;
-
     @Transient
     private String password;
 
@@ -113,22 +107,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public Collection<WordsResult> getWordResults() {
-        return wordResults;
-    }
-
-    public void setWordResults(Collection<WordsResult> wordResults) {
-        this.wordResults = wordResults;
-    }
-
-    public Collection<NumbersResult> getNumbersResults() {
-        return numbersResults;
-    }
-
-    public void setNumbersResults(Collection<NumbersResult> numbersResults) {
-        this.numbersResults = numbersResults;
     }
 
     @Override
