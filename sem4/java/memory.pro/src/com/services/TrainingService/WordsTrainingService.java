@@ -1,6 +1,7 @@
 package com.services.TrainingService;
 
 import com.Common.Common;
+import schemas.Word;
 
 public class WordsTrainingService extends TrainingService {
     private String tempalate;
@@ -18,12 +19,17 @@ public class WordsTrainingService extends TrainingService {
 
     @Override
     public String[] loadData() {
+
         return new String[0];
     }
 
     @Override
     public int finishTraining() {
         return 0;
+    }
+
+    private Word loadWords() {
+
     }
 
 }

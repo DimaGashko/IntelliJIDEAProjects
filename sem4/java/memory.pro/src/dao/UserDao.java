@@ -6,11 +6,10 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-public class UserDao {
-    private EntityManager em;
+public class UserDao extends Dao {
 
     public UserDao(EntityManager em) {
-        this.em = em;
+        super(em);
     }
 
     public void add(User user) {
