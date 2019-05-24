@@ -4,14 +4,26 @@
   -fx-background-color: red
 
   .info-side
-    -fx-pref-width: 200px
-    -fx-background-color: green
+    -fx-pref-width: $profile-info-width
+    -fx-background-color: #282c47
+    -fx-border-width: 0 2px 0 0
+    -fx-border-color: #646464
+
+    *
+      -fx-text-fill: $brand-color-1
 
   .data-side
-    -fx-background-color: blue
+    -fx-background-color: $brand-color-1
 
   .info-side__group
-    -fx-border-color: #000
+    -fx-padding: 10px 0
+    -fx-border-width: 0 0 1px 0
+    -fx-border-color: rgba(255,255,255,0.1)
 
   .info-side__field
-    -fx-border-color: #fff
+
+  .info-side__avatar-container
+    -fx-alignment: center
+
+  .info-side__button
+    -fx-padding: 10px
