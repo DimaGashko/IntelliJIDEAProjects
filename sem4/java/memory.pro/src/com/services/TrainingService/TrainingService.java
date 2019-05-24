@@ -3,10 +3,16 @@ package com.services.TrainingService;
 import javax.persistence.EntityManager;
 
 abstract public class TrainingService implements ITrainingService {
-    private EntityManager em;
+    protected EntityManager em;
+    protected int dataCount;
 
     public TrainingService(EntityManager em) {
         this.em = em;
+    }
+
+    @Override
+    public void setUp(String pattern, int dataCount) {
+        this.dataCount = dataCount;
     }
 
 }

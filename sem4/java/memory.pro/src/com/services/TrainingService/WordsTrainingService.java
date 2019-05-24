@@ -2,15 +2,12 @@ package com.services.TrainingService;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import dao.WordDao;
 
 import javax.persistence.EntityManager;
 
 public class WordsTrainingService extends TrainingService {
-    private String tempalate;
-    private int dataCount;
-    private List<String> trainingWords;
+    private ArrayList<String> trainingWords;
 
     private WordDao wordDao;
 
@@ -21,14 +18,9 @@ public class WordsTrainingService extends TrainingService {
     }
 
     @Override
-    public void setUp(String template, int dataCount) {
-        this.tempalate = template;
-        this.dataCount = dataCount;
-    }
-
-    @Override
     public ArrayList<String> loadData() {
-        return loadWords();
+        trainingWords =  loadWords();
+        return trainingWords;
     }
 
     @Override
