@@ -1,13 +1,12 @@
 package com.screens.IndexScreen;
 
-import javafx.fxml.Initializable;
 import lib.Screen.Screen;
 import schemas.User;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class IndexScreen extends Screen implements Initializable {
+public class IndexScreen extends Screen {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -16,7 +15,7 @@ public class IndexScreen extends Screen implements Initializable {
 
     @Override
     public void showed() {
-        String username = common.getAuth().getLoggedInUsername();
+        String username = common.getAuthService().getLoggedInUsername();
 
         User user = common.getUserDao().getUserByUsername(username)
                 .orElseThrow(() -> new RuntimeException("Cannot load user data"));

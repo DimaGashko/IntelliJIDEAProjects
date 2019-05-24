@@ -1,4 +1,4 @@
-package lib.Auth;
+package com.services.AuthService;
 
 import dao.UserDao;
 import schemas.User;
@@ -9,28 +9,28 @@ import java.io.*;
 import java.time.LocalDate;
 import java.util.Optional;
 
-public class Auth {
+public class AuthService {
     private String loginDataPath = "data/AuthScreen/config";
 
     private UserDao userDao;
     private File loginDataFile;
     private Optional<LoginData> loginDataOpt;
 
-    public Auth(UserDao userDao) {
+    public AuthService(UserDao userDao) {
         this.userDao = userDao;
 
         initLoginDataFile();
         loadLoginData();
     }
 
-    public void signup(User user) throws AuthException {
+    public void signup(User user) throws AuthServiceException {
         if (userDao.checkExist(user)) {
-            throw new AuthException("The user already exist");
+            throw new AuthServiceException("The user already exist");
         }
 
         String salt = PasswordUtils.generateSalt(512);
         String key = PasswordUtils.hashPassword(user.getPassword(), salt)
-                .orElseThrow(() -> new AuthException("Internal error"));
+                .orElseThrow(() -> new AuthServiceException("Internal error"));
 
         user.setPasswordSalt(salt);
         user.setPasswordKey(key);
@@ -39,25 +39,25 @@ public class Auth {
         try {
             userDao.add(user);
         } catch (RollbackException e) {
-            throw new AuthException("Can't save the user");
+            throw new AuthServiceException("Can't save the user");
         }
     }
 
-    public void login(String username, String password) throws AuthException {
+    public void login(String username, String password) throws AuthServiceException {
         String salt = userDao.getSaltByUsername(username)
-                .orElseThrow(() -> new AuthException("Login failed"));
+                .orElseThrow(() -> new AuthServiceException("Login failed"));
 
         String key = PasswordUtils.hashPassword(password, salt)
-                .orElseThrow(() -> new AuthException("Login failed"));
+                .orElseThrow(() -> new AuthServiceException("Login failed"));
 
         if (!checkKey(username, key)) {
-            throw new AuthException("Login failed");
+            throw new AuthServiceException("Login failed");
         }
 
         setLoginData(username, key);
     }
 
-    public void signupAndLogin(User user) throws AuthException {
+    public void signupAndLogin(User user) throws AuthServiceException {
         signup(user);
         login(user.getUsername(), user.getPassword());
 

@@ -4,7 +4,7 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import lib.Alerts.Alerts;
-import lib.Auth.AuthException;
+import com.services.AuthService.AuthServiceException;
 import lib.Component.Component;
 import lib.Validation.Validation;
 
@@ -33,8 +33,8 @@ public class LoginComponent extends Component {
         String password = fxPassword.getText();
 
         try {
-            common.getAuth().login(username, password);
-        } catch (AuthException e) {
+            common.getAuthService().login(username, password);
+        } catch (AuthServiceException e) {
             alerts.show(Alerts.alertWarn, e.getMessage());
             return;
         }

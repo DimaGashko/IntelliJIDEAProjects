@@ -1,7 +1,7 @@
 package com.Common;
 
+import com.services.AuthService.AuthService;
 import dao.UserDao;
-import lib.Auth.Auth;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -20,14 +20,14 @@ public class Common {
     private EntityManager em;
     private UserDao userDao;
 
-    private Auth auth;
+    private AuthService authService;
 
     public Common() {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         em = factory.createEntityManager();
 
         userDao = new UserDao(em);
-        auth = new Auth(userDao);
+        authService = new AuthService(userDao);
 
         initScreens();
         initComponents();
@@ -75,8 +75,8 @@ public class Common {
         return userDao;
     }
 
-    public Auth getAuth() {
-        return auth;
+    public AuthService getAuthService() {
+        return authService;
     }
 
     @FunctionalInterface

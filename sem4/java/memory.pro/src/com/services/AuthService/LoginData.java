@@ -1,8 +1,8 @@
-package lib.Auth;
+package com.services.AuthService;
 
 import java.io.Serializable;
 
-public class LoginData implements Serializable {
+class LoginData implements Serializable {
 
     private String username;
     private String key;

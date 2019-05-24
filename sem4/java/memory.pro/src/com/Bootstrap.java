@@ -99,7 +99,7 @@ public class Bootstrap extends Screen {
     }
 
     private boolean checkAuth() {
-        return common.getAuth().isLoggedIn();
+        return common.getAuthService().isLoggedIn();
     }
 
     public Common getCommon() {

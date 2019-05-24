@@ -6,7 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.validation.RegexValidator;
 import javafx.fxml.FXML;
 import lib.Alerts.Alerts;
-import lib.Auth.AuthException;
+import com.services.AuthService.AuthServiceException;
 import lib.Component.Component;
 import lib.Validation.Validation;
 import schemas.User;
@@ -44,8 +44,8 @@ public class SignupComponent extends Component {
         User user = readUserData();
 
         try {
-            common.getAuth().signupAndLogin(user);
-        } catch (AuthException e) {
+            common.getAuthService().signupAndLogin(user);
+        } catch (AuthServiceException e) {
             alerts.show(Alerts.alertErr, e.getMessage());
             return;
         }

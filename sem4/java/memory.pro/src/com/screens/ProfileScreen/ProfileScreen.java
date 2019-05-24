@@ -14,7 +14,6 @@ public class ProfileScreen extends Screen {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Profile");
         openNumberStatistics();
     }
 
@@ -24,10 +23,10 @@ public class ProfileScreen extends Screen {
     }
 
     protected void logout() {
-        if (!common.getAuth().isLoggedIn()) return;
+        if (!common.getAuthService().isLoggedIn()) return;
         if (!alerts.ask("Logout?")) return;
 
-        common.getAuth().logout();
+        common.getAuthService().logout();
         common.setScreen("auth");
     }
 
