@@ -28,7 +28,6 @@ public class UserDao {
 
     public Optional<User> getUserByUsername(String username) {
         var query = em.createQuery("select u from User u where u.username = :username", User.class);
-
         query.setParameter("username", username);
 
         var users = query.setMaxResults(1).getResultList();
@@ -38,9 +37,6 @@ public class UserDao {
         }
 
         var user = users.get(0);
-        user.setPasswordKey("");
-        user.setPasswordSalt("");
-
         return Optional.of(user);
     }
 

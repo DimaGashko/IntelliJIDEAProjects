@@ -28,7 +28,7 @@ public class User {
     @Column(name = "password_key")
     private String passwordKey;
 
-    @Column(name = "password_salt", length = 1300, unique = true)
+    @Column(name = "password_salt", length = 1300)
     private String passwordSalt;
 
     @Column(name = "register_date", nullable = false)

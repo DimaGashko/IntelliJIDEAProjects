@@ -8,12 +8,17 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import schemas.User;
+import schemas.Word;
+import schemas.WordsResult;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main extends Application {
     Stage stage;
@@ -26,19 +31,35 @@ public class Main extends Application {
 
         UserDao userDao = new UserDao(em);
 
+/*
+
         User user = new User();
 
-        user.setFirstName("Dmitry");
-        user.setLastName("Gashko");
-        user.setEmail("Email");
-        user.setPasswordSalt("PassSalt_DG");
-        user.setPasswordKey("PassKey_DG");
-        user.setUsername("DmitryGashko");
+        user.setFirstName("yyy4y");
+        user.setLastName("y4yy");
+        user.setEmail("yy4y");
+        user.setPasswordSalt("sghjhjkhkjhjklhjkhlklkjhjkl");
+        user.setPasswordKey("asf");
+        user.setUsername("aaa");
         user.setRegisterDate(LocalDate.now());
 
-        System.out.println(user);
         userDao.add(user);
-    }
+
+*/
+        User dg = userDao.getUserByUsername("aaa").orElseThrow(null);
+
+       WordsResult wordsResult = new WordsResult();
+        wordsResult.setDate(LocalDate.now());
+        wordsResult.setGrade(256);
+        wordsResult.setUser(dg);
+
+        em.getTransaction().begin();
+        em.persist(wordsResult);
+        em.getTransaction().commit();
+
+
+        System.out.println(wordsResult);
+   }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
