@@ -90,5 +90,11 @@
 .profile-screen .data-side {
   -fx-background-color: blue;
 }
+.profile-screen .info-side__group {
+  -fx-border-color: #000;
+}
+.profile-screen .info-side__field {
+  -fx-border-color: #fff;
+}
 
 /*# sourceMappingURL=ProfileScreen.css.map */
