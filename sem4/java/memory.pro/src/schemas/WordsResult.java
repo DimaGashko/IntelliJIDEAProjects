@@ -7,13 +7,13 @@ import java.util.Collection;
 public class WordsResult extends Result {
 
     @OneToMany
-    private Collection<WordsResultData> wordResultsData;
+    private Collection<WordsResultData> wordsResultData;
 
-    public Collection<WordsResultData> getWordResultsData() {
-        return wordResultsData;
+    public Collection<WordsResultData> getWordsResultData() {
+        return wordsResultData;
     }
 
-    public void setWordResultsData(Collection<WordsResultData> wordResultsData) {
-        this.wordResultsData = wordResultsData;
+    public void setWordsResultData(Collection<WordsResultData> wordsResultData) {
+        this.wordsResultData = wordsResultData;
     }
 }

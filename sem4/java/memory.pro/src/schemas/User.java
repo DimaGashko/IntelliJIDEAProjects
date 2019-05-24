@@ -37,6 +37,9 @@ public class User {
     @OneToMany
     private Collection<WordsResult> wordResults;
 
+    @OneToMany
+    private Collection<NumbersResult> numbersResults;
+
     @Transient
     private String password;
 
@@ -118,6 +121,14 @@ public class User {
 
     public void setWordResults(Collection<WordsResult> wordResults) {
         this.wordResults = wordResults;
+    }
+
+    public Collection<NumbersResult> getNumbersResults() {
+        return numbersResults;
+    }
+
+    public void setNumbersResults(Collection<NumbersResult> numbersResults) {
+        this.numbersResults = numbersResults;
     }
 
     @Override
