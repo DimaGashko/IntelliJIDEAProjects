@@ -22,6 +22,11 @@ public class AuthScreen extends Screen {
         openLogin();
     }
 
+    @Override
+    public void showed() {
+
+    }
+
     private void openLogin() {
         fxAuthScreenContent.getChildren().clear();
         fxAuthScreenContent.getChildren().add(loginRoot);
@@ -55,7 +60,5 @@ public class AuthScreen extends Screen {
     @FXML void onSignUp() {
         openSignup();
     }
-
-
 
 }

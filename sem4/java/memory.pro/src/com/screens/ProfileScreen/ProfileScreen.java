@@ -17,6 +17,11 @@ public class ProfileScreen extends Screen {
         openNumberStatistics();
     }
 
+    @Override
+    public void showed() {
+
+    }
+
     protected void logout() {
         if (!common.getAuth().isLoggedIn()) return;
         if (!alerts.ask("Logout?")) return;
