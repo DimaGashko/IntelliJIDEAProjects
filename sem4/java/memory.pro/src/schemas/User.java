@@ -2,6 +2,7 @@ package schemas;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Collection;
 import java.util.Objects;
 
 @Entity
@@ -24,14 +25,17 @@ public class User {
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
-    @Column(name = "password_key", nullable = false)
+    @Column(name = "password_key")
     private String passwordKey;
 
-    @Column(name = "password_salt", length = 1300, unique = true, nullable = false)
+    @Column(name = "password_salt", length = 1300, unique = true)
     private String passwordSalt;
 
     @Column(name = "register_date", nullable = false)
     private LocalDate registerDate;
+
+    @OneToMany
+    private Collection<WordsResult> wordResults;
 
     @Transient
     private String password;
@@ -108,6 +112,14 @@ public class User {
         this.password = password;
     }
 
+    public Collection<WordsResult> getWordResults() {
+        return wordResults;
+    }
+
+    public void setWordResults(Collection<WordsResult> wordResults) {
+        this.wordResults = wordResults;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -135,17 +147,3 @@ public class User {
                 '}';
     }
 }
-
-
-/*
-
-id int primary key,
-first_name varchar(50) not null,
-last_name varchar(50) not null,
-username varchar(50) unique key not null,
-email varchar(100) unique key not null,
-register_date date not null,
-password_key varchar(100) not null,
-password_salt varchar(100) not null
-
- */

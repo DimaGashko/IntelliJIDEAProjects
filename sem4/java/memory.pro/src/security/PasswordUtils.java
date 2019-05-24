@@ -26,6 +26,10 @@ public class PasswordUtils {
     }
 
     static public Optional<String> hashPassword(String password, String salt) {
+        if (salt == null || salt.isEmpty()) {
+            return Optional.empty();
+        }
+
         char[] passwordChars = password.toCharArray();
         byte[] saltBytes = salt.getBytes();
 
