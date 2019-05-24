@@ -14,7 +14,7 @@
     <center>
         <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="pageScroll" BorderPane.alignment="CENTER">
             <content>
-                <VBox fx:id="screenSlot" styleClass="screenSlot"/>
+                <StackPane fx:id="screenSlot" styleClass="screenSlot"/>
             </content>
         </ScrollPane>
     </center>

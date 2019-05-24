@@ -3,10 +3,10 @@ package com;
 import com.Common.Common;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Pair;
 import lib.Alerts.Alerts;
-import lib.Component.Component;
 import lib.Component.ComponentException;
 import lib.Screen.Screen;
 
@@ -16,14 +16,13 @@ import java.util.ResourceBundle;
 
 public class Bootstrap extends Screen {
     private Common common;
-
     private String currentScreen;
 
     @FXML
-    private VBox screenSlot;
+    private VBox headerSlot;
 
     @FXML
-    private VBox headerSlot;
+    private StackPane screenSlot;
 
     public Bootstrap() {
         super();
