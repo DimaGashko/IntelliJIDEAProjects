@@ -23,7 +23,7 @@ public class HeaderComponent extends Component {
     }
 
     private void goToStatistic() {
-        common.setScreen("statistic");
+        common.setScreen("statistics");
     }
 
     private void goToProfile() {

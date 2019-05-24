@@ -7,11 +7,11 @@
 <?import javafx.scene.layout.*?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="training-screen" stylesheets="@TrainingScreen.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.screens.TrainingScreen.TrainingScreen">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="statistics-screen" stylesheets="@StatisticsScreen.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.screens.StatisticsScreen.StatisticsScreen">
     <left>
 
     </left>
     <center>
-        <Label text="Training Screen" />
+        <Label text="Statistics Screen" />
     </center>
 </BorderPane>
