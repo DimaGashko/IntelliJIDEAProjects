@@ -14,6 +14,7 @@ public class ProfileScreen extends Screen {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        System.out.println("Profile");
         openNumberStatistics();
     }
 

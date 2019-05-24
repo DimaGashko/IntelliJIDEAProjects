@@ -37,8 +37,8 @@ public class Common {
         screens.put("index", "/com/screens/IndexScreen/IndexScreen.fxml");
         screens.put("auth", "/com/screens/AuthScreen/AuthScreen.fxml");
         screens.put("profile", "/com/screens/ProfileScreen/ProfileScreen.fxml");
-        screens.put("statistic", "/com/screens/StatisticScreen/StatisticScreen.fxml");
         screens.put("training", "/com/screens/TrainingScreen/TrainingScreen.fxml");
+        screens.put("statistic", "/com/screens/StatisticScreen/StatisticScreen.fxml");
     }
 
     private void initComponents() {

@@ -106,4 +106,8 @@ public class Bootstrap extends Screen {
         return common;
     }
 
+    @Override
+    public void showed() {
+
+    }
 }
