@@ -46,7 +46,7 @@ public class Main extends Application {
         userDao.add(user);
 
 */
-        User dg = userDao.getUserByUsername("aaa").orElseThrow(null);
+       /* User dg = userDao.getUserByUsername("aaa").orElseThrow(null);
 
        WordsResult wordsResult = new WordsResult();
         wordsResult.setDate(LocalDate.now());
@@ -55,10 +55,12 @@ public class Main extends Application {
 
         em.getTransaction().begin();
         em.persist(wordsResult);
-        em.getTransaction().commit();
+        em.getTransaction().commit();*/
+       //System.out.println(wordsResult);
 
+        var res = em.createQuery("select r from Result r").getResultList();
 
-        System.out.println(wordsResult);
+        System.out.println(res);
    }
 
     @Override
