@@ -80,4 +80,15 @@
   -jfx-label-float: true;
 }
 
+.profile-screen {
+  -fx-background-color: red;
+}
+.profile-screen .info-side {
+  -fx-pref-width: 200px;
+  -fx-background-color: green;
+}
+.profile-screen .data-side {
+  -fx-background-color: blue;
+}
+
 /*# sourceMappingURL=ProfileScreen.css.map */

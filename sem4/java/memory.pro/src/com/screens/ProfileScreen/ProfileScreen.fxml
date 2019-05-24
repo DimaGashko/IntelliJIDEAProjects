@@ -3,11 +3,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane styleClass="profile-screen" stylesheets="ProfileScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.ProfileScreen.ProfileScreen">
+<BorderPane styleClass="profile-screen" stylesheets="@ProfileScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.ProfileScreen.ProfileScreen">
    <left>
-      <VBox BorderPane.alignment="CENTER" />
+      <VBox styleClass="info-side" />
    </left>
    <center>
-      <VBox BorderPane.alignment="CENTER" />
+      <VBox styleClass="data-side" />
    </center>
 </BorderPane>
