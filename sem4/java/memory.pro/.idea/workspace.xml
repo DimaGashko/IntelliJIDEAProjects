@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="s">
       <change beforePath="$PROJECT_DIR$/src/com/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/WordDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/WordDao.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,43 +49,27 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6159091">
+    <splitter split-orientation="horizontal" split-proportion="0.62608695">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="397">
-                  <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#231#232#0" expanded="true" />
-                    <element signature="e#260#261#0" expanded="true" />
-                    <element signature="e#632#633#0" expanded="true" />
-                    <element signature="e#659#660#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="15">
+                  <caret line="1" selection-start-line="1" selection-end-line="1" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/dao/WordDao.java">
+            <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+                <state relative-caret-position="235">
+                  <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#127#128#0" expanded="true" />
-                    <element signature="e#152#153#0" expanded="true" />
+                    <element signature="e#690#691#0" expanded="true" />
+                    <element signature="e#724#725#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -111,8 +94,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+                <state relative-caret-position="315">
+                  <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -123,20 +106,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="28" column="34" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="28" selection-end-column="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="255">
+                  <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -224,11 +195,8 @@
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" />
         <option value="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" />
-        <option value="$PROJECT_DIR$/src/com/Common/Common.java" />
         <option value="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" />
         <option value="$PROJECT_DIR$/src/com/services/AuthService/LoginData.java" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
         <option value="$PROJECT_DIR$/src/security/PasswordUtils.java" />
         <option value="$PROJECT_DIR$/src/schemas/Results.java" />
         <option value="$PROJECT_DIR$/src/schemas/WordsResults.java" />
@@ -242,10 +210,13 @@
         <option value="$PROJECT_DIR$/src/schemas/Word.java" />
         <option value="$PROJECT_DIR$/src/schemas/User.java" />
         <option value="$PROJECT_DIR$/src/dao/Dao.java" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
+        <option value="$PROJECT_DIR$/src/com/Common/Common.java" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
         <option value="$PROJECT_DIR$/src/dao/WordDao.java" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" />
       </list>
     </option>
   </component>
@@ -419,12 +390,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173016000" />
+    <option name="totallyTimeSpent" value="174406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49565217" weight="0.2159091" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49565217" visible="true" weight="0.2159091" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.5043478" side_tool="true" weight="0.2159091" />
@@ -996,26 +968,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jrt:///usr/lib/jvm/java-11-oracle!/java.xml/com/sun/org/apache/xerces/internal/impl/dv/xs/BooleanDV.class">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="e#0#1112#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="true" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1032,20 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1079,16 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/WORD">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1096,10 +1030,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/WordDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        <state relative-caret-position="135">
+          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#127#128#0" expanded="true" />
@@ -1108,12 +1052,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        <state relative-caret-position="315">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#724#725#0" expanded="true" />
           </folding>
         </state>
       </provider>

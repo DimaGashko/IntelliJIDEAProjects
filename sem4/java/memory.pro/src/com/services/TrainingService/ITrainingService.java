@@ -1,5 +1,7 @@
 package com.services.TrainingService;
 
+import java.util.ArrayList;
+
 public interface ITrainingService {
 
     /**
@@ -13,7 +15,7 @@ public interface ITrainingService {
      * Load training data
      * @return training data as string array
      */
-    String[] loadData();
+    ArrayList<String> loadData();
 
     /**
      * Finish the training

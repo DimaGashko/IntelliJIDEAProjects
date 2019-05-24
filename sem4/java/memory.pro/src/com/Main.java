@@ -1,5 +1,6 @@
 package com;
 
+import com.services.TrainingService.WordsTrainingService;
 import dao.UserDao;
 import dao.WordDao;
 import javafx.application.Application;
@@ -22,8 +23,11 @@ public class Main extends Application {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
-        WordDao wordDao = new WordDao(em);
-        var words = wordDao.loadRandomWords(500);
+        WordsTrainingService wordsTrainingService = new WordsTrainingService(em);
+
+        wordsTrainingService.setUp("", 1000);
+        var words = wordsTrainingService.loadData();
+
         System.out.println(words);
    }
 

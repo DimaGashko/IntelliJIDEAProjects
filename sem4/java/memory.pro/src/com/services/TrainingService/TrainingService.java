@@ -1,12 +1,12 @@
 package com.services.TrainingService;
 
-import com.Common.Common;
+import javax.persistence.EntityManager;
 
 abstract public class TrainingService implements ITrainingService {
-    private Common common;
+    private EntityManager em;
 
-    public TrainingService(Common common) {
-        this.common = common;
+    public TrainingService(EntityManager em) {
+        this.em = em;
     }
 
 }
