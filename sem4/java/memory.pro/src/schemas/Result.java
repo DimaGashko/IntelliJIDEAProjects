@@ -10,16 +10,16 @@ abstract public class Result {
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    protected int id;
 
     @Column(name = "date", nullable = false)
-    private LocalDate date;
+    protected LocalDate date;
 
     @Column(name = "grade", nullable = false)
-    private int grade;
+    protected int grade;
 
     @ManyToOne
-    private User user;
+    protected User user;
 
     public int getId() {
         return id;

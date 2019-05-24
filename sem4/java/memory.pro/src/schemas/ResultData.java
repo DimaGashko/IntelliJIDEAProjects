@@ -9,24 +9,24 @@ abstract public class ResultData {
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    protected int id;
 
     @Column(name = "time", nullable = false)
-    private int time;
+    protected int time;
 
-    public int getId() {
+    protected int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    protected void setId(int id) {
         this.id = id;
     }
 
-    public int getTime() {
+    protected int getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    protected void setTime(int time) {
         this.time = time;
     }
 
