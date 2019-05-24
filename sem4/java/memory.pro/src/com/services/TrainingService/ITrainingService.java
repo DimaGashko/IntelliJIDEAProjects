@@ -1,7 +1,5 @@
 package com.services.TrainingService;
 
-import com.Common.Common;
-
 public interface ITrainingService {
 
     /**
@@ -9,7 +7,7 @@ public interface ITrainingService {
      * @param template training data template (for example "XX XX XX")
      * @param dataCount the number of data
      */
-    void setUp(String template, int dataCount, Common common);
+    void setUp(String template, int dataCount);
 
     /**
      * Load training data

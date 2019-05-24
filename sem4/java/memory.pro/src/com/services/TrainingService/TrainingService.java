@@ -1,9 +1,12 @@
 package com.services.TrainingService;
 
-public class TrainingService {
+import com.Common.Common;
 
-    public TrainingService() {
+abstract public class TrainingService implements ITrainingService {
+    private Common common;
 
+    public TrainingService(Common common) {
+        this.common = common;
     }
 
 }
