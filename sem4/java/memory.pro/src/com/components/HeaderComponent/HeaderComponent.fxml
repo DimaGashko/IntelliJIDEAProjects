@@ -6,17 +6,15 @@
 <JFXToolbar xmlns:fx="http://javafx.com/fxml/1" styleClass="header-component" stylesheets="@HeaderComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.HeaderComponent.HeaderComponent">
     <left>
         <HBox>
-            <children>
-                <JFXButton styleClass="header__button" onAction="#onHome" text="Home"/>
-                <JFXButton styleClass="header__button" onAction="#onTraining" text="Training"/>
-                <JFXButton styleClass="header__button" onAction="#onStatistic" text="Statistic"/>
-                <JFXButton styleClass="header__button" onAction="#onProfile" text="Profile"/>
-            </children>
+            <JFXButton styleClass="header__button" onAction="#onHome" text="Home"/>
+            <JFXButton styleClass="header__button" onAction="#onTraining" text="Training"/>
+            <JFXButton styleClass="header__button" onAction="#onStatistic" text="Statistic"/>
+            <JFXButton styleClass="header__button" onAction="#onProfile" text="Profile"/>
         </HBox>
     </left>
     <right>
         <HBox>
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onLogout" text="Log out"/>
+            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onHelp" text="Help"/>
         </HBox>
     </right>
 

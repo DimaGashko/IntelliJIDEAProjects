@@ -75,4 +75,5 @@ abstract public class Component implements Initializable {
     private void setParams(HashMap<String, String> params) {
         this.params = params;
     }
+
 }

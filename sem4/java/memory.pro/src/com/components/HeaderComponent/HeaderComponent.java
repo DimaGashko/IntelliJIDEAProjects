@@ -1,6 +1,9 @@
 package com.components.HeaderComponent;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import lib.Alerts.Alerts;
 import lib.Component.Component;
 
 import java.net.URL;
@@ -29,12 +32,17 @@ public class HeaderComponent extends Component {
         common.setScreen("profile");
     }
 
-    private void logout() {
-        if (!common.getAuth().isLoggedIn()) return;
-        if (!alerts.ask("Logout?")) return;
+    private void openHelp() {
+        String title = "Memory.pro - you can memorize everything!";
 
-        common.getAuth().logout();
-        common.setScreen("auth");
+        String content = "Contacts: dimagashko@gmail.com\n" +
+                "\n" +
+                "You can fork this project:\n" +
+                "https://github.com/DimaGashko/memory-pro\n" +
+                "\n" +
+                "Copyright \u00a9 2019 Dmitry Gashko\n";
+
+        alerts.show(Alerts.alertInfo, "Memory.pro", title, content);
     }
 
     @FXML void onHome() {
@@ -49,7 +57,7 @@ public class HeaderComponent extends Component {
     @FXML void onProfile() {
         goToProfile();
     }
-    @FXML void onLogout() {
-        logout();
+    @FXML void onHelp() {
+        openHelp();
     }
 }

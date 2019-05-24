@@ -61,7 +61,7 @@
     </left>
     <center>
         <VBox styleClass="data-side">
-            <Label styleClass="data-side__title" text="Statistic (words)"/>
+            <Label styleClass="data-side__title" text="Statistics (words)"/>
         </VBox>
     </center>
 </BorderPane>

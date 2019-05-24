@@ -12,4 +12,12 @@ public class ProfileScreen extends Screen {
 
     }
 
+    protected void logout() {
+        if (!common.getAuth().isLoggedIn()) return;
+        if (!alerts.ask("Logout?")) return;
+
+        common.getAuth().logout();
+        common.setScreen("auth");
+    }
+
 }
