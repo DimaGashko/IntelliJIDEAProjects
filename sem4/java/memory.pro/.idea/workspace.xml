@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="s">
-      <change beforePath="$PROJECT_DIR$/src/schemas/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/security/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/security/PasswordUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/WordsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/WordsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../testJPA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../testJPA/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,7 +53,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5469697">
+    <splitter split-orientation="horizontal" split-proportion="0.13939394">
       <split-first>
         <leaf>
           <file pinned="false" current-in-tab="false">
@@ -72,8 +72,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/schemas/User.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1245">
-                  <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+                <state relative-caret-position="225">
+                  <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="37" selection-end-column="48" />
                   <folding>
                     <element signature="e#2456#2457#0" expanded="true" />
                     <element signature="e#2490#2491#0" expanded="true" />
@@ -87,14 +87,29 @@
         </leaf>
       </split-first>
       <split-second>
-        <splitter split-orientation="horizontal" split-proportion="0.2847571">
+        <splitter split-orientation="horizontal" split-proportion="0.4508612">
           <split-first>
             <leaf>
               <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/schemas/WordsResultData.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="165">
+                      <caret line="11" selection-start-line="11" selection-end-line="11" />
+                      <folding>
+                        <element signature="imports" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="150">
-                      <caret line="10" selection-start-line="10" selection-end-line="10" />
+                    <state relative-caret-position="135">
+                      <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+                      <folding>
+                        <element signature="imports" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -103,11 +118,11 @@
           </split-first>
           <split-second>
             <leaf>
-              <file pinned="false" current-in-tab="true">
+              <file pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/src/schemas/Result.java">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="443">
-                      <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+                    <state relative-caret-position="255">
+                      <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="22" />
                       <folding>
                         <element signature="imports" expanded="true" />
                         <element signature="e#552#553#0" expanded="true" />
@@ -130,6 +145,30 @@
                         <element signature="e#1098#1099#0" expanded="true" />
                         <element signature="e#1138#1139#0" expanded="true" />
                         <element signature="e#1172#1173#0" expanded="true" />
+                        <element signature="e#1247#1248#0" expanded="true" />
+                        <element signature="e#1314#1315#0" expanded="true" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/schemas/ResultData.java">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="442">
+                      <caret line="45" selection-start-line="45" selection-end-line="45" />
+                      <folding>
+                        <element signature="imports" expanded="true" />
+                        <element signature="e#310#311#0" expanded="true" />
+                        <element signature="e#335#336#0" expanded="true" />
+                        <element signature="e#368#369#0" expanded="true" />
+                        <element signature="e#396#397#0" expanded="true" />
+                        <element signature="e#424#425#0" expanded="true" />
+                        <element signature="e#451#452#0" expanded="true" />
+                        <element signature="e#488#489#0" expanded="true" />
+                        <element signature="e#520#521#0" expanded="true" />
+                        <element signature="e#860#861#0" expanded="true" />
+                        <element signature="e#905#906#0" expanded="true" />
                       </folding>
                     </state>
                   </provider>
@@ -167,9 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/lib/InputValidation/InputValidation.java" />
-        <option value="$PROJECT_DIR$/src/com/components/login/LoginComponent.java" />
-        <option value="$PROJECT_DIR$/src/lib/Validation/Validation.java" />
         <option value="$PROJECT_DIR$/src/com/components/header/HeaderComponent.java" />
         <option value="$PROJECT_DIR$/src/Global/Global.java" />
         <option value="$PROJECT_DIR$/src/lib/Validation/EmailValidator.java" />
@@ -218,6 +254,9 @@
         <option value="$PROJECT_DIR$/src/schemas/WordsResults.java" />
         <option value="$PROJECT_DIR$/src/schemas/User.java" />
         <option value="$PROJECT_DIR$/src/schemas/Result.java" />
+        <option value="$PROJECT_DIR$/src/schemas/WordsResult.java" />
+        <option value="$PROJECT_DIR$/src/schemas/ResultData.java" />
+        <option value="$PROJECT_DIR$/src/schemas/WordsResultData.java" />
       </list>
     </option>
   </component>
@@ -373,10 +412,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160065000" />
+    <option name="totallyTimeSpent" value="161106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4975728" weight="0.19469696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -458,26 +498,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -844,17 +864,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding>
-            <element signature="e#196#197#0" expanded="true" />
-            <element signature="e#213#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/security/PasswordUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -875,17 +884,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="60">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding>
+            <element signature="e#196#197#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/schemas/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="36" column="4" lean-forward="true" selection-start-line="36" selection-start-column="4" selection-end-line="37" selection-end-column="48" />
           <folding>
             <element signature="e#2456#2457#0" expanded="true" />
             <element signature="e#2490#2491#0" expanded="true" />
@@ -897,8 +910,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/schemas/Result.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        <state relative-caret-position="255">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#552#553#0" expanded="true" />
@@ -921,6 +934,48 @@
             <element signature="e#1098#1099#0" expanded="true" />
             <element signature="e#1138#1139#0" expanded="true" />
             <element signature="e#1172#1173#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="56" lean-forward="true" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/ResultData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#310#311#0" expanded="true" />
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#368#369#0" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#860#861#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/WordsResultData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
