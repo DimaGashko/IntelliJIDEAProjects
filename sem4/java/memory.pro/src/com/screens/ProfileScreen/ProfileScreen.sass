@@ -1,11 +1,10 @@
 @import ../../styles/base
 
 .profile-screen
-  -fx-background-color: red
 
   .info-side
     -fx-pref-width: $profile-info-width
-    -fx-background-color: #282c47
+    -fx-background-color: $brand-color-3
     -fx-border-width: 0 1px 0 0
     -fx-border-color: #666
     -fx-min-height: 550px
@@ -14,7 +13,7 @@
       -fx-text-fill: $brand-color-1
 
   .data-side
-    -fx-padding: 10px
+    -fx-padding: 10px 15px
     -fx-background-color: $brand-color-1
 
   .info-side__group
@@ -44,3 +43,6 @@
 
   .ikonli-font-icon
     -fx-fill: $brand-color-1
+
+  .data-side__title
+    -fx-font-size: $h1

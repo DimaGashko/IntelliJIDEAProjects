@@ -80,11 +80,8 @@
   -jfx-label-float: true;
 }
 
-.profile-screen {
-  -fx-background-color: red;
-}
 .profile-screen .info-side {
-  -fx-pref-width: 250px;
+  -fx-pref-width: 250;
   -fx-background-color: #282c47;
   -fx-border-width: 0 1px 0 0;
   -fx-border-color: #666;
@@ -94,7 +91,7 @@
   -fx-text-fill: #fff;
 }
 .profile-screen .data-side {
-  -fx-padding: 10px;
+  -fx-padding: 10px 15px;
   -fx-background-color: #fff;
 }
 .profile-screen .info-side__group {
@@ -124,6 +121,9 @@
 }
 .profile-screen .ikonli-font-icon {
   -fx-fill: #fff;
+}
+.profile-screen .data-side__title {
+  -fx-font-size: 36px;
 }
 
 /*# sourceMappingURL=ProfileScreen.css.map */

@@ -1,99 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<BorderPane prefHeight="284.0" prefWidth="403.0" styleClass="profile-screen" stylesheets="@ProfileScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.ProfileScreen.ProfileScreen">
-   <left>
-      <AnchorPane fx:id="infoSide" styleClass="info-side">
-         <children>
-            <VBox AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <VBox styleClass="info-side__avatar-container">
-                     <children>
-                        <ImageView fitHeight="250" fitWidth="250" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../img/demo-avatar.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </VBox>
-                  <VBox styleClass="info-side__group">
-                     <children>
-                        <VBox styleClass="info-side__field">
-                           <children>
-                              <VBox>
-                                 <children>
-                                    <Label styleClass="info-side__full-name" text="Dmitry Gashko" />
-                                    <Label styleClass="info-side__username" text="DmitryGashko" />
-                                 </children>
-                              </VBox>
-                              <JFXButton styleClass="info-side__button" text="Edit Profile">
-                                 <graphic>
-                                    <FontIcon iconLiteral="fa-edit" />
-                                 </graphic></JFXButton>
-                           </children>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="profile-screen" stylesheets="@ProfileScreen.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.screens.ProfileScreen.ProfileScreen">
+    <left>
+        <AnchorPane styleClass="info-side">
+            <VBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                <VBox styleClass="info-side__avatar-container">
+                    <ImageView fitHeight="250" fitWidth="250">
+                        <Image url="@../../../img/demo-avatar.png"/>
+                    </ImageView>
+                </VBox>
+                <VBox styleClass="info-side__group">
+                    <VBox styleClass="info-side__field">
+                        <VBox>
+                            <Label styleClass="info-side__full-name" text="Dmitry Gashko"/>
+                            <Label styleClass="info-side__username" text="DmitryGashko"/>
                         </VBox>
-                     </children>
-                  </VBox>
-                  <VBox styleClass="info-side__group">
-                     <children>
-                        <AnchorPane>
-                           <children>
-                              <VBox layoutX="1.0" styleClass="info-side__field" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                 <children>
-                                    <Label contentDisplay="RIGHT" text="Your Statistic" />
-                                    <HBox styleClass="data-side-h-group">
-                                       <children>
-                                          <JFXButton styleClass="info-side__button" text="Numbers" />
-                                          <JFXButton styleClass="info-side__button" text="Words" />
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </VBox>
-                  <VBox styleClass="info-side__group">
-                     <children>
-                        <AnchorPane>
-                           <children>
-                              <VBox layoutX="1.0" styleClass="info-side__field" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                 <children>
-                                    <JFXButton styleClass="info-side__button" text="Let's Training" />
-                                 </children>
-                              </VBox>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </VBox>
-               </children></VBox>
-            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-               <children>
-                  <AnchorPane>
-                     <children>
-                        <JFXButton styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                           <graphic>
-                              <FontIcon iconLiteral="fas-sign-out-alt" />
-                           </graphic></JFXButton>
-                     </children>
-                  </AnchorPane>
-               </children></VBox>
-         </children>
-      </AnchorPane>
-   </left>
-   <center>
-      <VBox styleClass="data-side">
-         <children>
-            <Label text="Statistic" />
-         </children></VBox>
-   </center>
+                        <JFXButton styleClass="info-side__button" text="Edit Profile">
+                            <graphic>
+                                <FontIcon iconLiteral="fa-edit"/>
+                            </graphic>
+                        </JFXButton>
+                    </VBox>
+                </VBox>
+                <VBox styleClass="info-side__group">
+                    <AnchorPane>
+                        <VBox styleClass="info-side__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                            <Label contentDisplay="RIGHT" text="Your Statistic"/>
+                            <HBox styleClass="data-side-h-group">
+                                <JFXButton styleClass="info-side__button" text="Numbers"/>
+                                <JFXButton styleClass="info-side__button" text="Words"/>
+                            </HBox>
+                        </VBox>
+                    </AnchorPane>
+                </VBox>
+                <VBox styleClass="info-side__group">
+                    <AnchorPane>
+                        <VBox styleClass="info-side__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                            <JFXButton styleClass="info-side__button" text="Let's Training"/>
+                        </VBox>
+                    </AnchorPane>
+                </VBox>
+            </VBox>
+            <VBox AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                <AnchorPane>
+                    <JFXButton styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                        <graphic>
+                            <FontIcon iconLiteral="fas-sign-out-alt"/>
+                        </graphic>
+                    </JFXButton>
+                </AnchorPane>
+            </VBox>
+        </AnchorPane>
+    </left>
+    <center>
+        <VBox styleClass="data-side">
+            <Label styleClass="data-side__title" text="Statistic (words)"/>
+        </VBox>
+    </center>
 </BorderPane>
