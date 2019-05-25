@@ -9,48 +9,48 @@
 
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="profile-screen" stylesheets="@ProfileScreen.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.screens.ProfileScreen.ProfileScreen">
     <left>
-        <AnchorPane styleClass="info-side">
+        <AnchorPane styleClass="info-side, side-panel">
             <VBox AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
                 <VBox styleClass="info-side__avatar-container">
                     <ImageView fitHeight="250" fitWidth="250">
                         <Image url="@../../../img/demo-avatar.png"/>
                     </ImageView>
                 </VBox>
-                <VBox styleClass="info-side__group">
-                    <VBox styleClass="info-side__field">
+                <VBox styleClass="side-panel__group">
+                    <VBox styleClass="side-panel__field">
                         <VBox>
                             <Label fx:id="fxInfoSideFullName" styleClass="info-side__full-name" text="Full Name"/>
                             <Label fx:id="fxInfoSideUsername" styleClass="info-side__username" text="Username"/>
                         </VBox>
-                        <JFXButton onAction="#onEditProfile" styleClass="info-side__button" text="Edit Profile">
+                        <JFXButton onAction="#onEditProfile" styleClass="side-panel__button" text="Edit Profile">
                             <graphic>
                                 <FontIcon iconLiteral="fa-edit"/>
                             </graphic>
                         </JFXButton>
                     </VBox>
                 </VBox>
-                <VBox styleClass="info-side__group">
+                <VBox styleClass="side-panel__group">
                     <AnchorPane>
-                        <VBox styleClass="info-side__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                        <VBox styleClass="side-panel__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
                             <Label contentDisplay="RIGHT" text="Your Statistic"/>
-                            <HBox styleClass="data-side-h-group">
-                                <JFXButton onAction="#onNumberStatisticsOpen" styleClass="info-side__button" text="Numbers"/>
-                                <JFXButton onAction="#onWordsStatisticsOpen" styleClass="info-side__button" text="Words"/>
+                            <HBox styleClass="side-panel-h-group">
+                                <JFXButton onAction="#onNumberStatisticsOpen" styleClass="side-panel__button" text="Numbers"/>
+                                <JFXButton onAction="#onWordsStatisticsOpen" styleClass="side-panel__button" text="Words"/>
                             </HBox>
                         </VBox>
                     </AnchorPane>
                 </VBox>
-                <VBox styleClass="info-side__group">
+                <VBox styleClass="side-panel__group">
                     <AnchorPane>
-                        <VBox styleClass="info-side__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-                            <JFXButton onAction="#onGoToTraining" styleClass="info-side__button" text="Let's Training"/>
+                        <VBox styleClass="side-panel__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                            <JFXButton onAction="#onGoToTraining" styleClass="side-panel__button" text="Let's Training"/>
                         </VBox>
                     </AnchorPane>
                 </VBox>
             </VBox>
             <VBox AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
                 <AnchorPane>
-                    <JFXButton onAction="#onLogout" styleClass="info-side__button" text="LOG OUT" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                    <JFXButton onAction="#onLogout" styleClass="side-panel__button" text="LOG OUT" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
                         <graphic>
                             <FontIcon iconLiteral="fas-sign-out-alt"/>
                         </graphic>

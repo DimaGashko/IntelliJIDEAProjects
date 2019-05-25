@@ -80,6 +80,36 @@
   -jfx-label-float: true;
 }
 
+.side-panel {
+  -fx-background-color: #282c47;
+}
+.side-panel * {
+  -fx-text-fill: #fff;
+}
+.side-panel .ikonli-font-icon {
+  -fx-fill: #fff;
+}
+
+.side-panel__group {
+  -fx-padding: 10px 0;
+  -fx-border-width: 0 0 1px 0;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+}
+
+.side-panel__field {
+  -fx-padding: 0 0 0 20px;
+  -fx-spacing: 10px;
+}
+
+.side-panel__button {
+  -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-padding: 10px;
+}
+
+.side-panel-h-group {
+  -fx-spacing: 10px;
+}
+
 .bootstrap {
   -fx-spacing: 5px;
   -fx-background-color: #fff;
