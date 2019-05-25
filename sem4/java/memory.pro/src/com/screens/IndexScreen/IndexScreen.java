@@ -17,7 +17,7 @@ public class IndexScreen extends Screen {
     public void showed() {
         String username = common.getAuthService().getLoggedInUsername();
 
-        User user = common.getUserDao().loadByUsername(username)
+        User user = common.getUserDao().getByUsername(username)
                 .orElseThrow(() -> new RuntimeException("Cannot load user data"));
 
         System.out.println(user);

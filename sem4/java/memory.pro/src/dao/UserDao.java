@@ -6,10 +6,11 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-public class UserDao extends Dao {
+public class UserDao {
+    private EntityManager em;
 
     public UserDao(EntityManager em) {
-        super(em);
+        this.em = em;
     }
 
     public void add(User user) {
@@ -25,30 +26,31 @@ public class UserDao extends Dao {
         em.getTransaction().commit();
     }
 
-    public Optional<User> loadByUsername(String username) {
+    public Optional<User> getByUsername(String username) {
         var query = em.createQuery("select u from User u where u.username = :username", User.class);
+
         query.setParameter("username", username);
 
-        var user = query.getSingleResult();
+        var users = query.setMaxResults(1).getResultList();
 
-        if (user == null) {
+        if (users.isEmpty()) {
             return Optional.empty();
         }
 
-        return Optional.of(user);
+        return Optional.of(users.get(0));
     }
 
-    public Optional<String> loadSaltByUsername(String username) {
+    public Optional<String> getSaltByUsername(String username) {
         var query = em.createQuery("select u.passwordSalt from User u where u.username = :username", String.class);
         query.setParameter("username", username);
 
-        var salt = query.getSingleResult();
+        var salts = query.setMaxResults(1).getResultList();
 
-        if (salt == null || salt.isEmpty()) {
+        if (salts.isEmpty()) {
             return Optional.empty();
         }
 
-        return Optional.of(salt);
+        return Optional.of(salts.get(0));
     }
 
     public boolean checkExist(User user) {
@@ -57,7 +59,7 @@ public class UserDao extends Dao {
         query.setParameter("email", user.getEmail());
         query.setParameter("id", user.getId());
 
-        long keysCount = query.getSingleResult();
+        long keysCount = query.setMaxResults(1).getResultList().get(0);
 
         return keysCount != 0;
     }
@@ -67,7 +69,7 @@ public class UserDao extends Dao {
         query.setParameter("username", username);
         query.setParameter("key", key);
 
-        long keysCount = query.getSingleResult();
+        long keysCount = query.setMaxResults(1).getResultList().get(0);
 
         return keysCount != 0;
     }

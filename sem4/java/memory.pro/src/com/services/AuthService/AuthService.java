@@ -44,7 +44,7 @@ public class AuthService {
     }
 
     public void login(String username, String password) throws AuthServiceException {
-        String salt = userDao.loadSaltByUsername(username)
+        String salt = userDao.getSaltByUsername(username)
                 .orElseThrow(() -> new AuthServiceException("Login failed"));
 
         String key = PasswordUtils.hashPassword(password, salt)
