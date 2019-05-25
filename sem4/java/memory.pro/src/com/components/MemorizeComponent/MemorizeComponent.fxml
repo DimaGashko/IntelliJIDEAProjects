@@ -14,9 +14,8 @@
             <Label styleClass="memorize__data-item" text="${controller.curDataItem}"/>
         </VBox>
         <HBox styleClass="memorize_group">
-            <Label text="Status: "/>
             <Label text="${controller.curDataIndex}"/>
-            <Label text="/"/>
+            <Label text=" of "/>
             <Label text="${controller.dataCount}"/>
         </HBox>
         <HBox styleClass="memorize_group, memorize__control-group">

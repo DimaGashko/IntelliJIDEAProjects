@@ -12,8 +12,12 @@ import lib.Component.Component;
 import schemas.User;
 
 import java.net.URL;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ResourceBundle;
+
+import static java.time.temporal.ChronoUnit.MILLIS;
 
 public class MemorizeComponent extends Component {
 
@@ -29,6 +33,11 @@ public class MemorizeComponent extends Component {
     private TrainingService trainingService;
     private ArrayList<String> trainingData;
 
+    private ArrayList<Integer> timesToMemorize;
+    private LocalDateTime prevTime;
+
+    private boolean isDone = false;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -37,6 +46,9 @@ public class MemorizeComponent extends Component {
     public void run(String trainingType, int dataCount) {
         this.trainingType = trainingType;
         this.dataCount.set(dataCount);
+
+        timesToMemorize = new ArrayList<>(Collections.nCopies(dataCount, -1));
+        prevTime = LocalDateTime.now();
 
         initTrainingServices();
         trainingData = trainingService.start();
@@ -54,7 +66,11 @@ public class MemorizeComponent extends Component {
 
     private void next() {
         int index = curDataIndex.get() + 1;
-        if (index > dataCount.get()) index = dataCount.get();
+
+        if (index > dataCount.get()) {
+            finishMemorize();
+            return;
+        }
 
         curDataIndex.set(index);
         updateDataItem();
@@ -72,6 +88,18 @@ public class MemorizeComponent extends Component {
             fxDataGroup.getStyleClass().add(evenClassName);
         }
 
+        if (timesToMemorize.get(index) == -1) {
+            LocalDateTime curTime = LocalDateTime.now();
+            timesToMemorize.set(index, (int)MILLIS.between(prevTime, curTime));
+            prevTime = curTime;
+        }
+    }
+
+    private void finishMemorize() {
+        if (isDone) return;
+        isDone = true;
+
+        System.out.println(timesToMemorize);
     }
 
     private void initTrainingServices() {
