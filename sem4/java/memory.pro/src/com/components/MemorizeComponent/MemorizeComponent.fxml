@@ -13,9 +13,9 @@
         </VBox>
         <HBox styleClass="memorize_group">
             <Label text="Status: " />
-            <Label text="15" />
+            <Label text="${controller.curDataIndex}" />
             <Label text="/" />
-            <Label text="144" />
+            <Label text="${controller.dataCount}" />
         </HBox>
         <HBox styleClass="memorize_group, memorize__control-group">
             <JFXButton styleClass="memorize__control" text="Prev">
