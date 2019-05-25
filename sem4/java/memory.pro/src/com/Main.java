@@ -1,5 +1,6 @@
 package com;
 
+import com.services.TrainingService.WordsTrainingResult;
 import com.services.TrainingService.WordsTrainingService;
 import dao.UserDao;
 import dao.WordDao;
@@ -14,6 +15,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class Main extends Application {
     Stage stage;
@@ -23,12 +26,20 @@ public class Main extends Application {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
-        WordsTrainingService wordsTrainingService = new WordsTrainingService(em);
+        WordsTrainingService wordsTrainingService = new WordsTrainingService(null, em);
 
-        wordsTrainingService.setUp("", 1000);
-        var words = wordsTrainingService.loadData();
+        wordsTrainingService.setUp(25);
+        var words = wordsTrainingService.start();
 
-        System.out.println(words);
+        var res = words.stream().map((word) -> new WordsTrainingResult(word, word.length()))
+                .collect(Collectors.toCollection(ArrayList::new));
+
+        res.get(0).setValue("wrong1");
+        res.get(2).setValue("wrong3");
+        res.get(4).setValue("wrong5");
+        res.get(6).setValue("wrong7");
+
+        System.out.println(res);
    }
 
     @Override

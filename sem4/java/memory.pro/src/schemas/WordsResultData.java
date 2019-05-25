@@ -1,8 +1,6 @@
 package schemas;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
@@ -11,11 +9,11 @@ public class WordsResultData extends ResultData {
     @ManyToOne
     private WordsResult wordsResult;
 
-    @OneToMany
-    private Collection<Word> words;
+    @OneToOne
+    private Word word;
 
-    @OneToMany
-    private Collection<Word> answer;
+    @Column(name = "answer", nullable = false)
+    private String answer;
 
     public WordsResult getWordsResult() {
         return wordsResult;
@@ -25,19 +23,19 @@ public class WordsResultData extends ResultData {
         this.wordsResult = wordsResult;
     }
 
-    public Collection<Word> getWords() {
-        return words;
+    public Word getWord() {
+        return word;
     }
 
-    public void setWords(Collection<Word> words) {
-        this.words = words;
+    public void setWord(Word word) {
+        this.word = word;
     }
 
-    public Collection<Word> getAnswer() {
+    public String getAnswer() {
         return answer;
     }
 
-    public void setAnswer(Collection<Word> answer) {
+    public void setAnswer(String answer) {
         this.answer = answer;
     }
 }

@@ -1,5 +1,7 @@
 package com.services.TrainingService;
 
+import schemas.Result;
+
 import java.util.ArrayList;
 
 public interface ITrainingService {
@@ -8,18 +10,19 @@ public interface ITrainingService {
      * Set up the training
      * @param dataCount the number of data
      */
-    void setUp(String pattern, int dataCount);
+    void setUp(int dataCount);
 
     /**
-     * Load training data
+     * Start the training
      * @return training data as string array
      */
-    ArrayList<String> loadData();
+    ArrayList<String> start();
 
     /**
      * Finish the training
-     * @return result id
+     * @param answerData data entered by the user
+     * @return training result
      */
-    int finishTraining();
+    Result finish(ArrayList<WordsTrainingResult> answerData);
 
 }

@@ -14,19 +14,19 @@ abstract public class ResultData {
     @Column(name = "time", nullable = false)
     protected int time;
 
-    protected int getId() {
+    public int getId() {
         return id;
     }
 
-    protected void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    protected int getTime() {
+    public int getTime() {
         return time;
     }
 
-    protected void setTime(int time) {
+    public void setTime(int time) {
         this.time = time;
     }
 
