@@ -1,7 +1,5 @@
 package com.services.TrainingService;
 
-import schemas.Result;
-
 import java.util.ArrayList;
 
 public interface ITrainingService {
@@ -23,6 +21,6 @@ public interface ITrainingService {
      * @param answerData data entered by the user
      * @return training result
      */
-    Result finish(ArrayList<WordsTrainingResult> answerData);
+    int finish(ArrayList<WordsTrainingResult> answerData);
 
 }

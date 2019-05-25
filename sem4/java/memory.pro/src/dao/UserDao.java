@@ -25,7 +25,7 @@ public class UserDao extends Dao {
         em.getTransaction().commit();
     }
 
-    public Optional<User> loadUserByUsername(String username) {
+    public Optional<User> loadByUsername(String username) {
         var query = em.createQuery("select u from User u where u.username = :username", User.class);
         query.setParameter("username", username);
 

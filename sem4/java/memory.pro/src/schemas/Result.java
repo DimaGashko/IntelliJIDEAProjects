@@ -3,7 +3,7 @@ package schemas;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.Objects;
-
+/*
 @Entity
 abstract public class Result {
 
@@ -78,3 +78,4 @@ abstract public class Result {
                 '}';
     }
 }
+*/

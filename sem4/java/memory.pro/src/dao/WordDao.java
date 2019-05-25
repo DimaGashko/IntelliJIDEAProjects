@@ -11,7 +11,7 @@ public class WordDao extends Dao {
         super(em);
     }
 
-    public ArrayList<Word> loadRandomWords(int limit) {
+    public ArrayList<Word> getRandomWords(int limit) {
         var query = em.createNativeQuery("select * from WORD order by RAND()", Word.class);
         var words = query.setMaxResults(limit).getResultList();
 

@@ -1,18 +1,24 @@
 package schemas;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
+import java.util.Objects;
 
 @Entity
-public class NumbersResultData extends ResultData {
+public class NumbersResultData {
+
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected int id;
+
+    @Column(name = "time", nullable = false)
+    protected int time;
 
     @Column(name = "number", nullable = false)
     private int number;
 
-    @Column(name = "answer", nullable = false)
+    @Column(nullable = false)
     private int answer;
 
     @ManyToOne
@@ -42,13 +48,47 @@ public class NumbersResultData extends ResultData {
         this.numbersResult = numbersResult;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        NumbersResultData that = (NumbersResultData) o;
+        return id == that.id &&
+                time == that.time &&
+                number == that.number &&
+                answer == that.answer &&
+                Objects.equals(numbersResult, that.numbersResult);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, time, number, answer, numbersResult);
+    }
+
     @Override
     public String toString() {
         return "NumbersResultData{" +
-                "number=" + number +
-                ", answer=" + answer +
-                ", id=" + id +
+                "id=" + id +
                 ", time=" + time +
+                ", number=" + number +
+                ", answer=" + answer +
+                ", numbersResult=" + numbersResult +
                 '}';
     }
 }

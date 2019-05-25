@@ -2,7 +2,7 @@ package schemas;
 
 import javax.persistence.*;
 import java.util.Objects;
-
+/*
 @Entity
 abstract public class ResultData {
 
@@ -52,3 +52,4 @@ abstract public class ResultData {
                 '}';
     }
 }
+*/

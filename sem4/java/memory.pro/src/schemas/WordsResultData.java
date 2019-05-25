@@ -1,10 +1,18 @@
 package schemas;
 
 import javax.persistence.*;
-import java.util.Collection;
+import java.util.Objects;
 
 @Entity
-public class WordsResultData extends ResultData {
+public class WordsResultData {
+
+    @Id
+    @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    protected int id;
+
+    @Column(name = "time", nullable = false)
+    protected int time;
 
     @ManyToOne
     private WordsResult wordsResult;
@@ -39,14 +47,47 @@ public class WordsResultData extends ResultData {
         this.answer = answer;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        WordsResultData that = (WordsResultData) o;
+        return id == that.id &&
+                time == that.time &&
+                Objects.equals(wordsResult, that.wordsResult) &&
+                Objects.equals(word, that.word) &&
+                Objects.equals(answer, that.answer);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, time, wordsResult, word, answer);
+    }
+
     @Override
     public String toString() {
         return "WordsResultData{" +
-                "wordsResult=" + wordsResult +
+                "id=" + id +
+                ", time=" + time +
+                ", wordsResult=" + wordsResult +
                 ", word=" + word +
                 ", answer='" + answer + '\'' +
-                ", id=" + id +
-                ", time=" + time +
                 '}';
     }
 }

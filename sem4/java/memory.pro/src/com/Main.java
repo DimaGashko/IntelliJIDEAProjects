@@ -1,5 +1,7 @@
 package com;
 
+import com.services.AuthService.AuthService;
+import com.services.AuthService.AuthServiceException;
 import com.services.TrainingService.WordsTrainingResult;
 import com.services.TrainingService.WordsTrainingService;
 import dao.UserDao;
@@ -10,6 +12,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import schemas.User;
+import schemas.WordsResultData;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -26,7 +30,26 @@ public class Main extends Application {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
-        WordsTrainingService wordsTrainingService = new WordsTrainingService(null, em);
+        UserDao userDao = new UserDao(em);
+
+        AuthService authService = new AuthService(new UserDao(em));
+/*
+        User user = new User();
+
+        user.setFirstName("Dmitry");
+        user.setLastName("Gashko");
+        user.setUsername("DmitryGashko");
+        user.setEmail("dimagashko@gmail.com");
+        user.setPassword("qqqqqqqqww");
+
+        try {
+            authService.signup(user);
+        } catch (AuthServiceException e) {
+
+        }*/
+
+        User u = userDao.loadByUsername("DmitryGashko").orElseThrow(null);
+        WordsTrainingService wordsTrainingService = new WordsTrainingService(u, em);
 
         wordsTrainingService.setUp(25);
         var words = wordsTrainingService.start();
@@ -40,6 +63,20 @@ public class Main extends Application {
         res.get(6).setValue("wrong7");
 
         wordsTrainingService.finish(res);
+
+        /*WordDao wordDao = new WordDao(em);
+        var words = wordDao.getRandomWords(10);
+
+        WordsResultData wordsResultData = new WordsResultData();
+        wordsResultData.setWord(words.get(2));
+        wordsResultData.setAnswer("asdf");
+        wordsResultData.setTime(25);
+
+        em.getTransaction().begin();
+        em.persist(wordsResultData);
+        em.getTransaction().commit();
+
+        System.out.println("Done");*/
    }
 
     @Override

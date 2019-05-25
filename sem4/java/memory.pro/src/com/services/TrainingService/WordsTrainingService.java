@@ -6,6 +6,8 @@ import java.util.Collections;
 import java.util.stream.Collectors;
 
 import dao.WordDao;
+import dao.WordsResultDao;
+import dao.WordsResultDataDao;
 import schemas.*;
 
 import javax.persistence.EntityManager;
@@ -14,11 +16,15 @@ public class WordsTrainingService extends TrainingService {
     private ArrayList<Word> trainingWords;
 
     private WordDao wordDao;
+    private WordsResultDataDao wordsResultDataDao;
+    private WordsResultDao wordsResultDao;
 
     public WordsTrainingService(User user, EntityManager em) {
         super(user, em);
 
         this.wordDao = new WordDao(em);
+        this.wordsResultDataDao = new WordsResultDataDao(em);
+        this.wordsResultDao = new WordsResultDao(em);
     }
 
     @Override
@@ -32,7 +38,7 @@ public class WordsTrainingService extends TrainingService {
     }
 
     @Override
-    public Result finish(ArrayList<WordsTrainingResult> answerData) {
+    public int finish(ArrayList<WordsTrainingResult> answerData) {
         WordsResult result = new WordsResult();
         ArrayList<WordsResultData> wordsResultData = getResultData(result, answerData);
 
@@ -42,7 +48,10 @@ public class WordsTrainingService extends TrainingService {
         result.setUser(user);
         result.setGrade(grade);
 
-        return result;
+        wordsResultDao.add(result);
+        wordsResultDataDao.addAll(wordsResultData);
+
+        return result.getId();
     }
 
     private ArrayList<WordsResultData> getResultData(WordsResult result, ArrayList<WordsTrainingResult> answerData) {
@@ -66,7 +75,7 @@ public class WordsTrainingService extends TrainingService {
     }
 
     private ArrayList<Word> loadWords() {
-        var words = wordDao.loadRandomWords(dataCount);
+        var words = wordDao.getRandomWords(dataCount);
         if (words.size() == dataCount) {
             return words;
         }
