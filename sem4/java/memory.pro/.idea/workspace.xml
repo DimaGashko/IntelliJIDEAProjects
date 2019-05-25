@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
-      <change beforePath="$PROJECT_DIR$/src/com/Bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bootstrap.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/LoginComponent/LoginComponent.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/SignupComponent/SignupComponent.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/StatisticsScreen/StatisticsScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/StatisticsScreen/StatisticsScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/StatisticsScreen/StatisticsScreen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/StatisticsScreen/StatisticsScreen.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/styles/components/_global.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/styles/components/_global.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/styles/components/_sidePanel.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/styles/components/_sidePanel.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Validation/Validation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,8 +69,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+                <state relative-caret-position="270">
+                  <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -118,8 +94,8 @@
             <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml">
               <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="106">
-                  <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+                <state relative-caret-position="123">
+                  <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -253,8 +229,8 @@
         <option value="$PROJECT_DIR$/src/com/styles/components/_global.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_sidePanel.sass" />
-        <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" />
+        <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass" />
       </list>
     </option>
   </component>
@@ -480,12 +456,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="12248000" />
+      <workItem from="1558781377417" duration="13471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212548000" />
+    <option name="totallyTimeSpent" value="213771000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1021,8 +997,8 @@
     <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="29" column="41" lean-forward="true" selection-start-line="29" selection-start-column="41" selection-end-line="29" selection-end-column="41" />
+        <state relative-caret-position="123">
+          <caret line="30" column="41" lean-forward="true" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -1044,17 +1020,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="23" column="33" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>

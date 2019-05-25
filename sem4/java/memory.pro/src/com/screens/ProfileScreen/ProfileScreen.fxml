@@ -37,7 +37,10 @@
                         <VBox styleClass="side-panel__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
                             <Label contentDisplay="RIGHT" styleClass="side-panel__text" text="Your Statistic" />
                             <HBox styleClass="side-panel-h-group">
-                                <JFXButton onAction="#onNumberStatisticsOpen" text="Numbers" />
+                                <JFXButton onAction="#onNumberStatisticsOpen" text="Numbers">
+                           <graphic>
+                              <FontIcon iconLiteral="fa-bar-chart" />
+                           </graphic></JFXButton>
                                 <JFXButton onAction="#onWordsStatisticsOpen" text="Words" />
                             </HBox>
                         </VBox>
@@ -46,7 +49,10 @@
                 <VBox styleClass="side-panel__group">
                     <AnchorPane>
                         <VBox styleClass="side-panel__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-                            <JFXButton onAction="#onGoToTraining" text="Let's Training" />
+                            <JFXButton onAction="#onGoToTraining" text="Let's Training">
+                        <graphic>
+                           <FontIcon iconLiteral="fa-database" />
+                        </graphic></JFXButton>
                         </VBox>
                     </AnchorPane>
                 </VBox>
