@@ -1,5 +1,6 @@
 package com.screens.ProfileScreen;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import lib.Alerts.Alerts;
@@ -12,8 +13,9 @@ import java.util.ResourceBundle;
 public class ProfileScreen extends Screen {
 
     @FXML private Label fxDataSideTitle;
-    @FXML private Label fxInfoSideFullName;
-    @FXML private Label fxInfoSideUsername;
+
+    private SimpleStringProperty username = new SimpleStringProperty("Username");
+    private SimpleStringProperty userFullName = new SimpleStringProperty("User Fullname");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -36,8 +38,8 @@ public class ProfileScreen extends Screen {
 
         User user = userOpt.get();
 
-        fxInfoSideFullName.setText(user.getFullName());
-        fxInfoSideUsername.setText(user.getUsername());
+        userFullName.set(user.getFullName());
+        username.set(user.getUsername());
     }
 
     protected void logout() {
@@ -80,4 +82,35 @@ public class ProfileScreen extends Screen {
         logout();
     }
 
+    public Label getFxDataSideTitle() {
+        return fxDataSideTitle;
+    }
+
+    public void setFxDataSideTitle(Label fxDataSideTitle) {
+        this.fxDataSideTitle = fxDataSideTitle;
+    }
+
+    public String getUsername() {
+        return username.get();
+    }
+
+    public SimpleStringProperty usernameProperty() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username.set(username);
+    }
+
+    public String getUserFullName() {
+        return userFullName.get();
+    }
+
+    public SimpleStringProperty userFullNameProperty() {
+        return userFullName;
+    }
+
+    public void setUserFullName(String userFullName) {
+        this.userFullName.set(userFullName);
+    }
 }

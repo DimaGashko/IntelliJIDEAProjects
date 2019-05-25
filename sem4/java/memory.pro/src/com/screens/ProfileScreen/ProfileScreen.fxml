@@ -22,8 +22,8 @@
                 <VBox styleClass="side-panel__group">
                     <VBox styleClass="side-panel__field">
                         <VBox>
-                            <Label fx:id="fxInfoSideFullName" styleClass="info-side__full-name" text="Full Name" />
-                            <Label fx:id="fxInfoSideUsername" styleClass="info-side__username" text="Username" />
+                            <Label styleClass="info-side__full-name" text="${controller.userFullName}" />
+                            <Label styleClass="info-side__username" text="${controller.username}" />
                         </VBox>
                         <JFXButton onAction="#onEditProfile" text="Edit Profile">
                             <graphic>
