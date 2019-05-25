@@ -15,7 +15,7 @@ public class ProfileScreen extends Screen {
     @FXML private Label fxDataSideTitle;
 
     private SimpleStringProperty username = new SimpleStringProperty("Username");
-    private SimpleStringProperty userFullName = new SimpleStringProperty("User Fullname");
+    private SimpleStringProperty userFullName = new SimpleStringProperty("User FullName");
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -29,14 +29,7 @@ public class ProfileScreen extends Screen {
     }
 
     private void updateUserData() {
-        var userOpt = getUser();
-
-        if (userOpt.isEmpty()) {
-            common.setScreen("auth");
-            return;
-        }
-
-        User user = userOpt.get();
+        var user = getUser();
 
         userFullName.set(user.getFullName());
         username.set(user.getUsername());
@@ -80,14 +73,6 @@ public class ProfileScreen extends Screen {
     }
     @FXML public void onLogout() {
         logout();
-    }
-
-    public Label getFxDataSideTitle() {
-        return fxDataSideTitle;
-    }
-
-    public void setFxDataSideTitle(Label fxDataSideTitle) {
-        this.fxDataSideTitle = fxDataSideTitle;
     }
 
     public String getUsername() {

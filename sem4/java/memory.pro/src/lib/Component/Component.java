@@ -66,14 +66,15 @@ abstract public class Component implements Initializable {
         return new Pair<>(root, component);
     }
 
-    public Optional<User> getUser() {
+    public User getUser() {
         Optional<User> userOpt = common.getUser();
 
         if (userOpt.isEmpty()) {
-            alerts.show(Alerts.alertErr, "Cannot load user data");
+            common.setScreen("auth");
+            return null;
         }
 
-        return userOpt;
+        return userOpt.get();
     }
 
     public Common getCommon() {

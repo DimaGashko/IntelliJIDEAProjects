@@ -15,16 +15,7 @@ public class IndexScreen extends Screen {
 
     @Override
     public void showed() {
-        var userOpt = getUser();
 
-        if (userOpt.isEmpty()) {
-            common.setScreen("auth");
-            return;
-        }
-
-        User user = userOpt.get();
-
-        System.out.println(user);
     }
 
     public void click() {

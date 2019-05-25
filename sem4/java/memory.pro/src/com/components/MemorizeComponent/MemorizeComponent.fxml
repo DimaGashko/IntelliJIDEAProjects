@@ -18,12 +18,12 @@
             <Label text="${controller.dataCount}" />
         </HBox>
         <HBox styleClass="memorize_group, memorize__control-group">
-            <JFXButton styleClass="memorize__control" text="Prev">
+            <JFXButton onAction="#onPrev" styleClass="memorize__control" text="Prev">
                 <graphic>
                     <FontIcon iconLiteral="fa-arrow-circle-o-left" />
                 </graphic>
             </JFXButton>
-            <JFXButton contentDisplay="RIGHT" styleClass="memorize__control" text="Next">
+            <JFXButton onAction="#onNext" contentDisplay="RIGHT" styleClass="memorize__control" text="Next">
                 <graphic>
                     <FontIcon iconLiteral="fa-arrow-circle-o-right" />
                 </graphic>

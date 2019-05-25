@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
-      <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Component/Component.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,18 +55,20 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.36515152">
+    <splitter split-orientation="horizontal" split-proportion="0.67045456">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="180">
+                  <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#517#518#0" expanded="true" />
-                    <element signature="e#541#542#0" expanded="true" />
+                    <element signature="e#722#723#0" expanded="true" />
+                    <element signature="e#744#745#0" expanded="true" />
+                    <element signature="e#783#784#0" expanded="true" />
+                    <element signature="e#805#806#0" expanded="true" />
                     <element signature="e#627#628#0" expanded="true" />
                     <element signature="e#665#666#0" expanded="true" />
                     <element signature="e#721#722#0" expanded="true" />
@@ -82,28 +86,22 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+                <state relative-caret-position="240">
+                  <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="277">
+                  <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
                   <folding>
-                    <element signature="e#2085#2086#0" expanded="true" />
-                    <element signature="e#2123#2124#0" expanded="true" />
-                    <element signature="e#2184#2185#0" expanded="true" />
-                    <element signature="e#2238#2239#0" expanded="true" />
-                    <element signature="e#2273#2274#0" expanded="true" />
-                    <element signature="e#2310#2311#0" expanded="true" />
-                    <element signature="e#2364#2365#0" expanded="true" />
-                    <element signature="e#2395#2396#0" expanded="true" />
-                    <element signature="e#2443#2444#0" expanded="true" />
-                    <element signature="e#2486#2487#0" expanded="true" />
-                    <element signature="e#2525#2526#0" expanded="true" />
-                    <element signature="e#2566#2567#0" expanded="true" />
-                    <element signature="e#2624#2625#0" expanded="true" />
-                    <element signature="e#2659#2660#0" expanded="true" />
-                    <element signature="e#2715#2716#0" expanded="true" />
-                    <element signature="e#2766#2767#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -113,8 +111,8 @@
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml">
               <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+                <state relative-caret-position="289">
+                  <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -123,21 +121,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="261">
-                  <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml">
-              <provider editor-type-id="JavaFX-Scene-Builder" />
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="208">
-                  <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+                <state relative-caret-position="112">
+                  <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -166,6 +154,7 @@
       <find>System.out</find>
       <find>result</find>
       <find>pro</find>
+      <find>user</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -188,7 +177,6 @@
         <option value="$PROJECT_DIR$/src/dao/NumbersResultDao.java" />
         <option value="$PROJECT_DIR$/src/dao/NumberResultDataDao.java" />
         <option value="$PROJECT_DIR$/src/dao/NumbersResultDataDao.java" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" />
         <option value="$PROJECT_DIR$/src/schemas/WordsResult.java" />
         <option value="$PROJECT_DIR$/src/schemas/NumbersResult.java" />
         <option value="$PROJECT_DIR$/src/schemas/NumbersResultData.java" />
@@ -197,7 +185,6 @@
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" />
-        <option value="$PROJECT_DIR$/src/lib/Component/Component.java" />
         <option value="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" />
         <option value="$PROJECT_DIR$/src/schemas/User.java" />
         <option value="$PROJECT_DIR$/src/other/InsertWords.sql" />
@@ -208,7 +195,6 @@
         <option value="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/StatisticsScreen/StatisticsScreen.sass" />
         <option value="$PROJECT_DIR$/src/com/styles/_base.sass" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_global.sass" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_sidePanel.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass" />
@@ -221,10 +207,13 @@
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass" />
-        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" />
-        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" />
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" />
+        <option value="$PROJECT_DIR$/src/lib/Component/Component.java" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" />
+        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" />
       </list>
     </option>
   </component>
@@ -397,12 +386,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="31305000" />
+      <workItem from="1558781377417" duration="33630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231605000" />
+    <option name="totallyTimeSpent" value="233930000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,7 +441,7 @@
       <window_info anchor="right" id="Database" order="8" weight="0.20454545" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.19924243" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.19924243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50325733" side_tool="true" weight="0.23787878" />
@@ -466,7 +455,7 @@
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32899022" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="6" sideWeight="0.49924242" visible="true" weight="0.24592833" />
+      <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49924242" weight="0.24592833" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50151515" side_tool="true" weight="0.31433225" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.44299674" />
@@ -499,13 +488,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/NUMBERSRESULT">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -780,17 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding>
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -813,16 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="60" column="56" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -892,38 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#721#722#0" expanded="true" />
-            <element signature="e#753#754#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
-            <element signature="e#845#846#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-            <element signature="e#922#923#0" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1016#1017#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PATH_TO_FX$/javafx.base.jar!/javafx/beans/property/StringPropertyBase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55">
@@ -949,43 +878,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+        <state relative-caret-position="112">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="248">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="73" column="24" selection-start-line="73" selection-start-column="24" selection-end-line="73" selection-end-column="24" />
           <folding>
-            <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="e#2123#2124#0" expanded="true" />
-            <element signature="e#2184#2185#0" expanded="true" />
-            <element signature="e#2238#2239#0" expanded="true" />
-            <element signature="e#2273#2274#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
-            <element signature="e#2364#2365#0" expanded="true" />
-            <element signature="e#2395#2396#0" expanded="true" />
-            <element signature="e#2443#2444#0" expanded="true" />
-            <element signature="e#2486#2487#0" expanded="true" />
-            <element signature="e#2525#2526#0" expanded="true" />
-            <element signature="e#2566#2567#0" expanded="true" />
-            <element signature="e#2624#2625#0" expanded="true" />
-            <element signature="e#2659#2660#0" expanded="true" />
-            <element signature="e#2715#2716#0" expanded="true" />
-            <element signature="e#2766#2767#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+        <state relative-caret-position="240">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="35" />
+          <folding>
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="37" column="40" selection-start-line="37" selection-start-column="40" selection-end-line="37" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#722#723#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#805#806#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#665#666#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#753#754#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#922#923#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
