@@ -21,6 +21,6 @@ public interface ITrainingService {
      * @param answerData data entered by the user
      * @return training result
      */
-    int finish(ArrayList<WordsTrainingResult> answerData);
+    int finish(ArrayList<TrainingResult> answerData);
 
 }

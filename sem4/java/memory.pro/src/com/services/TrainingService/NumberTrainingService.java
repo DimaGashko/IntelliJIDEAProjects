@@ -1,25 +1,23 @@
 package com.services.TrainingService;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.stream.Collectors;
-
 import dao.WordDao;
 import dao.WordsResultDao;
 import dao.WordsResultDataDao;
 import schemas.*;
 
 import javax.persistence.EntityManager;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.stream.Collectors;
 
-public class WordsTrainingService extends TrainingService {
-    private ArrayList<Word> trainingWords;
+public class NumberTrainingService extends TrainingService {
+    private ArrayList<Integer> trainingWords;
 
-    private WordDao wordDao;
-    private WordsResultDataDao wordsResultDataDao;
-    private WordsResultDao wordsResultDao;
+    private NumbersResultData numbersResultData;
+    private NumbersResultDao numbersResultDao;
 
-    public WordsTrainingService(User user, EntityManager em) {
+    public NumberTrainingService(User user, EntityManager em) {
         super(user, em);
 
         this.wordDao = new WordDao(em);
