@@ -75,7 +75,6 @@ abstract public class Result {
                 "id=" + id +
                 ", date=" + date +
                 ", grade=" + grade +
-                ", users=" + user.getUsername() + // TODO: check if user always exist
                 '}';
     }
 }

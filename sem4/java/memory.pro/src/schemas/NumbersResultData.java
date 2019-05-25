@@ -41,4 +41,14 @@ public class NumbersResultData extends ResultData {
     public void setNumbersResult(NumbersResult numbersResult) {
         this.numbersResult = numbersResult;
     }
+
+    @Override
+    public String toString() {
+        return "NumbersResultData{" +
+                "number=" + number +
+                ", answer=" + answer +
+                ", id=" + id +
+                ", time=" + time +
+                '}';
+    }
 }

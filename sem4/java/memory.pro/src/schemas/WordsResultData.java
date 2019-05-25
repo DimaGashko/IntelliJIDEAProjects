@@ -38,4 +38,15 @@ public class WordsResultData extends ResultData {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    @Override
+    public String toString() {
+        return "WordsResultData{" +
+                "wordsResult=" + wordsResult +
+                ", word=" + word +
+                ", answer='" + answer + '\'' +
+                ", id=" + id +
+                ", time=" + time +
+                '}';
+    }
 }

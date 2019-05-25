@@ -39,7 +39,7 @@ public class Main extends Application {
         res.get(4).setValue("wrong5");
         res.get(6).setValue("wrong7");
 
-        System.out.println(res);
+        wordsTrainingService.finish(res);
    }
 
     @Override
