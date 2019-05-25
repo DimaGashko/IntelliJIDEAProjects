@@ -36,9 +36,11 @@ public class WordsTrainingService extends TrainingService {
         WordsResult result = new WordsResult();
         ArrayList<WordsResultData> wordsResultData = getResultData(result, answerData);
 
+        int grade = WordsResult.calculateGrade(wordsResultData);
+
         result.setDate(LocalDate.now());
         result.setUser(user);
-        result.setGrade(getGrade(wordsResultData));
+        result.setGrade(grade);
 
         return result;
     }
@@ -61,10 +63,6 @@ public class WordsTrainingService extends TrainingService {
 
         return res;
 
-    }
-
-    private int getGrade(ArrayList<WordsResultData> resultData) {
-        return 0;
     }
 
     private ArrayList<Word> loadWords() {
