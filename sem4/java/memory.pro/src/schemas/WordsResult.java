@@ -30,7 +30,7 @@ public class WordsResult {
 
         for (WordsResultData item : resultData) {
             time += item.time;
-            correct += item.getWord().getWord().equals(item.getAnswer()) ? 1 : 0;
+            correct += item.getWord().getWord().equalsIgnoreCase(item.getAnswer()) ? 1 : 0;
         }
 
         float grade = correct + (resultData.size() - time / 3.f);

@@ -33,7 +33,7 @@ public class WordsTrainingService extends TrainingService {
 
         trainingWords = loadWords();
 
-        return trainingWords.stream().map(Word::getWord)
+        return trainingWords.stream().map(Word::getWord).map(w -> w.substring(0, 1).toUpperCase() + w.substring(1).toLowerCase())
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 

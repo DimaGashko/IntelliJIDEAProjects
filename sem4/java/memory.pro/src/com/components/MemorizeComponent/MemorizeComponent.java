@@ -45,12 +45,18 @@ public class MemorizeComponent extends Component {
     }
 
     private void prev() {
-        curDataIndex.set(curDataIndex.get() - 1);
+        int index = curDataIndex.get() - 1;
+        if (index < 1) index = 1;
+
+        curDataIndex.set(index);
         updateDataItem();
     }
 
     private void next() {
-        curDataIndex.set(curDataIndex.get() + 1);
+        int index = curDataIndex.get() + 1;
+        if (index > dataCount.get()) index = dataCount.get();
+
+        curDataIndex.set(index);
         updateDataItem();
     }
 
