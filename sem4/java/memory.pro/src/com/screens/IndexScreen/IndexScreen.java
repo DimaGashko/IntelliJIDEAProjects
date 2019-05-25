@@ -15,10 +15,14 @@ public class IndexScreen extends Screen {
 
     @Override
     public void showed() {
-        String username = common.getAuthService().getLoggedInUsername();
+        var userOpt = getUser();
 
-        User user = common.getUserDao().getByUsername(username)
-                .orElseThrow(() -> new RuntimeException("Cannot load user data"));
+        if (userOpt.isEmpty()) {
+            common.setScreen("auth");
+            return;
+        }
+
+        User user = userOpt.get();
 
         System.out.println(user);
     }

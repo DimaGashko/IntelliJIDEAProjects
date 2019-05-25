@@ -19,8 +19,8 @@
                 <VBox styleClass="info-side__group">
                     <VBox styleClass="info-side__field">
                         <VBox>
-                            <Label styleClass="info-side__full-name" text="Dmitry Gashko"/>
-                            <Label styleClass="info-side__username" text="DmitryGashko"/>
+                            <Label fx:id="fxInfoSideFullName" styleClass="info-side__full-name" text="Full Name"/>
+                            <Label fx:id="fxInfoSideUsername" styleClass="info-side__username" text="Username"/>
                         </VBox>
                         <JFXButton onAction="#onEditProfile" styleClass="info-side__button" text="Edit Profile">
                             <graphic>

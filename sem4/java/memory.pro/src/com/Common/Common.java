@@ -2,12 +2,14 @@ package com.Common;
 
 import com.services.AuthService.AuthService;
 import dao.UserDao;
+import schemas.User;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Optional;
 
 public class Common {
     static public final String EMAIL_REGEXP = "^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
@@ -49,6 +51,11 @@ public class Common {
 
     public void setScreen(String alias, HashMap<String, String> params) {
         onScreenChangeCallbacks.forEach((callback) -> callback.call(alias, params));
+    }
+
+    public Optional<User> getUser() {
+        String username = getAuthService().getLoggedInUsername();
+        return getUserDao().getByUsername(username);
     }
 
     public void setScreen(String alias) {

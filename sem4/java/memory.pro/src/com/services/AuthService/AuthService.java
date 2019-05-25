@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.Optional;
 
 public class AuthService {
-    private String loginDataPath = "data/AuthScreen/config";
+    private String loginDataPath = "data/config";
 
     private UserDao userDao;
     private File loginDataFile;

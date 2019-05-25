@@ -37,6 +37,10 @@ public class User {
     @Transient
     private String password;
 
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
+
     public int getId() {
         return id;
     }

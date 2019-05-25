@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
+      <change beforePath="$PROJECT_DIR$/src/com/Common/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Common/Common.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/Component/Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Component/Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,8 +64,42 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml">
+              <provider editor-type-id="JavaFX-Scene-Builder" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="270">
+                  <caret line="21" column="60" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="60" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="458">
+                  <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="203">
+                  <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -70,22 +108,10 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/dao/WordDao.java">
+            <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/Main.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="84" selection-start-line="84" selection-end-line="84" />
+                <state relative-caret-position="100">
+                  <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
                 </state>
               </provider>
             </entry>
@@ -93,36 +119,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/schemas/User.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#218#219#0" expanded="true" />
-                    <element signature="e#246#247#0" expanded="true" />
-                    <element signature="e#0#49#1" expanded="true" />
-                    <element signature="e#0#62#1" expanded="true" />
-                    <element signature="e#0#93#1" expanded="true" />
-                    <element signature="e#0#93#1" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/com/services/AuthService/AuthService.java">
-              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="195">
-                  <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+                  <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#956#957#0" expanded="true" />
+                    <element signature="e#1004#1005#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -181,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/com/styles/components/_global.sass" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_vars.sass" />
         <option value="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.fxml" />
-        <option value="$PROJECT_DIR$/src/lib/Component/Component.java" />
         <option value="$PROJECT_DIR$/src/lib/Screen/Screen.java" />
         <option value="$PROJECT_DIR$/src/com/screens/AuthScreen/AuthScreen.java" />
         <option value="$PROJECT_DIR$/src/com/Bootstrap.java" />
@@ -191,17 +191,13 @@
         <option value="$PROJECT_DIR$/src/com/screens/StatisticsScreen/StatisticsScreen.java" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/StatisticsScreen/StatisticsScreen.fxml" />
-        <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" />
-        <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" />
         <option value="$PROJECT_DIR$/src/com/services/AuthService/LoginData.java" />
         <option value="$PROJECT_DIR$/src/security/PasswordUtils.java" />
         <option value="$PROJECT_DIR$/src/schemas/Results.java" />
         <option value="$PROJECT_DIR$/src/schemas/WordsResults.java" />
         <option value="$PROJECT_DIR$/src/schemas/NumberResultData.java" />
         <option value="$PROJECT_DIR$/src/schemas/Word.java" />
-        <option value="$PROJECT_DIR$/src/schemas/User.java" />
         <option value="$PROJECT_DIR$/src/dao/Dao.java" />
-        <option value="$PROJECT_DIR$/src/com/Common/Common.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingResult.java" />
         <option value="$PROJECT_DIR$/src/dao/WordDao.java" />
@@ -225,7 +221,12 @@
         <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" />
+        <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" />
+        <option value="$PROJECT_DIR$/src/com/Common/Common.java" />
+        <option value="$PROJECT_DIR$/src/lib/Component/Component.java" />
         <option value="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" />
+        <option value="$PROJECT_DIR$/src/schemas/User.java" />
+        <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" />
       </list>
     </option>
   </component>
@@ -273,6 +274,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="AuthService" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -379,7 +395,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192375000" />
+    <option name="totallyTimeSpent" value="193877000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -403,7 +419,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49848485" weight="0.4267101" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49848485" visible="true" weight="0.4267101" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.38925081" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -411,7 +427,7 @@
       <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49924242" weight="0.24592833" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50151515" side_tool="true" weight="0.31433225" />
-      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.44299674" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.44299674" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.5781759" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.6026059" />
@@ -476,120 +492,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="uml://DATABASE/3fa4374d-efc5-419f-81ba-da803098fc03">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>3fa4374d-efc5-419f-81ba-da803098fc03</OriginalElement>
-          <nodes>
-            <node x="192.09090909090912" y="893.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA_WORD</node>
-            <node x="489.0909090909091" y="721.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT_RESULTDATA</node>
-            <node x="124.20833333333334" y="0.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER</node>
-            <node x="290.2159090909091" y="269.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT</node>
-            <node x="236.0" y="476.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA</node>
-            <node x="0.0" y="524.5">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER_RESULT</node>
-            <node x="215.09090909090912" y="732.5">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORD</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT_RESULTDATA" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA">
-              <point x="-91.125" y="-61.0" />
-              <point x="519.4659090909091" y="701.0" />
-              <point x="379.125" y="701.0" />
-              <point x="28.625" y="97.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER_RESULT" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER">
-              <point x="-72.0" y="-49.0" />
-              <point x="36.0" y="456.0" />
-              <point x="81.89772727272731" y="456.0" />
-              <point x="81.89772727272731" y="244.0" />
-              <point x="181.70833333333334" y="244.0" />
-              <point x="-57.5" y="109.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORD" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA">
-              <point x="0.0" y="-49.5" />
-              <point x="342.0909090909091" y="701.0" />
-              <point x="321.875" y="701.0" />
-              <point x="-28.625" y="97.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT">
-              <point x="-57.25" y="-97.5" />
-              <point x="293.25" y="456.0" />
-              <point x="357.29924242424244" y="456.0" />
-              <point x="-13.416666666666686" y="73.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER_RESULT" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT">
-              <point x="72.0" y="-49.0" />
-              <point x="180.0" y="446.0" />
-              <point x="330.4659090909091" y="446.0" />
-              <point x="-40.25" y="73.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA_WORD" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORD">
-              <point x="0.0" y="-49.0" />
-              <point x="305.0909090909091" y="868.0" />
-              <point x="278.5909090909091" y="868.0" />
-              <point x="-63.5" y="49.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER">
-              <point x="0.0" y="-73.5" />
-              <point x="370.7159090909091" y="244.0" />
-              <point x="296.70833333333337" y="244.0" />
-              <point x="57.5" y="109.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT_RESULTDATA" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULT">
-              <point x="30.375" y="-61.0" />
-              <point x="640.9659090909091" y="701.0" />
-              <point x="665.8409090909091" y="701.0" />
-              <point x="665.8409090909091" y="446.0" />
-              <point x="410.9659090909091" y="446.0" />
-              <point x="40.25" y="73.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA_WORD" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.RESULTDATA">
-              <point x="-75.33333333333331" y="-49.0" />
-              <point x="229.7575757575758" y="868.0" />
-              <point x="204.59090909090912" y="868.0" />
-              <point x="204.59090909090912" y="701.0" />
-              <point x="264.625" y="701.0" />
-              <point x="-85.875" y="97.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.8659742828882294" x="227.0" y="434.0" />
-          <SelectedNodes>
-            <node>3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER_RESULT</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/security/PasswordUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt:///usr/lib/jvm/java-11-oracle!/java.xml/com/sun/org/apache/xerces/internal/impl/dv/xs/BooleanDV.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#1112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jrt:///usr/lib/jvm/java-11-oracle!/jdk.javadoc/jdk/javadoc/internal/doclets/toolkit/resources/doclets.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#14676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/Dao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -601,16 +503,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,22 +892,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="120">
           <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schemas/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
           <folding>
             <element signature="e#218#219#0" expanded="true" />
             <element signature="e#246#247#0" expanded="true" />
@@ -1027,33 +915,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/AuthService/AuthService.java">
+    <entry file="file://$PROJECT_DIR$/src/dao/WordDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+        <state relative-caret-position="255">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/AuthScreen/config">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/AuthService/AuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="103" column="14" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/Component/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="315">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dao/WordDao.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="203">
+          <caret line="57" column="15" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="40" column="15" selection-start-line="40" selection-start-column="15" selection-end-line="40" selection-end-column="15" />
+          <folding>
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1004#1005#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
         </state>
       </provider>
     </entry>
