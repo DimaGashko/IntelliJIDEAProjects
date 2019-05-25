@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.*?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="training-screen" stylesheets="@TrainingScreen.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.screens.TrainingScreen.TrainingScreen">
+<BorderPane styleClass="training-screen" stylesheets="@TrainingScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.TrainingScreen.TrainingScreen">
     <left>
-
+        <VBox styleClass="setup, side-panel">
+         <children>
+            <VBox styleClass="side-panel__content">
+               <children>
+                  <VBox>
+                     <children>
+                        <Label styleClass="side-panel__title" text="Set Up" />
+                        <Label text="Your Training" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children></VBox>
     </left>
     <center>
         <Label text="Training Screen" />

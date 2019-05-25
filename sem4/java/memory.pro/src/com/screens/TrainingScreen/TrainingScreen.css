@@ -90,6 +90,14 @@
   -fx-fill: #fff;
 }
 
+.side-panel__content {
+  -fx-padding: 15px;
+}
+
+.side-panel__title {
+  -fx-font-size: 36px;
+}
+
 .side-panel__group {
   -fx-padding: 10px 0;
   -fx-border-width: 0 0 1px 0;
@@ -108,6 +116,11 @@
 
 .side-panel-h-group {
   -fx-spacing: 10px;
+}
+
+.training-screen .setup {
+  -fx-min-width: 300px;
+  -fx-min-height: 400px;
 }
 
 /*# sourceMappingURL=TrainingScreen.css.map */

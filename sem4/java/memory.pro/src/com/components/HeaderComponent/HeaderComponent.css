@@ -90,6 +90,14 @@
   -fx-fill: #fff;
 }
 
+.side-panel__content {
+  -fx-padding: 15px;
+}
+
+.side-panel__title {
+  -fx-font-size: 36px;
+}
+
 .side-panel__group {
   -fx-padding: 10px 0;
   -fx-border-width: 0 0 1px 0;
