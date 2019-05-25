@@ -4,6 +4,7 @@ import com.services.TrainingService.NumberTrainingService;
 import com.services.TrainingService.TrainingService;
 import com.services.TrainingService.WordsTrainingService;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import lib.Alerts.Alerts;
 import lib.Component.Component;
@@ -17,6 +18,7 @@ public class MemorizeComponent extends Component {
 
     private SimpleIntegerProperty dataCount = new SimpleIntegerProperty(0);
     private SimpleIntegerProperty curDataIndex = new SimpleIntegerProperty(0);
+    private SimpleStringProperty curDataItem = new SimpleStringProperty("...");
 
     private String trainingType;
 
@@ -35,15 +37,21 @@ public class MemorizeComponent extends Component {
         initTrainingServices();
         trainingData = trainingService.start();
 
-        System.out.println(trainingData);
+        next();
     }
 
     private void prev() {
-
+        curDataIndex.set(curDataIndex.get() - 1);
+        updateDataItem();
     }
 
     private void next() {
+        curDataIndex.set(curDataIndex.get() + 1);
+        updateDataItem();
+    }
 
+    private void updateDataItem() {
+        curDataItem.set(trainingData.get(curDataIndex.get() - 1));
     }
 
     private void initTrainingServices() {
@@ -93,5 +101,41 @@ public class MemorizeComponent extends Component {
 
     public void setCurDataIndex(int curDataIndex) {
         this.curDataIndex.set(curDataIndex);
+    }
+
+    public String getCurDataItem() {
+        return curDataItem.get();
+    }
+
+    public SimpleStringProperty curDataItemProperty() {
+        return curDataItem;
+    }
+
+    public void setCurDataItem(String curDataItem) {
+        this.curDataItem.set(curDataItem);
+    }
+
+    public String getTrainingType() {
+        return trainingType;
+    }
+
+    public void setTrainingType(String trainingType) {
+        this.trainingType = trainingType;
+    }
+
+    public TrainingService getTrainingService() {
+        return trainingService;
+    }
+
+    public void setTrainingService(TrainingService trainingService) {
+        this.trainingService = trainingService;
+    }
+
+    public ArrayList<String> getTrainingData() {
+        return trainingData;
+    }
+
+    public void setTrainingData(ArrayList<String> trainingData) {
+        this.trainingData = trainingData;
     }
 }
