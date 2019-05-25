@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true"
+<VBox fx:id="fxRoot" xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true"
       styleClass="memorize-component, memorize-component--words" stylesheets="@MemorizeComponent.css" xmlns="http://javafx.com/javafx/11.0.1"
       fx:controller="com.components.MemorizeComponent.MemorizeComponent">
     <VBox styleClass="memorize__group-container">
-        <VBox styleClass="memorize_group, memorize__data-group, memorize__data-group--even">
+        <VBox fx:id="fxDataGroup" styleClass="memorize_group, memorize__data-group">
             <Label styleClass="memorize__data-item" text="${controller.curDataItem}"/>
         </VBox>
         <HBox styleClass="memorize_group">

@@ -6,6 +6,7 @@ import com.services.TrainingService.WordsTrainingService;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
+import javafx.scene.layout.VBox;
 import lib.Alerts.Alerts;
 import lib.Component.Component;
 import schemas.User;
@@ -15,6 +16,9 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class MemorizeComponent extends Component {
+
+    @FXML VBox fxRoot;
+    @FXML VBox fxDataGroup;
 
     private SimpleIntegerProperty dataCount = new SimpleIntegerProperty(0);
     private SimpleIntegerProperty curDataIndex = new SimpleIntegerProperty(0);
@@ -51,7 +55,17 @@ public class MemorizeComponent extends Component {
     }
 
     private void updateDataItem() {
-        curDataItem.set(trainingData.get(curDataIndex.get() - 1));
+        int index = curDataIndex.get() - 1;
+        String evenClassName = "memorize__data-group--even";
+
+        curDataItem.set(trainingData.get(index));
+
+        fxDataGroup.getStyleClass().removeIf(cl -> cl.equals(evenClassName));
+
+        if (index % 2 == 0) {
+            fxDataGroup.getStyleClass().add(evenClassName);
+        }
+
     }
 
     private void initTrainingServices() {
@@ -62,8 +76,12 @@ public class MemorizeComponent extends Component {
 
         if (trainingType.equals("Words")) {
             trainingService = new WordsTrainingService(user, em);
+            fxRoot.getStyleClass().add("memorize-component--words");
+
         } else if (trainingType.equals("Numbers")) {
             trainingService = new NumberTrainingService(user, em);
+            fxRoot.getStyleClass().add("memorize-component--numbers");
+
         } else {
             alerts.show(Alerts.alertErr, "Wrong Training Type");
         }
