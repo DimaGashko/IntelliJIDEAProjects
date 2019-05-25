@@ -37,7 +37,7 @@ public class Bootstrap extends Screen {
 
     private void start() {
         renderHeader();
-        showScreen("index");
+        showScreen("training");
     }
 
     private void initEvents() {

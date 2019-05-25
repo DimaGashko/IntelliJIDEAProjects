@@ -20,7 +20,6 @@ import java.util.ResourceBundle;
 
 public class TrainingScreen extends Screen {
 
-    @FXML private VBox fxSetupRoot;
     @FXML private BorderPane fxMemorizeRoot;
 
     @FXML private JFXComboBox fxSelectTrainingType;

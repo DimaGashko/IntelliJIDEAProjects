@@ -3,7 +3,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane styleClass="bootstrap" focusTraversable="true" stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="bootstrap" focusTraversable="true"
+            stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.Bootstrap">
     <top>
         <ScrollPane fitToHeight="true" fitToWidth="true" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
             <content>

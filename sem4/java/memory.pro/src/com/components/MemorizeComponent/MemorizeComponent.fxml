@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<?import javafx.scene.layout.StackPane?>
-<StackPane xmlns:fx="http://javafx.com/fxml/1" styleClass="memorize-component" stylesheets="@MemorizeComponent.css"
-           xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.MemorizeComponent.MemorizeComponent">
-    <Label styleClass="screen__title" text="Memorize Component"/>
-</StackPane>
+<VBox fillWidth="false" focusTraversable="true" prefHeight="556.0" prefWidth="704.0" styleClass="memorize-component" stylesheets="@MemorizeComponent.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.MemorizeComponent.MemorizeComponent">
+    <VBox styleClass="memorize__group-container">
+        <VBox styleClass="memorize_group, memorize__data-group">
+            <Label styleClass="memorize__data-item" text="89" />
+        </VBox>
+        <HBox styleClass="memorize_group">
+            <Label text="Status: " />
+            <Label text="15" />
+            <Label text="/" />
+            <Label text="144" />
+        </HBox>
+        <HBox styleClass="memorize_group, memorize__control-group">
+            <JFXButton styleClass="memorize__control" text="Prev">
+                <graphic>
+                    <FontIcon iconLiteral="fa-arrow-circle-o-left" />
+                </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="RIGHT" styleClass="memorize__control" text="Next">
+                <graphic>
+                    <FontIcon iconLiteral="fa-arrow-circle-o-right" />
+                </graphic>
+            </JFXButton>
+        </HBox>
+    </VBox>
+</VBox>

@@ -14,7 +14,7 @@
 
 <BorderPane styleClass="training-screen" stylesheets="@TrainingScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.TrainingScreen.TrainingScreen">
     <left>
-        <VBox fx:id="fxSetupRoot" styleClass="setup, side-panel">
+        <VBox styleClass="setup, side-panel">
             <VBox styleClass="side-panel__field, setup__header">
                 <VBox>
                     <Label styleClass="side-panel__title" text="Set Up" />
@@ -64,7 +64,7 @@
         </VBox>
     </left>
    <center>
-      <BorderPane fx:id="fxMemorizeRoot">
+      <BorderPane fx:id="fxMemorizeRoot" styleClass="memorize-controller">
          <center>
                <Label styleClass="screen__title" text="Set Up Your Training" BorderPane.alignment="CENTER" />
          </center>

@@ -155,7 +155,38 @@
 }
 
 .memorize-component {
-  -fx-background-color: red;
+  -fx-alignment: center;
+}
+
+.memorize__data-item {
+  -fx-font-size: 180px;
+}
+
+.memorize_group {
+  -fx-alignment: center;
+}
+
+.memorize__control {
+  -fx-font-size: 25px;
+  -fx-background-color: rgba(0, 0, 0, 0.2);
+  -fx-text-fill: #000;
+}
+
+.memorize__group-container {
+  -fx-spacing: 15px;
+}
+
+.memorize__data-group {
+  -fx-padding: 25px;
+  -fx-background-color: rgba(0, 0, 0, 0.1);
+  -fx-background-radius: 15px;
+  -fx-border-radius: 15px;
+  -fx-border-color: #000;
+  -fx-border-width: 3px;
+}
+
+.memorize__control-group {
+  -fx-spacing: 25px;
 }
 
 /*# sourceMappingURL=MemorizeComponent.css.map */
