@@ -1,5 +1,6 @@
 package lib.Validation;
 
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 
@@ -19,6 +20,12 @@ public class Validation {
         });
 
         input.textProperty().addListener((o,oldVal,newVal) -> input.validate());
+    }
+
+    public static void initValidation(JFXComboBox input) {
+        input.focusedProperty().addListener((o,oldVal,newVal) -> {
+            if(!newVal) input.validate();
+        });
     }
 
 }

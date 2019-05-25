@@ -3,12 +3,10 @@
 .side-panel
   -fx-background-color: $brand-color-3
 
-  *
-    -fx-text-fill: $brand-color-1
-
   .jfx-button
     -fx-padding: 10px
     -fx-background-color: rgba(255,255,255,.1)
+    -fx-text-fill: $brand-color-1
 
   .jfx-combo-box
     -fx-padding: 5px 10px
@@ -17,38 +15,48 @@
     -fx-text-fill: $brand-color-1
     -jfx-focuse-color: rgba(0,0,0,0.001)
 
+    .label
+      //-fx-text-fill: $brand-color-1
+
+    .list-cell:filled:selected
+      .text, .label
+        -fx-fill: $brand-color-1
+
+    .side-panel__combo-label
+      -fx-text-fill: $brand-color-3
+
     .input-focused-line,
     .input-line
       visibility: false
 
   .jfx-text-field
+    -ffx-focuse-color: $brand-color-1
     -jfx-unfocuse-color: $brand-color-1
-    -fx-prompt-text-fill: rgba(255,255,255,0.5)
     -jfx-label-float: false
+    -fx-prompt-text-fill: rgba(255,255,255,0.5)
+    -fx-text-fill: $brand-color-1
 
   .ikonli-font-icon
     -fx-fill: $brand-color-1
-
-.side-panel__content
-  -fx-padding: $base-padding
+    -fx-text-fill: $brand-color-1
 
 .side-panel__title
   -fx-font-size: $h1
+  -fx-text-fill: $brand-color-1
 
 .side-panel__group
   -fx-padding: 10px 0
   -fx-border-width: 0 0 1px 0
   -fx-border-color: rgba(255,255,255,0.1)
+  -fx-text-fill: $brand-color-1
 
 .side-panel__field
   -fx-padding: 0 $base-padding
   -fx-spacing: 10px
+  -fx-text-fill: $brand-color-1
 
 .side-panel-h-group
   -fx-spacing: 10px
 
-.side-panel__combo-label
-  -fx-text-fill: $brand-color-3
-
-.setup__get-started-field
-  -fx-padding: 25px 0 0 $base-padding
+.side-panel__text
+  -fx-text-fill: $brand-color-1

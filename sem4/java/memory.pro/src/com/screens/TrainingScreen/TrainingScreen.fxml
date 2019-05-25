@@ -3,14 +3,13 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.IntegerValidator?>
 <?import com.jfoenix.validation.RequiredFieldValidator?>
-<?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <BorderPane styleClass="training-screen" stylesheets="@TrainingScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.TrainingScreen.TrainingScreen">
     <left>
@@ -18,58 +17,48 @@
             <VBox styleClass="side-panel__field, setup__header">
                 <VBox>
                     <Label styleClass="side-panel__title" text="Set Up" />
-                    <Label text="Your Training" />
+                    <Label styleClass="side-panel__text" text="Your Training" />
                 </VBox>
             </VBox>
             <VBox styleClass="side-panel__group">
                 <AnchorPane>
                     <VBox styleClass="side-panel__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-                        <Label text="Training type" />
-                  <AnchorPane>
-                     <children>
-                              <JFXComboBox promptText="Select Training Type" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-                                  <items>
-                                      <FXCollections fx:factory="observableArrayList">
-                                          <Label styleClass="side-panel__combo-label">Numbers</Label>
-                                          <Label styleClass="side-panel__combo-label">Words</Label>
-                                      </FXCollections>
-                                  </items>
-                                  <validators>
-                                      <RequiredFieldValidator message="Input Required!">
-                                          <FontIcon iconLiteral="fas-exclamation-triangle" />
-                                      </RequiredFieldValidator>
-                                  </validators>
-                              </JFXComboBox>
-                     </children>
-                  </AnchorPane>
+                        <Label styleClass="side-panel__text" text="Training type" />
+                        <AnchorPane>
+                            <JFXComboBox fx:id="fxSelectTrainingType" promptText="Select Training Type" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <Label styleClass="side-panel__combo-label" text="Numbers" />
+                                        <Label styleClass="side-panel__combo-label" text="Words" />
+                                    </FXCollections>
+                                </items>
+                                <validators>
+                                    <RequiredFieldValidator styleClass="validator" message="Please, select training type" />
+                                </validators>
+                            </JFXComboBox>
+                        </AnchorPane>
                     </VBox>
                 </AnchorPane>
             </VBox>
-         <VBox styleClass="side-panel__group">
-            <children>
-               <AnchorPane>
-                  <children>
-                     <VBox styleClass="side-panel__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
-                        <children>
-                           <Label text="The Number of Data" />
-                           <JFXTextField focusColor="WHITE" promptText="Enter The Number of Data" text="50" unFocusColor="WHITE" />
-                        </children>
-                     </VBox>
-                  </children>
-               </AnchorPane>
-            </children>
-         </VBox>
-         <VBox>
-            <children>
-               <JFXButton text="Get Started!" />
-            </children>
-            <styleClass>
-               <String fx:value="side-panel__field" />
-               <String fx:value="setup__get-started-field" />
-            </styleClass>
-         </VBox>
+            <VBox styleClass="side-panel__group">
+                <AnchorPane>
+                    <VBox styleClass="side-panel__field" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+                        <Label styleClass="side-panel__text" text="The Number of Data" />
+                        <JFXTextField fx:id="fxNumberOfData" focusColor="#fff" promptText="Enter The Number of Data" styleClass="side-panel__text" text="50" unFocusColor="#fff">
+                            <validators>
+                                <RequiredFieldValidator message="Required Field" />
+                                <IntegerValidator message="Please, enter an integer" />
+                            </validators>
+                        </JFXTextField>
+                    </VBox>
+                </AnchorPane>
+            </VBox>
+            <VBox styleClass="side-panel__field, setup__get-started-field">
+                <JFXButton onAction="#onStart" text="Get Started!" />
+            </VBox>
         </VBox>
     </left>
+
     <center>
         <Label styleClass="screen__title" text="Training Screen" />
     </center>

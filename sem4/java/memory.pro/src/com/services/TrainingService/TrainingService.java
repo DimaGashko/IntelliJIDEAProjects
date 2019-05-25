@@ -19,11 +19,17 @@ abstract public class TrainingService implements ITrainingService {
 
     @Override
     public void setUp(int dataCount) {
-        this.dataCount = dataCount;
+        setDataCount(dataCount);
     }
 
     protected void beforeStart() {
         this.startTime = LocalDate.now();
     }
 
+    private void setDataCount(int dataCount) {
+        if (dataCount < 1) dataCount = 1;
+        else if (dataCount > 10000) dataCount = 10000;
+
+        this.dataCount = dataCount;
+    }
 }

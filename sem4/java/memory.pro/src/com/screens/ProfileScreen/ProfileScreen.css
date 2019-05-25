@@ -2,6 +2,13 @@
   -fx-font-size: 60px;
 }
 
+.validator {
+  -fx-text-fill: green;
+}
+.validator .label {
+  -fx-text-fill: green;
+}
+
 /*******************************************************************************
  * *                                                                             *
  * * Scroll Bar			                                                       *
@@ -87,12 +94,10 @@
 .side-panel {
   -fx-background-color: #282c47;
 }
-.side-panel * {
-  -fx-text-fill: #fff;
-}
 .side-panel .jfx-button {
   -fx-padding: 10px;
   -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-text-fill: #fff;
 }
 .side-panel .jfx-combo-box {
   -fx-padding: 5px 10px;
@@ -101,48 +106,52 @@
   -fx-text-fill: #fff;
   -jfx-focuse-color: rgba(0, 0, 0, 0.001);
 }
+.side-panel .jfx-combo-box .list-cell:filled:selected .text, .side-panel .jfx-combo-box .list-cell:filled:selected .label {
+  -fx-fill: #fff;
+}
+.side-panel .jfx-combo-box .side-panel__combo-label {
+  -fx-text-fill: #282c47;
+}
 .side-panel .jfx-combo-box .input-focused-line,
 .side-panel .jfx-combo-box .input-line {
   visibility: false;
 }
 .side-panel .jfx-text-field {
+  -ffx-focuse-color: #fff;
   -jfx-unfocuse-color: #fff;
-  -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
   -jfx-label-float: false;
+  -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+  -fx-text-fill: #fff;
 }
 .side-panel .ikonli-font-icon {
   -fx-fill: #fff;
-}
-
-.side-panel__content {
-  -fx-padding: 15px;
+  -fx-text-fill: #fff;
 }
 
 .side-panel__title {
   -fx-font-size: 36px;
+  -fx-text-fill: #fff;
 }
 
 .side-panel__group {
   -fx-padding: 10px 0;
   -fx-border-width: 0 0 1px 0;
   -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-text-fill: #fff;
 }
 
 .side-panel__field {
   -fx-padding: 0 15px;
   -fx-spacing: 10px;
+  -fx-text-fill: #fff;
 }
 
 .side-panel-h-group {
   -fx-spacing: 10px;
 }
 
-.side-panel__combo-label {
-  -fx-text-fill: #282c47;
-}
-
-.setup__get-started-field {
-  -fx-padding: 25px 0 0 15px;
+.side-panel__text {
+  -fx-text-fill: #fff;
 }
 
 .profile-screen .info-side {
@@ -160,9 +169,11 @@
 }
 .profile-screen .info-side__full-name {
   -fx-font-size: 25px;
+  -fx-text-fill: #fff;
 }
 .profile-screen .info-side__username {
   -fx-font-size: 12px;
+  -fx-text-fill: #fff;
 }
 .profile-screen .data-side__title {
   -fx-font-size: 36px;
