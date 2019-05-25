@@ -1,60 +1,59 @@
 package com.services.TrainingService;
 
-import dao.WordDao;
-import dao.WordsResultDao;
-import dao.WordsResultDataDao;
+import dao.*;
 import schemas.*;
 
 import javax.persistence.EntityManager;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class NumberTrainingService extends TrainingService {
-    private ArrayList<Integer> trainingWords;
+    private ArrayList<Integer> trainingNumbers;
 
-    private NumbersResultData numbersResultData;
+    private NumbersResultDataDao numbersResultDataDao;
     private NumbersResultDao numbersResultDao;
 
     public NumberTrainingService(User user, EntityManager em) {
         super(user, em);
 
-        this.wordDao = new WordDao(em);
-        this.wordsResultDataDao = new WordsResultDataDao(em);
-        this.wordsResultDao = new WordsResultDao(em);
+        this.numbersResultDataDao = new NumbersResultDataDao(em);
+        this.numbersResultDao = new NumbersResultDao(em);
     }
 
     @Override
     public ArrayList<String> start() {
         beforeStart();
 
-        trainingWords = loadWords();
+        trainingNumbers = loadWords();
 
-        return trainingWords.stream().map(Word::getWord)
+        return trainingNumbers.stream().map(Object::toString)
                 .collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
     public int finish(ArrayList<TrainingResult> answerData) {
-        WordsResult result = new WordsResult();
-        ArrayList<WordsResultData> wordsResultData = getResultData(result, answerData);
+       /* NumbersResult result = new NumbersResult();
+        ArrayList<NumbersResultData> numbersResultData = getResultData(result, answerData);
 
-        int grade = WordsResult.calculateGrade(wordsResultData);
+        int grade = NumbersResult.calculateGrade(numbersResultData);
 
         result.setDate(LocalDate.now());
         result.setUser(user);
         result.setGrade(grade);
 
-        wordsResultDao.add(result);
-        wordsResultDataDao.addAll(wordsResultData);
+        numbersResultData.add(result);
+        numbersResultDataDao.addAll(numbersResultData);
 
-        return result.getId();
+        return result.getId();*/
+       return 1;
     }
 
     private ArrayList<WordsResultData> getResultData(WordsResult result, ArrayList<TrainingResult> answerData) {
 
-        var res = answerData.stream().map((userAnswer) -> {
+       /* var res = answerData.stream().map((userAnswer) -> {
             WordsResultData resultData = new WordsResultData();
 
             resultData.setWordsResult(result);
@@ -67,28 +66,22 @@ public class NumberTrainingService extends TrainingService {
         for (int i = 0; i < answerData.size(); i++) {
             res.get(i).setWord(trainingWords.get(i));
         }
-
-        return res;
+*/
+        //return res;
+        return null;
 
     }
 
-    private ArrayList<Word> loadWords() {
-        var words = wordDao.getRandomWords(dataCount);
-        if (words.size() == dataCount) {
-            return words;
+    private ArrayList<Integer> loadWords() {
+        ArrayList<Integer> res = new ArrayList<>(dataCount);
+
+        Random rand = new Random();
+        rand.setSeed(System.currentTimeMillis());
+
+        for (int i = 0; i < dataCount; i++) {
+            Integer r = rand.nextInt(90) + 10;
+            res.add(r);
         }
-
-        ArrayList<Word> res = new ArrayList<>(dataCount);
-
-        while (res.size() < dataCount) {
-            for (Word word : words) {
-                if (res.size() >= dataCount) break;
-
-                res.add(word);
-            }
-        }
-
-        Collections.shuffle(res);
 
         return res;
     }

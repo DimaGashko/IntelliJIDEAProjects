@@ -2,6 +2,7 @@ package com;
 
 import com.services.AuthService.AuthService;
 import com.services.AuthService.AuthServiceException;
+import com.services.TrainingService.NumberTrainingService;
 import com.services.TrainingService.TrainingResult;
 import com.services.TrainingService.WordsTrainingService;
 import dao.UserDao;
@@ -18,6 +19,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.stream.Collectors;
 
 public class Main extends Application {
@@ -32,7 +34,7 @@ public class Main extends Application {
 
         AuthService authService = new AuthService(new UserDao(em));
 
-        User user = new User();
+       /* User user = new User();
 
         user.setFirstName("Jon");
         user.setLastName("Kotlin");
@@ -60,7 +62,15 @@ public class Main extends Application {
         res.get(4).setValue("wrong5");
         res.get(6).setValue("wrong7");
 
-        wordsTrainingService.finish(res);
+        wordsTrainingService.finish(res);*/
+
+        User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
+        NumberTrainingService numberTrainingService = new NumberTrainingService(u, em);
+
+        numberTrainingService.setUp(100);
+        var data = numberTrainingService.start();
+
+        System.out.println(data);
    }
 
     @Override
