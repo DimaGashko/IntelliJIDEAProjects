@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.BorderPane?>
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="memorize-component" stylesheets="@MemorizeComponent.css"
-            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.MemorizeComponent.MemorizeComponent">
-    <left>
 
-    </left>
-    <center>
-        <Label styleClass="screen__title" text="Memorize Component"/>
-    </center>
-</BorderPane>
+<?import javafx.scene.layout.StackPane?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1" styleClass="memorize-component" stylesheets="@MemorizeComponent.css"
+           xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.MemorizeComponent.MemorizeComponent">
+    <Label styleClass="screen__title" text="Memorize Component"/>
+</StackPane>

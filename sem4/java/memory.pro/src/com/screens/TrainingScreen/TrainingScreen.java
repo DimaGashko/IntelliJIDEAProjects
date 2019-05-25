@@ -6,6 +6,7 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.util.Pair;
 import lib.Alerts.Alerts;
@@ -20,12 +21,12 @@ import java.util.ResourceBundle;
 public class TrainingScreen extends Screen {
 
     @FXML private VBox fxSetupRoot;
-    @FXML private VBox fxMemorizeRoot;
+    @FXML private BorderPane fxMemorizeRoot;
 
     @FXML private JFXComboBox fxSelectTrainingType;
     @FXML private JFXTextField fxNumberOfData;
 
-    boolean isMemorizeInited = false;
+    private boolean isMemorizeInit = false;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -45,7 +46,7 @@ public class TrainingScreen extends Screen {
     private void startTraining() {
         if (!isValid()) return;
 
-        if (isMemorizeInited) {
+        if (isMemorizeInit) {
             var ans = alerts.ask("You're already training. Do you want restart it?");
             if (!ans) return;
         }
@@ -59,7 +60,7 @@ public class TrainingScreen extends Screen {
         }
 
         runMemorizeComponent(trainingType, dataCount);
-        isMemorizeInited = true;
+        isMemorizeInit = true;
     }
 
     private void runMemorizeComponent(String trainingType, int dataCount) {
@@ -77,7 +78,7 @@ public class TrainingScreen extends Screen {
         }
 
         fxMemorizeRoot.getChildren().clear();
-        fxMemorizeRoot.getChildren().add(root);
+        fxMemorizeRoot.setCenter(root);
 
         component.run(trainingType, dataCount);
     }

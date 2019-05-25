@@ -154,4 +154,8 @@
   -fx-text-fill: #fff;
 }
 
+.memorize-component {
+  -fx-background-color: red;
+}
+
 /*# sourceMappingURL=MemorizeComponent.css.map */
