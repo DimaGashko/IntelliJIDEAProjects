@@ -12,6 +12,6 @@
 
     </left>
     <center>
-        <Label text="Statistics Screen" />
+        <Label styleClass="screen__title" text="Statistics Screen" />
     </center>
 </BorderPane>

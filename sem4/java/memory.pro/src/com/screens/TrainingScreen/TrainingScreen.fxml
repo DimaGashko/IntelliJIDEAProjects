@@ -71,6 +71,6 @@
         </VBox>
     </left>
     <center>
-        <Label text="Training Screen" />
+        <Label styleClass="screen__title" text="Training Screen" />
     </center>
 </BorderPane>

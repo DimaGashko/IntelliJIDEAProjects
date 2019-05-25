@@ -8,6 +8,6 @@
 
     </left>
     <center>
-        <Label text="Index Screen"/>
+        <Label styleClass="screen__title" text="Index Screen"/>
     </center>
 </BorderPane>
