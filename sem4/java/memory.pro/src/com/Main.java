@@ -26,14 +26,14 @@ public class Main extends Application {
     Stage stage;
 
     public static void main(String[] args) {
-        //launch(args);
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
+        launch(args);
+        /*EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
         UserDao userDao = new UserDao(em);
 
         AuthService authService = new AuthService(new UserDao(em));
-
+*/
        /* User user = new User();
 
         user.setFirstName("Jon");
@@ -48,7 +48,7 @@ public class Main extends Application {
 
         }
 */
-        User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
+      /*  User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
         WordsTrainingService wordsTrainingService = new WordsTrainingService(u, em);
 
         wordsTrainingService.setUp(500);
@@ -62,7 +62,7 @@ public class Main extends Application {
         res.get(4).setValue("wrong5");
         res.get(6).setValue("wrong7");
 
-        wordsTrainingService.finish(res);
+        wordsTrainingService.finish(res);*/
 /*
         User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
         NumberTrainingService numberTrainingService = new NumberTrainingService(u, em);
