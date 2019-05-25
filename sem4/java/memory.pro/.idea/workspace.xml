@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
-      <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/config" beforeDir="false" afterPath="$PROJECT_DIR$/data/config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/schemas/NumbersResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/NumbersResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schemas/WordsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/WordsResult.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,6 +49,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="memorypro: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="USER: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="memorypro@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="memorypro: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="WORDSRESULT: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -112,11 +122,44 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
-                  <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+                <state relative-caret-position="90">
+                  <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="337">
+                  <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#1171#1172#0" expanded="true" />
+                    <element signature="e#1202#1203#0" expanded="true" />
+                    <element signature="e#1257#1258#0" expanded="true" />
+                    <element signature="e#1297#1298#0" expanded="true" />
+                    <element signature="e#1680#1681#0" expanded="true" />
+                    <element signature="e#1715#1716#0" expanded="true" />
+                    <element signature="e#1768#1769#0" expanded="true" />
+                    <element signature="e#1816#1817#0" expanded="true" />
+                    <element signature="e#2301#2302#0" expanded="true" />
+                    <element signature="e#2377#2378#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="135">
+                  <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -125,10 +168,41 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="23" column="30" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="30" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#512#513#0" expanded="true" />
+                    <element signature="e#551#552#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="32" column="65" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
+                <state relative-caret-position="1065">
+                  <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+                  <folding>
+                    <element signature="e#1129#1130#0" expanded="true" />
+                    <element signature="e#1160#1161#0" expanded="true" />
+                    <element signature="e#1215#1216#0" expanded="true" />
+                    <element signature="e#1255#1256#0" expanded="true" />
+                    <element signature="e#1939#1940#0" expanded="true" />
+                    <element signature="e#2001#2002#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -150,8 +224,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="181">
-                  <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+                <state relative-caret-position="158">
+                  <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
                 </state>
               </provider>
             </entry>
@@ -203,10 +277,8 @@
         <option value="$PROJECT_DIR$/src/dao/NumbersResultDao.java" />
         <option value="$PROJECT_DIR$/src/dao/NumberResultDataDao.java" />
         <option value="$PROJECT_DIR$/src/dao/NumbersResultDataDao.java" />
-        <option value="$PROJECT_DIR$/src/schemas/NumbersResult.java" />
         <option value="$PROJECT_DIR$/src/schemas/NumbersResultData.java" />
         <option value="$PROJECT_DIR$/src/schemas/WordsResultData.java" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" />
         <option value="$PROJECT_DIR$/src/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/src/com/services/AuthService/AuthService.java" />
         <option value="$PROJECT_DIR$/src/schemas/User.java" />
@@ -221,7 +293,6 @@
         <option value="$PROJECT_DIR$/src/com/styles/components/_global.sass" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_sidePanel.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass" />
-        <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/com/Common/Common.java" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" />
         <option value="$PROJECT_DIR$/src/lib/Validation/Validation.java" />
@@ -232,14 +303,17 @@
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.java" />
         <option value="$PROJECT_DIR$/src/lib/Component/Component.java" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/screens/IndexScreen/IndexScreen.java" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass" />
-        <option value="$PROJECT_DIR$/src/schemas/WordsResult.java" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" />
+        <option value="$PROJECT_DIR$/src/schemas/WordsResult.java" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" />
+        <option value="$PROJECT_DIR$/src/com/Main.java" />
+        <option value="$PROJECT_DIR$/src/schemas/NumbersResult.java" />
       </list>
     </option>
   </component>
@@ -312,6 +386,12 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="screens" type="462c0819:PsiDirectoryNode" />
               <item name="TrainingScreen" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="memory.pro" type="b2602c69:ProjectViewProjectNode" />
+              <item name="memory.pro" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -412,12 +492,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="37086000" />
+      <workItem from="1558781377417" duration="38562000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="237386000" />
+    <option name="totallyTimeSpent" value="238862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -432,7 +512,7 @@
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" weight="0.19924243" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.19924243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Persistence" order="3" sideWeight="0.50325733" side_tool="true" weight="0.23787878" />
@@ -441,14 +521,14 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49848485" visible="true" weight="0.4267101" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49772727" weight="0.4267101" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.38925081" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="6" sideWeight="0.49924242" weight="0.6840391" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50151515" side_tool="true" weight="0.31433225" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5022727" side_tool="true" weight="0.4267101" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.44299674" />
       <window_info anchor="bottom" id="Find" order="10" weight="0.5781759" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
@@ -514,20 +594,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/NUMBERSRESULTDATA">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/USER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/WORD">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -546,60 +612,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/3fa4374d-efc5-419f-81ba-da803098fc03.SCHEMA:memorypro">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>3fa4374d-efc5-419f-81ba-da803098fc03.SCHEMA:memorypro</OriginalElement>
-          <nodes>
-            <node x="0.0" y="442.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.NUMBERSRESULTDATA</node>
-            <node x="45.0" y="269.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.NUMBERSRESULT</node>
-            <node x="79.0" y="0.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER</node>
-            <node x="218.25" y="269.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULT</node>
-            <node x="377.25" y="293.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORD</node>
-            <node x="265.5" y="442.0">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULTDATA</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.NUMBERSRESULT" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER">
-              <point x="0.0" y="-61.5" />
-              <point x="114.5" y="244.0" />
-              <point x="136.5" y="244.0" />
-              <point x="-57.5" y="109.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.NUMBERSRESULTDATA" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.NUMBERSRESULT">
-              <point x="0.0" y="-85.5" />
-              <point x="0.0" y="61.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULTDATA" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULT">
-              <point x="-53.0" y="-85.5" />
-              <point x="318.5" y="417.0" />
-              <point x="287.75" y="417.0" />
-              <point x="0.0" y="61.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULT" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER">
-              <point x="0.0" y="-61.5" />
-              <point x="287.75" y="244.0" />
-              <point x="251.5" y="244.0" />
-              <point x="57.5" y="109.5" />
-            </edge>
-            <edge source="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULTDATA" target="3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORD">
-              <point x="53.0" y="-85.5" />
-              <point x="424.5" y="417.0" />
-              <point x="455.25" y="417.0" />
-              <point x="0.0" y="37.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.7909688013136289" x="14.0" y="232.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -667,13 +679,6 @@
             <element signature="e#956#957#0" expanded="true" />
             <element signature="e#1004#1005#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/other/InsertWords.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="300" lean-forward="true" selection-start-column="300" selection-end-column="300" />
         </state>
       </provider>
     </entry>
@@ -751,16 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,17 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="20" column="35" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="35" />
-          <folding>
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#551#552#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -935,20 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1">
           <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="32" column="65" selection-start-line="32" selection-start-column="65" selection-end-line="32" selection-end-column="65" />
         </state>
       </provider>
     </entry>
@@ -996,12 +966,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java">
+    <entry file="uml://DATABASE/3fa4374d-efc5-419f-81ba-da803098fc03.SCHEMA:memorypro">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>3fa4374d-efc5-419f-81ba-da803098fc03.SCHEMA:memorypro</OriginalElement>
+          <nodes>
+            <node x="" y="">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.NUMBERSRESULTDATA</node>
+            <node x="" y="">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULTDATA</node>
+            <node x="" y="">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.USER</node>
+            <node x="" y="">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.NUMBERSRESULT</node>
+            <node x="" y="">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORDSRESULT</node>
+            <node x="" y="">3fa4374d-efc5-419f-81ba-da803098fc03.TABLE:memorypro.WORD</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7723538704581359" x="267.00000000000006" y="343.1754960114543" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
+        <state relative-caret-position="1065">
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+          <folding>
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+            <element signature="e#2001#2002#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/other/InsertWords.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="286" lean-forward="true" selection-start-column="286" selection-end-column="286" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+          <folding>
+            <element signature="e#1171#1172#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1257#1258#0" expanded="true" />
+            <element signature="e#1297#1298#0" expanded="true" />
+            <element signature="e#1680#1681#0" expanded="true" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1768#1769#0" expanded="true" />
+            <element signature="e#1816#1817#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2377#2378#0" expanded="true" />
           </folding>
         </state>
       </provider>

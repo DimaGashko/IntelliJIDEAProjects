@@ -42,7 +42,7 @@ public class NumberTrainingService extends TrainingService {
 
         int grade = NumbersResult.calculateGrade(numbersResultData);
 
-        result.setDate(LocalDate.now());
+        result.setDateTime(startTime);
         result.setUser(user);
         result.setGrade(grade);
 

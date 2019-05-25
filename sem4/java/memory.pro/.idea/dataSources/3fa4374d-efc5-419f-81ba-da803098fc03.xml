@@ -952,9 +952,9 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="238" name="date">
+    <column id="245" parent="238" name="date_time">
       <Position>2</Position>
-      <DataType>date|0s</DataType>
+      <DataType>datetime(3)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1130,9 +1130,9 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="242" name="date">
+    <column id="277" parent="242" name="date_time">
       <Position>2</Position>
-      <DataType>date|0s</DataType>
+      <DataType>datetime(3)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>

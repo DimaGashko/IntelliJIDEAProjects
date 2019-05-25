@@ -3,14 +3,13 @@ package com.services.TrainingService;
 import schemas.User;
 
 import javax.persistence.EntityManager;
-import java.time.LocalDate;
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 
 abstract public class TrainingService implements ITrainingService {
     protected User user;
     protected EntityManager em;
     protected int dataCount;
-    protected LocalDate startTime;
+    protected LocalDateTime startTime;
 
     public TrainingService(User user, EntityManager em) {
         this.user = user;
@@ -23,7 +22,7 @@ abstract public class TrainingService implements ITrainingService {
     }
 
     protected void beforeStart() {
-        this.startTime = LocalDate.now();
+        this.startTime = LocalDateTime.now();
     }
 
     private void setDataCount(int dataCount) {

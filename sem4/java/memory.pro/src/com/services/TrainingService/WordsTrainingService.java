@@ -44,7 +44,7 @@ public class WordsTrainingService extends TrainingService {
 
         int grade = WordsResult.calculateGrade(wordsResultData);
 
-        result.setDate(LocalDate.now());
+        result.setDateTime(startTime);
         result.setUser(user);
         result.setGrade(grade);
 

@@ -2,6 +2,7 @@ package schemas;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -15,11 +16,14 @@ public class WordsResult {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int id;
 
-    @Column(name = "date", nullable = false)
-    protected LocalDate date;
+    @Column(name = "date_time", nullable = false)
+    protected LocalDateTime dateTime;
 
     @Column(name = "grade", nullable = false)
     protected int grade;
+
+    @Column(name = "remember_time", nullable = false)
+    protected int rememberTime;
 
     @ManyToOne
     protected User user;
@@ -45,12 +49,12 @@ public class WordsResult {
         this.id = id;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 
     public int getGrade() {
@@ -69,6 +73,14 @@ public class WordsResult {
         this.user = user;
     }
 
+    public int getRememberTime() {
+        return rememberTime;
+    }
+
+    public void setRememberTime(int rememberTime) {
+        this.rememberTime = rememberTime;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -76,21 +88,23 @@ public class WordsResult {
         WordsResult that = (WordsResult) o;
         return id == that.id &&
                 grade == that.grade &&
-                Objects.equals(date, that.date) &&
+                rememberTime == that.rememberTime &&
+                Objects.equals(dateTime, that.dateTime) &&
                 Objects.equals(user, that.user);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, date, grade, user);
+        return Objects.hash(id, dateTime, grade, rememberTime, user);
     }
 
     @Override
     public String toString() {
         return "WordsResult{" +
                 "id=" + id +
-                ", date=" + date +
+                ", dateTime=" + dateTime +
                 ", grade=" + grade +
+                ", rememberTime=" + rememberTime +
                 ", user=" + user +
                 '}';
     }
