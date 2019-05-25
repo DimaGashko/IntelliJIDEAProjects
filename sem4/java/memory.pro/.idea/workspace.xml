@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
-      <change beforePath="$PROJECT_DIR$/data/config" beforeDir="false" afterPath="$PROJECT_DIR$/data/config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/NumbersResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/NumbersResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/WordsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/WordsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,11 +129,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="337">
-                  <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+                <state relative-caret-position="180">
+                  <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
                   <folding>
                     <element signature="e#1171#1172#0" expanded="true" />
                     <element signature="e#1202#1203#0" expanded="true" />
@@ -158,8 +153,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+                <state relative-caret-position="45">
+                  <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -167,10 +162,20 @@
               </provider>
             </entry>
           </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.fxml">
+              <provider editor-type-id="JavaFX-Scene-Builder" />
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="150">
+                  <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
+                <state relative-caret-position="525">
                   <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
                 </state>
               </provider>
@@ -193,15 +198,19 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1065">
-                  <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+                <state relative-caret-position="233">
+                  <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
                   <folding>
                     <element signature="e#1129#1130#0" expanded="true" />
                     <element signature="e#1160#1161#0" expanded="true" />
                     <element signature="e#1215#1216#0" expanded="true" />
                     <element signature="e#1255#1256#0" expanded="true" />
-                    <element signature="e#1939#1940#0" expanded="true" />
-                    <element signature="e#2001#2002#0" expanded="true" />
+                    <element signature="e#1634#1635#0" expanded="true" />
+                    <element signature="e#1669#1670#0" expanded="true" />
+                    <element signature="e#1722#1723#0" expanded="true" />
+                    <element signature="e#1770#1771#0" expanded="true" />
+                    <element signature="e#2251#2252#0" expanded="true" />
+                    <element signature="e#2327#2328#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -310,10 +319,10 @@
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" />
-        <option value="$PROJECT_DIR$/src/schemas/WordsResult.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" />
-        <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/schemas/NumbersResult.java" />
+        <option value="$PROJECT_DIR$/src/schemas/WordsResult.java" />
+        <option value="$PROJECT_DIR$/src/com/Main.java" />
       </list>
     </option>
   </component>
@@ -492,12 +501,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="38562000" />
+      <workItem from="1558781377417" duration="39848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238862000" />
+    <option name="totallyTimeSpent" value="240148000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -521,7 +530,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49772727" weight="0.4267101" />
+      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49772727" visible="true" weight="0.4267101" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.38925081" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -594,13 +603,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/WORD">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/WORDSRESULT">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -990,21 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
-          <folding>
-            <element signature="e#1129#1130#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1215#1216#0" expanded="true" />
-            <element signature="e#1255#1256#0" expanded="true" />
-            <element signature="e#1939#1940#0" expanded="true" />
-            <element signature="e#2001#2002#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/TrainingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1017,27 +1004,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1058,10 +1028,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="104" column="18" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        <state relative-caret-position="180">
+          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
           <folding>
             <element signature="e#1171#1172#0" expanded="true" />
             <element signature="e#1202#1203#0" expanded="true" />
@@ -1074,6 +1051,43 @@
             <element signature="e#2301#2302#0" expanded="true" />
             <element signature="e#2377#2378#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/WordsResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding>
+            <element signature="e#1129#1130#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
+            <element signature="e#1255#1256#0" expanded="true" />
+            <element signature="e#1634#1635#0" expanded="true" />
+            <element signature="e#1669#1670#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1770#1771#0" expanded="true" />
+            <element signature="e#2251#2252#0" expanded="true" />
+            <element signature="e#2327#2328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="30" column="57" selection-start-line="30" selection-start-column="57" selection-end-line="30" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
         </state>
       </provider>
     </entry>

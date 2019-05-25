@@ -1,20 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToolbar?>
 <?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<JFXToolbar xmlns:fx="http://javafx.com/fxml/1" styleClass="header-component" stylesheets="@HeaderComponent.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.HeaderComponent.HeaderComponent">
+<JFXToolbar xmlns:fx="http://javafx.com/fxml/1" styleClass="header-component" stylesheets="@HeaderComponent.css"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.HeaderComponent.HeaderComponent">
     <left>
         <HBox>
-            <JFXButton styleClass="header__button" onAction="#onHome" text="Home"/>
-            <JFXButton styleClass="header__button" onAction="#onTraining" text="Training"/>
-            <JFXButton styleClass="header__button" onAction="#onStatistic" text="Statistic"/>
-            <JFXButton styleClass="header__button" onAction="#onProfile" text="Profile"/>
+            <JFXButton onAction="#onHome" styleClass="header__button" text="Home">
+                <graphic>
+                    <FontIcon iconLiteral="fa-home"/>
+                </graphic>
+            </JFXButton>
+            <JFXButton onAction="#onTraining" styleClass="header__button" text="Training">
+                <graphic>
+                    <FontIcon iconLiteral="fa-database"/>
+                </graphic>
+            </JFXButton>
+            <JFXButton onAction="#onStatistic" styleClass="header__button" text="Statistic">
+                <graphic>
+                    <FontIcon iconLiteral="fa-bar-chart"/>
+                </graphic>
+            </JFXButton>
+            <JFXButton onAction="#onProfile" styleClass="header__button" text="Profile">
+                <graphic>
+                    <FontIcon iconLiteral="fa-user"/>
+                </graphic>
+            </JFXButton>
         </HBox>
     </left>
     <right>
         <HBox>
-            <JFXButton buttonType="RAISED" styleClass="header__button" onAction="#onHelp" text="Help"/>
+            <JFXButton buttonType="RAISED" onAction="#onHelp" styleClass="header__button" text="Help">
+                <graphic>
+                    <FontIcon iconLiteral="fa-question-circle-o"/>
+                </graphic>
+            </JFXButton>
         </HBox>
     </right>
 
