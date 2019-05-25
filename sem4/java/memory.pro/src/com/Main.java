@@ -94,8 +94,8 @@ public class Main extends Application {
         setIcon("/img/logo.png");
 
         //primaryStage.setMaximized(true);
-        primaryStage.setMinWidth(100);
-        primaryStage.setMinHeight(100);
+        primaryStage.setMinWidth(250);
+        primaryStage.setMinHeight(250);
 
         primaryStage.setScene(scene);
         primaryStage.show();

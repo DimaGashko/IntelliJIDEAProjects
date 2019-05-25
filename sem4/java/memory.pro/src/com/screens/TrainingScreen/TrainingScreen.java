@@ -1,26 +1,40 @@
 package com.screens.TrainingScreen;
 
-import com.jfoenix.controls.JFXButton;
+import com.components.MemorizeComponent.MemorizeComponent;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
-import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
+import javafx.util.Pair;
 import lib.Alerts.Alerts;
+import lib.Component.ComponentException;
 import lib.Screen.Screen;
 import lib.Validation.Validation;
 
-import java.awt.*;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class TrainingScreen extends Screen {
 
-    public JFXComboBox fxSelectTrainingType;
-    public JFXTextField fxNumberOfData;
+    @FXML private VBox fxSetupRoot;
+    @FXML private VBox fxMemorizeRoot;
+
+    @FXML private JFXComboBox fxSelectTrainingType;
+    @FXML private JFXTextField fxNumberOfData;
+
+    boolean isMemorizeInited = false;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initValidation();
+    }
+
+    @Override
+    public void showed() {
+
     }
 
     private void initValidation() {
@@ -31,6 +45,11 @@ public class TrainingScreen extends Screen {
     private void startTraining() {
         if (!isValid()) return;
 
+        if (isMemorizeInited) {
+            var ans = alerts.ask("You're already training. Do you want restart it?");
+            if (!ans) return;
+        }
+
         String trainingType = ((Label)fxSelectTrainingType.getValue()).getText();
         int dataCount = Integer.parseInt(fxNumberOfData.getText());
 
@@ -39,7 +58,28 @@ public class TrainingScreen extends Screen {
             return;
         }
 
-        System.out.println(trainingType + " | " + dataCount);
+        runMemorizeComponent(trainingType, dataCount);
+        isMemorizeInited = true;
+    }
+
+    private void runMemorizeComponent(String trainingType, int dataCount) {
+        MemorizeComponent component;
+        Parent root;
+
+        try {
+            var res = loadComponent("memorize");
+            root = res.getKey();
+            component = (MemorizeComponent) res.getValue();
+        } catch (ComponentException e) {
+            alerts.show(Alerts.alertErr, "Cant'l load Memorize Component");
+            e.printStackTrace();
+            return;
+        }
+
+        fxMemorizeRoot.getChildren().clear();
+        fxMemorizeRoot.getChildren().add(root);
+
+        component.run(trainingType, dataCount);
     }
 
     private boolean isValid() {
@@ -47,11 +87,6 @@ public class TrainingScreen extends Screen {
         boolean dataCount = fxNumberOfData.validate();
 
         return type && dataCount;
-    }
-
-    @Override
-    public void showed() {
-
     }
 
     public void onStart() {

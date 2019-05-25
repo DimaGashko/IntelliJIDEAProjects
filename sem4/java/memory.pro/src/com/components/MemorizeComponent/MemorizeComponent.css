@@ -154,21 +154,4 @@
   -fx-text-fill: #fff;
 }
 
-.training-screen .side-panel__group {
-  -fx-padding: 15px 0 25px 0;
-}
-.training-screen .setup {
-  -fx-min-width: 250px;
-  -fx-min-height: 400px;
-}
-.training-screen .setup__header {
-  -fx-padding: 10px 0 15px 15px;
-}
-.training-screen .setup__get-started-field {
-  -fx-padding: 25px 0 0 15px;
-}
-.training-screen .screen__title {
-  -fx-font-size: 36px;
-}
-
-/*# sourceMappingURL=TrainingScreen.css.map */
+/*# sourceMappingURL=MemorizeComponent.css.map */
