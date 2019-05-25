@@ -12,6 +12,9 @@ public class NumbersResultData {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected int id;
 
+    @Column(name = "data_id", nullable = false)
+    protected int dataId;
+
     @Column(name = "time", nullable = false)
     protected int time;
 
@@ -62,6 +65,14 @@ public class NumbersResultData {
 
     public void setTime(int time) {
         this.time = time;
+    }
+
+    public int getDataId() {
+        return dataId;
+    }
+
+    public void setDataId(int dataId) {
+        this.dataId = dataId;
     }
 
     @Override

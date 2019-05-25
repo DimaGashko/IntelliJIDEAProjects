@@ -19,7 +19,7 @@ public interface ITrainingService {
     /**
      * Finish the training
      * @param answerData data entered by the user
-     * @return training result
+     * @return training result id
      */
     int finish(ArrayList<TrainingResult> answerData);
 

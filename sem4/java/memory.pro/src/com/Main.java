@@ -70,6 +70,16 @@ public class Main extends Application {
         numberTrainingService.setUp(100);
         var data = numberTrainingService.start();
 
+        var res = data.stream().map((num) -> new TrainingResult(num, 3))
+                .collect(Collectors.toCollection(ArrayList::new));
+
+        res.get(0).setValue("wrong1");
+        res.get(2).setValue("555");
+        res.get(4).setValue("36");
+        res.get(6).setValue("wrong7");
+
+        numberTrainingService.finish(res);
+
         System.out.println(data);
    }
 

@@ -1,12 +1,14 @@
 package com.services.TrainingService;
 
-import dao.*;
-import schemas.*;
+import dao.NumbersResultDao;
+import dao.NumbersResultDataDao;
+import schemas.NumbersResult;
+import schemas.NumbersResultData;
+import schemas.User;
 
 import javax.persistence.EntityManager;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -35,7 +37,7 @@ public class NumberTrainingService extends TrainingService {
 
     @Override
     public int finish(ArrayList<TrainingResult> answerData) {
-       /* NumbersResult result = new NumbersResult();
+        NumbersResult result = new NumbersResult();
         ArrayList<NumbersResultData> numbersResultData = getResultData(result, answerData);
 
         int grade = NumbersResult.calculateGrade(numbersResultData);
@@ -44,32 +46,38 @@ public class NumberTrainingService extends TrainingService {
         result.setUser(user);
         result.setGrade(grade);
 
-        numbersResultData.add(result);
+        numbersResultDao.add(result);
         numbersResultDataDao.addAll(numbersResultData);
 
-        return result.getId();*/
-       return 1;
+        return result.getId();
     }
 
-    private ArrayList<WordsResultData> getResultData(WordsResult result, ArrayList<TrainingResult> answerData) {
+    private ArrayList<NumbersResultData> getResultData(NumbersResult result, ArrayList<TrainingResult> answerData) {
 
-       /* var res = answerData.stream().map((userAnswer) -> {
-            WordsResultData resultData = new WordsResultData();
+        var res = answerData.stream().map((userAnswer) -> {
+            NumbersResultData resultData = new NumbersResultData();
 
-            resultData.setWordsResult(result);
-            resultData.setAnswer(userAnswer.getValue());
+            int answer;
+
+            try {
+                answer = Integer.parseInt(userAnswer.getValue());
+            } catch (NumberFormatException e) {
+                answer = -1;
+            }
+
+            resultData.setNumbersResult(result);
+            resultData.setAnswer(answer);
             resultData.setTime(userAnswer.getTime());
 
             return resultData;
         }).collect(Collectors.toCollection(ArrayList::new));
 
         for (int i = 0; i < answerData.size(); i++) {
-            res.get(i).setWord(trainingWords.get(i));
+            res.get(i).setNumber(trainingNumbers.get(i));
+            res.get(i).setDataId(i);
         }
-*/
-        //return res;
-        return null;
 
+        return res;
     }
 
     private ArrayList<Integer> loadWords() {

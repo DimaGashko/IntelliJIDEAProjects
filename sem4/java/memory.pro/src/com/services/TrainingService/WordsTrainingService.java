@@ -68,6 +68,7 @@ public class WordsTrainingService extends TrainingService {
 
         for (int i = 0; i < answerData.size(); i++) {
             res.get(i).setWord(trainingWords.get(i));
+            res.get(i).setDataId(i);
         }
 
         return res;

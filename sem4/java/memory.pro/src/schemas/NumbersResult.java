@@ -1,9 +1,14 @@
 package schemas;
 
+import dao.NumbersResultDao;
+
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
+
+import static java.lang.Math.round;
 
 @Entity
 public class NumbersResult {
@@ -21,6 +26,19 @@ public class NumbersResult {
 
     @ManyToOne
     protected User user;
+
+    static public int calculateGrade(ArrayList<NumbersResultData> resultData) {
+        int time = 0;
+        int correct = 0;
+
+        for (NumbersResultData item : resultData) {
+            time += item.time;
+            correct += item.getNumber() == item.getAnswer() ? 1 : 0;
+        }
+
+        float grade = correct + (resultData.size() - time / 3.f);
+        return round(grade);
+    }
 
     public int getId() {
         return id;
