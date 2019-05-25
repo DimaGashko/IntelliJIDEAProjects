@@ -997,214 +997,226 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="253" parent="239" name="number">
+    <column id="253" parent="239" name="data_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="254" parent="239" name="time">
+    <column id="254" parent="239" name="number">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="255" parent="239" name="NUMBERSRESULT_id">
+    <column id="255" parent="239" name="time">
       <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="256" parent="239" name="NUMBERSRESULT_id">
+      <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="256" parent="239" name="FK_NUMBERSRESULTDATA_NUMBERSRESULT_id">
+    <index id="257" parent="239" name="FK_NUMBERSRESULTDATA_NUMBERSRESULT_id">
       <ColNames>NUMBERSRESULT_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="257" parent="239" name="PRIMARY">
+    <key id="258" parent="239" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="258" parent="239" name="FK_NUMBERSRESULTDATA_NUMBERSRESULT_id">
+    <foreign-key id="259" parent="239" name="FK_NUMBERSRESULTDATA_NUMBERSRESULT_id">
       <ColNames>NUMBERSRESULT_id</ColNames>
       <RefSchemaName>memorypro</RefSchemaName>
       <RefTableName>NUMBERSRESULT</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="259" parent="240" name="id">
+    <column id="260" parent="240" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="260" parent="240" name="email">
+    <column id="261" parent="240" name="email">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="261" parent="240" name="first_name">
+    <column id="262" parent="240" name="first_name">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="262" parent="240" name="last_name">
+    <column id="263" parent="240" name="last_name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="263" parent="240" name="password_key">
+    <column id="264" parent="240" name="password_key">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="264" parent="240" name="password_salt">
+    <column id="265" parent="240" name="password_salt">
       <Position>6</Position>
       <DataType>varchar(1300)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="265" parent="240" name="register_date">
+    <column id="266" parent="240" name="register_date">
       <Position>7</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="266" parent="240" name="username">
+    <column id="267" parent="240" name="username">
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="267" parent="240" name="email">
+    <index id="268" parent="240" name="email">
       <ColNames>email</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <index id="268" parent="240" name="username">
+    <index id="269" parent="240" name="username">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="269" parent="240" name="PRIMARY">
+    <key id="270" parent="240" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="270" parent="240" name="email">
+    <key id="271" parent="240" name="email">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>email</UnderlyingIndexName>
     </key>
-    <key id="271" parent="240" name="username">
+    <key id="272" parent="240" name="username">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username</UnderlyingIndexName>
     </key>
-    <column id="272" parent="241" name="id">
+    <column id="273" parent="241" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="241" name="word">
+    <column id="274" parent="241" name="word">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="274" parent="241" name="PRIMARY">
+    <key id="275" parent="241" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="275" parent="242" name="id">
+    <column id="276" parent="242" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="276" parent="242" name="date">
+    <column id="277" parent="242" name="date">
       <Position>2</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="277" parent="242" name="grade">
+    <column id="278" parent="242" name="grade">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="278" parent="242" name="USER_id">
+    <column id="279" parent="242" name="USER_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="279" parent="242" name="FK_WORDSRESULT_USER_id">
+    <index id="280" parent="242" name="FK_WORDSRESULT_USER_id">
       <ColNames>USER_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="280" parent="242" name="PRIMARY">
+    <key id="281" parent="242" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="281" parent="242" name="FK_WORDSRESULT_USER_id">
+    <foreign-key id="282" parent="242" name="FK_WORDSRESULT_USER_id">
       <ColNames>USER_id</ColNames>
       <RefSchemaName>memorypro</RefSchemaName>
       <RefTableName>USER</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="282" parent="243" name="id">
+    <column id="283" parent="243" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="283" parent="243" name="answer">
+    <column id="284" parent="243" name="answer">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="284" parent="243" name="time">
+    <column id="285" parent="243" name="data_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="285" parent="243" name="WORDSRESULT_id">
+    <column id="286" parent="243" name="time">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="286" parent="243" name="WORD_id">
+    <column id="287" parent="243" name="WORDSRESULT_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="287" parent="243" name="FK_WORDSRESULTDATA_WORDSRESULT_id">
+    <column id="288" parent="243" name="WORD_id">
+      <Position>6</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="289" parent="243" name="FK_WORDSRESULTDATA_WORDSRESULT_id">
       <ColNames>WORDSRESULT_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="288" parent="243" name="FK_WORDSRESULTDATA_WORD_id">
+    <index id="290" parent="243" name="FK_WORDSRESULTDATA_WORD_id">
       <ColNames>WORD_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="289" parent="243" name="PRIMARY">
+    <key id="291" parent="243" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="290" parent="243" name="FK_WORDSRESULTDATA_WORDSRESULT_id">
+    <foreign-key id="292" parent="243" name="FK_WORDSRESULTDATA_WORDSRESULT_id">
       <ColNames>WORDSRESULT_id</ColNames>
       <RefSchemaName>memorypro</RefSchemaName>
       <RefTableName>WORDSRESULT</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="291" parent="243" name="FK_WORDSRESULTDATA_WORD_id">
+    <foreign-key id="293" parent="243" name="FK_WORDSRESULTDATA_WORD_id">
       <ColNames>WORD_id</ColNames>
       <RefSchemaName>memorypro</RefSchemaName>
       <RefTableName>WORD</RefTableName>

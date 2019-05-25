@@ -47,7 +47,7 @@ public class Main extends Application {
         } catch (AuthServiceException e) {
 
         }
-
+*/
         User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
         WordsTrainingService wordsTrainingService = new WordsTrainingService(u, em);
 
@@ -62,8 +62,8 @@ public class Main extends Application {
         res.get(4).setValue("wrong5");
         res.get(6).setValue("wrong7");
 
-        wordsTrainingService.finish(res);*/
-
+        wordsTrainingService.finish(res);
+/*
         User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
         NumberTrainingService numberTrainingService = new NumberTrainingService(u, em);
 
@@ -80,7 +80,7 @@ public class Main extends Application {
 
         numberTrainingService.finish(res);
 
-        System.out.println(data);
+        System.out.println(data);*/
    }
 
     @Override
