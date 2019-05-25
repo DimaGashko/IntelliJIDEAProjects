@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
-      <change beforePath="$PROJECT_DIR$/src/com/Bootstrap.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bootstrap.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/Validation/Validation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Validation/Validation.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,8 +74,8 @@
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml">
               <provider editor-type-id="JavaFX-Scene-Builder" />
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="105">
-                  <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
                 </state>
               </provider>
             </entry>
@@ -96,8 +87,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+                <state relative-caret-position="480">
+                  <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -181,9 +172,9 @@
         <option value="$PROJECT_DIR$/src/com/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" />
         <option value="$PROJECT_DIR$/src/com/Bootstrap.fxml" />
-        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" />
+        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass" />
       </list>
     </option>
@@ -357,12 +348,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="28926000" />
+      <workItem from="1558781377417" duration="29548000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229226000" />
+    <option name="totallyTimeSpent" value="229848000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -386,7 +377,7 @@
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Run" order="1" sideWeight="0.49848485" visible="true" weight="0.4267101" />
+      <window_info anchor="bottom" id="Run" order="1" sideWeight="0.49848485" weight="0.4267101" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.38925081" />
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
@@ -920,15 +911,15 @@
     <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="165">
+          <caret line="11" column="64" lean-forward="true" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="480">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
         </state>
       </provider>
     </entry>
