@@ -7,7 +7,7 @@
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <VBox fx:id="fxRoot" xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true"
-      styleClass="memorize-component, memorize-component--words" stylesheets="@MemorizeComponent.css" xmlns="http://javafx.com/javafx/11.0.1"
+      styleClass="memorize-component" stylesheets="@MemorizeComponent.css" xmlns="http://javafx.com/javafx/11.0.1"
       fx:controller="com.components.MemorizeComponent.MemorizeComponent">
     <VBox styleClass="memorize__group-container">
         <VBox fx:id="fxDataGroup" styleClass="memorize_group, memorize__data-group">
