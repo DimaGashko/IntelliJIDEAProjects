@@ -6,10 +6,10 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="training-screen" stylesheets="@TrainingScreen.css"
             xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.screens.TrainingScreen.TrainingScreen">
     <left>
-        <BorderPane fx:id="fxSetupContainer"/>
+        <BorderPane fx:id="fxLeftContainer"/>
     </left>
     <center>
-        <BorderPane fx:id="fxMemorizeContainer" styleClass="memorize-controller">
+        <BorderPane fx:id="fxCenterContainer" styleClass="memorize-controller">
             <center>
                 <Label styleClass="screen__title" text="Set Up Your Training" BorderPane.alignment="CENTER"/>
             </center>

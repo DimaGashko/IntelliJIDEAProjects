@@ -49,6 +49,7 @@ public class Common {
         components.put("signup", "/com/components/SignupComponent/SignupComponent.fxml");
         components.put("setup", "/com/components/TrainingSetupComponent/TrainingSetupComponent.fxml");
         components.put("memorize", "/com/components/TrainingMemorizeComponent/TrainingMemorizeComponent.fxml");
+        components.put("remember", "/com/components/TrainingRememberComponent/TrainingRememberComponent.fxml");
     }
 
     public void setScreen(String alias, HashMap<String, String> params) {

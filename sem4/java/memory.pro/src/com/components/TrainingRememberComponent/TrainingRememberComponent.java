@@ -22,6 +22,8 @@ public class TrainingRememberComponent extends Component {
 
     public void run(OnDoneCallback onDoneCallback) {
         this.onDoneCallback = onDoneCallback;
+
+        onDoneCallback.call();
     }
 
     private void done() {

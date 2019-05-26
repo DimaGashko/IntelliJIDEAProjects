@@ -154,6 +154,9 @@
   -fx-text-fill: #fff;
 }
 
+.training-screen .side-panel__group {
+  -fx-padding: 15px 0 25px 0;
+}
 .training-screen .screen__title {
   -fx-font-size: 36px;
 }

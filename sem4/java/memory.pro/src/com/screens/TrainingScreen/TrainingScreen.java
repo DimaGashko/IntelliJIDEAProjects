@@ -1,6 +1,7 @@
 package com.screens.TrainingScreen;
 
 import com.components.TrainingMemorizeComponent.TrainingMemorizeComponent;
+import com.components.TrainingRememberComponent.TrainingRememberComponent;
 import com.components.TrainingSetupComponent.TrainingSetupComponent;
 import com.services.TrainingService.NumberTrainingService;
 import com.services.TrainingService.TrainingService;
@@ -19,14 +20,16 @@ import java.util.ResourceBundle;
 
 public class TrainingScreen extends Screen {
 
-    @FXML private BorderPane fxSetupContainer;
-    @FXML private BorderPane fxMemorizeContainer;
+    @FXML private BorderPane fxLeftContainer;
+    @FXML private BorderPane fxCenterContainer;
 
     private Parent setupComponentRoot;
     private Parent memorizeComponentRoot;
+    private Parent rememberComponentRoot;
 
     private TrainingSetupComponent setupComponent;
     private TrainingMemorizeComponent memorizeComponent;
+    private TrainingRememberComponent rememberComponent;
 
     private TrainingService trainingService;
     private ArrayList<String> trainingData;
@@ -49,8 +52,8 @@ public class TrainingScreen extends Screen {
     }
 
     private void runSetup() {
-        fxSetupContainer.getChildren().clear();
-        fxSetupContainer.setCenter(setupComponentRoot);
+        fxLeftContainer.getChildren().clear();
+        fxLeftContainer.setCenter(setupComponentRoot);
 
         setupComponent.run((trainingType, dataCount) -> {
             this.trainingType = trainingType;
@@ -73,8 +76,8 @@ public class TrainingScreen extends Screen {
         trainingService.setUp(dataCount);
         trainingData = trainingService.start();
 
-        fxMemorizeContainer.getChildren().clear();
-        fxMemorizeContainer.setCenter(memorizeComponentRoot);
+        fxCenterContainer.getChildren().clear();
+        fxCenterContainer.setCenter(memorizeComponentRoot);
 
         memorizeComponent.run(trainingData, trainingType, (timesToMemorize) -> {
            this.timesToMemorize = timesToMemorize;
@@ -84,7 +87,12 @@ public class TrainingScreen extends Screen {
     }
 
     private void runRemember() {
-        System.out.println(timesToMemorize);
+        fxCenterContainer.getChildren().clear();
+        fxCenterContainer.setCenter(rememberComponentRoot);
+
+        rememberComponent.run(() -> {
+            System.out.println("Remember Done!");
+        });
     }
 
     private void initTrainingService() {
@@ -114,12 +122,15 @@ public class TrainingScreen extends Screen {
         try {
             var setupPair = loadComponent("setup");
             var memorizePair = loadComponent("memorize");
+            var rememberPair = loadComponent("remember");
 
             setupComponentRoot = setupPair.getKey();
             memorizeComponentRoot = memorizePair.getKey();
+            rememberComponentRoot = rememberPair.getKey();
 
             setupComponent = (TrainingSetupComponent) setupPair.getValue();
             memorizeComponent = (TrainingMemorizeComponent) memorizePair.getValue();
+            rememberComponent = (TrainingRememberComponent) rememberPair.getValue();
 
         } catch (ComponentException e) {
             alerts.show(Alerts.alertErr, "Cant'l load Training Components");
