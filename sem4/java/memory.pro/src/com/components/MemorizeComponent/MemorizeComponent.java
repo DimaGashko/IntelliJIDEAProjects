@@ -36,6 +36,8 @@ public class MemorizeComponent extends Component {
     private ArrayList<Integer> timesToMemorize;
     private LocalDateTime prevTime;
 
+    private OnDone onDone;
+
     private boolean isDone = false;
 
     @Override
@@ -43,9 +45,10 @@ public class MemorizeComponent extends Component {
 
     }
 
-    public void run(String trainingType, int dataCount) {
+    public void run(String trainingType, int dataCount, OnDone onDone) {
         this.trainingType = trainingType;
         this.dataCount.set(dataCount);
+        this.onDone = onDone;
 
         timesToMemorize = new ArrayList<>(Collections.nCopies(dataCount, -1));
         prevTime = LocalDateTime.now();
@@ -99,7 +102,7 @@ public class MemorizeComponent extends Component {
         if (isDone) return;
         isDone = true;
 
-        System.out.println(timesToMemorize);
+        onDone.call(timesToMemorize);
     }
 
     private void initTrainingServices() {
@@ -189,5 +192,10 @@ public class MemorizeComponent extends Component {
 
     public void setTrainingData(ArrayList<String> trainingData) {
         this.trainingData = trainingData;
+    }
+
+    @FunctionalInterface
+    public interface OnDone {
+        void call(ArrayList<Integer> timesToMemorize);
     }
 }

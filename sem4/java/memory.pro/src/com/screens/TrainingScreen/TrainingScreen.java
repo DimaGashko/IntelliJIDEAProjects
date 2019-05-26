@@ -15,6 +15,7 @@ import lib.Screen.Screen;
 import lib.Validation.Validation;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
@@ -26,6 +27,8 @@ public class TrainingScreen extends Screen {
     @FXML private JFXTextField fxNumberOfData;
 
     private boolean isMemorizeInit = false;
+
+    private ArrayList<Integer> timesToMemorize;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -58,11 +61,11 @@ public class TrainingScreen extends Screen {
             return;
         }
 
-        runMemorizeComponent(trainingType, dataCount);
+        runMemorize(trainingType, dataCount);
         isMemorizeInit = true;
     }
 
-    private void runMemorizeComponent(String trainingType, int dataCount) {
+    private void runMemorize(String trainingType, int dataCount) {
         MemorizeComponent component;
         Parent root;
 
@@ -79,7 +82,15 @@ public class TrainingScreen extends Screen {
         fxMemorizeRoot.getChildren().clear();
         fxMemorizeRoot.setCenter(root);
 
-        component.run(trainingType, dataCount);
+        component.run(trainingType, dataCount, (timesToMemorize) -> {
+           this.timesToMemorize = timesToMemorize;
+
+           runRemember();
+        });
+    }
+
+    private void runRemember() {
+        System.out.println(timesToMemorize);
     }
 
     private boolean isValid() {

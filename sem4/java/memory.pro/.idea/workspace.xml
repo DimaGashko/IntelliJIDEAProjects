@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
-      <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,30 +63,45 @@
     <splitter split-orientation="horizontal" split-proportion="0.67045456">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
+                <state relative-caret-position="210">
+                  <caret line="104" column="37" lean-forward="true" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3564#3565#0" expanded="true" />
-                    <element signature="e#3621#3622#0" expanded="true" />
-                    <element signature="e#3692#3693#0" expanded="true" />
-                    <element signature="e#3780#3781#0" expanded="true" />
-                    <element signature="e#3872#3873#0" expanded="true" />
-                    <element signature="e#3949#3950#0" expanded="true" />
-                    <element signature="e#4043#4044#0" expanded="true" />
-                    <element signature="e#4147#4148#0" expanded="true" />
-                    <element signature="e#4225#4226#0" expanded="true" />
-                    <element signature="e#4316#4317#0" expanded="true" />
-                    <element signature="e#4419#4420#0" expanded="true" />
-                    <element signature="e#4493#4494#0" expanded="true" />
-                    <element signature="e#4597#4598#0" expanded="true" />
-                    <element signature="e#4686#4687#0" expanded="true" />
-                    <element signature="e#4811#4812#0" expanded="true" />
-                    <element signature="e#4896#4897#0" expanded="true" />
-                    <element signature="e#5011#5012#0" expanded="true" />
+                    <element signature="e#3634#3635#0" expanded="true" />
+                    <element signature="e#3691#3692#0" expanded="true" />
+                    <element signature="e#3762#3763#0" expanded="true" />
+                    <element signature="e#3850#3851#0" expanded="true" />
+                    <element signature="e#3942#3943#0" expanded="true" />
+                    <element signature="e#4019#4020#0" expanded="true" />
+                    <element signature="e#4113#4114#0" expanded="true" />
+                    <element signature="e#4217#4218#0" expanded="true" />
+                    <element signature="e#4295#4296#0" expanded="true" />
+                    <element signature="e#4386#4387#0" expanded="true" />
+                    <element signature="e#4489#4490#0" expanded="true" />
+                    <element signature="e#4563#4564#0" expanded="true" />
+                    <element signature="e#4667#4668#0" expanded="true" />
+                    <element signature="e#4756#4757#0" expanded="true" />
+                    <element signature="e#4881#4882#0" expanded="true" />
+                    <element signature="e#4966#4967#0" expanded="true" />
+                    <element signature="e#5081#5082#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="100">
+                  <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#2572#2573#0" expanded="true" />
+                    <element signature="e#2598#2599#0" expanded="true" />
+                    <element signature="e#2562#2563#0" expanded="true" />
+                    <element signature="e#2593#2594#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -167,7 +182,6 @@
         <option value="$PROJECT_DIR$/src/com/styles/components/_global.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/ProfileScreen/ProfileScreen.sass" />
         <option value="$PROJECT_DIR$/src/com/Common/Common.java" />
-        <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" />
         <option value="$PROJECT_DIR$/src/lib/Validation/Validation.java" />
         <option value="$PROJECT_DIR$/src/com/Bootstrap.java" />
         <option value="$PROJECT_DIR$/src/com/Bootstrap.fxml" />
@@ -189,6 +203,7 @@
         <option value="$PROJECT_DIR$/src/com/styles/components/_sidePanel.sass" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" />
+        <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" />
       </list>
     </option>
   </component>
@@ -367,12 +382,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="41670000" />
+      <workItem from="1558781377417" duration="42382000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241970000" />
+    <option name="totallyTimeSpent" value="242682000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,7 +400,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.19924243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -625,28 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#2593#2594#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="49" column="87" selection-start-line="49" selection-start-column="87" selection-end-line="49" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -913,29 +905,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
+    <entry file="file://$PROJECT_DIR$/src/com/Common/Common.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="92" column="69" selection-start-line="92" selection-start-column="69" selection-end-line="92" selection-end-column="69" />
+        <state relative-caret-position="383">
+          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3564#3565#0" expanded="true" />
-            <element signature="e#3621#3622#0" expanded="true" />
-            <element signature="e#3692#3693#0" expanded="true" />
-            <element signature="e#3780#3781#0" expanded="true" />
-            <element signature="e#3872#3873#0" expanded="true" />
-            <element signature="e#3949#3950#0" expanded="true" />
-            <element signature="e#4043#4044#0" expanded="true" />
-            <element signature="e#4147#4148#0" expanded="true" />
-            <element signature="e#4225#4226#0" expanded="true" />
-            <element signature="e#4316#4317#0" expanded="true" />
-            <element signature="e#4419#4420#0" expanded="true" />
-            <element signature="e#4493#4494#0" expanded="true" />
-            <element signature="e#4597#4598#0" expanded="true" />
-            <element signature="e#4686#4687#0" expanded="true" />
-            <element signature="e#4811#4812#0" expanded="true" />
-            <element signature="e#4896#4897#0" expanded="true" />
-            <element signature="e#5011#5012#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="104" column="37" lean-forward="true" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3634#3635#0" expanded="true" />
+            <element signature="e#3691#3692#0" expanded="true" />
+            <element signature="e#3762#3763#0" expanded="true" />
+            <element signature="e#3850#3851#0" expanded="true" />
+            <element signature="e#3942#3943#0" expanded="true" />
+            <element signature="e#4019#4020#0" expanded="true" />
+            <element signature="e#4113#4114#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="e#4295#4296#0" expanded="true" />
+            <element signature="e#4386#4387#0" expanded="true" />
+            <element signature="e#4489#4490#0" expanded="true" />
+            <element signature="e#4563#4564#0" expanded="true" />
+            <element signature="e#4667#4668#0" expanded="true" />
+            <element signature="e#4756#4757#0" expanded="true" />
+            <element signature="e#4881#4882#0" expanded="true" />
+            <element signature="e#4966#4967#0" expanded="true" />
+            <element signature="e#5081#5082#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+          <folding>
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2598#2599#0" expanded="true" />
+            <element signature="e#2562#2563#0" expanded="true" />
+            <element signature="e#2593#2594#0" expanded="true" />
           </folding>
         </state>
       </provider>
