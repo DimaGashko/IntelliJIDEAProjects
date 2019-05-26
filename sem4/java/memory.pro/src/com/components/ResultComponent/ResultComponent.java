@@ -1,27 +1,36 @@
 package com.components.ResultComponent;
 
+import com.services.ResultService.NumberResultService;
+import com.services.ResultService.Result;
+import com.services.ResultService.ResultService;
+import com.services.ResultService.WordsResultService;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import lib.Alerts.Alerts;
 import lib.Component.Component;
 
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class ResultComponent extends Component {
 
-    SimpleIntegerProperty resultId = new SimpleIntegerProperty();
-    SimpleStringProperty username = new SimpleStringProperty();
-    SimpleIntegerProperty grade = new SimpleIntegerProperty();
-    SimpleIntegerProperty dataCount = new SimpleIntegerProperty();
-    SimpleStringProperty trainingType = new SimpleStringProperty();
-    SimpleStringProperty startTime = new SimpleStringProperty();
-    SimpleIntegerProperty memorizeTime = new SimpleIntegerProperty();
-    SimpleIntegerProperty rememberTime = new SimpleIntegerProperty();
-    SimpleIntegerProperty minMemorizeTime = new SimpleIntegerProperty();
-    SimpleIntegerProperty maxMemorizeTime = new SimpleIntegerProperty();
-    SimpleIntegerProperty avgMemorizeTime = new SimpleIntegerProperty();
-    SimpleIntegerProperty correct = new SimpleIntegerProperty();
-    SimpleIntegerProperty errors = new SimpleIntegerProperty();
+    private SimpleIntegerProperty resultId = new SimpleIntegerProperty();
+    private SimpleStringProperty username = new SimpleStringProperty();
+    private SimpleIntegerProperty grade = new SimpleIntegerProperty();
+    private SimpleIntegerProperty dataCount = new SimpleIntegerProperty();
+    private SimpleStringProperty trainingType = new SimpleStringProperty();
+    private SimpleStringProperty startTime = new SimpleStringProperty();
+    private SimpleIntegerProperty memorizeTime = new SimpleIntegerProperty();
+    private SimpleIntegerProperty rememberTime = new SimpleIntegerProperty();
+    private SimpleIntegerProperty minMemorizeTime = new SimpleIntegerProperty();
+    private SimpleIntegerProperty maxMemorizeTime = new SimpleIntegerProperty();
+    private SimpleIntegerProperty avgMemorizeTime = new SimpleIntegerProperty();
+    private SimpleIntegerProperty correct = new SimpleIntegerProperty();
+    private SimpleIntegerProperty errors = new SimpleIntegerProperty();
+
+    private ResultService resultService;
+    private Result result;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -32,8 +41,42 @@ public class ResultComponent extends Component {
         this.trainingType.set(trainingType);
         this.resultId.set(resultId);
 
-        System.out.println(trainingType);
-        System.out.println(resultId);
+        initResultService();
+
+        Optional<Result> resultOption = resultService.loadResult(resultId);
+
+        if (resultOption.isEmpty()) {
+            alerts.show(Alerts.alertErr, "The result not found");
+        }
+
+        result = resultOption.get();
+        initProperties();
+    }
+
+    private void initProperties() {
+        username.set(result.getUsername());
+        grade.set(result.getGrade());
+        dataCount.set(result.getDataCount());
+        startTime.set(result.getStartTime().toString());
+        memorizeTime.set(result.getMemorizeTime());
+        rememberTime.set(result.getRememberTime());
+        minMemorizeTime.set(result.getMinMemorizeTime());
+        maxMemorizeTime.set(result.getMaxMemorizeTime());
+        avgMemorizeTime.set(result.getAvgMemorizeTime());
+        correct.set(result.getCorrectAns());
+        errors.set(result.getErrors());
+    }
+
+    private void initResultService() {
+        String type = this.trainingType.get();
+
+        if (type.equals("Numbers")) {
+            resultService = new NumberResultService(common.getEm());
+        } else if (type.equals("Words")) {
+            resultService = new WordsResultService(common.getEm());
+        } else {
+            alerts.show(Alerts.alertErr, "Unknown training type");
+        }
     }
 
     public int getResultId() {

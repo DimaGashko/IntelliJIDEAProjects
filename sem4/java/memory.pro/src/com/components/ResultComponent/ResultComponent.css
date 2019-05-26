@@ -154,4 +154,8 @@
   -fx-text-fill: #fff;
 }
 
+.result-component {
+  -fx-padding: 15px;
+}
+
 /*# sourceMappingURL=ResultComponent.css.map */

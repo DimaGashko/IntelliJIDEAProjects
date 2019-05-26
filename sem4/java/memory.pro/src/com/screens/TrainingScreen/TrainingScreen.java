@@ -54,7 +54,8 @@ public class TrainingScreen extends Screen {
 
     @Override
     public void showed() {
-        //runSetup();
+        runSetup();
+
         fxCenterContainer.getChildren().clear();
         fxCenterContainer.setCenter(resultComponentRoot);
 

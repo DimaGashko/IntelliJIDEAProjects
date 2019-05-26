@@ -6,7 +6,7 @@ import java.util.Comparator;
 
 import static java.lang.Math.round;
 
-abstract class ResultService implements IResultService {
+public abstract class ResultService implements IResultService {
     protected EntityManager em;
 
     public ResultService(EntityManager em) {
