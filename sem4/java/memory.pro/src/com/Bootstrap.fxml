@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="bootstrap" focusTraversable="true"
-            stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.Bootstrap">
+<BorderPane focusTraversable="true" styleClass="bootstrap" stylesheets="@Bootstrap.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Bootstrap">
     <top>
         <ScrollPane fitToHeight="true" fitToWidth="true" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
             <content>
-                <VBox fx:id="headerSlot" styleClass="headerSlot"/>
+                <VBox fx:id="headerSlot" styleClass="headerSlot" />
             </content>
         </ScrollPane>
     </top>
     <center>
         <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="pageScroll" BorderPane.alignment="CENTER">
             <content>
-                <StackPane fx:id="screenSlot" styleClass="screenSlot"/>
+                <StackPane fx:id="screenSlot" styleClass="screenSlot" />
             </content>
         </ScrollPane>
     </center>

@@ -34,7 +34,7 @@ public class TrainingSetupComponent extends Component {
         String trainingType = ((Label)fxSelectTrainingType.getValue()).getText();
         int dataCount = Integer.parseInt(fxNumberOfData.getText());
 
-        if (dataCount < 1 || dataCount > 10000) {
+        if (dataCount < 1 || dataCount > 2000) {
             alerts.show(Alerts.alertErr, "Check your data");
             return;
         }

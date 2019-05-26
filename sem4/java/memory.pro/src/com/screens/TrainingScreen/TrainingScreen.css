@@ -159,9 +159,7 @@
 }
 .training-screen .screen__title {
   -fx-font-size: 36px;
-}
-.training-screen .memorize-controller {
-  -fx-padding: 15px;
+  -fx-padding: 0 15px;
 }
 
 /*# sourceMappingURL=TrainingScreen.css.map */

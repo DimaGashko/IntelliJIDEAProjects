@@ -65,7 +65,8 @@ public class TrainingScreen extends Screen {
 
             isTrainingInit = true;
 
-            runMemorize();
+            //runMemorize();
+            runRemember();
         });
     }
 
@@ -89,7 +90,7 @@ public class TrainingScreen extends Screen {
         fxCenterContainer.getChildren().clear();
         fxCenterContainer.setCenter(rememberComponentRoot);
 
-        rememberComponent.run(() -> {
+        rememberComponent.run(dataCount, () -> {
             System.out.println("Remember Done!");
         });
     }
