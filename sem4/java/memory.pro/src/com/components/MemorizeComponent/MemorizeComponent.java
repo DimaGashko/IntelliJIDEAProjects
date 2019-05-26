@@ -1,15 +1,10 @@
 package com.components.MemorizeComponent;
 
-import com.services.TrainingService.NumberTrainingService;
-import com.services.TrainingService.TrainingService;
-import com.services.TrainingService.WordsTrainingService;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
-import lib.Alerts.Alerts;
 import lib.Component.Component;
-import schemas.User;
 
 import java.net.URL;
 import java.time.LocalDateTime;
@@ -32,7 +27,9 @@ public class MemorizeComponent extends Component {
     private String trainingType;
 
     private ArrayList<Integer> timesToMemorize;
+
     private LocalDateTime prevTime;
+    private int prevDataIndex = -1;
 
     private OnDone onDone;
 
@@ -98,18 +95,22 @@ public class MemorizeComponent extends Component {
             fxDataGroup.getStyleClass().add(evenClassName);
         }
 
-        if (index > 0 && timesToMemorize.get(index - 1) == -1) {
+        if (prevDataIndex != -1 && timesToMemorize.get(prevDataIndex) == -1) {
             LocalDateTime curTime = LocalDateTime.now();
-            timesToMemorize.set(index - 1, (int) MILLIS.between(prevTime, curTime));
+            timesToMemorize.set(prevDataIndex, (int) MILLIS.between(prevTime, curTime));
             prevTime = curTime;
         }
 
         System.out.println(timesToMemorize);
+        prevDataIndex = index;
     }
 
     private void finishMemorize() {
         if (isDone) return;
         isDone = true;
+
+        LocalDateTime curTime = LocalDateTime.now();
+        timesToMemorize.set(dataCount.get() - 1, (int) MILLIS.between(prevTime, curTime));
 
         onDone.call(timesToMemorize);
     }
