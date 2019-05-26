@@ -1,0 +1,157 @@
+.screen__title {
+  -fx-font-size: 60px;
+}
+
+.validator {
+  -fx-text-fill: green;
+}
+.validator .label {
+  -fx-text-fill: green;
+}
+
+/*******************************************************************************
+ * *                                                                             *
+ * * Scroll Bar			                                                       *
+ * *                                                                             *
+ * ******************************************************************************/
+.scroll-bar:vertical > .track-background, .scroll-bar:horizontal > .track-background {
+  -fx-background-color: #F1F1F1;
+  -fx-background-insets: 0;
+}
+
+.scroll-bar:vertical > .thumb, .scroll-bar:horizontal > .thumb {
+  -fx-background-color: #BCBCBC;
+  -fx-background-insets: 0;
+  -fx-background-radius: 1;
+}
+
+/* Up- and Down-Button Padding */
+.scroll-bar:vertical > .increment-button, .scroll-bar:vertical > .decrement-button {
+  -fx-padding: 5 2 5 2;
+}
+
+/* Left- and Right-Button Padding */
+.scroll-bar:horizontal > .increment-button, .scroll-bar:horizontal > .decrement-button {
+  -fx-padding: 2 5 2 5;
+}
+
+.scroll-bar > .increment-button, .scroll-bar > .decrement-button, .scroll-bar:hover > .increment-button, .scroll-bar:hover > .decrement-button {
+  -fx-background-color: transparent;
+}
+
+.scroll-bar > .increment-button > .increment-arrow, .scroll-bar > .decrement-button > .decrement-arrow {
+  -fx-background-color: #969696;
+}
+
+/* Up Arrow */
+.scroll-bar:vertical > .increment-button > .increment-arrow {
+  -fx-shape: "M298 426h428l-214 214z";
+}
+
+/* Down Arrow */
+.scroll-bar:vertical > .decrement-button > .decrement-arrow {
+  -fx-shape: "M298 598l214-214 214 214h-428z";
+}
+
+/* Right Arrow */
+.scroll-bar:horizontal > .increment-button > .increment-arrow {
+  -fx-shape: "M0 428l0 -428l214 214l-214 214z";
+}
+
+/* Left Arrow */
+.scroll-bar:horizontal > .decrement-button > .decrement-arrow {
+  -fx-shape: "M214 0l0 428l-214 -214l214 -214z";
+}
+
+/*******************************************************************************
+ * *                                                                             *
+ * * Scroll Pane			                                                       *
+ * *                                                                             *
+ * ******************************************************************************/
+.scroll-pane {
+  -fx-background-insets: 0;
+  -fx-padding: 0;
+}
+
+.scroll-pane:focused {
+  -fx-background-insets: 0;
+}
+
+.scroll-pane .corner {
+  -fx-background-insets: 0;
+}
+
+.form-group {
+  -fx-padding: 0 0 35px 0;
+  -fx-alignment: center;
+}
+
+.jfx-text-field,
+.jfx-password-field {
+  -jfx-label-float: true;
+}
+
+.side-panel {
+  -fx-background-color: #282c47;
+}
+.side-panel .jfx-button {
+  -fx-padding: 10px;
+  -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-text-fill: #fff;
+}
+.side-panel .jfx-combo-box {
+  -fx-padding: 5px 10px;
+  -fx-background-color: rgba(255, 255, 255, 0.1);
+  -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+  -fx-text-fill: #fff;
+  -jfx-focuse-color: rgba(0, 0, 0, 0.001);
+}
+.side-panel .jfx-combo-box .list-cell:filled:selected .text, .side-panel .jfx-combo-box .list-cell:filled:selected .label {
+  -fx-fill: #fff;
+}
+.side-panel .jfx-combo-box .side-panel__combo-label {
+  -fx-text-fill: #282c47;
+}
+.side-panel .jfx-combo-box .input-focused-line,
+.side-panel .jfx-combo-box .input-line {
+  visibility: false;
+}
+.side-panel .jfx-text-field {
+  -ffx-focuse-color: #fff;
+  -jfx-unfocuse-color: #fff;
+  -jfx-label-float: false;
+  -fx-prompt-text-fill: rgba(255, 255, 255, 0.5);
+  -fx-text-fill: #fff;
+}
+.side-panel .ikonli-font-icon {
+  -fx-fill: #fff;
+  -fx-text-fill: #fff;
+}
+
+.side-panel__title {
+  -fx-font-size: 36px;
+  -fx-text-fill: #fff;
+}
+
+.side-panel__group {
+  -fx-padding: 10px 0;
+  -fx-border-width: 0 0 1px 0;
+  -fx-border-color: rgba(255, 255, 255, 0.1);
+  -fx-text-fill: #fff;
+}
+
+.side-panel__field {
+  -fx-padding: 0 15px;
+  -fx-spacing: 10px;
+  -fx-text-fill: #fff;
+}
+
+.side-panel-h-group {
+  -fx-spacing: 10px;
+}
+
+.side-panel__text {
+  -fx-text-fill: #fff;
+}
+
+/*# sourceMappingURL=ResultComponent.css.map */
