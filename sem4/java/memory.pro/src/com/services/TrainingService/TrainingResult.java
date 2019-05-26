@@ -1,38 +1,53 @@
 package com.services.TrainingService;
 
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class TrainingResult {
-    private String value;
-    private int time;
+    private ArrayList<Integer> timesToMemorize;
+    private ArrayList<String> answers;
+    private int timeToRemember;
+    private String trainingType;
+    private int dataCount;
 
-    public TrainingResult(String value, int time) {
-        this.value = value;
-        this.time = time;
+    public ArrayList<Integer> getTimesToMemorize() {
+        return timesToMemorize;
     }
 
-    public String getValue() {
-        return value;
+    public void setTimesToMemorize(ArrayList<Integer> timesToMemorize) {
+        this.timesToMemorize = timesToMemorize;
     }
 
-    public void setValue(String value) {
-        this.value = value;
+    public ArrayList<String> getAnswers() {
+        return answers;
     }
 
-    public int getTime() {
-        return time;
+    public void setAnswers(ArrayList<String> answers) {
+        this.answers = answers;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public int getTimeToRemember() {
+        return timeToRemember;
     }
 
-    @Override
-    public String toString() {
-        return "TrainingResult{" +
-                "value='" + value + '\'' +
-                ", time=" + time +
-                '}';
+    public void setTimeToRemember(int timeToRemember) {
+        this.timeToRemember = timeToRemember;
+    }
+
+    public String getTrainingType() {
+        return trainingType;
+    }
+
+    public void setTrainingType(String trainingType) {
+        this.trainingType = trainingType;
+    }
+
+    public int getDataCount() {
+        return dataCount;
+    }
+
+    public void setDataCount(int dataCount) {
+        this.dataCount = dataCount;
     }
 
     @Override
@@ -40,14 +55,26 @@ public class TrainingResult {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         TrainingResult that = (TrainingResult) o;
-        return time == that.time &&
-                Objects.equals(value, that.value);
+        return timeToRemember == that.timeToRemember &&
+                dataCount == that.dataCount &&
+                Objects.equals(timesToMemorize, that.timesToMemorize) &&
+                Objects.equals(answers, that.answers) &&
+                Objects.equals(trainingType, that.trainingType);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(value, time);
+        return Objects.hash(timesToMemorize, answers, timeToRemember, trainingType, dataCount);
     }
 
-
+    @Override
+    public String toString() {
+        return "TrainingResult{" +
+                "timesToMemorize=" + timesToMemorize +
+                ", answers=" + answers +
+                ", timeToRemember=" + timeToRemember +
+                ", trainingType='" + trainingType + '\'' +
+                ", dataCount=" + dataCount +
+                '}';
+    }
 }

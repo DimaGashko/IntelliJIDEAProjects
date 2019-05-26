@@ -4,6 +4,7 @@ import com.components.TrainingMemorizeComponent.TrainingMemorizeComponent;
 import com.components.TrainingRememberComponent.TrainingRememberComponent;
 import com.components.TrainingSetupComponent.TrainingSetupComponent;
 import com.services.TrainingService.NumberTrainingService;
+import com.services.TrainingService.TrainingResult;
 import com.services.TrainingService.TrainingService;
 import com.services.TrainingService.WordsTrainingService;
 import javafx.fxml.FXML;
@@ -101,7 +102,22 @@ public class TrainingScreen extends Screen {
     }
 
     private void finishTraining() {
+        TrainingResult result = getResult();
+        int resultId = trainingService.finish(result);
 
+        System.out.println("Result id: " + resultId);
+    }
+
+    private TrainingResult getResult() {
+        TrainingResult result = new TrainingResult();
+
+        result.setTrainingType(trainingType);
+        result.setDataCount(dataCount);
+        result.setTimesToMemorize(timesToMemorize);
+        result.setTimeToRemember(timeToRemember);
+        result.setAnswers(answers);
+
+        return result;
     }
 
     private void initTrainingService() {
