@@ -7,7 +7,6 @@ import com.services.TrainingService.TrainingService;
 import com.services.TrainingService.WordsTrainingService;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
-import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import lib.Alerts.Alerts;
@@ -21,7 +20,7 @@ import java.util.ResourceBundle;
 
 public class TrainingScreen extends Screen {
 
-    @FXML private VBox fxSetupRoot;
+    @FXML private BorderPane fxSetupRoot;
     @FXML private BorderPane fxMemorizeRoot;
 
     private TrainingService trainingService;
@@ -58,7 +57,7 @@ public class TrainingScreen extends Screen {
         }
 
         fxSetupRoot.getChildren().clear();
-        fxSetupRoot.getChildren().add(setupRoot);
+        fxSetupRoot.setCenter(setupRoot);
 
         setupComponent.run((trainingType, dataCount) -> {
             if (isTrainingInit) {
