@@ -95,6 +95,9 @@
   -fx-background-color: #24292e;
   -fx-text-fill: #fff;
 }
+.signup-component__signup .ikonli-font-icon {
+  -fx-fill: #fff;
+}
 
 .side-panel {
   -fx-background-color: #282c47;

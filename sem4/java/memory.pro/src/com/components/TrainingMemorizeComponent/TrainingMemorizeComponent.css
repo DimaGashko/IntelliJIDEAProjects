@@ -91,6 +91,14 @@
   -jfx-label-float: true;
 }
 
+.memorize__control {
+  -fx-background-color: #24292e;
+  -fx-text-fill: #fff;
+}
+.memorize__control .ikonli-font-icon {
+  -fx-fill: #fff;
+}
+
 .side-panel {
   -fx-background-color: #282c47;
 }
@@ -172,12 +180,6 @@
 
 .memorize__control {
   -fx-font-size: 25px;
-  -fx-background-color: rgba(0, 0, 0, 0.3);
-  -fx-text-fill: #24292e;
-}
-.memorize__control .ikonli-font-icon {
-  -fx-fill: #24292e;
-  -fx-text-fill: #24292e;
 }
 
 .memorize__group-container {

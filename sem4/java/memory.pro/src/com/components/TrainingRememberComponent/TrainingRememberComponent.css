@@ -91,6 +91,14 @@
   -jfx-label-float: true;
 }
 
+.remember-component__button {
+  -fx-background-color: #24292e;
+  -fx-text-fill: #fff;
+}
+.remember-component__button .ikonli-font-icon {
+  -fx-fill: #fff;
+}
+
 .side-panel {
   -fx-background-color: #282c47;
 }
@@ -156,6 +164,26 @@
 
 .remember-component {
   -fx-alignment: top_center;
+}
+
+.remember-component__inputs {
+  -fx-alignment: center;
+  -fx-hgap: 25px;
+  -fx-vgap: 25px;
+}
+.remember-component__inputs .jfx-text-field {
+  -fx-pref-width: 100px;
+  -fx-alignment: center;
+  -jfx-focus-color: #282c47;
+}
+
+.remember-component__controls {
+  -fx-padding: 50px 0;
+  -fx-alignment: center;
+}
+
+.remember-component__button {
+  -fx-font-size: 25px;
 }
 
 /*# sourceMappingURL=TrainingRememberComponent.css.map */

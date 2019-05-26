@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<?import javafx.scene.control.Label?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true"
-      styleClass="remember-component" stylesheets="@TrainingRememberComponent.css" xmlns="http://javafx.com/javafx/11.0.1"
-      fx:controller="com.components.TrainingRememberComponent.TrainingRememberComponent">
-
-    <VBox>
-
-        <Label>Remembering Stage!</Label>
-
-    </VBox>
+<VBox focusTraversable="true" styleClass="remember-component" stylesheets="@TrainingRememberComponent.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.TrainingRememberComponent.TrainingRememberComponent">
+   <FlowPane styleClass="remember-component__inputs" />
+   <VBox styleClass="remember-component__controls">
+      <children>
+         <JFXButton styleClass="remember-component__button" text="Finish">
+            <graphic>
+               <FontIcon iconLiteral="fa-flag-checkered" />
+            </graphic>
+         </JFXButton>
+      </children>
+   </VBox>
 </VBox>

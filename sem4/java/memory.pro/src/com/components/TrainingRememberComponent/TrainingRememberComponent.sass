@@ -2,3 +2,22 @@
 
 .remember-component
   -fx-alignment: top_center
+
+.remember-component__inputs
+  -fx-alignment: center
+  -fx-hgap: 25px
+  -fx-vgap: 25px
+
+  .jfx-text-field
+    -fx-pref-width: 100px
+    -fx-alignment: center
+    -jfx-focus-color: $brand-color-3
+
+.remember-component__controls
+  -fx-padding: 50px 0
+  -fx-alignment: center
+
+.remember-component__button
+  @extend %contrast-button
+
+  -fx-font-size: 25px
