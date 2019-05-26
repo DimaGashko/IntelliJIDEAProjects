@@ -12,6 +12,7 @@ import lib.Validation.Validation;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.stream.Collectors;
 
 public class TrainingRememberComponent extends Component {
 
@@ -47,8 +48,15 @@ public class TrainingRememberComponent extends Component {
         fxInputsContainer.getChildren().addAll(inputs);
     }
 
+    private ArrayList<String> getAnswers() {
+        return this.fxInputsContainer.getChildren().stream()
+                .map(input -> ((JFXTextField)input).getText())
+                .collect(Collectors.toCollection(ArrayList::new));
+    }
+
     private void done() {
-        onDoneCallback.call();
+        var answers = getAnswers();
+        onDoneCallback.call(answers);
     }
 
     private void initValidation() {
@@ -61,6 +69,6 @@ public class TrainingRememberComponent extends Component {
 
     @FunctionalInterface
     public interface OnDoneCallback {
-        void call();
+        void call(ArrayList<String> answers);
     }
 }

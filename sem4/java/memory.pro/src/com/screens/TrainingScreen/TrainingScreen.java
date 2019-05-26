@@ -90,8 +90,8 @@ public class TrainingScreen extends Screen {
         fxCenterContainer.getChildren().clear();
         fxCenterContainer.setCenter(rememberComponentRoot);
 
-        rememberComponent.run(dataCount, () -> {
-            System.out.println("Remember Done!");
+        rememberComponent.run(dataCount, (answers) -> {
+            System.out.println(answers);
         });
     }
 
