@@ -33,12 +33,14 @@ public class TrainingScreen extends Screen {
 
     private TrainingService trainingService;
     private ArrayList<String> trainingData;
-    private String trainingType;
-    private int dataCount;
 
     private boolean isTrainingInit = false;
 
     private ArrayList<Integer> timesToMemorize;
+    private ArrayList<String> answers;
+    private int timeToRemember;
+    private String trainingType;
+    private int dataCount;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -90,9 +92,16 @@ public class TrainingScreen extends Screen {
         fxCenterContainer.getChildren().clear();
         fxCenterContainer.setCenter(rememberComponentRoot);
 
-        rememberComponent.run(dataCount, (answers) -> {
-            System.out.println(answers);
+        rememberComponent.run(dataCount, (timeToRemember, answers) -> {
+            this.timeToRemember = timeToRemember;
+            this.answers = answers;
+
+            finishTraining();
         });
+    }
+
+    private void finishTraining() {
+
     }
 
     private void initTrainingService() {

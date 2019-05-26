@@ -10,15 +10,20 @@ import lib.Component.Component;
 import lib.Validation.Validation;
 
 import java.net.URL;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
+
+import static java.time.temporal.ChronoUnit.SECONDS;
 
 public class TrainingRememberComponent extends Component {
 
     @FXML private FlowPane fxInputsContainer;
 
     private OnDoneCallback onDoneCallback;
+
+    private LocalDateTime startTime;
 
     private int dataCount;
 
@@ -30,6 +35,8 @@ public class TrainingRememberComponent extends Component {
     public void run(int dataCount, OnDoneCallback onDoneCallback) {
         this.onDoneCallback = onDoneCallback;
         this.dataCount = dataCount;
+
+        this.startTime = LocalDateTime.now();
 
         renderInputs();
     }
@@ -56,7 +63,15 @@ public class TrainingRememberComponent extends Component {
 
     private void done() {
         var answers = getAnswers();
-        onDoneCallback.call(answers);
+        int time = getTimeToRemember();
+
+        onDoneCallback.call(time, answers);
+    }
+
+    private int getTimeToRemember() {
+        LocalDateTime endTime = LocalDateTime.now();
+
+        return (int)SECONDS.between(startTime, endTime);
     }
 
     private void initValidation() {
@@ -69,6 +84,6 @@ public class TrainingRememberComponent extends Component {
 
     @FunctionalInterface
     public interface OnDoneCallback {
-        void call(ArrayList<String> answers);
+        void call(int timeToRemember, ArrayList<String> answers);
     }
 }
