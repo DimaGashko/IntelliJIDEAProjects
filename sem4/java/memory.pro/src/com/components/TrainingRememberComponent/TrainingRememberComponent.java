@@ -27,6 +27,8 @@ public class TrainingRememberComponent extends Component {
 
     private int dataCount;
 
+    private boolean isDone;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initValidation();
@@ -36,6 +38,7 @@ public class TrainingRememberComponent extends Component {
         this.onDoneCallback = onDoneCallback;
         this.dataCount = dataCount;
 
+        this.isDone = false;
         this.startTime = LocalDateTime.now();
 
         renderInputs();
@@ -62,6 +65,9 @@ public class TrainingRememberComponent extends Component {
     }
 
     private void done() {
+        if (isDone) return;
+        isDone = true;
+
         var answers = getAnswers();
         int time = getTimeToRemember();
 

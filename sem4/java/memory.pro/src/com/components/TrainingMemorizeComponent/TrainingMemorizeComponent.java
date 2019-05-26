@@ -85,8 +85,7 @@ public class TrainingMemorizeComponent extends Component {
 
     private void next() {
         int index = curDataIndex.get() + 1;
-        System.out.println("next"
-        );
+
         if (index > dataCount.get()) {
             finishMemorize();
             return;

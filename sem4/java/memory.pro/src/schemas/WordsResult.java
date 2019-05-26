@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
 
+import static java.lang.Math.max;
 import static java.lang.Math.round;
 
 @Entity
@@ -37,8 +38,10 @@ public class WordsResult {
             correct += item.getWord().getWord().equalsIgnoreCase(item.getAnswer()) ? 1 : 0;
         }
 
+        time /= 1000;
+
         float grade = correct + (resultData.size() - time / 3.f);
-        return round(grade);
+        return max(round(grade), 0);
     }
 
     public int getId() {

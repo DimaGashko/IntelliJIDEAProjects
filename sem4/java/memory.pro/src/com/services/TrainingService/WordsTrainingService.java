@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import dao.WordDao;
 import dao.WordsResultDao;
 import dao.WordsResultDataDao;
+import kotlin.jvm.Throws;
 import schemas.*;
 
 import javax.persistence.EntityManager;
@@ -86,6 +87,12 @@ public class WordsTrainingService extends TrainingService {
 
     private ArrayList<Word> loadWords() {
         var words = wordDao.getRandomWords(dataCount);
+
+        if (words.isEmpty()) {
+            System.out.println("No words in Database");
+            System.exit(1);
+        }
+
         if (words.size() == dataCount) {
             return words;
         }
