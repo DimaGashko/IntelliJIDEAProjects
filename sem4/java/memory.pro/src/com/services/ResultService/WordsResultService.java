@@ -12,11 +12,11 @@ import java.util.stream.Collectors;
 
 import static java.lang.Math.round;
 
-public class WordsResultServiece extends ResultService {
+public class WordsResultService extends ResultService {
 
     WordsResultDataDao resultDataDao;
 
-    public WordsResultServiece(EntityManager em) {
+    public WordsResultService(EntityManager em) {
         super(em);
 
         resultDataDao = new WordsResultDataDao(em);

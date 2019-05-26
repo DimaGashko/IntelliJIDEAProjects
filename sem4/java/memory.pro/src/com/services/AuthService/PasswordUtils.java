@@ -1,4 +1,4 @@
-package security;
+package com.services.AuthService;
 
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;

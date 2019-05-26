@@ -1,45 +1,30 @@
 package com;
 
-import com.services.AuthService.AuthService;
-import com.services.AuthService.AuthServiceException;
-import com.services.ResultService.NumberResultService;
-import com.services.ResultService.WordsResultServiece;
-import com.services.TrainingService.NumberTrainingService;
-import com.services.TrainingService.TrainingResult;
-import com.services.TrainingService.WordsTrainingService;
-import dao.UserDao;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import schemas.User;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.stream.Collectors;
 
 public class Main extends Application {
     Stage stage;
 
     public static void main(String[] args) {
-        //launch(args);
+        launch(args);
 
-
+/*
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
-        var resultService = new WordsResultServiece(em);
+        var resultService = new WordsResultService(em);
         //var resultService = new NumberResultService(em);
 
         var res = resultService.loadResult(2);
 
-        int a = 1;
+        int a = 1;*/
 
 
 /*        UserDao userDao = new UserDao(em);

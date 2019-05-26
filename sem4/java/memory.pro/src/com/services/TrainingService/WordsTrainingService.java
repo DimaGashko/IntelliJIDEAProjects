@@ -49,7 +49,10 @@ public class WordsTrainingService extends TrainingService {
         result.setDateTime(startTime);
         result.setUser(user);
 
+        System.out.println(result.getGrade());
+
         if (result.getGrade() <= 0) {
+
             return -1;
         }
 

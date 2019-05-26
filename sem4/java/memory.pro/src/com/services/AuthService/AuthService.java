@@ -2,7 +2,6 @@ package com.services.AuthService;
 
 import dao.UserDao;
 import schemas.User;
-import security.PasswordUtils;
 
 import javax.persistence.RollbackException;
 import java.io.*;

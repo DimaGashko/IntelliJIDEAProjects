@@ -6,11 +6,8 @@ import schemas.User;
 
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import static java.lang.Math.round;
 
 public class NumberResultService extends ResultService {
     NumbersResultDataDao resultDataDao;
