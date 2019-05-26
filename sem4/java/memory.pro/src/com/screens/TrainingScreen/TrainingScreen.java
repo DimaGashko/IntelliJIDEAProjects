@@ -43,7 +43,6 @@ public class TrainingScreen extends Screen {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initChildComponents();
-
     }
 
     @Override

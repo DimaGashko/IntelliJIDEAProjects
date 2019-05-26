@@ -20,9 +20,9 @@ public class TrainingMemorizeComponent extends Component {
     @FXML VBox fxRoot;
     @FXML VBox fxDataGroup;
 
-    private SimpleIntegerProperty dataCount = new SimpleIntegerProperty(0);
-    private SimpleIntegerProperty curDataIndex = new SimpleIntegerProperty(0);
-    private SimpleStringProperty curDataItem = new SimpleStringProperty("...");
+    private SimpleIntegerProperty dataCount = new SimpleIntegerProperty();
+    private SimpleIntegerProperty curDataIndex = new SimpleIntegerProperty();
+    private SimpleStringProperty curDataItem = new SimpleStringProperty();
 
     private ArrayList<String> trainingData;
     private String trainingType;
@@ -30,11 +30,11 @@ public class TrainingMemorizeComponent extends Component {
     private ArrayList<Integer> timesToMemorize;
 
     private LocalDateTime prevTime;
-    private int prevDataIndex = -1;
+    private int prevDataIndex;
 
     private OnDoneCallback onDoneCallback;
 
-    private boolean isDone = false;
+    private boolean isDone;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -46,6 +46,12 @@ public class TrainingMemorizeComponent extends Component {
             alerts.show(Alerts.alertErr, "Wrong training attributes");
             return;
         }
+
+        dataCount.set(0);
+        curDataIndex.set(0);
+        curDataItem.set("...");
+        prevDataIndex = -1;
+        isDone = false;
 
         this.trainingData = trainingData;
         this.dataCount.set(trainingData.size());
@@ -79,7 +85,8 @@ public class TrainingMemorizeComponent extends Component {
 
     private void next() {
         int index = curDataIndex.get() + 1;
-
+        System.out.println("next"
+        );
         if (index > dataCount.get()) {
             finishMemorize();
             return;
