@@ -8,15 +8,19 @@ public class Result {
 
     private int id;
     private String username;
+
+    private int grade;
+    private int dataCount;
+
     private LocalDateTime startTime;
     private int memorizeTime;
     private int rememberTime;
-    private int grade;
-    private int dataCount;
-    private int correctAns;
-    private int avgMerorizeTime;
+
     private int minMemorizeTime;
     private int maxMemorizeTime;
+    private int avgMemorizeTime;
+
+    private int correctAns;
     private int errors;
 
     private ArrayList<ResultData> data;
@@ -103,12 +107,12 @@ public class Result {
         this.correctAns = correctAns;
     }
 
-    public int getAvgMerorizeTime() {
-        return avgMerorizeTime;
+    public int getAvgMemorizeTime() {
+        return avgMemorizeTime;
     }
 
-    public void setAvgMerorizeTime(int avgMerorizeTime) {
-        this.avgMerorizeTime = avgMerorizeTime;
+    public void setAvgMemorizeTime(int avgMemorizeTime) {
+        this.avgMemorizeTime = avgMemorizeTime;
     }
 
     public int getMinMemorizeTime() {
