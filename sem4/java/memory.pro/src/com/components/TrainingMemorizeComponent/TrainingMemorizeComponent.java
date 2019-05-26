@@ -4,6 +4,7 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
+import lib.Alerts.Alerts;
 import lib.Component.Component;
 
 import java.net.URL;
@@ -41,6 +42,11 @@ public class TrainingMemorizeComponent extends Component {
     }
 
     public void run(ArrayList<String> trainingData, String trainingType, OnDoneCallback onDone) {
+        if (trainingData.isEmpty()) {
+            alerts.show(Alerts.alertErr, "Wrong training attributes");
+            return;
+        }
+
         this.trainingData = trainingData;
         this.dataCount.set(trainingData.size());
         this.trainingType = trainingType;

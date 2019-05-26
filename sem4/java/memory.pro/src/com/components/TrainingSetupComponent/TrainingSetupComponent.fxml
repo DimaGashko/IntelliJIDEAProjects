@@ -49,7 +49,7 @@
                 <JFXTextField fx:id="fxNumberOfData" focusColor="#fff" promptText="Enter The Number of Data"
                               styleClass="side-panel__text" text="50" unFocusColor="#fff">
                     <validators>
-                        <RequiredFieldValidator message="Required Field"/>
+                        <RequiredFieldValidator message="Pleas, enter the number of data"/>
                         <IntegerValidator message="Please, enter an integer"/>
                     </validators>
                 </JFXTextField>

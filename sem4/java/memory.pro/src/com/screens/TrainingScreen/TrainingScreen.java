@@ -8,7 +8,6 @@ import com.services.TrainingService.WordsTrainingService;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 import lib.Alerts.Alerts;
 import lib.Component.ComponentException;
 import lib.Screen.Screen;
@@ -20,8 +19,14 @@ import java.util.ResourceBundle;
 
 public class TrainingScreen extends Screen {
 
-    @FXML private BorderPane fxSetupRoot;
-    @FXML private BorderPane fxMemorizeRoot;
+    @FXML private BorderPane fxSetupContainer;
+    @FXML private BorderPane fxMemorizeContainer;
+
+    private Parent setupComponentRoot;
+    private Parent memorizeComponentRoot;
+
+    private TrainingSetupComponent setupComponent;
+    private TrainingMemorizeComponent memorizeComponent;
 
     private TrainingService trainingService;
     private ArrayList<String> trainingData;
@@ -34,32 +39,23 @@ public class TrainingScreen extends Screen {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        initSetup();
+        initChildComponents();
+
     }
 
     @Override
     public void showed() {
-
+        runSetup();
     }
 
-    private void initSetup() {
-        TrainingSetupComponent setupComponent;
-        Parent setupRoot;
-
-        try {
-            var res = loadComponent("setup");
-            setupRoot = res.getKey();
-            setupComponent = (TrainingSetupComponent) res.getValue();
-        } catch (ComponentException e) {
-            alerts.show(Alerts.alertErr, "Cant'l load Training Setup Component");
-            e.printStackTrace();
-            return;
-        }
-
-        fxSetupRoot.getChildren().clear();
-        fxSetupRoot.setCenter(setupRoot);
+    private void runSetup() {
+        fxSetupContainer.getChildren().clear();
+        fxSetupContainer.setCenter(setupComponentRoot);
 
         setupComponent.run((trainingType, dataCount) -> {
+            this.trainingType = trainingType;
+            this.dataCount = dataCount;
+
             if (isTrainingInit) {
                 var ans = alerts.ask("You're already training. Do you want restart it?");
                 if (!ans) return;
@@ -67,34 +63,20 @@ public class TrainingScreen extends Screen {
 
             isTrainingInit = true;
 
-            this.trainingType = trainingType;
-            this.dataCount = dataCount;
-
             runMemorize();
         });
     }
 
     private void runMemorize() {
-        initTrainingServices();
+        initTrainingService();
+
+        trainingService.setUp(dataCount);
         trainingData = trainingService.start();
 
-        TrainingMemorizeComponent component;
-        Parent root;
+        fxMemorizeContainer.getChildren().clear();
+        fxMemorizeContainer.setCenter(memorizeComponentRoot);
 
-        try {
-            var res = loadComponent("memorize");
-            root = res.getKey();
-            component = (TrainingMemorizeComponent) res.getValue();
-        } catch (ComponentException e) {
-            alerts.show(Alerts.alertErr, "Cant'l load Memorize Component");
-            e.printStackTrace();
-            return;
-        }
-
-        fxMemorizeRoot.getChildren().clear();
-        fxMemorizeRoot.setCenter(root);
-
-        component.run(trainingData, trainingType, (timesToMemorize) -> {
+        memorizeComponent.run(trainingData, trainingType, (timesToMemorize) -> {
            this.timesToMemorize = timesToMemorize;
 
            runRemember();
@@ -105,7 +87,7 @@ public class TrainingScreen extends Screen {
         System.out.println(timesToMemorize);
     }
 
-    private void initTrainingServices() {
+    private void initTrainingService() {
         User user = getUser();
 
         if (user == null) {
@@ -123,10 +105,26 @@ public class TrainingScreen extends Screen {
 
         } else {
             alerts.show(Alerts.alertErr, "Wrong Training Type");
-            return;
+            System.exit(1);
         }
 
-        trainingService.setUp(dataCount);
+    }
+
+    private void initChildComponents() {
+        try {
+            var setupPair = loadComponent("setup");
+            var memorizePair = loadComponent("memorize");
+
+            setupComponentRoot = setupPair.getKey();
+            memorizeComponentRoot = memorizePair.getKey();
+
+            setupComponent = (TrainingSetupComponent) setupPair.getValue();
+            memorizeComponent = (TrainingMemorizeComponent) memorizePair.getValue();
+
+        } catch (ComponentException e) {
+            alerts.show(Alerts.alertErr, "Cant'l load Training Components");
+            e.printStackTrace();
+        }
     }
 
 }
