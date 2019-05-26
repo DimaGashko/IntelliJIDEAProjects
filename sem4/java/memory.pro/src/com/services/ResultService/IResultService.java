@@ -1,7 +1,9 @@
 package com.services.ResultService;
 
+import java.util.Optional;
+
 public interface IResultService {
 
-    Result loadResult(int resultId);
+    Optional<Result> loadResult(int resultId);
 
 }

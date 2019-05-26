@@ -7,6 +7,7 @@ import schemas.User;
 import javax.persistence.EntityManager;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import static java.lang.Math.round;
@@ -21,11 +22,15 @@ public class NumberResultService extends ResultService {
     }
 
     @Override
-    public Result loadResult(int resultId) {
+    public Optional<Result> loadResult(int resultId) {
         var rawResultData = resultDataDao.getById(resultId);
+        if (rawResultData.isEmpty()) {
+            return Optional.empty();
+        }
         var resultData = getResultData(rawResultData);
+        var result = createResult(resultData, rawResultData);
 
-        return createResult(resultData, rawResultData);
+        return Optional.of(result);
     }
 
     private Result createResult(ArrayList<ResultData> resultData, ArrayList<NumbersResultData> rawResultData) {
@@ -68,30 +73,5 @@ public class NumberResultService extends ResultService {
         }).collect(Collectors.toCollection(ArrayList::new));
 
     }
-
-    private int getMemorizeTime(ArrayList<ResultData> resultData) {
-        int millis = resultData.stream().map(ResultData::getTime).reduce(0, Integer::sum);
-
-        return round(millis / 1000.f);
-    }
-
-    private int getMinMemorizeTime(ArrayList<ResultData> resultData) {
-        return resultData.stream().map(ResultData::getTime)
-                .min(Comparator.comparingInt(a -> a)).orElse(0);
-    }
-
-    private int getMaxMemorizeTime(ArrayList<ResultData> resultData) {
-        return resultData.stream().map(ResultData::getTime)
-                .max(Comparator.comparingInt(a -> a)).orElse(0);
-    }
-
-    private int getAvgMemorizeTime(ArrayList<ResultData> resultData) {
-        return getMaxMemorizeTime(resultData) / resultData.size();
-    }
-
-    private int getCorrectAns(ArrayList<ResultData> resultData) {
-        return (int)resultData.stream().filter(ResultData::isCorrect).count();
-    }
-
 
 }

@@ -3,6 +3,7 @@ package com;
 import com.services.AuthService.AuthService;
 import com.services.AuthService.AuthServiceException;
 import com.services.ResultService.NumberResultService;
+import com.services.ResultService.WordsResultServiece;
 import com.services.TrainingService.NumberTrainingService;
 import com.services.TrainingService.TrainingResult;
 import com.services.TrainingService.WordsTrainingService;
@@ -33,11 +34,12 @@ public class Main extends Application {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
-        NumberResultService resultService = new NumberResultService(em);
+        var resultService = new WordsResultServiece(em);
+        //var resultService = new NumberResultService(em);
 
-        var res = resultService.loadResult(1);
+        var res = resultService.loadResult(2);
 
-        int a = 5;
+        int a = 1;
 
 
 /*        UserDao userDao = new UserDao(em);
