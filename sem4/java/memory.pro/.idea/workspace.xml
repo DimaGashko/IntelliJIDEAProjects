@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a800e1b-1db4-43c0-a3d2-490800a351f0" name="Default Changelist" comment="otlin">
-      <change beforePath="$PROJECT_DIR$/data/config" beforeDir="false" afterPath="$PROJECT_DIR$/data/config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/TrainingMemorizeComponent/TrainingMemorizeComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/TrainingMemorizeComponent/TrainingMemorizeComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/NumbersResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/NumbersResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schemas/WordsResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/schemas/WordsResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,20 +49,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="225">
+              <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="49" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/NUMBERSRESULT">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
+        <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -83,19 +89,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/USER">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+            <state relative-caret-position="165">
+              <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -189,14 +186,12 @@
         <option value="$PROJECT_DIR$/src/com/styles/components/_button.sass" />
         <option value="$PROJECT_DIR$/src/com/Bootstrap.fxml" />
         <option value="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.fxml" />
-        <option value="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.sass" />
         <option value="$PROJECT_DIR$/src/com/components/TrainingMemorizeComponent/TrainingMemorizeComponent.sass" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.fxml" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.sass" />
         <option value="$PROJECT_DIR$/src/com/components/TrainingSetupComponent/TrainingSetupComponent.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/TrainingResult.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java" />
-        <option value="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/services/TrainingService/WordsTrainingService.java" />
         <option value="$PROJECT_DIR$/src/com/components/TrainingMemorizeComponent/TrainingMemorizeComponent.java" />
         <option value="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.java" />
@@ -204,6 +199,8 @@
         <option value="$PROJECT_DIR$/src/schemas/NumbersResult.java" />
         <option value="$PROJECT_DIR$/src/com/Main.java" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.sass" />
+        <option value="$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java" />
       </list>
     </option>
   </component>
@@ -407,12 +404,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="73123000" />
+      <workItem from="1558781377417" duration="73857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="273423000" />
+    <option name="totallyTimeSpent" value="274157000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -799,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/ITrainingService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -835,13 +825,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="109" lean-forward="true" selection-start-line="109" selection-end-line="109" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -893,20 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/NUMBERSRESULT">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -926,11 +895,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
+        <state relative-caret-position="165">
+          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3fa4374d-efc5-419f-81ba-da803098fc03/schema/memorypro/table/NUMBERSRESULT">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/schemas/NumbersResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="24" lean-forward="true" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/TrainingRememberComponent/TrainingRememberComponent.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/services/TrainingService/NumberTrainingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="49" selection-end-column="9" />
         </state>
       </provider>
     </entry>
