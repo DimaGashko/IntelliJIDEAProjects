@@ -70,6 +70,7 @@ public class WordsResultService extends ResultService {
             resultData.setValue(item.getWord().getWord());
             resultData.setAnswer(item.getAnswer());
             resultData.setTime(item.getTime());
+            resultData.setIndex(item.getDataId() + 1);
 
             return resultData;
         }).collect(Collectors.toCollection(ArrayList::new));

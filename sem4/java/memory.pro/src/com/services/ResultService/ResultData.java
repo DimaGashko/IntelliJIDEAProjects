@@ -7,6 +7,7 @@ public class ResultData {
     private String value;
     private String answer;
     private int time;
+    private int index;
 
     public boolean isCorrect() {
         return answer.equalsIgnoreCase(value);
@@ -44,6 +45,15 @@ public class ResultData {
         return time == that.time &&
                 Objects.equals(value, that.value) &&
                 Objects.equals(answer, that.answer);
+    }
+
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
     }
 
     @Override

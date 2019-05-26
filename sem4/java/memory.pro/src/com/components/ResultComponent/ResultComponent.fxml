@@ -5,26 +5,8 @@
 <?import javafx.scene.layout.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="result-component" stylesheets="@ResultComponent.css"
             xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.ResultComponent.ResultComponent">
-    <center>
-        <AnchorPane BorderPane.alignment="CENTER">
-            <children>
-                <TableView AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                           AnchorPane.topAnchor="0.0">
-                    <columns>
-                        <TableColumn text="Index"/>
-                        <TableColumn text="Time"/>
-                        <TableColumn text="Answer"/>
-                        <TableColumn text="Correct"/>
-                    </columns>
-                    <columnResizePolicy>
-                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
-                    </columnResizePolicy>
-                </TableView>
-            </children>
-        </AnchorPane>
-    </center>
     <top>
-        <GridPane alignment="TOP_LEFT" gridLinesVisible="true" styleClass="result__grid" BorderPane.alignment="CENTER">
+        <GridPane gridLinesVisible="true" styleClass="result__grid" BorderPane.alignment="CENTER">
 
             <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
             <Label text="Training Type:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
@@ -52,7 +34,7 @@
             <Label text="${controller.correct}" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
             <Label text="${controller.errors}" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
             <BorderPane.margin>
-                <Insets bottom="25.0"/>
+                <Insets bottom="15.0"/>
             </BorderPane.margin>
             <columnConstraints>
                 <ColumnConstraints/>
@@ -61,4 +43,21 @@
 
         </GridPane>
     </top>
+    <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="fxDataTable" >
+                    <columns>
+                        <TableColumn fx:id="fxDataTableIndex" text="Index"/>
+                        <TableColumn fx:id="fxDataTableTime" text="Time"/>
+                        <TableColumn fx:id="fxDataTableAnswer" text="Answer"/>
+                        <TableColumn fx:id="fxDataTableCorrect" text="Correct"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </center>
 </BorderPane>

@@ -1,11 +1,14 @@
 package com.components.ResultComponent;
 
-import com.services.ResultService.NumberResultService;
-import com.services.ResultService.Result;
-import com.services.ResultService.ResultService;
-import com.services.ResultService.WordsResultService;
+import com.services.ResultService.*;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import lib.Alerts.Alerts;
 import lib.Component.Component;
 
@@ -14,6 +17,12 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class ResultComponent extends Component {
+
+    @FXML private TableView fxDataTalble;
+    @FXML private TableColumn fxDataTableIndex;
+    @FXML private TableColumn fxDataTableTime;
+    @FXML private TableColumn fxDataTableAnswer;
+    @FXML private TableColumn fxDataTableCorrect;
 
     private SimpleIntegerProperty resultId = new SimpleIntegerProperty();
     private SimpleStringProperty username = new SimpleStringProperty();
@@ -51,6 +60,8 @@ public class ResultComponent extends Component {
 
         result = resultOption.get();
         initProperties();
+
+        initDataTable();
     }
 
     private void initProperties() {
@@ -77,6 +88,22 @@ public class ResultComponent extends Component {
         } else {
             alerts.show(Alerts.alertErr, "Unknown training type");
         }
+    }
+
+    private void initDataTable() {
+        fxDataTableIndex.setCellValueFactory(new PropertyValueFactory<>("index"));
+        fxDataTableTime.setCellValueFactory(new PropertyValueFactory<>("time"));
+        fxDataTableAnswer.setCellValueFactory(new PropertyValueFactory<>("answer"));
+        fxDataTableCorrect.setCellValueFactory(new PropertyValueFactory<>("value"));
+
+        fxDataTable.setItems(getDataTableItems());
+    }
+
+    private ObservableList<ResultData> getDataTableItems() {
+        ObservableList<ResultData> collection = FXCollections.observableArrayList();
+        collection.addAll(result.getData());
+
+        return collection;
     }
 
     public int getResultId() {

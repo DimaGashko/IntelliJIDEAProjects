@@ -65,6 +65,7 @@ public class NumberResultService extends ResultService {
             resultData.setValue(Integer.toString(item.getNumber()));
             resultData.setAnswer(Integer.toString(item.getAnswer()));
             resultData.setTime(item.getTime());
+            resultData.setIndex(item.getDataId() + 1);
 
             return resultData;
         }).collect(Collectors.toCollection(ArrayList::new));
