@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static java.lang.Math.round;
+
 public class NumbersResultServiceDao extends Dao {
 
     public NumbersResultServiceDao(EntityManager em) {
@@ -52,7 +54,9 @@ public class NumbersResultServiceDao extends Dao {
         result.setMaxMemorizeTime(getMaxMemorizeTime(resultData));
         result.setAvgMemorizeTime(getAvgMemorizeTime(resultData));
 
-        result.setCorrectAns(getCorrectAns(resultData););
+        result.setCorrectAns(getCorrectAns(resultData));
+
+        result.setData(resultData);
 
         return result;
     }
@@ -72,7 +76,9 @@ public class NumbersResultServiceDao extends Dao {
     }
 
     private int getMemorizeTime(ArrayList<ResultData> resultData) {
-        return resultData.stream().map(ResultData::getTime).reduce(0, Integer::sum);
+        int millis = resultData.stream().map(ResultData::getTime).reduce(0, Integer::sum);
+
+        return round(millis / 1000.f);
     }
 
     private int getMinMemorizeTime(ArrayList<ResultData> resultData) {

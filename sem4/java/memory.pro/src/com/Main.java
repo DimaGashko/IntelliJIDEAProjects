@@ -35,7 +35,9 @@ public class Main extends Application {
 
         NumbersResultServiceDao dao = new NumbersResultServiceDao(em);
 
-        dao.getResultById(1);
+        var res = dao.getResultById(1);
+
+        int a = 5;
 
 
 /*        UserDao userDao = new UserDao(em);
