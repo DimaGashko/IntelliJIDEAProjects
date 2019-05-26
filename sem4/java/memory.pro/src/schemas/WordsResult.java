@@ -40,6 +40,10 @@ public class WordsResult {
 
         time /= 1000;
 
+        if (correct < resultData.size() * 0.9) {
+            return 0;
+        }
+
         float grade = correct + (resultData.size() - time / 3.f);
         return max(round(grade), 0);
     }
