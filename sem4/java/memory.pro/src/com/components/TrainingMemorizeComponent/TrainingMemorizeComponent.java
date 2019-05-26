@@ -31,7 +31,7 @@ public class TrainingMemorizeComponent extends Component {
     private LocalDateTime prevTime;
     private int prevDataIndex = -1;
 
-    private OnDone onDone;
+    private OnDoneCallback onDoneCallback;
 
     private boolean isDone = false;
 
@@ -40,11 +40,11 @@ public class TrainingMemorizeComponent extends Component {
 
     }
 
-    public void run(ArrayList<String> trainingData, String trainingType, OnDone onDone) {
+    public void run(ArrayList<String> trainingData, String trainingType, OnDoneCallback onDone) {
         this.trainingData = trainingData;
         this.dataCount.set(trainingData.size());
         this.trainingType = trainingType;
-        this.onDone = onDone;
+        this.onDoneCallback = onDone;
 
         timesToMemorize = new ArrayList<>(Collections.nCopies(dataCount.get(), -1));
         prevTime = LocalDateTime.now();
@@ -111,7 +111,7 @@ public class TrainingMemorizeComponent extends Component {
         LocalDateTime curTime = LocalDateTime.now();
         timesToMemorize.set(dataCount.get() - 1, (int) MILLIS.between(prevTime, curTime));
 
-        onDone.call(timesToMemorize);
+        onDoneCallback.call(timesToMemorize);
     }
 
     @FXML private void onNext() {
@@ -150,7 +150,7 @@ public class TrainingMemorizeComponent extends Component {
     }
 
     @FunctionalInterface
-    public interface OnDone {
+    public interface OnDoneCallback {
         void call(ArrayList<Integer> timesToMemorize);
     }
 }
