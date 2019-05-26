@@ -8,4 +8,5 @@ abstract class ResultService implements IResultService {
     public ResultService(EntityManager em) {
         this.em = em;
     }
+
 }

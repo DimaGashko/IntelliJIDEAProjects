@@ -2,10 +2,10 @@ package com;
 
 import com.services.AuthService.AuthService;
 import com.services.AuthService.AuthServiceException;
+import com.services.ResultService.NumberResultService;
 import com.services.TrainingService.NumberTrainingService;
 import com.services.TrainingService.TrainingResult;
 import com.services.TrainingService.WordsTrainingService;
-import dao.NumbersResultServiceDao;
 import dao.UserDao;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -33,9 +33,9 @@ public class Main extends Application {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
-        NumbersResultServiceDao dao = new NumbersResultServiceDao(em);
+        NumberResultService resultService = new NumberResultService(em);
 
-        var res = dao.getResultById(1);
+        var res = resultService.loadResult(1);
 
         int a = 5;
 

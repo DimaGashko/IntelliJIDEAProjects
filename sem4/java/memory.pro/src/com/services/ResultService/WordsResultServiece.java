@@ -15,7 +15,9 @@ public class WordsResultServiece extends ResultService {
     }
 
     @Override
-    public Result loadResult() {
+    public Result loadResult(int resultId) {
+
+
         return null;
     }
 
