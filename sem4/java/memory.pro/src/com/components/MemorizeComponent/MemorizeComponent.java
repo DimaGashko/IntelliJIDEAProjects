@@ -28,10 +28,8 @@ public class MemorizeComponent extends Component {
     private SimpleIntegerProperty curDataIndex = new SimpleIntegerProperty(0);
     private SimpleStringProperty curDataItem = new SimpleStringProperty("...");
 
-    private String trainingType;
-
-    private TrainingService trainingService;
     private ArrayList<String> trainingData;
+    private String trainingType;
 
     private ArrayList<Integer> timesToMemorize;
     private LocalDateTime prevTime;
@@ -45,18 +43,27 @@ public class MemorizeComponent extends Component {
 
     }
 
-    public void run(String trainingType, int dataCount, OnDone onDone) {
+    public void run(ArrayList<String> trainingData, String trainingType, OnDone onDone) {
+        this.trainingData = trainingData;
+        this.dataCount.set(trainingData.size());
         this.trainingType = trainingType;
-        this.dataCount.set(dataCount);
         this.onDone = onDone;
 
-        timesToMemorize = new ArrayList<>(Collections.nCopies(dataCount, -1));
+        timesToMemorize = new ArrayList<>(Collections.nCopies(dataCount.get(), -1));
         prevTime = LocalDateTime.now();
 
-        initTrainingServices();
-        trainingData = trainingService.start();
-
+        init();
         next();
+    }
+
+    private void init() {
+        if (trainingType.equals("Words")) {
+            fxRoot.getStyleClass().add("memorize-component--words");
+
+        } else if (trainingType.equals("Numbers")) {
+            fxRoot.getStyleClass().add("memorize-component--numbers");
+
+        }
     }
 
     private void prev() {
@@ -91,11 +98,13 @@ public class MemorizeComponent extends Component {
             fxDataGroup.getStyleClass().add(evenClassName);
         }
 
-        if (timesToMemorize.get(index) == -1) {
+        if (index > 0 && timesToMemorize.get(index - 1) == -1) {
             LocalDateTime curTime = LocalDateTime.now();
-            timesToMemorize.set(index, (int)MILLIS.between(prevTime, curTime));
+            timesToMemorize.set(index - 1, (int) MILLIS.between(prevTime, curTime));
             prevTime = curTime;
         }
+
+        System.out.println(timesToMemorize);
     }
 
     private void finishMemorize() {
@@ -105,31 +114,9 @@ public class MemorizeComponent extends Component {
         onDone.call(timesToMemorize);
     }
 
-    private void initTrainingServices() {
-        User user = getUser();
-        if (user == null) return;
-
-        var em = common.getEm();
-
-        if (trainingType.equals("Words")) {
-            trainingService = new WordsTrainingService(user, em);
-            fxRoot.getStyleClass().add("memorize-component--words");
-
-        } else if (trainingType.equals("Numbers")) {
-            trainingService = new NumberTrainingService(user, em);
-            fxRoot.getStyleClass().add("memorize-component--numbers");
-
-        } else {
-            alerts.show(Alerts.alertErr, "Wrong Training Type");
-        }
-
-        trainingService.setUp(dataCount.get());
-    }
-
     @FXML private void onNext() {
         next();
     }
-
     @FXML private void onPrev() {
         prev();
     }
@@ -138,60 +125,28 @@ public class MemorizeComponent extends Component {
         return dataCount.get();
     }
 
-    public SimpleIntegerProperty dataCountProperty() {
-        return dataCount;
-    }
-
     public void setDataCount(int dataCount) {
         this.dataCount.set(dataCount);
+    }
+
+    public SimpleIntegerProperty dataCountProperty() {
+        return dataCount;
     }
 
     public int getCurDataIndex() {
         return curDataIndex.get();
     }
 
-    public SimpleIntegerProperty curDataIndexProperty() {
-        return curDataIndex;
-    }
-
     public void setCurDataIndex(int curDataIndex) {
         this.curDataIndex.set(curDataIndex);
     }
 
+    public SimpleIntegerProperty curDataIndexProperty() {
+        return curDataIndex;
+    }
+
     public String getCurDataItem() {
         return curDataItem.get();
-    }
-
-    public SimpleStringProperty curDataItemProperty() {
-        return curDataItem;
-    }
-
-    public void setCurDataItem(String curDataItem) {
-        this.curDataItem.set(curDataItem);
-    }
-
-    public String getTrainingType() {
-        return trainingType;
-    }
-
-    public void setTrainingType(String trainingType) {
-        this.trainingType = trainingType;
-    }
-
-    public TrainingService getTrainingService() {
-        return trainingService;
-    }
-
-    public void setTrainingService(TrainingService trainingService) {
-        this.trainingService = trainingService;
-    }
-
-    public ArrayList<String> getTrainingData() {
-        return trainingData;
-    }
-
-    public void setTrainingData(ArrayList<String> trainingData) {
-        this.trainingData = trainingData;
     }
 
     @FunctionalInterface

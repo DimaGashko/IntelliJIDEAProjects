@@ -3,6 +3,9 @@ package com.screens.TrainingScreen;
 import com.components.MemorizeComponent.MemorizeComponent;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import com.services.TrainingService.NumberTrainingService;
+import com.services.TrainingService.TrainingService;
+import com.services.TrainingService.WordsTrainingService;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
@@ -13,6 +16,7 @@ import lib.Alerts.Alerts;
 import lib.Component.ComponentException;
 import lib.Screen.Screen;
 import lib.Validation.Validation;
+import schemas.User;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -26,7 +30,12 @@ public class TrainingScreen extends Screen {
     @FXML private JFXComboBox fxSelectTrainingType;
     @FXML private JFXTextField fxNumberOfData;
 
-    private boolean isMemorizeInit = false;
+    private TrainingService trainingService;
+    private ArrayList<String> trainingData;
+    private String trainingType;
+    private int dataCount;
+
+    private boolean isTrainingInit = false;
 
     private ArrayList<Integer> timesToMemorize;
 
@@ -45,27 +54,31 @@ public class TrainingScreen extends Screen {
         Validation.initValidation(fxNumberOfData);
     }
 
-    private void startTraining() {
+    private void runTraining() {
         if (!isValid()) return;
 
-        if (isMemorizeInit) {
+        if (isTrainingInit) {
             var ans = alerts.ask("You're already training. Do you want restart it?");
             if (!ans) return;
         }
 
-        String trainingType = ((Label)fxSelectTrainingType.getValue()).getText();
-        int dataCount = Integer.parseInt(fxNumberOfData.getText());
+        isTrainingInit = true;
+
+        trainingType = ((Label)fxSelectTrainingType.getValue()).getText();
+        dataCount = Integer.parseInt(fxNumberOfData.getText());
 
         if (dataCount < 1 || dataCount > 10000) {
             alerts.show(Alerts.alertErr, "Check your data");
             return;
         }
 
-        runMemorize(trainingType, dataCount);
-        isMemorizeInit = true;
+        initTrainingServices();
+        trainingData = trainingService.start();
+
+        runMemorize();
     }
 
-    private void runMemorize(String trainingType, int dataCount) {
+    private void runMemorize() {
         MemorizeComponent component;
         Parent root;
 
@@ -82,7 +95,7 @@ public class TrainingScreen extends Screen {
         fxMemorizeRoot.getChildren().clear();
         fxMemorizeRoot.setCenter(root);
 
-        component.run(trainingType, dataCount, (timesToMemorize) -> {
+        component.run(trainingData, trainingType, (timesToMemorize) -> {
            this.timesToMemorize = timesToMemorize;
 
            runRemember();
@@ -93,6 +106,30 @@ public class TrainingScreen extends Screen {
         System.out.println(timesToMemorize);
     }
 
+    private void initTrainingServices() {
+        User user = getUser();
+
+        if (user == null) {
+            alerts.show(Alerts.alertErr, "Internal Error");
+            return;
+        }
+
+        var em = common.getEm();
+
+        if (trainingType.equals("Words")) {
+            trainingService = new WordsTrainingService(user, em);
+
+        } else if (trainingType.equals("Numbers")) {
+            trainingService = new NumberTrainingService(user, em);
+
+        } else {
+            alerts.show(Alerts.alertErr, "Wrong Training Type");
+            return;
+        }
+
+        trainingService.setUp(dataCount);
+    }
+
     private boolean isValid() {
         boolean type = fxSelectTrainingType.validate();
         boolean dataCount = fxNumberOfData.validate();
@@ -101,6 +138,6 @@ public class TrainingScreen extends Screen {
     }
 
     public void onStart() {
-        startTraining();
+        runTraining();
     }
 }

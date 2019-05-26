@@ -63,40 +63,32 @@
     <splitter split-orientation="horizontal" split-proportion="0.67045456">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="210">
-                  <caret line="104" column="37" lean-forward="true" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
+                <state relative-caret-position="195">
+                  <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#3634#3635#0" expanded="true" />
-                    <element signature="e#3691#3692#0" expanded="true" />
-                    <element signature="e#3762#3763#0" expanded="true" />
-                    <element signature="e#3850#3851#0" expanded="true" />
-                    <element signature="e#3942#3943#0" expanded="true" />
-                    <element signature="e#4019#4020#0" expanded="true" />
-                    <element signature="e#4113#4114#0" expanded="true" />
-                    <element signature="e#4217#4218#0" expanded="true" />
-                    <element signature="e#4295#4296#0" expanded="true" />
-                    <element signature="e#4386#4387#0" expanded="true" />
-                    <element signature="e#4489#4490#0" expanded="true" />
-                    <element signature="e#4563#4564#0" expanded="true" />
-                    <element signature="e#4667#4668#0" expanded="true" />
-                    <element signature="e#4756#4757#0" expanded="true" />
-                    <element signature="e#4881#4882#0" expanded="true" />
-                    <element signature="e#4966#4967#0" expanded="true" />
-                    <element signature="e#5081#5082#0" expanded="true" />
+                    <element signature="e#3280#3281#0" expanded="true" />
+                    <element signature="e#3336#3337#0" expanded="true" />
+                    <element signature="e#3407#3408#0" expanded="true" />
+                    <element signature="e#3499#3500#0" expanded="true" />
+                    <element signature="e#3587#3588#0" expanded="true" />
+                    <element signature="e#3664#3665#0" expanded="true" />
+                    <element signature="e#3768#3769#0" expanded="true" />
+                    <element signature="e#3862#3863#0" expanded="true" />
+                    <element signature="e#3940#3941#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="100">
-                  <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+                <state relative-caret-position="90">
+                  <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
                   <folding>
                     <element signature="e#2572#2573#0" expanded="true" />
                     <element signature="e#2598#2599#0" expanded="true" />
@@ -145,6 +137,7 @@
       <find>result</find>
       <find>pro</find>
       <find>user</find>
+      <find>system</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -202,8 +195,8 @@
         <option value="$PROJECT_DIR$/src/com/components/HeaderComponent/HeaderComponent.fxml" />
         <option value="$PROJECT_DIR$/src/com/styles/components/_sidePanel.sass" />
         <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.fxml" />
-        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" />
         <option value="$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java" />
+        <option value="$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java" />
       </list>
     </option>
   </component>
@@ -382,12 +375,12 @@
       <workItem from="1558461272904" duration="5701000" />
       <workItem from="1558472363503" duration="62151000" />
       <workItem from="1558561743839" duration="59528000" />
-      <workItem from="1558781377417" duration="42382000" />
+      <workItem from="1558781377417" duration="45699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242682000" />
+    <option name="totallyTimeSpent" value="245999000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -400,6 +393,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.19924243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -915,42 +909,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="104" column="37" lean-forward="true" selection-start-line="104" selection-start-column="37" selection-end-line="104" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3634#3635#0" expanded="true" />
-            <element signature="e#3691#3692#0" expanded="true" />
-            <element signature="e#3762#3763#0" expanded="true" />
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#3942#3943#0" expanded="true" />
-            <element signature="e#4019#4020#0" expanded="true" />
-            <element signature="e#4113#4114#0" expanded="true" />
-            <element signature="e#4217#4218#0" expanded="true" />
-            <element signature="e#4295#4296#0" expanded="true" />
-            <element signature="e#4386#4387#0" expanded="true" />
-            <element signature="e#4489#4490#0" expanded="true" />
-            <element signature="e#4563#4564#0" expanded="true" />
-            <element signature="e#4667#4668#0" expanded="true" />
-            <element signature="e#4756#4757#0" expanded="true" />
-            <element signature="e#4881#4882#0" expanded="true" />
-            <element signature="e#4966#4967#0" expanded="true" />
-            <element signature="e#5081#5082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/screens/TrainingScreen/TrainingScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="89" column="5" lean-forward="true" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+        <state relative-caret-position="90">
+          <caret line="105" column="27" selection-start-line="105" selection-start-column="27" selection-end-line="105" selection-end-column="27" />
           <folding>
             <element signature="e#2572#2573#0" expanded="true" />
             <element signature="e#2598#2599#0" expanded="true" />
             <element signature="e#2562#2563#0" expanded="true" />
             <element signature="e#2593#2594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/components/MemorizeComponent/MemorizeComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="102" column="41" selection-start-line="102" selection-start-column="41" selection-end-line="102" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3280#3281#0" expanded="true" />
+            <element signature="e#3336#3337#0" expanded="true" />
+            <element signature="e#3407#3408#0" expanded="true" />
+            <element signature="e#3499#3500#0" expanded="true" />
+            <element signature="e#3587#3588#0" expanded="true" />
+            <element signature="e#3664#3665#0" expanded="true" />
+            <element signature="e#3768#3769#0" expanded="true" />
+            <element signature="e#3862#3863#0" expanded="true" />
+            <element signature="e#3940#3941#0" expanded="true" />
           </folding>
         </state>
       </provider>
