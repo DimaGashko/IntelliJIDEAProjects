@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 
 public class ResultComponent extends Component {
 
-    @FXML private TableView fxDataTalble;
+    @FXML private TableView fxDataTable;
     @FXML private TableColumn fxDataTableIndex;
     @FXML private TableColumn fxDataTableTime;
     @FXML private TableColumn fxDataTableAnswer;

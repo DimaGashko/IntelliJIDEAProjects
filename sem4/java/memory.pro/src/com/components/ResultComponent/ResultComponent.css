@@ -156,10 +156,11 @@
 
 .result-component {
   -fx-padding: 15px;
+  -fx-min-width: 500px;
 }
 
 .result__grid .label {
-  -fx-padding: 5px 15px;
+  -fx-padding: 2px 10px;
 }
 
 /*# sourceMappingURL=ResultComponent.css.map */

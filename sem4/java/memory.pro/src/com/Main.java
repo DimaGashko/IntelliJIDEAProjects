@@ -14,70 +14,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-
-/*
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
-        EntityManager em = factory.createEntityManager();
-
-        var resultService = new WordsResultService(em);
-        //var resultService = new NumberResultService(em);
-
-        var res = resultService.loadResult(2);
-
-        int a = 1;*/
-
-
-/*        UserDao userDao = new UserDao(em);
-
-        AuthService authService = new AuthService(new UserDao(em));
-*/
-       /* User user = new User();
-
-        user.setFirstName("Jon");
-        user.setLastName("Kotlin");
-        user.setUsername("Kotlin");
-        user.setEmail("kotlin@gmail.com");
-        user.setPassword("kotlin");
-
-        try {
-            authService.signup(user);
-        } catch (AuthServiceException e) {
-
-        }
-*/
-      /*  User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
-        WordsTrainingService wordsTrainingService = new WordsTrainingService(u, em);
-
-        wordsTrainingService.setUp(500);
-        var words = wordsTrainingService.start();
-
-        var res = words.stream().map((word) -> new TrainingResult(word, word.length()))
-                .collect(Collectors.toCollection(ArrayList::new));
-
-        res.get(0).setValue("wrong1");
-        res.get(2).setValue("wrong3");
-        res.get(4).setValue("wrong5");
-        res.get(6).setValue("wrong7");
-
-        wordsTrainingService.finish(res);*///
-/*
-        User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
-        NumberTrainingService numberTrainingService = new NumberTrainingService(u, em);
-
-        numberTrainingService.setUp(100);
-        var data = numberTrainingService.start();
-
-        var res = data.stream().map((num) -> new TrainingResult(num, 3))
-                .collect(Collectors.toCollection(ArrayList::new));
-
-        res.get(0).setValue("wrong1");
-        res.get(2).setValue("555");
-        res.get(4).setValue("36");
-        res.get(6).setValue("wrong7");
-
-        numberTrainingService.finish(res);
-
-        System.out.println(data);*/
    }
 
     @Override
@@ -90,9 +26,12 @@ public class Main extends Application {
         primaryStage.setTitle("Memory.pro");
         setIcon("/img/logo.png");
 
-        //primaryStage.setMaximized(true);
-        primaryStage.setMinWidth(250);
-        primaryStage.setMinHeight(250);
+        primaryStage.setMaximized(true);
+        primaryStage.setMinWidth(500);
+        primaryStage.setMinHeight(400);
+
+        primaryStage.setWidth(800);
+        primaryStage.setHeight(600);
 
         primaryStage.setScene(scene);
         primaryStage.show();
