@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="fxRoot" xmlns:fx="http://javafx.com/fxml/1" fillWidth="false" focusTraversable="true"
+      styleClass="memorize-component" stylesheets="@TrainingRememberComponent.css" xmlns="http://javafx.com/javafx/11.0.1"
+      fx:controller="com.components.TrainingRememberComponent.TrainingRememberComponent">
+
+    <VBox styleClass="memorize__group-container">
+
+
+
+    </VBox>
+</VBox>
