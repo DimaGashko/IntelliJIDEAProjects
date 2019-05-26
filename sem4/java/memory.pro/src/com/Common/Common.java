@@ -47,6 +47,7 @@ public class Common {
         components.put("header", "/com/components/HeaderComponent/HeaderComponent.fxml");
         components.put("login", "/com/components/LoginComponent/LoginComponent.fxml");
         components.put("signup", "/com/components/SignupComponent/SignupComponent.fxml");
+        components.put("setup", "/com/components/TrainingSetupComponent/TrainingSetupComponent.fxml");
         components.put("memorize", "/com/components/TrainingMemorizeComponent/TrainingMemorizeComponent.fxml");
     }
 

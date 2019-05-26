@@ -1,8 +1,7 @@
 package com.screens.TrainingScreen;
 
 import com.components.TrainingMemorizeComponent.TrainingMemorizeComponent;
-import com.jfoenix.controls.JFXComboBox;
-import com.jfoenix.controls.JFXTextField;
+import com.components.TrainingSetupComponent.TrainingSetupComponent;
 import com.services.TrainingService.NumberTrainingService;
 import com.services.TrainingService.TrainingService;
 import com.services.TrainingService.WordsTrainingService;
@@ -10,10 +9,10 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import lib.Alerts.Alerts;
 import lib.Component.ComponentException;
 import lib.Screen.Screen;
-import lib.Validation.Validation;
 import schemas.User;
 
 import java.net.URL;
@@ -22,10 +21,8 @@ import java.util.ResourceBundle;
 
 public class TrainingScreen extends Screen {
 
+    @FXML private VBox fxSetupRoot;
     @FXML private BorderPane fxMemorizeRoot;
-
-    @FXML private JFXComboBox fxSelectTrainingType;
-    @FXML private JFXTextField fxNumberOfData;
 
     private TrainingService trainingService;
     private ArrayList<String> trainingData;
@@ -38,7 +35,7 @@ public class TrainingScreen extends Screen {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        initValidation();
+        initSetup();
     }
 
     @Override
@@ -46,36 +43,44 @@ public class TrainingScreen extends Screen {
 
     }
 
-    private void initValidation() {
-        Validation.initValidation(fxSelectTrainingType);
-        Validation.initValidation(fxNumberOfData);
-    }
+    private void initSetup() {
+        TrainingSetupComponent setupComponent;
+        Parent setupRoot;
 
-    private void runTraining() {
-        if (!isValid()) return;
-
-        if (isTrainingInit) {
-            var ans = alerts.ask("You're already training. Do you want restart it?");
-            if (!ans) return;
-        }
-
-        isTrainingInit = true;
-
-        trainingType = ((Label)fxSelectTrainingType.getValue()).getText();
-        dataCount = Integer.parseInt(fxNumberOfData.getText());
-
-        if (dataCount < 1 || dataCount > 10000) {
-            alerts.show(Alerts.alertErr, "Check your data");
+        try {
+            var res = loadComponent("setup");
+            setupRoot = res.getKey();
+            setupComponent = (TrainingSetupComponent) res.getValue();
+        } catch (ComponentException e) {
+            alerts.show(Alerts.alertErr, "Cant'l load Training Setup Component");
+            e.printStackTrace();
             return;
         }
 
-        initTrainingServices();
-        trainingData = trainingService.start();
+        fxSetupRoot.getChildren().clear();
+        fxSetupRoot.getChildren().add(setupRoot);
+
+        setupComponent.run((trainingType, dataCount) -> {
+            if (isTrainingInit) {
+                var ans = alerts.ask("You're already training. Do you want restart it?");
+                if (!ans) return;
+            }
+
+            isTrainingInit = true;
+
+            this.trainingType = trainingType;
+            this.dataCount = dataCount;
+
+            runMemorize();
+        });
 
         runMemorize();
     }
 
     private void runMemorize() {
+        initTrainingServices();
+        trainingData = trainingService.start();
+
         TrainingMemorizeComponent component;
         Parent root;
 
@@ -127,14 +132,4 @@ public class TrainingScreen extends Screen {
         trainingService.setUp(dataCount);
     }
 
-    private boolean isValid() {
-        boolean type = fxSelectTrainingType.validate();
-        boolean dataCount = fxNumberOfData.validate();
-
-        return type && dataCount;
-    }
-
-    public void onStart() {
-        runTraining();
-    }
 }

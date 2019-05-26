@@ -16,7 +16,7 @@ public class TrainingSetupComponent extends Component {
     @FXML private JFXComboBox fxSelectTrainingType;
     @FXML private JFXTextField fxNumberOfData;
 
-    OnDoneCallback onDoneCallback;
+    private OnDoneCallback onDoneCallback;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
