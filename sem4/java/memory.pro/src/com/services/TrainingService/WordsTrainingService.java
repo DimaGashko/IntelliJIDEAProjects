@@ -1,5 +1,6 @@
 package com.services.TrainingService;
 
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,15 +17,15 @@ public class WordsTrainingService extends TrainingService {
     private ArrayList<Word> trainingWords;
 
     private WordDao wordDao;
-    private WordsResultDataDao wordsResultDataDao;
-    private WordsResultDao wordsResultDao;
+    private WordsResultDataDao resultDataDao;
+    private WordsResultDao resultDao;
 
     public WordsTrainingService(User user, EntityManager em) {
         super(user, em);
 
         this.wordDao = new WordDao(em);
-        this.wordsResultDataDao = new WordsResultDataDao(em);
-        this.wordsResultDao = new WordsResultDao(em);
+        this.resultDataDao = new WordsResultDataDao(em);
+        this.resultDao = new WordsResultDao(em);
     }
 
     @Override
@@ -38,41 +39,49 @@ public class WordsTrainingService extends TrainingService {
     }
 
     @Override
-    public int finish(ArrayList<TrainingResult> answerData) {
+    public int finish(TrainingResult answerData) {
         WordsResult result = new WordsResult();
-        ArrayList<WordsResultData> wordsResultData = getResultData(result, answerData);
 
-        int grade = WordsResult.calculateGrade(wordsResultData);
+        ArrayList<WordsResultData> resultData = getResultData(answerData, result);
+        fillResult(answerData, resultData, result);
 
         result.setDateTime(startTime);
         result.setUser(user);
-        result.setGrade(grade);
 
-        wordsResultDao.add(result);
-        wordsResultDataDao.addAll(wordsResultData);
+        resultDao.add(result);
+        resultDataDao.addAll(resultData);
 
         return result.getId();
     }
 
-    private ArrayList<WordsResultData> getResultData(WordsResult result, ArrayList<TrainingResult> answerData) {
+    private void fillResult(TrainingResult trainingResult, ArrayList<WordsResultData> resultData, WordsResult result) {
+        int grade = WordsResult.calculateGrade(resultData);
 
-        var res = answerData.stream().map((userAnswer) -> {
-            WordsResultData resultData = new WordsResultData();
+        result.setUser(user);
+        result.setDateTime(startTime);
+        result.setRememberTime(trainingResult.getTimeToRemember());
+        result.setGrade(grade);
+    }
 
-            resultData.setWordsResult(result);
-            resultData.setAnswer(userAnswer.getValue());
-            resultData.setTime(userAnswer.getTime());
+    private ArrayList<WordsResultData> getResultData(TrainingResult trainingResult, WordsResult result) {
+        ArrayList<WordsResultData> resultData = new ArrayList<>(dataCount);
 
-            return resultData;
-        }).collect(Collectors.toCollection(ArrayList::new));
+        var answers = trainingResult.getAnswers();
+        var memorizeTimes = trainingResult.getTimesToMemorize();
 
-        for (int i = 0; i < answerData.size(); i++) {
-            res.get(i).setWord(trainingWords.get(i));
-            res.get(i).setDataId(i);
+        for (int i = 0; i < dataCount; i++) {
+            WordsResultData next = new WordsResultData();
+
+            next.setDataId(i);
+            next.setWordsResult(result);
+            next.setWord(trainingWords.get(i));
+            next.setAnswer(answers.get(i));
+            next.setTime(memorizeTimes.get(i));
+
+            resultData.add(next);
         }
 
-        return res;
-
+        return resultData;
     }
 
     private ArrayList<Word> loadWords() {

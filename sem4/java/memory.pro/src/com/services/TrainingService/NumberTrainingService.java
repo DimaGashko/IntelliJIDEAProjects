@@ -15,14 +15,14 @@ import java.util.stream.Collectors;
 public class NumberTrainingService extends TrainingService {
     private ArrayList<Integer> trainingNumbers;
 
-    private NumbersResultDataDao numbersResultDataDao;
-    private NumbersResultDao numbersResultDao;
+    private NumbersResultDataDao resultDataDao;
+    private NumbersResultDao resultDao;
 
     public NumberTrainingService(User user, EntityManager em) {
         super(user, em);
 
-        this.numbersResultDataDao = new NumbersResultDataDao(em);
-        this.numbersResultDao = new NumbersResultDao(em);
+        this.resultDataDao = new NumbersResultDataDao(em);
+        this.resultDao = new NumbersResultDao(em);
     }
 
     @Override
@@ -36,48 +36,62 @@ public class NumberTrainingService extends TrainingService {
     }
 
     @Override
-    public int finish(ArrayList<TrainingResult> answerData) {
+    public int finish(TrainingResult answerData) {
         NumbersResult result = new NumbersResult();
-        ArrayList<NumbersResultData> numbersResultData = getResultData(result, answerData);
 
-        int grade = NumbersResult.calculateGrade(numbersResultData);
+        ArrayList<NumbersResultData> resultData = getResultData(answerData, result);
+        fillResult(answerData, resultData, result);
 
         result.setDateTime(startTime);
         result.setUser(user);
-        result.setGrade(grade);
 
-        numbersResultDao.add(result);
-        numbersResultDataDao.addAll(numbersResultData);
+        resultDao.add(result);
+        resultDataDao.addAll(resultData);
 
         return result.getId();
     }
 
-    private ArrayList<NumbersResultData> getResultData(NumbersResult result, ArrayList<TrainingResult> answerData) {
+    private void fillResult(TrainingResult trainingResult, ArrayList<NumbersResultData> resultData, NumbersResult result) {
+        int grade = NumbersResult.calculateGrade(resultData);
 
-        var res = answerData.stream().map((userAnswer) -> {
-            NumbersResultData resultData = new NumbersResultData();
+        result.setUser(user);
+        result.setDateTime(startTime);
+        result.setRememberTime(trainingResult.getTimeToRemember());
+        result.setGrade(grade);
+    }
 
-            int answer;
+    private ArrayList<NumbersResultData> getResultData(TrainingResult trainingResult, NumbersResult result) {
+        ArrayList<NumbersResultData> resultData = new ArrayList<>(dataCount);
 
-            try {
-                answer = Integer.parseInt(userAnswer.getValue());
-            } catch (NumberFormatException e) {
-                answer = -1;
-            }
+        var answers = trainingResult.getAnswers();
+        var memorizeTimes = trainingResult.getTimesToMemorize();
 
-            resultData.setNumbersResult(result);
-            resultData.setAnswer(answer);
-            resultData.setTime(userAnswer.getTime());
+        for (int i = 0; i < dataCount; i++) {
+            NumbersResultData next = new NumbersResultData();
+            int answer = parseAnswer((answers.get(i)));
 
-            return resultData;
-        }).collect(Collectors.toCollection(ArrayList::new));
+            next.setDataId(i);
+            next.setNumbersResult(result);
+            next.setNumber(trainingNumbers.get(i));
+            next.setAnswer(answer);
+            next.setTime(memorizeTimes.get(i));
 
-        for (int i = 0; i < answerData.size(); i++) {
-            res.get(i).setNumber(trainingNumbers.get(i));
-            res.get(i).setDataId(i);
+            resultData.add(next);
         }
 
-        return res;
+        return resultData;
+    }
+
+    private int parseAnswer(String strAns) {
+        int answer;
+
+        try {
+            answer = Integer.parseInt(strAns);
+        } catch (NumberFormatException e) {
+            answer = -1;
+        }
+
+        return answer;
     }
 
     private ArrayList<Integer> loadWords() {
