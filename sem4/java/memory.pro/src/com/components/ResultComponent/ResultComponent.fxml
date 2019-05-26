@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1"
-            fx:controller="com.components.ResultComponent.ResultComponent">
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" styleClass="result-component" stylesheets="@ResultComponent.css"
+            xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.ResultComponent.ResultComponent">
     <center>
         <AnchorPane BorderPane.alignment="CENTER">
             <children>
@@ -25,37 +24,41 @@
         </AnchorPane>
     </center>
     <top>
-        <GridPane BorderPane.alignment="CENTER">
-            <Label text="Result id:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-            <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-            <Label text="Grade:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-            <Label text="Number of Data:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-            <Label text="Training Type:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-            <Label text="Training Date:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
-            <Label text="Time to Memorize:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
-            <Label text="Time to Remember" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
-            <Label text="Min. memorize time:" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
-            <Label text="Max. memorize time" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
-            <Label text="Avg. memorize time" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
-            <Label text="Correct:" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
-            <Label text="Wrong:" GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+        <GridPane alignment="TOP_LEFT" gridLinesVisible="true" styleClass="result__grid" BorderPane.alignment="CENTER">
 
-            <Label text="${controller.resultId}" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-            <Label text="${controller.username}" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-            <Label text="${controller.grade}" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-            <Label text="${controller.dataCount}" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-            <Label text="${controller.trainingType}" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-            <Label text="${controller.startTime}" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-            <Label text="${controller.memorizeTime}" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
-            <Label text="${controller.rememberTime}" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
-            <Label text="${controller.minMemorizeTime + 'ms'}" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
-            <Label text="${controller.maxMemorizeTime + 'ms'}" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
-            <Label text="${controller.avgMemorizeTime + 'ms'}" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
-            <Label text="${controller.correct}" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
-            <Label text="${controller.errors}" GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+            <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <Label text="Training Type:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label text="Number of Data:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Label text="Grade:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Label text="Training Date:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <Label text="Time to Memorize:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+            <Label text="Time to Remember" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+            <Label text="Min. memorize time:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+            <Label text="Max. memorize time" GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+            <Label text="Avg. memorize time" GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+            <Label text="Correct:" GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+            <Label text="Wrong:" GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+
+            <Label text="${controller.username}" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            <Label text="${controller.trainingType}" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="${controller.dataCount}" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="${controller.grade}" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="${controller.startTime}" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            <Label text="${controller.memorizeTime + 's'}" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            <Label text="${controller.rememberTime + 's'}" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+            <Label text="${controller.minMemorizeTime + 'ms'}" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+            <Label text="${controller.maxMemorizeTime + 'ms'}" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+            <Label text="${controller.avgMemorizeTime + 'ms'}" GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+            <Label text="${controller.correct}" GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+            <Label text="${controller.errors}" GridPane.columnIndex="1" GridPane.rowIndex="11"/>
             <BorderPane.margin>
                 <Insets bottom="25.0"/>
             </BorderPane.margin>
+            <columnConstraints>
+                <ColumnConstraints/>
+                <ColumnConstraints halignment="RIGHT"/>
+            </columnConstraints>
+
         </GridPane>
     </top>
 </BorderPane>

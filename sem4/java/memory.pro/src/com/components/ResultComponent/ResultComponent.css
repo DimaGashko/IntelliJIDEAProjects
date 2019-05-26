@@ -158,4 +158,8 @@
   -fx-padding: 15px;
 }
 
+.result__grid .label {
+  -fx-padding: 5px 15px;
+}
+
 /*# sourceMappingURL=ResultComponent.css.map */
