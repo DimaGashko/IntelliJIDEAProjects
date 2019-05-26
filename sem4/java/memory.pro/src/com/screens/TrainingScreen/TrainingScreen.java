@@ -1,5 +1,6 @@
 package com.screens.TrainingScreen;
 
+import com.components.ResultComponent.ResultComponent;
 import com.components.TrainingMemorizeComponent.TrainingMemorizeComponent;
 import com.components.TrainingRememberComponent.TrainingRememberComponent;
 import com.components.TrainingSetupComponent.TrainingSetupComponent;
@@ -9,6 +10,7 @@ import com.services.TrainingService.TrainingService;
 import com.services.TrainingService.WordsTrainingService;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
 import javafx.scene.layout.BorderPane;
 import lib.Alerts.Alerts;
 import lib.Component.ComponentException;
@@ -24,13 +26,15 @@ public class TrainingScreen extends Screen {
     @FXML private BorderPane fxLeftContainer;
     @FXML private BorderPane fxCenterContainer;
 
-    private Parent setupComponentRoot;
-    private Parent memorizeComponentRoot;
-    private Parent rememberComponentRoot;
-
     private TrainingSetupComponent setupComponent;
     private TrainingMemorizeComponent memorizeComponent;
     private TrainingRememberComponent rememberComponent;
+    private ResultComponent resultComponent;
+
+    private Parent setupComponentRoot;
+    private Parent memorizeComponentRoot;
+    private Parent rememberComponentRoot;
+    private Parent resultComponentRoot;
 
     private TrainingService trainingService;
     private ArrayList<String> trainingData;
@@ -106,7 +110,7 @@ public class TrainingScreen extends Screen {
         TrainingResult result = getResult();
         int resultId = trainingService.finish(result);
 
-        System.out.println("Result id: " + resultId);
+        resultComponent.run(trainingType, resultId);
     }
 
     private TrainingResult getResult() {
@@ -149,14 +153,17 @@ public class TrainingScreen extends Screen {
             var setupPair = loadComponent("setup");
             var memorizePair = loadComponent("memorize");
             var rememberPair = loadComponent("remember");
-
-            setupComponentRoot = setupPair.getKey();
-            memorizeComponentRoot = memorizePair.getKey();
-            rememberComponentRoot = rememberPair.getKey();
+            var resultPair = loadComponent("result");
 
             setupComponent = (TrainingSetupComponent) setupPair.getValue();
             memorizeComponent = (TrainingMemorizeComponent) memorizePair.getValue();
             rememberComponent = (TrainingRememberComponent) rememberPair.getValue();
+            resultComponent = (ResultComponent) resultPair.getValue();
+
+            setupComponentRoot = setupPair.getKey();
+            memorizeComponentRoot = memorizePair.getKey();
+            rememberComponentRoot = rememberPair.getKey();
+            resultComponentRoot = resultPair.getKey();
 
         } catch (ComponentException e) {
             alerts.show(Alerts.alertErr, "Cant'l load Training Components");

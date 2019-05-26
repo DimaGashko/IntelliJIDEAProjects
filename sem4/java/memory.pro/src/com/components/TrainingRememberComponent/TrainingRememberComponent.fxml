@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.VBox?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1"
+      stylesheets="@TrainingRememberComponent.css" focusTraversable="true"
+      fx:controller="com.components.TrainingRememberComponent.TrainingRememberComponent"
+      styleClass="remember-component">
 
-<ScrollPane fitToWidth="true" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.components.TrainingRememberComponent.TrainingRememberComponent">
-   <content>
-      <VBox focusTraversable="true" styleClass="remember-component" stylesheets="@TrainingRememberComponent.css">
-           <FlowPane fx:id="fxInputsContainer" styleClass="remember-component__inputs" />
-          <VBox styleClass="remember-component__controls">
-              <JFXButton onAction="#onDone" styleClass="remember-component__button" text="Finish">
-                  <graphic>
-                      <FontIcon iconLiteral="fa-flag-checkered" />
-                  </graphic>
-              </JFXButton>
-          </VBox>
-      </VBox>
-   </content>
-</ScrollPane>
+    <VBox>
+        <FlowPane fx:id="fxInputsContainer" styleClass="remember-component__inputs"/>
+    </VBox>
+    <VBox styleClass="remember-component__controls">
+        <JFXButton onAction="#onDone" styleClass="remember-component__button" text="Finish">
+            <graphic>
+                <FontIcon iconLiteral="fa-flag-checkered"/>
+            </graphic>
+        </JFXButton>
+    </VBox>
+</VBox>

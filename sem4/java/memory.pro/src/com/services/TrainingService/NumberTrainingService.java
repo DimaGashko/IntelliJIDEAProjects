@@ -45,10 +45,6 @@ public class NumberTrainingService extends TrainingService {
         result.setDateTime(startTime);
         result.setUser(user);
 
-        if (result.getGrade() <= 0) {
-            return -1;
-        }
-
         resultDao.add(result);
         resultDataDao.addAll(resultData);
 
