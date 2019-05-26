@@ -21,9 +21,12 @@ public class Result {
     private int avgMemorizeTime;
 
     private int correctAns;
-    private int errors;
 
     private ArrayList<ResultData> data;
+
+    public int getErrors() {
+        return dataCount - correctAns;
+    }
 
     public int getId() {
         return id;
@@ -129,14 +132,6 @@ public class Result {
 
     public void setMaxMemorizeTime(int maxMemorizeTime) {
         this.maxMemorizeTime = maxMemorizeTime;
-    }
-
-    public int getErrors() {
-        return errors;
-    }
-
-    public void setErrors(int errors) {
-        this.errors = errors;
     }
 
     public ArrayList<ResultData> getData() {

@@ -5,6 +5,7 @@ import com.services.AuthService.AuthServiceException;
 import com.services.TrainingService.NumberTrainingService;
 import com.services.TrainingService.TrainingResult;
 import com.services.TrainingService.WordsTrainingService;
+import dao.NumbersResultServiceDao;
 import dao.UserDao;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -26,11 +27,18 @@ public class Main extends Application {
     Stage stage;
 
     public static void main(String[] args) {
-        launch(args);
-        /*EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
+        //launch(args);
+
+
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("MyPU");
         EntityManager em = factory.createEntityManager();
 
-        UserDao userDao = new UserDao(em);
+        NumbersResultServiceDao dao = new NumbersResultServiceDao(em);
+
+        dao.getResultById(1);
+
+
+/*        UserDao userDao = new UserDao(em);
 
         AuthService authService = new AuthService(new UserDao(em));
 */
@@ -62,7 +70,7 @@ public class Main extends Application {
         res.get(4).setValue("wrong5");
         res.get(6).setValue("wrong7");
 
-        wordsTrainingService.finish(res);*/
+        wordsTrainingService.finish(res);*///
 /*
         User u = userDao.loadByUsername("Kotlin").orElseThrow(null);
         NumberTrainingService numberTrainingService = new NumberTrainingService(u, em);
