@@ -1,4 +1,4 @@
-package com.components.MemorizeComponent;
+package com.components.TrainingMemorizeComponent;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -14,7 +14,7 @@ import java.util.ResourceBundle;
 
 import static java.time.temporal.ChronoUnit.MILLIS;
 
-public class MemorizeComponent extends Component {
+public class TrainingMemorizeComponent extends Component {
 
     @FXML VBox fxRoot;
     @FXML VBox fxDataGroup;
@@ -101,7 +101,6 @@ public class MemorizeComponent extends Component {
             prevTime = curTime;
         }
 
-        System.out.println(timesToMemorize);
         prevDataIndex = index;
     }
 

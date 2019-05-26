@@ -1,6 +1,6 @@
 package com.screens.TrainingScreen;
 
-import com.components.MemorizeComponent.MemorizeComponent;
+import com.components.TrainingMemorizeComponent.TrainingMemorizeComponent;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
 import com.services.TrainingService.NumberTrainingService;
@@ -10,8 +10,6 @@ import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
-import javafx.util.Pair;
 import lib.Alerts.Alerts;
 import lib.Component.ComponentException;
 import lib.Screen.Screen;
@@ -20,7 +18,6 @@ import schemas.User;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class TrainingScreen extends Screen {
@@ -79,13 +76,13 @@ public class TrainingScreen extends Screen {
     }
 
     private void runMemorize() {
-        MemorizeComponent component;
+        TrainingMemorizeComponent component;
         Parent root;
 
         try {
             var res = loadComponent("memorize");
             root = res.getKey();
-            component = (MemorizeComponent) res.getValue();
+            component = (TrainingMemorizeComponent) res.getValue();
         } catch (ComponentException e) {
             alerts.show(Alerts.alertErr, "Cant'l load Memorize Component");
             e.printStackTrace();

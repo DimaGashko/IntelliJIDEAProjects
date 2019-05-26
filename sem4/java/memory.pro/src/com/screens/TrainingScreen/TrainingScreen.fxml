@@ -12,6 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
+<?import java.lang.String?>
 <BorderPane styleClass="training-screen" stylesheets="@TrainingScreen.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.screens.TrainingScreen.TrainingScreen">
     <left>
         <VBox styleClass="setup, side-panel">
