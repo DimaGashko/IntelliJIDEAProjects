@@ -54,7 +54,11 @@ public class TrainingScreen extends Screen {
 
     @Override
     public void showed() {
-        runSetup();
+        //runSetup();
+        fxCenterContainer.getChildren().clear();
+        fxCenterContainer.setCenter(resultComponentRoot);
+
+        resultComponent.run("Numbers", 1);
     }
 
     private void runSetup() {
@@ -109,6 +113,9 @@ public class TrainingScreen extends Screen {
     private void finishTraining() {
         TrainingResult result = getResult();
         int resultId = trainingService.finish(result);
+
+        fxCenterContainer.getChildren().clear();
+        fxCenterContainer.setCenter(resultComponentRoot);
 
         resultComponent.run(trainingType, resultId);
     }

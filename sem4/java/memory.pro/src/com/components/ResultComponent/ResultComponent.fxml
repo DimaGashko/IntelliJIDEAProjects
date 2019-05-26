@@ -1,10 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" styleClass="result-component" stylesheets="@ResultComponent.css"
+      xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.components.ResultComponent.ResultComponent">
+    <children>
+        <HBox>
+            <children>
+                <VBox>
+                    <children>
+                        <Label text="Result"/>
+                        <Label text="153"/>
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <GridPane>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="0" text="Result id:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="Username:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="2" text="Grade:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="3" text="Number of Data:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="4" text="Training Type:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="5" text="Training Date:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="6" text="Time to Memorize:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="7" text="Time to Remember"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="8" text="Min. memorize time:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="9" text="Max. memorize time"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="10" text="Avg. memorize time"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="10" text="Correct:"/>
+                            <Label GridPane.columnIndex="0" GridPane.rowIndex="12" text="Wrong:"/>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" styleClass="result-component" xmlns="http://javafx.com/javafx/11.0.1"
-      fx:controller="com.components.ResultComponent.ResultComponent"
-      stylesheets="@ResultComponent.css">
-    <Label text="Results"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="0" text="${controller.resultId}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="1" text="${controller.username}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="2" text="${controller.grade}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="3" text="${controller.dataCount}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="4" text="${controller.trainingType}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="5" text="${controller.startTime}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="6" text="${controller.memorizeTime}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="7" text="${controller.rememberTime}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="8" text="${controller.minMemorizeTime}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="9" text="${controller.maxMemorizeTime}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="10" text="${controller.avgMemorizeTime}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="11" text="${controller.correct}"/>
+                            <Label GridPane.columnIndex="1" GridPane.rowIndex="12" text="${controller.errors}"/>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <VBox>
+            <children>
+                <TableView>
+                    <columns>
+                        <TableColumn text="Index"/>
+                        <TableColumn text="Time"/>
+                        <TableColumn text="Answer"/>
+                        <TableColumn text="Correct"/>
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
 </VBox>
