@@ -18,7 +18,7 @@ public class WordsResultDataDao extends Dao {
         em.getTransaction().commit();
     }
 
-    public  ArrayList<WordsResultData> getResultById(int id) {
+    public  ArrayList<WordsResultData> getById(int id) {
         String sql = "select d from NumbersResultData d where d.numbersResult.id = :id order by d.dataId";
         var query = em.createQuery(sql, WordsResultData.class);
         query.setParameter("id", id);

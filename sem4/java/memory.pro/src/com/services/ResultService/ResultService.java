@@ -1,5 +1,11 @@
 package com.services.ResultService;
 
-abstract class ResultService implements IResultService {
+import javax.persistence.EntityManager;
 
+abstract class ResultService implements IResultService {
+    protected EntityManager em;
+
+    public ResultService(EntityManager em) {
+        this.em = em;
+    }
 }

@@ -19,7 +19,7 @@ public class NumbersResultDataDao extends Dao {
         em.getTransaction().commit();
     }
 
-    public  ArrayList<NumbersResultData> getResultById(int id) {
+    public  ArrayList<NumbersResultData> getById(int id) {
         String sql = "select d from NumbersResultData d where d.numbersResult.id = :id order by d.dataId";
         var query = em.createQuery(sql, NumbersResultData.class);
         query.setParameter("id", id);
