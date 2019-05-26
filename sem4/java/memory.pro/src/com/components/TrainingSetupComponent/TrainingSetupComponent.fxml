@@ -57,7 +57,7 @@
         </AnchorPane>
     </VBox>
     <VBox styleClass="side-panel__field, setup__get-started-field">
-        <JFXButton onAction="#onStart" text="Get Started!">
+        <JFXButton onAction="#onDone" text="Get Started!">
             <graphic>
                 <FontIcon iconLiteral="fa-database"/>
             </graphic>

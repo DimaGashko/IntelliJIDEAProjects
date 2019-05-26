@@ -73,8 +73,6 @@ public class TrainingScreen extends Screen {
 
             runMemorize();
         });
-
-        runMemorize();
     }
 
     private void runMemorize() {

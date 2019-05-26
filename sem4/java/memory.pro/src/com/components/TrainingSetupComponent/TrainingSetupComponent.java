@@ -2,6 +2,7 @@ package com.components.TrainingSetupComponent;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextField;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import lib.Alerts.Alerts;
