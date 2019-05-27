@@ -10,7 +10,6 @@ import com.services.TrainingService.TrainingService;
 import com.services.TrainingService.WordsTrainingService;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
-import javafx.scene.control.Alert;
 import javafx.scene.layout.BorderPane;
 import lib.Alerts.Alerts;
 import lib.Component.ComponentException;
